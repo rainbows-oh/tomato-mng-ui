@@ -1,0 +1,112 @@
+/**
+ * notifier.part.less — 노티파이어(상태 알림) 컨트롤 스타일
+ *
+ * @desc  상태 알림 아이템(.cl-notifier-item). variant: default/success/info/warning/danger
+ * @note  저사용 컨트롤이라 색은 전역 토큰을 직접 참조, 반복 값(아이콘 크기)만 @notifier-- 지역 변수
+ *        variant 색은 #notifier--color(@bg, @border, @text) 믹스인으로 일괄 적용
+ *        cleopatra 의 notifier-*.png 배경을 SVG 아이콘으로 덮어씀
+ */
+
+@import (reference) "../common/_include.part.less";
+/* 파일 지역 변수 (@notifier-- 접두어로 타 파일 변수 충돌 방지) — 반복 값만 */
+@notifier--size-icon: @size-icon-medium;
+@notifier--size-close: @size-icon-small;
+
+/* ==========================================================================
+ Mixins
+ ========================================================================== */
+/* variant 색상 일괄 적용 (배경/보더/텍스트) */
+#notifier--color(@bg, @border, @text) {
+	background-color: @bg;
+	border-color: @border;
+	color: @text;
+}
+
+/* ==========================================================================
+ Base — .cl-notifier-item
+ ========================================================================== */
+.cl-notifier-item {
+	width: auto;
+	border: 1px solid @gray-10;
+	border-radius: @size-component-radius;
+	font-size: @font-size-label-small;
+	font-weight: @font-weight-medium;
+	padding: @padding-2;
+	
+	/* 아이콘 (cleopatra notifier-*.png 덮어씀) */
+	.cl-notifier-icon {
+		flex-shrink: 0;
+		width: @notifier--size-icon;
+		height: @notifier--size-icon;
+	}
+	
+	/* 텍스트 */
+	.cl-text {
+		font: inherit;
+		padding: 0;
+		padding-left: @gap-2;
+	}
+	
+	/* 닫기 버튼 */
+	.cl-notifier-closebutton {
+		width: @notifier--size-close;
+		height: @notifier--size-close;
+		background-image: url("@{img-path}/icons/ico_close.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		
+		&:focus-visible {
+			box-shadow: @focus-ring-box-shadow-inset;
+			outline: none;
+		}
+	}
+}
+
+/* ==========================================================================
+ Variants — 상태별 색상 + 아이콘
+ ========================================================================== */
+/* Default */
+.cl-notifier-item.cl-notifier-default {
+	#notifier--color(@secondary-5, @secondary-10, @color-text-subtle);
+	
+	.cl-notifier-icon {
+		background-image: url("@{img-path}/icons/ico_help_fill.svg");
+	}
+}
+
+/* Success */
+.cl-notifier-item.cl-notifier-success {
+	#notifier--color(@success-5, @success-10, @success-70);
+	
+	.cl-notifier-icon {
+		background-image: url("@{img-path}/icons/ico_system_success_fill.svg");
+	}
+}
+
+/* Information */
+.cl-notifier-item.cl-notifier-info {
+	#notifier--color(@information-5, @information-10, @information-70);
+	
+	.cl-notifier-icon {
+		background-image: url("@{img-path}/icons/ico_system_info_fill.svg");
+	}
+}
+
+/* Warning */
+.cl-notifier-item.cl-notifier-warning {
+	#notifier--color(@warning-5, @warning-10, @warning-70);
+	
+	.cl-notifier-icon {
+		background-image: url("@{img-path}/icons/ico_system_warning_fill.svg");
+	}
+}
+
+/* Danger */
+.cl-notifier-item.cl-notifier-danger {
+	#notifier--color(@danger-5, @danger-10, @danger-70);
+	
+	.cl-notifier-icon {
+		background-image: url("@{img-path}/icons/ico_system_danger_fill.svg");
+	}
+}

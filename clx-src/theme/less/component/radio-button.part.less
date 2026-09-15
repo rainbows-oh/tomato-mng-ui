@@ -1,0 +1,188 @@
+/**
+ * radio-button.part.less — 라디오버튼 컨트롤 스타일
+ *
+ * @desc  라디오버튼(.cl-radiobutton)을 단일 컴포넌트 블록으로 정의
+ * @note  #radio--hover 는 현재 기본 아이콘과 동일하나, 추후 상태 분기용 훅으로 분리 유지
+ *        상태·구조는 .cl-radiobutton-item 래퍼 기준 (체크박스와 래퍼 구조가 다름 — 의도된 차이)
+ *        비활성은 2경우: 그룹 자체(.cl-radiobutton.cl-disabled)와 항목(.cl-radiobutton-item.cl-disabled)
+ *        #radio--button(@size) 의 @size 인자로 .large(20px) 등 크기 변형 대응
+ */
+
+@import (reference) "../common/_include.part.less";
+
+/* ==========================================================================
+ Mixins
+ ========================================================================== */
+/* 아이콘 영역 크기 (@size 인자로 크기 변형 대응) */
+#radio--button(@size: @size-component-button) {
+	width: @size;
+	height: @size;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 0;
+	min-height: @size;
+	padding: 0;
+}
+
+/* 상태별 아이콘 훅 (hover 는 향후 분기 대비 분리 유지) */
+#radio--icon() {
+	background-image: url("@{img-path}/icons/ico_radio.svg");
+}
+
+#radio--hover() {
+	background-image: url("@{img-path}/icons/ico_radio.svg");
+}
+
+#radio--selected() {
+	background-image: url("@{img-path}/icons/ico_radio_selected.svg");
+}
+
+#radio--focus() {
+	box-shadow: 0 0 0 2px fade(@focus-ring, 50%);
+}
+
+/* 비활성 — 미선택 / 선택을 별도 훅으로 분리 */
+#radio--disabled() {
+	background-image: url("@{img-path}/icons/ico_radio_disable.svg");
+}
+
+#radio--disabled-selected() {
+	background-image: url("@{img-path}/icons/ico_radio_selected_disable.svg");
+}
+
+/* ==========================================================================
+ .cl-radiobutton — 라디오버튼
+ ========================================================================== */
+.cl-radiobutton {
+	overflow: visible !important;
+	padding: 0;
+	
+	/* --- Group Layout --- */
+	&.cl-flow {
+		vertical-align: middle;
+	}
+	
+	/* --- Layout — 정렬 --- */
+	&.cl-iconalign-left .cl-text {
+		padding: 0 0 0 @size-component-gap;
+	}
+	
+	&.cl-iconalign-right .cl-text {
+		padding: 0 @size-component-gap 0 0;
+	}
+	
+	&.cl-iconalign-top .cl-text {
+		padding: @size-component-gap 0 0 0;
+	}
+	
+	&.cl-iconalign-bottom .cl-text {
+		padding: 0 0 @size-component-gap 0;
+	}
+	
+	&.cl-iconalign-none .cl-text {
+		padding: 0;
+	}
+	
+	&.cl-iconalign-top .cl-icon-wrapper,
+	&.cl-iconalign-bottom .cl-icon-wrapper {
+		padding-top: 0;
+	}
+	
+	/* --- Structure & States — 항목 --- */
+	.cl-radiobutton-item {
+		overflow: visible !important;
+		padding: 0;
+		
+		.cl-radiobutton-field .cl-text {
+			line-height: @line-height-base;
+		}
+		
+		.cl-icon-wrapper {
+			line-height: 0;
+			padding-top: @gap-1;
+			vertical-align: top;
+		}
+		
+		.cl-text {
+			padding: 0;
+			padding-left: @size-component-gap;
+		}
+		
+		.cl-radiobutton-icon {
+			#radio--button();
+			#radio--icon();
+		}
+		
+		&:hover .cl-radiobutton-icon,
+		&.cl-hover .cl-radiobutton-icon {
+			#radio--hover();
+		}
+		
+		&.cl-selected .cl-radiobutton-icon,
+		&.cl-selected.cl-hover .cl-radiobutton-icon,
+		&.cl-selected:hover .cl-radiobutton-icon {
+			#radio--selected();
+		}
+	}
+	
+	/* --- Focus — 아웃라인 제거 후 focus-visible 에만 포커스 링 --- */
+	&.cl-focus,
+	&:focus {
+		.cl-radiobutton-item .cl-radiobutton-icon {
+			&.cl-focus,
+			&:focus {
+				outline: none;
+			}
+		}
+		
+		&.cl-iconalign-none .cl-radiobutton-item .cl-text {
+			outline: none;
+		}
+		
+		.cl-radiobutton-item .cl-radiobutton-icon:focus-visible {
+			#radio--focus();
+		}
+	}
+	
+	/* --- Disabled — ① 그룹 자체 비활성  ② 항목 비활성 --- */
+	&.cl-disabled .cl-radiobutton-item,
+	.cl-radiobutton-item.cl-disabled {
+		color: @color-component-text-disabled;
+		
+		.cl-radiobutton-icon,
+		&:hover .cl-radiobutton-icon,
+		&.cl-hover .cl-radiobutton-icon {
+			#radio--disabled();
+		}
+		
+		&.cl-selected .cl-radiobutton-icon,
+		&.cl-selected:hover .cl-radiobutton-icon,
+		&.cl-selected.cl-hover .cl-radiobutton-icon {
+			#radio--disabled-selected();
+		}
+	}
+	
+	/* --- Size — .large --- */
+	&.large {
+		.cl-radiobutton-item .cl-radiobutton-icon {
+			#radio--button(@size-8);
+		}
+		
+		&.cl-iconalign-left .cl-text {
+			padding: 0 0 0 @size-component-gap-large;
+		}
+		
+		&.cl-iconalign-right .cl-text {
+			padding: 0 @size-component-gap-large 0 0;
+		}
+		
+		&.cl-iconalign-top .cl-text {
+			padding: @size-component-gap-large 0 0 0;
+		}
+		
+		&.cl-iconalign-bottom .cl-text {
+			padding: 0 0 @size-component-gap-large 0;
+		}
+	}
+}

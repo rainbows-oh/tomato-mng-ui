@@ -1,0 +1,236 @@
+/**
+ * side-nav.part.less — 사이드 내비게이션 컨트롤 스타일
+ *
+ * @desc  사이드 내비(.cl-sidenavigation). 기본형 + LNB(.lnb-list) 변형, 레벨별 indent
+ * @note  프로젝트마다 디자인 기준이 달라 스타일을 이 파일에서 관리 (custom-settings 미사용)
+ *        기본형은 배경/색상 없음 — 컨텍스트(LNB 등)에서 오버라이드
+ *        확장 아이콘은 #icon-mask 대신 직접 url() 사용 (중립 회색 SVG, 상태별 색 틴팅 없음)
+ */
+
+@import (reference) "../common/_include.part.less";
+
+
+/* 파일 지역 변수 (@sidenav-- 접두어) — 프로젝트별 디자인 튜닝 지점 */
+
+/* 크기 */
+@sidenav--item-min-height:  @size-component-height;
+@sidenav--item-padding-x:   @padding-5;
+@sidenav--item-padding-y:   @padding-0;
+@sidenav--item-gap:         @gap-3;
+@sidenav--icon-size:        @size-icon-medium;
+@sidenav--expand-icon-size: @size-icon-small;
+@sidenav--border-radius:    0;
+
+/* indent — 레벨별 독립 선언 (현재 동일 간격, 추후 개별 조정 가능) */
+@sidenav--indent:   @padding-0;
+@sidenav--indent-1: 0px;
+@sidenav--indent-2: @sidenav--indent;
+@sidenav--indent-3: (@sidenav--indent * 2);
+@sidenav--indent-4: (@sidenav--indent * 3);
+@sidenav--indent-5: (@sidenav--indent * 4);
+@sidenav--indent-6: (@sidenav--indent * 5);
+
+/* 폰트 */
+@sidenav--font-size:            @font-size-heading-xsmall;
+@sidenav--font-weight:          @font-weight-medium;
+@sidenav--font-weight-selected: @font-weight-semibold;
+
+/* 색상 — 기본 (배경 없음, 컨텍스트에서 오버라이드) */
+@sidenav--color-text:            @color-component-text;
+@sidenav--color-text-disabled:   @color-component-text-disabled;
+@sidenav--color-background:      transparent;
+@sidenav--color-action-hover:    transparent;
+@sidenav--color-action-pressed:  transparent;
+@sidenav--color-action-selected: transparent;
+
+/* 색상 — LNB 변형 */
+@sidenav--lnb-color-background:      transparent;
+@sidenav--lnb-color-action-hover:    @color-action-primary-hover;
+@sidenav--lnb-color-action-pressed:  @color-action-primary-pressed;
+@sidenav--lnb-color-action-selected: @color-action-primary-selected;
+@sidenav--lnb-color-action-active:   @color-action-primary-active;
+@sidenav--lnb-color-text:            @color-text-subtle;
+@sidenav--lnb-color-text-selected:   @primary;
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+/* 아이템 공통 기반 */
+#sidenav--item-base() {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: auto;
+	border-radius: @sidenav--border-radius;
+	color: inherit;
+	cursor: pointer;
+	min-height: @sidenav--item-min-height;
+	padding: @sidenav--item-padding-y @sidenav--item-padding-x;
+	transition: @transition-base;
+
+	/* 텍스트 — 말줄임 없이 전체 표시 */
+	.cl-text {
+		flex: 1;
+		overflow: visible;
+		padding: 0;
+		text-overflow: clip;
+		white-space: normal;
+		word-break: break-word;
+	}
+
+	/* 아이콘 */
+	.cl-icon {
+		flex-shrink: 0;
+		width: @sidenav--icon-size;
+		height: @sidenav--icon-size;
+		background-image: none;
+		margin-right: @sidenav--item-gap;
+		min-width: 0;
+	}
+
+	/* 확장 아이콘 */
+	.cl-expand-icon {
+		flex-shrink: 0;
+		width: @sidenav--expand-icon-size;
+		height: @sidenav--expand-icon-size;
+		transition: @transition-base;
+	}
+
+	/* 배지 */
+	.cl-badge {
+		flex-shrink: 0;
+	}
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+.cl-sidenavigation {
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+	color: @sidenav--color-text;
+	font-size: @sidenav--font-size;
+	font-weight: @sidenav--font-weight;
+
+	.cl-subtree {
+		position: relative;
+	}
+
+	/* 아이템 */
+	.cl-sidenavigation-item {
+		#sidenav--item-base();
+		background-color: @sidenav--color-background;
+
+		/* 레벨별 indent */
+		&.cl-level-1 { padding-left: (@sidenav--item-padding-x + @sidenav--indent-1); }
+		&.cl-level-2 { padding-left: (@sidenav--item-padding-x + @sidenav--indent-2); }
+		&.cl-level-3 { padding-left: (@sidenav--item-padding-x + @sidenav--indent-3); }
+		&.cl-level-4 { padding-left: (@sidenav--item-padding-x + @sidenav--indent-4); }
+		&.cl-level-5 { padding-left: (@sidenav--item-padding-x + @sidenav--indent-5); }
+		&.cl-level-6 { padding-left: (@sidenav--item-padding-x + @sidenav--indent-6); }
+
+		/* 폴더 아이템 — 확장 아이콘 (직접 url) */
+		&.cl-folder {
+			.cl-icon {
+				background-image: none;
+			}
+
+			&.cl-collapsed,
+			&.cl-expanded {
+				.cl-expand-icon {
+					background-image: url("@{img-path}/icons/ico_angle.svg");
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+			}
+
+			/* collapsed: > (오른쪽) */
+			&.cl-collapsed .cl-expand-icon { transform: rotate(-90deg); }
+
+			/* expanded: v (아래) */
+			&.cl-expanded .cl-expand-icon { transform: rotate(0deg); }
+		}
+
+		/* hover */
+		&:hover,
+		&.cl-hover {
+			background-color: @sidenav--color-action-hover;
+		}
+
+		/* active/pressed */
+		&:active {
+			background-color: @sidenav--color-action-pressed;
+		}
+
+		/* focus-visible */
+		&:focus-visible {
+			outline: none;
+		}
+
+		/* selected */
+		&.cl-selected {
+			background-color: @sidenav--color-action-selected;
+		}
+
+		/* disabled */
+		&.cl-disabled {
+			color: @sidenav--color-text-disabled;
+		}
+	}
+
+	/* 전체 disabled */
+	&.cl-disabled {
+		.cl-sidenavigation-item {
+			color: @sidenav--color-text-disabled;
+		}
+	}
+
+	/* 전체 focus */
+	&.cl-focus {
+		outline: none;
+	}
+}
+
+/* ==========================================================================
+   Variants
+   ========================================================================== */
+
+/* LNB (메인 사이드 내비게이션) — hover/selected 배경 색상 적용 */
+.cl-sidenavigation.lnb-list {
+	color: @sidenav--lnb-color-text;
+
+	.cl-sidenavigation-item {
+		background-color: @sidenav--lnb-color-background;
+		border-left: 3px solid transparent;
+		font-size: @font-size-navigation-depth-medium;
+		min-height: @size-component-height;
+
+		/* hover */
+		&:hover,
+		&.cl-hover {
+			background-color: @sidenav--lnb-color-action-hover;
+		}
+
+		/* active/pressed */
+		&:active {
+			background-color: @sidenav--lnb-color-action-pressed;
+		}
+
+		/* focus-visible */
+		&:focus-visible {
+			outline: none;
+		}
+
+		/* selected */
+		&.cl-selected {
+			background-color: @sidenav--lnb-color-action-selected;
+			border-left-color: @sidenav--lnb-color-action-active;
+			color: @sidenav--lnb-color-text-selected;
+			font-weight: @sidenav--font-weight-selected;
+		}
+	}
+}

@@ -1,0 +1,333 @@
+/**
+ * combo-box.part.less — 콤보박스 컨트롤 스타일
+ *
+ * @desc  콤보박스(.cl-combobox)·연결 콤보박스(.cl-linkedcombobox)를 컴포넌트별로 분리 정의
+ *        각 컴포넌트 = 입력 필드 + 드롭다운 목록(.cl-combobox-list / .cl-linkedcombobox-list)
+ * @note  필드는 input.part.less 의 #input--* 재사용
+ *        목록 컨테이너 공통(#combo--list)과 아이템 공통(#combo--item)은 믹스인으로 공유
+ */
+@import (reference) "../common/_include.part.less";
+@import (reference) "input.part.less";
+@import (reference) "checkbox.part.less";
+
+/* ==========================================================================
+ Mixins
+ ========================================================================== */
+/* 드롭다운 목록 컨테이너 공통 */
+#combo--list() {
+	background-color: @color-component-surface;
+	border: 1px solid @color-component-border;
+	border-radius: @size-component-radius;
+	color: @color-component-text;
+	padding: @size-list-padding-y @size-list-padding-x;
+	
+	&.cl-popup {
+		box-shadow:
+			0 0 2px 0 fade(@black, 4%),
+			0 4px 8px 0 fade(@black, 8%);
+	}
+	
+	&.cl-top {
+		margin-top: 0 * -1;
+	}
+	
+	&.cl-bottom {
+		margin-top: 0;
+	}
+	
+	.cl-viewport {
+		max-height: @size-action-height * 10;
+	}
+}
+
+/* 목록 아이템 공통 (base + hover/active/selected/disabled) */
+#combo--item() {
+	position: relative;
+	align-items: center;
+	height: auto;
+	color: inherit;
+	min-height: @size-action-height;
+	padding: @size-action-padding-y @size-action-padding-x;
+	
+	&:not(.cl-disabled):not(.cl-selected):hover,
+	&:not(.cl-disabled):not(.cl-selected).cl-hover {
+		background-color: @color-action-primary-hover;
+		color: @color-component-text;
+	}
+	
+	&:not(.cl-disabled):active {
+		background-color: @color-action-primary-pressed !important;
+		color: @color-component-text;
+	}
+	
+	&.cl-selected {
+		background-color: @color-action-primary-selected;
+		color: @color-component-text-active;
+	}
+	
+	&.cl-disabled {
+		color: @color-component-text-disabled;
+		
+		&.cl-selected {
+			background-color: @color-action-disabled-on;
+			color: @color-component-text-disabled-on;
+		}
+	}
+}
+
+/* 트리 라인 (tree.part.less 라인형과 동일 값) */
+#combo--line-vertical(@top, @height) {
+	content: "";
+	position: absolute;
+	display: block;
+	top: @top;
+	left: 50%;
+	width: 1px;
+	height: @height;
+	background-color: @color-component-border;
+	transform: translateX(-50%);
+}
+
+#combo--line-horizontal() {
+	content: "";
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	height: 1px;
+	background-color: @color-component-border;
+}
+
+/* ==========================================================================
+ .cl-combobox — 콤보박스
+ ========================================================================== */
+/* --- Field --- */
+.cl-combobox {
+	#input--base();
+	
+	.cl-combobox-button {
+		#input--button();
+		background-image: url("@{img-path}/icons/ico_angle.svg");
+	}
+	
+	&.cl-focus,
+	&:focus {
+		#input--focus();
+	}
+	
+	&.cl-readonly {
+		#input--readonly();
+	}
+	
+	&.cl-disabled {
+		#input--disabled();
+		
+		.cl-combobox-button {
+			background-image: url("@{img-path}/icons/ico_angle_disable.svg");
+		}
+	}
+	
+	&.is-error {
+		#input--error();
+	}
+}
+
+/* --- List --- */
+.cl-combobox-list {
+	#combo--list();
+	
+	.cl-combobox-item {
+		#combo--item();
+		
+		.cl-text {
+			overflow: hidden;
+			padding: 0;
+			white-space: nowrap;
+		}
+		
+		.cl-checkbox {
+			#checkbox--button();
+			margin-right: @size-component-gap;
+
+			&.cl-checked {
+				#checkbox--selected();
+			}
+		}
+
+		/* 트리형 아이템 — 기본(cleopatra) 스타일 덮어쓰기, tree 라인형과 동일 */
+		&.cl-treeitem {
+			padding: 0 @padding-5 0 0;
+
+			/* 확장/접기 아이콘 (선택 상태 포함 — 기본 흑/백 png 덮어씀) */
+			.cl-treeicon {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: @size-icon-xsmall;
+				min-width: @size-icon-small;
+				z-index: 1;
+			}
+			
+			.cl-text {
+				padding: 0 0 0 @size-component-gap;
+			}
+
+			&.cl-collapsed .cl-treeicon,
+			&.cl-collapsed.cl-selected .cl-treeicon {
+				background-image: url("@{img-path}/icons/ico_caret_right.svg");
+			}
+
+			&.cl-expanded .cl-treeicon,
+			&.cl-expanded.cl-selected .cl-treeicon {
+				background-image: url("@{img-path}/icons/ico_caret.svg");
+			}
+
+			&.cl-leaf .cl-treeicon {
+				background-image: none;
+				visibility: hidden;
+			}
+
+			/* 체크박스 (기본 png 덮어씀) */
+			.cl-checkbox {
+				#checkbox--button();
+
+				&.cl-checked {
+					#checkbox--selected();
+				}
+
+				&.cl-partialchecked {
+					#checkbox--partial();
+				}
+			}
+
+			/* 라인 셀 — 기본 png 라인 제거 후 CSS 라인 표현 */
+			.cl-line,
+			.cl-treeicon-line,
+			.cl-empty {
+				position: relative;
+				flex-shrink: 0;
+				width: 20px;
+				height: 100%;
+			}
+
+			.cl-line,
+			.cl-treeicon-line,
+			&.cl-first .cl-treeicon-line,
+			&.cl-last .cl-treeicon-line,
+			&.cl-first.cl-last .cl-treeicon-line {
+				background-image: none;
+			}
+
+			.cl-line::before {
+				#combo--line-vertical(0, 100%);
+			}
+
+			.cl-treeicon-line::after {
+				#combo--line-horizontal();
+			}
+
+			&:not(.cl-last) .cl-treeicon-line::before {
+				#combo--line-vertical(0, 100%);
+			}
+
+			&.cl-first:not(.cl-last) .cl-treeicon-line::before {
+				#combo--line-vertical(50%, 50%);
+			}
+
+			&.cl-last .cl-treeicon-line::before {
+				#combo--line-vertical(0, 50%);
+			}
+
+			&.cl-first.cl-last .cl-treeicon-line::before {
+				display: none;
+			}
+		}
+	}
+
+	/* 다중 선택 — 선택 배경 대신 hover 만 강조 */
+	&.cl-multi-select {
+		.cl-combobox-item {
+			&:not(.cl-disabled).cl-selected {
+				background-color: inherit;
+				color: inherit;
+			}
+			
+			&:not(.cl-disabled).cl-selected:hover,
+			&:not(.cl-disabled).cl-selected.cl-hover {
+				background-color: @color-action-primary-hover;
+				color: @color-component-text;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ .cl-linkedcombobox — 연결 콤보박스
+ ========================================================================== */
+/* --- Field --- */
+.cl-linkedcombobox {
+	.cl-linkedcombobox-combo {
+		#input--base();
+		
+		.cl-linkedcombobox-button {
+			#input--button();
+			background-image: url("@{img-path}/icons/ico_angle.svg");
+		}
+		
+		&:only-child {
+			width: 120px;
+		}
+		
+		+ *:not([class]) {
+			flex-shrink: 0;
+		}
+	}
+	
+	&.cl-focus,
+	&:focus {
+		.cl-linkedcombobox-combo.cl-focus {
+			#input--focus();
+		}
+	}
+	
+	&.cl-readonly .cl-linkedcombobox-combo {
+		#input--readonly();
+	}
+	
+	&.cl-disabled .cl-linkedcombobox-combo {
+		#input--disabled();
+		
+		.cl-linkedcombobox-button {
+			background-image: url("@{img-path}/icons/ico_angle_disable.svg");
+		}
+	}
+	
+	&.is-error .cl-linkedcombobox-combo {
+		#input--error();
+	}
+}
+
+/* --- List --- */
+.cl-linkedcombobox-list {
+	#combo--list();
+	
+	.cl-linkedcombobox-item {
+		#combo--item();
+		
+		.cl-linkedcombobox-arrow.cl-folder {
+			#input--button();
+			background-image: url("@{img-path}/icons/ico_angle_right.svg");
+		}
+		
+		&.cl-selected .cl-linkedcombobox-arrow.cl-folder {
+			background-image: url("@{img-path}/icons/ico_angle_right.svg");
+		}
+		
+		&.cl-disabled .cl-linkedcombobox-arrow.cl-folder {
+			background-image: url("@{img-path}/icons/ico_angle_right_disable.svg");
+		}
+	}
+}

@@ -1,0 +1,60 @@
+{
+  "dmGlobalConfig": {
+    "mdiWindowMaxCount": "10",
+    "defaultLocale": null,
+    "useLayerdPop": "N",
+    "mdiFirstClose": "false"
+  },
+  "dmUserInfo": {
+    "USER_NM": "도마토",
+    "USER_ID": "TST014",
+    "DEPT_CD": "2017082103",
+    "DEPT_NM": "기술지원"
+  },
+  "dsAllMenu": [
+  	{
+      "MENU_ID": "LEVEL01-01",
+      "MENU_NM": "컴포넌트 기능 예제",
+      "CALL_PAGE": null,
+      "UP_MENU_ID": null,
+      "MENU_LVL": 0,
+      "DESC": null,
+      "TAG": null,
+      "CLASS": null,
+      "ICON" : "component"
+    },
+    {
+      "MENU_ID": "LEVEL01-04",
+      "MENU_NM": "템플릿 (서버연동)",
+      "CALL_PAGE": null,
+      "UP_MENU_ID": null,
+      "MENU_LVL": 0,
+      "DESC": null,
+      "TAG": null,
+      "CLASS": null,
+      "ICON" : "server"
+    },
+    
+    {
+      "MENU_ID": "thrChart",
+      "MENU_NM": "차트",
+      "CALL_PAGE": "app/exam/thr/thrChart.clx",
+      "UP_MENU_ID": "LEVEL01-01",
+      "CLASS": "menu-10",
+      "MENU_LVL": 2,
+      "DESC": "이 페이지는 echarts 라이브러리를 사용한 다양한 차트를 구현한 예제입니다.",
+      "TAG": "외부라이브러리,차트,echarts"
+    },
+    
+    {
+      "MENU_ID": "cmnCCode",
+      "MENU_NM": "공통코드관리",
+      "CALL_PAGE": "app/exam/smp/crud/cmnCCode.clx",
+      "UP_MENU_ID": "LEVEL01-04",
+      "CLASS": "menu-9",
+      "MENU_LVL": 2,
+      "DESC": "이 페이지는 공통코드관리 CRUD에 대한 예제입니다. 본 예제는 서버와의 연동이 필요한 예제로, 서버 모듈이 있어야 동작합니다.(eXCFrame)",
+      "TAG": "그리드,공통코드,CRUD"
+    }
+  ]
+}

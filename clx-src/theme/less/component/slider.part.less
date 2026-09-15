@@ -1,0 +1,215 @@
+/**
+ * slider.part.less — 슬라이더 컨트롤 스타일
+ *
+ * @desc  수평/수직 슬라이더. 바 + 범위(range) + 핸들 + 라벨(말풍선) 구조
+ * @note  저사용 컨트롤이라 전용 토큰 없이 전역 토큰을 직접 참조 (범위 색은 @primary 로 테마 반응)
+ *        반복·계산에 쓰이는 값만 파일 지역 변수로 관리
+ *        cleopatra 의 slider-thumb 이미지/그라디언트를 CSS 배경·보더로 덮어씀
+ */
+
+@import (reference) "../common/_include.part.less";
+/* 파일 지역 변수 (@slider-- 접두어로 타 파일 변수 충돌 방지) — 반복/계산 값만 */
+@slider--handle-size: @size-8;
+@slider--arrow-size: 7px;
+
+/* ==========================================================================
+ Mixins
+ ========================================================================== */
+/* 바 위치 — 핸들 크기 기준 좌우/상하 여백 계산 */
+#slider--bar-position(@direction) when (@direction = horizontal) {
+	position: absolute;
+	top: 50%;
+	right: (@slider--handle-size / 2);
+	left: (@slider--handle-size / 2);
+	height: 2px;
+	transform: translateY(-50%);
+}
+
+#slider--bar-position(@direction) when (@direction = vertical) {
+	position: absolute;
+	top: (@slider--handle-size / 2);
+	bottom: (@slider--handle-size / 2);
+	left: 50%;
+	width: 2px;
+	transform: translateX(-50%);
+}
+
+/* 핸들 기본 스타일 */
+#slider--handle() {
+	width: @slider--handle-size;
+	height: @slider--handle-size;
+	background-color: @color-background-base;
+	background-image: none;
+	border: 1px solid @color-button-tertiary-border;
+	border-radius: @border-radius-full;
+	outline: none;
+}
+
+/* 라벨(말풍선) 기본 스타일 */
+#slider--label() {
+	background-color: @gray-90;
+	border: 0;
+	border-radius: @size-component-radius;
+	color: @color-text-inverse;
+	font-size: @font-size-label-xsmall;
+	font-weight: @font-weight-medium;
+	padding: @padding-1 @padding-3;
+	text-align: center;
+	white-space: pre;
+}
+
+/* ==========================================================================
+ Base
+ ========================================================================== */
+.cl-slider {
+	position: relative;
+	overflow: visible !important;
+	
+	&.cl-horizontal {
+		min-height: @slider--handle-size;
+	}
+	
+	&.cl-vertical {
+		min-width: @slider--handle-size;
+	}
+	
+	/* 바 */
+	.cl-slider-bar {
+		position: absolute;
+		background-color: @color-component-border;
+		background-image: none;
+		border: 0;
+		border-radius: @border-radius-full;
+		
+		&.cl-horizontal {
+			#slider--bar-position(horizontal);
+		}
+		
+		&.cl-vertical {
+			#slider--bar-position(vertical);
+		}
+		
+		/* 핸들 */
+		.cl-slider-handle {
+			#slider--handle();
+			position: absolute;
+			
+			&.cl-horizontal,
+			&.cl-vertical {
+				transform: translate(-50%, -50%);
+			}
+			
+			&.cl-horizontal {
+				top: 50%;
+			}
+			
+			&.cl-vertical {
+				left: 50%;
+			}
+			
+			/* 라벨 (말풍선) */
+			.cl-slider-label {
+				#slider--label();
+				position: absolute;
+				
+				/* 말풍선 화살표 */
+				&.cl-leading,
+				&.cl-trailing {
+					&::before {
+						content: "";
+						position: absolute;
+						display: block;
+						left: 50%;
+						width: @slider--arrow-size;
+						height: @slider--arrow-size;
+						background-color: inherit;
+						transform: translateX(-50%) rotate(45deg);
+					}
+				}
+				
+				&.cl-leading {
+					&::before {
+						top: calc(100% + (@slider--arrow-size / 2) * -1);
+					}
+				}
+				
+				&.cl-trailing {
+					&::before {
+						top: (@slider--arrow-size / 2) * -1;
+					}
+				}
+			}
+			
+			/* 핸들 방향별 라벨 마진 */
+			&.cl-horizontal,
+			&.cl-vertical {
+				.cl-slider-label {
+					&.cl-leading {
+						margin-bottom: @gap-4;
+					}
+					
+					&.cl-trailing {
+						margin-top: @gap-4;
+					}
+				}
+			}
+		}
+		
+		/* 범위 바 */
+		.cl-slider-range {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: @primary;
+			background-image: none;
+			border-radius: @border-radius-full;
+		}
+	}
+	
+	/* ==========================================================================
+	 States
+	 ========================================================================== */
+	/* hover / active */
+	&:not(.cl-disabled) {
+		.cl-slider-bar .cl-slider-handle {
+			&:hover,
+			&.cl-hover {
+				background-color: @color-button-tertiary-fill-hover;
+				background-image: none;
+			}
+			
+			&:active {
+				background-color: @color-button-tertiary-fill-pressed;
+				background-image: none;
+			}
+		}
+	}
+	
+	/* focus */
+	&.cl-focus {
+		outline: none;
+		
+		.cl-slider-handle {
+			box-shadow: 0;
+		}
+	}
+	
+	/* disabled */
+	&.cl-disabled {
+		.cl-slider-bar {
+			background-color: @color-component-border-disabled;
+		}
+		
+		.cl-slider-handle {
+			background-color: @color-button-disabled-fill;
+			background-image: none;
+		}
+		
+		.cl-slider-range {
+			background-color: @color-component-border;
+			background-image: none;
+		}
+	}
+}

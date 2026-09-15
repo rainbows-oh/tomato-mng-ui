@@ -1,0 +1,168 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-23660d99" version="1.0.4074">
+  <head std:sid="head-07c5d18c">
+    <std:metadata>
+      <std:property key="template-file" value="templates/예제/예제_서브페이지.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-df1e1b9b" id="EXB-FULL" name="EXB-FULL" width="1580px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-6b9bd6e1" id="EXB-DIV" name="EXB-DIV" width="1128px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-99a470ed" id="EXB-PART" name="EXB-PART" width="672px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <script std:sid="script-f302b38e" src="../../../thirdparty/sbChart/license.js" type="text/javascript"/>
+    <script std:sid="script-030fad7b" src="../../../thirdparty/sbChart/sbchart.js" type="text/javascript"/>
+    <link std:sid="link-519cc57d" href="../../../thirdparty/sbChart/sbchart.css" rel="stylesheet" type="text/css"/>
+    <cl:model std:sid="model-5a2070ac">
+      <cl:dataset std:sid="d-set-cac1e91f" id="dsCandle">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-3a1f8259" name="date"/>
+          <cl:datacolumn std:sid="d-column-ff5f61ea" name="open"/>
+          <cl:datacolumn std:sid="d-column-c2f48c43" name="close"/>
+          <cl:datacolumn std:sid="d-column-c2d12910" name="low"/>
+          <cl:datacolumn std:sid="d-column-311b8261" name="high"/>
+          <cl:datacolumn std:sid="d-column-492e6a5e" name="volume"/>
+          <cl:datacolumn std:sid="d-column-81e64db2" name="hasSignal"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+      <cl:dataset std:sid="d-set-90bf46f0" id="dsPie">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-e2ad3aa7" name="status"/>
+          <cl:datacolumn std:sid="d-column-1846e986" name="count"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:submission std:sid="submission-d4f5fb38" id="subList" method="get" action="app/exam/thr/resources/sbChart.json">
+        <cl:listener std:sid="listener-e042b3a6" name="submit-success" handler="onSubListSubmitSuccess"/>
+        <cl:responsedata dataid="dsCandle"/>
+        <cl:responsedata dataid="dsPie"/>
+      </cl:submission>
+    </cl:model>
+    <cl:appspec title="차트"/>
+  </head>
+  <body std:sid="body-8413b667" class="subpage">
+    <cl:listener std:sid="listener-e63895b8" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-1b98a858" name="before-unload" handler="onBodyBeforeUnload"/>
+    <cl:udc std:sid="ud-control-7756a4bf" id="udccomappheader1" type="udc.com.udcComAppHeader">
+      <cl:verticaldata std:sid="v-data-8d7c7504" width="800px" height="30px" autosize="height"/>
+      <cl:property name="titile" value="차트" type="string"/>
+    </cl:udc>
+    <cl:group std:sid="group-b1b3a262">
+      <cl:verticaldata std:sid="v-data-25361a1c" width="400px" height="77px" autosize="height"/>
+      <cl:output std:sid="output-6c1b775f" class="section-tit" value="정의">
+        <cl:verticaldata std:sid="v-data-efb86a44" width="1240px" height="27px" autosize="height"/>
+      </cl:output>
+      <cl:output std:sid="output-19eb3b2f" value="이 문서는 SDcharts 라이브러리를 사용한 다양한 차트를 구현한 예제입니다.">
+        <cl:verticaldata std:sid="v-data-66b5f140" width="100px" height="40px" autosize="height"/>
+      </cl:output>
+      <cl:verticallayout std:sid="v-layout-8d3a8ccc" spacing="10"/>
+    </cl:group>
+    <cl:group std:sid="group-852e3861">
+      <cl:verticaldata std:sid="v-data-da4e87d8" width="1240px" height="240px" autosize="height"/>
+      <cl:output std:sid="output-b353b31f" class="section-tit" value="시나리오">
+        <cl:verticaldata std:sid="v-data-bbec7ac5" width="100px" height="27px" autosize="height"/>
+      </cl:output>
+      <cl:group std:sid="group-0d7387b4" class="content-box">
+        <cl:verticaldata std:sid="v-data-e924f376" width="400px" height="202px" autosize="height"/>
+        <cl:group std:sid="group-2f6d81dd" class="card">
+          <cl:verticaldata std:sid="v-data-9ea045ba" width="1180px" height="142px" autosize="height"/>
+          <cl:output std:sid="output-aa9437d3" value="1. SDcharts 서드파티 라이브러리로 구현한 차트들이 정상적으로 보이는지 확인한다.">
+            <cl:verticaldata std:sid="v-data-d8dd6653" width="100px" height="100px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-55aeae3c" spacing="20" leftmargin="20" rightmargin="20" topmargin="20" bottommargin="20"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-d17ac3e8" spacing="10" leftmargin="30" rightmargin="30" topmargin="30" bottommargin="30"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-9b7ff5ca" spacing="10"/>
+    </cl:group>
+    <cl:group std:sid="group-793626c1">
+      <cl:verticaldata std:sid="v-data-3deb63ce" width="1240px" height="2833px" autosize="height"/>
+      <cl:output std:sid="output-bf01a681" class="section-tit" value="기능확인">
+        <cl:verticaldata std:sid="v-data-8a26219b" width="100px" height="27px" autosize="height"/>
+      </cl:output>
+      <cl:group std:sid="group-6bb3f464" class="content-box">
+        <cl:verticaldata std:sid="v-data-0ce832d1" width="1240px" height="2796px" autosize="height"/>
+        <cl:group std:sid="group-dea34b59" class="card">
+          <cl:verticaldata std:sid="v-data-e206727c" width="400px" height="2736px" autosize="height"/>
+          <cl:group std:sid="group-1792291b" class="box">
+            <cl:verticaldata std:sid="v-data-7c553a43" width="583px" height="2474px" autosize="height"/>
+            <cl:output std:sid="output-fa033a7d" class="box-tit" value="기능 확인 컨트롤">
+              <cl:formdata std:sid="f-data-838ca17d" row="0" col="0"/>
+            </cl:output>
+            <cl:group std:sid="group-7e67a73e">
+              <cl:formdata std:sid="f-data-42963ba0" row="1" col="0" rowspan="1" colspan="1"/>
+              <cl:group std:sid="group-8823111f" id="grpChartCn" fieldLabel="차트">
+                <cl:attribute name="mobile-column-count" value=""/>
+                <cl:attribute name="tablet-column-count" value=""/>
+                <cl:verticaldata std:sid="v-data-64c459d1" width="1162px" height="1800px" autosize="height"/>
+                <cl:grid std:sid="grid-4ae0bfd5" id="dsGrid" datasetid="dsCandle">
+                  <cl:attribute name="selectAfterLoad" value="N"/>
+                  <cl:formdata std:sid="f-data-35ceffdd" row="2" col="0" rowspan="1" colspan="2"/>
+                  <cl:gridcolumn std:sid="g-column-644095dc"/>
+                  <cl:gridcolumn std:sid="g-column-05156630"/>
+                  <cl:gridcolumn std:sid="g-column-54d4f7e0"/>
+                  <cl:gridcolumn std:sid="g-column-ab34d24e"/>
+                  <cl:gridcolumn std:sid="g-column-65d9b9a0"/>
+                  <cl:gridcolumn std:sid="g-column-de77fec8"/>
+                  <cl:gridcolumn std:sid="g-column-3f0ac021"/>
+                  <cl:gridheader std:sid="gh-band-a55e57cb">
+                    <cl:gridrow std:sid="g-row-c3829d08" height="33px"/>
+                    <cl:gridcell std:sid="gh-cell-bcffba07" rowindex="0" colindex="0" targetcolumnname="date" sortable="false" filterable="false" text="date"/>
+                    <cl:gridcell std:sid="gh-cell-d6d4640b" rowindex="0" colindex="1" targetcolumnname="open" sortable="false" filterable="false" text="open"/>
+                    <cl:gridcell std:sid="gh-cell-c5169d0e" rowindex="0" colindex="2" targetcolumnname="close" sortable="false" filterable="false" text="close"/>
+                    <cl:gridcell std:sid="gh-cell-4336c60c" rowindex="0" colindex="3" targetcolumnname="low" sortable="false" filterable="false" text="low"/>
+                    <cl:gridcell std:sid="gh-cell-d35f8952" rowindex="0" colindex="4" targetcolumnname="high" sortable="false" filterable="false" text="high"/>
+                    <cl:gridcell std:sid="gh-cell-2cdd0532" rowindex="0" colindex="5" targetcolumnname="volume" sortable="false" filterable="false" text="volume"/>
+                    <cl:gridcell std:sid="gh-cell-36c80cea" rowindex="0" colindex="6" targetcolumnname="hasSignal" sortable="false" filterable="false" text="hasSignal"/>
+                  </cl:gridheader>
+                  <cl:griddetail std:sid="gd-band-eef847be">
+                    <cl:gridrow std:sid="g-row-458d07bb" height="33px"/>
+                    <cl:gridcell std:sid="gd-cell-d8daab6f" rowindex="0" colindex="0" columnname="date"/>
+                    <cl:gridcell std:sid="gd-cell-27cd6ec3" rowindex="0" colindex="1" columnname="open"/>
+                    <cl:gridcell std:sid="gd-cell-f7d851af" rowindex="0" colindex="2" columnname="close"/>
+                    <cl:gridcell std:sid="gd-cell-6c695f94" rowindex="0" colindex="3" columnname="low"/>
+                    <cl:gridcell std:sid="gd-cell-832afce3" rowindex="0" colindex="4" columnname="high"/>
+                    <cl:gridcell std:sid="gd-cell-472fd840" rowindex="0" colindex="5" columnname="volume"/>
+                    <cl:gridcell std:sid="gd-cell-17eed191" rowindex="0" colindex="6" columnname="hasSignal"/>
+                  </cl:griddetail>
+                </cl:grid>
+                <cl:output std:sid="output-4ecb826b" id="AreaChart" class="card-title" value="pieChart">
+                  <cl:formdata std:sid="f-data-e235e298" row="0" col="0"/>
+                </cl:output>
+                <cl:output std:sid="output-4720208a" id="BarChart" class="card-title" value="candleChart">
+                  <cl:formdata std:sid="f-data-fc46f2a2" row="0" col="1"/>
+                </cl:output>
+                <cl:udc std:sid="ud-control-7f6fbf93" id="pieChart" type="udc.com.chart.chart_Pie">
+                  <cl:formdata std:sid="f-data-28b2b8fe" row="1" col="0"/>
+                  <cl:property name="chartId" value="pie" type="string"/>
+                </cl:udc>
+                <cl:udc std:sid="ud-control-b68233cd" id="candleChart" type="udc.com.chart.chart_Candle">
+                  <cl:listener std:sid="listener-429a7545" name="rowSelect" handler="onCandleChartRowSelect"/>
+                  <cl:formdata std:sid="f-data-1426e45d" row="1" col="1"/>
+                </cl:udc>
+                <cl:formlayout std:sid="f-layout-b571ee97" hspace="20px" vspace="20px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                  <cl:rows length="30" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                  <cl:rows length="1" unit="FRACTION" autoSizing="true" minlength="400" syncminlength="false"/>
+                  <cl:rows length="300" unit="PIXEL" autoSizing="false" syncminlength="false"/>
+                  <cl:columns length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="#000000" minlength="540"/>
+                  <cl:columns length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" minlength="540"/>
+                </cl:formlayout>
+              </cl:group>
+              <cl:verticallayout std:sid="v-layout-f8117231" leftmargin="20" rightmargin="20" topmargin="20" bottommargin="20"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-26259d99" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+              <cl:rows length="40" unit="PIXEL" shadetype="NONE"/>
+              <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent" minlength="0"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-dd866ff3" spacing="20" leftmargin="20" rightmargin="20" topmargin="20" bottommargin="20"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-f6f20f14" spacing="10" leftmargin="30" rightmargin="30" topmargin="30" bottommargin="30"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-e805d430" spacing="10"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-7a09ceeb" spacing="40" leftmargin="20" rightmargin="20" topmargin="20" bottommargin="20"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-b4b6a29a" version="1.0.5186">
+  <head std:sid="head-685d35c4">
+    <screen std:sid="screen-a0571f8a" id="EXB-FULL" name="EXB-FULL" width="1580px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d6f30bdc" id="EXB-DIV" name="EXB-DIV" width="1128px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-42f3f698" id="EXB-PART" name="EXB-PART" width="672px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-74ee2a77"/>
+    <cl:appspec title="로그인"/>
+  </head>
+  <body std:sid="body-27063fac" class="_login">
+    <cl:group std:sid="group-59bed224" class="login-box">
+      <cl:xylayoutdata std:sid="xyl-data-bd447641" width="400px" height="466px" horizontalAnchor="CENTER" verticalAnchor="CENTER"/>
+      <cl:output std:sid="output-2d456894" class="logo" value="" displayexp="sstr(&quot;토마토시스템&quot;, [&quot;cl-sound-only&quot;])">
+        <cl:verticaldata std:sid="v-data-f9eeec59" width="100%" height="38px" autosize="none"/>
+      </cl:output>
+      <cl:group std:sid="group-607d02fd">
+        <cl:verticaldata std:sid="v-data-2f48263c" width="328px" height="200px" autosize="height"/>
+        <cl:group std:sid="group-6cd2a685">
+          <cl:verticaldata std:sid="v-data-d44abe1b" width="100%" height="64px" autosize="height"/>
+          <cl:output std:sid="output-fac606f2" class="label" value="아이디">
+            <cl:verticaldata std:sid="v-data-b4140c22" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-b290714b" class="form-control" placeholder="아이디를 입력하세요">
+            <cl:verticaldata std:sid="v-data-a00815ed" width="100px" height="40px"/>
+          </cl:inputbox>
+          <cl:verticallayout std:sid="v-layout-db0a2f3f" spacing="4"/>
+        </cl:group>
+        <cl:group std:sid="group-660f830c">
+          <cl:verticaldata std:sid="v-data-0498b704" width="100%" height="64px" autosize="height"/>
+          <cl:output std:sid="output-ca5518da" class="label" value="비밀번호">
+            <cl:verticaldata std:sid="v-data-bb6bb04c" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-92978f71" class="form-control" secret="true" placeholder="비밀번호를 입력하세요">
+            <cl:verticaldata std:sid="v-data-68c9ba12" width="100px" height="40px"/>
+          </cl:inputbox>
+          <cl:verticallayout std:sid="v-layout-443439a8" spacing="4"/>
+        </cl:group>
+        <cl:checkbox std:sid="c-box-df00ee08" text="자동 로그인">
+          <cl:verticaldata std:sid="v-data-b6011900" width="110px" height="16px" autosize="both"/>
+        </cl:checkbox>
+        <cl:verticallayout std:sid="v-layout-69ba2452" distribution="leading" spacing="12" topmargin="24" bottommargin="8"/>
+      </cl:group>
+      <cl:button std:sid="button-27dc9ee9" class="btn-submit" value="로그인">
+        <cl:listener std:sid="listener-4070789a" name="click" handler="onButtonClick"/>
+        <cl:verticaldata std:sid="v-data-5dc9e1c3" width="100%" height="48px"/>
+      </cl:button>
+      <cl:group std:sid="group-faebb1e8" class="util-button-group">
+        <cl:verticaldata std:sid="v-data-bcd0992f" width="100%" height="21px" autosize="height"/>
+        <cl:button std:sid="button-bc23d14f" value="회원가입">
+          <cl:flowlayoutdata std:sid="f-data-85f35020" width="45px" height="100%" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-eea53df0" value="아이디/비밀번호 찾기">
+          <cl:flowlayoutdata std:sid="f-data-d257df11" width="109px" height="100%" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-9a447b1b" scrollable="false" hspacing="24" vspacing="0" halign="center"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-b120dc5f" scrollable="false" distribution="fill" spacing="24"/>
+    </cl:group>
+    <cl:xylayout std:sid="xylayout-6ef4c93d"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

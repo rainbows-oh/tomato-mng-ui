@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-e7c24bf6" version="1.0.0.0">
+  <head std:sid="head-9731e8f4">
+    <title>loadmask-progress</title>
+    <screen std:sid="screen-8a090ffd" id="EXB-FULL" name="EXB-FULL" width="1580px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <cl:model std:sid="model-eea1bd26"/>
+    <cl:appspec title="프로그레스 바 로드 마스크"/>
+  </head>
+  <body std:sid="body-e6b51875" style="top:0px; left:0px; width:500px; height:400px;" class="loader-overlay">
+    <cl:group std:sid="group-dceb40d4" class="loader-box">
+      <cl:xylayoutdata std:sid="xyl-data-47a1b09a" width="400px" height="200px" horizontalAnchor="CENTER" verticalAnchor="CENTER"/>
+      <cl:progress std:sid="progress-38e3dabb" id="progressbar" value="0" max="100.0" showtext="true" displayexp="&quot;loading...&quot;">
+        <cl:xylayoutdata std:sid="xyl-data-6e109a3f" width="280px" height="20px" horizontalAnchor="CENTER" verticalAnchor="CENTER"/>
+      </cl:progress>
+      <cl:xylayout std:sid="xylayout-ffb5d42f"/>
+    </cl:group>
+    <cl:xylayout std:sid="xylayout-a87df6ed"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

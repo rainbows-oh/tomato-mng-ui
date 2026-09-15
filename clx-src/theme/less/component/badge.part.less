@@ -1,0 +1,218 @@
+/**
+ * badge.part.less — 배지 컨트롤 스타일
+ *
+ * @desc  숫자·상태 표시 배지. 스타일(fill/outline/soft)·색상(primary~disable)·dot·large 정의
+ * @note  색상은 #badge--fill/outline/soft 믹스인에 인자로 주입
+ *        그리드 상속 배지(.cl-grid-ctrl-inherit.badge)도 각 스타일에 함께 선언해 동일 적용
+ */
+@import (reference) "../common/_include.part.less";
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+#badge--fill(@bg, @text) {
+	background-color: @bg;
+	border-color: transparent;
+	color: @text;
+}
+
+#badge--outline(@color) {
+	background-color: transparent;
+	border-color: @color;
+	color: @color;
+}
+
+#badge--soft(@bg, @text) {
+	background-color: @bg;
+	border-color: transparent;
+	color: @text;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+.badge {
+	border: 1px solid transparent;
+	border-radius: @size-component-radius;
+	font-size: @font-size-label-xsmall;
+	font-weight: @font-weight-medium;
+	line-height: @line-height-none;
+	min-height: @size-component-height-small;
+	padding: 0 @padding-2;
+	text-align: center;
+	white-space: nowrap;
+	
+	&.large {
+		min-height: @size-component-height;
+		padding: 0 @padding-3;
+	}
+}
+
+/* 단독 사용(UI 컨트롤 외) 시 inline-flex 정렬 */
+.badge:not(.cl-control) {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cl-control.badge {
+	min-height: @size-component-height-small !important;
+	
+	&.large {
+		min-height: @size-component-height !important;
+	}
+}
+
+.cl-output.badge {
+	display: inline-flex !important;
+	align-items: center;
+}
+
+.cl-control .cl-text .badge {
+	vertical-align: middle;
+}
+
+.cl-grid .cl-grid-ctrl-inherit.badge {
+	border-radius: @size-component-radius !important;
+}
+
+/* ==========================================================================
+   Variants
+   ========================================================================== */
+
+/* --- Fill --- */
+.badge.fill,
+.cl-grid .cl-grid-ctrl-inherit.badge {
+	&.primary {
+		#badge--fill(@primary, @color-text-inverse);
+	}
+	
+	&.secondary {
+		#badge--fill(@secondary, @color-text-inverse);
+	}
+	
+	&.gray {
+		#badge--fill(@gray-50, @color-text-inverse);
+	}
+	
+	&.point {
+		#badge--fill(@point, @color-text-inverse);
+	}
+	
+	&.danger {
+		#badge--fill(@danger, @color-text-inverse);
+	}
+	
+	&.warning {
+		#badge--fill(@warning, @color-text-bold); /* 밝은 배경이라 어두운 텍스트 */
+	}
+	
+	&.success {
+		#badge--fill(@success, @color-text-inverse);
+	}
+	
+	&.information {
+		#badge--fill(@information, @color-text-inverse);
+	}
+	
+	&.disable {
+		#badge--fill(@gray-20, @color-component-text-disabled);
+	}
+}
+
+/* --- Outline --- */
+.badge.outline,
+.cl-grid .cl-grid-ctrl-inherit.badge {
+	&.primary {
+		#badge--outline(@primary);
+	}
+	
+	&.secondary {
+		#badge--outline(@secondary);
+	}
+	
+	&.gray {
+		#badge--outline(@gray-50);
+	}
+	
+	&.point {
+		#badge--outline(@point);
+	}
+	
+	&.danger {
+		#badge--outline(@danger);
+	}
+	
+	&.warning {
+		#badge--outline(@warning-40);
+	}
+	
+	&.success {
+		#badge--outline(@success);
+	}
+	
+	&.information {
+		#badge--outline(@information);
+	}
+	
+	&.disable {
+		#badge--outline(@gray-20);
+	}
+}
+
+/* --- Soft --- */
+.badge.soft,
+.cl-grid .cl-grid-ctrl-inherit.badge {
+	&.primary {
+		#badge--soft(@primary-5, @primary-60);
+	}
+	
+	&.secondary {
+		#badge--soft(@secondary-5, @secondary-70);
+	}
+	
+	&.gray {
+		#badge--soft(@gray-10, @gray-70);
+	}
+	
+	&.point {
+		#badge--soft(@point-5, @point-70);
+	}
+	
+	&.danger {
+		#badge--soft(@danger-5, @danger-70);
+	}
+	
+	&.warning {
+		#badge--soft(@warning-10, @warning-60);
+	}
+	
+	&.success {
+		#badge--soft(@success-5, @success-70);
+	}
+	
+	&.information {
+		#badge--soft(@information-5, @information-60);
+	}
+	
+	&.disable {
+		#badge--soft(@gray-5, @gray-30);
+	}
+}
+
+/* ==========================================================================
+   Dot
+   ========================================================================== */
+.badge.dot {
+	border-radius: @border-radius-full;
+	font-size: 0;
+	line-height: 0;
+	min-height: @size-3;
+	min-width: @size-3;
+	padding: 0;
+}
+
+.cl-control.badge.dot {
+	min-height: @size-3 !important;
+	min-width: @size-3 !important;
+}

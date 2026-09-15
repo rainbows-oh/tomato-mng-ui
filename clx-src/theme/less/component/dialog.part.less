@@ -1,0 +1,195 @@
+/**
+ * dialog.part.less — 다이얼로그/모달 컨트롤 스타일
+ *
+ * @desc  다이얼로그(.cl-dialog) + 오버레이(.cl-overlay). 모달 변형(.modal) 포함
+ * @note  프로젝트마다 디자인 기준이 달라 스타일을 이 파일에서 관리 (custom-settings 미사용)
+ *        헤더 버튼(close/min/max/restore) 아이콘은 #dialog--head-button() 구조 믹스인 + 각 클래스 url
+ *        cleopatra 의 헤더 버튼 dialog-*.png 배경을 직접 url() 로 덮어씀
+ */
+
+@import (reference) "../common/_include.part.less";
+
+
+/* 파일 지역 변수 (@dialog-- 접두어) — 프로젝트별 디자인 튜닝 지점 */
+
+/* 래퍼 */
+@dialog--wrap-border-radius:  0;   /* 다이얼로그는 radius 없음 */
+@dialog--wrap-color-background: @color-background-base;
+@dialog--wrap-color-border:   @gray-40;
+
+/* 헤더 */
+@dialog--head-height:       38px;
+@dialog--head-padding-x:    @padding-7;
+@dialog--head-color-background: @gray-5;
+@dialog--head-color-border: @gray-10;
+@dialog--head-color-text:   @color-component-text;
+@dialog--head-font-size:    @font-size-heading-xsmall;
+@dialog--head-font-weight:  @font-weight-semibold;
+
+/* 헤더 버튼 */
+@dialog--head-button-size:                  @dialog--head-height;
+@dialog--head-button-icon-size:             @size-icon-medium;
+@dialog--head-button-color-background:       transparent;
+@dialog--head-button-color-background-hover: @danger;
+
+/* 오버레이 */
+@dialog--color-dim: @color-background-dim;
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+/* 헤더 버튼 공통 구조 (이미지는 각 클래스에서 지정) */
+#dialog--head-button() {
+	width: @dialog--head-button-size;
+	height: 100%;
+	background-color: @dialog--head-button-color-background;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: @dialog--head-button-icon-size;
+
+	&:focus-visible {
+		box-shadow: @focus-ring-box-shadow-inset;
+		outline: none;
+	}
+}
+
+/* ==========================================================================
+   .cl-dialog — 다이얼로그
+   ========================================================================== */
+
+.cl-dialog {
+	background-color: @dialog--wrap-color-background;
+	border: 1px solid @dialog--wrap-color-border;
+	border-radius: @dialog--wrap-border-radius;
+	box-shadow: 0 0 2px 0 fade(@black, 5%), 0 16px 24px 0 fade(@black, 10%);
+	color: @color-component-text;
+	overflow: hidden;
+
+	/* 헤더 (cleopatra 배경색 덮어씀) */
+	.cl-dialog-header {
+		display: flex;
+		align-items: center;
+		height: @dialog--head-height;
+		background-color: @dialog--head-color-background;
+		border-bottom: 1px solid @dialog--head-color-border;
+		color: @dialog--head-color-text;
+		font-size: @dialog--head-font-size;
+		font-weight: @dialog--head-font-weight;
+		padding: 0;
+
+		/* 제목 텍스트 */
+		.cl-text {
+			color: inherit;
+			font: inherit;
+			overflow: hidden;
+			padding: 0 @dialog--head-padding-x;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		/* 헤더 버튼 — 기본(어두운 아이콘) */
+		.cl-dialog-close   { #dialog--head-button(); background-image: url("@{img-path}/icons/ico_close.svg"); }
+		.cl-dialog-min     { #dialog--head-button(); background-image: url("@{img-path}/icons/ico_minimize.svg"); }
+		.cl-dialog-max     { #dialog--head-button(); background-image: url("@{img-path}/icons/ico_maximize.svg"); }
+		.cl-dialog-restore { #dialog--head-button(); background-image: url("@{img-path}/icons/ico_restore.svg"); }
+
+		/* 헤더 버튼 — hover/active: 흰 아이콘 + danger 배경 */
+		.cl-dialog-close:hover,
+		.cl-dialog-close:active {
+			background-color: @dialog--head-button-color-background-hover;
+			background-image: url("@{img-path}/icons/ico_close_white.svg");
+		}
+
+		.cl-dialog-min:hover,
+		.cl-dialog-min:active {
+			background-color: @dialog--head-button-color-background-hover;
+			background-image: url("@{img-path}/icons/ico_minimize_white.svg");
+		}
+
+		.cl-dialog-max:hover,
+		.cl-dialog-max:active {
+			background-color: @dialog--head-button-color-background-hover;
+			background-image: url("@{img-path}/icons/ico_maximize_white.svg");
+		}
+
+		.cl-dialog-restore:hover,
+		.cl-dialog-restore:active {
+			background-color: @dialog--head-button-color-background-hover;
+			background-image: url("@{img-path}/icons/ico_restore_white.svg");
+		}
+	}
+
+	/* 바디 */
+	.cl-dialog-body-wrapper {
+		position: relative;
+	}
+
+	.cl-dialog-body {
+		width: 100%;
+		height: 100%;
+		border: 0;
+		overflow: hidden;
+	}
+
+	/* 최대화 */
+	&.cl-maximized {
+		border: none;
+		border-radius: 0;
+	}
+
+	/* focus */
+	&:focus,
+	&.cl-focus {
+		outline: none;
+	}
+}
+
+/* ==========================================================================
+   .cl-overlay — 오버레이(딤)
+   ========================================================================== */
+
+.cl-overlay {
+	background: @dialog--color-dim;
+}
+
+/* ==========================================================================
+   Variants
+   ========================================================================== */
+
+/* Modal — 헤더 배경 없음, 어두운 아이콘 유지, hover/active 배경 제거 */
+.cl-dialog.modal {
+	.cl-dialog-header {
+		background: transparent;
+		border: 0;
+		border-bottom: 0;
+
+		.cl-dialog-close,
+		.cl-dialog-close:hover,
+		.cl-dialog-close:active {
+			background-color: transparent;
+			background-image: url("@{img-path}/icons/ico_close.svg");
+		}
+
+		.cl-dialog-min,
+		.cl-dialog-min:hover,
+		.cl-dialog-min:active {
+			background-color: transparent;
+			background-image: url("@{img-path}/icons/ico_minimize.svg");
+		}
+
+		.cl-dialog-max,
+		.cl-dialog-max:hover,
+		.cl-dialog-max:active {
+			background-color: transparent;
+			background-image: url("@{img-path}/icons/ico_maximize.svg");
+		}
+
+		.cl-dialog-restore,
+		.cl-dialog-restore:hover,
+		.cl-dialog-restore:active {
+			background-color: transparent;
+			background-image: url("@{img-path}/icons/ico_restore.svg");
+		}
+	}
+}

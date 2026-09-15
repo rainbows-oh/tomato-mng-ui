@@ -1,0 +1,22 @@
+/**
+ * output.part.less — 출력(Output) 컨트롤 스타일
+ *
+ * @desc  데이터 표시 전용 요소. 기본·비활성(disabled) 상태 정의
+ */
+@import (reference) "../common/_include.part.less";
+
+.cl-output {
+	background-position: left center;
+	background-repeat: no-repeat;
+	color: @color-component-text;
+	white-space: pre-wrap; /* 줄바꿈·연속 공백 보존 */
+	
+	.cl-text {
+		white-space: inherit;
+		word-break: inherit;
+	}
+	
+	&.cl-disabled {
+		color: @color-component-text-disabled;
+	}
+}

@@ -1,0 +1,224 @@
+/**
+ * form-layout.part.less — 폼 레이아웃 컨트롤 스타일
+ *
+ * @desc  기본형(.form) / 테이블형(.form.tbl) / 단단배치(.form-field) / 조회형(.search-box)
+ * @note  코어 튜닝값은 custom-settings 의 Form 섹션(@color-form-*, @size-form-*)을 직접 사용
+ *        조회 버튼은 button.part.less 의 #btn--* 믹스인 참조 (인자: bg, border, text)
+ *        조회형은 point 계열 색을 인라인, 토글 아이콘은 #icon-mask 대신 직접 url()
+ */
+
+@import (reference) "../common/_include.part.less";
+@import (reference) "button.part.less";
+
+ 
+/* ==========================================================================
+ Base
+ ========================================================================== */
+/* 구분선 / 음영 */
+.cl-formlayout-column-shade,
+.cl-formlayout-row-shade {
+	background-color: transparent;
+}
+
+.cl-formlayout-horizontal-separator {
+	background-color: @color-form-divider;
+}
+
+.cl-formlayout-vertical-separator {
+	background-color: transparent;
+}
+
+/* 라벨 */
+.label {
+	color: @color-component-text;
+	font-size: @size-form-label-font;
+	font-weight: @size-form-label-font-weight;
+	text-align: left;
+	
+	/* 필수 입력 — * 표시 */
+	&.required .cl-text::after {
+		content: "*";
+		color: @danger-60;
+		line-height: @line-height-none;
+		margin-left: @gap-1;
+		vertical-align: top;
+	}
+}
+
+/* 폼 타이틀 (Output 컨트롤로 렌더링) */
+.cl-output.form-tit {
+	font-size: @size-form-title-font;
+	font-weight: @size-form-title-font-weight;
+}
+
+/* 폼 힌트 */
+.form-hint {
+	color: @color-text-subtle;
+	font-size: @size-form-hint-font;
+	
+	&.success {
+		color: @success;
+	}
+	
+	&.information {
+		color: @information;
+	}
+	
+	&.invalid {
+		color: @danger;
+	}
+}
+
+/* ==========================================================================
+ Variants
+ ========================================================================== */
+/* 기본형 (.form) */
+.cl-container.form {
+	background-color: @color-form-surface;
+	border-bottom: 1px solid @color-form-border;
+	border-top: 1px solid @color-form-border;
+	
+	.label {
+		background-color: @color-form-shade-background;
+		line-height: 1.25;
+		min-width: 120px;
+		padding: 0 @size-form-label-padding-x;
+	}
+	
+	.cl-control {
+		min-height: @size-form-control-height;
+	}
+	
+	.cl-output.cl-number-format {
+		text-align: right;
+	}
+}
+
+.cl-container.form:not(.tbl) {
+	.label {
+		max-width: 120px;
+	}
+}
+
+/* 폼 그룹 컨테이너 (자동부여 클래스) */
+.cl-form-group {
+	border: 0;
+}
+
+/* 테이블형 (.form.tbl) — 세로 구분선 + 중앙 정렬 */
+.cl-container.form.tbl {
+	.cl-formlayout-vertical-separator {
+		background-color: @color-form-border;
+	}
+	
+	.label,
+	.cl-output {
+		&:not(.cl-number-format) {
+			text-align: center;
+		}
+	}
+	
+	.label {
+		min-height: @size-form-control-height;
+	}
+	
+	.cl-checkbox,
+	.cl-checkboxgroup,
+	.cl-radiobutton {
+		text-align: center;
+	}
+}
+
+/* 단단배치 (.form-field) — 폼 그룹 간 세로 간격 */
+.cl-container.form-field {
+	.cl-container.form-group:not(.cl-first-row) {
+		margin-top: @gap-7;
+	}
+}
+
+/* ==========================================================================
+ 조회형 (Search Box)
+ ========================================================================== */
+.cl-container.search-box {
+	background-color: @point-5;
+	border: 1px solid @point-10;
+	border-radius: @size-component-radius;
+	padding: @padding-6;
+	
+	.label:not(.cl-first-column) {
+		margin-left: @gap-7;
+	}
+	
+	/* 조회 버튼 영역 */
+	.cl-container.sch-btn-wrap {
+		align-self: flex-start;
+		height: @size-form-control-height;
+		margin-left: @gap-8;
+		min-height: @size-form-control-height;
+		
+		/* 초기화 버튼 */
+		.cl-button.btn-reset {
+			#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
+			
+			&:not(.cl-disabled):hover,
+			&:not(.cl-disabled).cl-hover {
+				#btn--hover(@color-button-tertiary-fill-hover, @color-button-tertiary-border, @color-component-text);
+			}
+			
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active {
+				#btn--pressed(@color-button-tertiary-fill-pressed, @color-button-tertiary-border, @color-component-text);
+			}
+		}
+		
+		/* 조회 버튼 (point) */
+		.cl-button.btn-sch {
+			min-width: 64px;
+			#btn--default(@point-50, @point-50, @color-text-inverse);
+			
+			&:not(.cl-disabled):hover,
+			&:not(.cl-disabled).cl-hover {
+				#btn--hover(@point-60, @point-60, @color-text-inverse);
+			}
+			
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active {
+				#btn--pressed(@point-70, @point-70, @color-text-inverse);
+			}
+		}
+	}
+}
+
+/* 조회 폼 토글 버튼 */
+.cl-button.sch-toggle {
+	#btn--default(@point-5, @point-10, @point-70);
+	width: 60px;
+	border-radius: 0 0 @size-component-radius @size-component-radius;
+	border-top: 0;
+	margin: -1px auto 0 auto;
+	
+	.cl-icon {
+		width: @size-icon-xsmall;
+		height: @size-icon-xsmall;
+		background-image: url("@{img-path}/icons/ico_angle.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin: 0;
+	}
+	
+	&:not(.cl-disabled):hover,
+	&:not(.cl-disabled).cl-hover {
+		#btn--hover(@point-5, @point-10, @point-70);
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		#btn--pressed(@point-5, @point-10, @point-70);
+	}
+	
+	/* 접힘 상태 — 화살표 회전 */
+	&.active .cl-icon {
+		transform: rotate(180deg);
+	}
+}

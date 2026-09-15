@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-4c39062f" version="1.0.5243">
+  <head std:sid="head-e2901d3c">
+    <screen std:sid="screen-db0879e1" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px" customHeight="600" customWidth="800" active="true"/>
+    <cl:model std:sid="model-37b7a4ec"/>
+    <cl:appspec title="사용자 프로필"/>
+  </head>
+  <body std:sid="body-6cbb5661" class="_profile">
+    <cl:listener std:sid="listener-4cdf3b3a" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-0c985b23" name="init" handler="onBodyInit"/>
+    <cl:group std:sid="group-042be9af" class="profile-header">
+      <cl:formdata std:sid="f-data-81f17aa2" row="0" col="0"/>
+      <cl:group std:sid="group-e9ca89a9">
+        <cl:verticaldata std:sid="v-data-564cb9c1" width="320px" height="32px" autosize="height"/>
+        <cl:button std:sid="button-939f5100" id="btnMLogout" class="btn-submit" value="로그아웃">
+          <cl:listener std:sid="listener-9b303db4" name="click" handler="onBtnMLogoutClick"/>
+          <cl:formdata std:sid="f-data-63282656" valign="CENTER" height="24" row="0" col="1"/>
+        </cl:button>
+        <cl:output std:sid="output-27cbf2ed" id="optUserNm" class="user" value="도마토" displayexp="sstr(text, &quot;&quot;) + &quot;님&quot;">
+          <cl:formdata std:sid="f-data-c5af5ca5" row="0" col="0"/>
+        </cl:output>
+        <cl:formlayout std:sid="f-layout-6867a496" scrollable="false" hspace="16px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="57" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-1fd6fb31"/>
+    </cl:group>
+    <cl:tabfolder std:sid="t-folder-0a41a013" class="tab" item-spacing="25">
+      <cl:formdata std:sid="f-data-791daf90" row="1" col="0"/>
+      <cl:tabitem std:sid="t-item-21eb6c5e" selected="true" text="알림">
+        <std:metadata>
+          <std:property key="is-active-item" value="true"/>
+        </std:metadata>
+        <cl:group std:sid="group-3eb05a63" class="notification">
+          <std:metadata>
+            <std:property key="locked" value="true"/>
+          </std:metadata>
+          <cl:group std:sid="group-3c0a6ee3" class="notification-button-group">
+            <cl:formdata std:sid="f-data-79b32ce1" row="0" col="0"/>
+            <cl:button std:sid="button-194cf1cd" class="btn-read-all" value="모두읽기" icon="0">
+              <cl:listener std:sid="listener-8395741f" name="click" handler="onButtonClick2"/>
+              <cl:flowlayoutdata std:sid="f-data-0e0a8cd8" width="100px" height="26px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-9c03a31d" class="btn-remove-all" value="전체삭제" icon="0">
+              <cl:listener std:sid="listener-464b3247" name="click" handler="onButtonClick"/>
+              <cl:flowlayoutdata std:sid="f-data-71cf4603" width="100px" height="26px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-0470751b" scrollable="false" hspacing="8" vspacing="0" halign="right" linewrap="false"/>
+          </cl:group>
+          <cl:group std:sid="group-59b7363d" id="grpNotiList" class="list" clipcontent="true">
+            <cl:listener std:sid="listener-9e367e41" name="scroll" handler="onGrpNotiListScroll"/>
+            <cl:formdata std:sid="f-data-30a6e487" row="1" col="0"/>
+            <cl:group std:sid="group-b9dd49b3" class="item">
+              <cl:verticaldata std:sid="v-data-480098bd" width="400px" height="67px" autosize="height"/>
+              <cl:output std:sid="output-a350a818" class="caption" value="오늘">
+                <cl:formdata std:sid="f-data-e7598695" row="1" col="0"/>
+              </cl:output>
+              <cl:button std:sid="button-4f5dd35d" class="message on" value="메세지를 입력하세요">
+                <cl:formdata std:sid="f-data-7cf6295b" row="0" col="0"/>
+              </cl:button>
+              <cl:formlayout std:sid="f-layout-f60482b4" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="26" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:rows length="16" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-51c5ffe9" class="item">
+              <cl:verticaldata std:sid="v-data-744b51b2" width="480px" height="67px" autosize="height"/>
+              <cl:output std:sid="output-30c6e7f6" class="caption" value="오늘">
+                <cl:formdata std:sid="f-data-171c53f8" row="1" col="0"/>
+              </cl:output>
+              <cl:button std:sid="button-a3333d26" class="message on" value="메세지를 입력하세요">
+                <cl:formdata std:sid="f-data-e8d0a22a" row="0" col="0"/>
+              </cl:button>
+              <cl:formlayout std:sid="f-layout-544dfee6" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="26" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:rows length="16" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-f7771922" class="item">
+              <cl:verticaldata std:sid="v-data-9e5c9f47" width="480px" height="67px" autosize="height"/>
+              <cl:output std:sid="output-b228812c" class="caption" value="오늘">
+                <cl:formdata std:sid="f-data-fd2d844b" row="1" col="0"/>
+              </cl:output>
+              <cl:button std:sid="button-8c01268b" class="message on" value="메세지를 입력하세요">
+                <cl:formdata std:sid="f-data-3ccbf9bc" row="0" col="0"/>
+              </cl:button>
+              <cl:formlayout std:sid="f-layout-1541a5bd" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="26" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:rows length="16" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-c79cf885" class="item">
+              <cl:verticaldata std:sid="v-data-5d695246" width="480px" height="67px" autosize="height"/>
+              <cl:output std:sid="output-103236a7" class="caption" value="오늘">
+                <cl:formdata std:sid="f-data-799a2ffe" row="1" col="0"/>
+              </cl:output>
+              <cl:button std:sid="button-e8174b35" class="message on" value="메세지를 입력하세요">
+                <cl:formdata std:sid="f-data-e5c38a44" row="0" col="0"/>
+              </cl:button>
+              <cl:formlayout std:sid="f-layout-a5596407" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="26" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:rows length="16" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-574d997d" class="item">
+              <cl:verticaldata std:sid="v-data-72a5a700" width="480px" height="67px" autosize="height"/>
+              <cl:output std:sid="output-ef23aec5" class="caption" value="오늘">
+                <cl:formdata std:sid="f-data-e747ef19" row="1" col="0"/>
+              </cl:output>
+              <cl:button std:sid="button-8ca0d6c7" class="message on" value="메세지를 입력하세요">
+                <cl:formdata std:sid="f-data-fa24b592" row="0" col="0"/>
+              </cl:button>
+              <cl:formlayout std:sid="f-layout-cae7200b" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="26" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:rows length="16" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-6136dede" scrollable="true" spacing="0"/>
+          </cl:group>
+          <cl:output std:sid="output-0f79b790" id="optEmptyMessage" class="nodata" visible="false" value="알림이 없습니다">
+            <cl:formdata std:sid="f-data-8d5e0837" row="1" col="0"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-5af75e71" scrollable="false" hspace="0px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="26" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+      </cl:tabitem>
+    </cl:tabfolder>
+    <cl:formlayout std:sid="f-layout-f767c3f2" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="90" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

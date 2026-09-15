@@ -1,0 +1,25 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-e586e0b1" version="1.0.0.0">
+  <head std:sid="head-2581a1b9">
+    <title>chart_line</title>
+    <screen std:sid="screen-a0f3af5b" id="default" name="default" width="1024px" height="768px"/>
+    <screen std:sid="screen-767717a7" id="tablet" name="tablet" width="800px" height="768px"/>
+    <screen std:sid="screen-b83675d4" id="mobile" name="mobile" width="550px" height="768px"/>
+    <cl:model std:sid="model-b16b7ac3"/>
+    <cl:appspec title="캔들 차트">
+      <cl:property name="dataSet" type="control"/>
+      <cl:event name="rowSelect" type="cpr.events.CAppEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-a9a7e635" style="top:0px; left:0px; width:300px; height:300px;" removeOnBuild="false">
+    <cl:uicontrolshell std:sid="uic-shell-6f65fe55" id="shl1">
+      <cl:listener std:sid="listener-e4eea1c1" name="load" handler="onShl1Load"/>
+      <cl:xylayoutdata std:sid="xyl-data-1d09ac1e" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:uicontrolshell>
+    <cl:xylayout std:sid="xylayout-7618ab8f" scrollable="false"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

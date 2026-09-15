@@ -1,0 +1,558 @@
+/**
+ * button.part.less — 버튼 컨트롤 스타일
+ *
+ * @desc  .cl-button 기본 스타일 + 유형(base/inline/submit/text/link)·크기·아이콘 버튼 정의
+ * @note  유형별 색상은 #btn--default/hover/pressed 믹스인에 (배경, 보더, 텍스트) 인자로 주입
+ *        .cl-grid-row 편집 상태(inserted/modified/selected/editing)에서도 유형 스타일 유지를 위해 재선언
+ */
+@import (reference) "../common/_include.part.less";
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+#btn--base() {
+	border-radius: @size-button-radius;
+	font-size: @size-button-font;
+	font-weight: @size-button-font-weight;
+	padding: @size-button-padding-y @size-button-padding-x;
+}
+
+#btn--default(@bg, @border, @text) {
+	background-color: @bg;
+	border: 1px solid @border;
+	color: @text;
+}
+
+#btn--hover(@bg, @border, @text) {
+	background-color: @bg;
+	border-color: @border;
+	color: @text;
+}
+
+#btn--pressed(@bg, @border, @text) {
+	background-color: @bg;
+	border-color: @border;
+	color: @text;
+}
+
+#btn--size(@height, @padding-x, @gap, @font-size, @icon-size) {
+	font-size: @font-size;
+	padding: 0 @padding-x;
+	
+	.cl-icon {
+		width: @icon-size;
+		height: @icon-size;
+	}
+	
+	&.cl-icon-align-left .cl-icon {
+		margin: 0 @gap 0 0;
+	}
+	
+	&.cl-icon-align-right .cl-icon {
+		margin: 0 0 0 @gap;
+	}
+	
+	&.cl-icon-align-top .cl-icon {
+		margin: 0 0 @gap 0;
+	}
+	
+	&.cl-icon-align-bottom .cl-icon {
+		margin: @gap 0 0 0;
+	}
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+.cl-button {
+	background-color: transparent;
+	background-image: none;
+	border: none;
+	line-height: @line-height-base !important; /* line-height: 100% 제거 */
+	text-shadow: none;
+	transition: @transition-base;
+	white-space: nowrap;
+	
+	.cl-text {
+        overflow:      hidden;
+		padding: 0;
+        text-overflow: ellipsis;
+		white-space:   inherit;
+	}
+	
+	.cl-icon {
+		display: inline-flex;
+		align-items: center;
+		flex-shrink: 0;
+		justify-content: center;
+		width: @size-component-icon;
+		height: @size-component-icon;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin-right: @size-component-gap;
+	}
+	
+	&.cl-icon-align-right .cl-icon {
+		margin: 0 0 0 @size-component-gap;
+	}
+	
+	&.cl-icon-align-top .cl-icon {
+		margin: 0 0 @size-component-gap 0;
+	}
+	
+	&.cl-icon-align-bottom .cl-icon {
+		margin: @size-component-gap 0 0 0;
+	}
+	
+	&:not(.cl-disabled).cl-hover,
+    &:not(.cl-disabled):hover {
+    	color: @color-component-text;
+    }
+    
+    &:not(.cl-disabled).cl-activated,
+    &:not(.cl-disabled):active {
+    	background-image: none;
+    }
+    
+    &.cl-focus {
+    	border: none;
+    }
+    
+    &.cl-disabled {
+    	background-color: @color-button-disabled-fill;
+    	border-color: @color-button-disabled-border;
+    	color: @color-button-disabled-text;
+    }
+}
+
+/* ==========================================================================
+   Variants
+   ========================================================================== */
+
+.cl-button[class*="btn-"] {
+	#btn--base();
+}
+
+/* --- Base (Tertiary) --- */
+.btn-base {
+	#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
+	
+	&:not(.cl-disabled):hover,
+	&:not(.cl-disabled).cl-hover {
+		#btn--hover(@color-button-tertiary-fill-hover, @color-button-tertiary-border, @color-component-text);
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		#btn--pressed(@color-button-tertiary-fill-pressed, @color-button-tertiary-border, @color-component-text);
+	}
+	
+	&.cl-focus {
+		#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
+	}
+}
+
+.cl-grid-row {
+	&.cl-inserted,
+	&.cl-modified,
+	&.cl-selected,
+	&.cl-editing {
+		.cl-button.btn-base {
+			#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
+			
+			&:not(.cl-disabled):hover,
+			&:not(.cl-disabled).cl-hover {
+				#btn--hover(@color-button-tertiary-fill-hover, @color-button-tertiary-border, @color-component-text);
+			}
+			
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active {
+				#btn--pressed(@color-button-tertiary-fill-pressed, @color-button-tertiary-border, @color-component-text);
+			}
+			
+			&.cl-focus {
+				#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
+			}
+		}
+	}
+}
+
+/* --- Inline --- */
+.btn-inline {
+	#btn--default(@color-button-secondary-fill-default, @color-button-secondary-border, @color-component-text-active);
+	
+	&:not(.cl-disabled):hover,
+	&:not(.cl-disabled).cl-hover {
+		#btn--hover(@color-button-secondary-fill-hover, @color-button-secondary-border, @color-component-text-active);
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		#btn--pressed(@color-button-secondary-fill-pressed, @color-button-secondary-border, @color-component-text-active);
+	}
+	
+	&.cl-focus {
+		#btn--default(@color-button-secondary-fill-default, @color-button-secondary-border, @color-component-text-active);
+	}
+}
+
+.cl-grid-row {
+	&.cl-inserted,
+	&.cl-modified,
+	&.cl-selected,
+	&.cl-editing {
+		.btn-inline {
+			#btn--default(@color-button-secondary-fill-default, @color-button-secondary-border, @color-component-text-active);
+			
+			&:not(.cl-disabled):hover,
+			&:not(.cl-disabled).cl-hover {
+				#btn--hover(@color-button-secondary-fill-hover, @color-button-secondary-border, @color-component-text-active);
+			}
+			
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active {
+				#btn--pressed(@color-button-secondary-fill-pressed, @color-button-secondary-border, @color-component-text-active);
+			}
+			
+			&.cl-focus {
+				#btn--default(@color-button-secondary-fill-default, @color-button-secondary-border, @color-component-text-active);
+			}
+		}
+	}
+}
+
+/* --- Submit (Primary) --- */
+.btn-submit {
+	#btn--default(@color-button-primary-fill-default, @color-button-primary-border, @color-text-inverse);
+	
+	&:not(.cl-disabled):hover,
+	&:not(.cl-disabled).cl-hover {
+		#btn--hover(@color-button-primary-fill-hover, @color-button-primary-fill-hover, @color-text-inverse);
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		#btn--pressed(@color-button-primary-fill-pressed, @color-button-primary-fill-pressed, @color-text-inverse);
+	}
+	
+	&.cl-focus {
+		#btn--default(@color-button-primary-fill-default, @color-button-primary-border, @color-text-inverse);
+	}
+}
+
+.cl-grid-row {
+	&.cl-inserted,
+	&.cl-modified,
+	&.cl-selected,
+	&.cl-editing {
+		.cl-button.btn-submit {
+			#btn--default(@color-button-primary-fill-default, @color-button-primary-border, @color-text-inverse);
+			
+			&:not(.cl-disabled):hover,
+			&:not(.cl-disabled).cl-hover {
+				#btn--hover(@color-button-primary-fill-hover, @color-button-primary-border, @color-text-inverse);
+			}
+			
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active {
+				#btn--pressed(@color-button-primary-fill-pressed, @color-button-primary-border, @color-text-inverse);
+			}
+			
+			&.cl-focus {
+				#btn--default(@color-button-primary-fill-default, @color-button-primary-border, @color-text-inverse);
+			}
+		}
+	}
+}
+
+/* --- Text --- */
+.btn-text {
+	#btn--default(@color-button-text-fill-default, transparent, @color-component-text);
+	padding: @size-button-text-padding-y @size-button-text-padding-x;
+	
+	&:not(.cl-disabled):hover,
+	&:not(.cl-disabled).cl-hover {
+		#btn--hover(@color-button-text-fill-hover, transparent, @color-component-text);
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		#btn--pressed(@color-button-text-fill-pressed, transparent, @color-component-text);
+	}
+	
+	&.cl-focus {
+		#btn--default(@color-button-text-fill-default, transparent, @color-component-text);
+	}
+}
+
+.cl-grid-row {
+	&.cl-inserted,
+	&.cl-modified,
+	&.cl-selected,
+	&.cl-editing {
+		.cl-button.btn-text {
+			#btn--default(@color-button-text-fill-default, transparent, @color-component-text);
+			
+			&:not(.cl-disabled):hover,
+			&:not(.cl-disabled).cl-hover {
+				#btn--hover(@color-button-text-fill-hover, transparent, @color-component-text);
+			}
+			
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active {
+				#btn--pressed(@color-button-text-fill-pressed, transparent, @color-component-text);
+			}
+			
+			&.cl-focus {
+				#btn--default(@color-button-text-fill-default, transparent, @color-component-text);
+			}
+		}
+	}
+}
+
+/* --- Link --- */
+.btn-link {
+	#btn--default(@color-button-text-fill-default, transparent, @color-component-text-active);
+	
+	&:not(.cl-disabled):hover,
+	&:not(.cl-disabled).cl-hover {
+		#btn--hover(@color-button-text-fill-default, transparent, @color-component-text-active);
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		#btn--pressed(@color-button-text-fill-default, transparent, @color-component-text-active);
+	}
+	
+	&.cl-focus {
+		#btn--default(@color-button-text-fill-default, transparent, @color-component-text-active);
+	}
+	
+	&.basic {
+		#btn--default(@color-button-text-fill-default, transparent, @color-component-text);
+		
+		&:not(.cl-disabled):hover,
+		&:not(.cl-disabled).cl-hover {
+			#btn--hover(@color-button-text-fill-hover, transparent, @color-component-text);
+		}
+	}
+	
+	.underline.hidden-underline {
+		text-decoration: none;
+	}
+	
+    &:not(.cl-disabled):hover,
+    &:not(.cl-disabled).cl-hover,
+    &:not(.cl-disabled).cl-activated,
+    &:not(.cl-disabled):active {
+	    	.underline.hidden-underline {
+	    		text-decoration: underline;
+	    	}
+    }
+}
+
+.cl-grid-row {
+	&.cl-inserted,
+	&.cl-modified,
+	&.cl-selected,
+	&.cl-editing {
+		.btn-link {
+			#btn--default(@color-button-text-fill-default, transparent, @color-component-text-active);
+			
+			&:not(.cl-disabled):hover,
+			&:not(.cl-disabled).cl-hover {
+				#btn--hover(@color-button-text-fill-default, transparent, @color-component-text-active);
+			}
+			
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active {
+				#btn--pressed(@color-button-text-fill-default, transparent, @color-component-text-active);
+			}
+			
+			&.cl-focus {
+				#btn--default(@color-button-text-fill-default, transparent, @color-component-text-active);
+			}
+			
+			&.basic {
+				#btn--default(@color-button-text-fill-default, transparent, @color-component-text);
+				
+				&:not(.cl-disabled):hover,
+				&:not(.cl-disabled).cl-hover {
+					#btn--hover(@color-button-text-fill-default, transparent, @color-component-text);
+				}
+			}
+			
+			.underline.hidden-underline {
+				text-decoration: none;
+			}
+			
+		    &:not(.cl-disabled):hover,
+		    &:not(.cl-disabled).cl-hover,
+		    &:not(.cl-disabled).cl-activated,
+		    &:not(.cl-disabled):active {
+			    	.underline.hidden-underline {
+			    		text-decoration: underline;
+			    	}
+		    }
+		}
+	}
+}
+
+/* ==========================================================================
+   Sizes
+   ========================================================================== */
+.cl-button.small {
+	#btn--size(@size-component-height-small, @padding-2, @size-component-gap-small, @font-size-label-xsmall, @size-icon-small);
+}
+
+.cl-button.medium {
+	#btn--size(@size-component-height, @padding-3, @size-component-gap, @size-button-font, @size-component-icon);
+}
+
+.cl-button.large {
+	#btn--size(@size-component-height-large, @padding-3, @size-component-gap, @font-size-label-small, @size-icon-medium);
+}
+
+.cl-button.xlarge {
+	#btn--size(@size-component-height-xlarge, @padding-5, @size-component-gap-large, @font-size-label-medium, @size-icon-medium);
+}
+
+/* ==========================================================================
+   Icon Button (아이콘 전용)
+   ========================================================================== */
+.cl-button.icon {
+	min-width: @size-button-height;
+	padding: 0;
+	
+	.cl-text {
+		#sound-only();
+	}
+	
+	.cl-icon {
+		margin: 0 !important;
+	}
+}
+
+/* ==========================================================================
+   Icon Classes (버튼별 아이콘 매핑)
+   ========================================================================== */
+.btn-insert .cl-icon {
+	background-image: url("@{img-path}/icons/ico_add.svg") !important;
+}
+
+.btn-revert .cl-icon {
+	background-image: url("@{img-path}/icons/ico_cancel.svg") !important;
+}
+
+.btn-delete .cl-icon {
+	background-image: url("@{img-path}/icons/ico_delete.svg") !important;
+}
+
+.btn-print .cl-icon {
+	background-image: url("@{img-path}/icons/ico_print.svg") !important;
+}
+
+.btn-pop .cl-icon {
+	background-image: url("@{img-path}/icons/ico_pop.svg") !important;
+}
+
+.btn-excel .cl-icon {
+	background-image: url("@{img-path}/icons/ico_file_excel.svg") !important;
+}
+
+.btn-pdf .cl-icon {
+	background-image: url("@{img-path}/icons/ico_file_pdf.svg") !important;
+}
+
+.btn-reset .cl-icon {
+	background-image: url("@{img-path}/icons/ico_reset.svg") !important;
+}
+
+.btn-refresh .cl-icon {
+	background-image: url("@{img-path}/icons/ico_refresh.svg") !important;
+}
+
+.btn-single-search .cl-icon {
+	background-image: url("@{img-path}/icons/ico_search.svg") !important;
+}
+
+.btn-search .cl-icon {
+	background-image: url("@{img-path}/icons/ico_search_white.svg") !important;
+}
+
+.btn-save .cl-icon {
+	background-image: url("@{img-path}/icons/ico_save_white.svg") !important;
+}
+
+.btn-add .cl-icon {
+	background-image: url("@{img-path}/icons/ico_pen_white.svg") !important;
+}
+
+.btn-remove .cl-icon {
+	background-image: url("@{img-path}/icons/ico_delete_white.svg") !important;
+}
+
+.btn-upload .cl-icon {
+	background-image: url("@{img-path}/icons/ico_upload_white.svg") !important;
+}
+
+.btn-download .cl-icon {
+	background-image: url("@{img-path}/icons/ico_download_white.svg") !important;
+}
+
+/* ==========================================================================
+   Icon Variant Styles (아이콘 버튼 유형별 색상)
+   ========================================================================== */
+
+/* --- Tertiary 계열 --- */
+.btn-insert,
+.btn-revert,
+.btn-delete,
+.btn-print,
+.btn-pop,
+.btn-excel,
+.btn-pdf,
+.btn-reset,
+.btn-refresh,
+.btn-single-search {
+	#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
+	
+	&:not(.cl-disabled):hover,
+	&:not(.cl-disabled).cl-hover {
+		#btn--hover(@color-button-tertiary-fill-hover, @color-button-tertiary-border, @color-component-text);
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		#btn--pressed(@color-button-tertiary-fill-pressed, @color-button-tertiary-border, @color-component-text);
+	}
+	
+	&.cl-focus {
+		#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
+	}
+}
+
+/* --- Submit (Primary) 계열 --- */
+.btn-search,
+.btn-save,
+.btn-add,
+.btn-remove,
+.btn-upload,
+.btn-download {
+	#btn--default(@color-button-primary-fill-default, @color-button-primary-border, @color-text-inverse);
+	
+	&:not(.cl-disabled):hover,
+	&:not(.cl-disabled).cl-hover {
+		#btn--hover(@color-button-primary-fill-hover, @color-button-primary-fill-hover, @color-text-inverse);
+	}
+	
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		#btn--pressed(@color-button-primary-fill-pressed, @color-button-primary-fill-pressed, @color-text-inverse);
+	}
+	
+	&.cl-focus {
+		#btn--default(@color-button-primary-fill-default, @color-button-primary-border, @color-text-inverse);
+	}
+}

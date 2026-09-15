@@ -1,0 +1,32 @@
+/**
+ * common.part.less — 컨트롤 공통 기반 스타일
+ *
+ * @desc  모든 .cl-control / .cl-container에 적용되는 최소 공통 규칙
+ * @note  .cl-container의 line-height:0 은 인라인 자식 간 공백 제거용 (제거 시 여백 발생)
+ */
+@import (reference) "../common/_include.part.less";
+
+/* --- Tokens --- */
+
+/* --- Mixins --- */
+
+/* --- Base --- */
+.cl-control {
+	color: @color-component-text;
+	font: @font-weight-normal @font-size-default @font-family-base;
+	line-height: @line-height-base;
+	
+	.cl-text {
+		line-height: inherit;
+	}
+}
+
+/* --- Controls --- */
+.cl-container {
+	line-height: 0;
+}
+
+/* --- States --- */
+body.cl-has-modal {
+	overflow: hidden;
+}

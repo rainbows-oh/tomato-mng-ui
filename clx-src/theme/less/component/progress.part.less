@@ -1,0 +1,50 @@
+/**
+ * progress.part.less — 프로그레스(진행률) 컨트롤 스타일
+ *
+ * @desc  진행 바(.cl-progress-bar) 및 기본·비활성 상태 정의
+ * @note  저사용 컨트롤이라 전용 토큰 없이 전역 토큰을 직접 참조 (진행 바 색은 @primary 로 테마 반응)
+ */
+
+@import (reference) "../common/_include.part.less";
+
+
+.cl-progress {
+	background-color: @gray-10;
+	background-image: none;
+	border: 0;
+	border-radius: @size-component-radius;
+	color: @color-component-text;
+	font-size: @font-size-label-xsmall;
+	font-weight: @font-weight-medium;
+	outline: none;
+	text-shadow: none;
+
+	.cl-progress-bar {
+		background-color: @primary;
+		background-image: none;
+		border-radius: @size-component-radius;
+		transition: @transition-base;
+	}
+
+	.cl-text {
+		background-color: transparent;
+		border: 0;
+		color: inherit;
+		font: inherit;
+		outline: none;
+		padding: 0;
+		text-shadow: inherit;
+	}
+
+	&.cl-disabled {
+		background-color: @gray-10;
+		background-image: none;
+		border-color: @gray-30;
+		color: @color-component-text-disabled;
+
+		.cl-progress-bar {
+			background-color: @gray-30;
+			background-image: none;
+		}
+	}
+}

@@ -1,0 +1,125 @@
+@import (reference) "../../custom-settings.part.less";
+@import (reference) "path.part.less";
+
+/**
+ * ============================================================================
+ * @file      _utils.part.less
+ * @desc      CORE-UI 믹스인 및 공통 유틸리티 함수 정의
+ * @rule
+ * 1. 클래스 출력 방지
+ *  - 모든 믹스인은 반드시 이름 뒤에 괄호 '()'를 붙여 선언
+ *    → 괄호가 없으면 불필요한 CSS 클래스로 컴파일됨
+ * 2. 선택자 생성 지양
+ *  - 믹스인 내부에서 새로운 선택자 생성 최소화
+ *  - 순수한 CSS 속성 묶음만 반환하도록 설계
+ * 3. 레이아웃 관련 믹스인 사용 주의
+ *  - 레이아웃 시스템에 영향을 줄 수 있는 퍼블리싱 포인트에는 사용 지양
+ * ============================================================================
+ */
+
+/* 포커스 */
+#focus() {
+	box-shadow: @focus-ring-box-shadow;
+}
+
+#focus-reset() {
+	box-shadow: none;
+	outline: none;
+}
+
+/* 정사각형 */
+#square(@w, @h: ~"") {
+	width: @w;
+	
+	& when not (@h = ~"") {
+		height: @h;
+	}
+	
+	& when (@h = ~"") {
+		height: @w;
+	}
+} 
+
+/* 플렉스 레이아웃 */
+
+/* 트랜스폼 기준점 중앙 정렬 */
+#transform-origin(@x: 50%, @y: 50%) {
+	transform-origin: @x @y;
+}
+
+/* 텍스트 말줄임 */
+#ellipsis(@line: ~"") {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+	& when (@line = ~"") {
+		white-space: nowrap;
+	}
+	
+	& when not (@line = ~"") {
+		display: -webkit-box !important;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: @line;
+		white-space: normal;
+	}
+}
+
+/* 스크린 리더 전용 읽기 */
+#sound-only() {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	border: 0 !important;
+	clip: rect(0, 0, 0, 0) !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	white-space: nowrap !important;
+}
+
+/* 텍스트 리셋 */
+#reset-text() {
+	font-size: @font-size-body-medium;
+	font-style: normal;
+	font-weight: @font-weight-normal;
+	letter-spacing: normal;
+	line-break: auto;
+	line-height: @line-height-base;
+	text-align: left;
+	text-decoration: none;
+	text-shadow: none;
+	text-transform: none;
+	white-space: normal;
+}
+
+/* 텍스트 밑줄 */
+#text-underline() {
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+/* 아이콘 처리 */
+#icon-area(@size: @size-icon-small) {
+	display: inline-flex;
+	#square(@size);
+	forced-color-adjust: none;
+}
+
+#icon-image(@name, @size: contain) {
+	background-image: url("@{img}/icons/@{name}.svg");
+    background-position: center;
+    background-repeat:   no-repeat;
+    background-size:     @size;
+}
+
+#icon-mask(@name) {
+	-webkit-mask-position: center center;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: contain;
+	background-image: none !important;
+	-webkit-mask-image: url("@{img}/icons/@{name}.svg");
+	mask-position: center center;
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	mask-image: url("@{img}/icons/@{name}.svg");
+}

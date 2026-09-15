@@ -1,0 +1,177 @@
+/**
+ * globals.part.less — 전역 유틸리티 클래스
+ *
+ * @desc  페이지 공통 유틸리티 — 폰트/색/여백/보더/커서 등 단일 목적 클래스
+ * @rule  1. .cl- prefix 사용 금지 (컨트롤 전용)
+ *        2. display / flex / visibility 계열 제외 (UI 툴이 관리)
+ *        3. !important 는 유틸리티 클래스에서만 허용
+ * @note  theme-refactor p_common 기준, theme-old 토큰으로 매핑. 프로젝트 튜닝 변수 없이 직접 참조
+ * @contents
+ *   1. Font Size   2. Font Weight  3. Font Style   4. Text Decoration  5. Text Align
+ *   6. Text Overflow  7. Text Color  8. Background  9. Border  10. Border Radius
+ *   11. Cursor  12. Overflow  13. Width/Height  14. Padding  15. Margin
+ */
+
+@import (reference) "_include.part.less";
+
+/* ==========================================================================
+   1. Font Size
+   ========================================================================== */
+.fs-xs  { font-size: @font-size-body-small     !important; }
+.fs-sm  { font-size: @font-size-body-medium    !important; }
+.fs-md  { font-size: @font-size-label-medium   !important; }
+.fs-lg  { font-size: @font-size-heading-xsmall !important; }
+.fs-xl  { font-size: @font-size-heading-small  !important; }
+.fs-xxl { font-size: @font-size-heading-medium !important; }
+
+/* ==========================================================================
+   2. Font Weight
+   ========================================================================== */
+.fw-normal   { font-weight: @font-weight-normal   !important; }
+.fw-medium   { font-weight: @font-weight-medium   !important; }
+.fw-semibold { font-weight: @font-weight-semibold !important; }
+.fw-bold     { font-weight: @font-weight-bold     !important; }
+
+/* ==========================================================================
+   3. Font Style
+   ========================================================================== */
+.italic     { font-style: italic !important; }
+.not-italic { font-style: normal !important; }
+
+/* ==========================================================================
+   4. Text Decoration
+   ========================================================================== */
+.underline    { text-decoration: underline; text-underline-offset: 3px; }
+.line-through { text-decoration: line-through !important; }
+.no-underline { text-decoration: none         !important; }
+
+/* ==========================================================================
+   5. Text Align
+   ========================================================================== */
+.text-left   { text-align: left   !important; }
+.text-center { text-align: center !important; }
+.text-right  { text-align: right  !important; }
+
+/* ==========================================================================
+   6. Text Overflow
+   ========================================================================== */
+.truncate          { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.whitespace-nowrap { white-space: nowrap   !important; }
+.break-all         { word-break: break-all !important; }
+
+/* ==========================================================================
+   7. Text Color
+   ========================================================================== */
+.text-primary   { color: @color-component-text          !important; }
+.text-secondary { color: @color-text-subtle             !important; }
+.text-success   { color: @success                       !important; }
+.text-info      { color: @information                   !important; }
+.text-warning   { color: @warning                       !important; }
+.text-danger    { color: @danger-60                     !important; }
+.text-point     { color: @point                         !important; }
+.text-subtle    { color: @color-text-subtle             !important; }
+.text-subtlest  { color: @color-text-subtler            !important; }
+.text-disabled  { color: @color-component-text-disabled !important; }
+.text-inverse   { color: @color-text-inverse            !important; }
+
+/* ==========================================================================
+   8. Background Color
+   ========================================================================== */
+.bg-white { background-color: @color-component-surface !important; }
+
+.bg-gray      { background-color: @gray-10 !important; }
+.bg-gray-soft { background-color: @gray-5  !important; }
+
+.bg-primary      { background-color: @primary-10 !important; }
+.bg-primary-soft { background-color: @primary-5  !important; }
+
+.bg-success      { background-color: @success-10 !important; }
+.bg-success-soft { background-color: @success-5  !important; }
+
+.bg-info      { background-color: @information-10 !important; }
+.bg-info-soft { background-color: @information-5  !important; }
+
+.bg-warning      { background-color: @warning-10 !important; }
+.bg-warning-soft { background-color: @warning-5  !important; }
+
+.bg-danger      { background-color: @danger-10 !important; }
+.bg-danger-soft { background-color: @danger-5  !important; }
+
+.bg-none { background-color: transparent !important; }
+
+/* ==========================================================================
+   9. Border
+   ========================================================================== */
+.border        { border:        1px solid @color-component-border !important; }
+.border-0      { border: 0 !important; }
+.border-top    { border-top:    1px solid @color-component-border !important; }
+.border-bottom { border-bottom: 1px solid @color-component-border !important; }
+.border-left   { border-left:   1px solid @color-component-border !important; }
+.border-right  { border-right:  1px solid @color-component-border !important; }
+
+/* ==========================================================================
+   10. Border Radius
+   ========================================================================== */
+.rounded      { border-radius: @size-component-radius !important; }
+.rounded-card { border-radius: @border-radius-12      !important; }
+.rounded-full { border-radius: @border-radius-full    !important; }
+.rounded-0    { border-radius: 0                       !important; }
+
+/* ==========================================================================
+   11. Cursor
+   ========================================================================== */
+.cursor-pointer     { cursor: pointer     !important; }
+.cursor-default     { cursor: default     !important; }
+.cursor-not-allowed { cursor: not-allowed !important; }
+.cursor-text        { cursor: text        !important; }
+.cursor-move        { cursor: move        !important; }
+.cursor-grab        { cursor: grab        !important; }
+.cursor-grabbing    { cursor: grabbing    !important; }
+
+/* ==========================================================================
+   12. Overflow
+   ========================================================================== */
+.overflow-hidden  { overflow: hidden  !important; }
+.overflow-auto    { overflow: auto    !important; }
+.overflow-visible { overflow: visible !important; }
+.overflow-x-auto  { overflow-x: auto  !important; }
+.overflow-y-auto  { overflow-y: auto  !important; }
+
+/* ==========================================================================
+   13. Width / Height
+   ========================================================================== */
+.w-full { width: 100%   !important; }
+.w-auto { width: auto   !important; }
+.h-full { height: 100%  !important; }
+.h-auto { height: auto  !important; }
+
+/* ==========================================================================
+   14. Padding
+   ========================================================================== */
+.p-0 { padding: 0 !important; }
+
+.pt-0 { padding-top: 0    !important; }
+.pb-0 { padding-bottom: 0 !important; }
+.pl-0 { padding-left: 0   !important; }
+.pr-0 { padding-right: 0  !important; }
+
+.px-0 { padding-left: 0 !important; padding-right: 0 !important; }
+.py-0 { padding-top: 0 !important; padding-bottom: 0 !important; }
+
+/* ==========================================================================
+   15. Margin
+   ========================================================================== */
+.m-0 { margin: 0 !important; }
+
+.mt-0 { margin-top: 0    !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.ml-0 { margin-left: 0   !important; }
+.mr-0 { margin-right: 0  !important; }
+
+.mx-0 { margin-left: 0 !important; margin-right: 0 !important; }
+.my-0 { margin-top: 0 !important; margin-bottom: 0 !important; }
+
+.mt-n1 { margin-top:    -1px !important; }
+.mb-n1 { margin-bottom: -1px !important; }
+.ml-n1 { margin-left:   -1px !important; }
+.mr-n1 { margin-right:  -1px !important; }

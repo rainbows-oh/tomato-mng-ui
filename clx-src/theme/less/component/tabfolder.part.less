@@ -1,0 +1,350 @@
+/**
+ * tabfolder.part.less — 탭 폴더 컨트롤 스타일
+ *
+ * @desc  탭 폴더(.cl-tabfolder / .cl-mdifolder). 상단/하단 배치, 변형 line/fill/full 지원
+ * @note  프로젝트마다 디자인 기준이 달라 스타일을 이 파일에서 관리 (custom-settings 미사용)
+ *        반복 사용값만 @tab-- 지역 변수로 관리, 1회성 값은 클래스 내 인라인(B 방식)
+ *        헤더 구분선은 border 대신 linear-gradient(background-size 100% 1px)로 표현
+ */
+ 
+@import (reference) "../common/_include.part.less";
+
+/* 파일 지역 변수 (@tab-- 접두어) — 반복 사용값만 관리 */
+
+/* 크기 */
+@tab--line-height: 2px;
+@tab--line-height-full: 2px;
+/* 폰트 */
+@tab--font-weight: @font-weight-medium;
+/* 색상 — 기본 탭 */
+@tab--color-action: @color-action-primary;
+@tab--color-border: @color-component-border;
+@tab--color-text: @color-component-text;
+@tab--color-text-disabled: @color-component-text-disabled;
+/* 색상 — 라인형 */
+@tab--line-color-action: @color-action-primary;
+@tab--line-color-text: @color-component-text;
+@tab--line-color-border: @color-component-border;
+
+/* ==========================================================================
+ Mixins
+ ========================================================================== */
+/* 아이콘 영역 공통 (no-repeat + 중앙 정렬 + 크기) — background-image 는 호출부에서 지정 */
+#tab--icon(@size) {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: @size;
+}
+
+/* ==========================================================================
+ Base
+ ========================================================================== */
+.cl-tabfolder {
+	.cl-tabfolder-header {
+		/* 이전/다음 네비 버튼 */
+		.cl-tabfolder-prev,
+		.cl-tabfolder-next {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: @size-component-height;
+			height: @size-component-height;
+			background-color: transparent;
+			#tab--icon(@size-component-icon);
+			border: 0;
+			cursor: pointer;
+			transition: @transition-base;
+			
+			&:focus {
+				outline: none;
+			}
+			
+			&.cl-disabled {
+				opacity: 0.5;
+			}
+		}
+		
+		.cl-tabfolder-prev {
+			background-image: url("@{img-path}/icons/ico_angle_left.svg");
+			
+			&.cl-disabled {
+				background-image: url("@{img-path}/icons/ico_angle_left_disable.svg");
+			}
+		}
+		
+		.cl-tabfolder-next {
+			background-image: url("@{img-path}/icons/ico_angle_right.svg");
+			
+			&.cl-disabled {
+				background-image: url("@{img-path}/icons/ico_angle_right_disable.svg");
+			}
+		}
+		
+		/* 탭 아이템 */
+		.cl-tabfolder-item {
+			position: relative;
+			justify-content: center;
+			transition: @transition-base;
+			
+			.cl-text {
+				&:focus {
+					outline: none;
+					text-decoration: none;
+					#focus();
+				}
+			}
+			
+			/* 탭 내 체크박스 */
+			.cl-checkbox {
+				margin-left: @gap-1;
+			}
+			
+			/* 닫기 버튼 */
+			.cl-tabfolder-button {
+				width: @size-icon-xsmall;
+				height: @size-icon-xsmall;
+				background-image: url("@{img-path}/icons/ico_close.svg");
+				#tab--icon(contain);
+				margin-left: @gap-2;
+			}
+			
+			&.cl-disabled {
+				text-shadow: none;
+			}
+		}
+	}
+	
+	/* 바디 */
+	.cl-tabfolder-body {
+		background: transparent;
+		border: 0;
+	}
+	
+	/* focus */
+	&:focus,
+	&.cl-focus {
+		outline: none;
+	}
+}
+
+/* 탭 폴더 헤더 (childCombinatorClass = 'tablist') */
+.cl-tabfolder {
+	> .tablist {
+		> .cl-tabfolder-header.tablist {
+			/* 아이템 간격 */
+			.cl-tabfolder-header-viewport {
+			}
+			
+			/* 탭 아이템 공통 */
+			.cl-tabfolder-item {
+				height: @size-10;
+				border-radius: @size-component-radius;
+				font-size: @font-size-label-small;
+				font-weight: @tab--font-weight;
+				min-width: 64px;
+				padding: 0 @padding-5;
+			}
+			
+			/* 상단/하단 공통 — 헤더 구분선 + 아이템 상태 */
+			&.cl-top,
+			&.cl-bottom {
+				background: linear-gradient(@tab--color-border, @tab--color-border) no-repeat;
+				background-size: 100% 1px;
+				
+				.cl-tabfolder-item {
+					background-color: @tab--color-action;
+					border: 1px solid @tab--color-border;
+					color: @tab--color-text;
+					
+					.cl-tabfolder-button {
+						margin-left: @gap-2;
+					}
+					
+					/* hover */
+					&:not(.cl-selected):not(.cl-disabled):hover {
+						background-color: @color-action-primary-hover;
+						color: @color-component-text;
+					}
+					
+					/* selected */
+					&.cl-selected {
+						background-color: @color-action-secondary-active;
+						border-color: @color-action-secondary-active;
+						color: @color-text-inverse;
+						font-weight: @font-weight-semibold;
+					}
+					
+					/* disabled */
+					&.cl-disabled {
+						background-color: @color-action-disabled;
+						color: @tab--color-text-disabled;
+					}
+				}
+			}
+			
+			/* 상단 탭 — 구분선 하단, 하단 radius 제거 */
+			&.cl-top {
+				background-position: left bottom;
+				
+				.cl-tabfolder-item {
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: 0;
+				}
+			}
+			
+			/* 하단 탭 — 구분선 상단, 상단 radius 제거 */
+			&.cl-bottom {
+				background-position: left top;
+				
+				.cl-tabfolder-item {
+					border-top-left-radius: 0;
+					border-top-right-radius: 0;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ Variants
+ ========================================================================== */
+/* Line (라인형) — 배경 없음, 강조선으로 선택 표시 */
+.cl-tabfolder:not(.cl-mdifolder).line,
+.cl-mdifolder.line {
+	> .tablist {
+		> .cl-tabfolder-header {
+			&.cl-top,
+			&.cl-bottom {
+				.cl-tabfolder-header-viewport {
+				}
+				
+				.cl-tabfolder-item {
+					background-color: @tab--line-color-action;
+					border: 0;
+					color: @tab--line-color-text;
+					
+					/* 강조선 — 기본 너비 0, 선택 시 100% 확장 */
+					&::before {
+						content: "";
+						position: absolute;
+						display: block;
+						left: 50%;
+						width: 0;
+						height: @tab--line-height;
+						background-color: @secondary-70;
+						transition: @transition-base;
+					}
+					
+					&:not(.cl-selected):not(.cl-disabled):hover {
+						background-color: @tab--line-color-action;
+						color: @tab--line-color-text;
+					}
+					
+					&.cl-selected {
+						background-color: @tab--line-color-action;
+						color: @color-text-subtle;
+						
+						&::before {
+							left: 0;
+							width: 100%;
+						}
+					}
+					
+					&.cl-disabled {
+						color: @tab--color-text-disabled;
+					}
+				}
+			}
+			
+			/* 강조선 위치 — 상단탭: 하단, 하단탭: 상단 */
+			&.cl-top {
+				.cl-tabfolder-item::before {
+					bottom: 0;
+				}
+			}
+			
+			&.cl-bottom {
+				.cl-tabfolder-item::before {
+					top: 0;
+				}
+			}
+		}
+	}
+}
+
+/* Fill (버튼형) — 헤더 구분선 없음, 아이템 radius */
+.cl-tabfolder:not(.cl-mdifolder).fill,
+.cl-mdifolder.fill {
+	> .tablist {
+		> .cl-tabfolder-header {
+			&.cl-top,
+			&.cl-bottom {
+				background: transparent;
+				
+				.cl-tabfolder-item {
+					border-radius: @size-component-radius;
+					padding: 0 @padding-3;
+				}
+			}
+		}
+	}
+}
+
+/* Full (균등분배) — 아이템 간격 없음 */
+.cl-tabfolder:not(.cl-mdifolder).full,
+.cl-mdifolder.full {
+	> .tablist {
+		> .cl-tabfolder-header {
+			&.cl-top,
+			&.cl-bottom {
+				.cl-tabfolder-header-viewport {
+				}
+			}
+		}
+	}
+}
+
+/* Line + Full 조합 — 균등분배 + 보더 구분선 */
+.cl-tabfolder.line.full,
+.cl-mdifolder.line.full {
+	> .tablist {
+		> .cl-tabfolder-header.tablist {
+			&.cl-top,
+			&.cl-bottom {
+				.cl-tabfolder-item {
+					overflow: visible !important;
+				}
+			}
+			
+			/* 상단탭 — 하단 보더 + 강조선 오버랩 */
+			&.cl-top {
+				.cl-tabfolder-item {
+					border-bottom: @tab--line-height-full solid @tab--line-color-border;
+					
+					&::before {
+						bottom: @tab--line-height-full;
+					}
+				}
+			}
+			
+			/* 하단탭 — 상단 보더 + 강조선 오버랩 */
+			&.cl-bottom {
+				.cl-tabfolder-item {
+					border-top: @tab--line-height-full solid @tab--line-color-border;
+					
+					&::before {
+						top: @tab--line-height-full;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ Extensions
+ ========================================================================== */
+/* 탭 콘텐츠 패널 — 컨트롤(.cl-control)로 렌더링될 때 상단 여백 */
+.cl-control.tab-conts {
+	margin-top: @gap-8;
+}

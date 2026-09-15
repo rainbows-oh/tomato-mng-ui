@@ -1,0 +1,222 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-3b20669e" version="1.0.5243">
+  <head std:sid="head-36103be7">
+    <screen std:sid="screen-25b2685b" id="EXB-FULL" name="EXB-FULL" width="1580px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="1873" customWidth="800" active="true"/>
+    <screen std:sid="screen-747daad1" id="EXB-DIV" name="EXB-DIV" width="1128px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="false"/>
+    <screen std:sid="screen-dc7c211e" id="EXB-PART" name="EXB-PART" width="672px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-bbda76e4"/>
+    <cl:appspec title="대시보드"/>
+  </head>
+  <body std:sid="body-76e28788" class="_home" clipcontent="true">
+    <cl:listener std:sid="listener-83f212ee" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-5c1452f9" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:group std:sid="group-00c46feb" clipcontent="false">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:verticaldata std:sid="v-data-79aad38c" width="1580px" height="880px" autosize="height"/>
+      <cl:group std:sid="group-1fdd48e7">
+        <cl:attribute name="mobile-column-count" value="1"/>
+        <cl:attribute name="tablet-column-count" value="1"/>
+        <cl:verticaldata std:sid="v-data-37230bd3" width="1532px" height="280px" autosize="height"/>
+        <cl:group std:sid="group-466c6e3d" class="box user">
+          <cl:attribute name="mobile-fit" value="true"/>
+          <cl:attribute name="tablet-fit" value="true"/>
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-970697a9" row="0" col="0" rowspan="1" colspan="3"/>
+          <cl:group std:sid="group-c451e862" id="grpVersion" class="notice">
+            <cl:attribute name="mobile-column-count" value=""/>
+            <cl:attribute name="needs-auto-height" value=""/>
+            <cl:formdata std:sid="f-data-d9c13f9d" halign="LEFT" width="500" row="0" col="0"/>
+            <cl:output std:sid="output-665455da" id="optNotice" class="text" displayexp="&quot;해당 프로젝트는 &quot; + text +&quot; 버전 기준을 따릅니다.&quot;" ellipsis="true">
+              <cl:formdata std:sid="f-data-9e355999" row="0" col="0"/>
+            </cl:output>
+            <cl:output std:sid="output-519c59bf" id="optReleaseDate" class="date" value="20240911" datatype="date" format="YYYY-MM-DD" displayexp="&quot;릴리즈 날짜 : &quot; + text">
+              <cl:attribute name="hide-on-mobile" value=""/>
+              <cl:formdata std:sid="f-data-2412c028" row="0" col="1"/>
+            </cl:output>
+            <cl:formlayout std:sid="f-layout-1d3a3329" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="80" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-da9569a9">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-7f1f5974" row="1" col="0"/>
+            <cl:output std:sid="output-0e60292c" id="optUserNm" class="welcome" value="도마토" displayexp="&quot;반갑습니다\n&quot; + sstr(text + &quot;님 EDGE Submission System에 오신걸 환영합니다.&quot;, &quot;&quot;)">
+              <cl:verticaldata std:sid="v-data-51ca0012" width="100px" height="57px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-76e81081">
+              <cl:verticaldata std:sid="v-data-9143af5f" width="400px" height="20px" autosize="height"/>
+              <cl:output std:sid="output-ef8db77a" id="optDeptCd" class="text" value="2017082103">
+                <cl:flowlayoutdata std:sid="f-data-6ddfb1ed" width="100px" height="20px" autosize="width"/>
+              </cl:output>
+              <cl:output std:sid="output-69bc3fda" id="optDeptNm" class="text" value="기술지원" displayexp="text + &quot;팀&quot;">
+                <cl:flowlayoutdata std:sid="f-data-3848bc5e" width="100px" height="20px" autosize="width"/>
+              </cl:output>
+              <cl:flowlayout std:sid="f-layout-90eec36e" scrollable="false" hspacing="17" vspacing="0" linewrap="false"/>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-9af55693" spacing="12"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-40f43ba5" scrollable="false" hspace="0px" vspace="1fr" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="48" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="93" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-43b27688" class="box search">
+          <cl:formdata std:sid="f-data-4a47d840" row="0" col="3"/>
+          <cl:searchinput std:sid="s-input-be2baf5f" id="siTotalSearch" class="sample-search" hideclearbutton="true" hidesearchbutton="true" placeholder="검색어를 입력하세요">
+            <cl:listener std:sid="listener-f052238a" name="keydown" handler="onSiTotalSearchKeydown"/>
+            <cl:formdata std:sid="f-data-79a0b160" row="1" col="0"/>
+          </cl:searchinput>
+          <cl:group std:sid="group-b55611c2">
+            <cl:formdata std:sid="f-data-e1a8adb3" row="2" col="0"/>
+            <cl:button std:sid="button-364d31d5" id="btnTotSrch" class="btn-submit" value="검색">
+              <cl:listener std:sid="listener-094efd74" name="click" handler="onButtonClick"/>
+              <cl:flowlayoutdata std:sid="f-data-76f4aded" width="100px" height="36px" autosize="none"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-09acab57"/>
+          </cl:group>
+          <cl:group std:sid="group-b1296c06">
+            <cl:formdata std:sid="f-data-897a7420" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:output std:sid="output-3726da72" class="title" value="Output" displayexp="&quot;도움이 필요하세요?\n&quot; + sstr(&quot;통합검색으로 다양한 예제를 찾아보세요!&quot;, &quot;&quot;)">
+              <cl:verticaldata std:sid="v-data-6a3edfa0" width="440px" height="60px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-a17b4927" class="caption" value="검색어를 입력하면 통합 페이지로 이동합니다">
+              <cl:verticaldata std:sid="v-data-e56fb5ae" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-8907d1b6" spacing="12"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-5eae0938" scrollable="false" hspace="0px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+            <cl:rows length="48" unit="PIXEL"/>
+            <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-6592a147" scrollable="false" hspace="20px" vspace="20px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent" minlength="0"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-5fd9c57f" class="link" clipcontent="false">
+        <cl:attribute name="tablet-column-count" value="2"/>
+        <cl:attribute name="mobile-column-count" value="1"/>
+        <cl:verticaldata std:sid="v-data-f7c04509" width="1532px" height="580px" autosize="height"/>
+        <cl:group std:sid="group-6ef09c7b" class="box link06">
+          <cl:listener std:sid="listener-43fe5c6b" name="click" handler="onGroupClick6"/>
+          <cl:formdata std:sid="f-data-221f7a74" row="0" col="0"/>
+          <cl:button std:sid="button-98317ddd" id="btnLink6" class="title" value="커스터마이징 가이드">
+            <cl:listener std:sid="listener-7b3712bb" name="click" handler="onBtnLink6Click"/>
+            <cl:verticaldata std:sid="v-data-ceaec30a" width="304px" height="26px" autosize="height"/>
+          </cl:button>
+          <cl:output std:sid="output-f5d3aab4" class="text font-bold" value="프로젝트 요구사항에 맞게 공통 모듈 및 UDC의 커스터 마이징 가이드, " displayexp="text + sstr(&quot;반드시 숙지 필요!&quot;, [&quot;text-red&quot;])">
+            <cl:verticaldata std:sid="v-data-a60c7f11" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-4b7e2a20"/>
+        </cl:group>
+        <cl:group std:sid="group-2760138d" class="box link02">
+          <cl:listener std:sid="listener-420f8259" name="click" handler="onGroupClick2"/>
+          <cl:formdata std:sid="f-data-b4794ef3" row="0" col="1"/>
+          <cl:button std:sid="button-8c2e4962" id="btnLink2" class="title" value="비대면 교육신청">
+            <cl:listener std:sid="listener-f6f51200" name="click" handler="onBtnLink2Click"/>
+            <cl:verticaldata std:sid="v-data-1c0913ec" width="304px" height="26px" autosize="height"/>
+          </cl:button>
+          <cl:output std:sid="output-62b84292" class="text" value="비대면으로 진행되는 정기교육을 신청해보세요!">
+            <cl:verticaldata std:sid="v-data-240336e8" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-86143e18"/>
+        </cl:group>
+        <cl:group std:sid="group-961e071d" class="box link03">
+          <cl:listener std:sid="listener-2ce3a4b2" name="click" handler="onGroupClick3"/>
+          <cl:formdata std:sid="f-data-198cccc6" row="0" col="2"/>
+          <cl:button std:sid="button-333f4c93" id="btnLink3" class="title" value="유튜브 교육영상">
+            <cl:listener std:sid="listener-41ead493" name="click" handler="onBtnLink3Click"/>
+            <cl:verticaldata std:sid="v-data-72ae9652" width="304px" height="26px" autosize="height"/>
+          </cl:button>
+          <cl:output std:sid="output-014bd197" class="text" value="언제 어디서나 유튜브에서 교육 영상을 시청해보세요!">
+            <cl:verticaldata std:sid="v-data-b1f8db3f" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-9eba971c"/>
+        </cl:group>
+        <cl:group std:sid="group-ec188104" class="box link04">
+          <cl:listener std:sid="listener-5a568572" name="click" handler="onGroupClick4"/>
+          <cl:formdata std:sid="f-data-94abc9db" row="0" col="3"/>
+          <cl:button std:sid="button-de9fdc0f" id="btnLink4" class="title" value="체험판 및 견적요청">
+            <cl:listener std:sid="listener-1e84e2f7" name="click" handler="onBtnLink4Click"/>
+            <cl:verticaldata std:sid="v-data-d4d937a4" width="304px" height="26px" autosize="height"/>
+          </cl:button>
+          <cl:output std:sid="output-61b631ed" class="text" value="체험판도 신청하고 견적도 함께 받아보세요!">
+            <cl:verticaldata std:sid="v-data-6a62c485" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-0adbe06c"/>
+        </cl:group>
+        <cl:group std:sid="group-09e4cd18" class="box link05">
+          <cl:listener std:sid="listener-64cc935f" name="click" handler="onGroupClick5"/>
+          <cl:formdata std:sid="f-data-d0d89b5f" row="1" col="0"/>
+          <cl:button std:sid="button-a5f36217" id="btnLink5" class="title" value="속성 및 기능 통합검색">
+            <cl:listener std:sid="listener-ba45d4a2" name="click" handler="onBtnLink5Click"/>
+            <cl:verticaldata std:sid="v-data-c8fac771" width="304px" height="26px" autosize="height"/>
+          </cl:button>
+          <cl:output std:sid="output-94599a7d" class="text" value="속성과 기능에 대한 다양한 예제를 통함검색해 보세요!">
+            <cl:verticaldata std:sid="v-data-01082c4a" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-412e348a"/>
+        </cl:group>
+        <cl:group std:sid="group-a4d06734" class="box link01">
+          <cl:listener std:sid="listener-6fb17f03" name="click" handler="onBtnLink1Click"/>
+          <cl:formdata std:sid="f-data-26b1171b" row="1" col="1"/>
+          <cl:button std:sid="button-7ca00949" id="btnLink1" class="title" value="기술지원 테크돔">
+            <cl:listener std:sid="listener-16c58ff3" name="click" handler="onGroupClick"/>
+            <cl:verticaldata std:sid="v-data-3e3ffb80" width="100px" height="26px" autosize="height"/>
+          </cl:button>
+          <cl:output std:sid="output-a3cc5116" class="text" value="기술지원 사이트에서 궁금한 사항을 해결해보세요!">
+            <cl:verticaldata std:sid="v-data-6c183f85" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-78793265"/>
+        </cl:group>
+        <cl:group std:sid="group-e2afadf5" class="box link07">
+          <cl:listener std:sid="listener-9fa1f28e" name="click" handler="onGroupClick7"/>
+          <cl:formdata std:sid="f-data-6216d714" row="1" col="2"/>
+          <cl:button std:sid="button-4a8a51a6" id="btnLink7" class="title" value="Help Content">
+            <cl:listener std:sid="listener-0ae1394a" name="click" handler="onBtnLink7Click"/>
+            <cl:verticaldata std:sid="v-data-fe81cfac" width="304px" height="26px" autosize="height"/>
+          </cl:button>
+          <cl:output std:sid="output-2642a463" class="text" value="개발 환경 구성부터 앱 개발까지 도움을 받아보세요!">
+            <cl:verticaldata std:sid="v-data-84aa8c20" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-3cecec21"/>
+        </cl:group>
+        <cl:group std:sid="group-378782dd" class="box link08">
+          <cl:listener std:sid="listener-4f049704" name="click" handler="onGroupClick8"/>
+          <cl:formdata std:sid="f-data-fe21db69" row="1" col="3"/>
+          <cl:button std:sid="button-d61412e4" id="btnLink8" class="title" value="웹 접근성 가이드">
+            <cl:listener std:sid="listener-91fdc14e" name="click" handler="onBtnLink8Click"/>
+            <cl:verticaldata std:sid="v-data-6ed4ce53" width="304px" height="26px" autosize="height"/>
+          </cl:button>
+          <cl:output std:sid="output-5980af0b" class="text" value="웹 접근성을 준수하기 위한 가이드를 확인해보세요!">
+            <cl:verticaldata std:sid="v-data-71383a0b" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-83ef7ca7"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-3e5a8534" scrollable="false" hspace="20px" vspace="20px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-c969ad69" spacing="20" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-cf31d4c4" scrollable="true" spacing="0" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

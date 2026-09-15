@@ -1,0 +1,160 @@
+/**
+ * accordion.part.less — 아코디언 컨트롤 스타일
+ *
+ * @desc  아코디언(.cl-accordion). 기본형(박스) + 라인형(.line) variant
+ * @note  프로젝트마다 디자인 기준이 달라 스타일을 이 파일에서 관리 (custom-settings 미사용)
+ *        반복 사용값만 @accordion-- 지역 변수로 관리, 1회성 값은 클래스 내 인라인(B 방식)
+ *        expander 아이콘은 cleopatra 배경을 직접 url() 로 덮어씀
+ */
+ 
+@import (reference) "../common/_include.part.less";
+
+/* 파일 지역 변수 (@accordion-- 접두어) — 반복 사용값만 관리 */
+/* 크기 */
+@accordion--head-padding-x: @padding-5;
+@accordion--head-radius: @size-component-radius;
+@accordion--expander-size: @size-icon-small;
+@accordion--line-head-padding-y: @padding-3;
+/* 색상 */
+@accordion--color-border: @color-component-border;
+@accordion--head-color-background: transparent;
+@accordion--head-color-background-hover: @color-action-secondary-hover;
+@accordion--head-color-text: @color-component-text;
+@accordion--head-color-text-activated: @color-text-bolder;
+
+/* ==========================================================================
+ Base — 기본형(박스)
+ ========================================================================== */
+.cl-accordion {
+	background: transparent;
+	border: 1px solid @accordion--color-border;
+	border-width: 1px 0;
+	padding: @padding-3 0;
+	
+	/* 헤더 */
+	.cl-accordion-header {
+		height: auto;
+		background-color: @accordion--head-color-background;
+		border: 0;
+		border-radius: @accordion--head-radius;
+		color: @accordion--head-color-text;
+		font-size: @font-size-label-medium;
+		font-weight: @font-weight-medium;
+		min-height: @size-11;
+		padding: @padding-0 @accordion--head-padding-x;
+		text-align: left;
+		
+		/* 아이콘 (cleopatra 배경 덮어씀) */
+		.cl-accordion-expander {
+			width: @accordion--expander-size;
+			height: @accordion--expander-size;
+			background-image: url("@{img-path}/icons/ico_angle.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			transform: rotate(0deg);
+			transition: @transition-base;
+		}
+		
+		/* focus */
+		&.cl-title-collapse:focus {
+			outline: none;
+			text-decoration: none;
+			#focus();
+		}
+		
+		/* hover */
+		&:not(.cl-disabled):not(.cl-activated):hover {
+			background-color: @accordion--head-color-background-hover;
+			color: @accordion--head-color-text;
+		}
+		
+		/* activated (열림) */
+		&.cl-activated {
+			background-color: @accordion--head-color-background-hover;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			color: @accordion--head-color-text-activated;
+			
+			.cl-accordion-expander {
+				background-image: url("@{img-path}/icons/ico_angle.svg");
+				transform: rotate(-180deg);
+			}
+		}
+		
+		/* disabled */
+		&.cl-disabled {
+			background-color: @accordion--head-color-background;
+			color: @color-component-text-disabled;
+			
+			.cl-accordion-expander {
+				opacity: 0.5;
+			}
+			
+			/* disabled 헤더에 인접한 섹션 */
+			+ .cl-accordion-section:not(.cl-accordion-placeholder) {
+				background-color: @accordion--head-color-background;
+			}
+		}
+	}
+	
+	/* 섹션 (콘텐츠 영역) */
+	.cl-accordion-section:not(.cl-accordion-placeholder) {
+		background-color: @color-action-secondary-hover;
+		border-bottom-left-radius: @accordion--head-radius;
+		border-bottom-right-radius: @accordion--head-radius;
+		padding: @accordion--head-padding-x;
+		z-index: -1;
+		
+		.cl-accordion-content {
+			background: transparent;
+			border: 0;
+			border-radius: 0;
+		}
+	}
+	
+	/* 섹션 다음 헤더 간격 */
+	.cl-accordion-section + .cl-accordion-header {
+		margin-top: @gap-4;
+	}
+}
+
+/* ==========================================================================
+ Variants
+ ========================================================================== */
+/* Line (라인형) — 배경 없음, 하단 보더만 표시 */
+.cl-accordion.line {
+	border: 0;
+	padding: 0;
+	
+	/* 헤더 */
+	.cl-accordion-header {
+		border: 1px solid @accordion--color-border;
+		border-radius: 0;
+		border-width: 0 0 1px;
+		min-height: 0;
+		padding: 0 0 @accordion--line-head-padding-y;
+		
+		/* hover — 배경 없음, 텍스트만 변경 */
+		&:not(.cl-disabled):not(.cl-activated):hover {
+			background-color: @accordion--head-color-background;
+			color: @accordion--head-color-text-activated;
+		}
+		
+		/* activated — 배경 없음, 보더 투명 */
+		&.cl-activated {
+			background-color: transparent;
+			border-bottom-color: transparent;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+	
+	/* 섹션 */
+	.cl-accordion-section:not(.cl-accordion-placeholder) {
+		background-color: transparent;
+		border-bottom: 1px solid @accordion--color-border;
+		border-radius: 0;
+		padding: @accordion--line-head-padding-y 0;
+	}
+}

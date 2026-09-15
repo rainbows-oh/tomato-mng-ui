@@ -1,0 +1,495 @@
+/**
+ * input.part.less — 인풋 계열 컨트롤 공통 스타일
+ *
+ * @desc  Inputbox·SearchInput·MaskEditor·NumberEditor·DateInput·FileInput·Textarea 공통 정의
+ * @note  상태 믹스인(#input--*)은 각 컨트롤 선택자에서 조합 호출하는 구조 — 상태 스타일은 호출부에서 완성
+ *        공통 믹스인(base/focus/readonly/disabled/error)은 전 컨트롤이 공유, 각 컨트롤은 고유 파트(clear/button/spinbuttons)만 추가
+ */
+
+@import (reference) "../common/_include.part.less";
+
+/* ==========================================================================
+ Mixins
+ ========================================================================== */
+#input--base() {
+	background-color: @color-input-surface;
+	background-image: none;
+	/* cleopatra gradient 상쇄 */
+	border: 1px solid @color-input-border;
+	border-radius: @size-input-radius;
+	color: @color-input-text;
+	min-height: @size-component-height;
+	text-align: left;
+	transition: @transition-base;
+	
+	.cl-text {
+		padding: 0 @size-input-padding-x;
+	}
+}
+
+#input--focus() {
+	border-color: @color-input-border-active;
+}
+
+#input--readonly() {
+	background-color: @color-input-surface-disabled;
+}
+
+#input--disabled() {
+	background-color: @color-input-surface-disabled;
+	border-color: @color-input-border-disabled;
+	color: @color-input-text-disabled;
+}
+
+#input--error() {
+	border-color: @color-input-border-error;
+	border-width: 2px;
+}
+
+/* 아이콘 영역 공통 (no-repeat + 중앙 정렬 + 크기) — background-image 는 호출부에서 지정 */
+#input--icon(@size) {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: @size;
+}
+
+#input--button() {
+	width: @size-component-icon;
+	height: @size-component-icon;
+	#input--icon(contain);
+	margin-left: 0;
+	margin-right: (@size-input-padding-x / 2);
+	
+	&.cl-left {
+		margin-left: (@size-input-padding-x / 2);
+		margin-right: 0;
+	}
+}
+
+#input--clear() {
+	#input--button();
+	background-image: url("@{img-path}/icons/ico_clear_fill.svg");
+	
+	&:active {
+		opacity: 1;
+		/* 기본 active 흐림 효과 무효화 */
+	}
+}
+
+/* ==========================================================================
+ Base
+ ========================================================================== */
+.cl-placeholder {
+	color: @color-input-text-placeholder !important;
+}
+
+/* ==========================================================================
+ Inputbox
+ ========================================================================== */
+.cl-inputbox {
+	#input--base();
+	
+	.cl-inputbox-clear {
+		#input--clear();
+	}
+	
+	&:not(.cl-disabled) .cl-inputbox-clear:hover {
+		#input--clear();
+	}
+	
+	&.cl-focus,
+	&:focus {
+		#input--focus();
+	}
+	
+	&.cl-readonly {
+		#input--readonly();
+	}
+	
+	&.cl-disabled {
+		#input--disabled();
+	}
+	
+	&.is-error {
+		#input--error();
+	}
+}
+
+/* ==========================================================================
+ SearchInput
+ ========================================================================== */
+.cl-searchinput {
+	#input--base();
+	
+	.cl-searchinput-search {
+		#input--button();
+		background-image: url("@{img-path}/icons/ico_search.svg");
+	}
+	
+	&:not(.cl-disabled) .cl-searchinput-search:hover,
+	&:not(.cl-disabled) .cl-searchinput-search:active {
+		background-image: url("@{img-path}/icons/ico_search.svg");
+	}
+	
+	&.cl-disabled .cl-searchinput-search {
+		background-image: url("@{img-path}/icons/ico_search_disable.svg");
+	}
+	
+	.cl-searchinput-clear {
+		#input--clear();
+	}
+	
+	&:not(.cl-disabled) .cl-searchinput-clear:hover {
+		#input--clear();
+	}
+	
+	&.cl-focus,
+	&:focus {
+		#input--focus();
+	}
+	
+	&.cl-readonly {
+		#input--readonly();
+	}
+	
+	&.cl-disabled {
+		#input--disabled();
+	}
+	
+	&.is-error {
+		#input--error();
+	}
+}
+
+/* ==========================================================================
+ MaskEditor
+ ========================================================================== */
+.cl-maskeditor {
+	#input--base();
+	
+	.cl-maskeditor-clear {
+		#input--clear();
+	}
+	
+	&:not(.cl-disabled) .cl-maskeditor-clear:hover {
+		#input--clear();
+	}
+	
+	&.cl-focus,
+	&:focus {
+		#input--focus();
+	}
+	
+	&.cl-readonly {
+		#input--readonly();
+	}
+	
+	&.cl-disabled {
+		#input--disabled();
+	}
+	
+	&.is-error {
+		#input--error();
+	}
+}
+
+/* ==========================================================================
+ NumberEditor
+ ========================================================================== */
+.cl-numbereditor {
+	#input--base();
+	text-align: right;
+	
+	/* 값은 우측 정렬, placeholder만 좌측 */
+	.cl-text.cl-placeholder {
+		text-align: left;
+	}
+	
+	.cl-numbereditor-clear {
+		#input--clear();
+	}
+	
+	&:not(.cl-disabled) .cl-numbereditor-clear:hover {
+		#input--clear();
+	}
+	
+	.cl-numbereditor-buttons {
+		width: @size-component-icon;
+		border: none;
+		min-height: @size-component-icon;
+		
+		&.cl-horizontal.cl-both {
+			width: @size-component-icon-large;
+			border: none;
+		}
+		
+		&.cl-horizontal:not(.cl-both) {
+			width: @size-component-height * 2;
+			border-color: inherit;
+		}
+		
+		.cl-numbereditor-increase,
+		.cl-numbereditor-decrease {
+			position: relative;
+			#input--icon(@size-icon-xsmall);
+		}
+		
+		.cl-numbereditor-increase {
+			background-image: url("@{img-path}/icons/ico_caret_up.svg");
+		}
+		
+		.cl-numbereditor-decrease {
+			background-image: url("@{img-path}/icons/ico_caret.svg");
+		}
+	}
+	
+	&:not(.cl-disabled) {
+		.cl-numbereditor-increase,
+		.cl-numbereditor-decrease {
+			&:hover {
+				background-color: @color-action-primary-hover;
+			}
+			
+			&:active {
+				background-color: @color-action-primary-pressed;
+			}
+		}
+		
+		.cl-numbereditor-increase:hover {
+			background-image: url("@{img-path}/icons/ico_caret_up.svg");
+		}
+		
+		.cl-numbereditor-decrease:hover {
+			background-image: url("@{img-path}/icons/ico_caret.svg");
+		}
+		
+		.cl-numbereditor-increase:active {
+			background-image: url("@{img-path}/icons/ico_caret_up.svg");
+		}
+		
+		.cl-numbereditor-decrease:active {
+			background-image: url("@{img-path}/icons/ico_caret.svg");
+		}
+	}
+	
+	&.cl-disabled .cl-numbereditor-buttons {
+		.cl-numbereditor-increase {
+			background-image: url("@{img-path}/icons/ico_caret_up.svg");
+		}
+		
+		.cl-numbereditor-decrease {
+			background-image: url("@{img-path}/icons/ico_caret.svg");
+		}
+	}
+	
+	&.cl-focus,
+	&:focus {
+		#input--focus();
+	}
+	
+	&.cl-readonly {
+		#input--readonly();
+	}
+	
+	&.cl-disabled {
+		#input--disabled();
+	}
+	
+	&.is-error {
+		#input--error();
+	}
+}
+
+/* ==========================================================================
+ DateInput
+ ========================================================================== */
+.cl-dateinput {
+	#input--base();
+	
+	.cl-dateinput-button {
+		#input--button();
+		background-image: url("@{img-path}/icons/ico_date.svg");
+	}
+	
+	&.cl-disabled .cl-dateinput-button {
+		background-image: url("@{img-path}/icons/ico_date_disable.svg");
+	}
+	
+	.cl-dateinput-clear {
+		#input--clear();
+	}
+	
+	/* XXX 스타일 보증 범위 외 처리 — 넘버에디터와 구조 동일하게 처리하기 위해 스타일 오버라이드 */
+	.cl-dateinput-spinbuttons {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		
+		.cl-dateinput-increase,
+		.cl-dateinput-decrease {
+			height: auto !important;
+			grid-column: 1 / span 1;
+		}
+		
+		.cl-dateinput-increase {
+			grid-row: 1 / span 1;
+		}
+	}
+	
+	.cl-dateinput-spinbuttons {
+		height: 100%;
+		border: none;
+		font-size: 0;
+		
+		.cl-dateinput-increase,
+		.cl-dateinput-decrease {
+			position: relative;
+			#input--icon(@size-icon-xsmall);
+		}
+	}
+	
+	&:not(.cl-disabled) {
+		.cl-dateinput-increase,
+		.cl-dateinput-decrease {
+			&:hover {
+				background-color: @color-action-primary-hover;
+			}
+			
+			&:active {
+				background-color: @color-action-primary-pressed;
+			}
+		}
+		
+		.cl-dateinput-increase:hover {
+			background-image: url("@{img-path}/icons/ico_caret_up.svg");
+		}
+		
+		.cl-dateinput-decrease:hover {
+			background-image: url("@{img-path}/icons/ico_caret.svg");
+		}
+		
+		.cl-dateinput-increase:active {
+			background-image: url("@{img-path}/icons/ico_caret_up.svg");
+		}
+		
+		.cl-dateinput-decrease:active {
+			background-image: url("@{img-path}/icons/ico_caret.svg");
+		}
+	}
+	
+	&.cl-disabled .cl-dateinput-spinbuttons {
+		.cl-dateinput-increase {
+			background-image: url("@{img-path}/icons/ico_caret_up_disable.svg");
+		}
+		
+		.cl-dateinput-decrease {
+			background-image: url("@{img-path}/icons/ico_caret_disable.svg");
+		}
+	}
+	
+	&.cl-focus,
+	&:focus {
+		#input--focus();
+	}
+	
+	&.cl-readonly {
+		#input--readonly();
+	}
+	
+	&.cl-disabled {
+		#input--disabled();
+	}
+	
+	&.is-error {
+		#input--error();
+	}
+}
+
+/* ==========================================================================
+ FileInput
+ ========================================================================== */
+.cl-fileinput {
+	#input--base();
+	
+	.cl-fileinput-clear {
+		#input--clear();
+	}
+	
+	&:not(.cl-disabled) .cl-fileinput-clear:hover {
+		#input--clear();
+	}
+	
+	&.cl-focus,
+	&:focus {
+		#input--focus();
+	}
+	
+	&.cl-readonly {
+		#input--readonly();
+	}
+	
+	&.cl-disabled {
+		#input--disabled();
+	}
+	
+	&.is-error {
+		#input--error();
+	}
+}
+
+/* ==========================================================================
+ Textarea
+ ========================================================================== */
+.cl-textarea {
+	#input--base();
+	
+	.cl-textarea-wrap {
+		padding: @size-input-padding-y @size-input-padding-x;
+	}
+	
+	.cl-text {
+		padding: 0;
+	}
+	
+	&.cl-focus,
+	&:focus {
+		#input--focus();
+	}
+	
+	&.cl-readonly {
+		#input--readonly();
+	}
+	
+	&.cl-disabled {
+		#input--disabled();
+	}
+	
+	&.is-error {
+		#input--error();
+	}
+}
+
+.textarea-count {
+	color: @color-text-subtle;
+	text-align: right;
+	
+	.count-now {
+		color: @color-component-text-active;
+	}
+	
+	.count-total {
+	}
+}
+
+.cl-container.textarea-wrap {
+	.textarea-count {
+	}
+	
+	&.is-error {
+		.textarea-count {
+			.count-now {
+				color: @color-component-text-error;
+			}
+		}
+	}
+}

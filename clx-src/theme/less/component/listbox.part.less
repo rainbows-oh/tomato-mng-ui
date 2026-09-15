@@ -1,0 +1,273 @@
+/**
+ * listbox.part.less — 리스트박스 컨트롤 스타일
+ *
+ * @desc  단일 리스트박스(.cl-listbox) + 연결 리스트박스(.cl-linkedlistbox)를 컴포넌트별로 분리
+ * @note  프로젝트마다 디자인 기준이 달라 스타일을 이 파일에서 관리 (custom-settings 미사용)
+ *        컨테이너·아이템 상태는 공유 믹스인(#listbox--*)으로 처리, 컴포넌트별로 각각 호출
+ *        폴더 아이콘은 cleopatra 배경을 직접 url() 로 덮어씀
+ */
+ 
+@import (reference) "../common/_include.part.less";
+
+/* 파일 지역 변수 (@listbox-- 접두어) — 프로젝트별 디자인 튜닝 지점 */
+
+/* 크기 */
+@listbox--border-radius: @size-component-radius;
+@listbox--padding-x: @padding-0;
+@listbox--padding-y: @padding-2;
+@listbox--item-min-height: @size-component-height;
+@listbox--item-padding-x: @padding-3;
+@listbox--item-padding-y: @padding-0;
+@listbox--item-gap: @gap-2;
+@listbox--item-icon-size: @size-icon-small;
+@listbox--width-default: 200px;
+/* 헤더 (LinkedListbox 전용) */
+@listbox--head-gap: @gap-4;
+@listbox--head-font-size: @font-size-heading-xsmall;
+@listbox--head-font-weight: @font-weight-semibold;
+@listbox--head-color-text: @color-component-text;
+/* 폰트 */
+@listbox--font-size: @font-size-label-small;
+/* 색상 — 컨테이너 */
+@listbox--color-background: @color-input-surface;
+@listbox--color-background-disabled: @color-input-surface-disabled;
+@listbox--color-border: @color-input-border;
+@listbox--color-border-focus: @color-input-border-active;
+@listbox--color-border-disabled: @color-input-border-disabled;
+@listbox--color-text: @color-component-text;
+@listbox--color-text-disabled: @color-component-text-disabled;
+/* 색상 — 아이템 */
+@listbox--item-color-action-hover: @color-action-primary-hover;
+@listbox--item-color-action-selected: @color-action-primary-selected;
+@listbox--item-color-action-disabled: @color-action-disabled;
+@listbox--item-color-text-disabled: @color-component-text-disabled-on;
+
+/* ==========================================================================
+ Mixins
+ ========================================================================== */
+/* 리스트 컨테이너 공통 (배경/보더/radius/padding) */
+#listbox--container() {
+	background-color: @listbox--color-background;
+	border: 1px solid @listbox--color-border;
+	border-radius: @listbox--border-radius;
+	padding: @listbox--padding-y @listbox--padding-x;
+}
+
+/* 포커스 상태 */
+#listbox--focus() {
+	border-color: @listbox--color-border-focus;
+	box-shadow: none;
+	outline: none;
+}
+
+/* 아이템 공통 기반 */
+#listbox--item-base() {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: auto;
+	color: inherit;
+	min-height: @listbox--item-min-height;
+	outline: none;
+	
+	.cl-icon {
+		flex-shrink: 0;
+		width: @listbox--item-icon-size;
+		height: @listbox--item-icon-size;
+		
+		+ .cl-text {
+			padding-left: @listbox--item-gap;
+		}
+	}
+	
+	.cl-text {
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		padding: 0;
+	}
+}
+
+/* 아이템 hover/focus */
+#listbox--item-hover() {
+	background-color: @listbox--item-color-action-hover;
+	color: @listbox--color-text;
+}
+
+/* 아이템 선택 */
+#listbox--item-selected() {
+	background-color: @listbox--item-color-action-selected;
+	color: @listbox--color-text;
+}
+
+/* 아이템 비활성 선택 */
+#listbox--item-disabled-selected() {
+	background-color: @listbox--item-color-action-disabled;
+	color: @listbox--item-color-text-disabled;
+}
+
+/* ==========================================================================
+ .cl-listbox — 단일 리스트박스
+ ========================================================================== */
+.cl-listbox {
+	#listbox--container();
+	color: @listbox--color-text;
+	font-size: @listbox--font-size;
+	transition: @transition-base;
+	
+	.cl-listbox-list {
+		.cl-listbox-item {
+			#listbox--item-base();
+			padding: @listbox--item-padding-y @listbox--item-padding-x;
+			
+			/* 드래그 드롭 위치 표시 */
+			&.cl-dropbottom {
+				box-shadow: inset 0 -2px 0 @listbox--color-border-focus;
+			}
+			
+			&.cl-droptop {
+				box-shadow: inset 0 2px 0 @listbox--color-border-focus;
+			}
+			
+			&.cl-selected {
+				#listbox--item-selected();
+			}
+		}
+	}
+	
+	/* hover/focus (활성 상태에서만) */
+	&:not(.cl-disabled) {
+		.cl-listbox-item:not(.cl-disabled):not(.cl-selected) {
+			&:hover,
+			&.cl-hover,
+			&:focus {
+				#listbox--item-hover();
+			}
+		}
+	}
+	
+	/* focus */
+	&:focus,
+	&.cl-focus {
+		#listbox--focus();
+	}
+	
+	/* disabled */
+	&.cl-disabled {
+		background-color: @listbox--color-background-disabled;
+		border-color: @listbox--color-border-disabled;
+		color: @listbox--color-text-disabled;
+		
+		.cl-listbox-item.cl-selected {
+			#listbox--item-disabled-selected();
+		}
+	}
+}
+
+/* ==========================================================================
+ .cl-linkedlistbox — 연결 리스트박스
+ ========================================================================== */
+.cl-linkedlistbox {
+	color: @listbox--color-text;
+	font-size: @listbox--font-size;
+	transition: @transition-base;
+	
+	.cl-linkedlistbox-listbox {
+		.cl-linkedlistbox-list-wrapper {
+			gap: @listbox--head-gap;
+			
+			/* 컬럼 헤더 */
+			.cl-linkedlistbox-header {
+				background: transparent;
+				border: 0;
+				border-radius: 0;
+				color: @listbox--head-color-text;
+				font-size: @listbox--head-font-size;
+				font-weight: @listbox--head-font-weight;
+				padding: 0;
+				text-align: left;
+			}
+		}
+		
+		/* 개별 리스트 */
+		.cl-linkedlistbox-list {
+			#listbox--container();
+			width: 100%;
+			
+			.cl-linkedlistbox-item {
+				#listbox--item-base();
+				padding: @listbox--item-padding-y @listbox--item-padding-x;
+				
+				/* 폴더 아이콘 (직접 url) */
+				.cl-linkedlistbox-arrow.cl-folder {
+					flex-shrink: 0;
+					width: @listbox--item-icon-size;
+					height: @listbox--item-icon-size;
+					background-image: url("@{img-path}/icons/ico_angle.svg");
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: contain;
+					transform: rotate(-90deg);
+				}
+			}
+			
+			/* 단독 사용 시 기본 너비 */
+			&:only-child {
+				width: @listbox--width-default;
+			}
+			
+			&:focus {
+				outline: none;
+			}
+		}
+		
+		/* focus */
+		&:focus,
+		&.cl-focus {
+			.cl-linkedlistbox-list {
+				#listbox--focus();
+			}
+		}
+	}
+	
+	/* hover/selected (활성 상태에서만) */
+	&:not(.cl-disabled) {
+		.cl-linkedlistbox-item:not(.cl-disabled) {
+			&:hover,
+			&.cl-hover,
+			&:focus {
+				#listbox--item-hover();
+				
+				.cl-linkedlistbox-arrow.cl-folder {
+					background-image: url("@{img-path}/icons/ico_angle.svg");
+				}
+			}
+			
+			&.cl-selected {
+				#listbox--item-selected();
+				
+				.cl-linkedlistbox-arrow.cl-folder {
+					background-image: url("@{img-path}/icons/ico_angle.svg");
+				}
+			}
+		}
+	}
+	
+	/* disabled */
+	&.cl-disabled {
+		color: @listbox--color-text-disabled;
+		
+		.cl-linkedlistbox-list {
+			background-color: @listbox--color-background-disabled;
+			border-color: @listbox--color-border-disabled;
+		}
+		
+		.cl-linkedlistbox-item.cl-selected {
+			#listbox--item-disabled-selected();
+			
+			.cl-linkedlistbox-arrow.cl-folder {
+				background-image: url("@{img-path}/icons/ico_angle_disable.svg");
+			}
+		}
+	}
+}

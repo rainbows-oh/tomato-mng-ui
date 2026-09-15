@@ -1,0 +1,498 @@
+/**
+ * menu.part.less — 메뉴 컨트롤 스타일
+ *
+ * @desc  기본 메뉴(.cl-menu) + 드롭다운(.drop-wrap/.drop-menu) + 컨텍스트 메뉴(.context-menu)
+ * @note  프로젝트마다 디자인 기준이 달라 스타일을 이 파일에서 관리 (custom-settings 미사용)
+ *        컨테이너 공통은 #menu--surface(), 아이템 공통은 #menu--item-base() 믹스인
+ *        폴더 화살표는 #menu--arrow() 구조 믹스인 + 직접 url() (cleopatra drill-down.png 덮어씀)
+ *        드롭 화살표 gap 은 나눗셈 회피 위해 -6px 리터럴
+ */
+
+@import (reference) "../common/_include.part.less";
+
+
+/* 파일 지역 변수 (@menu-- 접두어) — 프로젝트별 디자인 튜닝 지점 */
+
+/* 크기 */
+@menu--border-radius:      @size-component-radius;
+@menu--padding-x:          @padding-3;
+@menu--padding-y:          @padding-3;
+@menu--item-min-height:    @size-10;
+@menu--item-padding-x:     @padding-6;
+@menu--item-padding-y:     @padding-0;
+@menu--item-border-radius: @size-component-radius;
+@menu--item-arrow-size:    @size-icon-small;
+@menu--item-gap:           @gap-2;
+
+/* 폰트 */
+@menu--font-size:   @font-size-label-small;
+@menu--font-weight: @font-weight-medium;
+
+/* 색상 — 컨테이너 */
+@menu--color-background:    @color-background-base;
+@menu--color-border:        @gray-10;
+@menu--color-shadow:        0 2px 8px fade(@black, 10%);
+@menu--color-text:          @color-component-text;
+@menu--color-text-disabled: @color-component-text-disabled-on;
+
+/* 색상 — 아이템 */
+@menu--item-color-action-hover:    @color-action-secondary-hover;
+@menu--item-color-action-pressed:  @color-action-secondary-pressed;
+@menu--item-color-action-selected: @color-action-secondary-selected;
+@menu--item-color-action-disabled: @color-action-disabled;
+@menu--item-color-text-hover:      @color-component-text;
+@menu--item-color-text-selected:   @color-text-subtle;
+
+/* 색상 — 스핀 버튼 / 구분선 */
+@menu--spin-color-background: @color-action-secondary-hover;
+@menu--context-divider-color: @gray-10;
+
+/* 드롭다운 전용 */
+@menu--drop-min-width:    130px;
+@menu--drop-margin-top:   @padding-6;
+@menu--drop-arrow-size:   12px;
+@menu--drop-arrow-gap:    -6px;   /* arrow-size / 2 * -1 */
+@menu--drop-arrow-offset: 24px;
+@menu--drop-section-gap:  @gap-4;
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+/* 메뉴 컨테이너 공통 (배경/보더/radius) */
+#menu--surface() {
+	background-color: @menu--color-background;
+	border: 1px solid @menu--color-border;
+	border-radius: @menu--border-radius;
+}
+
+/* 메뉴 아이템 공통 기반 */
+#menu--item-base() {
+	height: auto;
+	color: inherit;
+	min-height: @menu--item-min-height;
+	padding: @menu--item-padding-y @menu--item-padding-x;
+	white-space: nowrap;
+
+	.cl-text {
+		color: inherit;
+		font: inherit;
+		overflow: hidden;
+		padding: 0;
+		white-space: nowrap;
+	}
+
+	/* 아이콘/단축키 — 기본 숨김 */
+	.cl-menu-icon,
+	.cl-menu-accesskey {
+		display: none !important;
+	}
+}
+
+/* 앵글 아이콘 영역 공통 (직접 url, no-repeat + 중앙 + contain) */
+#menu--icon() {
+	background-image: url("@{img-path}/icons/ico_angle.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/* 폴더 화살표 (앵글 아이콘 + 회전) */
+#menu--arrow() {
+	#menu--icon();
+	width: @menu--item-arrow-size;
+	height: @menu--item-arrow-size;
+	transform: rotate(-90deg);
+}
+
+/* ==========================================================================
+   .cl-menu — 기본 메뉴
+   ========================================================================== */
+
+.cl-menu {
+	#menu--surface();
+	color: @menu--color-text;
+	font-size: @menu--font-size;
+	font-weight: @menu--font-weight;
+	text-align: left;
+
+	.cl-menu-list {
+		background: transparent;
+		border: 0;
+		margin: 0;
+		padding: 0;
+
+		/* 서브메뉴 */
+		&.cl-sub {
+			#menu--surface();
+
+			.cl-menu-icon-wrapper      { width: @menu--item-arrow-size; }
+			.cl-menu-accesskey-wrapper { width: @size-icon-medium; }
+			.cl-menu-arrow-wrapper     { width: @menu--item-arrow-size; }
+		}
+
+		/* 스크롤 스핀 버튼 (직접 url) */
+		.cl-arrow-up,
+		.cl-arrow-down {
+			#menu--icon();
+
+			&:hover       { background-color: @menu--spin-color-background; }
+			&.cl-disabled { background-color: @menu--item-color-action-disabled; }
+		}
+
+		.cl-arrow-up   { transform: rotate(180deg); }
+		.cl-arrow-down { transform: rotate(0deg); }
+
+		/* 메뉴 아이템 */
+		.cl-menu-item {
+			#menu--item-base();
+
+			/* 폴더 아이콘 */
+			&.cl-folder {
+				> .cl-menu-arrow,
+				> .cl-menu-arrow-wrapper .cl-menu-arrow {
+					#menu--arrow();
+				}
+			}
+
+			/* 서브메뉴 컨테이너 */
+			> .cl-menu-list-wrapper > .cl-sub {
+				#menu--surface();
+			}
+		}
+	}
+
+	/* hover/selected (활성 상태에서만) */
+	&:not(.cl-disabled) {
+		.cl-menu-list {
+			.cl-menu-item:not(.cl-disabled) {
+				&:not(.cl-selected):hover,
+				&:not(.cl-selected).cl-hover {
+					background-color: @menu--item-color-action-hover;
+					color: @menu--item-color-text-hover;
+				}
+
+				&.cl-selected,
+				&.cl-selected:hover,
+				&.cl-selected.cl-hover {
+					background-color: @menu--item-color-action-selected;
+					color: @menu--item-color-text-selected;
+
+					&.cl-folder {
+						> .cl-menu-arrow,
+						> .cl-menu-arrow-wrapper .cl-menu-arrow {
+							#menu--arrow();
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/* selected (기본) */
+	.cl-menu-list .cl-menu-item.cl-selected {
+		background-color: @menu--item-color-action-selected;
+		color: @menu--item-color-text-selected;
+	}
+
+	/* focus */
+	&.cl-focus {
+		outline: none;
+
+		.cl-menu-list {
+			border-color: @menu--color-border;
+		}
+	}
+
+	/* disabled */
+	&.cl-disabled {
+		color: @menu--color-text-disabled;
+
+		.cl-menu-item {
+			cursor: default;
+
+			&.cl-selected {
+				background-color: @menu--item-color-action-disabled;
+				color: @menu--color-text-disabled;
+
+				&.cl-folder {
+					> .cl-menu-arrow,
+					> .cl-menu-arrow-wrapper .cl-menu-arrow {
+						#menu--arrow();
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Variants
+   ========================================================================== */
+
+/* Drop Menu (드롭다운) — 팝업, 화살표 말풍선, 3가지 내부 구성 */
+.drop-wrap {
+	position: relative;
+	display: inline-flex;
+
+	.drop-menu {
+		#menu--surface();
+		top: calc(100% + @menu--drop-margin-top);
+		left: 50%;
+		box-shadow: @menu--color-shadow;
+		min-width: @menu--drop-min-width;
+		padding: @menu--padding-y @menu--padding-x;
+		transform: translateX(-50%);
+		z-index: 6;
+
+		/* 화살표 말풍선 — 상단 중앙 */
+		&::before {
+			content: "";
+			position: absolute;
+			display: block;
+			bottom: 100%;
+			left: 50%;
+			width: @menu--drop-arrow-size;
+			height: @menu--drop-arrow-size;
+			background-color: @menu--color-background;
+			border: 1px solid @menu--color-border;
+			border-left-color: transparent;
+			border-top-color: transparent;
+			margin-bottom: @menu--drop-arrow-gap;
+			margin-left: @menu--drop-arrow-gap;
+			transform: rotate(-135deg);
+		}
+
+		/* 내부 영역 — 섹션 구분 */
+		.drop-in {
+			position: relative;
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+			gap: @menu--padding-y;
+			z-index: 1;
+		}
+
+		/* 상단 영역 (헤더) */
+		.drop-top {
+			width: 100%;
+			border-bottom: 1px solid @menu--color-border;
+			padding: @menu--padding-y @menu--item-padding-x;
+		}
+
+		/* 하단 영역 (푸터) */
+		.drop-bottom {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			border-top: 1px solid @menu--color-border;
+			margin-top: @menu--drop-section-gap;
+			padding: @menu--padding-y 0;
+		}
+
+		/* A: 메뉴 컨트롤로 내부 구성 — 배경/보더 투명 */
+		.cl-menu {
+			background: transparent;
+			border: 0;
+			box-shadow: none;
+
+			.cl-menu-list .cl-menu-item {
+				border-radius: @menu--item-border-radius;
+
+				&:not(.cl-first) {
+					margin-top: @menu--item-gap;
+				}
+			}
+		}
+
+		/* B: 사이드 내비게이션으로 내부 구성 — 메뉴 아이템 색상으로 덮어씀 */
+		.cl-sidenavigation {
+			background: transparent;
+			border: 0;
+			box-shadow: none;
+			color: @menu--color-text;
+			font-size: @menu--font-size;
+			text-align: left;
+
+			.cl-sidenavigation-item {
+				#menu--item-base();
+				gap: 0;
+				background-color: transparent;
+				border-radius: @menu--item-border-radius;
+
+				&:not(.cl-first) {
+					margin-top: @menu--item-gap;
+				}
+
+				.cl-icon,
+				.cl-expand-icon {
+					display: none !important;
+				}
+
+				.cl-text {
+					padding: 0;
+				}
+
+				&:hover,
+				&.cl-hover {
+					background-color: @menu--item-color-action-hover;
+					color: @menu--item-color-text-hover;
+				}
+
+				&:active {
+					background-color: @menu--item-color-action-pressed;
+					color: @menu--item-color-text-hover;
+				}
+
+				&.cl-selected {
+					background-color: @menu--item-color-action-selected;
+					color: @menu--item-color-text-selected;
+				}
+
+				&:focus-visible {
+					box-shadow: @focus-ring-box-shadow-inset;
+					outline: none;
+				}
+			}
+		}
+
+		/* C: 버튼(.cl-button.item-link)으로 내부 구성 */
+		.drop-list {
+			width: 100%;
+
+			.item-link {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				width: 100%;
+				height: @menu--item-min-height;
+				background-color: @menu--color-background;
+				background-image: none;
+				border: 0;
+				border-radius: @menu--item-border-radius;
+				color: @menu--color-text;
+				font-size: @menu--font-size;
+				padding: 0 @menu--item-padding-x;
+				text-decoration: none;
+				text-shadow: none;
+				transition: @transition-base;
+
+				/* 이동 아이콘 (옵션) */
+				.ico-go {
+					flex-shrink: 0;
+					width: @menu--item-arrow-size;
+					height: @menu--item-arrow-size;
+				}
+
+				/* hover */
+				&:not(.cl-disabled):hover,
+				&:not(.cl-disabled).cl-hover {
+					background-color: @menu--item-color-action-hover;
+					background-image: none;
+				}
+
+				/* active/pressed */
+				&:not(.cl-disabled):active,
+				&:not(.cl-disabled).cl-activated {
+					background-color: @menu--item-color-action-pressed;
+					background-image: none;
+				}
+
+				/* selected */
+				&.active,
+				&.cl-selected {
+					background-color: @menu--item-color-action-selected;
+					background-image: none;
+					color: @menu--item-color-text-selected;
+					font-weight: @font-weight-bold;
+				}
+
+				/* disabled */
+				&.cl-disabled {
+					background-color: @menu--color-background;
+					background-image: none;
+					color: @menu--color-text-disabled;
+					cursor: not-allowed;
+					pointer-events: none;
+				}
+			}
+		}
+	}
+
+	/* 화살표 위치 — 왼쪽 정렬 */
+	&.drop-left {
+		.drop-menu {
+			right: unset;
+			left: 0;
+			transform: none;
+
+			&::before {
+				left: @menu--drop-arrow-offset;
+				margin-left: 0;
+			}
+		}
+	}
+
+	/* 화살표 위치 — 오른쪽 정렬 */
+	&.drop-right {
+		.drop-menu {
+			right: 0;
+			left: unset;
+			transform: none;
+
+			&::before {
+				right: @menu--drop-arrow-offset;
+				left: unset;
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+/* Context Menu (컨텍스트) — 우클릭 메뉴, 구분선 포함 */
+.context-menu {
+	#menu--surface();
+	box-shadow: @menu--color-shadow;
+	min-width: 160px;
+	padding: @menu--padding-y @menu--padding-x;
+	user-select: none;
+
+	.cl-menu-list .cl-menu-item {
+		border-radius: @menu--item-border-radius;
+
+		/* 구분선 아이템 */
+		&.cl-divider {
+			height: 1px;
+			background-color: @menu--context-divider-color;
+			margin: @menu--padding-y 0;
+			min-height: 0;
+			padding: 0 @menu--item-padding-x;
+			pointer-events: none;
+		}
+
+		/* 아이콘 표시 (컨텍스트 메뉴에서는 표시) */
+		.cl-menu-icon {
+			width: @menu--item-arrow-size;
+			height: @menu--item-arrow-size;
+		}
+	}
+}
+
+/* ==========================================================================
+   Extensions
+   ========================================================================== */
+
+/* Global Aside 내 메뉴 — 최상위 리스트 보더 제거 */
+.cl-global-aside {
+	.cl-menu {
+		> .cl-menu-list.cl-sub {
+			border: 0;
+		}
+
+		.cl-menu-item {
+			.cl-menu-list.cl-sub {
+				#menu--surface();
+			}
+		}
+	}
+}

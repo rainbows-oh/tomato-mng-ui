@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.w3.org/1999/xhtml">
+  <Screen id="default" name="EXB-FULL" width="1580px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+  <Screen id="tablet" name="EXB-DIV" width="1128px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+  <Screen id="EXB-POP[1024]" name="EXB-POP[1024]" width="1024px" height="576px"/>
+  <Screen id="EXB-POP[800]" name="EXB-POP[800]" width="800px" height="480px"/>
+  <Screen id="mobile" name="EXB-PART" width="672px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+  <Screen id="EXB-POP" name="EXB-POP[480]" width="480px" height="320px"/>
+</xmi:XMI>

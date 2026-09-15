@@ -1,0 +1,861 @@
+/************************************************
+ * COLOR TOKEN
+ * 색상 토큰
+ *
+ * [사용 규칙]
+ * - 색상 토근 외 색상 직접 선언을 지양합니다
+ * - RGBA 사용 시 LESS 함수를 사용합니다 (예: fade(@white, 10%))
+ ************************************************/
+
+/************************************************
+ * White / Black
+ ************************************************/
+
+@white: #ffffff;
+@black: #000000;
+
+/************************************************
+ * Brand / Role
+ ************************************************/
+
+@primary:     @primary-50;
+@secondary:   @secondary-60;
+@point:       @point-50;
+
+@success:     @success-50;
+@information: @information-50;
+@warning:     @warning-30;
+@danger:      @danger-50;
+
+/************************************************
+ * Primary — 50단계 기준
+ ************************************************/
+
+@primary-5:  #f2f4f7;
+@primary-10: #e2e7ed;
+@primary-20: #bccbdf;
+@primary-30: #91afd6;
+@primary-40: #6192d3;
+@primary-50: #2674d9;
+@primary-60: #225da9;
+@primary-70: #193d6d;
+@primary-80: #142e4f;
+@primary-90: #020b1c;
+@primary-95: #000106;
+
+/************************************************
+ * Secondary — 80단계 기준
+ ************************************************/
+
+@secondary-5:  #ebedef;
+@secondary-10: #dadde1;
+@secondary-20: #bbc0c7;
+@secondary-30: #9ca4af;
+@secondary-40: #7f8997;
+@secondary-50: #636f80;
+@secondary-60: #475569;
+@secondary-70: #313b49;
+@secondary-80: #20262f;
+@secondary-90: #0f1217;
+@secondary-95: #08090b;
+
+/************************************************
+ * Gray Scale
+ ************************************************/
+
+@gray-5:   #f4f5f7;
+@gray-10:  #e0e3e8;
+@gray-20:  #c5cbd4;
+@gray-30:  #acb5c1;
+@gray-40:  #939eae;
+@gray-50:  #7b899d;
+@gray-60:  #64748b;
+@gray-70:  #455060;
+@gray-80:  #2d343e;
+@gray-90:  #16191e;
+@gray-95:  #030304;
+
+/************************************************
+ * Point — 50단계
+ ************************************************/
+
+@point-5:  #e5f3f7;
+@point-10: #cee9f0;
+@point-20: #a3d6e2;
+@point-30: #7bc4d6;
+@point-40: #54b3ca;
+@point-50: #2da2be;
+@point-60: #0891b2;
+@point-70: #06647b;
+@point-80: #04414f;
+@point-90: #021f27;
+@point-95: #011013;
+
+/************************************************
+ * Success — 50단계
+ ************************************************/
+
+@success-5:  #e6f1ea;
+@success-10: #d0e6d8;
+@success-20: #a8d0b7;
+@success-30: #82bb97;
+@success-40: #5da778;
+@success-50: #38935a;
+@success-60: #15803d;
+@success-70: #0f592a;
+@success-80: #09391b;
+@success-90: #051c0d;
+@success-95: #020e07;
+
+/************************************************
+ * Information — 50단계
+ ************************************************/
+
+@information-5:  #e4eff5;
+@information-10: #cde1ec;
+@information-20: #a1c7dc;
+@information-30: #78afcd;
+@information-40: #5097be;
+@information-50: #2980af;
+@information-60: #0369a1;
+@information-70: #02496f;
+@information-80: #012f48;
+@information-90: #011723;
+@information-95: #000b11;
+
+/************************************************
+ * Warning — 30단계
+ ************************************************/
+
+@warning-5:  #fefaeb;
+@warning-10: #fcf4d6;
+@warning-20: #fddc69;
+@warning-30: #f1c21b;
+@warning-40: #d2a106;
+@warning-50: #b28600;
+@warning-60: #8e6a00;
+@warning-70: #684e00;
+@warning-80: #483700;
+@warning-90: #302400;
+@warning-95: #261d00;
+
+/************************************************
+ * Danger — 50단계
+ ************************************************/
+
+@danger-5:  #fbe8e8;
+@danger-10: #f8d4d4;
+@danger-20: #f2aeae;
+@danger-30: #ec8b8b;
+@danger-40: #e76868;
+@danger-50: #e14747;
+@danger-60: #dc2626;
+@danger-70: #981a1a;
+@danger-80: #621111;
+@danger-90: #300808;
+@danger-95: #180404;
+
+/************************************************
+ * TYPOGRAPHY TOKEN
+ * 타이포그래피 토큰
+ *
+ * [사용 규칙]
+ * - 원시 타이포그래피 값은 이 파일에서만 정의합니다.
+ *
+ * [반응형 규칙]
+ * - PC 기본값: @font-size-{category}-{scale}
+ * - 모바일 값: @font-size-{category}-{scale}-mobile
+ * - 미디어 쿼리는 직접 작성
+ ************************************************/
+ 
+/************************************************
+ * Font Family
+ ************************************************/
+
+@font-family:      "Pretendard";
+@font-family-base: @font-family, "$default-font", sans-serif;
+
+/************************************************
+ * Font Weight
+ ************************************************/
+
+@font-weight-normal:   400;
+@font-weight-medium:   500;
+@font-weight-semibold: 600;
+@font-weight-bold:     700;
+
+/************************************************
+ * Font Size — Default
+ * 기본 폰트 크기 정의
+ ************************************************/
+
+/* REM 기본 단위 */
+@font-size-base:    10px;
+@font-size-default: @font-size-body-small;
+
+/************************************************
+ * Font Size — Display
+ * 히어로, 배너 등 대형 타이틀
+ ************************************************/
+
+// PC
+@font-size-display-large:  48px;
+@font-size-display-medium: 36px;
+@font-size-display-small:  28px;
+
+// Mobile
+@font-size-display-large-mobile:  36px;
+@font-size-display-medium-mobile: 28px;
+@font-size-display-small-mobile:  24px;
+
+/************************************************
+ * Font Size — Heading
+ * 섹션 제목
+ ************************************************/
+
+// PC
+@font-size-heading-xlarge: 32px;
+@font-size-heading-large:  28px;
+@font-size-heading-medium: 24px;
+@font-size-heading-small:  20px;
+@font-size-heading-xsmall: 16px;
+
+// Mobile
+@font-size-heading-xlarge-mobile: 28px;
+@font-size-heading-large-mobile:  24px;
+@font-size-heading-medium-mobile: 20px;
+@font-size-heading-small-mobile:  16px;
+@font-size-heading-xsmall-mobile: 14px;
+
+/************************************************
+ * Font Size — Body
+ * 본문
+ ************************************************/
+
+// PC
+@font-size-body-large:  15px;
+@font-size-body-medium: 14px;
+@font-size-body-small:  13px;
+@font-size-body-xsmall: 12px;
+
+// Mobile
+@font-size-body-large-mobile:  14px;
+@font-size-body-medium-mobile: 13px;
+@font-size-body-small-mobile:  12px;
+@font-size-body-xsmall-mobile: 11px;
+
+/************************************************
+ * Font Size — Label
+ * 레이블, 캡션, 배지 등
+ ************************************************/
+
+// PC
+@font-size-label-xxlarge: 18px;
+@font-size-label-xlarge:  16px;
+@font-size-label-large:   15px;
+@font-size-label-medium:  14px;
+@font-size-label-small:   13px;
+@font-size-label-xsmall:  12px;
+@font-size-label-xxsmall: 10px;
+
+// Mobile
+@font-size-label-xxlarge-mobile: 16px;
+@font-size-label-xlarge-mobile:  15px;
+@font-size-label-large-mobile:   14px;
+@font-size-label-medium-mobile:  13px;
+@font-size-label-small-mobile:   12px;
+@font-size-label-xsmall-mobile:  11px;
+@font-size-label-xxsmall-mobile: 10px;
+
+/************************************************
+ * Font Size — Navigation
+ * 내비게이션 타이틀 및 뎁스
+ ************************************************/
+
+// PC
+@font-size-navigation-title-medium: 18px;
+@font-size-navigation-title-small:  16px;
+@font-size-navigation-depth-large:  14px;
+@font-size-navigation-depth-medium: 13px;
+@font-size-navigation-depth-small:  12px;
+
+// Mobile
+@font-size-navigation-title-medium-mobile: 16px;
+@font-size-navigation-title-small-mobile:  14px;
+@font-size-navigation-depth-large-mobile:  14px;
+@font-size-navigation-depth-medium-mobile: 13px;
+@font-size-navigation-depth-small-mobile:  12px;
+
+/************************************************
+ * Line Height
+ ************************************************/
+
+@line-height-none: 1;
+@line-height-base: 1.5;
+
+/************************************************
+ * Letter Spacing
+ ************************************************/
+
+@letter-spacing-tight:  -0.05em;
+@letter-spacing-normal:  0em;
+@letter-spacing-wide:    0.05em;
+
+/************************************************
+ * BORDER TOKEN
+ * 보더 토큰
+ *
+ * [사용 규칙]
+ * - 
+ ************************************************/
+
+/************************************************
+ * Border Radius
+ * 인덱스 순서대로 값이 커집니다.
+ ************************************************/
+
+/* 0px */
+@border-radius-0:    0px;
+/* 2px */
+@border-radius-1:    2px;
+/* 3px */
+@border-radius-2:    3px;
+/* 4px */
+@border-radius-3:    4px;
+/* 6px */
+@border-radius-4:    6px;
+/* 8px */
+@border-radius-5:    8px;
+/* 10px */
+@border-radius-6:    10px;
+/* 12px */
+@border-radius-7:    12px;
+/* 16px */
+@border-radius-8:    16px;
+/* 20px */
+@border-radius-9:    20px;
+/* 24px */
+@border-radius-10:   24px;
+/* 32px */
+@border-radius-11:   32px;
+/* 36px */
+@border-radius-12:   36px;
+/* 40px */
+@border-radius-13:   40px;
+/* 48px */
+@border-radius-14:   48px;
+/* 1000px — 완전한 원형 처리 */
+@border-radius-full: 1000px;
+
+/************************************************
+ * SIZE TOKEN
+ * 사이즈 토큰
+ *
+ * [사용 규칙]
+ * - 컴포넌트의 width, height 등 크기 수치를 관리합니다.
+ ************************************************/
+
+/************************************************
+ * Size
+ * 컴포넌트 크기 수치 (width, height 공용)
+ ************************************************/
+
+/* 0px */
+@size-0:  0px;
+/* 2px */
+@size-1:  2px;
+/* 4px */
+@size-2:  4px;
+/* 6px */
+@size-3:  6px;
+/* 8px */
+@size-4:  8px;
+/* 10px */
+@size-5:  10px;
+/* 12px */
+@size-6:  12px;
+/* 16px */
+@size-7:  16px;
+/* 20px */
+@size-8:  20px;
+/* 24px */
+@size-9:  24px;
+/* 28px */
+@size-10: 28px;
+/* 32px */
+@size-11: 32px;
+/* 36px */
+@size-12: 36px;
+/* 40px */
+@size-13: 40px;
+/* 48px */
+@size-14: 48px;
+/* 56px */
+@size-15: 56px;
+
+/************************************************
+ * Size — Icon
+ ************************************************/
+
+/* 12px */
+@size-icon-xsmall: @size-6;
+/* 16px */
+@size-icon-small:  @size-7;
+/* 20px */
+@size-icon-medium: @size-8;
+/* 24px */
+@size-icon-large:  @size-9;
+/* 32px */
+@size-icon-xlarge: @size-11;
+
+/************************************************
+ * SPACING TOKEN
+ * 스페이싱 토큰
+ *
+ * [사용 규칙]
+ * - 목록에 없는 수치는 직접 px값을 사용합니다.
+ ************************************************/
+
+/************************************************
+ * Gap
+ * 요소 간 간격 (margin 등)
+ ************************************************/
+
+/* 0px */
+@gap-0:  0px;
+/* 2px */
+@gap-1:  2px;
+/* 4px */
+@gap-2:  4px;
+/* 6px */
+@gap-3:  6px;
+/* 8px */
+@gap-4:  8px;
+/* 10px */
+@gap-5:  10px;
+/* 12px */
+@gap-6:  12px;
+/* 16px */
+@gap-7:  16px;
+/* 20px */
+@gap-8:  20px;
+/* 24px */
+@gap-9:  24px;
+/* 32px */
+@gap-10: 32px;
+/* 36px */
+@gap-11: 36px;
+/* 40px */
+@gap-12: 40px;
+/* 48px */
+@gap-13: 48px;
+/* 64px */
+@gap-14: 64px;
+/* 80px */
+@gap-15: 80px;
+
+/************************************************
+ * Padding
+ * 요소 내부 여백
+ ************************************************/
+
+/* 0px */
+@padding-0:  0px;
+/* 2px */
+@padding-1:  2px;
+/* 4px */
+@padding-2:  4px;
+/* 6px */
+@padding-3:  6px;
+/* 8px */
+@padding-4:  8px;
+/* 10px */
+@padding-5:  10px;
+/* 12px */
+@padding-6:  12px;
+/* 16px */
+@padding-7:  16px;
+/* 20px */
+@padding-8:  20px;
+/* 24px */
+@padding-9:  24px;
+/* 28px */
+@padding-10: 28px;
+/* 32px */
+@padding-11: 32px;
+/* 36px */
+@padding-12: 36px;
+/* 40px */
+@padding-13: 40px;
+/* 48px */
+@padding-14: 48px;
+/* 56px */
+@padding-15: 56px;
+
+/************************************************
+ * BREAKPOINT TOKEN
+ * 브레이크포인트 토큰
+ *
+ * [사용 규칙]
+ * - 화면 해상도별 크기 정의
+ ************************************************/
+ 
+/************************************************
+ * 브레이크 포인트
+ ************************************************/
+
+@breakpoint-small:   360px;
+@breakpoint-medium:  768px;
+@breakpoint-large:   1024px;
+@breakpoint-xlarge:  1280px;
+@breakpoint-xxlarge: 1440px;
+ 
+/************************************************
+ * 콘텐츠
+ ************************************************/
+
+@contents-size:             1200px;
+@contents-padding-x-pc:     24px;
+@contents-padding-x-mobile: 16px;
+@contents-wrap-size:        ~"@contents-size + (@contents-padding-x-pc * 2)";
+
+/************************************************
+ * 미디어 쿼리 — 변수값을 직접 참조 (변수 호출 금지)
+ * 예: @media (max-width: @{breakpoint-max-medium}) {} 로 작성
+ ************************************************/
+
+/* 767 까지 */
+@size-medium: 			~"(max-width: @{breakpoint-max-medium})";
+/* 768 이상 */
+@size-medium-more: 		~"(min-width: @{breakpoint-medium})";
+/* 768 이상 1023까지 */
+@size-medium-to-large:  ~"(min-width: @{breakpoint-medium}) and (max-width: @{breakpoint-max-large})";
+/* 1023 까지 */
+@size-large-less: 		~"(max-width: @{breakpoint-max-large})";
+/* 1024 이상 */
+@size-large-more: 		~"(min-width: @{breakpoint-large})";
+/* 1024 이상 1279 까지 */
+@size-large-to-xlarge:  ~"(min-width: @{breakpoint-large}) and (max-width: @{breakpoint-max-xlarge})";
+/* 1279 까지 */
+@size-xlarge-less: 		~"(max-width: @{breakpoint-max-xlarge})";
+/* 1280 이상 */
+@size-xlarge: 			~"(min-width: @{breakpoint-xlarge})";
+
+/************************************************
+ * MOTION TOKEN
+ * 모션 토큰
+ *
+ * [사용 규칙]
+ * - 과도한 모션 사용은 성능의 영향을 미칠 수 있습니다
+ ************************************************/
+
+
+/************************************************
+ * Transition
+ ************************************************/
+
+/* 기본 전환 — 모든 속성 */
+@transition-base: none; //all .4s ease-in-out;
+
+/************************************************
+ * SEMANTIC TOKEN
+ * 시맨틱(의미와 맥락적) 토큰
+ *
+ * [사용 규칙]
+ * - 원시 토큰을 의미 있는 이름으로 참조합니다.
+ * - 컴포넌트 토큰은 이 파일의 시멘틱 토큰을 참조합니다.
+ * - 원시값을 직접 사용을 지양합니다.
+ * - 테마 변경 시 이 파일의 값을 오버라이드합니다.
+ *   [주의] 원시 토큰을 직접 참조하는 경우 별도 테마 스타일링 필요
+ ************************************************/
+
+/************************************************
+ * Focus
+ ************************************************/
+
+@focus-ring:                  @primary;
+@focus-ring-box-shadow:       0 0 0 2px @focus-ring;
+@focus-ring-box-shadow-inset: inset 0 0 0 2px @focus-ring;
+
+/************************************************
+ * Color — Background
+ * 배경 및 표면 색상 전체
+ ************************************************/
+
+@color-background-base: @white;
+@color-background-dim:   fade(@black, 50%);
+
+/************************************************
+ * Color — Text
+ * 텍스트 요소 색상
+ ************************************************/
+
+@color-text-inverse: @white;
+@color-text-bolder:  @gray-95;
+@color-text-bold:    @gray-80;
+@color-text-subtle:  @gray-70;
+@color-text-subtler: @gray-50;
+
+/************************************************
+ * Color — Components
+ * 일반 컴포넌트 UI 요소 색상 (체크박스, 라디오 등)
+ ************************************************/
+
+@color-component-surface:          @white;
+@color-component-surface-disabled: @gray-10;
+
+
+@color-component-border:           @gray-30;
+@color-component-border-disabled:  @gray-30;
+@color-component-border-active:    @primary;
+@color-component-border-error:     @danger;
+
+@color-component-divider:          @gray-20;
+
+@color-component-text:             @gray-90;
+@color-component-text-disabled:    @gray-50;
+@color-component-text-disabled-on: @gray-60;
+@color-component-text-active:      @primary;
+@color-component-text-error:       @danger;
+
+/************************************************
+ * Size — Components
+ * 일반 컴포넌트 UI 요소 크기 (체크박스, 라디오 등)
+ ************************************************/
+
+@size-component-radius:       @border-radius-4;
+@size-component-icon:         @size-icon-small;
+@size-component-icon-large:   @size-icon-medium;
+/* 체크박스 및 라디오 버튼 등 아이콘 영역 크기 */
+@size-component-button:       @size-7;
+@size-component-button-large: @size-8;
+@size-component-gap:          @gap-2;
+@size-component-gap-small:    @gap-1;
+@size-component-gap-large:    @gap-3;
+
+/* 아래 변수는 값이 실제 적용되지는 않으나 크기 참조를 위한 선언 */
+@size-component-height:        @size-9;
+@size-component-height-small:  @size-8;
+@size-component-height-large:  @size-10;
+@size-component-height-xlarge: @size-11;
+
+/************************************************
+ * Color — Input
+ * 인풋 계열 컨트롤 색상
+ ************************************************/
+
+@color-input-surface:          @white;
+@color-input-surface-disabled: @gray-10;
+@color-input-border:           @gray-30;
+@color-input-border-disabled:  @gray-30;
+@color-input-border-active:    @primary;
+@color-input-border-error:     @danger;
+@color-input-text:             @gray-90;
+@color-input-text-placeholder: @gray-20;
+@color-input-text-disabled:    @gray-50;
+
+/************************************************
+ * Size — Input
+ * 인풋 계열 컨트롤 크기
+ ************************************************/
+
+@size-input-radius:    @size-component-radius;
+@size-input-padding-y: @padding-2;
+@size-input-padding-x: @padding-3;
+
+/************************************************
+ * Color — Action
+ * 버튼 또는 메뉴 아이템의 인터랙션 상태 색상
+ ************************************************/
+
+@color-action-white: @white;
+
+/* Primary 액션 */
+@color-action-primary:          transparent;
+@color-action-primary-hover:    @primary-5;
+@color-action-primary-pressed:  @primary-10;
+@color-action-primary-active:   @primary-50;
+@color-action-primary-selected: @primary-5;
+
+@color-action-primary-on:          transparent;
+@color-action-primary-on-hover:    transparent;
+@color-action-primary-on-pressed:  @primary-20;
+@color-action-primary-on-active:   @primary-20;
+@color-action-primary-on-selected: @primary-10;
+
+/* Secondary 액션 */
+@color-action-secondary:             transparent;
+@color-action-secondary-hover:       @secondary-5;
+@color-action-secondary-pressed:     @secondary-10;
+@color-action-secondary-active:      @secondary-70;
+@color-action-secondary-selected:    @secondary-10;
+
+@color-action-secondary-on:          transparent;
+@color-action-secondary-on-hover:    transparent;
+@color-action-secondary-on-pressed:  @secondary-50;
+@color-action-secondary-on-active:   @secondary-50;
+@color-action-secondary-on-selected: @gray-10;
+
+/* Disabled */
+@color-action-disabled:    @gray-20;
+@color-action-disabled-on: @gray-30;
+
+/************************************************
+ * Size — Action
+ * 버튼 요소 또는 메뉴 아이템의 크기
+ ************************************************/
+
+@size-list-padding-y: 0;
+@size-list-padding-x: 0;
+
+@size-action-height:    @size-10;
+@size-action-padding-y: @padding-1;
+@size-action-padding-x: @padding-3;
+
+/************************************************
+ * Color — Button
+ * 버튼 유형별 색상 (primary, secondary, tertiary, inline, text, disabled)
+ ************************************************/
+
+/* Primary */
+@color-button-primary-fill-default: @primary-50;
+@color-button-primary-fill-hover:   @primary-60;
+@color-button-primary-fill-pressed: @primary-70;
+@color-button-primary-border:       @primary-50;
+
+/* Secondary */
+@color-button-secondary-fill-default: @white;
+@color-button-secondary-fill-hover:   @primary-5;
+@color-button-secondary-fill-pressed: @primary-10;
+@color-button-secondary-border:       @primary-50;
+
+/* Tertiary */
+@color-button-tertiary-fill-default: @white;
+@color-button-tertiary-fill-hover:   @gray-5;
+@color-button-tertiary-fill-pressed: @gray-10;
+@color-button-tertiary-border:       @gray-40;
+
+/* Inline - Neutral */
+@color-button-inline-fill-default: @secondary-50;
+@color-button-inline-fill-hover:   @secondary-50;
+@color-button-inline-fill-pressed: @secondary-60;
+@color-button-inline-border:       @secondary-50;
+
+/* Text */
+@color-button-text-fill-default: transparent;
+@color-button-text-fill-hover:   @secondary-5;
+@color-button-text-fill-pressed: @secondary-10;
+@color-button-text-border:       transparent;
+
+/* Disabled */
+@color-button-disabled-fill:   @gray-20;
+@color-button-disabled-border: @gray-30;
+@color-button-disabled-text:   @gray-50;
+
+/************************************************
+ * Size — Button
+ * 버튼 및 버튼 내부 요소 크기
+ ************************************************/
+
+@size-button-height:      @size-9;
+@size-button-padding-y:   0;
+@size-button-padding-x:   @padding-3;
+@size-button-font:        @font-size-label-small;
+@size-button-font-weight: @font-weight-medium;
+@size-button-radius:      @border-radius-4;
+
+@size-button-text-padding-y: 0;
+@size-button-text-padding-x: @padding-1;
+@size-button-text-radius:    @border-radius-3;
+
+/************************************************
+ * Color — Link
+ ************************************************/
+
+@color-link-basic:   @primary-50;
+@color-link-hover:   @primary-60;
+@color-link-pressed: @primary-70;
+@color-link-visited: #5917b8;
+
+/************************************************
+ * Color — Form
+ * 테이블 폼 색상
+ ************************************************/
+
+@color-form-border:           @gray-20;
+@color-form-border-point:     @gray-20;
+@color-form-surface:          transparent;
+@color-form-shade-background: @secondary-5;
+@color-form-divider:          @secondary-10;
+@color-form-resizer:          @primary;
+
+/************************************************
+ * Size — Form
+ * 테이블 폼 크기
+ ************************************************/
+
+@size-form-title-font:        @font-size-heading-xsmall;
+@size-form-title-font-weight: @font-weight-semibold;
+
+@size-form-label-font:        @font-size-label-small;
+@size-form-label-font-weight: @font-weight-medium;
+@size-form-label-padding-y:   @padding-1;
+@size-form-label-padding-x:   @padding-5;
+
+@size-form-control-height: @size-9;
+
+@size-form-hint-font: @font-size-label-small;
+
+/************************************************
+ * Color — Grid
+ * 그리드 색상
+ ************************************************/
+ 
+@color-grid-surface:       transparent;
+@color-grid-border:        @gray-20;
+@color-grid-border-point:  @gray-20;
+@color-grid-text:          @gray-90;
+@color-grid-text-disabled: @color-component-text-disabled;
+
+@color-grid-head-background: @secondary-5;
+@color-grid-head-border:     @secondary-10;
+@color-grid-head-text:       @gray-90;
+
+@color-grid-row-background:          @gray-5;
+@color-grid-row-background-hover:    @primary-10;
+@color-grid-row-background-inserted: fade(@information, 12%);
+@color-grid-row-background-modified: fade(@success, 12%);
+@color-grid-row-background-deleted:  fade(@danger, 12%);
+@color-grid-row-background-selected: fade(@warning, 15%);
+@color-grid-row-background-editing:  fade(@warning, 20%);
+
+@color-grid-cell-border: @gray-10;
+
+@color-grid-foot-background: @point-5;
+@color-grid-foot-border:     @color-grid-cell-border;
+@color-grid-foot-text:       @color-grid-text;
+
+@color-grid-group-head-background: @secondary-10;
+@color-grid-group-foot-background: @color-grid-foot-background;
+
+@color-grid-split-border: @gray-50;
+
+/************************************************
+ * Size — Grid
+ * 그리드 크기
+ ************************************************/
+
+@size-grid-font: @font-size-body-small;
+@size-grid-radius: @border-radius-0;
+
+@size-grid-head-font:        @font-size-label-small;
+@size-grid-head-font-weight: @font-weight-medium;
+
+@size-grid-cell-padding-y: @size-input-padding-y;
+@size-grid-cell-padding-x: @size-input-padding-x;
+
+/* 아래 변수는 값이 실제 적용되지는 않으나 크기 참조를 위한 선언 */
+@size-grid-head-height:    @size-11 + 1;
+@size-gird-detail-height:  @size-9 + (@size-grid-cell-margin-y * 2) + 1;
+@size-grid-cell-margin-y:  @gap-1;
+@size-grid-cell-margin-x:  @gap-2;

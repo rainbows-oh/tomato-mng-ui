@@ -1,0 +1,345 @@
+/**
+ * nav-bar.part.less — 내비게이션 바(GNB) 컨트롤 스타일
+ *
+ * @desc  내비게이션 바(.cl-navigationbar). 1뎁스 수평 메뉴 + 드롭다운(menu/megamenu/fullmenu) + 라인형
+ * @note  프로젝트마다 디자인 기준이 달라 스타일을 이 파일에서 관리 (custom-settings 미사용)
+ *        화살표 아이콘은 #icon-image 대신 파일 내 #nav--arrow()(#square + 직접 url) 사용
+ *        CSS Grid fr 단위는 LESS 수식 해석 방지를 위해 ~"" 이스케이프
+ */
+
+@import (reference) "../common/_include.part.less";
+
+
+/* 파일 지역 변수 (@nav-- 접두어) — 프로젝트별 디자인 튜닝 지점 */
+
+/* 크기 */
+@nav--font-size:      @font-size-navigation-depth-large;
+@nav--item-gap:       @gap-2;
+@nav--item-padding-x: @padding-5;
+@nav--item-padding-y: @padding-3;
+@nav--list-radius:    @size-component-radius;
+@nav--list-padding-x: @padding-6;
+@nav--list-padding-y: @padding-3;
+
+/* 색상 */
+@nav--color-text:                  @color-component-text;
+@nav--color-text-disabled:         @color-component-text-disabled;
+@nav--item-color-background-hover:  @gray-5;
+@nav--item-color-background-active: @primary-5;
+@nav--item-color-text-hover:        @color-text-subtle;
+@nav--item-color-text-active:       @color-text-subtle;
+@nav--list-color-background:        @color-background-base;
+@nav--list-color-border:            @gray-10;
+
+/* 색상 — 라인형 */
+@nav--line-height:              3px;
+@nav--line-color-text:          @color-text-subtle;
+@nav--line-color-text-selected: @primary;
+@nav--line-color-active:        @primary;
+
+/* 메가/풀메뉴 레이아웃 (fr 단위 ~"" 이스케이프 필수) */
+@nav--megamenu-padding-y:    @padding-11;
+@nav--megamenu-grid-columns: ~"repeat(4, 1fr)";
+@nav--megamenu-grid-min-row: ~"minmax(100px, auto)";
+@nav--megamenu-grid-gap:     @gap-9;
+@nav--megamenu-width:        1200px;
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+/* 화살표 아이콘 (직접 url) */
+#nav--arrow() {
+	#square(@size-icon-medium);
+	background-image: url("@{img-path}/icons/ico_angle.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/* ==========================================================================
+   Base — 공통 (.cl-navigationbar)
+   ========================================================================== */
+
+.cl-navigationbar {
+	background: 0;
+	border: 0;
+	border-radius: 0;
+	color: @nav--color-text;
+	font-size: @nav--font-size;
+	font-weight: @font-weight-medium;
+
+	.cl-navigationbar-prev,
+	.cl-navigationbar-next {
+		position: relative;
+	}
+
+	.cl-navigationbar-bar {
+		.cl-navigationbar-item {
+			position: relative;
+			padding: @nav--item-padding-y @nav--item-padding-x;
+
+			.cl-navigationbar-content {
+				#focus-reset();
+				gap: @nav--item-gap;
+			}
+
+			.cl-navigationbar-icon {
+				display: none;
+			}
+
+			.cl-navigationbar-arrow {
+				#nav--arrow();
+			}
+
+			&.cl-hover,
+			&:not(.cl-disabled):not(.cl-selected):hover,
+			&:not(.cl-disabled).cl-hover {
+				background-color: @nav--item-color-background-hover;
+				color: @nav--item-color-text-hover;
+			}
+
+			&.cl-selected,
+			&:not(.cl-disabled).cl-selected:hover,
+			&:not(.cl-disabled).cl-selected.cl-hover {
+				background-color: @nav--item-color-background-active;
+				color: @nav--item-color-text-active;
+
+				.cl-navigationbar-arrow {
+					background-image: url("@{img-path}/icons/ico_angle.svg");
+				}
+			}
+
+			&.cl-disabled {
+				color: @nav--color-text-disabled;
+			}
+		}
+	}
+
+	&.cl-focus {
+		#focus-reset();
+	}
+}
+
+/* ==========================================================================
+   메뉴 타입 공통 (menu / megamenu / fullmenu / accessiblemegamenu)
+   ========================================================================== */
+
+.cl-navigationbar-menu,
+.cl-navigationbar-megamenu,
+.cl-navigationbar-fullmenu,
+.cl-navigationbar-accessiblemegamenu {
+	.cl-level-1 {
+		.cl-navigationbar-listitem {
+			background: 0;
+			font-weight: @font-weight-normal;
+		}
+	}
+
+	.cl-level-2,
+	.cl-level-3,
+	.cl-level-4 {
+		.cl-navigationbar-listitem {
+			padding-left: 0;
+		}
+	}
+
+	.cl-navigationbar-category {
+		width: 100%;
+		padding: 0;
+	}
+
+	.cl-navigationbar-listitem {
+		background: 0;
+		color: inherit;
+		font-weight: @font-weight-normal;
+		padding: 0;
+
+		.cl-navigationbar-icon-wrapper {
+			width: 0;
+
+			> .cl-navigationbar-icon {
+				display: none;
+			}
+		}
+
+		.cl-navigationbar-accesskey-wrapper {
+			width: auto;
+
+			> .cl-navigationbar-accesskey {
+				width: auto;
+			}
+		}
+
+		&.cl-hover,
+		&:not(.cl-disabled):not(.cl-selected):hover,
+		&:not(.cl-disabled).cl-hover {
+			background: 0;
+			color: @nav--item-color-text-hover;
+		}
+
+		&.cl-selected,
+		&:not(.cl-disabled).cl-selected:hover,
+		&:not(.cl-disabled).cl-selected.cl-hover {
+			background: 0;
+			color: @nav--item-color-text-active;
+		}
+
+		&:focus {
+			#focus-reset();
+		}
+
+		&:focus-visible {
+			#focus();
+		}
+	}
+}
+
+/* ==========================================================================
+   Variants
+   ========================================================================== */
+
+/* menu — 드롭다운 목록 메뉴 */
+.cl-navigationbar-menu {
+	.cl-navigationbar-list {
+		background-color: @nav--list-color-background;
+		border: 1px solid @nav--list-color-border;
+		border-radius: @nav--list-radius;
+		padding: @nav--list-padding-y @nav--list-padding-x;
+
+		.cl-navigationbar-listitem {
+			.cl-navigationbar-icon-wrapper {
+				width: 0;
+
+				> .cl-navigationbar-icon {
+					display: none;
+				}
+			}
+
+			.cl-navigationbar-arrow-wrapper {
+				width: 0;
+			}
+
+			/* 하위 메뉴 있는 항목 — 화살표 오른쪽 */
+			&.cl-folder {
+				> .cl-navigationbar-arrow-wrapper > .cl-navigationbar-arrow {
+					#nav--arrow();
+					transform: rotate(-90deg);
+				}
+			}
+
+			&.cl-selected,
+			&:not(.cl-disabled).cl-selected:hover,
+			&:not(.cl-disabled).cl-selected.cl-hover {
+				&.cl-folder {
+					> .cl-navigationbar-arrow-wrapper > .cl-navigationbar-arrow {
+						background-image: url("@{img-path}/icons/ico_angle.svg");
+					}
+				}
+			}
+		}
+	}
+}
+
+/* megamenu — 그리드 레이아웃 */
+.cl-navigationbar-megamenu {
+	background-color: @nav--list-color-background;
+	border: 1px solid @nav--list-color-border;
+	border-radius: 0;
+	padding: @nav--megamenu-padding-y 0;
+
+	.cl-navigationbar-list {
+		display: grid;
+		gap: @nav--megamenu-grid-gap;
+		grid-auto-rows: @nav--megamenu-grid-min-row;
+		grid-template-columns: @nav--megamenu-grid-columns;
+		width: @nav--megamenu-width;
+		margin: 0 auto;
+
+		.cl-navigationbar-category {
+			.sub-items {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+
+				.cl-navigationbar-listitem-wrapper {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+/* fullmenu — 풀 화면 메뉴 */
+.cl-navigationbar-fullmenu {
+	background-color: @nav--list-color-background;
+	border: 1px solid @nav--list-color-border;
+	border-radius: 0;
+
+	.cl-navigationbar-list {
+		background: 0;
+		border: 0;
+	}
+}
+
+/* accessiblemegamenu — megamenu 동일 그리드 */
+.cl-navigationbar-accessiblemegamenu {
+	background-color: @nav--list-color-background;
+	border: 1px solid @nav--list-color-border;
+	border-radius: 0;
+	padding: @nav--megamenu-padding-y 0;
+
+	.cl-navigationbar-list {
+		display: grid;
+		gap: @nav--megamenu-grid-gap;
+		grid-auto-rows: @nav--megamenu-grid-min-row;
+		grid-template-columns: @nav--megamenu-grid-columns;
+		width: @nav--megamenu-width;
+		background: 0;
+		border: 0;
+		margin: 0 auto;
+	}
+}
+
+/* line (라인형) — 선택 아이템 하단 강조선 + primary */
+.cl-navigationbar.line {
+	.cl-navigationbar-bar {
+		.cl-navigationbar-item {
+			color: @nav--line-color-text;
+
+			/* 강조선 — 기본 너비 0, 선택 시 100% 확장 */
+			&::after {
+				content: "";
+				position: absolute;
+				display: block;
+				bottom: 0;
+				left: 50%;
+				width: 0;
+				height: @nav--line-height;
+				background-color: @nav--line-color-active;
+				transition: @transition-base;
+			}
+
+			/* hover */
+			&.cl-hover,
+			&:not(.cl-disabled):not(.cl-selected):hover,
+			&:not(.cl-disabled).cl-hover {
+				background-color: transparent;
+				color: @nav--line-color-text;
+			}
+
+			/* selected */
+			&.cl-selected,
+			&:not(.cl-disabled).cl-selected:hover,
+			&:not(.cl-disabled).cl-selected.cl-hover {
+				background-color: transparent;
+				color: @nav--line-color-text-selected;
+
+				&::after {
+					left: 0;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,355 @@
+/**
+ * checkbox.part.less — 체크박스 컨트롤 스타일
+ *
+ * @desc  체크박스(.cl-checkbox)·체크박스 그룹(.cl-checkboxgroup)을 컴포넌트별로 분리 정의
+ * @note  #checkbox--hover/partial 은 현재 기본 아이콘과 동일하나, 추후 상태 분기용 훅으로 분리 유지
+ *        그룹은 기본 CSS 우선순위를 이기기 위해 .cl-checkboxgroup .cl-checkbox 로 명시 선언
+ *        그룹 비활성은 2경우: 그룹 자체(.cl-checkboxgroup.cl-disabled)와 내부 체크박스(.cl-checkbox.cl-disabled)
+ *        #checkbox--button(@size) 의 @size 인자로 .large(20px) 등 크기 변형 대응
+ */
+ 
+@import (reference) "../common/_include.part.less";
+
+/* ==========================================================================
+ Mixins
+ ========================================================================== */
+/* 아이콘 영역 크기 (@size 인자로 크기 변형 대응) */
+#checkbox--button(@size: @size-component-button) {
+	width: @size;
+	height: @size;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 0;
+	min-height: @size;
+	padding: 0;
+}
+
+/* 상태별 아이콘 훅 (hover/partial 은 향후 분기 대비 분리 유지) */
+#checkbox--icon() {
+	background-image: url("@{img-path}/icons/ico_checkbox.svg");
+}
+
+#checkbox--hover() {
+	background-image: url("@{img-path}/icons/ico_checkbox.svg");
+}
+
+#checkbox--selected() {
+	background-image: url("@{img-path}/icons/ico_checkbox_selected.svg");
+}
+
+#checkbox--partial() {
+	background-image: url("@{img-path}/icons/ico_checkbox.svg");
+}
+
+#checkbox--focus() {
+	box-shadow: 0 0 0 2px fade(@focus-ring, 50%);
+}
+
+/* 비활성 — 미선택 / 선택을 별도 훅으로 분리 */
+#checkbox--disabled() {
+	background-image: url("@{img-path}/icons/ico_checkbox_disable.svg");
+}
+
+#checkbox--disabled-selected() {
+	background-image: url("@{img-path}/icons/ico_checkbox_selected_disable.svg");
+}
+
+/* 상태 아이콘 매트릭스 (icon = .cl-checkbox-icon 자식)
+   아이콘은 체크 상태로만 결정 — hover/focus 전 조합을 명시해 기본 png 가 덮지 못하게 함.
+   호출부(&) = .cl-checkbox */
+#checkbox--icon-states() {
+	.cl-checkbox-icon,
+	&:hover .cl-checkbox-icon,
+	&.cl-hover .cl-checkbox-icon,
+	&.cl-focus .cl-checkbox-icon,
+	.cl-checkbox-icon:focus {
+		#checkbox--icon();
+	}
+
+	&.cl-checked .cl-checkbox-icon,
+	&.cl-checked:hover .cl-checkbox-icon,
+	&.cl-checked.cl-hover .cl-checkbox-icon,
+	&.cl-checked.cl-focus .cl-checkbox-icon,
+	&.cl-checked .cl-checkbox-icon:focus {
+		#checkbox--selected();
+	}
+
+	&.cl-partialchecked .cl-checkbox-icon,
+	&.cl-partialchecked:hover .cl-checkbox-icon,
+	&.cl-partialchecked.cl-hover .cl-checkbox-icon,
+	&.cl-partialchecked.cl-focus .cl-checkbox-icon,
+	&.cl-partialchecked .cl-checkbox-icon:focus {
+		#checkbox--partial();
+	}
+}
+
+/* ==========================================================================
+ .cl-checkbox — 단독 체크박스
+ ========================================================================== */
+.cl-checkbox {
+	overflow: visible !important;
+	padding: 0;
+	
+	/* --- Layout — 정렬 --- */
+	&.cl-iconalign-left .cl-text {
+		padding: 0 0 0 @size-component-gap;
+	}
+	
+	&.cl-iconalign-right .cl-text {
+		padding: 0 @size-component-gap 0 0;
+	}
+	
+	&.cl-iconalign-top .cl-text {
+		padding: @size-component-gap 0 0 0;
+	}
+	
+	&.cl-iconalign-bottom .cl-text {
+		padding: 0 0 @size-component-gap 0;
+	}
+	
+	&.cl-iconalign-none .cl-text {
+		padding: 0;
+	}
+	
+	&.cl-iconalign-top .cl-icon-wrapper,
+	&.cl-iconalign-bottom .cl-icon-wrapper {
+		padding-top: 0;
+	}
+	
+	/* --- Layout — 구조 --- */
+	.cl-checkbox-field .cl-text {
+		line-height: @line-height-base;
+	}
+	
+	.cl-icon-wrapper {
+		line-height: 0;
+		padding-top: @gap-1;
+		vertical-align: top;
+	}
+	
+	.cl-text {
+		padding: 0;
+		padding-left: @size-component-gap;
+	}
+	
+	.cl-checkbox-icon {
+		#checkbox--button();
+		#checkbox--icon();
+	}
+	
+	/* --- States --- */
+	&:hover .cl-checkbox-icon,
+	&.cl-hover .cl-checkbox-icon {
+		#checkbox--hover();
+	}
+	
+	&.cl-checked .cl-checkbox-icon,
+	&.cl-checked.cl-hover .cl-checkbox-icon,
+	&.cl-checked:hover .cl-checkbox-icon {
+		#checkbox--selected();
+	}
+	
+	&.cl-partialchecked .cl-checkbox-icon,
+	&.cl-partialchecked:hover .cl-checkbox-icon,
+	&.cl-partialchecked.cl-hover .cl-checkbox-icon {
+		#checkbox--partial();
+	}
+	
+	&.cl-focus,
+	&:focus {
+		.cl-checkbox-icon,
+		&.cl-iconalign-none .cl-text {
+			outline: none;
+		}
+		
+		.cl-checkbox-icon:focus-visible {
+			#checkbox--focus();
+		}
+	}
+	
+	/* --- Disabled --- */
+	&.cl-disabled {
+		color: @color-component-text-disabled;
+		
+		.cl-checkbox-icon,
+		&:hover .cl-checkbox-icon,
+		&.cl-hover .cl-checkbox-icon {
+			#checkbox--disabled();
+		}
+		
+		&.cl-partialchecked .cl-checkbox-icon,
+		&.cl-partialchecked:hover .cl-checkbox-icon,
+		&.cl-partialchecked.cl-hover .cl-checkbox-icon {
+			#checkbox--disabled();
+		}
+		
+		&.cl-checked .cl-checkbox-icon,
+		&.cl-checked:hover .cl-checkbox-icon,
+		&.cl-checked.cl-hover .cl-checkbox-icon {
+			#checkbox--disabled-selected();
+		}
+	}
+	
+	/* --- Size — .large --- */
+	&.large {
+		.cl-checkbox-icon {
+			#checkbox--button(@size-8);
+		}
+		
+		&.cl-iconalign-left .cl-text {
+			padding: 0 0 0 @size-component-gap-large;
+		}
+		
+		&.cl-iconalign-right .cl-text {
+			padding: 0 @size-component-gap-large 0 0;
+		}
+		
+		&.cl-iconalign-top .cl-text {
+			padding: @size-component-gap-large 0 0 0;
+		}
+		
+		&.cl-iconalign-bottom .cl-text {
+			padding: 0 0 @size-component-gap-large 0;
+		}
+	}
+}
+
+/* ==========================================================================
+ .cl-checkboxgroup — 체크박스 그룹
+ (기본 CSS 우선순위를 이기기 위해 .cl-checkboxgroup .cl-checkbox 로 명시)
+ ========================================================================== */
+.cl-checkboxgroup {
+	overflow: visible !important;
+	padding: 0;
+	
+	/* --- Group Layout --- */
+	&.cl-flow {
+		vertical-align: middle;
+	}
+	
+	&.cl-iconalign-left .cl-text {
+		padding: 0 0 0 @size-component-gap;
+	}
+	
+	&.cl-iconalign-right .cl-text {
+		padding: 0 @size-component-gap 0 0;
+	}
+	
+	&.cl-iconalign-top .cl-text {
+		padding: @size-component-gap 0 0 0;
+	}
+	
+	&.cl-iconalign-bottom .cl-text {
+		padding: 0 0 @size-component-gap 0;
+	}
+	
+	&.cl-iconalign-none .cl-text {
+		padding: 0;
+	}
+	
+	&.cl-iconalign-top .cl-icon-wrapper,
+	&.cl-iconalign-bottom .cl-icon-wrapper {
+		padding-top: 0;
+	}
+	
+	/* --- 내부 체크박스 (Layout + States) --- */
+	.cl-checkbox {
+		padding: 0;
+		
+		.cl-checkbox-field .cl-text {
+			line-height: @line-height-base;
+		}
+		
+		.cl-icon-wrapper {
+			line-height: 0;
+			padding-top: @gap-1;
+			vertical-align: top;
+		}
+		
+		.cl-text {
+			padding: 0;
+			padding-left: @size-component-gap;
+		}
+		
+		.cl-checkbox-icon {
+			#checkbox--button();
+			#checkbox--icon();
+		}
+		
+		&:hover .cl-checkbox-icon,
+		&.cl-hover .cl-checkbox-icon {
+			#checkbox--hover();
+		}
+		
+		&.cl-checked .cl-checkbox-icon,
+		&.cl-checked.cl-hover .cl-checkbox-icon,
+		&.cl-checked:hover .cl-checkbox-icon {
+			#checkbox--selected();
+		}
+		
+		&.cl-partialchecked .cl-checkbox-icon,
+		&.cl-partialchecked:hover .cl-checkbox-icon,
+		&.cl-partialchecked.cl-hover .cl-checkbox-icon {
+			#checkbox--partial();
+		}
+	}
+	
+	/* --- Focus — 그룹 포커스 시 개별 아이콘 아웃라인 제거 --- */
+	&.cl-focus,
+	&:focus {
+		.cl-checkbox .cl-checkbox-icon {
+			&.cl-focus,
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+	
+	/* --- Disabled — ① 그룹 자체 비활성  ② 내부 체크박스 비활성 --- */
+	&.cl-disabled .cl-checkbox,
+	.cl-checkbox.cl-disabled {
+		color: @color-component-text-disabled;
+		
+		.cl-checkbox-icon,
+		&:hover .cl-checkbox-icon,
+		&.cl-hover .cl-checkbox-icon {
+			#checkbox--disabled();
+		}
+		
+		&.cl-partialchecked .cl-checkbox-icon,
+		&.cl-partialchecked:hover .cl-checkbox-icon,
+		&.cl-partialchecked.cl-hover .cl-checkbox-icon {
+			#checkbox--disabled();
+		}
+		
+		&.cl-checked .cl-checkbox-icon,
+		&.cl-checked:hover .cl-checkbox-icon,
+		&.cl-checked.cl-hover .cl-checkbox-icon {
+			#checkbox--disabled-selected();
+		}
+	}
+	
+	/* --- Size — .large --- */
+	&.large {
+		.cl-checkbox .cl-checkbox-icon {
+			#checkbox--button(@size-8);
+		}
+		
+		&.cl-iconalign-left .cl-text {
+			padding: 0 0 0 @size-component-gap-large;
+		}
+		
+		&.cl-iconalign-right .cl-text {
+			padding: 0 @size-component-gap-large 0 0;
+		}
+		
+		&.cl-iconalign-top .cl-text {
+			padding: @size-component-gap-large 0 0 0;
+		}
+		
+		&.cl-iconalign-bottom .cl-text {
+			padding: 0 0 @size-component-gap-large 0;
+		}
+	}
+}

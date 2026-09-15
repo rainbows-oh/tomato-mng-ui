@@ -1,0 +1,260 @@
+/**
+ * page-indexer.part.less — 페이지 인덱서(페이지네이션) 컨트롤 스타일
+ *
+ * @desc  페이지 인덱서(.cl-pageindexer). 기본형(숫자) + 확장형(.pagination, 텍스트 레이블)
+ * @note  저사용 컨트롤이라 지역 변수/믹스인 없이 전역 토큰을 직접 인라인
+ *        기본형 네비 아이콘은 각 버튼 요소의 background-image 로 직접 지정 (가상요소 미사용)
+ *        CSS 속성은 a-z 순으로 정렬
+ *        flex order — first/prev:1, next/last:2, index-area:3 (DOM 순서와 무관하게 배치)
+ */
+
+@import (reference) "../common/_include.part.less";
+
+.cl-pageindexer {
+	color: @color-text-subtle;
+	overflow: visible !important;
+	padding: 0;
+	
+	/* 번호 영역 공통 */
+	.cl-pageindexer-index-area,
+	.cl-text-wrapper {
+		min-height: 0;
+	}
+	
+	/* 모든 페이지 버튼 공통 (크기/색상/radius) */
+	.cl-pageindexer-first,
+	.cl-pageindexer-prev,
+	.cl-pageindexer-next,
+	.cl-pageindexer-last,
+	.cl-pageindexer-index {
+		width: @size-component-height;
+		height: @size-component-height;
+		background-color: @color-action-secondary;
+		border: 0;
+		border-radius: @size-component-radius;
+		margin: 0 3px;
+		min-height: 0;
+		transition: @transition-base;
+	}
+	
+	/* 네비 버튼 공통 — 아이콘은 버튼 배경으로 직접 지정 */
+	.cl-pageindexer-first,
+	.cl-pageindexer-prev,
+	.cl-pageindexer-next,
+	.cl-pageindexer-last {
+		display: inline-flex !important;
+		align-items: center;
+		justify-content: center;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: @size-icon-small;
+	}
+	
+	/* first/prev — order:1 */
+	.cl-pageindexer-first,
+	.cl-pageindexer-prev {
+		order: 1;
+	}
+	
+	/* next/last — order:2 */
+	.cl-pageindexer-next,
+	.cl-pageindexer-last {
+		order: 2;
+	}
+	
+	/* 네비 아이콘 (버튼 배경 직접 url) */
+	.cl-pageindexer-first {
+		background-image: url("@{img-path}/icons/ico_angles_left.svg");
+	}
+	
+	.cl-pageindexer-prev {
+		background-image: url("@{img-path}/icons/ico_angle_left.svg");
+	}
+	
+	.cl-pageindexer-next {
+		background-image: url("@{img-path}/icons/ico_angle_right.svg");
+	}
+	
+	.cl-pageindexer-last {
+		background-image: url("@{img-path}/icons/ico_angles_right.svg");
+	}
+	
+	/* 번호 영역 — order:3 */
+	.cl-pageindexer-index-area {
+		order: 3;
+		
+		.cl-pageindexer-index.cl-selected {
+			background-color: @color-action-secondary-active;
+			color: @color-text-inverse;
+			font-weight: @font-weight-semibold;
+		}
+	}
+	
+	/* 텍스트형 현재/전체 표시 */
+	.cl-pageindexer-text {
+		.pagination-current {
+			color: @primary;
+			font-weight: @font-weight-bold;
+		}
+	}
+	
+	/* 활성 — hover/focus */
+	&:not(.cl-disabled) {
+		.cl-pageindexer-first,
+		.cl-pageindexer-prev,
+		.cl-pageindexer-next,
+		.cl-pageindexer-last,
+		.cl-pageindexer-index {
+			&:not(.cl-disabled):not(.cl-selected):hover,
+			&:not(.cl-disabled):not(.cl-selected).cl-hover {
+				background-color: @color-action-secondary-hover;
+				color: @color-text-subtle;
+			}
+			
+			&:focus,
+			&.cl-focus {
+				box-shadow: none;
+				outline: none;
+				#focus();
+			}
+		}
+		
+		.cl-pageindexer-first:active {
+			background-image: url("@{img-path}/icons/ico_angles_left.svg");
+		}
+		
+		.cl-pageindexer-prev:active {
+			background-image: url("@{img-path}/icons/ico_angle_left.svg");
+		}
+		
+		.cl-pageindexer-next:active {
+			background-image: url("@{img-path}/icons/ico_angle_right.svg");
+		}
+		
+		.cl-pageindexer-last:active {
+			background-image: url("@{img-path}/icons/ico_angles_right.svg");
+		}
+	}
+	
+	/* 전체 focus */
+	&:focus,
+	&.cl-focus {
+		outline: none;
+	}
+	
+	/* 전체 disabled */
+	&.cl-disabled {
+		color: @color-component-text-disabled;
+		
+		.cl-pageindexer-first,
+		.cl-pageindexer-prev,
+		.cl-pageindexer-next,
+		.cl-pageindexer-last,
+		.cl-pageindexer-index {
+			background-color: @color-action-secondary;
+		}
+		
+		.cl-pageindexer-index-area {
+			.cl-pageindexer-index.cl-selected {
+				background-color: @color-action-disabled;
+				color: @color-component-text-disabled;
+			}
+		}
+		
+		/* 네비 아이콘 disabled 스왑 */
+		.cl-pageindexer-first {
+			background-image: url("@{img-path}/icons/ico_angles_left_disable.svg");
+		}
+		
+		.cl-pageindexer-prev {
+			background-image: url("@{img-path}/icons/ico_angle_left_disable.svg");
+		}
+		
+		.cl-pageindexer-next {
+			background-image: url("@{img-path}/icons/ico_angle_right_disable.svg");
+		}
+		
+		.cl-pageindexer-last {
+			background-image: url("@{img-path}/icons/ico_angles_right_disable.svg");
+		}
+	}
+	
+	/* 개별 버튼 disabled (1페이지: first/prev, 마지막: next/last) */
+	.cl-pageindexer-first.cl-disabled,
+	.cl-pageindexer-prev.cl-disabled,
+	.cl-pageindexer-next.cl-disabled,
+	.cl-pageindexer-last.cl-disabled {
+		background-color: @color-action-secondary;
+		color: @color-component-text-disabled;
+	}
+	
+	/* 개별 버튼 disabled — 아이콘 스왑 */
+	.cl-pageindexer-first.cl-disabled {
+		background-image: url("@{img-path}/icons/ico_angles_left_disable.svg");
+	}
+	
+	.cl-pageindexer-prev.cl-disabled {
+		background-image: url("@{img-path}/icons/ico_angle_left_disable.svg");
+	}
+	
+	.cl-pageindexer-next.cl-disabled {
+		background-image: url("@{img-path}/icons/ico_angle_right_disable.svg");
+	}
+	
+	.cl-pageindexer-last.cl-disabled {
+		background-image: url("@{img-path}/icons/ico_angles_right_disable.svg");
+	}
+}
+
+/* ==========================================================================
+ Variants
+ ========================================================================== */
+/* Pagination (확장형) — 버튼 너비 auto, 텍스트 레이블 포함 */
+.cl-pageindexer.pagination {
+	/* 너비 auto */
+	.cl-pageindexer-first,
+	.cl-pageindexer-prev,
+	.cl-pageindexer-next,
+	.cl-pageindexer-last {
+		width: auto;
+	}
+	
+	/* first/prev — 아이콘 왼쪽, 텍스트 오른쪽 */
+	.cl-pageindexer-first,
+	.cl-pageindexer-prev {
+		background-position: left @padding-2 center;
+		padding: 0 @padding-3 0 (@padding-2 + @size-icon-small);
+	}
+
+	/* next/last — 텍스트 왼쪽, 아이콘 오른쪽 패딩 안쪽 (아이콘 폭만큼 우측 패딩 확보) */
+	.cl-pageindexer-next,
+	.cl-pageindexer-last {
+		background-position: right @padding-2 center;
+		padding: 0 (@padding-2 + @size-icon-small) 0 @padding-3;
+	}
+	
+	/* 텍스트 레이블 (::after/::before 삽입) */
+	.cl-pageindexer-first::after {
+		content: "처음";
+	}
+	
+	.cl-pageindexer-prev::after {
+		content: "이전";
+	}
+	
+	.cl-pageindexer-next::before {
+		content: "다음";
+	}
+	
+	.cl-pageindexer-last::before {
+		content: "마지막";
+	}
+	
+	/* 개별 버튼 disabled — 텍스트 레이블 색상 */
+	.cl-pageindexer-first.cl-disabled,
+	.cl-pageindexer-prev.cl-disabled,
+	.cl-pageindexer-next.cl-disabled,
+	.cl-pageindexer-last.cl-disabled {
+		color: @color-component-text-disabled;
+	}
+}

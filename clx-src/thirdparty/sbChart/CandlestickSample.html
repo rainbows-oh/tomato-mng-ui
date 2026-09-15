@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SBChart Stock Chart</title>
+
+    <link rel="stylesheet" href="./sbchart.css" />
+    <script type="text/javascript" src="./sbchart.js"></script>
+    <script type="text/javascript" src="./license.js"></script>
+  </head>
+  <style>
+    .sbchart-range-marker-max {
+      fill: red !important;
+    }
+    .sbchart-range-marker-max polygon {
+      fill: red !important;
+    }
+    .sbchart-range-marker-min {
+      fill: blue !important;
+    }
+    .sbchart-range-marker-min polygon {
+      fill: blue !important;
+    }
+    .stock-grid-wrap {
+      width: 1000px;
+      height: 400px;
+      margin-top: 20px;
+      overflow: auto;
+      border: 1px solid #cfd8dc;
+      border-radius: 4px;
+      background: #fafafa;
+    }
+    .stock-mini-grid {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      background: #fff;
+    }
+    .stock-mini-grid th,
+    .stock-mini-grid td {
+      border-bottom: 1px solid #e0e0e0;
+      padding: 8px 10px;
+      vertical-align: top;
+    }
+    .stock-mini-grid th {
+      position: sticky;
+      top: 0;
+      background: #eceff1;
+      font-weight: 600;
+      text-align: center;
+      z-index: 1;
+    }
+    .stock-mini-grid th:first-child,
+    .stock-mini-grid td:first-child {
+      text-align: left;
+      width: 58%;
+    }
+    .stock-mini-grid th:nth-child(2),
+    .stock-mini-grid td:nth-child(2) {
+      text-align: center;
+      white-space: nowrap;
+      width: 22%;
+      color: #37474f;
+    }
+    .stock-mini-grid th:nth-child(3),
+    .stock-mini-grid td:nth-child(3) {
+      text-align: center;
+      width: 20%;
+    }
+    .stock-mini-grid tbody tr:hover {
+      background: #f5f5f5;
+    }
+    .stock-mini-grid tbody tr.is-grid-focus {
+      background: #e3f2fd;
+      outline: 2px solid #1976d2;
+      outline-offset: -2px;
+    }
+  </style>
+  <body>
+    <div id="chartWrap" style="width: 70%; height: 600px"></div>
+
+    <div class="stock-grid-wrap" aria-label="공시 샘플 그리드">
+      <table class="stock-mini-grid">
+        <thead>
+          <tr>
+            <th>공시제목</th>
+            <th>공시시간</th>
+            <th>공시유형</th>
+          </tr>
+        </thead>
+        <tbody id="stockGridBody"></tbody>
+      </table>
+    </div>
+
+    <script>
+      var stockGridRows = [
+        { title: "분기보고서(일반법인)(2026.03)", time: "2026-05-14 16:15", type: "정기공시" },
+        { title: "주식등의대량보유상황보고서(일반)", time: "2026-05-14 14:46", type: "지분공시" },
+        { title: "임원ㆍ주요주주특정증권등소유상황보고서", time: "2026-05-14 14:40", type: "지분공시" },
+        { title: "업종변경", time: "2026-04-30 17:51", type: "시장조치" },
+        { title: "사외이사의선임ㆍ해임또는중도퇴임에관한신고", time: "2026-03-30 17:05", type: "수시공시" },
+        { title: "정기주주총회결과", time: "2026-03-30 16:57", type: "수시공시" },
+        { title: "[연결포함]사업보고서(일반법인)(2025.12)", time: "2026-03-19 17:24", type: "정기공시" },
+        { title: "감사보고서 제출", time: "2026-03-19 16:00", type: "수시공시" },
+        { title: "주주총회소집공고", time: "2026-03-06 11:29", type: "특수공시" },
+        { title: "공매도 과열종목 지정(공매도 거래 금지 적용)", time: "2026-03-04 21:31", type: "시장조치" },
+        { title: "주주총회 집중일 개최 사유 신고", time: "2026-02-27 14:38", type: "신고사항" },
+        { title: "주주총회소집결의", time: "2026-02-27 14:07", type: "수시공시" },
+        { title: "매출액 또는 손익구조 30%(대규모법인은 15%)이상 변동", time: "2026-02-13 15:24", type: "수시공시" },
+        { title: "주주명부폐쇄기간 또는 기준일 설정", time: "2025-12-09 10:09", type: "신고사항" },
+      ];
+
+      /** 차트 paint 마커와 하단 그리드 연동 on/off */
+      var usePaintMarkerGridSync = true;
+
+      /** HTML 특수문자 이스케이프 (innerHTML 삽입용) */
+      function escapeHtml(s) {
+        return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+      }
+
+      /** 저가에 paint 마커를 그리는 캔들 인덱스인지 (3칸마다 1개) */
+      function isPaintMarkerCandleIndex(index) {
+        return index % 3 === 0;
+      }
+
+      /** 캔들 개수 기준으로 paint 마커(그리드 행) 개수 계산 */
+      function paintMarkerCountForRows(rowCount) {
+        var c = 0;
+        for (var i = 0; i < rowCount; i++) {
+          if (isPaintMarkerCandleIndex(i)) c++;
+        }
+        return c;
+      }
+
+      /** 캔들 인덱스 → 그리드 행 인덱스 (마커가 없는 캔들이면 -1) */
+      function candleIndexToGridRowIndex(candleIndex) {
+        if (!isPaintMarkerCandleIndex(candleIndex)) return -1;
+        return candleIndex / 3;
+      }
+
+      /** 마커 개수만큼 공시 그리드 tbody 렌더 (candlestickData·stockGridRows 매핑) */
+      function fillStockMiniGrid() {
+        var tbody = document.getElementById("stockGridBody");
+        if (!tbody) return;
+        var markerCount = paintMarkerCountForRows(candlestickData.length);
+        var rowsHtml = [];
+        for (var g = 0; g < markerCount; g++) {
+          var candleIndex = g * 3;
+          var r = stockGridRows[g] || { title: "—", time: "—", type: "—" };
+          rowsHtml.push(
+            '<tr tabindex="-1" data-candle-index="' +
+              candleIndex +
+              '"><td>' +
+              escapeHtml(r.title) +
+              "</td><td>" +
+              escapeHtml(r.time) +
+              "</td><td>" +
+              escapeHtml(r.type) +
+              "</td></tr>",
+          );
+        }
+        tbody.innerHTML = rowsHtml.join("");
+      }
+
+      /** 그리드 행 포커스 스타일·키보드 포커스 제거 */
+      function clearStockGridRowFocus() {
+        var tbody = document.getElementById("stockGridBody");
+        if (!tbody) return;
+        tbody.querySelectorAll("tr.is-grid-focus").forEach(function (tr) {
+          tr.classList.remove("is-grid-focus");
+        });
+        if (document.activeElement && tbody.contains(document.activeElement)) {
+          document.activeElement.blur();
+        }
+      }
+
+      /** 차트 enter + 마커 캔들일 때 해당 그리드 행으로 포커스·스크롤 */
+      function focusStockGridRowForPaintMarkerEnter(parm) {
+        if (!parm || parm.mouseEventType !== "enter" || !parm.data) return;
+        var idx = parm.data.index;
+        if (typeof idx !== "number" || !isPaintMarkerCandleIndex(idx)) return;
+        var rowIdx = candleIndexToGridRowIndex(idx);
+        var tbody = document.getElementById("stockGridBody");
+        if (!tbody) return;
+        var trs = tbody.querySelectorAll("tr");
+        var tr = trs[rowIdx];
+        if (!tr) return;
+        clearStockGridRowFocus();
+        tr.classList.add("is-grid-focus");
+        tr.focus({ preventScroll: false });
+        tr.scrollIntoView({ block: "nearest", behavior: "smooth" });
+      }
+
+      /** DOM 준비 후 그리드 채우고 SBChart 렌더 */
+      document.addEventListener("DOMContentLoaded", function () {
+        fillStockMiniGrid();
+        createStockChart();
+      });
+      var candlestickData = [
+        {
+          date: "2026-02-06",
+          openprc: 670000,
+          highprc: 680000,
+          lowprc: 638000,
+          closeprc: 658000,
+          avgline: 661500,
+          updwn: "UP",
+          volume: 582340,
+        },
+        {
+          date: "2026-02-09",
+          openprc: 686000,
+          highprc: 700000,
+          lowprc: 665000,
+          closeprc: 687000,
+          avgline: 684500,
+          updwn: "UP",
+          volume: 441200,
+        },
+        {
+          date: "2026-02-10",
+          openprc: 712000,
+          highprc: 720000,
+          lowprc: 665000,
+          closeprc: 668000,
+          avgline: 691250,
+          updwn: "DN",
+          volume: 912800,
+        },
+        {
+          date: "2026-02-11",
+          openprc: 668000,
+          highprc: 681000,
+          lowprc: 653000,
+          closeprc: 671000,
+          avgline: 668250,
+          updwn: "UP",
+          volume: 623150,
+        },
+        {
+          date: "2026-02-12",
+          openprc: 677000,
+          highprc: 690000,
+          lowprc: 670000,
+          closeprc: 675000,
+          avgline: 678000,
+          updwn: "UP",
+          volume: 398760,
+        },
+        {
+          date: "2026-02-13",
+          openprc: 665000,
+          highprc: 682000,
+          lowprc: 660000,
+          closeprc: 670000,
+          avgline: 669250,
+          updwn: "DN",
+          volume: 512090,
+        },
+        {
+          date: "2026-02-19",
+          openprc: 684000,
+          highprc: 736000,
+          lowprc: 666000,
+          closeprc: 718000,
+          avgline: 701000,
+          updwn: "UP",
+          volume: 784520,
+        },
+        {
+          date: "2026-02-20",
+          openprc: 710000,
+          highprc: 733000,
+          lowprc: 707000,
+          closeprc: 712000,
+          avgline: 715500,
+          updwn: "DN",
+          volume: 456300,
+        },
+        {
+          date: "2026-02-23",
+          openprc: 720000,
+          highprc: 735000,
+          lowprc: 693000,
+          closeprc: 695000,
+          avgline: 710750,
+          updwn: "DN",
+          volume: 668940,
+        },
+        {
+          date: "2026-02-24",
+          openprc: 707000,
+          highprc: 738000,
+          lowprc: 692000,
+          closeprc: 729000,
+          avgline: 716500,
+          updwn: "UP",
+          volume: 701200,
+        },
+        {
+          date: "2026-02-25",
+          openprc: 733000,
+          highprc: 796000,
+          lowprc: 720000,
+          closeprc: 788000,
+          avgline: 759250,
+          updwn: "UP",
+          volume: 1056800,
+        },
+        {
+          date: "2026-02-26",
+          openprc: 788000,
+          highprc: 904000,
+          lowprc: 782000,
+          closeprc: 880000,
+          avgline: 838500,
+          updwn: "UP",
+          volume: 1423500,
+        },
+        {
+          date: "2026-02-27",
+          openprc: 851000,
+          highprc: 895000,
+          lowprc: 847000,
+          closeprc: 860000,
+          avgline: 863250,
+          updwn: "DN",
+          volume: 889400,
+        },
+        {
+          date: "2026-03-03",
+          openprc: 846000,
+          highprc: 934000,
+          lowprc: 805000,
+          closeprc: 840000,
+          avgline: 856250,
+          updwn: "DN",
+          volume: 1210900,
+        },
+        {
+          date: "2026-03-04",
+          openprc: 809000,
+          highprc: 839000,
+          lowprc: 698000,
+          closeprc: 704000,
+          avgline: 762500,
+          updwn: "DN",
+          volume: 1587420,
+        },
+        {
+          date: "2026-03-05",
+          openprc: 787000,
+          highprc: 888000,
+          lowprc: 776000,
+          closeprc: 837000,
+          avgline: 822000,
+          updwn: "UP",
+          volume: 1345600,
+        },
+        {
+          date: "2026-03-06",
+          openprc: 837000,
+          highprc: 879000,
+          lowprc: 785000,
+          closeprc: 832000,
+          avgline: 833250,
+          updwn: "DN",
+          volume: 976300,
+        },
+        {
+          date: "2026-03-09",
+          openprc: 763000,
+          highprc: 783000,
+          lowprc: 711000,
+          closeprc: 739000,
+          avgline: 749000,
+          updwn: "DN",
+          volume: 1102450,
+        },
+        {
+          date: "2026-03-10",
+          openprc: 795000,
+          highprc: 804000,
+          lowprc: 745000,
+          closeprc: 766000,
+          avgline: 777500,
+          updwn: "UP",
+          volume: 834200,
+        },
+        {
+          date: "2026-03-11",
+          openprc: 800000,
+          highprc: 812000,
+          lowprc: 734000,
+          closeprc: 748000,
+          avgline: 773500,
+          updwn: "DN",
+          volume: 993800,
+        },
+        {
+          date: "2026-03-25",
+          openprc: 613000,
+          highprc: 624000,
+          lowprc: 600000,
+          closeprc: 605000,
+          avgline: 610500,
+          updwn: "DN",
+          volume: 712600,
+        },
+        {
+            date: "2026-03-27",
+            openprc: 539000,
+            highprc: 548000,
+            lowprc: 532000,
+            closeprc: 538000,
+            avgline: 539250,
+            updwn: "DN",
+            volume: 421550,
+          },
+        {
+          date: "2026-03-30",
+          openprc: 539000,
+          highprc: 568000,
+          lowprc: 526000,
+          closeprc: 567000,
+          avgline: 550000,
+          updwn: "DN",
+          volume: 889100,
+        },
+
+      ];
+
+      /** 마커 조건을 만족하는 캔들만 저가에 path 마커 JSON 생성 (차트 paint용) */
+      function buildLowPaintMarkers(rows) {
+        var pathPx = [
+          { x: -10, y: 15 },
+          { x: 0, y: 0 },
+          { x: 10, y: 15 },
+          { x: 0, y: 12 },
+        ];
+        return rows
+          .map(function (row, index) {
+            if (!isPaintMarkerCandleIndex(index)) return null;
+            return {
+              type: "custom",
+              position: [{ x: index + 0.5, y: row.lowprc }],
+              subShape: [
+                {
+                  type: "path",
+                  positionPx: pathPx,
+                  color: "black",
+                  fillColor: "black",
+                },
+              ],
+            };
+          })
+          .filter(Boolean);
+      }
+
+      /** Y축 범위 계산 후 #chartWrap 에 캔들+거래량 SBChart 렌더 */
+      function createStockChart() {
+        const yMin = Math.floor(Math.min(...candlestickData.map((d) => d.lowprc)) * 0.97);
+        const yMax = Math.ceil(Math.max(...candlestickData.map((d) => d.highprc)) * 1.03);
+        const n = candlestickData.length;
+        const tickValues = [];
+        if (n > 0) {
+          const step = Math.max(1, Math.floor((n - 1) / 6));
+          for (let i = 0; i < n; i += step) tickValues.push(i);
+          if (tickValues[tickValues.length - 1] !== n - 1) tickValues.push(n - 1);
+        }
+
+        sb.chart.render("#chartWrap", {
+          global: {
+            /** 차트 enter/out 시 (연동 켜진 경우) 하단 그리드 포커스 동기화 */
+            onMouseEvent: function (parm) {
+              if (!usePaintMarkerGridSync) return;
+              if (parm.mouseEventType === "out") {
+                clearStockGridRowFocus();
+                return;
+              }
+              if (parm.mouseEventType === "enter") {
+                focusStockGridRowForPaintMarkerEnter(parm);
+              }
+            },
+            paint: {
+              use: true,
+              showControl: false,
+              paintJsondata: {
+                useBackground: true,
+                jsonData: buildLowPaintMarkers(candlestickData),
+              },
+            },
+            padding: {
+              bottom: 80,
+            },
+            crosshair: {
+              x: {
+                /** 크로스헤어 X축 눈금에 표시할 날짜 문자열 */
+                format: function (value) {
+                  return candlestickData[Math.floor(value)].date;
+                },
+              },
+              show: true,
+              dotted: false,
+              showValueX: true,
+            },
+          },
+          grid: {
+            x: {
+              show: false,
+            },
+          },
+          legend: {
+            show: false,
+          },
+          data: {
+            json: candlestickData,
+            keys: {
+              x: "date",
+              value: [
+                {
+                  open: "openprc",
+                  close: "closeprc",
+                  low: "lowprc",
+                  high: "highprc",
+                },
+              ],
+            },
+            types: {
+              openprc: "candlestick",
+              closeprc: "candlestick",
+              lowprc: "candlestick",
+              highprc: "candlestick",
+              avgline: "candlestick",
+            },
+            datarange: {
+              position: "auto",
+              show: true,
+              selectable: false,
+              size: {
+                height: 50,
+              },
+              backgroundChart: {
+                bUseChart: true,
+                chartType: "bar",
+                seriesKey: "volume",
+                strokeColor: "#4a7fd4",
+                color: "#8eb4f0",
+                barWidth: 10,
+                syncCrosshair: true,
+              },
+              drBoundary: {
+                strokeColor: "#6b9ae8",
+                strokeWidth: 1,
+                strokeOpacity: 0.45,
+                color: "#8eb4f0",
+                opacity: 0,
+              },
+            },
+          },
+
+          tooltip: {
+            width: "200px",
+            grouped: false,
+            noUseExpand: true,
+            noUseUnexpand: true,
+            /** 툴팁 HTML: 거래량 막대 vs 캔들 OHLC 구분 */
+            custom: function (data) {
+              if (!data || !data[0]) {
+                return "";
+              }
+              var idx = data[0].index;
+              var row = candlestickData[idx];
+              if (!row) return "";
+
+              var border =
+                row.updwn === "UP"
+                  ? "3px solid #e53935"
+                  : row.updwn === "DN"
+                    ? "3px solid #1e88e5"
+                    : "3px solid rgba(255,255,255,0.35)";
+
+              if (data[0].id === "volume") {
+                var vol = data[0].value != null && data[0].value !== "" ? data[0].value : row.volume;
+                return (
+                  '<div style="color: white;padding: 12px; line-height: 1.5; border: 3px solid rgba(255,255,255,0.35); border-radius: 6px;">' +
+                  '<div style="font-weight: bold; margin-bottom: 8px;">[ ' +
+                  row.date +
+                  " ]</div>" +
+                  '<div style="margin-bottom: 4px;">거래량 : ' +
+                  Number(vol).toLocaleString() +
+                  "</div>" +
+                  "</div>"
+                );
+              }
+
+              return (
+                '<div style="color: white;padding: 12px; line-height: 1.5; border: ' +
+                border +
+                '; border-radius: 6px;">' +
+                '<div style="font-weight: bold; margin-bottom: 8px;">[ ' +
+                row.date +
+                " ]</div>" +
+                '<div style="margin-bottom: 4px;">고가 : ' +
+                Number(data[0].high).toLocaleString() +
+                "</div>" +
+                '<div style="margin-bottom: 4px;">시가 : ' +
+                Number(data[0].open).toLocaleString() +
+                "</div>" +
+                '<div style="margin-bottom: 4px;">종가 : ' +
+                Number(data[0].close).toLocaleString() +
+                "</div>" +
+                '<div style="margin-bottom: 4px;">저가 : ' +
+                Number(data[0].low).toLocaleString() +
+                "</div>" +
+                "</div>"
+              );
+            },
+          },
+
+          axis: {
+            x: {
+              type: "category",
+              tick: {
+                outer: false,
+                centered: true,
+                width: 100,
+                autoSkipOverlap: true,
+                line: {
+                  show: false,
+                },
+              },
+            },
+            y: {
+              tick: {
+                outer: false,
+                line: {
+                  show: false,
+                },
+              },
+              min: yMin,
+              max: yMax,
+            },
+          },
+
+          extend: {
+            candlestick: {
+              marker: {
+                show: true,
+              },
+              auto: true,
+            },
+          },
+        });
+      }
+    </script>
+  </body>
+</html>

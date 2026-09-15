@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-4c39062f" version="1.0.5243">
+  <head std:sid="head-e2901d3c">
+    <screen std:sid="screen-db0879e1" id="EXB-POP[480]" name="EXB-POP[480]" width="480px" height="320px" useCustomHeight="true" customHeight="376" customWidth="800" active="true"/>
+    <cl:model std:sid="model-37b7a4ec"/>
+    <cl:appspec title="설정"/>
+  </head>
+  <body std:sid="body-6cbb5661" class="_profile">
+    <cl:listener std:sid="listener-4cdf3b3a" name="load" handler="onBodyLoad"/>
+    <cl:tabfolder std:sid="t-folder-0a41a013" class="tab" item-spacing="25">
+      <cl:verticaldata std:sid="v-data-332f6d42" width="480px" height="472px" autosize="height"/>
+      <cl:tabitem std:sid="t-item-c83920b7" selected="true" text="개인화">
+        <std:metadata>
+          <std:property key="is-active-item" value="true"/>
+        </std:metadata>
+        <cl:group std:sid="group-cfe15163" class="customize">
+          <std:metadata>
+            <std:property key="locked" value="true"/>
+          </std:metadata>
+          <cl:group std:sid="group-d1740b92" id="grpSetting">
+            <cl:verticaldata std:sid="v-data-a6559f91" width="480px" height="248px" autosize="height"/>
+            <cl:output std:sid="output-fa19e220" class="tit" value="모드설정">
+              <cl:formdata std:sid="f-data-dc81469d" row="0" col="0"/>
+            </cl:output>
+            <cl:checkbox std:sid="c-box-03c2590a" id="cbxTheme" class="switch-theme" value="" text="">
+              <cl:expbind property="tooltip" category="PROPERTY" expression="checked ? &quot;다크모드&quot; : &quot;라이트모드&quot;"/>
+              <cl:formdata std:sid="f-data-8e4b269c" halign="RIGHT" valign="CENTER" width="36" height="36" row="0" col="1"/>
+            </cl:checkbox>
+            <cl:output std:sid="output-17d0787b" class="tit" value="컬러설정">
+              <cl:formdata std:sid="f-data-d52450d0" row="1" col="0"/>
+            </cl:output>
+            <cl:radiobutton std:sid="r-button-968db1cb" id="rdbColor" class="switch-color" value="black" colcount="-1" fixedwidth="false" hspacing="4" vspacing="4">
+              <cl:listener std:sid="listener-b951012d" name="selection-change" handler="onRdbColorSelectionChange"/>
+              <cl:formdata std:sid="f-data-93aeed99" row="1" col="1"/>
+              <cl:item std:sid="item-903e8e0a" label="기본" value="default">
+                <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+              </cl:item>
+              <cl:item std:sid="item-0a812aca" label="검정" value="black">
+                <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+              </cl:item>
+              <cl:item std:sid="item-94014bc7" label="파랑" value="blue">
+                <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+              </cl:item>
+              <cl:item std:sid="item-07b57eba" label="초록" value="green">
+                <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+              </cl:item>
+              <cl:item std:sid="item-52026b51" label="주황" value="orange">
+                <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+              </cl:item>
+              <cl:item std:sid="item-429a0ef8" label="보라" value="purple">
+                <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+              </cl:item>
+              <cl:item std:sid="item-dbc6a13b" label="그라데이션" value="gradient">
+                <cl:expbind property="tooltip" category="PROPERTY" expression="label"/>
+              </cl:item>
+              <cl:itemstyle>
+                <cl:expbind property="class" category="CLASS" expression="value"/>
+              </cl:itemstyle>
+            </cl:radiobutton>
+            <cl:output std:sid="output-1748b598" class="tit" value="MDI 탭 오픈 개수">
+              <cl:formdata std:sid="f-data-9c60a3c7" row="2" col="0"/>
+            </cl:output>
+            <cl:radiobutton std:sid="r-button-3f64633a" id="rdbMdiCnt" class="text-right" value="10" hspacing="4" vspacing="4">
+              <cl:listener std:sid="listener-166c155d" name="selection-change" handler="onRdbMdiCntSelectionChange"/>
+              <cl:formdata std:sid="f-data-829008be" row="2" col="1"/>
+              <cl:item std:sid="item-9cbd6cd1" label="10" value="10"/>
+              <cl:item std:sid="item-f3c254f4" label="15" value="15"/>
+              <cl:item std:sid="item-f9334d94" label="20" value="20"/>
+              <cl:item std:sid="item-cd7b0da8" label="25" value="25"/>
+              <cl:item std:sid="item-e65c3e05" label="30" value="30"/>
+            </cl:radiobutton>
+            <cl:output std:sid="output-066efef8" class="tit" value="MDI 탭 개수 초과시">
+              <cl:formdata std:sid="f-data-e53ce074" row="3" col="0"/>
+            </cl:output>
+            <cl:radiobutton std:sid="r-button-d982498f" id="rdbMdiFirstClose" class="text-right" value="false" hspacing="4" vspacing="4">
+              <cl:listener std:sid="listener-bef62d51" name="selection-change" handler="onRdbmdiFirstCloseSelectionChange"/>
+              <cl:formdata std:sid="f-data-cdaf16d1" row="3" col="1"/>
+              <cl:item std:sid="item-185e2376" label="최초 화면 닫기" value="true"/>
+              <cl:item std:sid="item-21f0af2b" label="현재 탭 유지" value="false"/>
+            </cl:radiobutton>
+            <cl:output std:sid="output-f83bf78d" class="tit" value="화면 선택 시&#xD;&#xA;사이드 메뉴 접기 여부">
+              <cl:formdata std:sid="f-data-349c6c96" row="4" col="0"/>
+            </cl:output>
+            <cl:radiobutton std:sid="r-button-a7354b99" id="rdbSnavSetting" class="text-right" value="true" hspacing="4" vspacing="4">
+              <cl:listener std:sid="listener-98428a39" name="selection-change" handler="onRdbSnavSettingSelectionChange"/>
+              <cl:formdata std:sid="f-data-564fdea4" row="4" col="1"/>
+              <cl:item std:sid="item-b3bc6008" label="사이드 메뉴 펼치기" value="true"/>
+              <cl:item std:sid="item-4937bc9c" label="사이드 메뉴 접기" value="false"/>
+            </cl:radiobutton>
+            <cl:formlayout std:sid="f-layout-da5c792d" scrollable="false" hspace="12px" vspace="0px" top-margin="0px" right-margin="24px" bottom-margin="8px" left-margin="24px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+              <cl:rows length="48" unit="PIXEL" hidden="true" syncminlength="true"/>
+              <cl:rows length="48" unit="PIXEL"/>
+              <cl:rows length="48" unit="PIXEL"/>
+              <cl:rows length="48" unit="PIXEL"/>
+              <cl:rows length="48" unit="PIXEL"/>
+              <cl:columns length="120" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION" autoSizing="false" minlength="0" syncminlength="true"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-e9f73193"/>
+        </cl:group>
+      </cl:tabitem>
+    </cl:tabfolder>
+    <cl:verticallayout std:sid="v-layout-8189c39d"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

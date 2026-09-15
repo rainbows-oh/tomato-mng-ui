@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="No-Cache">
+	<meta name="viewport" content="user-scalable=1, initial-scale=1.0, width=device-width">
+	<meta name="eb6-compiler-version" content="1.0.6164">
+	<script type="text/javascript" src="runtime/dynamicLoader.js"></script>
+	<style>
+		/* for HTML5 */
+		html, body {
+			margin: 0px;
+			padding: 0px;
+			height: 100%;
+		}
+		body{
+			box-sizing: content-box;
+			min-height: 100%;
+		}
+	</style>
+	
+	<script>	    
+		function pageLoadingImg(){
+			var pli = document.getElementById("pageLoadingImage");
+			if (pli) {
+				pli.parentNode.removeChild(pli);
+			}
+		}
+		
+		function setBaseHref(){
+			var base = document.createElement("base");
+			base.href = getContextPath()+ "/ui/";
+			document.head.appendChild(base);
+		}
+        
+        function loadMainPage(){
+        	
+        	pageLoadingImg();
+        	
+            cpr.core.App.load("app/main/Main", function(loadedApp) {
+    			loadedApp.createNewInstance().run();
+    		});
+            
+        }
+        
+        function getContextPath(){
+        	return top.location.pathname.substring(0, top.location.pathname.indexOf("/", 2));
+        }
+	</script>
+	</head>
+	
+	<img id="pageLoadingImage"
+	style="position: absolute; top: calc(50% - 75.0px); left: calc(50% - 125.0px); width: 250px; height: 150px"
+	src="data:image/gif;base64,R0lGODlh+gCWAKIDAISEhMbGxv///wAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgADACwAAAAA+gCWAAAD/ii63P4wykmrvTjrzbv/YCiOZGmeaKqubOu+cCzPdG3feK7vfO//wKBwSCwaj8ikcslsOp/QqHRKrVqv2Kx2y+16v+CweEwum8/otHrNbrvf8Lh8Tq/b7/i8fs/v+/+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKztLW2t7i5uru8vb6/wMGTAcTFxgvGyQHIysXMzcsK0MTC0tPPzdjK2sncx9XT0QLh3s7W0OXU4Nfn2e3b793x38Lk8+bj7Pno9+r1+vb2uRMIj6C8f/wM0gvIUF+whgkhDgz4EKDFiBcHVsTIZXFixoIbPXYsKBFktZMoU6pcybKly5cwY8qcSbOmzZs4c+rcybOnz59AgwodSrSo0aNIkypdyrSp06dQo0qdSrWq1atYs2rdyrWr169gw4odS7as2bNo06pdy7at27dw48qdKyABACH5BAUKAAMALF4ARQAKAAsAAAMKCLrc/jDKSattCQAh+QQFCgADACxeAEUAFwALAAADJRi6LA4wSkaDEzKD2p6O3HJ9YGh5pHli5GaOrQqnL/rJtoazZAIAIfkEBQoAAwAsawBFABcACwAAAyUYuiwOMEpGgxMyg9qejtxyfWBoeaR5YuRmjq0Kpy/6ybaGs2QCACH5BAUKAAMALHgARQAXAAsAAAMlGLosDjBKRoMTMoPano7ccn1gaHmkeWLkZo6tCqcv+sm2hrNkAgAh+QQFCgADACyFAEUAFwALAAADJRi6LA4wSkaDEzKD2p6O3HJ9YGh5pHli5GaOrQqnL/rJtoazZAIAOw=="
+	alt="Loading Image" />
+	
+	<body>
+		<script type="text/javascript">
+	        var links = [
+	        	"./runtime/css/cleopatra.css", 
+	        	"./theme/cleopatra-theme.css", 
+	        	"./theme/custom-theme.css", 
+	        	"./theme/pb/exbps.css"
+	        	];
+	        
+	        var scripts = [
+	        	"./runtime/cleopatra.js", 
+	        	"./runtime/defaults.js", 
+	            "./cpr-lib/user-modules.js",
+	            "./cpr-lib/udc.js",
+	            "./cpr-lib/language.js"
+	            ];
+	        //setBaseHref(); 
+			loadLinks(links);
+            loadScripts(scripts, 0, function() {
+                window.addEventListener("load", function(e){
+                	loadMainPage();
+                });
+            });
+		</script>
+	</body>
+</html>

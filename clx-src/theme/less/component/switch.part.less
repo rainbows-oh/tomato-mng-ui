@@ -1,0 +1,82 @@
+/**
+ * switch.part.less — 토글 스위치 컨트롤 스타일
+ *
+ * @desc  체크박스 변형 토글(.cl-checkbox.toggle-switch). 트랙 + 썸(thumb) 구조
+ * @note  저사용 컨트롤이라 전용 토큰 없이 전역 토큰을 직접 참조 (테마 반응 값은 전역 경유)
+ *        반복·계산에 쓰이는 값만 파일 지역 변수로 관리
+ */
+
+@import (reference) "../common/_include.part.less";
+/* 파일 지역 변수 (@switch-- 접두어로 타 파일 변수 충돌 방지) — 반복/계산 값만 */
+@switch--track-width: @size-11;
+@switch--thumb-size: @size-component-button;
+@switch--thumb-offset: (@switch--track-width - @switch--thumb-size - (@switch--thumb-border-width * 2));
+@switch--thumb-border-width: 2px;
+
+/* 썸 이동거리 */
+/* 트랙 크기 */
+#switch--track() {
+	width: @switch--track-width;
+	height: @switch--thumb-size + (@switch--thumb-border-width * 2);
+	border-radius: @border-radius-full;
+}
+
+.cl-checkbox.toggle-switch {
+	.cl-checkbox-field .cl-icon-wrapper {
+		padding: 0;
+	}
+	
+	/* 트랙 */
+	.cl-icon-wrapper {
+		position: relative;
+		display: inline-flex !important;
+		#switch--track();
+		background-color: @gray-20;
+		transition: 0.4s cubic-bezier(0.4, 0, 0.23, 1);
+		
+		/* 썸 (구조 상수 top/left 는 인라인 유지) */
+		.cl-checkbox-icon {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			top: 0;
+			left: 0;
+			width: @switch--thumb-size;
+			height: @switch--thumb-size;
+			background-color: @color-background-base;
+			background-image: none !important;
+			border: @switch--thumb-border-width solid @gray-20;
+			border-radius: @border-radius-full;
+			box-sizing: content-box;
+			transition: inherit;
+		}
+	}
+	
+	&.cl-checked {
+		.cl-icon-wrapper {
+			background-color: @primary;
+			
+			.cl-checkbox-icon {
+				left: @switch--thumb-offset;
+				background-color: @color-background-base;
+				border-color: @primary;
+			}
+		}
+	}
+	
+	&.cl-focus,
+	&:focus {
+		.cl-checkbox-icon:focus-visible {
+		}
+	}
+	
+	&.cl-disabled .cl-icon-wrapper {
+		background-color: @color-component-surface-disabled;
+		
+		.cl-checkbox-icon {
+			background-color: @color-component-text-disabled;
+			border-color: @color-component-surface-disabled;
+		}
+	}
+}

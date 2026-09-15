@@ -1,0 +1,167 @@
+/**
+ * tooltip.part.less — 툴팁/팝오버 컨트롤 스타일
+ *
+ * @desc  기본 툴팁(.cl-tooltip), 팝오버(.tooltip-popover), 박스형 팝오버(.tooltip-box) 정의
+ * @note  저사용 컨트롤이라 전용 토큰 없이 전역 토큰을 직접 참조
+ *        화살표 크기/위치 등 반복·계산 값만 @tooltip-- 접두 지역 변수로 관리
+ */
+ 
+@import (reference) "../common/_include.part.less";
+
+/* 파일 지역 변수 (@tooltip-- 접두어로 타 파일 변수 충돌 방지) — 반복/계산 값만 */
+@tooltip--padding-x: @padding-3;
+@tooltip--arrow-size: 8px;
+@tooltip--arrow-gap: (@tooltip--arrow-size / 2 * -1);
+@tooltip--box-arrow-size: 12px;
+@tooltip--box-arrow-gap: (@tooltip--box-arrow-size / 2 * -1);
+@tooltip--popover-margin-x: @padding-3;
+
+/* ==========================================================================
+ .cl-tooltip — 기본 툴팁
+ ========================================================================== */
+.cl-tooltip {
+	background-color: @gray-90;
+	border: none;
+	border-radius: @size-component-radius;
+	box-shadow: 0 2px 4px 0 fade(@black, 4%);
+	color: @color-text-inverse;
+	font-size: @font-size-label-xsmall;
+	font-weight: @font-weight-medium;
+	max-width: 600px;
+	padding: @padding-2 @padding-4;
+	
+	.cl-control {
+		color: inherit;
+		font: inherit;
+	}
+}
+
+/* ==========================================================================
+ .cl-container.tooltip-popover — 팝오버 (인라인형)
+ ========================================================================== */
+.cl-container.tooltip-popover {
+	background-color: @gray-90;
+	border-radius: @size-component-radius;
+	color: @color-text-inverse;
+	font-weight: @font-weight-medium;
+	padding: @padding-2 @padding-4;
+	white-space: nowrap;
+	
+	/* 화살표 (기본: 왼쪽) */
+	&::before {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: @tooltip--arrow-gap;
+		width: @tooltip--arrow-size;
+		height: @tooltip--arrow-size;
+		background-color: @gray-90;
+		transform: translateY(-50%) rotate(45deg);
+	}
+	
+	.cl-control {
+		color: inherit;
+		font-size: @font-size-label-xsmall;
+	}
+	
+	/* 화살표 방향 (박스형 제외) */
+	&:not(.tooltip-box) {
+		&.right::before {
+			left: calc(100% + @tooltip--arrow-gap);
+		}
+		
+		&.top,
+		&.bottom {
+			&::before {
+				top: calc(100% + @tooltip--arrow-gap);
+				left: 50%;
+				transform: translateX(-50%) rotate(45deg);
+			}
+			
+			&.right::before {
+				left: calc(100% - @tooltip--popover-margin-x);
+			}
+			
+			&.left::before {
+				left: @tooltip--popover-margin-x;
+			}
+		}
+		
+		&.bottom::before {
+			top: @tooltip--arrow-gap;
+		}
+	}
+}
+
+/* ==========================================================================
+ .cl-container.tooltip-popover.tooltip-box — 박스형 팝오버
+ ========================================================================== */
+.cl-container.tooltip-popover.tooltip-box {
+	background-color: @color-background-base;
+	border: 1px solid @color-component-border;
+	border-radius: @border-radius-7;
+	color: @color-component-text;
+	max-width: 360px;
+	padding: @padding-6 @padding-7;
+	white-space: normal;
+	
+	/* 화살표 (기본: 왼쪽) */
+	&::before {
+		top: 50%;
+		left: @tooltip--box-arrow-gap;
+		width: @tooltip--box-arrow-size;
+		height: @tooltip--box-arrow-size;
+		background-color: inherit;
+		border: inherit;
+		border-left-color: transparent;
+		border-top-color: transparent;
+		transform: translateY(-50%) rotate(45deg);
+	}
+	
+	/* 화살표 방향 */
+	&.right::before {
+		left: calc(100% + @tooltip--box-arrow-gap);
+	}
+	
+	&.top,
+	&.bottom {
+		&::before {
+			top: calc(100% + @tooltip--box-arrow-gap);
+			left: 50%;
+			transform: translateX(-50%) rotate(45deg);
+		}
+		
+		&.right::before {
+			left: calc(100% - @tooltip--popover-margin-x);
+		}
+		
+		&.left::before {
+			left: @tooltip--popover-margin-x;
+		}
+	}
+	
+	&.bottom::before {
+		top: @tooltip--box-arrow-gap;
+		transform: translateX(-50%) rotate(-135deg);
+	}
+}
+
+/* ==========================================================================
+ Responsive (≤420px)
+ ========================================================================== */
+@media (max-width: 420px) {
+	.cl-container.tooltip-popover {
+		left: 50%;
+		width: calc(100% - (@tooltip--padding-x * 2));
+		transform: translateX(-50%);
+		
+		&::before {
+			display: none;
+		}
+		
+		&.tooltip-box {
+			min-width: 100%;
+		}
+	}
+}

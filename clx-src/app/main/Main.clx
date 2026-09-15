@@ -1,0 +1,442 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-a2f9fd72" version="1.0.5182">
+  <head std:sid="head-5fba9e31">
+    <screen std:sid="screen-5643de4d" id="EXB-FULL" name="EXB-FULL" width="1580px" height="768px" useCustomWidth="false" useCustomHeight="true" customHeight="656" customWidth="800" active="true"/>
+    <screen std:sid="screen-ac3278d2" id="EXB-DIV" name="EXB-DIV" width="1128px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-3c229cb6" id="EXB-PART" name="EXB-PART" width="672px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-ecc53fe2">
+      <cl:dataset comment="메뉴" std:sid="d-set-a1e801ff" id="dsAllMenu" filtercondition="REFLECT_YN != &quot;N&quot;">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-b7d0e3e2" name="MENU_NM"/>
+          <cl:datacolumn std:sid="d-column-1a75e7e3" name="MENU_ID"/>
+          <cl:datacolumn std:sid="d-column-ce8bf8b8" name="UP_MENU_ID"/>
+          <cl:datacolumn std:sid="d-column-18380ef4" name="TOP_MENU_ID"/>
+          <cl:datacolumn std:sid="d-column-b7879d44" name="CALL_PAGE"/>
+          <cl:datacolumn std:sid="d-column-9bdc2fe6" name="PGM_ID"/>
+          <cl:datacolumn std:sid="d-column-4c100870" name="ICON"/>
+          <cl:datacolumn std:sid="d-column-a2bd6f9f" name="MENU_KEY"/>
+          <cl:datacolumn std:sid="d-column-1d8b7278" name="MOBILE_YN"/>
+          <cl:datacolumn std:sid="d-column-7bb4293e" name="DESC"/>
+          <cl:datacolumn std:sid="d-column-f1e3e1d7" name="CLASS"/>
+          <cl:datacolumn std:sid="d-column-a5f7493c" name="MENU_DESC" datatype="expression" expression="&quot;[&quot; + MENU_NM + &quot;] &quot; + DESC&#xD;&#xA;"/>
+          <cl:datacolumn std:sid="d-column-e7bfcd7b" name="MENU_LOWERCASE" datatype="expression" expression="doLowerCase(MENU_NM)"/>
+          <cl:datacolumn std:sid="d-column-48c5ffc5" name="DESC_LOWERCASE" datatype="expression" expression="doLowerCase(DESC)"/>
+          <cl:datacolumn std:sid="d-column-e9a2adee" name="MENU_LVL"/>
+          <cl:datacolumn std:sid="d-column-833dbc36" name="MENU_FAV"/>
+          <cl:datacolumn std:sid="d-column-f4a106b6" name="TAG"/>
+          <cl:datacolumn std:sid="d-column-ce41a5d0" name="TAG_LOWERCASE" datatype="expression" expression="doLowerCase(TAG)"/>
+          <cl:datacolumn std:sid="d-column-c02635f6" name="REFLECT_YN"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist/>
+      </cl:dataset>
+      <cl:dataset comment="알림 메세지" std:sid="d-set-194857da" id="dsNotiMsg">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="메세지 유형" std:sid="d-column-ad66fff0" name="TYPE"/>
+          <cl:datacolumn comment="메세지 내용" std:sid="d-column-fcbdbc99" name="MSG"/>
+          <cl:datacolumn comment="알림방 추가 여부" std:sid="d-column-275aef1d" name="REPLAY"/>
+        </cl:datacolumnlist>
+      </cl:dataset>
+      <cl:datamap comment="사용자 정보" std:sid="d-map-1a875ed5" id="dmUserInfo">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-bfea4f73" info="사용자ID" name="USER_ID" defaultvalue=""/>
+          <cl:datacolumn std:sid="d-column-13210478" info="사용자명" name="USER_NM" defaultvalue=""/>
+          <cl:datacolumn std:sid="d-column-0ce6801c" info="부서명" name="DEPT_NM" defaultvalue=""/>
+          <cl:datacolumn std:sid="d-column-57877776" info="부서코드" name="DEPT_CD" defaultvalue=""/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:datamap comment="프로젝트 설정 컨피그" std:sid="d-map-7cabb165" id="dmGlobalConfig">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="mdi 최대 오픈 갯수" std:sid="d-column-6b206cb1" name="mdiWindowMaxCount" defaultvalue="10"/>
+          <cl:datacolumn comment="디폴트 언어키" std:sid="d-column-b7683641" name="defaultLocale"/>
+          <cl:datacolumn comment="디비전 사용 여부" std:sid="d-column-3aa84c94" name="divideMdiUseYn"/>
+          <cl:datacolumn comment="알림(alert, confirm)시 레이어드팝업 사용 여부" std:sid="d-column-a57d9b90" name="useLayerdPop" defaultvalue="N"/>
+          <cl:datacolumn comment="mdi 탭 개수 초과시 옵션" std:sid="d-column-bb86ed67" name="mdiFirstClose"/>
+        </cl:datacolumnlist>
+      </cl:datamap>
+      <cl:submission std:sid="submission-f7930cf6" id="subOnLoad" method="get" action="app/exam/data/main.json">
+        <cl:responsedata dataid="dsAllMenu" isadd="true"/>
+        <cl:responsedata dataid="dmGlobalConfig"/>
+        <cl:responsedata dataid="dmUserInfo"/>
+      </cl:submission>
+    </cl:model>
+    <cl:appspec title="SBM"/>
+  </head>
+  <body std:sid="body-1aedd02f" class="_main">
+    <cl:listener std:sid="listener-8e96e679" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:listener std:sid="listener-451476aa" name="init" handler="onBodyInit"/>
+    <cl:listener std:sid="listener-7542e416" name="unload" handler="onBodyUnload"/>
+    <cl:listener std:sid="listener-e7889c53" name="load" handler="onBodyLoad"/>
+    <cl:group std:sid="group-f6ba7873" id="grpMHd" class="m_header" visible="false">
+      <std:metadata>
+        <std:property key="hidden" value="true"/>
+      </std:metadata>
+      <cl:xylayoutdata std:sid="xyl-data-5f32f9f9" top="0px" right="0px" left="0px" height="48px" horizontalAnchor="BOTH" verticalAnchor="TOP"/>
+      <cl:button std:sid="button-892057e5" class="logo" value="">
+        <cl:listener std:sid="listener-96e43d46" name="click" handler="onBtnLogoClick"/>
+        <cl:xylayoutdata std:sid="xyl-data-9a36081a" left="24px" width="40px" height="44px" horizontalAnchor="LEFT" verticalAnchor="CENTER"/>
+      </cl:button>
+      <cl:xylayout std:sid="xylayout-edb50868" scrollable="false"/>
+    </cl:group>
+    <cl:group std:sid="group-4a295873" id="grpAsd" class="aside" clipcontent="true">
+      <cl:listener std:sid="listener-e6433111" name="mouseleave" handler="onGrpAsdMouseleave"/>
+      <cl:xylayoutdata std:sid="xyl-data-69fd4058" top="0px" bottom="0px" left="0px" width="300px" horizontalAnchor="LEFT" verticalAnchor="BOTH"/>
+      <cl:group std:sid="group-c92a63af" id="grpLeftBr" class="leftbar" clipcontent="false">
+        <cl:xylayoutdata std:sid="xyl-data-e77a5bb1" top="0px" bottom="0px" left="0px" width="81px" horizontalAnchor="LEFT" verticalAnchor="BOTH"/>
+        <cl:button std:sid="button-1136eec7" id="btnLogo" class="logo" value="">
+          <cl:listener std:sid="listener-768bd861" name="click" handler="onBtnLogoClick"/>
+          <cl:formdata std:sid="f-data-ce3cc4b2" row="0" col="0"/>
+        </cl:button>
+        <cl:group std:sid="group-f1e3c8ab" clipcontent="false">
+          <cl:formdata std:sid="f-data-f1475fa1" row="1" col="0"/>
+          <cl:sidenavigation std:sid="s-navigation-aa93d463" id="snavRtMn" class="menubar" filterexp="depth == 0">
+            <cl:listener std:sid="listener-10f9dce1" name="item-click" handler="onSnavRtMnItemClick"/>
+            <cl:verticaldata std:sid="v-data-a60e1a18" width="200px" height="100%" autosize="height"/>
+            <cl:treeitemset datasetid="dsAllMenu" label="MENU_NM" value="MENU_ID" tooltip="MENU_NM" parent="UP_MENU_ID"/>
+            <cl:itemstyle>
+              <cl:expbind property="class" category="CLASS" expression="ICON"/>
+            </cl:itemstyle>
+          </cl:sidenavigation>
+          <cl:verticallayout std:sid="v-layout-a019762c" spacing="0"/>
+        </cl:group>
+        <cl:group std:sid="group-0d9a6259" class="util-button-group" clipcontent="false">
+          <cl:formdata std:sid="f-data-70861cb8" width="100" height="-31" row="2" col="0"/>
+          <cl:button std:sid="button-6c93f619" id="btnSiteMap" class="btn-sitemap" fieldLabel="사이트맵" tooltip="사이트맵" icon="0">
+            <cl:listener std:sid="listener-f6be62af" name="click" handler="onBtnSiteMapClick"/>
+            <cl:verticaldata std:sid="v-data-6506333d" width="48px" height="48px" autosize="none"/>
+          </cl:button>
+          <cl:button std:sid="button-755ee854" id="btnFavMn" class="btn-fav" fieldLabel="즐겨찾기" tooltip="즐겨찾기" icon="0">
+            <cl:listener std:sid="listener-078b5529" name="click" handler="onBtnFavMnClick"/>
+            <cl:verticaldata std:sid="v-data-2c2ff001" width="56px" height="48px" autosize="none"/>
+          </cl:button>
+          <cl:button std:sid="button-0d93dd54" id="btnUserSet" class="btn-setting" fieldLabel="환경설정" tooltip="환경설정" icon="0">
+            <cl:listener std:sid="listener-1eada082" name="click" handler="onBtnUserSetClick"/>
+            <cl:verticaldata std:sid="v-data-fc5b8f2c" width="100px" height="48px"/>
+          </cl:button>
+          <cl:group std:sid="group-63f75920" clipcontent="true">
+            <cl:verticaldata std:sid="v-data-319a802d" width="48px" height="48px"/>
+            <cl:progress std:sid="progress-b436e789" id="prgTimeLimit" class="time-limit">
+              <cl:xylayoutdata std:sid="xyl-data-c4dae900" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+              <cl:barstyle>
+                <cl:expbind property="class" category="CLASS" expression="/*numberValue &lt; Math.floor(self.max * 0.9) ? &quot;progress-red&quot; : &quot;&quot;*/&#xA;numberValue &lt; Math.floor(#prgTimeLimit.max * 0.01) ? &quot;progress-red&quot; : &quot;&quot;"/>
+              </cl:barstyle>
+            </cl:progress>
+            <cl:button std:sid="button-6e6ba11d" id="btnUser" class="btn-user female on" value="사용자">
+              <cl:listener std:sid="listener-03955598" name="click" handler="onBtnUserClick"/>
+              <cl:xylayoutdata std:sid="xyl-data-b8d4aa66" width="40px" height="40px" horizontalAnchor="CENTER" verticalAnchor="CENTER"/>
+            </cl:button>
+            <cl:xylayout std:sid="xylayout-43b412c4" scrollable="false"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-a18267ad" scrollable="true" spacing="8"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-bc5132ca" scrollable="false" hspace="0px" vspace="16px">
+          <cl:rows length="50" unit="PIXEL"/>
+          <cl:rows length="1" unit="FRACTION" autoSizing="false" syncminlength="true"/>
+          <cl:rows length="216" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-b04fc8e0" id="grpSideBr" class="sidebar" visible="false">
+        <cl:xylayoutdata std:sid="xyl-data-0c96d96b" top="0px" bottom="0px" left="81px" width="218px" horizontalAnchor="LEFT" verticalAnchor="BOTH"/>
+        <cl:group std:sid="group-8266fc07" class="search-group">
+          <cl:formdata std:sid="f-data-b18049d3" row="0" col="0"/>
+          <cl:output std:sid="output-156c15e4" id="optMnTit" class="tit h4" value="전체메뉴">
+            <cl:verticaldata std:sid="v-data-1d865364" width="100px" height="24px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-0ca23db4" id="grpBtns" class="util-button-group">
+            <cl:verticaldata std:sid="v-data-8bca94aa" width="400px" height="24px" autosize="none"/>
+            <cl:searchinput std:sid="s-input-26688bba" id="sipMnSearch" class="global-search" hideclearbutton="true" searchposition="left">
+              <cl:listener std:sid="listener-c6571c6c" name="search" handler="onSipMnSearchSearch"/>
+              <cl:flowlayoutdata std:sid="f-data-76a6bc15" width="130px" height="24px" autosize="none"/>
+            </cl:searchinput>
+            <cl:button std:sid="button-f8bf06e2" class="btn-submit btn-plus" fieldLabel="전체펼치기" tooltip="전체펼치기" value="" icon="0">
+              <cl:listener std:sid="listener-659ed0eb" name="click" handler="onButtonClick"/>
+              <cl:flowlayoutdata std:sid="f-data-32fc75d6" width="24px" height="24px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-803c0b0e" class="btn-submit btn-minus" fieldLabel="전체닫기" tooltip="전체닫기" icon="0">
+              <cl:listener std:sid="listener-2a9b7ca1" name="click" handler="onButtonClick2"/>
+              <cl:flowlayoutdata std:sid="f-data-7173687a" width="24px" height="24px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-a3b04ce4"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-97c48582" spacing="10" leftmargin="16" rightmargin="16" topmargin="20" bottommargin="20"/>
+        </cl:group>
+        <cl:sidenavigation std:sid="s-navigation-5773a54c" id="snavMn" class="sidemenu">
+          <cl:listener std:sid="listener-e596b315" name="item-click" handler="onSnavMnItemClick"/>
+          <cl:formdata std:sid="f-data-38bff70a" row="1" col="0"/>
+          <cl:treeitemset datasetid="dsAllMenu" label="MENU_NM" value="MENU_ID" parent="UP_MENU_ID"/>
+        </cl:sidenavigation>
+        <cl:formlayout std:sid="f-layout-a04bc672" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="100" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:xylayout std:sid="xylayout-64fb2a77" scrollable="false" animationduration="0.35"/>
+    </cl:group>
+    <cl:button std:sid="button-8ff831d2" id="btnAsdExpder" class="btn-expander on" value="">
+      <cl:listener std:sid="listener-44eb208a" name="click" handler="onBtnAsdExpderClick"/>
+      <cl:expbind property="fieldLabel" category="PROPERTY" expression="#grpAsd.style.hasClass(&quot;collapsed&quot;) == true ? &quot;좌측 메뉴 열기&quot; : &quot;좌측 메뉴 닫기&quot;"/>
+      <cl:expbind property="tooltip" category="PROPERTY" expression="#grpAsd.style.hasClass(&quot;collapsed&quot;) == true ? &quot;좌측 메뉴 열기&quot; : &quot;좌측 메뉴 닫기&quot;"/>
+      <cl:xylayoutdata std:sid="xyl-data-6d4ee378" left="81px" width="16px" height="40px" horizontalAnchor="LEFT" verticalAnchor="CENTER"/>
+    </cl:button>
+    <cl:group std:sid="group-7db29cae" id="grpBody" clipcontent="false">
+      <cl:xylayoutdata std:sid="xyl-data-82e2e1c4" top="8px" right="16px" bottom="16px" left="324px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+      <cl:notifier std:sid="notifier-f28c0cd6" id="notifier" delay="3000" animation="fadein" successdelay="3000" infodelay="3000" warningdelay="3000" dangerdelay="3000">
+        <cl:xylayoutdata std:sid="xyl-data-b1eb431e" right="0px" bottom="0px" left="0px" height="36px" horizontalAnchor="BOTH" verticalAnchor="BOTTOM"/>
+      </cl:notifier>
+      <cl:mdifolder std:sid="mdifolder-33ad212d" id="mdiCn" class="tab-content" childcombinatorclass="content" headerarrowvisible="auto" headercheckable="true" item-spacing="4" item-dragging-mode="internal" tabswithautoselection="false">
+        <cl:listener std:sid="listener-36081d58" name="content-ready" handler="onMdiCnContentReady"/>
+        <cl:listener std:sid="listener-5bcd74ce" name="tabheader-click" handler="onMdiCnTabheaderClick"/>
+        <cl:listener std:sid="listener-d7299346" name="close" handler="onMdiCnClose"/>
+        <cl:listener std:sid="listener-90cc8f0a" name="tabheader-check" handler="onMdiCnTabheaderCheck"/>
+        <cl:listener std:sid="listener-9ad86790" name="tabheader-uncheck" handler="onMdiCnTabheaderUncheck"/>
+        <cl:listener std:sid="listener-7c864162" name="selection-change" handler="onMdiCnSelectionChange"/>
+        <cl:xylayoutdata std:sid="xyl-data-78c14e96" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+        <cl:tabitem std:sid="t-item-031cdd47" name="dashboard" selected="true" text="대시보드" visible="false">
+          <std:metadata>
+            <std:property key="is-active-item" value="true"/>
+          </std:metadata>
+          <cl:embeddedapp std:sid="e-app-b248ee9f" id="eaHome" src="Home.clx">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+          </cl:embeddedapp>
+        </cl:tabitem>
+        <cl:group std:sid="group-a161befd" id="grpTabBtns" class="util-button-group" clipcontent="false">
+          <cl:headercontroldata std:sid="thc-data-99230a1c" width="401" position="right" autowidth="true"/>
+          <cl:button std:sid="button-72170ac0" id="btnMdiList" class="btn-tab-list" fieldLabel="MDI 리스트" tooltip="MDI 리스트">
+            <cl:listener std:sid="listener-01b3ae59" name="click" handler="onBtnMdiListClick"/>
+            <cl:flowlayoutdata std:sid="f-data-a3e6a4c6" width="32px" height="32px" autosize="none"/>
+          </cl:button>
+          <cl:udc std:sid="ud-control-ab27b6af" id="udccommdidiv1" type="udc.com.udcComMdiDiv">
+            <cl:listener std:sid="listener-2abbfe5f" name="changeDivideType" handler="onUdcComMdiDivChangeDivideType"/>
+            <cl:flowlayoutdata std:sid="f-data-31714bff" width="32px" height="32px" autosize="none"/>
+          </cl:udc>
+          <cl:button std:sid="button-bc6ef92d" id="btnMdiZoom" class="btn-tab-zoom" fieldLabel="확대 및 축소" tooltip="확대 및 축소">
+            <cl:listener std:sid="listener-6b8d8936" name="click" handler="onBtnMdiZoomClick"/>
+            <cl:flowlayoutdata std:sid="f-data-e07dbd87" width="32px" height="32px"/>
+          </cl:button>
+          <cl:button std:sid="button-7a46ff3c" id="btnMdiRefresh" class="btn-tab-refresh" fieldLabel="새로고침" tooltip="새로고침">
+            <cl:listener std:sid="listener-067f06e8" name="click" handler="onBtnMdiRefreshClick"/>
+            <cl:flowlayoutdata std:sid="f-data-d629c744" width="32px" height="32px"/>
+          </cl:button>
+          <cl:button std:sid="button-912cb07d" id="btnMdiClose" class="btn-tab-close" fieldLabel="MDI 닫기" tooltip="MDI 닫기">
+            <cl:listener std:sid="listener-5e93c70e" name="click" handler="onBtnMdiCloseClick"/>
+            <cl:flowlayoutdata std:sid="f-data-1d664379" width="32px" height="32px"/>
+          </cl:button>
+          <cl:button std:sid="button-0b9a5326" id="btnMdiWinOpen" class="btn-tab-window" fieldLabel="MDI 새창열기" tooltip="MDI 새창열기">
+            <cl:listener std:sid="listener-15fc6ed4" name="click" handler="onButtonClick4"/>
+            <cl:flowlayoutdata std:sid="f-data-cf2a2394" width="32px" height="32px" autosize="none"/>
+          </cl:button>
+          <cl:button std:sid="button-39d5908a" id="btnUtilZoom" class="btn-tab-max" fieldLabel="MDI 확장 및 축소" tooltip="MDI 확장 및 축소">
+            <cl:listener std:sid="listener-caa6583a" name="click" handler="onButtonClick3"/>
+            <cl:flowlayoutdata std:sid="f-data-3d9a1a9f" width="32px" height="32px" autosize="none"/>
+          </cl:button>
+          <cl:button std:sid="button-932d5ef2" id="btnMMenu" class="btn-menu" value="">
+            <cl:listener std:sid="listener-51d90eff" name="click" handler="onBtnMMenuClick"/>
+            <cl:flowlayoutdata std:sid="f-data-da4d6b74" width="32px" height="32px" autosize="none"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-c6d24cd8" scrollable="false" hspacing="4" vspacing="0" halign="right" valign="middle" linewrap="false"/>
+        </cl:group>
+        <cl:group std:sid="group-fdf920d5" id="grpBtnHome" class="util-button-group left-button-group" clipcontent="false">
+          <cl:headercontroldata std:sid="thc-data-47457311" width="36" position="left"/>
+          <cl:button std:sid="button-d5fbdf16" id="btnMdiHome" class="btn-tab-home" fieldLabel="홈" tooltip="홈" value="">
+            <cl:listener std:sid="listener-4b62bb9b" name="click" handler="onBtnMdiHomeClick"/>
+            <cl:flowlayoutdata std:sid="f-data-c9b99426" width="32px" height="32px" autosize="none"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-4d0c6765" scrollable="false" vspacing="0" halign="left" linewrap="false"/>
+        </cl:group>
+      </cl:mdifolder>
+      <cl:xylayout std:sid="xylayout-bef8c7a2" scrollable="false"/>
+    </cl:group>
+    <cl:group std:sid="group-bc3846a8" id="grpZmSetPop" class="dropdown dropdown-zoom" visible="false" clipcontent="false">
+      <cl:xylayoutdata std:sid="xyl-data-6feee27d" top="0px" right="-100px" width="100px" height="32px" horizontalAnchor="RIGHT" verticalAnchor="TOP"/>
+      <cl:button std:sid="button-0becbf97" id="btnZmOut" class="btn-out" fieldLabel="화면 축소" tooltip="화면 축소" value="">
+        <cl:listener std:sid="listener-5e4798e5" name="click" handler="onBtnZmOutClick"/>
+        <cl:formdata std:sid="f-data-e6780f09" valign="FILL" height="26" row="0" col="0"/>
+      </cl:button>
+      <cl:numbereditor std:sid="n-editor-52faa656" id="nbeZmRatio" class="zoom-ratio" value="100" min="80" max="120" step="10.0" spinbutton="false" format="#,##0" preventinput="true" showclearbutton="false">
+        <cl:formdata std:sid="f-data-1877243d" row="0" col="1"/>
+      </cl:numbereditor>
+      <cl:button std:sid="button-4932d2cf" id="btnZmIn" class="btn-in" fieldLabel="화면 확대" tooltip="화면 확대" value="">
+        <cl:listener std:sid="listener-2a13414a" name="click" handler="onBtnZmInClick"/>
+        <cl:formdata std:sid="f-data-4c9d828c" valign="FILL" height="26" row="0" col="2"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-d9057497" scrollable="false" hspace="4px" vspace="0px" top-margin="1fr" right-margin="0px" bottom-margin="1fr" left-margin="0px">
+        <cl:rows length="20" unit="PIXEL"/>
+        <cl:columns length="20" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="20" unit="PIXEL"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-e52ecccf" id="grpMnListPop" class="dropdown-menulist" visible="false">
+      <cl:xylayoutdata std:sid="xyl-data-1793aa62" top="0px" right="-259px" width="150px" height="150px" horizontalAnchor="RIGHT" verticalAnchor="TOP"/>
+      <cl:listbox std:sid="l-box-4f39b1bc" id="lbxTabList">
+        <cl:listener std:sid="listener-9debf05b" name="item-click" handler="onLbxTabListItemClick"/>
+        <cl:verticaldata std:sid="v-data-2afb61c2" width="150px" height="150px" autosize="height"/>
+      </cl:listbox>
+      <cl:verticallayout std:sid="v-layout-f1cebafe" scrollable="true" spacing="4"/>
+    </cl:group>
+    <cl:group std:sid="group-096c3f65" id="grpMMenu" class="m_menu" visible="false">
+      <cl:xylayoutdata std:sid="xyl-data-a228db5b" top="420px" right="-360px" width="360px" height="649px" horizontalAnchor="RIGHT" verticalAnchor="TOP"/>
+      <cl:group std:sid="group-042be9af" id="grpMMenuHd" class="menu-header">
+        <cl:formdata std:sid="f-data-310e28d4" width="100" height="74" row="0" col="0"/>
+        <cl:group std:sid="group-f59b1907" class="topbar">
+          <cl:verticaldata std:sid="v-data-5671b650" width="360px" height="56px" autosize="height"/>
+          <cl:button std:sid="button-df6ec7ea" id="btnMMenuClose" class="btn-close" fieldLabel="메뉴닫기" tooltip="메뉴닫기" value="">
+            <cl:listener std:sid="listener-89f68498" name="click" handler="onBtnMMenuCloseClick"/>
+            <cl:formdata std:sid="f-data-aacc166a" row="0" col="0"/>
+          </cl:button>
+          <cl:button std:sid="button-fd98397d" id="btnMAlarm" class="btn-alarm" fieldLabel="알림" tooltip="알림" value="">
+            <cl:listener std:sid="listener-cad703ac" name="click" handler="onBtnMAlarmClick"/>
+            <cl:formdata std:sid="f-data-0da47346" row="0" col="2"/>
+          </cl:button>
+          <cl:button std:sid="button-df2753ca" id="btnMSetting" class="btn-setting" fieldLabel="사용자 설정" tooltip="사용자 설정" value="">
+            <cl:listener std:sid="listener-21734410" name="click" handler="onBtnMSettingClick"/>
+            <cl:formdata std:sid="f-data-04993eca" row="0" col="3"/>
+          </cl:button>
+          <cl:formlayout std:sid="f-layout-25ce3df0" scrollable="false" hspace="12px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="32" unit="PIXEL"/>
+            <cl:columns length="32" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="32" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="32" unit="PIXEL"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-8ded99a5" class="user-box">
+          <cl:verticaldata std:sid="v-data-9065db4f" width="360px" height="185px" autosize="height"/>
+          <cl:group std:sid="group-e9ca89a9">
+            <cl:verticaldata std:sid="v-data-564cb9c1" width="360px" height="32px" autosize="height"/>
+            <cl:button std:sid="button-939f5100" id="btnMLogout" class="btn-submit" value="로그아웃">
+              <cl:listener std:sid="listener-534d3ab6" name="click" handler="onBtnMLogoutClick"/>
+              <cl:formdata std:sid="f-data-63282656" valign="CENTER" height="24" row="0" col="1"/>
+            </cl:button>
+            <cl:output std:sid="output-27cbf2ed" id="optUserNm" class="user" value="도마토" displayexp="sstr(text, &quot;&quot;) + &quot;님&quot;">
+              <cl:formdata std:sid="f-data-c5af5ca5" row="0" col="0"/>
+            </cl:output>
+            <cl:formlayout std:sid="f-layout-6867a496" scrollable="false" hspace="16px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="57" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:searchinput std:sid="s-input-567e4224" id="sipMSearch" class="global-search" hideclearbutton="true" placeholder="검색어를 입력하세요">
+            <cl:listener std:sid="listener-959afb3b" name="search" handler="onSearchInputSearch"/>
+            <cl:verticaldata std:sid="v-data-4c7fb432" width="278px" height="38px" autosize="none"/>
+          </cl:searchinput>
+          <cl:group std:sid="group-5ddb5c25" class="link-box">
+            <cl:verticaldata std:sid="v-data-0d2e9f58" width="400px" height="25px" autosize="height"/>
+            <cl:button std:sid="button-fad09fa7" id="btnMHome" class="btn-home" value="홈으로" icon="0">
+              <cl:listener std:sid="listener-d2c45a57" name="click" handler="onBtnMHomeClick"/>
+              <cl:formdata std:sid="f-data-a7bebbe9" row="0" col="0"/>
+            </cl:button>
+            <cl:button std:sid="button-ac82f67e" id="btnMCustm" class="btn-theme" value="테마" icon="0">
+              <cl:listener std:sid="listener-f634863c" name="click" handler="onBtnMCustmClick"/>
+              <cl:formdata std:sid="f-data-4dbf8f63" row="0" col="1"/>
+            </cl:button>
+            <cl:group std:sid="group-d0c6c32f" clipcontent="true">
+              <cl:formdata std:sid="f-data-f280b62a" row="0" col="2" rowspan="1" colspan="1"/>
+              <cl:button std:sid="button-9e7183da" id="btnMAllMenu" class="btn-menu" visible="false" value="전체메뉴" icon="0">
+                <cl:listener std:sid="listener-a1702b0e" name="click" handler="onBtnMAllMenuClick"/>
+                <cl:flowlayoutdata std:sid="f-data-a51397c3" width="84px" height="25px" autosize="width"/>
+              </cl:button>
+              <cl:button std:sid="button-f2c8facc" id="btnMFavMenu" class="btn-fav" value="즐겨찾기" icon="0">
+                <cl:listener std:sid="listener-e7ff25e3" name="click" handler="onBtnMFavMenuClick"/>
+                <cl:flowlayoutdata std:sid="f-data-1924e9a4" width="84px" height="100%" autosize="width"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-9ee5095d" scrollable="false" hspacing="0" vspacing="0" linewrap="false"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-b5e4a501" scrollable="false" hspace="1fr" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="84" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="84" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="84" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-6c1ebe4a" spacing="20"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-1fd6fb31" spacing="0"/>
+      </cl:group>
+      <cl:group std:sid="group-d9d7b038" id="grpMMenuBd" class="menu-body" clipcontent="true">
+        <cl:formdata std:sid="f-data-78f7bc72" row="1" col="0"/>
+        <cl:sidenavigation std:sid="s-navigation-ba55c19d" id="snavMMenu" indent="0">
+          <cl:listener std:sid="listener-a789a7d8" name="item-click" handler="onSnavMnItemClick"/>
+          <cl:verticaldata std:sid="v-data-1eecd48e" width="200px" height="150px" autosize="height"/>
+          <cl:treeitemset datasetid="dsAllMenu" label="MENU_NM" value="MENU_ID" parent="UP_MENU_ID"/>
+        </cl:sidenavigation>
+        <cl:verticallayout std:sid="v-layout-832978e6" scrollable="true" spacing="0"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-7ffff1fd" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="249" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-b5534182" id="grpDrpSearch" class="dropdown-menu" visible="false" clipcontent="true">
+      <cl:listener std:sid="listener-2ba7e432" name="click" handler="onGrpDrpSearchClick"/>
+      <cl:xylayoutdata std:sid="xyl-data-c81f8fd7" top="160px" right="-360px" width="320px" height="242px" horizontalAnchor="RIGHT" verticalAnchor="TOP"/>
+      <cl:group std:sid="group-a7687a8e" id="grpGlbSearchWrap" class="dropdown-header" visible="false">
+        <cl:verticaldata std:sid="v-data-11bebd21" width="320px" height="50px" autosize="height"/>
+        <cl:searchinput std:sid="s-input-bf15e58e" id="sipMGlbSearch">
+          <cl:verticaldata std:sid="v-data-895fbb0b" width="100px" height="32px"/>
+        </cl:searchinput>
+        <cl:verticallayout std:sid="v-layout-7be485f6" scrollable="false" spacing="0"/>
+      </cl:group>
+      <cl:group std:sid="group-a4d0c1d8" id="grp3" class="dropdown-header">
+        <cl:verticaldata std:sid="v-data-72729bdc" width="100%" height="31px" autosize="height"/>
+        <cl:output std:sid="output-d1ce9c90" id="opt4" class="h6" value="최근 검색">
+          <cl:formdata std:sid="f-data-1c0b6ca0" row="0" col="0"/>
+        </cl:output>
+        <cl:button std:sid="button-2ace0241" id="btnDrpSearchClose" class="btn-close" fieldLabel="메뉴닫기" tooltip="메뉴닫기" value="">
+          <cl:listener std:sid="listener-286f734f" name="click" handler="onBtnDrpSearchCloseClick"/>
+          <cl:formdata std:sid="f-data-a6b2bb09" row="0" col="1"/>
+        </cl:button>
+        <cl:formlayout std:sid="f-layout-1c5d36b4" scrollable="true" hspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="15" unit="PIXEL" autoSizing="false" syncminlength="true"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-c2d51418" id="grpRcntSearch" class="dropdown-body" clipcontent="true">
+        <cl:verticaldata std:sid="v-data-6a9e4cd2" width="100%" height="37px" autosize="height"/>
+        <cl:button std:sid="button-19314a9d" id="btn1" class="bx bx-search btn-secondary-02 rounded-pill" removeOnBuild="true" value="how to setup">
+          <cl:flowlayoutdata std:sid="f-data-0c850cc7" width="108px" height="24px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-ab589262" id="btn2" class="bx bx-search btn-secondary-02 rounded-pill" removeOnBuild="true" value="buttons">
+          <cl:flowlayoutdata std:sid="f-data-8f0a0d66" width="77px" height="24px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-839997f4" scrollable="true"/>
+      </cl:group>
+      <cl:group std:sid="group-118eee77" id="grp4" class="dropdown-header">
+        <cl:verticaldata std:sid="v-data-eb415099" width="100%" height="31px" autosize="height"/>
+        <cl:output std:sid="output-21d977e1" id="opt5" class="h6" value="메뉴 검색">
+          <cl:verticaldata std:sid="v-data-80d995fe" width="100px" height="15px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-4b2ae258"/>
+      </cl:group>
+      <cl:group std:sid="group-49fd0c1f" id="grpMnSearch" class="dropdown-body" clipcontent="true">
+        <cl:verticaldata std:sid="v-data-dd50ae0e" width="100%" height="37px" autosize="height"/>
+        <cl:button std:sid="button-bec11c63" id="btn3" class="bx bx-search btn-secondary-02 rounded-pill" removeOnBuild="true" value="사용자관리">
+          <cl:flowlayoutdata std:sid="f-data-1d5aacec" width="88px" height="24px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-26b476ff" id="btn4" class="bx bx-search btn-secondary-02 rounded-pill" removeOnBuild="true" value="주간보고">
+          <cl:flowlayoutdata std:sid="f-data-4950ae2d" width="76px" height="24px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-f7b56953" scrollable="true"/>
+      </cl:group>
+      <cl:group std:sid="group-02fd09a5" id="grp5" class="dropdown-footer">
+        <cl:verticaldata std:sid="v-data-20fb04e7" width="320px" height="44px" autosize="height"/>
+        <cl:button std:sid="button-dd562eb4" id="btn5" class="btn-inline" value="모든 검색결과 보기">
+          <cl:verticaldata std:sid="v-data-f8c0681b" width="133px" height="24px" autosize="width"/>
+        </cl:button>
+        <cl:verticallayout std:sid="v-layout-0138bf19" distribution="center"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-db667fe7" scrollable="true" spacing="0" maxcontentheight="800"/>
+    </cl:group>
+    <cl:xylayout std:sid="xylayout-1b115532"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>SBChart - 커스텀 화살표 및 마커 구현</title>
+
+<link rel="stylesheet" href="sbchart.css"/>
+<script type="text/javascript" src="sbchart.js"></script>
+<script type="text/javascript" src="license.js"></script>
+
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif;
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: #ffffff;
+  }
+  #chartOuterContainer {
+    position: relative;
+    width: 100%;
+    height: 340px;
+  }
+  #chartWrap {
+    width: 100%;
+    height: 100%;
+  }
+  #volumeWrap {
+    width: 100%;
+    height: 120px;
+    margin-top: 10px;
+  }
+  .chart-marker {
+    position: absolute;
+    transform: translateX(-50%);
+    text-align: center;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 999;
+  }
+  .marker-max {
+    color: #ff3b30;
+    font-size: 11px;
+    font-weight: bold;
+  }
+  .marker-min {
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: bold;
+  }
+  .marker-signal {
+    font-size: 13px;
+    color: #111111;
+    font-weight: bold;
+  }
+  .marker-label {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 1px 5px;
+    border-radius: 3px;
+    display: inline-block;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+</style>
+</head>
+<body>
+
+<div id="chartOuterContainer">
+  <div id="chartWrap"></div>
+  <div id="markerOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></div>
+</div>
+<div id="volumeWrap"></div>
+
+<script type="text/javascript">
+function drawSBChart() {
+  let rawDataset = [
+    {date: "20251103", open: 60000, close: 64000, low: 58000, high: 66000, volume: 11000000, hasSignal: false},
+    {date: "20251105", open: 64000, close: 69000, low: 63000, high: 72000, volume: 15000000, hasSignal: false},
+    {date: "20251107", open: 69000, close: 71000, low: 67000, high: 73000, volume: 18000000, hasSignal: true},
+    {date: "20251110", open: 71000, close: 75000, low: 70000, high: 78000, volume: 22000000, hasSignal: false},
+    {date: "20251112", open: 75000, close: 83000, low: 74000, high: 86000, volume: 28000000, hasSignal: false},
+    {date: "20251114", open: 83000, close: 85000, low: 81000, high: 88000, volume: 26000000, hasSignal: false},
+    {date: "20251117", open: 85000, close: 81000, low: 78000, high: 87000, volume: 24000000, hasSignal: false},
+    {date: "20251119", open: 81000, close: 72000, low: 68000, high: 82000, volume: 21000000, hasSignal: true},
+    {date: "20251121", open: 98000, close: 102000, low: 95000, high: 105000, volume: 41000000, hasSignal: false},
+    {date: "20251124", open: 95000, close: 88000, low: 86000, high: 96000, volume: 32000000, hasSignal: false},
+    {date: "20251126", open: 88000, close: 82000, low: 80000, high: 90000, volume: 27000000, hasSignal: false},
+    {date: "20251128", open: 82000, close: 74000, low: 71000, high: 83000, volume: 23000000, hasSignal: false},
+    {date: "20251201", open: 74000, close: 61000, low: 58000, high: 75000, volume: 19000000, hasSignal: false},
+    {date: "20251202", open: 58000, close: 52000, low: 50000, high: 60000, volume: 16000000, hasSignal: false}
+  ];
+
+  let candlestickData = [];
+  let volumeData = [];
+  let maxIdx = 0, minIdx = 0;
+  let maxVal = -Infinity, minVal = Infinity;
+
+  rawDataset.forEach((row, i) => {
+    let rawDate = String(row.date || "");
+    let formattedDate = rawDate.length === 8 
+      ? rawDate.substring(0, 4) + "-" + rawDate.substring(4, 6) + "-" + rawDate.substring(6, 8)
+      : rawDate;
+
+    let open = Number(row.open) || 0;
+    let close = Number(row.close) || 0;
+    let low = Number(row.low) || 0;
+    let high = Number(row.high) || 0;
+    let volume = Number(row.volume) || 0;
+
+    if (high > maxVal) { maxVal = high; maxIdx = i; }
+    if (low < minVal) { minVal = low; minIdx = i; }
+
+    candlestickData.push({
+      index: String(i),
+      date: formattedDate,
+      openprc: open,
+      closeprc: close,
+      lowprc: low,
+      highprc: high,
+      hasSignal: row.hasSignal
+    });
+
+    volumeData.push({
+      index: String(i),
+      date: formattedDate,
+      trdvolume: volume
+    });
+  });
+
+  const PADDING_CONFIG = { top: 30, bottom: 25, left: 65, right: 30 };
+  const yMin = 40000;
+  const yMax = 135000;
+  const sharedAxisX = { type: "category", show: true };
+
+  // 1. 상단 캔들 차트
+  sb.chart.render("#chartWrap", {
+    padding: PADDING_CONFIG,
+    data: {
+      type: "candlestick",
+      json: candlestickData,
+      keys: {
+        x: "index",
+        value: [{ open: "openprc", close: "closeprc", low: "lowprc", high: "highprc" }]
+      }
+    },
+    tooltip: { show: false },
+    axis: {
+      x: sharedAxisX,
+      y: {
+        min: yMin,
+        max: yMax,
+        tick: { format: function(d) { return d.toLocaleString(); } }
+      }
+    },
+    extend: {
+      candlestick: { color: { up: '#ff3b30', down: '#2563eb' } }
+    }
+  });
+
+  // 2. 하단 거래량 차트
+  sb.chart.render("#volumeWrap", {
+    padding: PADDING_CONFIG,
+    data: {
+      type: "bar",
+      json: volumeData,
+      keys: { x: "index", value: ["trdvolume"] }
+    },
+    color: { pattern: ["#22c55e"] },
+    axis: {
+      x: sharedAxisX,
+      y: {
+        min: 0,
+        max: 50000000,
+        tick: { format: function(d) { return d.toLocaleString(); } }
+      }
+    },
+    legend: { show: false },
+    tooltip: { show: false }
+  });
+
+  // 3. 이미지와 동일한 마커 및 화살표 오버레이 렌더링
+  function renderMarkers() {
+    const overlay = document.getElementById("markerOverlay");
+    const svgElement = document.querySelector("#chartWrap svg");
+    const container = document.getElementById("chartOuterContainer");
+    if (!overlay || !svgElement || !container) return;
+
+    overlay.innerHTML = "";
+    const containerRect = container.getBoundingClientRect();
+    const svgRect = svgElement.getBoundingClientRect();
+
+    let viewBoxWidth = svgElement.viewBox.baseVal.width || svgRect.width;
+    let viewBoxHeight = svgElement.viewBox.baseVal.height || svgRect.height;
+    
+    let scaleX = svgRect.width / viewBoxWidth;
+    let scaleY = svgRect.height / viewBoxHeight;
+
+    let plotLeft = (svgRect.left - containerRect.left) + (PADDING_CONFIG.left * scaleX);
+    let plotTop = (svgRect.top - containerRect.top) + (PADDING_CONFIG.top * scaleY);
+    let plotWidth = svgRect.width - ((PADDING_CONFIG.left + PADDING_CONFIG.right) * scaleX);
+    let plotHeight = svgRect.height - ((PADDING_CONFIG.top + PADDING_CONFIG.bottom) * scaleY);
+    
+    let stepX = plotWidth / candlestickData.length;
+
+    function getPixelY(price) {
+      let ratio = (price - yMin) / (yMax - yMin);
+      return plotTop + (1 - ratio) * plotHeight;
+    }
+
+    candlestickData.forEach((d, i) => {
+      let cX = plotLeft + (stepX * i) + (stepX / 2);
+      let highY = getPixelY(d.highprc);
+      let lowY = getPixelY(d.lowprc);
+
+      // 최고가 빨간색 화살표 및 라벨
+      if (i === maxIdx) {
+        let el = document.createElement("div");
+        el.className = "chart-marker marker-max";
+        el.style.left = cX + "px";
+        el.style.top = (highY - 32) + "px";
+        el.innerHTML = `▼<br/><span class="marker-label">최고 :${maxVal.toLocaleString()} (${d.date})</span>`;
+        overlay.appendChild(el);
+      }
+
+      // 최저가 파란색 화살표 및 라벨
+      if (i === minIdx) {
+        let el = document.createElement("div");
+        el.className = "chart-marker marker-min";
+        el.style.left = cX + "px";
+        el.style.top = (lowY + 4) + "px";
+        el.innerHTML = `▲<br/><span class="marker-label">최저 :${minVal.toLocaleString()} (${d.date})</span>`;
+        overlay.appendChild(el);
+      }
+
+      // 특정 조건의 검은색 시그널 화살표
+      if (d.hasSignal && i !== minIdx) {
+        let el = document.createElement("div");
+        el.className = "chart-marker marker-signal";
+        el.style.left = cX + "px";
+        el.style.top = (lowY + 4) + "px";
+        el.innerHTML = "▲";
+        overlay.appendChild(el);
+      }
+    });
+  }
+
+  setTimeout(renderMarkers, 200);
+  window.addEventListener("resize", renderMarkers);
+}
+
+window.addEventListener("load", function() {
+  drawSBChart();
+});
+</script>
+
+</body>
+</html>

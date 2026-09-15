@@ -1,0 +1,329 @@
+/**
+ * file-upload.part.less — 파일 업로드 컨트롤 스타일
+ *
+ * @desc  파일 업로드(.cl-fileupload). 헤더/상세(파일목록)/푸터 + 드롭존(.dropzone)
+ * @note  프로젝트마다 디자인 기준이 달라 스타일을 이 파일에서 관리 (custom-settings 미사용)
+ *        체크박스는 checkbox.part.less, 푸터 버튼은 button.part.less 의 믹스인 참조
+ *        파일/다운로드 아이콘은 #icon-image 대신 직접 url() (확장자별 통일: ico_file)
+ */
+
+@import (reference) "../common/_include.part.less";
+@import (reference) "checkbox.part.less";
+@import (reference) "button.part.less";
+
+
+/* 파일 지역 변수 (@fu-- 접두어) — 프로젝트별 디자인 튜닝 지점 */
+
+/* 루트 */
+@fu--color-background: @color-background-base;
+@fu--color-border:     @color-component-border;
+@fu--font-size:        @font-size-label-small;
+
+/* 헤더 */
+@fu--head-height:           @size-10;
+@fu--head-color-background:  @gray-5;
+@fu--head-color-border:      @gray-10;
+@fu--head-color-text:        @color-component-text;
+@fu--head-font-size:         @font-size-label-small;
+@fu--head-font-weight:       @font-weight-medium;
+
+/* 컬럼 크기 */
+@fu--col-check-width: 30px;
+@fu--col-size-width:  80px;
+@fu--col-icon-width:  @size-10;
+
+/* 파일 행 */
+@fu--file-height:                 @size-10;
+@fu--file-color-background-hover: @color-action-primary-hover;
+@fu--file-color-border:           @gray-10;
+@fu--file-padding-x:              @padding-2;
+@fu--file-icon-size:              @size-icon-small;
+
+/* 빈 목록 */
+@fu--empty-color-text: @color-component-text-disabled;
+
+/* 푸터 */
+@fu--foot-height:           @size-component-height;
+@fu--foot-color-background:  @gray-5;
+@fu--foot-color-border:      @gray-10;
+@fu--foot-color-text:        @color-component-text;
+@fu--foot-font-size:         @font-size-label-xsmall;
+@fu--foot-font-weight:       @font-weight-semibold;
+@fu--foot-padding-x:         @padding-3;
+@fu--foot-gap:               @gap-2;
+
+/* 강조 텍스트 / 드롭존 */
+@fu--point-color-text:       @danger-60;
+@fu--dropzone-color-border:  @color-component-border;
+@fu--dropzone-border-radius: @size-component-radius;
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+/* 아이콘 영역 공통 (no-repeat + 중앙 정렬 + 크기) — background-image 는 호출부에서 지정 */
+#fu--icon(@size) {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: @size;
+}
+
+/* ==========================================================================
+   Base — 루트
+   ========================================================================== */
+
+.cl-fileupload {
+	background-color: @fu--color-background;
+	border: 1px solid @fu--color-border;
+	color: @color-component-text;
+	font-size: @fu--font-size;
+
+	/* 파일명 말줄임 */
+	.cl-text {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		word-break: break-all;
+	}
+
+	/* 체크박스 (checkbox 믹스인 참조) */
+	.cl-fileupload-checkbox {
+		#checkbox--button();
+		#checkbox--icon();
+		display: flex;
+
+		&:focus {
+			#checkbox--hover();
+		}
+
+		&.cl-checked,
+		&:focus.cl-checked {
+			#checkbox--selected();
+		}
+	}
+
+	/* 체크 컬럼 크기 */
+	.cl-fileupload-header .cl-fileupload-checkheader,
+	.cl-fileupload-detail .cl-fileupload-file .cl-fileupload-checkcolumn,
+	.cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-checkcolumn {
+		width: @fu--col-check-width;
+		height: 100%;
+	}
+
+	/* 크기 컬럼 크기 */
+	.cl-fileupload-header .cl-fileupload-sizeheader,
+	.cl-fileupload-detail .cl-fileupload-file .cl-fileupload-sizecolumn,
+	.cl-fileupload-detail .cl-fileupload-uploadedfile .cl-fileupload-sizecolumn {
+		height: 100%;
+		min-width: @fu--col-size-width;
+	}
+}
+
+/* ==========================================================================
+   Base — 헤더
+   ========================================================================== */
+
+.cl-fileupload .cl-fileupload-header {
+	height: @fu--head-height;
+	background-color: @fu--head-color-background;
+	background-image: none;
+	border-bottom: 1px solid @fu--head-color-border;
+	color: @fu--head-color-text;
+	font-size: @fu--head-font-size;
+	font-weight: @fu--head-font-weight;
+	overflow: hidden;
+	text-align: center;
+
+	.cl-fileupload-checkheader,
+	.cl-fileupload-nameheader,
+	.cl-fileupload-sizeheader {
+		border: 0;
+		color: inherit;
+		font: inherit;
+	}
+
+	.cl-fileupload-nameheader,
+	.cl-fileupload-sizeheader {
+		border-left: 1px solid @fu--head-color-border;
+	}
+
+	.cl-fileupload-resize {
+		position: relative;
+		width: 0;
+	}
+
+	.cl-fileupload-sizeheader {
+		position: relative;
+		width: @fu--col-size-width;
+
+		.cl-fileupload-col-resize {
+			position: absolute;
+			top: 0;
+			left: -1px;
+			width: 4px;
+			height: @fu--head-height;
+			cursor: col-resize;
+		}
+	}
+}
+
+/* ==========================================================================
+   Base — 상세 (파일 목록)
+   ========================================================================== */
+
+.cl-fileupload .cl-fileupload-detail {
+	/* 빈 목록 메시지 */
+	.cl-emptymsg {
+		color: @fu--empty-color-text;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	/* 파일 행 공통 */
+	.cl-fileupload-file,
+	.cl-fileupload-uploadedfile {
+		align-items: center;
+		height: @fu--file-height;
+		border-bottom: 1px solid @fu--file-color-border;
+
+		.cl-fileupload-checkcolumn,
+		.cl-fileupload-sizecolumn {
+			border: 0;
+		}
+
+		/* 파일 아이콘 (직접 url, 확장자 통일: ico_file) */
+		.cl-fileupload-fileicon {
+			background-image: url("@{img-path}/icons/ico_file.svg");
+			#fu--icon(@fu--file-icon-size);
+			flex-shrink: 0;
+			width: @fu--col-icon-width;
+			height: 100%;
+		}
+
+		.cl-fileupload-fileicon,
+		.cl-fileupload-sizecolumn {
+			border-left: 1px solid @fu--file-color-border;
+			padding: 0 @fu--file-padding-x;
+		}
+
+		.cl-fileupload-filename { text-align: left; }
+		.cl-fileupload-sizecolumn { text-align: right; }
+	}
+
+	/* 업로드 완료 파일 — 다운로드 버튼 */
+	.cl-fileupload-uploadedfile {
+		.cl-fileupload-download {
+			background-image: url("@{img-path}/icons/ico_download.svg");
+			#fu--icon(contain);
+			flex-shrink: 0;
+			width: @fu--col-icon-width;
+			height: 100%;
+			cursor: pointer;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+}
+
+/* hover */
+.cl-fileupload:not(.cl-disabled) .cl-fileupload-detail {
+	.cl-fileupload-file:hover,
+	.cl-fileupload-uploadedfile:hover {
+		background-color: @fu--file-color-background-hover;
+	}
+}
+
+/* disabled */
+.cl-fileupload.cl-disabled {
+	cursor: default;
+	opacity: 0.7;
+
+	.cl-fileupload-footer .cl-fileupload-buttons .cl-fileupload-button {
+		cursor: default;
+	}
+}
+
+/* ==========================================================================
+   Base — 푸터
+   ========================================================================== */
+
+.cl-fileupload .cl-fileupload-footer {
+	height: @fu--foot-height;
+	background-color: @fu--foot-color-background;
+	border-top: 1px solid @fu--foot-color-border;
+	color: @fu--foot-color-text;
+	font-size: @fu--foot-font-size;
+	font-weight: @fu--foot-font-weight;
+	padding: 0 @fu--foot-padding-x;
+
+	/* 파일 수/크기 텍스트 */
+	.cl-text {
+		color: inherit;
+		font: inherit;
+		padding: 0;
+
+		.point {
+			color: @fu--point-color-text;
+			font-weight: @font-weight-semibold;
+		}
+	}
+
+	/* 버튼 영역 */
+	.cl-fileupload-buttons {
+		display: inline-flex;
+		align-items: center;
+		gap: @fu--foot-gap;
+		overflow: visible;
+		padding: 0;
+
+		/* 버튼 공통 (button 믹스인 참조) */
+		.cl-fileupload-button {
+			background-image: none;
+			font-weight: @font-weight-medium;
+			margin: 0;
+			transition: @transition-base;
+			#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
+			#btn--size(@fu--foot-height, @padding-2, @gap-2, @fu--foot-font-size, @size-icon-small);
+
+			&:not(.cl-disabled):hover,
+			&:not(.cl-disabled).cl-hover {
+				#btn--hover(@color-button-tertiary-fill-hover, @color-button-tertiary-border, @color-component-text);
+			}
+
+			&:not(.cl-disabled):active,
+			&:not(.cl-disabled).cl-activated {
+				#btn--pressed(@color-button-tertiary-fill-pressed, @color-button-tertiary-border, @color-component-text);
+			}
+
+			/* 보내기 버튼 — primary(btn-submit) 강조 */
+			&.cl-fileupload-send {
+				#btn--default(@color-button-primary-fill-default, @color-button-primary-border, @color-text-inverse);
+
+				&:not(.cl-disabled):hover,
+				&:not(.cl-disabled).cl-hover {
+					#btn--hover(@color-button-primary-fill-hover, @color-button-primary-border, @color-text-inverse);
+				}
+
+				&:not(.cl-disabled):active,
+				&:not(.cl-disabled).cl-activated {
+					#btn--pressed(@color-button-primary-fill-pressed, @color-button-primary-border, @color-text-inverse);
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Variants — Dropzone
+   ========================================================================== */
+
+.cl-container.dropzone {
+	border: 2px dashed @fu--dropzone-color-border;
+	border-radius: @fu--dropzone-border-radius;
+
+	.cl-output.txt {
+		text-align: center;
+	}
+}

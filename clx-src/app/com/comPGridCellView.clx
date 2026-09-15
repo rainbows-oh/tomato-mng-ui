@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-3d4dfa59" version="1.0.4221">
+  <head std:sid="head-583a2e75">
+    <screen std:sid="screen-168ab250" id="default" name="default" width="1280px" height="760px" useCustomWidth="true" useCustomHeight="true" customHeight="500" customWidth="400"/>
+    <screen std:sid="screen-25ed7569" id="tablet" name="tablet" width="800px" height="760px"/>
+    <screen std:sid="screen-577c6e91" id="mobile" name="mobile" width="360px" height="760px"/>
+    <cl:model std:sid="model-21f734ce">
+      <cl:datamap std:sid="d-map-5362493f" id="dmParam"/>
+    </cl:model>
+    <cl:appspec title="반응형 그리드 View 팝업"/>
+  </head>
+  <body std:sid="body-4e5fc6d7">
+    <cl:listener std:sid="listener-ee02cc0b" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-b86a2ea6" name="init" handler="onBodyInit"/>
+    <cl:listener std:sid="listener-c601e607" name="before-unload" handler="onBodyBeforeUnload"/>
+    <cl:group std:sid="group-76b6c119" id="grpData">
+      <cl:formdata std:sid="f-data-a6fd17a3" row="0" col="0" rowspan="1" colspan="1"/>
+      <cl:verticallayout std:sid="v-layout-dfd67e00"/>
+    </cl:group>
+    <cl:group std:sid="group-5701a3b3">
+      <cl:formdata std:sid="f-data-563c0315" row="1" col="0" rowspan="1" colspan="1"/>
+      <cl:button std:sid="button-3b2e7e66" id="btnClose" value="닫기">
+        <cl:listener std:sid="listener-85ce64b3" name="click" handler="onBtn1Click"/>
+        <cl:listener std:sid="listener-29858003" name="click" handler="onBtn1Click3"/>
+        <cl:flowlayoutdata std:sid="f-data-1f6acaa4" width="65px" height="30px"/>
+      </cl:button>
+      <cl:button std:sid="button-cf3e5128" id="btnDelete" class="btn-inline" visible="false" value="삭제">
+        <cl:listener std:sid="listener-1eaff77f" name="click" handler="onBtnDeleteClick"/>
+        <cl:flowlayoutdata std:sid="f-data-89b1d7a0" width="65px" height="30px" autosize="none"/>
+      </cl:button>
+      <cl:button std:sid="button-f9a009a3" id="btnSave" class="btn-submit" visible="false" value="저장">
+        <cl:listener std:sid="listener-066aaf73" name="click" handler="onBtnSaveClick"/>
+        <cl:flowlayoutdata std:sid="f-data-40879b1f" width="65px" height="30px" autosize="none"/>
+      </cl:button>
+      <cl:flowlayout std:sid="f-layout-c36f4686" halign="right"/>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-acdfd8b9" scrollable="false" hspace="10px" vspace="10px" top-margin="10px" right-margin="10px" bottom-margin="10px" left-margin="10px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="30" unit="PIXEL"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
