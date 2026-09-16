@@ -6,7 +6,7 @@
     <screen std:sid="screen-767717a7" id="tablet" name="tablet" width="800px" height="768px"/>
     <screen std:sid="screen-b83675d4" id="mobile" name="mobile" width="550px" height="768px"/>
     <cl:model std:sid="model-b16b7ac3"/>
-    <cl:appspec title="파이 차트">
+    <cl:appspec title="바 차트" dev-icon="iVBORw0KGgoAAAANSUhEUgAAACAAAAAbCAYAAAAdx42aAAACu0lEQVR4nO2Wy09TQRTG+Y+MC4kIamJgZVxo3AghBhOi4F43RKJBjAsfLQbRokCVhIKBKkXaClYRpK9bSm0rbWnLqy/a3t62f8DnnWsYbbxt56LGaFx8u5n5fnPmzDmnplgs4k+q5j+A0g1CPo9gchPLUS/mgxx89+8gNNCPHZMRQjL5+wAyAg9LyIVHdgNUy5NU8ycasHDooKTFY0fg6+5CZu3zrwUIJDbxxPm6xFgOgIIcr8fGhA6FQuHnAdzbQfRZp0pMR1wmzAWdsG/4ERaNAqp74C6c/wGE61NXhagIsJ7cLjF/ys3CF4uUPTTpsINra5XMR+rq0NB4GsM6/f4AcnkBQ5yRmo+655DOZauGNM/zMF3rRm3jGRxoOovak80IrEeUA1ijPmr+2GFAis8wJxafy6H58lUJgKjrtloZAAmx1mWmAM5N9qymF+DcFODwqRYkUil2gHh2l5r3216BF59DKQC5xLnOKxTC+PYDO4A/HqEAE553is331KvWUICHI2PsAOTr7QEY/B/3DTA0acDR1k7Ut3RApdWxA3zaWacAeq986Fiks3JoGx6TpLNx7ADR3di3v++cZapocrprtlCAOa98IssC5At5seZPU4hQckuxeTydwcVnExQgmpBvVGXrgClgpwDjHosIpSwK4+8XqHmPwVw2imUBYpkUHlj1FIJ0QtanSK0sYbXnEgZVvWgfGoU1GC67tmIvWIp4SpqQOeAAL+TKridRcvvt8N7sgPdGuyT3uKYieEUAsvGlb7EEYtAxg4XwKiKpHWRyPLIi0FY6IXVG7crX6jmjvSWZBweuQ0jLV0AmACIyAX2fDyxSL72Ae0oDYbf6hMQ0kJBIkDZM5oBq5hoxQrYNH3PSKpoJBfF7emNhGNdseL7yRjIjnZI0rmmxYrq2AtKTKDnz75uK/zmAL3P/PYiAOLdnAAAAAElFTkSuQmCC">
       <cl:property name="dataSet" type="control"/>
       <cl:property name="chartId" type="string"/>
     </cl:appspec>

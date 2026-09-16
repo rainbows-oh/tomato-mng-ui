@@ -45,6 +45,16 @@
       "DESC": "이 페이지는 echarts 라이브러리를 사용한 다양한 차트를 구현한 예제입니다.",
       "TAG": "외부라이브러리,차트,echarts"
     },
+    {
+      "MENU_ID": "thrChart_custom",
+      "MENU_NM": "차트 (바, 도넛)",
+      "CALL_PAGE": "app/exam/thr/thrChart_custom.clx",
+      "UP_MENU_ID": "LEVEL01-01",
+      "CLASS": "menu-11",
+      "MENU_LVL": 2,
+      "DESC": "이 페이지는 echarts 라이브러리를 사용한 다양한 차트를 구현한 예제입니다.",
+      "TAG": "외부라이브러리,차트,echarts"
+    },
     
     {
       "MENU_ID": "cmnCCode",
