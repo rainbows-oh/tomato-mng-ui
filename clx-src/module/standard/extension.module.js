@@ -3114,43 +3114,43 @@ GridKit.prototype.init = function(app, paGridId) {
 				vcStatusColumnCtrl.style.bindClass().toExpression("switch (getStateString()) { case 'I' : 'state insert'  case 'U' : 'state update'  case 'D' : 'state delete'  default : ''}");
 			}
 		}
-		//인덱스컬럼
-		var voIndexColumn = getIndexDetailColumn(vcGrid);
-		if (voIndexColumn != null) {
-			voIndexColumn.style.css({
-				"text-align": "center"
-			});
-			var voHIndexColumn = vcGrid.header.getColumn(voIndexColumn.cellIndex);
-			
-			var vsHIndexText = "No";
-			if (typeof AppProperties !== 'undefined' && AppProperties.GRID_INDEX_COL_HEADER_TEXT) {
-				vsHIndexText = AppProperties.GRID_INDEX_COL_HEADER_TEXT;
-			}
-	
-			if (voHIndexColumn && voHIndexColumn.text != vsHIndexText) voHIndexColumn.text = vsHIndexText;
-		}
+		//인덱스컬럼(해당기능 주석처리)
+//		var voIndexColumn = getIndexDetailColumn(vcGrid);
+//		if (voIndexColumn != null) {
+//			voIndexColumn.style.css({
+//				"text-align": "center"
+//			});
+//			var voHIndexColumn = vcGrid.header.getColumn(voIndexColumn.cellIndex);
+//			
+//			var vsHIndexText = "No";
+//			if (typeof AppProperties !== 'undefined' && AppProperties.GRID_INDEX_COL_HEADER_TEXT) {
+//				vsHIndexText = AppProperties.GRID_INDEX_COL_HEADER_TEXT;
+//			}
+//	
+//			if (voHIndexColumn && voHIndexColumn.text != vsHIndexText) voHIndexColumn.text = vsHIndexText;
+//		}
 		
-		//소트/필터 컬럼 자동지정
-		var voDColumn, vaHColumns;
-		for (var j = 0, jlen = vcGrid.detail.cellCount; j < jlen; j++) {
-			voDColumn = vcGrid.detail.getColumn(j);
-			if (voDColumn.columnType == "checkbox" || voDColumn.columnType == "rowindex" || voDColumn.columnType == "radio") continue;
-			if (voDColumn.columnName == null || voDColumn.columnName == "") continue;
-			vaHColumns = vcGrid.header.getColumnByColIndex(voDColumn.colIndex, voDColumn.colSpan);
-			if (vaHColumns) {
-				vaHColumns.forEach(function( /* cpr.controls.gridpart.GridHeaderColumn */ poColumn) {
-					if (vcGrid.userAttr("applyGridSortable") !== "Y") {
-						poColumn.sortable = true;
-					}
-					if (vcGrid.userAttr("applyGridFilterable") !== "Y") {
-						poColumn.filterable = true;
-					}
-					if (poColumn.targetColumnName == null || poColumn.targetColumnName == "") {
-						poColumn.targetColumnName = voDColumn.columnName;
-					}
-				});
-			}
-		}
+		//소트/필터 컬럼 자동지정(해당기능 주석처리)
+//		var voDColumn, vaHColumns;
+//		for (var j = 0, jlen = vcGrid.detail.cellCount; j < jlen; j++) {
+//			voDColumn = vcGrid.detail.getColumn(j);
+//			if (voDColumn.columnType == "checkbox" || voDColumn.columnType == "rowindex" || voDColumn.columnType == "radio") continue;
+//			if (voDColumn.columnName == null || voDColumn.columnName == "") continue;
+//			vaHColumns = vcGrid.header.getColumnByColIndex(voDColumn.colIndex, voDColumn.colSpan);
+//			if (vaHColumns) {
+//				vaHColumns.forEach(function( /* cpr.controls.gridpart.GridHeaderColumn */ poColumn) {
+//					if (vcGrid.userAttr("applyGridSortable") !== "Y") {
+//						poColumn.sortable = true;
+//					}
+//					if (vcGrid.userAttr("applyGridFilterable") !== "Y") {
+//						poColumn.filterable = true;
+//					}
+//					if (poColumn.targetColumnName == null || poColumn.targetColumnName == "") {
+//						poColumn.targetColumnName = voDColumn.columnName;
+//					}
+//				});
+//			}
+//		}
 		
 		/* TODO: (커스텀 옵션) 최초 로드된 시점의 헤더 컬럼 Visible 정보 저장*/
 		//var vsHidenColumnIdxs = "";
