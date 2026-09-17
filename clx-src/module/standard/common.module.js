@@ -34,6 +34,9 @@ function AppKit() {
 	this.Tree = new extension.TreeKit(this);
 	this.File = new extension.FileKit(this);
 	this.Validator = new Validator(this);
+	
+	//AppStack 모듈 추가
+	this.AppStack = getAppStack(this);
 };
 
 /**
