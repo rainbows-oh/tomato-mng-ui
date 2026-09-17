@@ -1,0 +1,77 @@
+@import "../../custom-settings.part.less";
+
+/************************************************
+ * [UDC] 앱헤더
+ ************************************************/
+.cl-container.app-header {
+	.cl-output {
+		font-weight: 600;
+		font-size: 15px;
+		color: #0d253d;
+	}
+}
+
+
+/************************************************
+ * [UDC] 컨텐츠 그리드/카드 토글
+ ************************************************/
+.cl-container.btn-content-toggle {
+	.cl-button.btn-show-grid,
+	.cl-button.btn-show-card {
+		&:not(.cl-disabled):hover,
+		&:not(.cl-disabled).cl-hover,
+		&:not(.cl-disabled):active,
+		&:not(.cl-disabled).cl-activated,
+		&.cl-focus {
+			background-color: #eef1f5;
+			background-size: 18px;
+		}
+	}
+	
+	.cl-button.btn-show-grid {
+		.cl-icon {
+			background-image: url("@{img-path}/icons/pages/ico_grid.svg") !important;
+		}
+		
+		&:not(.cl-disabled):hover,
+		&:not(.cl-disabled).cl-hover,
+		&:not(.cl-disabled):active,
+		&:not(.cl-disabled).cl-activated,
+		&.cl-focus {
+			.cl-icon {
+				background-image: url("@{img-path}/icons/pages/ico_grid_active.svg") !important;
+			}
+		}
+	}
+	
+	.cl-button.btn-show-card {
+		.cl-icon {
+			background-image: url("@{img-path}/icons/pages/ico_card.svg") !important;
+		}
+		
+		&:not(.cl-disabled):hover,
+		&:not(.cl-disabled).cl-hover,
+		&:not(.cl-disabled):active,
+		&:not(.cl-disabled).cl-activated,
+		&.cl-focus {
+			.cl-icon {
+				background-image: url("@{img-path}/icons/pages/ico_card_active.svg") !important;
+			}
+		}
+	}
+}
+
+/************************************************
+ * [UDC] 조회영역 토글
+ ************************************************/
+.cl-container.udc-search-toggle {
+	.cl-button.btn-expand {
+		background: url("../../img/icons/ico_angle_up.svg") no-repeat center;
+		transform: rotate(180deg);
+		
+		&.collapse {
+			background: url("../../img/icons/ico_angle_up.svg") no-repeat center;
+			transform: rotate(0deg);
+		}
+	}
+}

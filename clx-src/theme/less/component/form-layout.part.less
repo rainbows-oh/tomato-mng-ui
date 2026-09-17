@@ -140,13 +140,30 @@
  조회형 (Search Box)
  ========================================================================== */
 .cl-container.search-box {
-	background-color: @point-5;
-	border: 1px solid @point-10;
-	border-radius: @size-component-radius;
-	padding: @padding-6;
+	background-color: @white;
+	border: 1px solid #e3e8ee;
+	border-radius: 12px;
+//	padding: @padding-6;
 	
 	.label:not(.cl-first-column) {
 		margin-left: @gap-7;
+	}
+	
+	.cl-container.search-header {
+		padding: 16px;
+	}
+	
+	.cl-output.search-footer {
+		padding: 0px 16px 16px;
+	}
+	
+	.cl-container.search-content {
+		padding: 24px;
+		border-top: 1px solid #e3e8ee;
+		
+		.btn-group {
+			border-top: 1px solid #e3e8ee;
+		}
 	}
 	
 	/* 조회 버튼 영역 */
