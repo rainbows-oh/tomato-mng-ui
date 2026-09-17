@@ -1,0 +1,46 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-c7aab440" version="1.0.6190">
+  <head std:sid="head-f7f5f3e4">
+    <screen std:sid="screen-6fd26371" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-4734ea48" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-b7ca636a" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-703e8670"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-4e9277da" style="top:0px; left:0px; width:1024px; height:60px;" class="pagination">
+    <cl:group std:sid="group-b0c50d05">
+      <cl:formdata std:sid="f-data-c551c5d0" row="0" col="0"/>
+      <cl:output std:sid="output-6876f868" class="page-info" value="Viewing 1-10 of 18">
+        <cl:flowlayoutdata std:sid="f-data-6203ec40" width="100px" height="100%" autosize="width"/>
+      </cl:output>
+      <cl:combobox std:sid="c-box-09fa578c" class="page-size" value="10" preventinput="true">
+        <cl:flowlayoutdata std:sid="f-data-b5d27411" width="95px" height="32px" autosize="width"/>
+        <cl:item std:sid="t-item-ac7d607d" label="10/page" value="10"/>
+      </cl:combobox>
+      <cl:flowlayout std:sid="f-layout-d438d66b" scrollable="false" hspacing="12" vspacing="0" linewrap="false"/>
+    </cl:group>
+    <cl:group std:sid="group-65607b43" class="page-navi">
+      <cl:formdata std:sid="f-data-f6ec35e2" row="0" col="1"/>
+      <cl:button std:sid="button-b619df1a" class="page-navi prev" enabled="false" accesskey="J" value="Prev" displayexp="sstr(accessKey, [&quot;shortcut&quot;]) + text" icon="0">
+        <cl:formdata std:sid="f-data-d4acc5fb" row="0" col="0"/>
+      </cl:button>
+      <cl:button std:sid="button-e1cacdef" class="page-navi next" accesskey="K" value="Next" displayexp="text + sstr(accessKey, [&quot;shortcut&quot;])" icon="0" iconalign="right">
+        <cl:formdata std:sid="f-data-cc0a1ea5" row="0" col="1"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-9cb1c42b" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-5b56665c" scrollable="false" hspace="1fr" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="36" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:columns length="207" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="182" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

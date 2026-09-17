@@ -1,0 +1,32 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-d28dceaf" version="1.0.6190">
+  <head std:sid="head-cf1cd2af">
+    <screen std:sid="screen-aa292efe" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-bba2fe7d" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-cab4b96e" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-9f428c95"/>
+    <cl:appspec>
+      <cl:property name="value" type="enumeration" default="table" bindable="true" translatable="false" std:desc="Change view (Table or card)">
+        <cl:available-value>table</cl:available-value>
+        <cl:available-value>card</cl:available-value>
+      </cl:property>
+      <cl:property name="targetCard" type="control" std:desc="group of card control"/>
+      <cl:property name="targetTable" type="control" std:desc="Table(Grid) control"/>
+      <cl:event name="selection-change" type="cpr.events.CAppEvent"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-b9e20b4b" style="top:0px; left:0px; width:68px; height:32px;" class="viewmode" fieldLabel="Results view">
+    <cl:listener std:sid="listener-c6850c21" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:button std:sid="button-188529e6" class="active" value="Table view" displayexp="sstr(text, [&quot;cl-sound-only&quot;])" icon="0">
+      <cl:flowlayoutdata std:sid="f-data-11b08e23" width="32px" height="32px"/>
+    </cl:button>
+    <cl:button std:sid="button-24b4f02d" value="Card view" displayexp="sstr(text, [&quot;cl-sound-only&quot;])" icon="0">
+      <cl:flowlayoutdata std:sid="f-data-947e8700" width="32px" height="32px"/>
+    </cl:button>
+    <cl:flowlayout std:sid="f-layout-ba69191e" scrollable="false" hspacing="4" vspacing="0" linewrap="false"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
