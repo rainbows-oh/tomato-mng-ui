@@ -6,21 +6,6 @@
 	padding: 0 12px;
 }
 
-//.cl-button.primary { 
-//	background-color: #533afd;
-//	color: #ffffff;
-//}
-//
-//.cl-button.secondary {
-//	background-color: #ffffff;
-//	border: 1px solid #533afd;
-//	color: #533afd;
-//}
-//
-//.cl-button.tertiary {
-//	background-color: #ffffff;
-//	border: 1px solid #e3e8ee;
-//}
 
 .cl-output.h-tit {
 	color: #0d253d;
@@ -206,5 +191,31 @@
 				text-align: left;
 			}
 		}
+	}
+}
+
+.cl-button {
+	.btn-grid-badge-red,
+	.btn-grid-badge-gray {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 16px;
+		min-height: 16px;
+		font-size: 10px;
+		font-weight: 600;
+		border-radius: @border-radius-full;
+		margin-left: 8px;
+		padding: 0px 4px;
+	}
+	
+	.btn-grid-badge-red {
+		background-color: @danger;
+		color: @white;
+	}
+
+	.btn-grid-badge-gray {
+		background-color: @gray-20;
+		color: @color-component-text-disabled;
 	}
 }
