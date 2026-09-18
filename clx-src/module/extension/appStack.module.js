@@ -154,14 +154,15 @@ AppStackKit.prototype.push = function(psAppId){
  * @param {cpr.core.AppInstance} app 앱인스턴스
  * @param {string} psAppId 이동할 App ID
  * @param {any} [poInitValue] 전달할 파라미터
+ * @param {Object} poOptions? { params: {key: value}, readyCallback: fn(ea) }
  */
-AppStackKit.prototype.navigate = function(app, psAppId, poInitValue) {
+AppStackKit.prototype.openLoadPage = function(app, psAppId, poInitValue, poOptions) {
     var voMainApp = this._appKit ? this._appKit.getMainApp(app) : app.getRootAppInstance();
     
     if (voMainApp && typeof voMainApp.callAppMethod === "function") {
-        voMainApp.callAppMethod("navigateTo", psAppId, poInitValue);
+        voMainApp.callAppMethod("openLoadPage", psAppId, poInitValue, poOptions);
     } else {
-        console.error("navigateTo 메소드를 찾을 수 없습니다.");
+        console.error("openLoadPage 메소드를 찾을 수 없습니다.");
     }
 };
 
