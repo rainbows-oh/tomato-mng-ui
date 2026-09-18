@@ -1,0 +1,26 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-567f1d06" version="1.0.5696">
+  <head std:sid="head-373e7c93">
+    <screen std:sid="screen-c5ce5d66" id="MRES-POP-LG" name="MRES-POP-LG" width="1824px" height="1192px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-1b15d103" id="MRES-FULL" name="MRES-FULL" width="1776px" height="1192px" useCustomWidth="false" useCustomHeight="false" customHeight="768" customWidth="1024"/>
+    <screen std:sid="screen-af38f412" id="MRES-POP-MD" name="MRES-POP-MD" width="1152px" height="608px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-c8a532ee" id="MRES-POP-SM" name="MRES-POP-SM" width="575px" height="544px" useCustomWidth="false" useCustomHeight="false" customHeight="768" customWidth="1024"/>
+    <cl:model std:sid="model-5db314a7"/>
+    <cl:appspec title="조회영역 토글">
+      <cl:property name="grpId" type="string" std:desc="접기/펼치기 기능을 적용할 그룹 ID"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-49d1517e" style="top:0px; left:0px; width:1000px; height:24px;" class="udc-search-toggle">
+    <cl:listener std:sid="listener-57a35857" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:listener std:sid="listener-2cf9d349" name="load" handler="onBodyLoad"/>
+    <cl:button std:sid="button-f429e5dd" class="btn-expand" value="Search filters">
+      <cl:listener std:sid="listener-2e26c128" name="click" handler="onButtonClick"/>
+      <cl:xylayoutdata std:sid="xyl-data-6238bda9" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:button>
+    <cl:xylayout std:sid="xylayout-bb2c8e75"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

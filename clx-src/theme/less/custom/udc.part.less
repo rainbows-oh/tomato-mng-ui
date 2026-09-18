@@ -66,12 +66,88 @@
  ************************************************/
 .cl-container.udc-search-toggle {
 	.cl-button.btn-expand {
-		background: url("../../img/icons/ico_angle_up.svg") no-repeat center;
-		transform: rotate(180deg);
+		text-align: left;
+		font-size: 15px;
+		font-weight: 600;
+		padding: 0px;
+		background: url("../../img/icons/ico_angle_down.svg") no-repeat center right;
+		background-size: 18px;
+		
+		&:not(.cl-disabled):hover,
+		&:not(.cl-disabled).cl-hover {
+			background-color: #EFF1F5;
+		}
+		
 		
 		&.collapse {
-			background: url("../../img/icons/ico_angle_up.svg") no-repeat center;
-			transform: rotate(0deg);
+			background: url("../../img/icons/ico_angle_up.svg") no-repeat center right;
 		}
 	}
 }
+
+/************************************************
+ * [UDC] 페이지 인덱서
+ ************************************************/
+ .cl-container.udc-pagination {
+ 	.cl-container.page-count-info {
+ 		.cl-output {
+	 		color: #64748d;
+ 		}
+ 	}
+ 	
+ 	.cl-container.btn-group {
+ 		border-radius: @border-radius-full;
+ 		border: 1px solid #e3e8ee;
+ 		
+ 		.cl-formlayout-vertical-separator {
+ 			background-color: #e3e8ee;
+ 		}
+ 		
+	 	.cl-button.btn-prev,
+	 	.cl-button.btn-next {
+	 		padding: 0px 12px;
+	 		border-radius: 0;
+	 		font-weight: 600;
+	 		color: #0d253d;
+	 		
+	 		.cl-icon {
+	 			background-size: 16px;
+	 		}
+	 		
+	 		&:not(.cl-disabled):hover,
+	 		&:not(.cl-disabled).cl-hover {
+	 			background-color: #EFF1F5;
+	 		}
+	 		
+	 		&.cl-disabled {
+	 			color: fade(#64748d, 40%);
+	 			background-color: transparent;
+	 		}
+	 	}
+	 	
+	 	.cl-button.btn-prev {
+	 		.cl-icon {
+	 			background-image: url("../../img/icons/ico_angle_left.svg") !important;
+	 		}
+	 		
+	 		&.cl-disabled {
+	 			.cl-icon {
+	 				background-image: url("../../img/icons/ico_pagination_left_disable.svg") !important;
+	 			}
+	 		}
+	 	}
+	 	
+	 	.cl-button.btn-next {
+	 		.cl-icon {
+	 			background-image: url("../../img/icons/ico_angle_right.svg") !important;
+	 		}
+	 		
+	 		&.cl-disabled {
+	 			.cl-icon {
+	 				background-image: url("../../img/icons/ico_pagination_right_disable.svg") !important;
+	 			}
+	 		}
+	 	}
+ 	}
+ }
+ 
