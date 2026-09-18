@@ -51,13 +51,17 @@
           <cl:verticaldata std:sid="v-data-4ee66d3f" width="974px" height="81px" autosize="height"/>
           <cl:udc std:sid="ud-control-0b242f72" type="udc.pse.com.udcComSearchToggle">
             <cl:verticaldata std:sid="v-data-b4d5c369" width="1000px" height="24px" autosize="height"/>
+            <cl:property name="optMsg" value="optMessage" type="control"/>
+            <cl:property name="grpId" value="grpSearchFilter" type="control"/>
+            <cl:property name="targetOutput" value="optMessage" type="control"/>
+            <cl:property name="targetGroup" value="grpSearchFilter" type="control"/>
           </cl:udc>
-          <cl:output std:sid="output-eddee998" class="truncate" visible="false" value="User Type: Trading Participant · Role: Maker">
+          <cl:output std:sid="output-eddee998" id="optMessage" class="truncate" visible="false" value="User Type: Trading Participant · Role: Maker">
             <cl:verticaldata std:sid="v-data-f0ffe926" width="100px" height="20px" autosize="height"/>
           </cl:output>
           <cl:verticallayout std:sid="v-layout-7510003c" scrollable="false" spacing="4"/>
         </cl:group>
-        <cl:group std:sid="group-a53d2a53" class="sch-filter-box">
+        <cl:group std:sid="group-a53d2a53" id="grpSearchFilter" class="sch-filter-box">
           <cl:verticaldata std:sid="v-data-85fc84d5" width="974px" height="171px" autosize="height"/>
           <cl:group std:sid="group-bc2a3258" class="filter-form">
             <cl:verticaldata std:sid="v-data-d17e9f6b" width="926px" height="58px" autosize="height"/>
@@ -70,7 +74,7 @@
                 <cl:output std:sid="output-b959ce01" class="label" value="Company">
                   <cl:verticaldata std:sid="v-data-4f88e24d" width="100px" height="18px" autosize="height"/>
                 </cl:output>
-                <cl:combobox std:sid="c-box-2c936ee1" fieldLabel="Select Company">
+                <cl:combobox std:sid="c-box-2c936ee1" fieldLabel="Company">
                   <cl:verticaldata std:sid="v-data-9b2f5447" width="110px" height="32px" autosize="none"/>
                 </cl:combobox>
                 <cl:verticallayout std:sid="v-layout-39cff7b2"/>
@@ -81,7 +85,7 @@
                 <cl:output std:sid="output-aea88f6a" class="label" value="Status">
                   <cl:verticaldata std:sid="v-data-ec57d7ac" width="100px" height="18px" autosize="height"/>
                 </cl:output>
-                <cl:combobox std:sid="c-box-84e850f8" fieldLabel="Select status">
+                <cl:combobox std:sid="c-box-84e850f8" fieldLabel="Status">
                   <cl:verticaldata std:sid="v-data-72e3772c" width="110px" height="32px" autosize="none"/>
                   <cl:item std:sid="t-item-8cdac734" label="All" value="value1"/>
                 </cl:combobox>

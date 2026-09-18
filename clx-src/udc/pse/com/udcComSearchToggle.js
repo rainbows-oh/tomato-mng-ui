@@ -5,10 +5,6 @@
  * @author yein
  ************************************************/
 
-/** @type cpr.controls.Container */
-var vcTarget = null;
-var vcGrpFill = null;
-
 /**
  * UDC 컨트롤이 그리드의 뷰 모드에서 표시할 텍스트를 반환합니다.
  */
@@ -22,8 +18,6 @@ exports.getText = function(){
  * 앱의 속성이 변경될 때 발생하는 이벤트 입니다.
  */
 function onBodyPropertyChange(e){
-	if(e.property == 'grpId') {
-	}
 }
 
 /*
@@ -31,18 +25,6 @@ function onBodyPropertyChange(e){
  * 앱이 최초 구성된후 최초 랜더링 직후에 발생하는 이벤트 입니다.
  */
 function onBodyLoad(e){
-	
-	if(app.getAppProperty("grpId")) {
-		vcTarget = app.getHostAppInstance().lookup(app.getAppProperty("grpId"))
-		
-		cpr.core.DeferredUpdateManager.INSTANCE.asyncExec(function(e) {
-			app.getHostAppInstance().getContainer().getChildren().forEach(function(each){
-				if(each.style.hasClass("fill-layout-target")) {
-					vcGrpFill = each;	
-				} 
-			});	
-		});
-	}
 }
 
 /*
@@ -51,16 +33,20 @@ function onBodyLoad(e){
  */
 function onButtonClick(e) {
 	var button = e.control;
-	
+	var vcOutput = app.getAppProperty("targetOutput");
+	var vcGroup = app.getAppProperty("targetGroup");
+
 	if (!button.style.hasClass("collapse")) {
-		vcTarget.getLayout().setRowVisible(1, false);
-		vcTarget.getLayout().setRowVisible(2, true);
-		
+		// 접힘 상태: 아웃풋 표시, 그룹 숨김
+		if (vcOutput && vcOutput.type) vcOutput.visible = true;
+		if (vcGroup && vcGroup.type) vcGroup.visible = false;
+
 		button.style.addClass("collapse");
 	} else {
-		vcTarget.getLayout().setRowVisible(1, true);
-		vcTarget.getLayout().setRowVisible(2, false);
-		
+		// 펼침 상태: 아웃풋 숨김, 그룹 표시
+		if (vcOutput && vcOutput.type) vcOutput.visible = false;
+		if (vcGroup && vcGroup.type) vcGroup.visible = true;
+
 		button.style.removeClass("collapse");
 	}
 }

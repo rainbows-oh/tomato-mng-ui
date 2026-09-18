@@ -7,7 +7,8 @@
     <screen std:sid="screen-c8a532ee" id="MRES-POP-SM" name="MRES-POP-SM" width="575px" height="544px" useCustomWidth="false" useCustomHeight="false" customHeight="768" customWidth="1024"/>
     <cl:model std:sid="model-5db314a7"/>
     <cl:appspec title="조회영역 토글">
-      <cl:property name="grpId" type="string" std:desc="접기/펼치기 기능을 적용할 그룹 ID"/>
+      <cl:property name="targetOutput" type="control" std:desc="[Output] 접힘 상태일 때 보여줄 요약 아웃풋 컨트롤"/>
+      <cl:property name="targetGroup" type="control" std:desc="[Group] 펼침 상태일 때 보여줄 그룹 컨트롤"/>
     </cl:appspec>
   </head>
   <body std:sid="body-49d1517e" style="top:0px; left:0px; width:1000px; height:24px;" class="udc-search-toggle">

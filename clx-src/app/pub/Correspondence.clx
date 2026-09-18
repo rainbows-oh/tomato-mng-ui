@@ -57,15 +57,17 @@
         <cl:verticaldata std:sid="v-data-b7116695" width="976px" height="399px" autosize="height"/>
         <cl:group std:sid="group-0771f1c4" class="search-head">
           <cl:verticaldata std:sid="v-data-4ee66d3f" width="974px" height="78px" autosize="height"/>
-          <cl:button std:sid="button-a91918a8" class="expander" value="Search filters">
-            <cl:verticaldata std:sid="v-data-6454dee6" width="100px" height="21px" autosize="height"/>
-          </cl:button>
-          <cl:output std:sid="output-eddee998" class="truncate" visible="false" value="User Type: Trading Participant · Role: Maker">
+          <cl:udc std:sid="ud-control-9744fc2f" id="udccomsearchtoggle1" type="udc.pse.com.udcComSearchToggle">
+            <cl:verticaldata std:sid="v-data-a3e4b880" width="1000px" height="24px"/>
+            <cl:property name="targetOutput" value="optMessage" type="control"/>
+            <cl:property name="targetGroup" value="grpSearchFilter" type="control"/>
+          </cl:udc>
+          <cl:output std:sid="output-eddee998" id="optMessage" class="truncate" visible="false" value="User Type: Trading Participant · Role: Maker">
             <cl:verticaldata std:sid="v-data-f0ffe926" width="100px" height="20px" autosize="height"/>
           </cl:output>
           <cl:verticallayout std:sid="v-layout-7510003c" scrollable="false" spacing="4"/>
         </cl:group>
-        <cl:group std:sid="group-a53d2a53" class="sch-filter-box">
+        <cl:group std:sid="group-a53d2a53" id="grpSearchFilter" class="sch-filter-box">
           <cl:verticaldata std:sid="v-data-85fc84d5" width="974px" height="319px" autosize="height"/>
           <cl:group std:sid="group-bc2a3258" class="filter-form">
             <cl:verticaldata std:sid="v-data-d17e9f6b" width="926px" height="206px" autosize="height"/>
