@@ -455,7 +455,7 @@ ControlKit.prototype.dispatchEvent = function(app, psCtlId, psEventType) {
  * @param {#uicontrol} psCtlId 컨트롤 ID
  * @param {String} psValue 값
  * @param {Boolean} pbEmitEvent? 값 변경후의 before-value-change, value-change 이벤트 발생시킬지 여부<br>
- *                  false로 지정하면 이벤트 발생 안 함
+ *				  false로 지정하면 이벤트 발생 안 함
  * @return {void}
  */
 ControlKit.prototype.setValue = function(app, psCtlId, psValue, pbEmitEvent) {
@@ -910,10 +910,10 @@ DataSetKit.prototype.clear = function(app, psDataSetId) {
  * @param {cpr.core.AppInstance} app 앱인스턴스
  * @param {#dataset} psDataSetId 데이터셋 ID
  * @param {String} psCondition 조건식<br>
- *                 ex)"STUD_DIV_RCD == 'CT101REGU' && SA_NM == '컴퓨터정보과'"<br>
+ *				 ex)"STUD_DIV_RCD == 'CT101REGU' && SA_NM == '컴퓨터정보과'"<br>
  * 					사용가능수식 :<br>!=", "!==", "$=", "%", "&&", "(", "*", "*=", "+", ",", "-", ".", "/", "/*", "//", "<", "<=", "==", "===", ">", ">=", "?", "[", "^=", "||"
  * @param {Boolean} pbAllStatus? =`조건에 맞는 첫번째 row 리턴`
- *                             true : 조건에 맞는 모든 row 리턴
+ *							 true : 조건에 맞는 모든 row 리턴
  * @param {Number} pnStartIdx? Number  범위지정 시작 row index
  * @param {Number} pnEndIdx? Number  범위지정 끝 row index
  * @retrun 데이터 로우
@@ -935,7 +935,7 @@ DataSetKit.prototype.findRow = function(app, psDataSetId, psCondition, pbAllStat
  * @param {cpr.core.AppInstance} app 앱인스턴스
  * @param {#dataset} psDataSetId 데이터셋 ID
  * @param {String} psCondition 조건식
- *                 ex)"STUD_DIV_RCD == 'CT101REGU' && SA_NM == '컴퓨터정보과'"<br>
+ *				 ex)"STUD_DIV_RCD == 'CT101REGU' && SA_NM == '컴퓨터정보과'"<br>
  * 					사용가능수식 :<br>!=", "!==", "$=", "%", "&&", "(", "*", "*=", "+", ",", "-", ".", "/", "/*", "//", "<", "<=", "==", "===", ">", ">=", "?", "[", "^=", "||"
  * @param {Number} pnStartIdx? 범위지정 시작 row index.
  * @param {Number} pnEndIdx? 범위지정 끝 row index.
@@ -952,7 +952,7 @@ DataSetKit.prototype.findAllRow = function(app, psDataSetId, psCondition, pnStar
  * @param {cpr.core.AppInstance} app 앱인스턴스
  * @param {#dataset} psDataSetId 데이터셋 ID
  * @param {String} psCondition 조건식<br>
- *                 ex)"STUD_DIV_RCD == 'CT101REGU' && SA_NM == '컴퓨터정보과'"<br>
+ *				 ex)"STUD_DIV_RCD == 'CT101REGU' && SA_NM == '컴퓨터정보과'"<br>
  * 					사용가능수식 :<br>!=", "!==", "$=", "%", "&&", "(", "*", "*=", "+", ",", "-", ".", "/", "/*", "//", "<", "<=", "==", "===", ">", ">=", "?", "[", "^=", "||"
  * @param {#column} psColumnName 컬럼명
  * @param {Number} pnStartIdx?  범위지정 시작 row index
@@ -1083,11 +1083,11 @@ DataSetKit.prototype.revertRow = function(app, psDataSetId, pnIndex) {
  * @param {#dataset} psDataSetId 데이터셋 ID
  * @param {Number} pnIndex row index
  * @return {String} Row을 찾을 수 없을 경우 null을 반환하고 그렇지 않은 경우 아래 값 중 하나를 반환합니다.<br>
-				        변경되지 않은 상태 : "UC", "UNCHANGED"<br>
-				        신규 상태 : "I", "INSERTED"<br>
-				        수정 상태 : "U", "UPDATED"<br>
-				        삭제 상태 : "D" , "DELETED"<br>
-				        추가되었다가 삭제된 상태 : "ID", "INSERTDELETED"
+						변경되지 않은 상태 : "UC", "UNCHANGED"<br>
+						신규 상태 : "I", "INSERTED"<br>
+						수정 상태 : "U", "UPDATED"<br>
+						삭제 상태 : "D" , "DELETED"<br>
+						추가되었다가 삭제된 상태 : "ID", "INSERTDELETED"
  */
 DataSetKit.prototype.getRowStateString = function(app, psDataSetId, pnIndex) {
 	/** @type cpr.data.DataSet */
@@ -1874,9 +1874,9 @@ DialogKit.prototype.windowOpen = function(app, psActionUrl, psPopId, pmParameter
  * @param {#app} psAppId 팝업으로 띄울 앱 ID
  * @param {String} psWindowName? 윈도우 이름<br>isOnlyOne이 true인 경우, 동일한 윈도우 이름에 대해서는 1개의 window만 생성합니다.
  * @param {top : Number =`가운데 위치` <!-- 윈도우팝업의 y좌표 -->,
- *               left: Number =`가운데 위치` <!-- 윈도우팝업의 x좌표 -->,
- *               width : Number <!-- 팝업 창의 가로 사이즈  -->,
- *               height : Number<!-- 팝업 창의 세로 사이즈  -->} poProp 팝업 설정 속성
+ *			   left: Number =`가운데 위치` <!-- 윈도우팝업의 x좌표 -->,
+ *			   width : Number <!-- 팝업 창의 가로 사이즈  -->,
+ *			   height : Number<!-- 팝업 창의 세로 사이즈  -->} poProp 팝업 설정 속성
  * @param {Function} poCallBackFunc? 팝업이 닫힐 때 콜백함수
  * @param {Object} poInitValue? 초기 파라메터 key/value쌍으로 팝업창에 넘길 파라미터<br> 
  * 											예시) {key1:"value1", key2:"value2"}
@@ -2167,8 +2167,8 @@ DialogKit.prototype.closeWinPopup = function(app, poReturnValue) {
  * @param {cpr.core.AppInstance} app 앱인스턴스
  * @param {"isPopup" | "popupType" | "modal"} psDiv? 반환 받고자 하는 팝업 정보 구분 ["isPopup" | "popupType" | "modal"]
  * @return {"isPopup"?:Boolean <!-- 팝업 여부 -->,
- *             "popupType"?:"WIN"|"MOD"|"MOL" <!-- MOD : 모달 <br> MOL : 모달리스<br> WIN : 윈도우-->,
- *             "modal"?:Boolean <!-- 다이얼로그 modal 여부(true:모달 / false:모달리스) -->}
+ *			 "popupType"?:"WIN"|"MOD"|"MOL" <!-- MOD : 모달 <br> MOL : 모달리스<br> WIN : 윈도우-->,
+ *			 "modal"?:Boolean <!-- 다이얼로그 modal 여부(true:모달 / false:모달리스) -->}
  */
 DialogKit.prototype.getPopupInfo = function(app, psDiv) {
 	/**
@@ -2376,7 +2376,7 @@ function FreeFormKit(appKit) {
  * 
  * <b><수행 로직></b><br>
  * 1. 데이터 여부에 따른 비활성화 처리 (load, filter 이벤트)<br>
- *    (데이터가 없으면 입력 안됨 처리)<br>
+ *	(데이터가 없으면 입력 안됨 처리)<br>
  * 2. udcComAppHeader 의 앱속성(freeformIds)에 지정한 폼 레이아웃 ID 에 포함될 경우 초기화 지정<br>
  * 	  앱속성(freeformIds) 미작성 시, 문맥 바인딩이 설정된 모든 폼 레이아웃을 대상으로 초기화 지정(조회조건 그룹 제외)<br><br>
  * @param {cpr.core.AppInstance} app 앱인스턴스
@@ -2609,7 +2609,7 @@ FreeFormKit.prototype.insertRow = function(app, psFreeFormId, psEditCol, pnRowId
  * @param {#container} psFreeFormId 프리폼 ID
  * @param {String} psAftMsg? 메시지 유형(CRM)
  * @param {"confirmCallback" : Function <!-- "CRM" confirm창 사용시 확인에 대한 콜백 -->
- *         ,"cancelCallback" : Function <!-- "CRM" confirm창 사용시 취소(닫기)에 대한 콜백 -->} poOption? "CRM" confirm 창에 대한 콜백 함수 
+ *		 ,"cancelCallback" : Function <!-- "CRM" confirm창 사용시 취소(닫기)에 대한 콜백 -->} poOption? "CRM" confirm 창에 대한 콜백 함수 
  * @return {void}
  */
 FreeFormKit.prototype.deleteRow = function(app, psFreeFormId, psAftMsg, poOption) {
@@ -2629,51 +2629,51 @@ FreeFormKit.prototype.deleteRow = function(app, psFreeFormId, psAftMsg, poOption
 	} else {
 		if (!ValueUtil.isNull(psAftMsg)) {
 			//삭제하시겠습니까?
-            var poConfrimOption = {
-                "confirmCallback" : function() {
-                    if (voDs.getRowState(vnRowIndex) == cpr.data.tabledata.RowState.INSERTED) {
-                        voDs.revertRow(vnRowIndex);
-                        vcForm.redraw();
-                        if (vcBindCtl instanceof cpr.controls.Grid) {
-                            vcBindCtl.redraw();
-                            //가장 마지막 행에서 신규 행 추가 후, 삭제할 경우에 가장 마지막 행을 선택해줌
-                            if (voDs.getRowCount() -1 < vnRowIndex) {
-                                vcBindCtl.selectRows([vnRowIndex-1]);
-                            }
-                        } 
-                        if (vcBindCtl instanceof cpr.controls.Tree) vcBindCtl.redraw();
-                        //데이터 건수가 없으면... 프리폼 비활성화
-                        if (voDs.getRowCount() < 1) {
-                        	if (voDs.userData("_freeforms")) {
-                        		var _app = app;
-                        		voDs.userData("_freeforms").forEach(function(formId) {
-                        			var vcFormCtrl = app.lookup(formId);
-                        			if (vcFormCtrl) {
-                        				if (vcFormCtrl.userData("_expressEnabled")) {
-                        					vcFormCtrl.bind("enabled").toExpression(vcFormCtrl.userData("_expressEnabled"));
-                        				} else {
-                        					vcFormCtrl.enabled = false;
-                        				}
-                        			}
-                        		});
-                        	} else {
-                        		if (vcForm.userData("_expressEnabled")) {
-                        			vcForm.bind("enabled").toExpression(vcForm.userData("_expressEnabled"));
-                        		} else {
-                        			vcForm.enabled = false;
-                        		}
-                        	}
-                        }
-                        return false;
-                    }else{
-                        voDs.setRowState(vnRowIndex, cpr.data.tabledata.RowState.DELETED);
-                        if (!ValueUtil.isNull(poOption) && typeof(poOption.confirmCallback) == "function") {
-                            poOption.confirmCallback(); // 화면에서 전달받은 close 콜백 
-                        }
-                    }
-                }
-            };
-            this._appKit.Msg.confirmDlg(app, "CRM-M002", null, poConfrimOption);
+			var poConfrimOption = {
+				"confirmCallback" : function() {
+					if (voDs.getRowState(vnRowIndex) == cpr.data.tabledata.RowState.INSERTED) {
+						voDs.revertRow(vnRowIndex);
+						vcForm.redraw();
+						if (vcBindCtl instanceof cpr.controls.Grid) {
+							vcBindCtl.redraw();
+							//가장 마지막 행에서 신규 행 추가 후, 삭제할 경우에 가장 마지막 행을 선택해줌
+							if (voDs.getRowCount() -1 < vnRowIndex) {
+								vcBindCtl.selectRows([vnRowIndex-1]);
+							}
+						} 
+						if (vcBindCtl instanceof cpr.controls.Tree) vcBindCtl.redraw();
+						//데이터 건수가 없으면... 프리폼 비활성화
+						if (voDs.getRowCount() < 1) {
+							if (voDs.userData("_freeforms")) {
+								var _app = app;
+								voDs.userData("_freeforms").forEach(function(formId) {
+									var vcFormCtrl = app.lookup(formId);
+									if (vcFormCtrl) {
+										if (vcFormCtrl.userData("_expressEnabled")) {
+											vcFormCtrl.bind("enabled").toExpression(vcFormCtrl.userData("_expressEnabled"));
+										} else {
+											vcFormCtrl.enabled = false;
+										}
+									}
+								});
+							} else {
+								if (vcForm.userData("_expressEnabled")) {
+									vcForm.bind("enabled").toExpression(vcForm.userData("_expressEnabled"));
+								} else {
+									vcForm.enabled = false;
+								}
+							}
+						}
+						return false;
+					}else{
+						voDs.setRowState(vnRowIndex, cpr.data.tabledata.RowState.DELETED);
+						if (!ValueUtil.isNull(poOption) && typeof(poOption.confirmCallback) == "function") {
+							poOption.confirmCallback(); // 화면에서 전달받은 close 콜백 
+						}
+					}
+				}
+			};
+			this._appKit.Msg.confirmDlg(app, "CRM-M002", null, poConfrimOption);
 		} else {
 			if (voDs.getRowState(vnRowIndex) == cpr.data.tabledata.RowState.INSERTED) {
 				voDs.revertRow(vnRowIndex);
@@ -2826,7 +2826,7 @@ FreeFormKit.prototype.revertAllData = function(app, psFreeFormId) {
  *						MSG : 변경사항 내역이 없을 경우 '변경된 내역이 없습니다.' 메세지 출력<br>
  *  					CRM : 변경내역이 존재할경우 '변경사항이 반영되지 않았습니다. 계속 하시겠습니까?' confirm 메시지출력
  * @param {"confirmCallback" : Function <!-- "CRM" confirm창 사용시 확인에 대한 콜백 -->
- *         ,"cancelCallback" : Function <!-- "CRM" confirm창 사용시 취소(닫기)에 대한 콜백 -->} poOption? "CRM" confirm 창에 대한 콜백 함수 
+ *		 ,"cancelCallback" : Function <!-- "CRM" confirm창 사용시 취소(닫기)에 대한 콜백 -->} poOption? "CRM" confirm 창에 대한 콜백 함수 
  * @return {Boolean} 데이터 변경 여부
  */
 FreeFormKit.prototype.isModified = function(app, paFreeFormId, psAftMsg, poOption) {
@@ -2853,12 +2853,12 @@ FreeFormKit.prototype.isModified = function(app, paFreeFormId, psAftMsg, poOptio
 	}
 	
 	if (vbModify) {
-        if (psAftMsg.toUpperCase() == "CRM") {//변경사항이 반영되지 않았습니다. 계속 하시겠습니까? confirm
-            this._appKit.Msg.confirmDlg(app, "CRM-M003", [vcGroup.fieldLabel], poOption);
-            return true;
-        } else {
-            return vbModify;
-        }
+		if (psAftMsg.toUpperCase() == "CRM") {//변경사항이 반영되지 않았습니다. 계속 하시겠습니까? confirm
+			this._appKit.Msg.confirmDlg(app, "CRM-M003", [vcGroup.fieldLabel], poOption);
+			return true;
+		} else {
+			return vbModify;
+		}
 	} else {
 		if (psAftMsg.toUpperCase() == "MSG") { //변경된 내역이 없습니다.
 			this._appKit.Msg.notify(app, "INF-M006");
@@ -3036,6 +3036,113 @@ FreeFormKit.prototype.getRowState = function(app, psFreeFormId) {
 	var vnRowIndex = this._appKit.Group.getBindCtlRowIndex(app, voBindContext);
 	
 	return vcDataSet.getRowState(vnRowIndex);
+};
+
+/**
+ * [공통] 데이터셋 건수 및 UDC 경로("udc.com.UserCard")에 따라 동적 FormLayout 생성 및 UDC 배치
+ * @param {cpr.controls.Container} targetGroup - FormLayout을 적용할 부모 그룹
+ * @param {cpr.data.DataSet} dataSet - UDC와 바인딩할 데이터셋 객체
+ * @param {String} udcPath - UDC 클래스 경로 (예: "udc.com.UserCard")
+ * @param {Object} [options] - 상세 옵션
+ * @param {Number} [options.columnCount=3] - 열(Column) 수 (기본값: 3)
+ * @param {String} [options.rowHeight="1fr"] - 행(Row) 높이 (예: "1fr", "220px")
+ * @param {Function} [options.onCardClick] - cardClick 이벤트 콜백 함수 (e.userData 전달받음)
+ */
+FreeFormKit.prototype.createDynamicUdcForm = function(targetGroup, dataSet, udcPath, options) {
+	if (!targetGroup || !dataSet || !udcPath) {
+		console.error("[createDynamicUdcForm] 필수 파라미터가 누락되었습니다.");
+		return;
+	}
+
+	// 1. UDC 생성자 추출
+	var parts = udcPath.split('.');
+	var UdcConstructor = window;
+	for (var i = 0; i < parts.length; i++) {
+		if (UdcConstructor && UdcConstructor[parts[i]]) {
+			UdcConstructor = UdcConstructor[parts[i]];
+		} else {
+			UdcConstructor = null;
+			break;
+		}
+	}
+
+	if (typeof UdcConstructor !== "function") {
+		console.error("[createDynamicUdcForm] 유효한 UDC 클래스를 찾을 수 없습니다:", udcPath);
+		return;
+	}
+
+	options = options || {};
+	var cols = options.columnCount || 3;
+	var rowHeight = options.rowHeight || "240px";
+
+	// 2. 기존 자식 컨트롤 제거
+	targetGroup.removeAllChildren(true);
+
+	var totalCount = dataSet.getRowCount();
+	var rowCount = Math.ceil(totalCount / cols);
+
+	// 3. 신규 FormLayout 생성 및 설정
+	var formLayout = new cpr.controls.layouts.FormLayout();
+	
+	var colWidths = [];
+	for (var c = 0; c < cols; c++) colWidths.push("1fr");
+	formLayout.setColumns(colWidths);
+	
+	var rowHeights = [];
+	for (var r = 0; r < rowCount; r++) rowHeights.push(rowHeight);
+	formLayout.setRows(rowHeights);
+
+	formLayout.horizontalSpacing = "10px";
+	formLayout.verticalSpacing = "10px";
+
+	targetGroup.setLayout(formLayout);
+
+	// 4. UDC 동적 생성, initData 주입 및 클릭 이벤트 바인딩
+	for (var i = 0; i < totalCount; i++) {
+		var udcInstance = new UdcConstructor("udc_dyn_" + i);
+		var rowData = dataSet.getRowData(i);
+
+		// 데이터 주입 (initData 필수 적용)
+		if (typeof udcInstance.initData === "function") {
+			udcInstance.initData(rowData);
+		}
+
+		// 카드 클릭 이벤트 바인딩 (onCardClick)
+		(function(index, data, instance) {
+			instance.addEventListener("click", function(e) {
+				if (typeof options.onCardClick === "function") {
+					options.onCardClick(data, index, instance, e);
+				}
+			});
+		})(i, rowData, udcInstance);
+
+		var rIdx = Math.floor(i / cols);
+		var cIdx = i % cols;
+
+		targetGroup.addChild(udcInstance, {
+			rowIndex: rIdx,
+			colIndex: cIdx,
+			horizontalAnchor: "fill",
+			verticalAnchor: "fill"
+		});
+	}
+
+	// 5. RForm 반응형 모듈 원본 백업 및 transform 재실행
+	var rForm = targetGroup["_RForm"];
+	if (rForm) {
+		rForm._originalLayout = formLayout;
+		rForm._backup(true);
+		
+		var appInstance = targetGroup.getAppInstance();
+		var targetScreenName = appInstance ? appInstance.targetScreen.name : "default";
+		var colSettings = rForm._columnSettings[targetScreenName];
+		
+		if (colSettings && colSettings > 0) {
+			rForm._transform(colSettings);
+		}
+	}
+
+	targetGroup.redraw();
 };
 
 /**
@@ -3455,8 +3562,8 @@ GridKit.prototype.filter = function(app, psGridId, psCondition) {
  *  					CRM : 변경내역이 존재할경우 '변경사항이 반영되지 않았습니다. 계속 하시겠습니까?' confirm 메시지출력 <br>
  * @param {cpr.events.CSelectionEvent} peEvent? 이벤트 객체
  * @param {"confirmCallback" : Function <!-- "CRM" confirm창 사용시 확인에 대한 콜백 -->
- *         ,"cancelCallback" : Function <!-- "CRM" confirm창 사용시 취소(닫기)에 대한 콜백 -->
- *         ,"bWindowConfirm" : boolean  <!--  windowConfirm호출 여부 -->} poOption? "CRM" confirm 창에 대한 콜백 함수 및 windowConfirm호출 여부
+ *		 ,"cancelCallback" : Function <!-- "CRM" confirm창 사용시 취소(닫기)에 대한 콜백 -->
+ *		 ,"bWindowConfirm" : boolean  <!--  windowConfirm호출 여부 -->} poOption? "CRM" confirm 창에 대한 콜백 함수 및 windowConfirm호출 여부
  * @return {Boolean} 데이터 변경 여부
  */
 GridKit.prototype.isModified = function(app, paGridId, psAftMsg, peEvent, poOption) {
@@ -3489,17 +3596,17 @@ GridKit.prototype.isModified = function(app, paGridId, psAftMsg, peEvent, poOpti
 	}
 	
 	if (vbModify) {
-        if (psAftMsg.toUpperCase() == "CRM") {//변경사항이 반영되지 않았습니다. 계속 하시겠습니까? confirm
-            if (ValueUtil.fixNull(poOption) != "" && poOption["bWindowConfirm"]) {
-    			if (!this._appKit.Msg.confirm("CRM-M003", [vcGrid.fieldLabel])) return true;
-    			else return false;
-            } else {
-                this._appKit.Msg.confirmDlg(app, "CRM-M003", [vcGrid.fieldLabel], poOption);
-                return true;
-            }
-        } else {
-            return true;
-        }
+		if (psAftMsg.toUpperCase() == "CRM") {//변경사항이 반영되지 않았습니다. 계속 하시겠습니까? confirm
+			if (ValueUtil.fixNull(poOption) != "" && poOption["bWindowConfirm"]) {
+				if (!this._appKit.Msg.confirm("CRM-M003", [vcGrid.fieldLabel])) return true;
+				else return false;
+			} else {
+				this._appKit.Msg.confirmDlg(app, "CRM-M003", [vcGrid.fieldLabel], poOption);
+				return true;
+			}
+		} else {
+			return true;
+		}
 	} else {
 		if (psAftMsg.toUpperCase() == "MSG") { //변경된 내역이 없습니다.
 			this._appKit.Msg.notify(app, "INF-M006");
@@ -3820,7 +3927,7 @@ GridKit.prototype.selectRow = function(app, psGridId, pnRowIndex, pbEmitEvent, p
  * @param {cpr.core.AppInstance} app 앱인스턴스
  * @param {#grid} psGridId 그리드ID
  * @param {String} psCondition 조건식 :<br>
- *                 ex)"STUD_DIV_RCD == 'CT101REGU' && SA_NM == '컴퓨터정보과'"<br>
+ *				 ex)"STUD_DIV_RCD == 'CT101REGU' && SA_NM == '컴퓨터정보과'"<br>
  * 					사용가능수식 :<br>!=", "!==", "$=", "%", "&&", "(", "*", "*=", "+", ",", "-", ".", "/", "/*", "//", "<", "<=", "==", "===", ">", ">=", "?", "[", "^=", "||"
  * @param {Number} pnCellIdx? =`조건에 만족하는 행 select` 포커스를 부여할 Cell의 인덱스<br>
  * @return {void}
@@ -4003,7 +4110,7 @@ GridKit.prototype.insertRowOnlyOne = function(app, psGridId, pnEditCellIdx, paMo
  * @param {cpr.core.AppInstance} app 앱인스턴스
  * @param {#grid} psGridId 그리드 ID
  * @param {Number | Number[]} pnRowIdx? =`체크된 row 나 선택된 row 인덱스를 취득 (check우선)` 삭제하고자 하는 Row index<br>
- * @return {Number[]} 삭제된 행 (배열)                
+ * @return {Number[]} 삭제된 행 (배열)				
  */
 GridKit.prototype.deleteRow = function(app, psGridId, pnRowIdx) {
 	/** @type cpr.controls.Grid */
@@ -4385,7 +4492,7 @@ GridKit.prototype.clearFilter = function(app, psGridId) {
  * @param {cpr.core.AppInstance} app 앱인스턴스
  * @param {#grid} psGridId 그리드 ID
  * @param {String} psCondition 조건식 <br>
- *                 ex)"STUD_DIV_RCD == 'CT101REGU' && SA_NM == '컴퓨터정보과'" <br>
+ *				 ex)"STUD_DIV_RCD == 'CT101REGU' && SA_NM == '컴퓨터정보과'" <br>
  * 					사용가능수식 !=", "!==", "$=", "%", "&&", "(", "*", "*=", "+", ",", "-", ".", "/", "/*", "//", "<", "<=", "==", "===", ">", ">=", "?", "[", "^=", "||" 
  * @return {void}
  */
@@ -5297,24 +5404,24 @@ GridKit.prototype.exportData = function(app, psGridId, psFileName, poMetadata, p
 		var vfStyleHandler = function(poCellStyle, psRegion, pnCellIndex, psColumnName) {
 			// 셀 스타일 기본값 설정
 			var voStyleInfo = {
-			    "font-weight": "normal",
-			    "font-size": "11px",
-			    "text-align": "center",
-			    "vertical-align": "middle",
-			    "background-color": "#FFFFFF",
-			    "color": "black",
-			    "border-left-color": "#bbbbbb",
-			    "border-right-color": "#bbbbbb",
-			    "border-top-color": "#bbbbbb",
-			    "border-bottom-color": "#bbbbbb",
-			    "border-left-style": "solid",
-			    "border-right-style": "solid",
-			    "border-top-style": "solid",
-			    "border-bottom-style": "solid",
-			    "border-left-width": "1px",
-			    "border-right-width": "1px",
-			    "border-top-width": "1px",
-			    "border-bottom-width": "1px"
+				"font-weight": "normal",
+				"font-size": "11px",
+				"text-align": "center",
+				"vertical-align": "middle",
+				"background-color": "#FFFFFF",
+				"color": "black",
+				"border-left-color": "#bbbbbb",
+				"border-right-color": "#bbbbbb",
+				"border-top-color": "#bbbbbb",
+				"border-bottom-color": "#bbbbbb",
+				"border-left-style": "solid",
+				"border-right-style": "solid",
+				"border-top-style": "solid",
+				"border-bottom-style": "solid",
+				"border-left-width": "1px",
+				"border-right-width": "1px",
+				"border-top-width": "1px",
+				"border-bottom-width": "1px"
 			};
 			
 			if (psRegion == "header") {
@@ -5356,23 +5463,23 @@ GridKit.prototype.exportData = function(app, psGridId, psFileName, poMetadata, p
 						vaClass = vaClass.concat(vaClassName instanceof Array ? vaClassName : [vaClassName]); // 컬럼 클래스 명
 					}
 				}
-			    _this._getStyleSheetArray(vaClass);
+				_this._getStyleSheetArray(vaClass);
 				var voStyles = [
-		            "font-weight", "font-size", "text-align", "vertical-align",
-		            "background-color", "color", 
-		            "border-left-color", "border-right-color", "border-top-color", "border-bottom-color",
-		            "border-left-style", "border-right-style", "border-top-style", "border-bottom-style",
-		            "border-left-width", "border-right-width", "border-top-width", "border-bottom-width"
-		        ];
+					"font-weight", "font-size", "text-align", "vertical-align",
+					"background-color", "color", 
+					"border-left-color", "border-right-color", "border-top-color", "border-bottom-color",
+					"border-left-style", "border-right-style", "border-top-style", "border-bottom-style",
+					"border-left-width", "border-right-width", "border-top-width", "border-bottom-width"
+				];
 				// 클래스에 해당 스타일이 있는 경우 적용
-			    vaClass.forEach(function (each) {
-			        voStyles.forEach(function(vsStyle) {
-			            var vsCssValue = _this._getComputedCss(each, vsStyle);
-			            if (vsCssValue) {
-			                voStyleInfo[vsStyle] = vsCssValue;
-			            }
-			        });
-			    });
+				vaClass.forEach(function (each) {
+					voStyles.forEach(function(vsStyle) {
+						var vsCssValue = _this._getComputedCss(each, vsStyle);
+						if (vsCssValue) {
+							voStyleInfo[vsStyle] = vsCssValue;
+						}
+					});
+				});
 			}
 			
 			// 인라인 스타일이 우선 순위
@@ -5616,15 +5723,15 @@ GridKit.prototype._getStyleSheet = function(psClassName) {
 	}
 	var vaRules = [];
 	for (var i = 0; i < _this._SHEETS.length; i++) {
-	    var voSheet = _this._SHEETS[i];
+		var voSheet = _this._SHEETS[i];
 	
-	    for (var j = 0; j < voSheet.cssRules.length; j++) {
-	        var voTempRule = voSheet.cssRules[j];
+		for (var j = 0; j < voSheet.cssRules.length; j++) {
+			var voTempRule = voSheet.cssRules[j];
 	
-	        if (voTempRule.selectorText && voTempRule.selectorText.indexOf("." + psClassName) !== -1) {
-	            vaRules.push(voTempRule.cssText);
-	        }
-	    }
+			if (voTempRule.selectorText && voTempRule.selectorText.indexOf("." + psClassName) !== -1) {
+				vaRules.push(voTempRule.cssText);
+			}
+		}
 	}
 	return vaRules;
 };
@@ -5740,12 +5847,12 @@ GridKit.prototype._getComputedCss = function(psClassName, psPropertyNm) {
 			} else if (voClass[vsBorderSideNm] != null) {
 				vsPropertyName = vsBorderSideNm;
 			} else {
-			    vsPropertyName = "border";
+				vsPropertyName = "border";
 			}
 			vsTarget = voClass[vsPropertyName];
-		    if (vsTarget == null) {
-		        return "";
-		    }
+			if (vsTarget == null) {
+				return "";
+			}
 		}else{
 			return "";
 		}
@@ -5777,12 +5884,12 @@ GridKit.prototype._getComputedCss = function(psClassName, psPropertyNm) {
 	} else if (/^border-(left|right|top|bottom)$/.test(vsPropertyName) || vsPropertyName == "border") {
 		if (/border-(left|right|top|bottom)-style/.test(psPropertyNm)) {
 			// " " (공백)으로 분리하고 두 번째 값을 반환
-       		return vsTarget.split(" ")[1];
+	   		return vsTarget.split(" ")[1];
 		}else{
 			// " " (공백)으로 분리하고 첫 번째 값을 반환
-        	return vsTarget.split(" ")[0];
+			return vsTarget.split(" ")[0];
 		}
-    }else {
+	}else {
 		return vsTarget;
 	}
 }
@@ -6523,9 +6630,9 @@ GridKit.prototype.getCheckedTreeCellInfo = function (app, psGridId, pbAll) {
  * @param {#column} psParentColNm 부모 데이터 컬럼명
  */
 GridKit.prototype.buildGridToTree = function(app, psGridId, psDataColNm, psParentColNm) {  
-    var vsLevel = "temp_l_" ;
-    var vsSort = "temp_n_";  
-    
+	var vsLevel = "temp_l_" ;
+	var vsSort = "temp_n_";  
+	
    /** @type cpr.controls.Grid */
    var vcGrid = app.lookup(psGridId);
    /** @type cpr.data.DataSet */
@@ -6535,43 +6642,43 @@ GridKit.prototype.buildGridToTree = function(app, psGridId, psDataColNm, psParen
    if (vaTeeCell.length == 0) return;
    
    var vcTeeCell = vaTeeCell[0];
-    var voTempLvlHeader = vcDataSet.getHeader(vsLevel);
-    if (voTempLvlHeader == null || voTempLvlHeader == undefined) {
-    	vcDataSet.addColumn(new cpr.data.header.DataHeader(vsLevel, "number"));
-    }
-                        
-    var voTempSortHeader = vcDataSet.getHeader(vsSort);
-    if (voTempSortHeader == null || voTempSortHeader == undefined) {
-    	vcDataSet.addColumn(new cpr.data.header.DataHeader(vsSort, "number"));
-    }
-    
-    vcTeeCell.bind("level").toExpression(vsLevel); 
-    
+	var voTempLvlHeader = vcDataSet.getHeader(vsLevel);
+	if (voTempLvlHeader == null || voTempLvlHeader == undefined) {
+		vcDataSet.addColumn(new cpr.data.header.DataHeader(vsLevel, "number"));
+	}
+						
+	var voTempSortHeader = vcDataSet.getHeader(vsSort);
+	if (voTempSortHeader == null || voTempSortHeader == undefined) {
+		vcDataSet.addColumn(new cpr.data.header.DataHeader(vsSort, "number"));
+	}
+	
+	vcTeeCell.bind("level").toExpression(vsLevel); 
+	
    /** @type cpr.controls.Tree */
    var vcTmpTree = vcGrid.userData("_tree"); 
-    if (!vcTmpTree) {
-    	var voTreeInfo = {
-    		"label": psDataColNm,
-    		"value": psDataColNm,
-    		"parentValue": psParentColNm,
-    		"checked": "checked"
-    	};
-    	vcTmpTree = new cpr.controls.Tree();
-    	(function(tree_1) {
-    		tree_1.setItemSet(vcDataSet, voTreeInfo);
-    	})(vcTmpTree);
-    }
-    vcTmpTree.userAttr("_level", vsLevel);
-    vcTmpTree.userAttr("_sort", vsSort);
+	if (!vcTmpTree) {
+		var voTreeInfo = {
+			"label": psDataColNm,
+			"value": psDataColNm,
+			"parentValue": psParentColNm,
+			"checked": "checked"
+		};
+		vcTmpTree = new cpr.controls.Tree();
+		(function(tree_1) {
+			tree_1.setItemSet(vcDataSet, voTreeInfo);
+		})(vcTmpTree);
+	}
+	vcTmpTree.userAttr("_level", vsLevel);
+	vcTmpTree.userAttr("_sort", vsSort);
 
-    this._setTreeInfo(vcTmpTree, null, 0);
-    vcGrid.userData("_tree", vcTmpTree);
-    vcTeeCell.redraw();
-    
-    vcGrid.sort(vsSort);
-    vcGrid.redraw(); 
-     
-    vcDataSet.deleteColumn(vsSort);
+	this._setTreeInfo(vcTmpTree, null, 0);
+	vcGrid.userData("_tree", vcTmpTree);
+	vcTeeCell.redraw();
+	
+	vcGrid.sort(vsSort);
+	vcGrid.redraw(); 
+	 
+	vcDataSet.deleteColumn(vsSort);
 };
 
 /**
@@ -6887,25 +6994,25 @@ GridKit.prototype.setWholeRenderingMode = function(app, psGridId, mode) {
  *   dataSetId	: #dataset	<!-- 그리드와 바인딩 되는 데이터셋 ID 또는 데이터셋 객체(app.lookup("dataSetId")) -->,
  *   isSimpleGrid : Boolean <!-- 단순 그리드 구성 여부(데이터셋의 컬럼 순서로 구성 한 단순 출력용 그리드 <br> <b>* 헤더영역 컬럼명은 데이터셋 컬럼의 info 속성이 존재 할 경우 info 속성 우선</b> <br> <b>* 디테일영역에 입력 컨트롤 배치X</b> -->,
  *   autoFit : String =`all` <!-- 지정된 영역의 너비에 맞게 셀의 크기를 자동조절 <br> 
- *                         none : 해당 기능을 사용하지 않고, 지정된 넓이로 설정됩니다.<br>
- *                         all : 모든 컬럼이 균등 계산되어 셀의 크기가 자동 조절됩니다.<br>
- *                         columnindex : 특정 컬럼 인덱스를 지정시, 해당 컬럼 크기만 조절하여 지정된 영역의 너비에 맞도록 합니다. 콤마(,) 구분자를 통해 여러 컬럼을 설정할 수 있습니다.<br>
- *                     -->,
+ *						 none : 해당 기능을 사용하지 않고, 지정된 넓이로 설정됩니다.<br>
+ *						 all : 모든 컬럼이 균등 계산되어 셀의 크기가 자동 조절됩니다.<br>
+ *						 columnindex : 특정 컬럼 인덱스를 지정시, 해당 컬럼 크기만 조절하여 지정된 영역의 너비에 맞도록 합니다. 콤마(,) 구분자를 통해 여러 컬럼을 설정할 수 있습니다.<br>
+ *					 -->,
  *   useSimpleGirdColumnType : {
- *     checkbox: Boolean =`true` <!-- checkbox 배치 여부(rowindex와 같이 배치 할 경우 checkbox가 첫번째 컬럼에 배치) -->,
- *     rowindex:Boolean =`true` <!-- rowindex 배치 여부(checkbox와 같이 배치 할 경우 rowindex가 두번째 컬럼에 배치 함) -->
+ *	 checkbox: Boolean =`true` <!-- checkbox 배치 여부(rowindex와 같이 배치 할 경우 checkbox가 첫번째 컬럼에 배치) -->,
+ *	 rowindex:Boolean =`true` <!-- rowindex 배치 여부(checkbox와 같이 배치 할 경우 rowindex가 두번째 컬럼에 배치 함) -->
  *   } <!-- 단순 그리드(isSimpleGrid 속성이 true인 경우)에서 columnType control 배치 여부 <br> -->,
  *   header : {
- *     rows: cpr.controls.gridpart.GridRowConfig[] <!-- 헤더 로우 높이 배열 (로우 갯수 만큼 필요) <br> <b>* 입력 예시: [{"height":"100px"}]</b> -->,
- *     cells: cpr.controls.gridpart.GridHeaderCellConfig[] <!-- <b>헤더 영역 내부의 cell 구성 정보(constraint, configurator)</b> -->
+ *	 rows: cpr.controls.gridpart.GridRowConfig[] <!-- 헤더 로우 높이 배열 (로우 갯수 만큼 필요) <br> <b>* 입력 예시: [{"height":"100px"}]</b> -->,
+ *	 cells: cpr.controls.gridpart.GridHeaderCellConfig[] <!-- <b>헤더 영역 내부의 cell 구성 정보(constraint, configurator)</b> -->
  *   } <!-- 헤더 영역 정보 -->,
  *   detail : {
- *     rows: cpr.controls.gridpart.GridRowConfig[] <!-- 디테일 로우 높이 배열 <br> <b>* 입력 예시: [{"height":"100px"}]</b> -->,
- *     cells: cpr.controls.gridpart.GridHeaderCellConfig[] <!-- <b>디테일 영역 내부의 cell 구성 정보(constraint, configurator)</b> -->
+ *	 rows: cpr.controls.gridpart.GridRowConfig[] <!-- 디테일 로우 높이 배열 <br> <b>* 입력 예시: [{"height":"100px"}]</b> -->,
+ *	 cells: cpr.controls.gridpart.GridHeaderCellConfig[] <!-- <b>디테일 영역 내부의 cell 구성 정보(constraint, configurator)</b> -->
  *   } <!-- 디테일 영역 정보 -->,
  *   footer : {
- *     rows: cpr.controls.gridpart.GridRowConfig[] <!-- 푸터 로우 높이 배열 <br> <b>* 입력 예시: [{"height":"100px"}]</b> -->,
- *     cells: cpr.controls.gridpart.GridHeaderCellConfig[] <!-- <b>푸터 영역 내부의 cell 구성 정보(constraint, configurator)</b> -->
+ *	 rows: cpr.controls.gridpart.GridRowConfig[] <!-- 푸터 로우 높이 배열 <br> <b>* 입력 예시: [{"height":"100px"}]</b> -->,
+ *	 cells: cpr.controls.gridpart.GridHeaderCellConfig[] <!-- <b>푸터 영역 내부의 cell 구성 정보(constraint, configurator)</b> -->
  *   } <!-- 푸터 영역 정보 -->
  * } poDynamicInfo 동적으로 그리드를 구성 할 정보 <br>&nbsp <b>* 임시 화면(clx)에서 구성 하고자 하는 그리드 형태로 그리드를 구성 한 후 컴파일 된 결과 파일 보기에서 그리드 구성 정보 소스를 복사하여 파라미터로 전달 시 데이터 구성을 쉽게 할 수 있습니다.</b><br>
  * 				   <b style="color:red;">&nbsp * 디자인탭 Context Menu(마우스 우클릭) > 보기 > 컴파일된 결과 파일 보기 > // UI Configuration 주석 하위에서 grid.init() 함수 파라미터 부분 참조</b>
@@ -9426,7 +9533,7 @@ SubmissionKit.prototype.send = function(app, psSvcId, successCallback, pbAppEnab
 		}
 		voLoadmask._activeSubmission[voLoadmask._activeSubmission.length] = vcSubmission;
 	}
-    	
+		
 	return vcSubmission.send();
 };
 
@@ -9579,7 +9686,7 @@ function TreeKit(appKit) {
  * @param {#tree} psTreeId 트리 ID
  * @param {String} psDiv? 얻어올 값 영역(label 또는 value)
  * @return {String | Array}  multiple : true 일 경우 Array(String)<br>
- *                           multiple : false 일 경우 String  
+ *						   multiple : false 일 경우 String  
  */
 TreeKit.prototype.getSelectedValue = function(app, psTreeId, psDiv) {
 	/** @type cpr.controls.Tree */

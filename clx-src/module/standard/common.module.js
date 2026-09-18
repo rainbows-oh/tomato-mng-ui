@@ -75,7 +75,7 @@ AppKit.prototype.procEb6Privew = function(app) {
 			voReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 			var voData = {
 				topic: "openAppEditor",
-				location: "http://xxxx.yyy/" + encodeURIComponent("pse-sbm-front"),
+				location: "http://xxxx.yyy/" + encodeURIComponent("front"),
 				payload: vsAppId
 			};
 			voReq.send(JSON.stringify(voData));
