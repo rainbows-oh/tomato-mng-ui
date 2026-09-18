@@ -241,7 +241,7 @@
           <cl:gridcolumn std:sid="g-column-fdb63b26" width="140px"/>
           <cl:gridcolumn std:sid="g-column-db161a96" width="140px"/>
           <cl:gridheader std:sid="gh-band-46ac1d80">
-            <cl:gridrow std:sid="g-row-0657b73e" height="33px"/>
+            <cl:gridrow std:sid="g-row-0657b73e" height="32px"/>
             <cl:gridcell std:sid="gh-cell-0708f002" rowindex="0" colindex="0" targetcolumnname="no" sortable="false" filterable="false" text="No"/>
             <cl:gridcell std:sid="gh-cell-7b119313" rowindex="0" colindex="1" targetcolumnname="status" sortable="true" filterable="false" text="Status"/>
             <cl:gridcell std:sid="gh-cell-064b97d0" rowindex="0" colindex="2" targetcolumnname="userName" sortable="true" filterable="false" text="User Name"/>
@@ -256,7 +256,7 @@
             <cl:gridcell std:sid="gh-cell-54993f5b" rowindex="0" colindex="11" targetcolumnname="fax" sortable="true" filterable="false" text="Fax"/>
           </cl:gridheader>
           <cl:griddetail std:sid="gd-band-511ea2b0">
-            <cl:gridrow std:sid="g-row-adf0964b" height="33px"/>
+            <cl:gridrow std:sid="g-row-adf0964b" height="50px"/>
             <cl:gridcell std:sid="gd-cell-4d15fee1" rowindex="0" colindex="0" columnname="no">
               <cl:output std:sid="output-4098aff0">
                 <cl:celldata std:sid="c-data-af6bd4c3"/>

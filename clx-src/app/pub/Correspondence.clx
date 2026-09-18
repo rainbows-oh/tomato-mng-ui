@@ -287,7 +287,7 @@
           <cl:gridcolumn std:sid="g-column-c11c0bdf" width="200px"/>
           <cl:gridcolumn std:sid="g-column-72b9731d" width="190px"/>
           <cl:gridheader std:sid="gh-band-89cd486a">
-            <cl:gridrow std:sid="g-row-19ffc635" height="33px"/>
+            <cl:gridrow std:sid="g-row-19ffc635" height="32px"/>
             <cl:gridcell std:sid="gh-cell-283a65b7" rowindex="0" colindex="0" targetcolumnname="no" sortable="false" filterable="false" text="no"/>
             <cl:gridcell std:sid="gh-cell-40ebf77c" rowindex="0" colindex="1" targetcolumnname="classification" sortable="false" filterable="false" text="Classification"/>
             <cl:gridcell std:sid="gh-cell-2b46179b" rowindex="0" colindex="2" targetcolumnname="subject" sortable="false" filterable="false" text="Subject"/>
@@ -298,15 +298,15 @@
             <cl:gridcell std:sid="gh-cell-aa2d8bc5" rowindex="0" colindex="7" targetcolumnname="date" sortable="false" filterable="false" text="Date and Time"/>
           </cl:gridheader>
           <cl:griddetail std:sid="gd-band-297267ae">
-            <cl:gridrow std:sid="g-row-9196743e" height="33px"/>
+            <cl:gridrow std:sid="g-row-9196743e" height="50px"/>
             <cl:gridcell std:sid="gd-cell-2d7d94a5" rowindex="0" colindex="0" columnname="no">
               <cl:output std:sid="output-fe63d2dc">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-edde5143"/>
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-1ea08c47" rowindex="0" colindex="1" columnname="classification">
               <cl:output std:sid="output-1c7345da">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-9434a234"/>
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-0de17b29" rowindex="0" colindex="2" columnname="subject">
@@ -316,27 +316,27 @@
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-f64d2f84" rowindex="0" colindex="3" columnname="replyStatus">
               <cl:output std:sid="output-27a1a6ff" displayexp="sstr(switch(replyStatus){&#xA;&#x9;case &quot;open&quot; : &quot;Open&quot;&#xA;&#x9;case &quot;closed&quot; : &quot;Closed&quot;&#xA;&#x9;default : &quot;-&quot;&#xA;},&#xA;switch(replyStatus){&#xA;&#x9;case &quot;open&quot; : &quot;badge soft warning&quot;&#xA;&#x9;case &quot;closed&quot; : &quot;badge soft success&quot;&#xA;&#x9;default : &quot;&quot;&#xA;})">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-75af08f2"/>
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-8d90aca5" rowindex="0" colindex="4" columnname="deadline">
               <cl:output std:sid="output-3ffde7ba" datatype="date" format="MM-DD-YYYY">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-d3dbb5bd"/>
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-f345052d" rowindex="0" colindex="5" columnname="analyst">
               <cl:output std:sid="output-8e873c43">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-0e82e323"/>
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-5efe415c" rowindex="0" colindex="6" columnname="department">
               <cl:output std:sid="output-b4950df6">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-1f398960"/>
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-36b30c09" rowindex="0" colindex="7" columnname="date">
               <cl:output std:sid="output-91061f91" datatype="date" format="MM-DD-YYYY hh:mm:ss A">
-                <cl:celldata/>
+                <cl:celldata std:sid="c-data-2a810da7"/>
               </cl:output>
             </cl:gridcell>
           </cl:griddetail>

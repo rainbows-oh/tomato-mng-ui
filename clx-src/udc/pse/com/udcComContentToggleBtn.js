@@ -72,7 +72,7 @@ function toggleContentGroup(psShowType) {
  * 앱이 최초 구성될 때 발생하는 이벤트 입니다.
  */
 function onBodyInit(e) {
-	app.lookup("btnShowGrid").style.setClasses("btn-show-grid icon cl cl-focus");
+	app.lookup("btnShowGrid").style.setClasses("btn-show-grid icon cl-focus");
 	toggleContentGroup("grid");
 }
 

@@ -259,7 +259,7 @@
           <cl:gridcolumn std:sid="g-column-65ffe426" width="140px"/>
           <cl:gridcolumn std:sid="g-column-72b9731d" width="190px"/>
           <cl:gridheader std:sid="gh-band-89cd486a">
-            <cl:gridrow std:sid="g-row-19ffc635" height="33px"/>
+            <cl:gridrow std:sid="g-row-19ffc635" height="32px"/>
             <cl:gridcell std:sid="gh-cell-283a65b7" rowindex="0" colindex="0" targetcolumnname="no" sortable="false" filterable="false" text="no"/>
             <cl:gridcell std:sid="gh-cell-40ebf77c" rowindex="0" colindex="1" targetcolumnname="company" sortable="false" filterable="false" text="Company"/>
             <cl:gridcell std:sid="gh-cell-2b46179b" rowindex="0" colindex="2" targetcolumnname="subject" sortable="false" filterable="false" text="Subject"/>
@@ -268,7 +268,7 @@
             <cl:gridcell std:sid="gh-cell-aa2d8bc5" rowindex="0" colindex="5" targetcolumnname="questionDate" sortable="false" filterable="false" text="Question Date and Time"/>
           </cl:gridheader>
           <cl:griddetail std:sid="gd-band-297267ae">
-            <cl:gridrow std:sid="g-row-9196743e" height="33px"/>
+            <cl:gridrow std:sid="g-row-9196743e" height="50px"/>
             <cl:gridcell std:sid="gd-cell-2d7d94a5" rowindex="0" colindex="0" columnname="no">
               <cl:output std:sid="output-fe63d2dc">
                 <cl:celldata std:sid="c-data-d0fedfc9"/>
