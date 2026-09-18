@@ -27,7 +27,9 @@ var CPR_DEFAULTS = {
 		dateinput: {
 			footerVisible: false,
 			headerButtons: ["title", "prev", "next"],
-			showOtherMonths: true
+			showOtherMonths: true,
+			format: "MMDDYYYY",
+			mask: "MMDDYYYY"
 		},
 		dialog: {},
 		embeddedapp: {},
@@ -87,6 +89,7 @@ var CPR_DEFAULTS = {
 			maxNotifyCount: 1,
 		},
 		output: {
+			dateValueFormat: "MMDDYYYYHHmmssSSS",
 			unselectable: false
 		},
 		pageindexer: {

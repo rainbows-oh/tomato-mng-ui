@@ -509,6 +509,11 @@
 @breakpoint-large:   1024px;
 @breakpoint-xlarge:  1280px;
 @breakpoint-xxlarge: 1440px;
+
+/* 경계 직전 값, max-width 조건에서 사용 */
+@breakpoint-medium-max: (@breakpoint-medium - 1px);
+@breakpoint-large-max:  (@breakpoint-large - 1px);
+@breakpoint-xlarge-max: (@breakpoint-xlarge - 1px);
  
 /************************************************
  * 콘텐츠
@@ -525,19 +530,19 @@
  ************************************************/
 
 /* 767 까지 */
-@size-medium: 			~"(max-width: @{breakpoint-max-medium})";
+@size-medium: 			~"(max-width: @{breakpoint-medium-max})";
 /* 768 이상 */
 @size-medium-more: 		~"(min-width: @{breakpoint-medium})";
 /* 768 이상 1023까지 */
-@size-medium-to-large:  ~"(min-width: @{breakpoint-medium}) and (max-width: @{breakpoint-max-large})";
+@size-medium-to-large:  ~"(min-width: @{breakpoint-medium}) and (max-width: @{breakpoint-large-max})";
 /* 1023 까지 */
-@size-large-less: 		~"(max-width: @{breakpoint-max-large})";
+@size-large-less: 		~"(max-width: @{breakpoint-large-max})";
 /* 1024 이상 */
 @size-large-more: 		~"(min-width: @{breakpoint-large})";
 /* 1024 이상 1279 까지 */
-@size-large-to-xlarge:  ~"(min-width: @{breakpoint-large}) and (max-width: @{breakpoint-max-xlarge})";
+@size-large-to-xlarge:  ~"(min-width: @{breakpoint-large}) and (max-width: @{breakpoint-xlarge-max})";
 /* 1279 까지 */
-@size-xlarge-less: 		~"(max-width: @{breakpoint-max-xlarge})";
+@size-xlarge-less: 		~"(max-width: @{breakpoint-xlarge-max})";
 /* 1280 이상 */
 @size-xlarge: 			~"(min-width: @{breakpoint-xlarge})";
 

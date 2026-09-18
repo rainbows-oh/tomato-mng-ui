@@ -1,29 +1,31 @@
+@import (reference) "../../custom-settings.part.less";
+
 .cl-button {
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: @font-weight-semibold;
 	padding: 0 12px;
 }
 
-.cl-button.primary { 
-	background-color: #533afd;
-	color: #ffffff;
-}
-
-.cl-button.secondary {
-	background-color: #ffffff;
-	border: 1px solid #533afd;
-	color: #533afd;
-}
-
-.cl-button.tertiary {
-	background-color: #ffffff;
-	border: 1px solid #e3e8ee;
-}
+//.cl-button.primary { 
+//	background-color: #533afd;
+//	color: #ffffff;
+//}
+//
+//.cl-button.secondary {
+//	background-color: #ffffff;
+//	border: 1px solid #533afd;
+//	color: #533afd;
+//}
+//
+//.cl-button.tertiary {
+//	background-color: #ffffff;
+//	border: 1px solid #e3e8ee;
+//}
 
 .cl-output.h-tit {
 	color: #0d253d;
 	font-size: 15px;
-	font-weight: 600;
+	font-weight: @font-weight-semibold;
 	line-height: 1.4;
 }
 
@@ -34,7 +36,7 @@
 	
 	.cl-container.btn-wrap {
 		.cl-button {
-			border-radius: 9999px;
+			border-radius: @border-radius-full;
 		}
 	}
 }
@@ -43,6 +45,10 @@
 	max-width: 900px;
 	width: 100%;
 	margin: 0 auto;
+	
+	@media @size-large-less {
+		max-width: 100%;
+	}
 }
 
 .cl-container.search-top-box {
@@ -59,7 +65,7 @@
 			background: url("../../img/icons/ico_angle.svg") no-repeat right center;
 			background-size: 18px;
 			font-size: 15px;
-			font-weight: 600;
+			font-weight: @font-weight-semibold;
 			padding-right: 18px;
 			text-align: left;
 		}
@@ -67,7 +73,7 @@
 		.cl-output.truncate {
 			color: #64748d;
 			font-size: 13px;
-			font-weight: 400;
+			font-weight: @font-weight-normal;
 			letter-spacing: -0.39px;
 		}
 	}
@@ -76,7 +82,7 @@
 		.cl-output.label {
 			color: #0d253d;
 			font-size: 13px;
-			font-weight: 600;
+			font-weight: @font-weight-semibold;
 			letter-spacing: -0.39px;
 			text-align: left;
 		}
@@ -104,7 +110,7 @@
 .cl-output.sch-info {
 	color: #64748d;
 	font-size: 13px;
-	font-weight: 400;
+	font-weight: @font-weight-normal;
 	line-height: 1.4;
 	letter-spacing: -0.39px;
 }
@@ -131,7 +137,7 @@
 	.cl-output.page-info {
 		color: #64748d;
 		font-size: 13px;
-		font-weight: 400;
+		font-weight: @font-weight-normal;
 		letter-spacing: -0.39px;
 	}
 	
@@ -149,12 +155,12 @@
 		}
 		
 		&.prev {
-			border-radius: 9999px 0 0 9999px;
+			border-radius: @border-radius-full 0 0 @border-radius-full;
 			border-right-color: transparent;
 		}
 		
 		&.next {
-			border-radius: 0 9999px 9999px 0;
+			border-radius: 0 @border-radius-full @border-radius-full 0;
 		}
 		
 		&.cl-disabled {
@@ -181,7 +187,7 @@
 			&.cl-sort-asc,
 			&.cl-sort-desc {
 				color: #533afd;
-				font-weight: 600;
+				font-weight: @font-weight-semibold;
 			}
 		}
 	}

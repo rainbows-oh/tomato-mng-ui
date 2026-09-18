@@ -1,10 +1,10 @@
 <?xml version="1.1" encoding="UTF-8"?>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-b86079e0" version="1.0.6190">
-  <head std:sid="head-71f28fa7">
-    <screen std:sid="screen-68d8a337" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
-    <screen std:sid="screen-c1b4403e" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
-    <screen std:sid="screen-f096cf2e" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
-    <cl:model std:sid="model-e07c35d2">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9a4ac21c" version="1.0.6190">
+  <head std:sid="head-8c5277a6">
+    <screen std:sid="screen-3056f053" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-9d96fb4f" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-05a152f9" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-0c3d5d76">
       <cl:dataset std:sid="d-set-4e0cfd46" id="dsList">
         <cl:datacolumnlist>
           <cl:datacolumn comment="No" std:sid="d-column-a57893d5" name="no"/>
@@ -12,40 +12,36 @@
           <cl:datacolumn comment="User Name" std:sid="d-column-7232173f" name="userName"/>
           <cl:datacolumn comment="Name" std:sid="d-column-921e80da" name="name"/>
           <cl:datacolumn comment="Company Name" std:sid="d-column-343e64f1" name="companyName"/>
-          <cl:datacolumn comment="Position/Designation" std:sid="d-column-2db6d160" name="positionDesignation"/>
           <cl:datacolumn comment="Role" std:sid="d-column-1f0fd191" name="role"/>
-          <cl:datacolumn comment="Registration Date" std:sid="d-column-df69c698" name="registDate"/>
-          <cl:datacolumn comment="Email Address" std:sid="d-column-4635cec4" name="email"/>
-          <cl:datacolumn comment="Telephone" std:sid="d-column-9677bdbf" name="telephone"/>
-          <cl:datacolumn comment="Mobile" std:sid="d-column-17535ea7" name="mobile"/>
-          <cl:datacolumn comment="Fax" std:sid="d-column-eda997aa" name="fax"/>
         </cl:datacolumnlist>
         <cl:datarowlist>
           <cl:datarow>
             <cl:datavalue columnname="no"><![CDATA[1]]></cl:datavalue>
             <cl:datavalue columnname="status"><![CDATA[Y]]></cl:datavalue>
             <cl:datavalue columnname="userName"><![CDATA[n.femandez]]></cl:datavalue>
-            <cl:datavalue columnname="companyName"><![CDATA[PSE]]></cl:datavalue>
-            <cl:datavalue columnname="positionDesignation"><![CDATA[Senior Disclosure Officer]]></cl:datavalue>
-            <cl:datavalue columnname="role"><![CDATA[Maker]]></cl:datavalue>
-            <cl:datavalue columnname="email"><![CDATA[nina.femandez@pse.com.ph]]></cl:datavalue>
-            <cl:datavalue columnname="telephone"><![CDATA[+63 8800 1515]]></cl:datavalue>
-            <cl:datavalue columnname="mobile"><![CDATA[+63 917 151 1515]]></cl:datavalue>
-            <cl:datavalue columnname="fax"><![CDATA[+63 2 8800 1516]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Disclosure Department]]></cl:datavalue>
+            <cl:datavalue columnname="role"><![CDATA[DD supervisor]]></cl:datavalue>
             <cl:datavalue columnname="name"><![CDATA[Femandez. Nica C.]]></cl:datavalue>
-            <cl:datavalue columnname="registDate"><![CDATA[03032023]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[2]]></cl:datavalue>
+            <cl:datavalue columnname="status"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="userName"><![CDATA[q.sy]]></cl:datavalue>
+            <cl:datavalue columnname="name"><![CDATA[Sy, Quinn Mae]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[PSE]]></cl:datavalue>
+            <cl:datavalue columnname="role"><![CDATA[SD specialist]]></cl:datavalue>
           </cl:datarow>
         </cl:datarowlist>
       </cl:dataset>
     </cl:model>
     <cl:appspec/>
   </head>
-  <body std:sid="body-6e62bb19">
+  <body std:sid="body-3957dbf0">
     <cl:group std:sid="group-e6d3a8f4" class="page-title-wrap">
-      <cl:verticaldata std:sid="v-data-98340ade" width="400px" height="56px" autosize="height" sticky="true" stickytopoffset="0"/>
-      <cl:udc std:sid="ud-control-e529ea22" type="udc.pse.com.UdcComAppHeader">
+      <cl:verticaldata std:sid="v-data-98340ade" width="1024px" height="56px" autosize="height" sticky="true" stickytopoffset="0"/>
+      <cl:udc std:sid="ud-control-e529ea22" id="udccomappheader1" type="udc.pse.com.UdcComAppHeader">
         <cl:formdata std:sid="f-data-dc2be6ec" row="0" col="0"/>
-        <cl:property name="title" value="Submission Account" type="string"/>
+        <cl:property name="title" value="Management Account" type="string"/>
       </cl:udc>
       <cl:group std:sid="group-a9c7fa09" class="btn-wrap">
         <cl:formdata std:sid="f-data-7f7c89bb" valign="FILL" height="32" row="0" col="1"/>
@@ -84,50 +80,31 @@
               <cl:group std:sid="group-18265d5e">
                 <cl:attribute name="needs-auto-height" value="true"/>
                 <cl:formdata std:sid="f-data-da12ba26" width="100" height="30" row="0" col="0" rowspan="1" colspan="1"/>
-                <cl:output std:sid="output-b959ce01" class="label" value="Company Name">
+                <cl:output std:sid="output-b959ce01" class="label" value="Company">
                   <cl:verticaldata std:sid="v-data-4f88e24d" width="100px" height="18px" autosize="height"/>
                 </cl:output>
-                <cl:group std:sid="group-c414dac3" class="input-group">
-                  <cl:attribute name="mobile-column-count" value="1"/>
-                  <cl:verticaldata std:sid="v-data-e3e556b1" width="400px" height="32px" autosize="height"/>
-                  <cl:combobox std:sid="c-box-2c936ee1" fieldLabel="Select account">
-                    <cl:formdata std:sid="f-data-a01bd304" row="0" col="0"/>
-                  </cl:combobox>
-                  <cl:inputbox std:sid="i-box-49ccdf4b" fieldLabel="Company Name" placeholder="Enter a company name or stock symbol">
-                    <cl:formdata std:sid="f-data-1da30e7a" row="0" col="1"/>
-                  </cl:inputbox>
-                  <cl:formlayout std:sid="f-layout-0c69c4c5" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
-                    <cl:rows length="32" unit="PIXEL"/>
-                    <cl:columns length="110" unit="PIXEL"/>
-                    <cl:columns length="1" unit="FRACTION"/>
-                  </cl:formlayout>
-                </cl:group>
+                <cl:combobox std:sid="c-box-2c936ee1" fieldLabel="Select Company">
+                  <cl:verticaldata std:sid="v-data-9b2f5447" width="110px" height="32px" autosize="none"/>
+                </cl:combobox>
                 <cl:verticallayout std:sid="v-layout-39cff7b2"/>
               </cl:group>
-              <cl:group std:sid="group-f66333fb">
-                <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:group std:sid="group-f91a0fe0">
                 <cl:attribute name="needs-auto-height" value="true"/>
-                <cl:formdata std:sid="f-data-077a44c9" row="0" col="1"/>
-                <cl:group std:sid="group-8a7da471">
-                  <cl:attribute name="needs-auto-height" value="true"/>
-                  <cl:formdata std:sid="f-data-f1767622" row="0" col="0"/>
-                  <cl:output std:sid="output-56dbcdb2" class="label" value="User Type">
-                    <cl:verticaldata std:sid="v-data-3b8eff09" width="100px" height="18px" autosize="height"/>
-                  </cl:output>
-                  <cl:combobox std:sid="c-box-c130adcf" fieldLabel="Select user type">
-                    <cl:verticaldata std:sid="v-data-0421b433" width="110px" height="32px" autosize="none"/>
-                  </cl:combobox>
-                  <cl:verticallayout std:sid="v-layout-b2905c9c"/>
-                </cl:group>
-                <cl:formlayout std:sid="f-layout-2cf806a2" scrollable="false" hspace="40px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
-                  <cl:rows length="1" unit="FRACTION"/>
-                  <cl:columns length="1" unit="FRACTION" minlength="128"/>
-                  <cl:columns length="1" unit="FRACTION"/>
-                </cl:formlayout>
+                <cl:formdata std:sid="f-data-fa1bddeb" row="0" col="1"/>
+                <cl:output std:sid="output-aea88f6a" class="label" value="Role">
+                  <cl:verticaldata std:sid="v-data-ec57d7ac" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:combobox std:sid="c-box-84e850f8" fieldLabel="Select role">
+                  <cl:verticaldata std:sid="v-data-72e3772c" width="110px" height="32px" autosize="none"/>
+                  <cl:item std:sid="t-item-8cdac734" label="All" value="value1"/>
+                </cl:combobox>
+                <cl:verticallayout std:sid="v-layout-2a25befb"/>
               </cl:group>
               <cl:formlayout std:sid="f-layout-9ef51124" scrollable="false" hspace="12px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
                 <cl:rows length="1" unit="FRACTION"/>
                 <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION" minlength="0"/>
+                <cl:columns length="1" unit="FRACTION" minlength="0"/>
                 <cl:columns length="1" unit="FRACTION" minlength="0"/>
               </cl:formlayout>
             </cl:group>
@@ -136,7 +113,7 @@
               <cl:verticaldata std:sid="v-data-5e8ee2ea" width="926px" height="58px" autosize="height"/>
               <cl:group std:sid="group-077cfe11">
                 <cl:attribute name="needs-auto-height" value="true"/>
-                <cl:formdata std:sid="f-data-0db0396b" width="100" height="30" row="0" col="0" rowspan="1" colspan="1"/>
+                <cl:formdata std:sid="f-data-ea873e8e" width="100" height="30" row="0" col="0" rowspan="1" colspan="2"/>
                 <cl:output std:sid="output-1fa9e053" class="label" value="Name">
                   <cl:verticaldata std:sid="v-data-59291d5b" width="100px" height="18px" autosize="height"/>
                 </cl:output>
@@ -145,45 +122,24 @@
                 </cl:inputbox>
                 <cl:verticallayout std:sid="v-layout-52f2611a"/>
               </cl:group>
-              <cl:group std:sid="group-4ccc0a8f">
-                <cl:attribute name="mobile-column-count" value="1"/>
-                <cl:formdata std:sid="f-data-0fe7f3bc" row="0" col="1"/>
-                <cl:group std:sid="group-beb95506">
-                  <cl:attribute name="needs-auto-height" value="true"/>
-                  <cl:formdata std:sid="f-data-1a11f953" row="0" col="0"/>
-                  <cl:output std:sid="output-6223e3bc" class="label" value="Status">
-                    <cl:verticaldata std:sid="v-data-d71109cd" width="100px" height="18px" autosize="height"/>
-                  </cl:output>
-                  <cl:checkboxgroup std:sid="cb-group-b6950bae" fieldLabel="Status">
-                    <cl:verticaldata std:sid="v-data-8e5cc669" width="200px" height="32px"/>
-                    <cl:item std:sid="item-bd0b0d35" label="Active" value="value1"/>
-                    <cl:item std:sid="item-77e8e0f8" label="Inactive" value="value2"/>
-                  </cl:checkboxgroup>
-                  <cl:verticallayout std:sid="v-layout-0fb33905"/>
-                </cl:group>
-                <cl:group std:sid="group-2bd28068">
-                  <cl:attribute name="needs-auto-height" value="true"/>
-                  <cl:formdata std:sid="f-data-dea8f878" row="0" col="1"/>
-                  <cl:output std:sid="output-cb5176ea" class="label" value="Role">
-                    <cl:verticaldata std:sid="v-data-84ba30c8" width="100px" height="18px" autosize="height"/>
-                  </cl:output>
-                  <cl:checkboxgroup std:sid="cb-group-dbe5a13a" fieldLabel="Role">
-                    <cl:verticaldata std:sid="v-data-dbbce960" width="200px" height="32px"/>
-                    <cl:item std:sid="item-15576cf2" label="Admin" value="value1"/>
-                    <cl:item std:sid="item-fc080c77" label="Maker" value="value2"/>
-                    <cl:item std:sid="item-15444da7" label="Approver" value="value3"/>
-                  </cl:checkboxgroup>
-                  <cl:verticallayout std:sid="v-layout-b12b6f0f"/>
-                </cl:group>
-                <cl:formlayout std:sid="f-layout-fc6afe33" scrollable="false" hspace="40px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
-                  <cl:rows length="1" unit="FRACTION"/>
-                  <cl:columns length="209" unit="PIXEL" autoSizing="true" syncminlength="false"/>
-                  <cl:columns length="208" unit="PIXEL" autoSizing="true" syncminlength="false"/>
-                </cl:formlayout>
+              <cl:group std:sid="group-beb95506">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-614c21ba" row="0" col="2"/>
+                <cl:output std:sid="output-6223e3bc" class="label" value="Status">
+                  <cl:verticaldata std:sid="v-data-d71109cd" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:checkboxgroup std:sid="cb-group-b6950bae" fieldLabel="Status">
+                  <cl:verticaldata std:sid="v-data-8e5cc669" width="200px" height="32px"/>
+                  <cl:item std:sid="item-bd0b0d35" label="Active" value="value1"/>
+                  <cl:item std:sid="item-77e8e0f8" label="Inactive" value="value2"/>
+                </cl:checkboxgroup>
+                <cl:verticallayout std:sid="v-layout-0fb33905"/>
               </cl:group>
               <cl:formlayout std:sid="f-layout-b8e922d8" scrollable="false" hspace="12px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
                 <cl:rows length="1" unit="FRACTION"/>
                 <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="223" unit="PIXEL" autoSizing="true" syncminlength="false"/>
                 <cl:columns length="1" unit="FRACTION"/>
               </cl:formlayout>
             </cl:group>
@@ -226,34 +182,22 @@
             <cl:columns length="422" unit="PIXEL" autoSizing="true" syncminlength="false"/>
           </cl:formlayout>
         </cl:group>
-        <cl:grid std:sid="grid-2390dbda" datasetid="dsList" autofit="1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11" resizablecolumns="all" columnMovable="true">
+        <cl:grid std:sid="grid-2390dbda" datasetid="dsList" autofit="1, 2, 3, 4, 5" resizablecolumns="all" columnMovable="true">
           <cl:verticaldata std:sid="v-data-903f06e1" width="400px" height="200px" autosize="height"/>
           <cl:gridcolumn std:sid="g-column-24920b3c" width="56px"/>
           <cl:gridcolumn std:sid="g-column-e16b5888" width="132px"/>
           <cl:gridcolumn std:sid="g-column-1f6f9a04" width="140px"/>
           <cl:gridcolumn std:sid="g-column-a2806a7e" width="200px"/>
           <cl:gridcolumn std:sid="g-column-44bb0362" width="200px"/>
-          <cl:gridcolumn std:sid="g-column-cae40d72" width="220px"/>
           <cl:gridcolumn std:sid="g-column-ec0d4e55" width="130px"/>
-          <cl:gridcolumn std:sid="g-column-25363ff2" width="140px"/>
-          <cl:gridcolumn std:sid="g-column-394be59c" width="200px"/>
-          <cl:gridcolumn std:sid="g-column-29b1f4fa" width="140px"/>
-          <cl:gridcolumn std:sid="g-column-fdb63b26" width="140px"/>
-          <cl:gridcolumn std:sid="g-column-db161a96" width="140px"/>
           <cl:gridheader std:sid="gh-band-46ac1d80">
             <cl:gridrow std:sid="g-row-0657b73e" height="33px"/>
             <cl:gridcell std:sid="gh-cell-0708f002" rowindex="0" colindex="0" targetcolumnname="no" sortable="false" filterable="false" text="No"/>
             <cl:gridcell std:sid="gh-cell-7b119313" rowindex="0" colindex="1" targetcolumnname="status" sortable="true" filterable="false" text="Status"/>
             <cl:gridcell std:sid="gh-cell-064b97d0" rowindex="0" colindex="2" targetcolumnname="userName" sortable="true" filterable="false" text="User Name"/>
             <cl:gridcell std:sid="gh-cell-59890a6a" rowindex="0" colindex="3" targetcolumnname="name" sortable="true" filterable="false" text="Name"/>
-            <cl:gridcell std:sid="gh-cell-60a492e5" rowindex="0" colindex="4" targetcolumnname="companyName" sortable="true" filterable="false" text="Company Name"/>
-            <cl:gridcell std:sid="gh-cell-dddda93c" rowindex="0" colindex="5" targetcolumnname="positionDesignation" sortable="true" filterable="false" text="Position/Designation"/>
-            <cl:gridcell std:sid="gh-cell-fef023ca" rowindex="0" colindex="6" targetcolumnname="role" sortable="true" filterable="false" text="Role"/>
-            <cl:gridcell std:sid="gh-cell-fbfe9b80" rowindex="0" colindex="7" targetcolumnname="registDate" sortable="true" filterable="false" text="Registration Date"/>
-            <cl:gridcell std:sid="gh-cell-163313a6" rowindex="0" colindex="8" targetcolumnname="email" sortable="true" filterable="false" text="Email Address"/>
-            <cl:gridcell std:sid="gh-cell-bc74e473" rowindex="0" colindex="9" targetcolumnname="telephone" sortable="true" filterable="false" text="Telephone"/>
-            <cl:gridcell std:sid="gh-cell-3f6715be" rowindex="0" colindex="10" targetcolumnname="mobile" sortable="true" filterable="false" text="Mobile"/>
-            <cl:gridcell std:sid="gh-cell-54993f5b" rowindex="0" colindex="11" targetcolumnname="fax" sortable="true" filterable="false" text="Fax"/>
+            <cl:gridcell std:sid="gh-cell-60a492e5" rowindex="0" colindex="4" targetcolumnname="companyName" sortable="true" filterable="false" text="Department/Company"/>
+            <cl:gridcell std:sid="gh-cell-fef023ca" rowindex="0" colindex="5" targetcolumnname="role" sortable="true" filterable="false" text="Role"/>
           </cl:gridheader>
           <cl:griddetail std:sid="gd-band-511ea2b0">
             <cl:gridrow std:sid="g-row-adf0964b" height="33px"/>
@@ -282,51 +226,21 @@
                 <cl:celldata std:sid="c-data-9fc27624"/>
               </cl:button>
             </cl:gridcell>
-            <cl:gridcell std:sid="gd-cell-4642fa25" rowindex="0" colindex="5" columnname="positionDesignation">
-              <cl:output std:sid="output-bcd002c6">
-                <cl:celldata std:sid="c-data-4abae775"/>
-              </cl:output>
-            </cl:gridcell>
-            <cl:gridcell std:sid="gd-cell-fa193a45" rowindex="0" colindex="6" columnname="role">
+            <cl:gridcell std:sid="gd-cell-fa193a45" rowindex="0" colindex="5" columnname="role">
               <cl:output std:sid="output-f4ae2beb">
                 <cl:celldata std:sid="c-data-67a101de"/>
               </cl:output>
             </cl:gridcell>
-            <cl:gridcell std:sid="gd-cell-4cacb2aa" rowindex="0" colindex="7" columnname="registDate">
-              <cl:output std:sid="output-4091f540">
-                <cl:celldata std:sid="c-data-4b9270db"/>
-              </cl:output>
-            </cl:gridcell>
-            <cl:gridcell std:sid="gd-cell-1681c618" rowindex="0" colindex="8" columnname="email">
-              <cl:output std:sid="output-3262d78b">
-                <cl:celldata std:sid="c-data-c45cf092"/>
-              </cl:output>
-            </cl:gridcell>
-            <cl:gridcell std:sid="gd-cell-9516ea4f" rowindex="0" colindex="9" columnname="telephone">
-              <cl:output std:sid="output-079b811c">
-                <cl:celldata std:sid="c-data-0f9a1200"/>
-              </cl:output>
-            </cl:gridcell>
-            <cl:gridcell std:sid="gd-cell-ee1d7a0d" rowindex="0" colindex="10" columnname="mobile">
-              <cl:output std:sid="output-3b0c9028">
-                <cl:celldata std:sid="c-data-a05a9ca9"/>
-              </cl:output>
-            </cl:gridcell>
-            <cl:gridcell std:sid="gd-cell-39685fb9" rowindex="0" colindex="11" columnname="fax">
-              <cl:output std:sid="output-b1fe628e">
-                <cl:celldata std:sid="c-data-7d76104a"/>
-              </cl:output>
-            </cl:gridcell>
           </cl:griddetail>
         </cl:grid>
-        <cl:udc std:sid="ud-control-eaa7f396" type="udc.pse.com.UdcComPagination">
+        <cl:udc std:sid="ud-control-eaa7f396" id="udccompagination1" type="udc.pse.com.UdcComPagination">
           <cl:verticaldata std:sid="v-data-98b2d615" width="1024px" height="60px" autosize="height"/>
         </cl:udc>
         <cl:verticallayout std:sid="v-layout-40e46285" scrollable="false" spacing="0"/>
       </cl:group>
       <cl:verticallayout std:sid="v-layout-fc7fc5a9" scrollable="false" spacing="16" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
     </cl:group>
-    <cl:verticallayout std:sid="v-layout-b3c07439" scrollable="true" spacing="0" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"/>
+    <cl:verticallayout std:sid="v-layout-2cfdf442" scrollable="true" spacing="0"/>
   </body>
   <std:studiosetting>
     <std:hruler/>

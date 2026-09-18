@@ -1,0 +1,194 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-de5392e7" version="1.0.6190">
+  <head std:sid="head-f2e6f0fe">
+    <screen std:sid="screen-366f56a7" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d0a03339" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-ca13aa67" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-93e21bd9">
+      <cl:dataset std:sid="d-set-26b0111d" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-2bf884d7" name="no"/>
+          <cl:datacolumn std:sid="d-column-b3eaf750" name="companyName"/>
+          <cl:datacolumn std:sid="d-column-cced6845" name="status"/>
+          <cl:datacolumn std:sid="d-column-72334dad" name="submissionDate"/>
+          <cl:datacolumn std:sid="d-column-9401057b" name="LcApprovalDate"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Northern Star MiningCo.]]></cl:datavalue>
+            <cl:datavalue columnname="status"><![CDATA[pending]]></cl:datavalue>
+            <cl:datavalue columnname="submissionDate"><![CDATA[08232026084116]]></cl:datavalue>
+            <cl:datavalue columnname="LcApprovalDate"><![CDATA[08232026084116]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-c90bbfe3">
+    <cl:group std:sid="group-e6d3a8f4" class="page-title-wrap">
+      <cl:verticaldata std:sid="v-data-98340ade" width="1024px" height="56px" autosize="height" sticky="true" stickytopoffset="0"/>
+      <cl:udc std:sid="ud-control-e529ea22" id="udccomappheader1" type="udc.pse.com.UdcComAppHeader">
+        <cl:formdata std:sid="f-data-dc2be6ec" row="0" col="0"/>
+        <cl:property name="title" value="Worklist" type="string"/>
+      </cl:udc>
+      <cl:group std:sid="group-a9c7fa09" class="btn-wrap">
+        <cl:formdata std:sid="f-data-7f7c89bb" valign="FILL" height="32" row="0" col="1"/>
+        <cl:flowlayout std:sid="f-layout-260fdf25" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-e3d9b3e3" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="136" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-ac6a9860" id="grpBody" class="inner">
+      <cl:verticaldata std:sid="v-data-0a24619d" width="1024px" height="1001px" autosize="height"/>
+      <cl:group std:sid="group-37a6ee44" class="search-top-box active">
+        <cl:verticaldata std:sid="v-data-b7116695" width="976px" height="251px" autosize="height"/>
+        <cl:group std:sid="group-0771f1c4" class="search-head">
+          <cl:verticaldata std:sid="v-data-4ee66d3f" width="974px" height="78px" autosize="height"/>
+          <cl:button std:sid="button-a91918a8" class="expander" value="Search filters">
+            <cl:verticaldata std:sid="v-data-6454dee6" width="100px" height="21px" autosize="height"/>
+          </cl:button>
+          <cl:output std:sid="output-eddee998" class="truncate" visible="false" value="User Type: Trading Participant · Role: Maker">
+            <cl:verticaldata std:sid="v-data-f0ffe926" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-7510003c" scrollable="false" spacing="4"/>
+        </cl:group>
+        <cl:group std:sid="group-a53d2a53" class="sch-filter-box">
+          <cl:verticaldata std:sid="v-data-85fc84d5" width="974px" height="171px" autosize="height"/>
+          <cl:group std:sid="group-bc2a3258" class="filter-form">
+            <cl:verticaldata std:sid="v-data-d17e9f6b" width="926px" height="58px" autosize="height"/>
+            <cl:group std:sid="group-1e44581c" class="row">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-af8a5cba" width="926px" height="58px" autosize="height"/>
+              <cl:group std:sid="group-18265d5e">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-9e966609" width="100" height="30" row="0" col="0" rowspan="1" colspan="3"/>
+                <cl:output std:sid="output-b959ce01" class="label" value="Company">
+                  <cl:verticaldata std:sid="v-data-4f88e24d" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:combobox std:sid="c-box-2c936ee1" fieldLabel="Select Company">
+                  <cl:verticaldata std:sid="v-data-9b2f5447" width="110px" height="32px" autosize="none"/>
+                </cl:combobox>
+                <cl:verticallayout std:sid="v-layout-39cff7b2"/>
+              </cl:group>
+              <cl:group std:sid="group-f91a0fe0">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-1adf08b1" row="0" col="3"/>
+                <cl:output std:sid="output-aea88f6a" class="label" value="Status">
+                  <cl:verticaldata std:sid="v-data-ec57d7ac" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:combobox std:sid="c-box-84e850f8" fieldLabel="Select status">
+                  <cl:verticaldata std:sid="v-data-72e3772c" width="110px" height="32px" autosize="none"/>
+                  <cl:item std:sid="t-item-8cdac734" label="All" value="value1"/>
+                </cl:combobox>
+                <cl:verticallayout std:sid="v-layout-2a25befb"/>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-9ef51124" scrollable="false" hspace="12px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION" minlength="0"/>
+                <cl:columns length="1" unit="FRACTION" minlength="0"/>
+                <cl:columns length="1" unit="FRACTION" minlength="0"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-d0aafa06" scrollable="false" spacing="16"/>
+          </cl:group>
+          <cl:group std:sid="group-abf3f235" class="search-btn-wrap">
+            <cl:verticaldata std:sid="v-data-cbb2af53" width="400px" height="49px" autosize="height"/>
+            <cl:button std:sid="button-1a5d6b29" class="btn-base" value="Clear">
+              <cl:flowlayoutdata std:sid="f-data-c07e8d8d" width="69px" height="32px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-748f6743" class="btn-search" value="Search" icon="0">
+              <cl:flowlayoutdata std:sid="f-data-d7f5f78d" width="104px" height="32px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-3c093e4d" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-6b81345c" scrollable="false" spacing="16" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-faa65e12" scrollable="false" spacing="0"/>
+      </cl:group>
+      <cl:group std:sid="group-6a84c5cc" class="section">
+        <cl:verticaldata std:sid="v-data-fc0c0fb0" width="400px" height="686px" autosize="height"/>
+        <cl:group std:sid="group-5d5796c1" class="search-list-top">
+          <cl:verticaldata std:sid="v-data-71103673" width="400px" height="64px" autosize="height"/>
+          <cl:output std:sid="output-3ac2ed84" class="sch-info" value="18" datatype="number" format="#,##0" displayexp="sstr(text, [&quot;point&quot;]) + &quot;users&quot;">
+            <cl:formdata std:sid="f-data-c4b6fe60" row="0" col="0"/>
+          </cl:output>
+          <cl:group std:sid="group-5c3d9eb9">
+            <cl:formdata std:sid="f-data-15a35e88" row="0" col="1"/>
+            <cl:button std:sid="button-71702e7b" class="btn-excel" value="Excel Download" icon="0">
+              <cl:flowlayoutdata std:sid="f-data-fa75e88c" width="142px" height="32px" autosize="width"/>
+            </cl:button>
+            <cl:udc std:sid="ud-control-cc647d9a" id="udccomviewbutton1" type="udc.pse.com.UdcComViewButton">
+              <cl:flowlayoutdata std:sid="f-data-ccb841fc" width="68px" height="32px" autosize="both"/>
+            </cl:udc>
+            <cl:flowlayout std:sid="f-layout-3ac577df" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-da312581" scrollable="false" hspace="1fr" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="100" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="422" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid std:sid="grid-2390dbda" datasetid="dsList" autofit="1, 2, 3, 4" resizablecolumns="all" columnMovable="true">
+          <cl:verticaldata std:sid="v-data-903f06e1" width="400px" height="200px" autosize="height"/>
+          <cl:gridcolumn std:sid="g-column-24920b3c" width="56px"/>
+          <cl:gridcolumn std:sid="g-column-e16b5888" width="132px"/>
+          <cl:gridcolumn std:sid="g-column-1f6f9a04" width="140px"/>
+          <cl:gridcolumn std:sid="g-column-a2806a7e" width="200px"/>
+          <cl:gridcolumn std:sid="g-column-44bb0362" width="200px"/>
+          <cl:gridheader std:sid="gh-band-46ac1d80">
+            <cl:gridrow std:sid="g-row-0657b73e" height="33px"/>
+            <cl:gridcell std:sid="gh-cell-0708f002" rowindex="0" colindex="0" targetcolumnname="no" sortable="false" filterable="false" text="No"/>
+            <cl:gridcell std:sid="gh-cell-7b119313" rowindex="0" colindex="1" targetcolumnname="companyName" sortable="true" filterable="false" text="Company Name"/>
+            <cl:gridcell std:sid="gh-cell-064b97d0" rowindex="0" colindex="2" targetcolumnname="status" sortable="true" filterable="false" text="Status"/>
+            <cl:gridcell std:sid="gh-cell-59890a6a" rowindex="0" colindex="3" targetcolumnname="submissionDate" sortable="true" filterable="false" text="Submission Date and Time"/>
+            <cl:gridcell std:sid="gh-cell-60a492e5" rowindex="0" colindex="4" targetcolumnname="LcApprovalDate" sortable="true" filterable="false" text="LC Approval Date and Time"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-511ea2b0">
+            <cl:gridrow std:sid="g-row-adf0964b" height="33px"/>
+            <cl:gridcell std:sid="gd-cell-4d15fee1" rowindex="0" colindex="0" columnname="no">
+              <cl:output std:sid="output-4098aff0">
+                <cl:celldata std:sid="c-data-af6bd4c3"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-d89b5ef8" rowindex="0" colindex="1" columnname="companyName">
+              <cl:button std:sid="button-efeb3c09" class="btn-link">
+                <cl:celldata std:sid="c-data-8e9e017a"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-d43e8e61" rowindex="0" colindex="2" columnname="status">
+              <cl:output std:sid="output-1e919d3d" value="Output" displayexp="sstr(text, switch(status){&#xA;&#x9;case &quot;pending&quot; : &quot;badge soft primary&quot;&#xA;&#x9;case &quot;approved&quot; : &quot;badge soft success&quot;&#xA;&#x9;case &quot;rejected&quot; : &quot;badge soft danger&quot;&#xA;&#x9;case &quot;forwarded&quot; : &quot;badge soft warning&quot;&#xA;&#x9;default : &quot;badge soft primary&quot;&#xA;})">
+                <cl:celldata std:sid="c-data-8f02d553"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-7bc96f2a" rowindex="0" colindex="3" columnname="submissionDate">
+              <cl:output std:sid="output-7ff417db" datatype="date" format="MM-DD-YYYY hh:mm:ss A">
+                <cl:celldata std:sid="c-data-b045d9bb"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-8876efb9" rowindex="0" colindex="4" columnname="LcApprovalDate">
+              <cl:output std:sid="output-d9f2fef8" datatype="date" format="MM-DD-YYYY hh:mm:ss A">
+                <cl:celldata std:sid="c-data-5794ad6e"/>
+              </cl:output>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:udc std:sid="ud-control-eaa7f396" id="udccompagination1" type="udc.pse.com.UdcComPagination">
+          <cl:verticaldata std:sid="v-data-98b2d615" width="1024px" height="60px" autosize="height"/>
+        </cl:udc>
+        <cl:verticallayout std:sid="v-layout-40e46285" scrollable="false" spacing="0"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-fc7fc5a9" scrollable="false" spacing="16" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-3c32ff37" scrollable="true" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

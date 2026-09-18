@@ -11,6 +11,8 @@
 // 의존 모듈 선언
 module.depends("module/standard/util");
 
+cpr.I18N.INSTANCE.currentLanguage = "en";
+
 /**
  * 데이터인풋 캘린더에 공휴일 표시를 위해 전역 기념일 추가
  */
