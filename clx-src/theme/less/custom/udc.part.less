@@ -81,6 +81,7 @@
 		
 		&.collapse {
 			background: url("../../img/icons/ico_angle_up.svg") no-repeat center right;
+			background-size: 18px;
 		}
 	}
 }
@@ -151,3 +152,58 @@
  	}
  }
  
+ .cl-container.viewmode {
+	.cl-button {
+		border-radius: 6px;
+		padding: 0;
+		
+		.cl-icon {
+			margin: 0;
+		}
+		
+		&.active {
+			background-color: #eef1f5;
+		}
+	}
+}
+
+.cl-container.pagination {
+	margin-top: 16px;
+	padding: 12px 0;
+	
+	.cl-output.page-info {
+		color: #64748d;
+		font-size: 13px;
+		font-weight: @font-weight-normal;
+		letter-spacing: -0.39px;
+	}
+	
+	.cl-combobox.page-size {
+		.cl-text {
+			padding: 0 12px;
+		}
+	}
+	
+	.cl-button.page-navi {
+		border: 1px solid #e3e8ee;
+		padding: 8px 12px;
+		
+		.shortcut {
+		}
+		
+		&.prev {
+			border-radius: @border-radius-full 0 0 @border-radius-full;
+			border-right-color: transparent;
+		}
+		
+		&.next {
+			border-radius: 0 @border-radius-full @border-radius-full 0;
+		}
+		
+		&.cl-disabled {
+			background-color: #ffffff;
+			border-color: #e3e8ee;
+			opacity: .4;
+		}
+	}
+}

@@ -1,0 +1,299 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-qas000001" version="1.0.6190">
+  <head std:sid="head-qas000002">
+    <screen std:sid="screen-qas000003" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-qas000004" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-qas000005" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-qas000006">
+      <cl:dataset std:sid="d-set-qas000007" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="No" std:sid="d-column-qas000008" name="no"/>
+          <cl:datacolumn comment="Subject" std:sid="d-column-qas000009" name="subject"/>
+          <cl:datacolumn comment="Submitted By" std:sid="d-column-qas000010" name="submittedBy"/>
+          <cl:datacolumn comment="Status" std:sid="d-column-qas000011" name="status"/>
+          <cl:datacolumn comment="Question Date and Time" std:sid="d-column-qas000012" name="questionDate"/>
+          <cl:datacolumn comment="Response Date and Time" std:sid="d-column-qas000013" name="responseDate"/>
+          <cl:datacolumn comment="Urgent" std:sid="d-column-qas000014" name="urgent"/>
+          <cl:datacolumn comment="Badge" std:sid="d-column-qas000015" name="badge"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="subject"><![CDATA[How can I update the filing contact information?]]></cl:datavalue>
+            <cl:datavalue columnname="submittedBy"><![CDATA[Maria Santos]]></cl:datavalue>
+            <cl:datavalue columnname="status"><![CDATA[submitted]]></cl:datavalue>
+            <cl:datavalue columnname="questionDate"><![CDATA[08252026101429]]></cl:datavalue>
+            <cl:datavalue columnname="responseDate"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="urgent"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="badge"><![CDATA[1]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[2]]></cl:datavalue>
+            <cl:datavalue columnname="subject"><![CDATA[Which documents are required for an amendment?]]></cl:datavalue>
+            <cl:datavalue columnname="submittedBy"><![CDATA[John Reyes]]></cl:datavalue>
+            <cl:datavalue columnname="status"><![CDATA[answered]]></cl:datavalue>
+            <cl:datavalue columnname="questionDate"><![CDATA[08252026101429]]></cl:datavalue>
+            <cl:datavalue columnname="responseDate"><![CDATA[08242026032010]]></cl:datavalue>
+            <cl:datavalue columnname="urgent"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="badge"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="subject"><![CDATA[Why is my report still pending review?]]></cl:datavalue>
+            <cl:datavalue columnname="submittedBy"><![CDATA[Angela Cruz]]></cl:datavalue>
+            <cl:datavalue columnname="status"><![CDATA[closed]]></cl:datavalue>
+            <cl:datavalue columnname="questionDate"><![CDATA[08252026101429]]></cl:datavalue>
+            <cl:datavalue columnname="responseDate"><![CDATA[08242026032010]]></cl:datavalue>
+            <cl:datavalue columnname="urgent"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="badge"><![CDATA[4]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[4]]></cl:datavalue>
+            <cl:datavalue columnname="subject"><![CDATA[Where can I find the current REIT form?]]></cl:datavalue>
+            <cl:datavalue columnname="submittedBy"><![CDATA[Daniel Lim]]></cl:datavalue>
+            <cl:datavalue columnname="status"><![CDATA[submitted]]></cl:datavalue>
+            <cl:datavalue columnname="questionDate"><![CDATA[08252026101429]]></cl:datavalue>
+            <cl:datavalue columnname="responseDate"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="urgent"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="badge"><![CDATA[2]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-qas000016">
+    <cl:group std:sid="group-qas000017" class="page-title-wrap">
+      <cl:verticaldata std:sid="v-data-qas000018" width="1024px" height="56px" autosize="height" sticky="true" stickytopoffset="0"/>
+      <cl:udc std:sid="ud-control-qas000019" id="udccomappheader1" type="udc.pse.com.UdcComAppHeader">
+        <cl:formdata std:sid="f-data-qas000020" row="0" col="0"/>
+        <cl:property name="title" value="Q&amp;A" type="string"/>
+      </cl:udc>
+      <cl:group std:sid="group-qas000021" class="btn-wrap">
+        <cl:formdata std:sid="f-data-qas000022" valign="FILL" height="32" row="0" col="1"/>
+        <cl:button std:sid="button-qas000023" class="btn-add" value="New Question" icon="0">
+          <cl:flowlayoutdata std:sid="f-data-qas000024" width="150px" height="32px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-qas000025" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-qas000026" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="150" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-qas000027" id="grpBody" class="inner">
+      <cl:verticaldata std:sid="v-data-qas000028" width="1024px" height="1075px" autosize="height"/>
+      <cl:group std:sid="group-qas000029" class="search-top-box active">
+        <cl:verticaldata std:sid="v-data-qas000030" width="976px" height="325px" autosize="height"/>
+        <cl:group std:sid="group-qas000031" class="search-head">
+          <cl:verticaldata std:sid="v-data-qas000032" width="974px" height="78px" autosize="height"/>
+          <cl:udc std:sid="ud-control-qas000033" id="udccomsearchtoggle1" type="udc.pse.com.udcComSearchToggle">
+            <cl:verticaldata std:sid="v-data-qas000034" width="942px" height="24px" autosize="height"/>
+            <cl:property name="optMsg" value="optMessage" type="control"/>
+            <cl:property name="grpId" value="grpSearchFilter" type="control"/>
+            <cl:property name="targetOutput" value="optMessage" type="control"/>
+            <cl:property name="targetGroup" value="grpSearchFilter" type="control"/>
+          </cl:udc>
+          <cl:output std:sid="output-qas000035" id="optMessage" class="truncate" visible="false" value="No filters applied">
+            <cl:verticaldata std:sid="v-data-qas000036" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-qas000037" scrollable="false" spacing="4"/>
+        </cl:group>
+        <cl:group std:sid="group-qas000038" id="grpSearchFilter" class="sch-filter-box">
+          <cl:verticaldata std:sid="v-data-qas000039" width="974px" height="245px" autosize="height"/>
+          <cl:group std:sid="group-qas000040" class="filter-form">
+            <cl:verticaldata std:sid="v-data-qas000041" width="926px" height="132px" autosize="height"/>
+            <cl:group std:sid="group-qas000042" class="row">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-qas000043" width="926px" height="58px" autosize="height"/>
+              <cl:group std:sid="group-qas000044">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-qas000045" row="0" col="0"/>
+                <cl:output std:sid="output-qas000046" class="label" value="Period">
+                  <cl:verticaldata std:sid="v-data-qas000047" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:group std:sid="group-qas000048" class="input-group">
+                  <cl:attribute name="mobile-column-count" value="1"/>
+                  <cl:verticaldata std:sid="v-data-qas000049" width="457px" height="32px" autosize="height"/>
+                  <cl:group std:sid="group-qas000050">
+                    <cl:formdata std:sid="f-data-qas000051" row="0" col="0" rowspan="1" colspan="1"/>
+                    <cl:dateinput std:sid="d-input-qas000052" fieldLabel="Period" hidebutton="true" placeholder="MM-DD-YYYY">
+                      <cl:formdata std:sid="f-data-qas000053" row="0" col="0"/>
+                    </cl:dateinput>
+                    <cl:output std:sid="output-qas000054" value="~">
+                      <cl:formdata std:sid="f-data-qas000055" row="0" col="1"/>
+                    </cl:output>
+                    <cl:dateinput std:sid="d-input-qas000056" fieldLabel="Period" hidebutton="true" placeholder="MM-DD-YYYY">
+                      <cl:formdata std:sid="f-data-qas000057" row="0" col="2"/>
+                    </cl:dateinput>
+                    <cl:formlayout std:sid="f-layout-qas000058" scrollable="false" hspace="8px" vspace="8px">
+                      <cl:rows length="32" unit="PIXEL"/>
+                      <cl:columns length="1" unit="FRACTION"/>
+                      <cl:columns length="10" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                      <cl:columns length="1" unit="FRACTION"/>
+                    </cl:formlayout>
+                  </cl:group>
+                  <cl:combobox std:sid="c-box-qas000059" fieldLabel="Select period">
+                    <cl:formdata std:sid="f-data-qas000060" row="0" col="1"/>
+                  </cl:combobox>
+                  <cl:formlayout std:sid="f-layout-qas000061" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="32" unit="PIXEL"/>
+                    <cl:columns length="274" unit="PIXEL"/>
+                    <cl:columns length="1" unit="FRACTION"/>
+                  </cl:formlayout>
+                </cl:group>
+                <cl:verticallayout std:sid="v-layout-qas000062"/>
+              </cl:group>
+              <cl:group std:sid="group-qas000063">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-qas000064" row="0" col="1"/>
+                <cl:output std:sid="output-qas000065" class="label" value="Status">
+                  <cl:verticaldata std:sid="v-data-qas000066" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:checkboxgroup std:sid="cb-group-qas000067" fieldLabel="Status">
+                  <cl:verticaldata std:sid="v-data-qas000068" width="440px" height="32px" autosize="none"/>
+                  <cl:item std:sid="item-qas000069" label="Submitted" value="value1"/>
+                  <cl:item std:sid="item-qas000070" label="Answered" value="value2"/>
+                  <cl:item std:sid="item-qas000071" label="Closed" value="value3"/>
+                </cl:checkboxgroup>
+                <cl:verticallayout std:sid="v-layout-qas000072"/>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-qas000073" scrollable="false" hspace="12px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION" minlength="0"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-qas000074" class="row">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-qas000075" width="926px" height="58px" autosize="height"/>
+              <cl:group std:sid="group-qas000076">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-qas000077" row="0" col="0"/>
+                <cl:output std:sid="output-qas000078" class="label" value="Subject">
+                  <cl:verticaldata std:sid="v-data-qas000079" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:inputbox std:sid="i-box-qas000080" fieldLabel="Subject" placeholder="Search by subject">
+                  <cl:verticaldata std:sid="v-data-qas000081" width="100px" height="32px"/>
+                </cl:inputbox>
+                <cl:verticallayout std:sid="v-layout-qas000082"/>
+              </cl:group>
+              <cl:group std:sid="group-qas000083">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-qas000084" row="0" col="1"/>
+                <cl:output std:sid="output-qas000085" class="label" value="Keyword">
+                  <cl:verticaldata std:sid="v-data-qas000086" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:inputbox std:sid="i-box-qas000087" fieldLabel="Keyword" placeholder="Search by keyword">
+                  <cl:verticaldata std:sid="v-data-qas000088" width="457px" height="32px" autosize="none"/>
+                </cl:inputbox>
+                <cl:verticallayout std:sid="v-layout-qas000089"/>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-qas000090" scrollable="false" hspace="12px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION" minlength="0"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-qas000091" scrollable="false" spacing="16"/>
+          </cl:group>
+          <cl:group std:sid="group-qas000092" class="search-btn-wrap">
+            <cl:verticaldata std:sid="v-data-qas000093" width="400px" height="49px" autosize="height"/>
+            <cl:button std:sid="button-qas000094" class="btn-base" value="Clear">
+              <cl:flowlayoutdata std:sid="f-data-qas000095" width="69px" height="32px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-qas000096" class="btn-search" value="Search" icon="0">
+              <cl:flowlayoutdata std:sid="f-data-qas000097" width="104px" height="32px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-qas000098" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-qas000099" scrollable="false" spacing="16" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-qas000100" scrollable="false" spacing="0"/>
+      </cl:group>
+      <cl:group std:sid="group-qas000101" class="section">
+        <cl:verticaldata std:sid="v-data-qas000102" width="400px" height="686px" autosize="height"/>
+        <cl:group std:sid="group-qas000103" class="search-list-top">
+          <cl:verticaldata std:sid="v-data-qas000104" width="400px" height="64px" autosize="height"/>
+          <cl:output std:sid="output-qas000105" class="sch-info" value="12" datatype="number" format="#,##0" displayexp="sstr(text, [&quot;point&quot;]) + &quot; questions&quot;">
+            <cl:formdata std:sid="f-data-qas000106" row="0" col="0"/>
+          </cl:output>
+          <cl:group std:sid="group-qas000107">
+            <cl:formdata std:sid="f-data-qas000108" row="0" col="1"/>
+            <cl:udc std:sid="ud-control-qas000109" id="udccomviewbutton1" type="udc.pse.com.UdcComViewButton">
+              <cl:flowlayoutdata std:sid="f-data-qas000110" width="68px" height="32px" autosize="both"/>
+            </cl:udc>
+            <cl:flowlayout std:sid="f-layout-qas000111" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-qas000112" scrollable="false" hspace="1fr" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="68" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid std:sid="grid-qas000113" datasetid="dsList" autofit="1, 2, 3, 4, 5" resizablecolumns="all" columnMovable="true">
+          <cl:verticaldata std:sid="v-data-qas000114" width="400px" height="200px" autosize="height"/>
+          <cl:gridcolumn std:sid="g-column-qas000115" width="56px"/>
+          <cl:gridcolumn std:sid="g-column-qas000116" width="320px"/>
+          <cl:gridcolumn std:sid="g-column-qas000117" width="160px"/>
+          <cl:gridcolumn std:sid="g-column-qas000118" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-qas000119" width="190px"/>
+          <cl:gridcolumn std:sid="g-column-qas000120" width="190px"/>
+          <cl:gridheader std:sid="gh-band-qas000121">
+            <cl:gridrow std:sid="g-row-qas000122" height="32px"/>
+            <cl:gridcell std:sid="gh-cell-qas000123" rowindex="0" colindex="0" targetcolumnname="no" sortable="false" filterable="false" text="No"/>
+            <cl:gridcell std:sid="gh-cell-qas000124" rowindex="0" colindex="1" targetcolumnname="subject" sortable="false" filterable="false" text="Subject"/>
+            <cl:gridcell std:sid="gh-cell-qas000125" rowindex="0" colindex="2" targetcolumnname="submittedBy" sortable="false" filterable="false" text="Submitted By"/>
+            <cl:gridcell std:sid="gh-cell-qas000126" rowindex="0" colindex="3" targetcolumnname="status" sortable="false" filterable="false" text="Status"/>
+            <cl:gridcell std:sid="gh-cell-qas000127" rowindex="0" colindex="4" targetcolumnname="questionDate" sortable="false" filterable="false" text="Question Date and Time"/>
+            <cl:gridcell std:sid="gh-cell-qas000128" rowindex="0" colindex="5" targetcolumnname="responseDate" sortable="false" filterable="false" text="Response Date and Time"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-qas000129">
+            <cl:gridrow std:sid="g-row-qas000130" height="50px"/>
+            <cl:gridcell std:sid="gd-cell-qas000131" rowindex="0" colindex="0" columnname="no">
+              <cl:output std:sid="output-qas000132">
+                <cl:celldata std:sid="c-data-qas000133"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-qas000134" rowindex="0" colindex="1" columnname="subject">
+              <cl:button std:sid="button-qas000135" class="btn-row-height" value="Button" displayexp="switch(urgent){case &quot;1&quot; : subject + sstr(badge, [&quot;btn-grid-badge-red&quot;]) case &quot;&quot; : subject default : subject + sstr(badge, [&quot;btn-grid-badge-gray&quot;])}">
+                <cl:celldata std:sid="c-data-qas000136"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-qas000137" rowindex="0" colindex="2" columnname="submittedBy">
+              <cl:output std:sid="output-qas000138">
+                <cl:celldata std:sid="c-data-qas000139"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-qas000140" rowindex="0" colindex="3" columnname="status">
+              <cl:output std:sid="output-qas000141" displayexp="sstr(switch(status){case &quot;answered&quot; : &quot;Answered&quot; case &quot;closed&quot; : &quot;Closed&quot; default : &quot;Submitted&quot;}, switch(status){case &quot;answered&quot; : &quot;badge soft primary&quot; case &quot;closed&quot; : &quot;badge soft success&quot; default : &quot;badge soft warning&quot;})">
+                <cl:celldata std:sid="c-data-qas000142"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-qas000143" rowindex="0" colindex="4" columnname="questionDate">
+              <cl:output std:sid="output-qas000144" datatype="date" format="MM-DD-YYYY hh:mm:ss A">
+                <cl:celldata std:sid="c-data-qas000145"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-qas000146" rowindex="0" colindex="5" columnname="responseDate">
+              <cl:output std:sid="output-qas000147" datatype="date" format="MM-DD-YYYY hh:mm:ss A" displayexp="switch(responseDate){case &quot;&quot; : &quot;-&quot; default : text}">
+                <cl:celldata std:sid="c-data-qas000148"/>
+              </cl:output>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:udc std:sid="ud-control-qas000149" id="udccompagination1" type="udc.pse.com.UdcComPagination">
+          <cl:verticaldata std:sid="v-data-qas000150" width="1024px" height="60px" autosize="height"/>
+        </cl:udc>
+        <cl:verticallayout std:sid="v-layout-qas000151" scrollable="false" spacing="0"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-qas000152" scrollable="false" spacing="16" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-qas000153" scrollable="true" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

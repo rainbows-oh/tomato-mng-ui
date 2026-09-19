@@ -13,7 +13,7 @@
       <cl:output std:sid="output-6876f868" class="page-info" value="Viewing 1-10 of 18">
         <cl:flowlayoutdata std:sid="f-data-6203ec40" width="100px" height="100%" autosize="width"/>
       </cl:output>
-      <cl:combobox std:sid="c-box-09fa578c" class="page-size" value="10" preventinput="true">
+      <cl:combobox std:sid="c-box-09fa578c" class="page-size" fieldLabel="page select" value="10" preventinput="true">
         <cl:flowlayoutdata std:sid="f-data-b5d27411" width="95px" height="32px" autosize="width"/>
         <cl:item std:sid="t-item-ac7d607d" label="10/page" value="10"/>
       </cl:combobox>
@@ -21,10 +21,10 @@
     </cl:group>
     <cl:group std:sid="group-65607b43" class="page-navi">
       <cl:formdata std:sid="f-data-f6ec35e2" row="0" col="1"/>
-      <cl:button std:sid="button-b619df1a" class="page-navi prev" enabled="false" accesskey="J" value="Prev" displayexp="sstr(accessKey, [&quot;shortcut&quot;]) + text" icon="0">
+      <cl:button std:sid="button-b619df1a" class="page-navi prev" enabled="false" accesskey="J" value="Prev" displayexp="sstr(accessKey, [&quot;shortcut&quot;,&quot;badge fill gray&quot;]) + text" icon="0">
         <cl:formdata std:sid="f-data-d4acc5fb" row="0" col="0"/>
       </cl:button>
-      <cl:button std:sid="button-e1cacdef" class="page-navi next" accesskey="K" value="Next" displayexp="text + sstr(accessKey, [&quot;shortcut&quot;])" icon="0" iconalign="right">
+      <cl:button std:sid="button-e1cacdef" class="page-navi next" accesskey="K" value="Next" displayexp="text + sstr(accessKey, [&quot;shortcut&quot;, &quot;badge fill gray&quot;])" icon="0" iconalign="right">
         <cl:formdata std:sid="f-data-cc0a1ea5" row="0" col="1"/>
       </cl:button>
       <cl:formlayout std:sid="f-layout-9cb1c42b" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">

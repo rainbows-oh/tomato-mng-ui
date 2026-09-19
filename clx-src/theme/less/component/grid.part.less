@@ -32,8 +32,8 @@
 		&.cl-checkbox,
 		&.cl-checkboxgroup,
 		&.cl-radiobutton {
-			padding: @size-grid-cell-padding-y @size-grid-cell-padding-x;
-			text-align: center;
+			padding: 8px 12px;
+			text-align: left;
 		}
 		
 		&.cl-output.cl-number-format,
@@ -87,9 +87,10 @@
  ========================================================================== */
 .cl-grid {
 	background-color: @color-grid-surface;
-	border: 1px solid @color-grid-border;
+	border: none;
+	border-top: 1px solid #e3e8ee;
+	border-bottom: 1px solid #e3e8ee;
 	border-radius: @size-grid-radius;
-	border-top: 1px solid @color-grid-border-point;
 	font-size: @size-grid-font;
 	
 	> :not([class]) {
@@ -170,9 +171,9 @@
 .cl-grid .cl-grid-cell {
 	#grid--cell-base();
 	border: 0;
-	border-bottom: 1px solid @color-grid-cell-border;
-	border-right: 1px solid @color-grid-cell-border;
-	
+	border-bottom: 1px solid #e3e8ee;
+	border-right: none;
+
 	&.cl-last-column {
 		border-right: none;
 	}
@@ -247,7 +248,7 @@
  Base — 헤더
  ========================================================================== */
 .cl-grid .cl-grid-header {
-	background-color: @color-grid-head-background;
+	background-color: #f6f9fc;
 	background-image: none;
 	border: 0;
 	color: @color-grid-head-text;
@@ -258,8 +259,8 @@
 	
 	.cl-grid-cell {
 		border-bottom: 1px solid @color-grid-head-border;
-		border-right: 1px solid @color-grid-head-border;
-		
+		border-right: none;
+
 		&:focus {
 			outline: none;
 		}
@@ -331,6 +332,12 @@
 	
 	/* 정렬 아이콘 3단계 — 직접 url */
 	.cl-sortable-cell {
+		&.cl-sort-asc,
+		&.cl-sort-desc {
+			color: #533afd;
+			font-weight: @font-weight-semibold;
+		}
+
 		.cl-sort {
 			display: none;
 			width: auto;
