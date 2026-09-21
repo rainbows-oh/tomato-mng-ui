@@ -3039,14 +3039,16 @@ FreeFormKit.prototype.getRowState = function(app, psFreeFormId) {
 };
 
 /**
- * [공통] 데이터셋 건수 및 UDC 경로("udc.com.UserCard")에 따라 동적 FormLayout 생성 및 UDC 배치
- * @param {cpr.controls.Container} targetGroup - FormLayout을 적용할 부모 그룹
- * @param {cpr.data.DataSet} dataSet - UDC와 바인딩할 데이터셋 객체
+ * [공통] 동적 UDC 생성, 데이터 주입, 다중 출판 이벤트 바인딩 및 RForm 동기화
+ * @param {cpr.controls.Container} targetGroup - UDC가 들어갈 부모 컨테이너
+ * @param {cpr.data.DataSet} dataSet - UDC에 세팅할 데이터셋
  * @param {String} udcPath - UDC 클래스 경로 (예: "udc.com.UserCard")
  * @param {Object} [options] - 상세 옵션
  * @param {Number} [options.columnCount=3] - 열(Column) 수 (기본값: 3)
  * @param {String} [options.rowHeight="1fr"] - 행(Row) 높이 (예: "1fr", "220px")
- * @param {Function} [options.onCardClick] - cardClick 이벤트 콜백 함수 (e.userData 전달받음)
+ * @param {Object} [options.events] - UDC 출판 이벤트 매핑 객체 { "cardClick": fn, "editClick": fn, "deleteClick": fn }
+ * @param {String} [options.eventName="cardClick"] - 단일 출판 이벤트 지정 시 이벤트명
+ * @param {Function} [options.onCardClick] - 단일 출판 이벤트 콜백 함수
  */
 FreeFormKit.prototype.createDynamicUdcForm = function(targetGroup, dataSet, udcPath, options) {
 	if (!targetGroup || !dataSet || !udcPath) {
@@ -3075,13 +3077,22 @@ FreeFormKit.prototype.createDynamicUdcForm = function(targetGroup, dataSet, udcP
 	var cols = options.columnCount || 3;
 	var rowHeight = options.rowHeight || "240px";
 
-	// 2. 기존 자식 컨트롤 제거
+	// 2. 바인딩할 이벤트 맵 구성 (단일 및 다중 이벤트 모두 지원)
+	var eventMap = options.events || {};
+	
+	// 단일 이벤트 설정 방식(onCardClick)과의 호환성 유지
+	if (typeof options.onCardClick === "function") {
+		var defaultEventName = options.eventName || "cardClick";
+		eventMap[defaultEventName] = options.onCardClick;
+	}
+
+	// 3. 기존 자식 컨트롤 제거
 	targetGroup.removeAllChildren(true);
 
 	var totalCount = dataSet.getRowCount();
 	var rowCount = Math.ceil(totalCount / cols);
 
-	// 3. 신규 FormLayout 생성 및 설정
+	// 4. 신규 FormLayout 생성 및 설정
 	var formLayout = new cpr.controls.layouts.FormLayout();
 	
 	var colWidths = [];
@@ -3097,7 +3108,7 @@ FreeFormKit.prototype.createDynamicUdcForm = function(targetGroup, dataSet, udcP
 
 	targetGroup.setLayout(formLayout);
 
-	// 4. UDC 동적 생성, initData 주입 및 클릭 이벤트 바인딩
+	// 5. UDC 동적 생성, initData 주입 및 다중 출판 이벤트 바인딩
 	for (var i = 0; i < totalCount; i++) {
 		var udcInstance = new UdcConstructor("udc_dyn_" + i);
 		var rowData = dataSet.getRowData(i);
@@ -3107,11 +3118,15 @@ FreeFormKit.prototype.createDynamicUdcForm = function(targetGroup, dataSet, udcP
 			udcInstance.initData(rowData);
 		}
 
-		// 카드 클릭 이벤트 바인딩 (onCardClick)
+		// 다중 출판 이벤트(Published Events) 바인딩
 		(function(index, data, instance) {
-			instance.addEventListener("click", function(e) {
-				if (typeof options.onCardClick === "function") {
-					options.onCardClick(data, index, instance, e);
+			Object.keys(eventMap).forEach(function(evtName) {
+				var handler = eventMap[evtName];
+				if (typeof handler === "function") {
+					instance.addEventListener(evtName, function(e) {
+						debugMultiPublishedEvent(instance, evtName, index, data, e);
+						handler(data, index, instance, e);
+					});
 				}
 			});
 		})(i, rowData, udcInstance);
@@ -3127,7 +3142,7 @@ FreeFormKit.prototype.createDynamicUdcForm = function(targetGroup, dataSet, udcP
 		});
 	}
 
-	// 5. RForm 반응형 모듈 원본 백업 및 transform 재실행
+	// 6. RForm 반응형 모듈 원본 백업 및 transform 재실행
 	var rForm = targetGroup["_RForm"];
 	if (rForm) {
 		rForm._originalLayout = formLayout;
