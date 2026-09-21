@@ -43,12 +43,15 @@
       </cl:udc>
       <cl:group std:sid="group-a9c7fa09" class="btn-wrap">
         <cl:formdata std:sid="f-data-7f7c89bb" valign="FILL" height="32" row="0" col="1"/>
+        <cl:button std:sid="button-e14e6768" class="btn-add" value="New Correspondence" icon="0">
+          <cl:flowlayoutdata std:sid="f-data-01b5240a" width="136px" height="32px" autosize="width"/>
+        </cl:button>
         <cl:flowlayout std:sid="f-layout-260fdf25" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
       </cl:group>
       <cl:formlayout std:sid="f-layout-e3d9b3e3" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
         <cl:rows length="1" unit="FRACTION"/>
         <cl:columns length="1" unit="FRACTION"/>
-        <cl:columns length="136" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:columns length="200" unit="PIXEL" autoSizing="true" syncminlength="false"/>
       </cl:formlayout>
     </cl:group>
     <cl:group std:sid="group-ac6a9860" id="grpBody" class="inner">
