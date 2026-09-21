@@ -1,5 +1,11 @@
 @import (reference) "../../custom-settings.part.less";
 
+.btn-wrap {
+	.cl-button {
+		padding: 0px 12px;
+	}
+}
+
 //카드
 .cl-container.card {
 	border: 1px solid #e3e8ee;
@@ -49,6 +55,23 @@
 			font-size: 13px;
 			font-weight: 600;
 			color: #0d253d;
+		}
+	}
+	
+	//details 페이지 헤더 카드
+	&.type03 {
+		border-radius: 12px;
+		
+		.cl-output.c-tit {
+			font-size: 15px;
+			font-weight: 600;
+			color: #0d253d;
+		}
+		
+		.cl-output.c-tit-sub {
+			font-size: 13px;
+			font-weight: 400;
+			color: #273951;
 		}
 	}
 }
