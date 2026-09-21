@@ -102,8 +102,8 @@
                   </cl:inputbox>
                   <cl:formlayout std:sid="f-layout-0c69c4c5" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
                     <cl:rows length="32" unit="PIXEL"/>
-                    <cl:columns length="110" unit="PIXEL"/>
                     <cl:columns length="1" unit="FRACTION"/>
+                    <cl:columns length="3" unit="FRACTION"/>
                   </cl:formlayout>
                 </cl:group>
                 <cl:verticallayout std:sid="v-layout-39cff7b2"/>
@@ -123,9 +123,9 @@
                   </cl:combobox>
                   <cl:verticallayout std:sid="v-layout-b2905c9c"/>
                 </cl:group>
-                <cl:formlayout std:sid="f-layout-2cf806a2" scrollable="false" hspace="40px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:formlayout std:sid="f-layout-2cf806a2" scrollable="false" hspace="12px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
                   <cl:rows length="1" unit="FRACTION"/>
-                  <cl:columns length="1" unit="FRACTION" minlength="128"/>
+                  <cl:columns length="1" unit="FRACTION" minlength="0"/>
                   <cl:columns length="1" unit="FRACTION"/>
                 </cl:formlayout>
               </cl:group>
@@ -172,17 +172,17 @@
                     <cl:verticaldata std:sid="v-data-84ba30c8" width="100px" height="18px" autosize="height"/>
                   </cl:output>
                   <cl:checkboxgroup std:sid="cb-group-dbe5a13a" fieldLabel="Role">
-                    <cl:verticaldata std:sid="v-data-dbbce960" width="200px" height="32px"/>
+                    <cl:verticaldata std:sid="v-data-dbbce960" width="200px" height="32px" syncminheight="true" autosize="height"/>
                     <cl:item std:sid="item-15576cf2" label="Admin" value="value1"/>
                     <cl:item std:sid="item-fc080c77" label="Maker" value="value2"/>
                     <cl:item std:sid="item-15444da7" label="Approver" value="value3"/>
                   </cl:checkboxgroup>
                   <cl:verticallayout std:sid="v-layout-b12b6f0f"/>
                 </cl:group>
-                <cl:formlayout std:sid="f-layout-fc6afe33" scrollable="false" hspace="40px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:formlayout std:sid="f-layout-fc6afe33" scrollable="false" hspace="12px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
                   <cl:rows length="1" unit="FRACTION"/>
-                  <cl:columns length="209" unit="PIXEL" autoSizing="true" syncminlength="false"/>
-                  <cl:columns length="208" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                  <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+                  <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
                 </cl:formlayout>
               </cl:group>
               <cl:formlayout std:sid="f-layout-b8e922d8" scrollable="false" hspace="12px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
