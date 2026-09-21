@@ -143,27 +143,29 @@
 	background-color: @white;
 	border: 1px solid #e3e8ee;
 	border-radius: 12px;
-//	padding: @padding-6;
-	
-	.label:not(.cl-first-column) {
-		margin-left: @gap-7;
-	}
 	
 	.cl-container.search-header {
 		padding: 16px;
-	}
-	
-	.cl-output.search-footer {
-		padding: 0px 16px 16px;
 	}
 	
 	.cl-container.search-content {
 		padding: 24px;
 		border-top: 1px solid #e3e8ee;
 		
+		.label {
+			font-weight: 600;
+			font-size: 13px;
+			color: #0d253d;
+		}
+		
 		.btn-group {
 			border-top: 1px solid #e3e8ee;
 		}
+	}
+	
+	.cl-output.search-footer {
+		padding: 0px 16px 16px;
+		color: #64748d;
 	}
 	
 	/* 조회 버튼 영역 */

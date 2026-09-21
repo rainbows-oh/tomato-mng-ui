@@ -11,56 +11,6 @@
 	}
 }
 
-
-/************************************************
- * [UDC] 컨텐츠 그리드/카드 토글
- ************************************************/
-.cl-container.btn-content-toggle {
-	.cl-button.btn-show-grid,
-	.cl-button.btn-show-card {
-		&:not(.cl-disabled):hover,
-		&:not(.cl-disabled).cl-hover,
-		&:not(.cl-disabled):active,
-		&:not(.cl-disabled).cl-activated,
-		&.cl-focus {
-			background-color: #eef1f5;
-			background-size: 18px;
-		}
-	}
-	
-	.cl-button.btn-show-grid {
-		.cl-icon {
-			background-image: url("@{img-path}/icons/pages/ico_grid.svg") !important;
-		}
-		
-		&:not(.cl-disabled):hover,
-		&:not(.cl-disabled).cl-hover,
-		&:not(.cl-disabled):active,
-		&:not(.cl-disabled).cl-activated,
-		&.cl-focus {
-			.cl-icon {
-				background-image: url("@{img-path}/icons/pages/ico_grid_active.svg") !important;
-			}
-		}
-	}
-	
-	.cl-button.btn-show-card {
-		.cl-icon {
-			background-image: url("@{img-path}/icons/pages/ico_card.svg") !important;
-		}
-		
-		&:not(.cl-disabled):hover,
-		&:not(.cl-disabled).cl-hover,
-		&:not(.cl-disabled):active,
-		&:not(.cl-disabled).cl-activated,
-		&.cl-focus {
-			.cl-icon {
-				background-image: url("@{img-path}/icons/pages/ico_card_active.svg") !important;
-			}
-		}
-	}
-}
-
 /************************************************
  * [UDC] 조회영역 토글
  ************************************************/
@@ -87,72 +37,9 @@
 }
 
 /************************************************
- * [UDC] 페이지 인덱서
+ * [UDC] 컨텐츠 그리드/카드 토글
  ************************************************/
- .cl-container.udc-pagination {
- 	.cl-container.page-count-info {
- 		.cl-output {
-	 		color: #64748d;
- 		}
- 	}
- 	
- 	.cl-container.btn-group {
- 		border-radius: @border-radius-full;
- 		border: 1px solid #e3e8ee;
- 		
- 		.cl-formlayout-vertical-separator {
- 			background-color: #e3e8ee;
- 		}
- 		
-	 	.cl-button.btn-prev,
-	 	.cl-button.btn-next {
-	 		padding: 0px 12px;
-	 		border-radius: 0;
-	 		font-weight: 600;
-	 		color: #0d253d;
-	 		
-	 		.cl-icon {
-	 			background-size: 16px;
-	 		}
-	 		
-	 		&:not(.cl-disabled):hover,
-	 		&:not(.cl-disabled).cl-hover {
-	 			background-color: #EFF1F5;
-	 		}
-	 		
-	 		&.cl-disabled {
-	 			color: fade(#64748d, 40%);
-	 			background-color: transparent;
-	 		}
-	 	}
-	 	
-	 	.cl-button.btn-prev {
-	 		.cl-icon {
-	 			background-image: url("../../img/icons/ico_angle_left.svg") !important;
-	 		}
-	 		
-	 		&.cl-disabled {
-	 			.cl-icon {
-	 				background-image: url("../../img/icons/ico_pagination_left_disable.svg") !important;
-	 			}
-	 		}
-	 	}
-	 	
-	 	.cl-button.btn-next {
-	 		.cl-icon {
-	 			background-image: url("../../img/icons/ico_angle_right.svg") !important;
-	 		}
-	 		
-	 		&.cl-disabled {
-	 			.cl-icon {
-	 				background-image: url("../../img/icons/ico_pagination_right_disable.svg") !important;
-	 			}
-	 		}
-	 	}
- 	}
- }
- 
- .cl-container.viewmode {
+.cl-container.viewmode {
 	.cl-button {
 		border-radius: 6px;
 		padding: 0;
@@ -161,12 +48,27 @@
 			margin: 0;
 		}
 		
+		&.btn-grid {
+			.cl-icon {
+				background-image: url("@{img-path}/icons/pages/ico_grid.svg") !important;
+			}
+		}
+		
+		&.btn-card {
+			.cl-icon {
+				background-image: url("@{img-path}/icons/pages/ico_card.svg") !important;
+			}
+		}
+		
 		&.active {
 			background-color: #eef1f5;
 		}
 	}
 }
 
+/************************************************
+ * [UDC] 페이지 인덱서
+ ************************************************/
 .cl-container.pagination {
 	margin-top: 16px;
 	padding: 12px 0;
@@ -189,15 +91,46 @@
 		padding: 8px 12px;
 		
 		.shortcut {
+			min-height: 16px !important;
+			min-width: 16px !important;
+			margin-bottom: 1px;
 		}
 		
 		&.prev {
 			border-radius: @border-radius-full 0 0 @border-radius-full;
 			border-right-color: transparent;
+			
+			.shortcut {
+				margin-right: 4px;
+			}
+			
+			.cl-icon {
+	 			background-image: url("../../img/icons/ico_angle_left.svg") !important;
+	 		}
+	 		
+	 		&.cl-disabled {
+	 			.cl-icon {
+	 				background-image: url("../../img/icons/ico_pagination_left_disable.svg") !important;
+	 			}
+	 		}
 		}
 		
 		&.next {
 			border-radius: 0 @border-radius-full @border-radius-full 0;
+			
+			.shortcut {
+				margin-left: 4px;
+			}
+			
+			.cl-icon {
+	 			background-image: url("../../img/icons/ico_angle_right.svg") !important;
+	 		}
+	 		
+	 		&.cl-disabled {
+	 			.cl-icon {
+	 				background-image: url("../../img/icons/ico_pagination_right_disable.svg") !important;
+	 			}
+	 		}
 		}
 		
 		&.cl-disabled {
