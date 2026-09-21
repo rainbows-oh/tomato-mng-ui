@@ -312,7 +312,7 @@
               </cl:output>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-0de17b29" rowindex="0" colindex="2" columnname="subject">
-              <cl:button std:sid="button-0020386f" class="btn-link btn-row-height" value="Button" displayexp="text + (badge != null &amp;&amp; badge != &quot;&quot; ? sstr(badge, [&quot;btn-grid-badge-red&quot;]) : &quot;&quot;)">
+              <cl:button std:sid="button-0020386f" class="btn-link" value="Button" displayexp="text + (badge != null &amp;&amp; badge != &quot;&quot; ? sstr(badge, [&quot;btn-grid-badge-red&quot;]) : &quot;&quot;)">
                 <cl:celldata std:sid="c-data-5f097929"/>
               </cl:button>
             </cl:gridcell>

@@ -284,7 +284,7 @@
               </cl:button>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-0de17b29" rowindex="0" colindex="2" columnname="subject">
-              <cl:button std:sid="button-0020386f" class="btn-row-height" value="Button" displayexp="switch(urgent){&#xA;&#x9;case &quot;1&quot; : subject + sstr(badge, [&quot;btn-grid-badge-red&quot;])&#xA;&#x9;case &quot;&quot; : subject&#xA;&#x9;default : subject + sstr(badge, [&quot;btn-grid-badge-gray&quot;])&#xA;}">
+              <cl:button std:sid="button-0020386f" value="Button" displayexp="switch(urgent){&#xA;&#x9;case &quot;1&quot; : subject + sstr(badge, [&quot;btn-grid-badge-red&quot;])&#xA;&#x9;case &quot;&quot; : subject&#xA;&#x9;default : subject + sstr(badge, [&quot;btn-grid-badge-gray&quot;])&#xA;}">
                 <cl:celldata std:sid="c-data-5f097929"/>
               </cl:button>
             </cl:gridcell>

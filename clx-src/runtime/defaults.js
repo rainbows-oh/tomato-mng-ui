@@ -29,7 +29,8 @@ var CPR_DEFAULTS = {
 			headerButtons: ["title", "prev", "next"],
 			showOtherMonths: true,
 			format: "MMDDYYYY",
-			mask: "MMDDYYYY"
+			mask: "MMDDYYYY",
+			placeholder:"MM-DD-YYYY"
 		},
 		dialog: {},
 		embeddedapp: {},

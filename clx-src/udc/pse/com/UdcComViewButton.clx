@@ -5,7 +5,7 @@
     <screen std:sid="screen-bba2fe7d" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
     <screen std:sid="screen-cab4b96e" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
     <cl:model std:sid="model-9f428c95"/>
-    <cl:appspec>
+    <cl:appspec title="뷰 선택 버튼(그리드/카드)">
       <cl:property name="value" type="enumeration" default="table" bindable="true" translatable="false" std:desc="Change view (Table or card)">
         <cl:available-value>table</cl:available-value>
         <cl:available-value>card</cl:available-value>
@@ -17,10 +17,13 @@
   </head>
   <body std:sid="body-b9e20b4b" style="top:0px; left:0px; width:68px; height:32px;" class="viewmode" fieldLabel="Results view">
     <cl:listener std:sid="listener-c6850c21" name="property-change" handler="onBodyPropertyChange"/>
-    <cl:button std:sid="button-188529e6" class="active" value="Table view" displayexp="sstr(text, [&quot;cl-sound-only&quot;])" icon="0">
+    <cl:listener std:sid="listener-41a4f119" name="init" handler="onBodyInit"/>
+    <cl:button std:sid="button-188529e6" id="btnShowGrid" class="btn-grid active" value="Table view" displayexp="sstr(text, [&quot;cl-sound-only&quot;])" icon="0">
+      <cl:listener std:sid="listener-bd306c80" name="click" handler="onBtnShowGridClick"/>
       <cl:flowlayoutdata std:sid="f-data-11b08e23" width="32px" height="32px"/>
     </cl:button>
-    <cl:button std:sid="button-24b4f02d" value="Card view" displayexp="sstr(text, [&quot;cl-sound-only&quot;])" icon="0">
+    <cl:button std:sid="button-24b4f02d" id="btnShowCard" class="btn-card" value="Card view" displayexp="sstr(text, [&quot;cl-sound-only&quot;])" icon="0">
+      <cl:listener std:sid="listener-4e32536c" name="click" handler="onBtnShowCardClick"/>
       <cl:flowlayoutdata std:sid="f-data-947e8700" width="32px" height="32px"/>
     </cl:button>
     <cl:flowlayout std:sid="f-layout-ba69191e" scrollable="false" hspacing="4" vspacing="0" linewrap="false"/>
