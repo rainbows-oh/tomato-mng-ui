@@ -1,9 +1,70 @@
-@import  (reference) "../../custom-settings.part.less";
+@import (reference) "../../custom-settings.part.less";
 
-.cl-output.label {
-	font-size: 11px;
-	font-weight: 600;
-	color: #64748d;
+//카드
+.cl-container.card {
+	border: 1px solid #e3e8ee;
+	
+	//user management - total 표시
+	&.type01 {
+		border-radius: 12px;
+		
+		.cl-formlayout-vertical-separator {
+			background-color: #e3e8ee;
+		}
+		
+		.cl-output.tit {
+			font-size: 20px;
+			font-weight: 600;
+		}
+	}
+	
+	//카드 공통 스타일
+	&.type02 {
+		padding: 12px;
+		border-radius: 8px;
+		color: #273951;
+		
+		.cl-output.c-tit {
+			font-size: 15px;
+			font-weight: 600;
+			color: #0d253d;
+		}
+		
+		.cl-button.c-tit-blue,
+		.cl-button.c-tit-black {
+			font-size: 15px;
+			font-weight: 600;
+			text-align: left;
+		}
+		
+		.cl-button.c-tit-blue {
+			color: @primary;
+		}
+
+		.cl-button.c-tit-black {
+			color: #0d253d;
+		}
+		
+		.cl-output.c-tit-sub {
+			font-size: 13px;
+			font-weight: 600;
+			color: #0d253d;
+		}
+	}
+}
+
+//카드 타이틀 두줄 시
+.cl-button {
+	&.ellipsis-2 {
+		.cl-text {
+			display: -webkit-box !important;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: normal;
+		}
+	}
 }
 
 //그리드 숫자 표시 뱃지
@@ -64,6 +125,51 @@
 .cl-container.card-section {
 	border-top: 1px solid #e3e8ee;
 	padding: 12px;
+}
+
+// 입력 폼 스타일
+.cl-container.form-group {
+	background-color: #ffffff;
+	border: 1px solid #e3e8ee;
+	border-radius: 12px;
+	box-shadow: 0 1px 3px rgba(0,55,112,0.08);
+	
+	.label {
+		font-size: 13px;
+		color: #0d253d;
+	}
+	
+	.group {
+		&:not(.cl-last-row) {
+			border-bottom: 1px solid #e3e8ee;
+			padding-bottom: 24px;
+		}
+		
+		.group-tit {
+			font-size: 15px;
+			font-weight: 600;
+			color: #0d253d;
+		}
+	}
+	
+	.cl-container.btn-wrap {
+		padding-top: 16px;
+
+		.cl-button {
+			padding: 0px 12px;
+		}
+	}
+}
+
+.cl-button.btn-go-back {
+	text-align: left;
+	font-weight: 600;
+	font-size: 15px;
+	color: #0d253d;
+	
+	.cl-icon {
+		background-image: url("../../img/icons/ico_arrow_left.svg") !important;
+	}
 }
 
 //조회 영역 grpSearch
