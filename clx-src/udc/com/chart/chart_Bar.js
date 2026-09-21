@@ -16,6 +16,8 @@ exports.drawChart = drawChart;
 var moChart = null;
 var maData = [];
 
+var colorList = ["red","orange","yellow", "green", "blue", "navy", "purple", "black", "wine"];
+
 var chartId;
 /*
  * 쉘에서 load 이벤트 발생 시 호출.
@@ -92,33 +94,41 @@ function drawChart(config) {
  */
 function createBarChart(targetSelector, barDatas, categories) {
 	sb.chart.render(`#${chartId}`, {
-		global: {
-			color: {
-				theme: "pastel",
+			global: {
+				color: {
+					theme: "pastel",
+				},
 			},
-		},
-		data: {
-			json: barDatas,
-			type: "bar",
-			keys: {
-				x: "status",
-				value: ["count"]
-			},
-			labels: {
-				format: function(value, id, index, ratio, originJson) {
-					return value;
+			data: {
+				json: barDatas,
+				type: "bar",
+				keys: {
+					x: "status",
+					value: ["count"]
+				},
+				labels: {
+					format: function(value, id, index, ratio, originJson) {
+						return value;
+					}
 				}
-			}
-		},
-		legend: {
-			show: false
-		},
-		extend: {
-			bar: {
-				showZeroValue: true,
-				topRadius: 5,
-				dataLabelPosition: "right"
-			}
+			},
+			legend: {
+				show: false
+			},
+			extend: {
+				bar: {
+					showZeroValue: true,
+					topRadius: 5,
+					dataLabelPosition: "right",
+					barFormat: function(parm) {
+						console.log(parm);
+						let rtn = {};
+						if(colorList[parm.index]){
+							rtn.fillColor = colorList[parm.index];							
+						}
+						return rtn;
+					}
+				}
 		},
 		axis: {
 			x: {
@@ -140,7 +150,9 @@ function createBarChart(targetSelector, barDatas, categories) {
 					count: 5,
 					line: {
 						show: false
-					}
+					},
+					format: function(val) {
+					 return Math.round(val); }
 				},
 				domain: {
 					strokeStyle: "dotted"
