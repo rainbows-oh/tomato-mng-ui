@@ -71,7 +71,7 @@
     </cl:group>
     <cl:group std:sid="group-ac6a9860" id="grpBody" class="inner">
       <cl:verticaldata std:sid="v-data-0a24619d" width="1024px" height="1149px" autosize="height"/>
-      <cl:group std:sid="group-37a6ee44" id="grpSearch" class="search-top-box active">
+      <cl:group std:sid="group-37a6ee44" id="grpSearch" class="search-top-box">
         <cl:verticaldata std:sid="v-data-b7116695" width="976px" height="399px" autosize="height"/>
         <cl:group std:sid="group-0771f1c4" class="search-head">
           <cl:verticaldata std:sid="v-data-4ee66d3f" width="974px" height="78px" autosize="height"/>
@@ -82,7 +82,7 @@
             <cl:property name="targetOutput" value="optMessage" type="control"/>
             <cl:property name="targetGroup" value="grpSearchFilter" type="control"/>
           </cl:udc>
-          <cl:output std:sid="output-eddee998" id="optMessage" class="truncate" visible="false" value="User Type: Trading Participant · Role: Maker">
+          <cl:output std:sid="output-eddee998" id="optMessage" class="truncate" visible="false" value="No filters applied">
             <cl:verticaldata std:sid="v-data-f0ffe926" width="100px" height="20px" autosize="height"/>
           </cl:output>
           <cl:verticallayout std:sid="v-layout-7510003c" scrollable="false" spacing="4"/>
