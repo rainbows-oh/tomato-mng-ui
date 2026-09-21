@@ -3124,7 +3124,6 @@ FreeFormKit.prototype.createDynamicUdcForm = function(targetGroup, dataSet, udcP
 				var handler = eventMap[evtName];
 				if (typeof handler === "function") {
 					instance.addEventListener(evtName, function(e) {
-						debugMultiPublishedEvent(instance, evtName, index, data, e);
 						handler(data, index, instance, e);
 					});
 				}
