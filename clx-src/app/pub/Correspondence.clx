@@ -111,13 +111,13 @@
                   <cl:verticaldata std:sid="v-data-a76df3df" width="457px" height="32px" autosize="height"/>
                   <cl:group std:sid="group-223f72e2">
                     <cl:formdata std:sid="f-data-4943cd32" row="0" col="0" rowspan="1" colspan="1"/>
-                    <cl:dateinput std:sid="d-input-ebe9b31c" hidebutton="true" placeholder="MM-DD-YYYY">
+                    <cl:dateinput std:sid="d-input-ebe9b31c" fieldLabel="Period start" hidebutton="true" placeholder="MM-DD-YYYY">
                       <cl:formdata std:sid="f-data-591a8312" row="0" col="0"/>
                     </cl:dateinput>
                     <cl:output std:sid="output-17b37dd4" value="~">
                       <cl:formdata std:sid="f-data-d93fd21f" row="0" col="1"/>
                     </cl:output>
-                    <cl:dateinput std:sid="d-input-4a24d99c" hidebutton="true" placeholder="MM-DD-YYYY">
+                    <cl:dateinput std:sid="d-input-4a24d99c" fieldLabel="Period end" hidebutton="true" placeholder="MM-DD-YYYY">
                       <cl:formdata std:sid="f-data-033d46cb" row="0" col="2"/>
                     </cl:dateinput>
                     <cl:formlayout std:sid="f-layout-1b3e07e0" scrollable="false" hspace="8px" vspace="8px">
