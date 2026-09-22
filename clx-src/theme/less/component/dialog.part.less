@@ -13,12 +13,12 @@
 /* 파일 지역 변수 (@dialog-- 접두어) — 프로젝트별 디자인 튜닝 지점 */
 
 /* 래퍼 */
-@dialog--wrap-border-radius:  0;   /* 다이얼로그는 radius 없음 */
+@dialog--wrap-border-radius:  12px;   /* 다이얼로그는 radius 없음 */
 @dialog--wrap-color-background: @color-background-base;
-@dialog--wrap-color-border:   @gray-40;
+@dialog--wrap-color-border:   #e3e8ee;
 
 /* 헤더 */
-@dialog--head-height:       38px;
+@dialog--head-height:       32 + 24px;
 @dialog--head-padding-x:    @padding-7;
 @dialog--head-color-background: @gray-5;
 @dialog--head-color-border: @gray-10;
@@ -41,7 +41,7 @@
 
 /* 헤더 버튼 공통 구조 (이미지는 각 클래스에서 지정) */
 #dialog--head-button() {
-	width: @dialog--head-button-size;
+	width: 32px;
 	height: 100%;
 	background-color: @dialog--head-button-color-background;
 	background-position: center;
@@ -71,19 +71,19 @@
 		display: flex;
 		align-items: center;
 		height: @dialog--head-height;
-		background-color: @dialog--head-color-background;
-		border-bottom: 1px solid @dialog--head-color-border;
+		background-color: @white;
+		border-bottom: none;
 		color: @dialog--head-color-text;
 		font-size: @dialog--head-font-size;
 		font-weight: @dialog--head-font-weight;
-		padding: 0;
+		padding: 24px 24px 0px 24px;
 
 		/* 제목 텍스트 */
 		.cl-text {
 			color: inherit;
 			font: inherit;
 			overflow: hidden;
-			padding: 0 @dialog--head-padding-x;
+			padding: 0;
 			text-overflow: ellipsis;
 			white-space: nowrap;
 		}
