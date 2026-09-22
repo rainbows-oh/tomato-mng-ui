@@ -6,9 +6,21 @@
 	}
 }
 
+//페이지 하단 버튼 영역
+.cl-container.footer-btn-wrap {
+	padding-top: 16px;
+	border-top: 1px solid #e3e8ee;
+	
+	.cl-button {
+		padding: 0px 12px;
+	}
+}
+
 //카드
 .cl-container.card {
 	border: 1px solid #e3e8ee;
+	background-color: @white;
+	box-shadow: 0 1px 3px rgba(0,55,112,0.08);
 	
 	//user management - total 표시
 	&.type01 {
@@ -73,6 +85,52 @@
 			font-weight: 400;
 			color: #273951;
 		}
+	}
+	
+	//details 페이지 카드 형태 그룹 스타일
+	&.type04 {
+		padding: 16px;
+		border-radius: 8px;
+		
+		&.highlight {
+			background-color: #eeecff;
+			border: 1px solid #533afd;
+		}
+		
+		.cl-output.c-tit {
+			font-size: 15px;
+			font-weight: 600;
+			color: #0d253d;
+		}
+	}
+	
+	//details 페이지 카드 형태 그룹 입력 스타일
+	&.type05 {
+		padding: 16px;
+		border-radius: 8px;
+		
+		&.highlight {
+			background-color: #eeecff;
+			border: 1px solid #533afd;
+		}
+		
+		.cl-output.c-tit {
+			font-size: 15px;
+			font-weight: 600;
+			color: #0d253d;
+		}
+		
+		.label {
+			font-size: 13px;
+			color: #273951;
+		}
+	}
+}
+
+.cl-container.separate {
+	&:not(.cl-last-row) {
+		border-bottom: 1px solid #e3e8ee;
+		padding-bottom: 24px;
 	}
 }
 
@@ -174,15 +232,6 @@
 			color: #0d253d;
 		}
 	}
-	
-	.cl-container.btn-wrap {
-		padding-top: 16px;
-		border-top: 1px solid #e3e8ee;
-		
-		.cl-button {
-			padding: 0px 12px;
-		}
-	}
 }
 
 .cl-button.btn-go-back {
@@ -249,4 +298,24 @@
 	font-weight: @font-weight-normal;
 	line-height: 1.4;
 	letter-spacing: -0.39px;
+}
+
+.cl-container.logo-upload-pop {
+	.cl-output.sub-txt {
+		font-size: 11px;
+		font-weight: 400;
+		color: #64748d;
+	}
+	
+	.cl-container.upload-info {
+		border: 1px solid #e3e8ee;
+		background-color: #f6f9fc;
+		border-radius: 12px;
+	}
+	
+	.cl-button.btn-close {
+		.cl-icon {
+			background-image: url("../../img/icons/ico_close.svg") !important;
+		}
+	}
 }

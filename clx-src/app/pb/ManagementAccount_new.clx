@@ -249,7 +249,7 @@
           </cl:group>
           <cl:verticallayout std:sid="v-layout-1f0b571d" spacing="24"/>
         </cl:group>
-        <cl:group std:sid="group-2d048319" id="grp32" class="btn-wrap">
+        <cl:group std:sid="group-2d048319" id="grp32" class="footer-btn-wrap">
           <cl:verticaldata std:sid="v-data-15c632b2" width="926px" height="53px" autosize="height"/>
           <cl:group std:sid="group-d1d984cf" id="grp33">
             <cl:formdata std:sid="f-data-538be251" row="0" col="0" rowspan="1" colspan="1"/>
