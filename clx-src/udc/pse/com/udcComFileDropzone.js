@@ -166,17 +166,6 @@ function doCreateFileRow(poFile) {
 	vcRow.style.setClasses(["attachments"]);
 	vcRow.setLayout(new cpr.controls.layouts.XYLayout());
 
-	var vcIcon = new cpr.controls.Output();
-	vcIcon.style.setClasses(["file-icon"]);
-	vcRow.addChild(vcIcon, {
-		left: "0px",
-		top: "0px",
-		bottom: "0px",
-		width: "20px",
-		horizontalAnchor: "LEFT",
-		verticalAnchor: "BOTH"
-	});
-
 	var vcRemoveBtn = new cpr.controls.Button();
 	vcRemoveBtn.style.setClasses(["remove", "icon"]);
 	vcRemoveBtn.addEventListener("click", function(e) {
@@ -193,7 +182,7 @@ function doCreateFileRow(poFile) {
 	var vcName = new cpr.controls.Output();
 	vcName.style.setClasses(["name"]);
 	vcName.value = poFile.name;
-	vcName.displayExp = 'text + sstr(" · ' + doFormatFileSize(poFile.size) + '", ["size"])';
+	vcName.displayExp = 'text + sstr(" ' + doFormatFileSize(poFile.size) + '", ["size"])';
 	vcRow.addChild(vcName, {
 		left: "28px",
 		right: "28px",

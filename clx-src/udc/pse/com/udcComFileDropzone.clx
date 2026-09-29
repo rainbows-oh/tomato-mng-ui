@@ -1,20 +1,17 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-fd10a201" version="1.0.6164">
   <head std:sid="head-b6e4a913">
-    <screen std:sid="screen-a1c2e304" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
-    <screen std:sid="screen-b2d3f405" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
-    <screen std:sid="screen-c3e4a506" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <screen std:sid="screen-170b8a84" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-380e916c" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-c0c7fcdf" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
     <cl:model std:sid="model-d4f5b607"/>
-    <cl:appspec title="파일 드롭존 업로드" dev-description="특정 영역에 파일을 드래그 앤 드롭하거나 클릭하여 파일 선택창으로 추가하고, 추가된 파일을 목록으로 보여주는 UDC"/>
+    <cl:appspec dev-description="특정 영역에 파일을 드래그 앤 드롭하거나 클릭하여 파일 선택창으로 추가하고, 추가된 파일을 목록으로 보여주는 UDC" title="파일 드롭존 업로드"/>
   </head>
-  <body std:sid="body-e5a6c708" style="top:0px; left:0px; width:400px; height:220px;" class="udc-file-dropzone">
+  <body std:sid="body-e5a6c708" style="top:0px; left:0px; width:400px; height:200px;" class="udc-file-dropzone">
     <cl:listener std:sid="listener-f6b7d809" name="init" handler="onBodyInit"/>
     <cl:group std:sid="group-b8d9fa0d" id="grpDropzone" class="dropzone">
       <cl:listener std:sid="listener-c9eafb0e" name="click" handler="onGrpDropzoneClick"/>
-      <cl:verticaldata std:sid="v-data-d0fa0c0f" width="400px" height="130px"/>
-      <cl:output std:sid="output-e1a1d200" id="optDropIcon" class="ico" value="">
-        <cl:verticaldata std:sid="v-data-f2b2e301" width="100px" height="24px" autosize="height"/>
-      </cl:output>
+      <cl:verticaldata std:sid="v-data-d0fa0c0f" width="400px" height="130px" autosize="height"/>
       <cl:output std:sid="output-a3c3f402" id="optDropTitle" class="tit" value="Drag and drop files here, or select files">
         <cl:verticaldata std:sid="v-data-b4d4a503" width="100px" height="20px" autosize="height" topspacing="8"/>
       </cl:output>
