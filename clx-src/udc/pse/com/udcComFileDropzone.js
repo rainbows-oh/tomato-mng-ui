@@ -63,6 +63,7 @@ function doCreateHiddenFileInput() {
 	var voInput = document.createElement("input");
 	voInput.type = "file";
 	voInput.multiple = true;
+	voInput.accept = ".pdf,image/*";
 	voInput.style.display = "none";
 
 	voInput.addEventListener("change", function(e) {
@@ -75,23 +76,22 @@ function doCreateHiddenFileInput() {
 }
 
 /**
- * 드롭존 영역에 HTML5 Drag & Drop 이벤트를 연결한다.
+ * 드롭존 컨트롤에 Drag & Drop 이벤트를 연결한다.
+ * cpr.controls.Container가 dragover/drop을 자체 이벤트로 지원하므로,
+ * raw DOM 엘리먼트를 직접 찾지 않고 컨트롤에 바로 addEventListener 한다.
  * @param {cpr.controls.Container} pcDropzone
  */
 function doBindDropzoneDragEvents(pcDropzone) {
-	var voEl = document.getElementById("uuid-" + pcDropzone.uuid);
-	if (!voEl) return;
-
-	voEl.addEventListener("dragover", function(e) {
+	pcDropzone.addEventListener("dragover", function(e) {
 		e.preventDefault();
 		pcDropzone.style.addClass("dragover");
 	});
 
-	voEl.addEventListener("dragleave", function(e) {
+	pcDropzone.addEventListener("dragleave", function(e) {
 		pcDropzone.style.removeClass("dragover");
 	});
 
-	voEl.addEventListener("drop", function(e) {
+	pcDropzone.addEventListener("drop", function(e) {
 		e.preventDefault();
 		pcDropzone.style.removeClass("dragover");
 		doAddFiles(e.dataTransfer.files);
@@ -99,7 +99,17 @@ function doBindDropzoneDragEvents(pcDropzone) {
 }
 
 /**
+ * PDF 또는 이미지 파일인지 확인한다. (accept 속성은 드래그 앤 드롭에는 적용되지 않아 별도 검증 필요)
+ * @param {File} poFile
+ * @return {Boolean}
+ */
+function doIsFileAllowed(poFile) {
+	return poFile.type === "application/pdf" || poFile.type.indexOf("image/") === 0;
+}
+
+/**
  * 파일 목록(FileList)을 행으로 만들어 grpFileList에 추가한다.
+ * PDF/이미지가 아닌 파일은 조용히 건너뛴다.
  * @param {FileList} paFileList
  */
 function doAddFiles(paFileList) {
@@ -108,11 +118,17 @@ function doAddFiles(paFileList) {
 
 	for (vnIdx = 0; vnIdx < paFileList.length; vnIdx++) {
 		var voFile = paFileList[vnIdx];
+		if (!doIsFileAllowed(voFile)) {
+			app.lookup("optFileRejectedInfo").visible = true;
+			continue;
+		} 
+
 		maFiles.push(voFile);
 		vcFileList.addChild(doCreateFileRow(voFile), {
 			"width": "100%",
 			"height": "40px"
 		});
+		app.lookup("optFileRejectedInfo").visible = false;
 	}
 
 	doUpdateSizeInfo();

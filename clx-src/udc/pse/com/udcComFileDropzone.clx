@@ -23,11 +23,14 @@
       </cl:output>
       <cl:verticallayout std:sid="v-layout-c5e5b604" scrollable="false" spacing="0"/>
     </cl:group>
+    <cl:output std:sid="output-ecf37683" id="optFileRejectedInfo" class="text-danger" visible="false" value="file rejected — only image or PDF files are allowed.">
+      <cl:verticaldata std:sid="v-data-108ed794" width="100px" height="20px" autosize="height"/>
+    </cl:output>
     <cl:group std:sid="group-a7c8e90a" id="grpFileList" class="file-list">
       <cl:verticaldata std:sid="v-data-b8d9fa0b" width="400px" height="0px" autosize="height" topspacing="8"/>
       <cl:verticallayout std:sid="v-layout-e8f6c908" scrollable="false" spacing="8"/>
     </cl:group>
-    <cl:verticallayout std:sid="v-layout-d6f6c705" scrollable="false" spacing="0"/>
+    <cl:verticallayout std:sid="v-layout-d6f6c705" scrollable="false" spacing="4"/>
   </body>
   <std:studiosetting>
     <std:hruler/>
