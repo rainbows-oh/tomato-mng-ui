@@ -59,6 +59,9 @@
         <cl:tabfolder std:sid="t-folder-bacf902d" id="fld1" class="line" childcombinatorclass="tablist" item-sizing="fill" item-spacing="0">
           <cl:verticaldata std:sid="v-data-e447e368" width="926px" height="966px" autosize="height"/>
           <cl:tabitem std:sid="t-item-94ea1e2e" selected="true" text="Message">
+            <std:metadata>
+              <std:property key="is-active-item" value="true"/>
+            </std:metadata>
             <cl:group std:sid="group-0c899a3d" id="grp1">
               <std:metadata>
                 <std:property key="locked" value="true"/>
@@ -223,9 +226,6 @@
             </cl:group>
           </cl:tabitem>
           <cl:tabitem std:sid="t-item-178c7f99" selected="true" text="Replies" displayexp="text + &quot;(&quot; + userAttr(&quot;total&quot;) + &quot;)&quot;">
-            <std:metadata>
-              <std:property key="is-active-item" value="true"/>
-            </std:metadata>
             <cl:attribute name="total" value="7"/>
             <cl:group std:sid="group-adf94d8d" id="grp10">
               <std:metadata>
@@ -335,7 +335,7 @@
                 <cl:output std:sid="output-e6ba5e9d" id="opt19" class="group-tit" value="Your reply">
                   <cl:verticaldata std:sid="v-data-166103a1" width="926px" height="20px" autosize="height"/>
                 </cl:output>
-                <cl:textarea std:sid="t-area-aa7b1c11" id="txa2" class="resizable" placeholder="Write a reply...">
+                <cl:textarea std:sid="t-area-aa7b1c11" id="txa2" class="resizable" fieldLabel="Your reply" placeholder="Write a reply...">
                   <cl:verticaldata std:sid="v-data-4159417c" width="100px" height="200px" syncminheight="false" autosize="height"/>
                 </cl:textarea>
                 <cl:group std:sid="group-2d048319" id="grp32" class="btn-wrap">

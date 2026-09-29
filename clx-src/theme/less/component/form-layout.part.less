@@ -21,11 +21,11 @@
 }
 
 .cl-formlayout-horizontal-separator {
-	background-color: @color-form-divider;
+	background-color: #e3e8ee;
 }
 
 .cl-formlayout-vertical-separator {
-	background-color: transparent;
+	background-color: #e3e8ee;
 }
 
 /* 라벨 */
@@ -35,14 +35,15 @@
 	font-weight: 600;
 	text-align: left;
 	
-	/* 필수 입력 — * 표시 */
-	&.required .cl-text::after {
-		content: "*";
-		color: @danger-60;
-		line-height: @line-height-none;
-		margin-left: @gap-1;
-		vertical-align: top;
-	}
+}
+
+/* 필수 입력 — * 표시 */
+&.required .cl-text::after {
+	content: "*";
+	color: @danger-60;
+	line-height: @line-height-none;
+	margin-left: @gap-1;
+	vertical-align: top;
 }
 
 /* 폼 타이틀 (Output 컨트롤로 렌더링) */

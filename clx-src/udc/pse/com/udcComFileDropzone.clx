@@ -1,0 +1,39 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-fd10a201" version="1.0.6164">
+  <head std:sid="head-b6e4a913">
+    <screen std:sid="screen-a1c2e304" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-b2d3f405" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-c3e4a506" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-d4f5b607"/>
+    <cl:appspec title="파일 드롭존 업로드" dev-description="특정 영역에 파일을 드래그 앤 드롭하거나 클릭하여 파일 선택창으로 추가하고, 추가된 파일을 목록으로 보여주는 UDC"/>
+  </head>
+  <body std:sid="body-e5a6c708" style="top:0px; left:0px; width:400px; height:220px;" class="udc-file-dropzone">
+    <cl:listener std:sid="listener-f6b7d809" name="init" handler="onBodyInit"/>
+    <cl:group std:sid="group-b8d9fa0d" id="grpDropzone" class="dropzone">
+      <cl:listener std:sid="listener-c9eafb0e" name="click" handler="onGrpDropzoneClick"/>
+      <cl:verticaldata std:sid="v-data-d0fa0c0f" width="400px" height="130px"/>
+      <cl:output std:sid="output-e1a1d200" id="optDropIcon" class="ico" value="">
+        <cl:verticaldata std:sid="v-data-f2b2e301" width="100px" height="24px" autosize="height"/>
+      </cl:output>
+      <cl:output std:sid="output-a3c3f402" id="optDropTitle" class="tit" value="Drag and drop files here, or select files">
+        <cl:verticaldata std:sid="v-data-b4d4a503" width="100px" height="20px" autosize="height" topspacing="8"/>
+      </cl:output>
+      <cl:output std:sid="output-b5c3f504" id="optDropSizeInfo" class="info" value="Total size limit: 10MB (0MB used).">
+        <cl:verticaldata std:sid="v-data-c6d4a605" width="100px" height="16px" autosize="height" topspacing="4"/>
+      </cl:output>
+      <cl:output std:sid="output-c6d4a706" id="optDropTypeInfo" class="info" value="Only PDF or image files are allowed.">
+        <cl:verticaldata std:sid="v-data-d7e5b807" width="100px" height="16px" autosize="height" topspacing="2"/>
+      </cl:output>
+      <cl:verticallayout std:sid="v-layout-c5e5b604" scrollable="false" spacing="0"/>
+    </cl:group>
+    <cl:group std:sid="group-a7c8e90a" id="grpFileList" class="file-list">
+      <cl:verticaldata std:sid="v-data-b8d9fa0b" width="400px" height="0px" autosize="height" topspacing="8"/>
+      <cl:verticallayout std:sid="v-layout-e8f6c908" scrollable="false" spacing="8"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-d6f6c705" scrollable="false" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
