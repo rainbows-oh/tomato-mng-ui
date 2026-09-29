@@ -231,6 +231,76 @@
 			font-weight: 600;
 			color: #0d253d;
 		}
+		
+		.cl-output.attachments {
+			padding: 8px;
+			border-radius: 6px;
+			border: 1px solid  #e3e8ee;
+			font-weight: 600;
+			
+			.size {
+				color: #64748d;
+				font-weight: 400;
+			}
+		}
+		
+		.cl-container.recipients {
+			padding: 16px;
+			border: 1px solid  #e3e8ee;
+			border-radius: 8px;
+			background-color: #f6f9fc;
+			
+			.cl-output.tit {
+				font-weight: 600;
+			}
+			
+			.cl-output.name {
+				font-weight: 600;
+				font-size: 11px;
+				border: 1px solid  #e3e8ee;
+				background-color: @white;
+				padding: 4px 8px;
+				border-radius: 999px;
+			}
+		}
+		
+		.cl-container.replies {
+			.cl-container.other-chat,
+			.cl-container.my-chat {
+				border: 1px solid  #e3e8ee;
+				border-radius: 8px;
+				padding: 12px;
+				
+				.name {
+					font-weight: 600;
+				}
+				
+				.dept {
+					color: #64748d;
+				}
+				
+				.date {
+					font-size: 11px;
+					color: #64748d;
+				}
+			}
+			
+			.cl-container.other-chat {
+				margin-right: 24px;
+			}
+			
+			.cl-container.my-chat {
+				margin-left: 24px;
+				background-color: #f6f9fc;
+			}
+		}
+		
+		.cl-container.qna {
+			border: 1px solid #e3e8ee;
+			border-radius: 12px;
+			padding: 24px;
+		}
+		
 	}
 }
 

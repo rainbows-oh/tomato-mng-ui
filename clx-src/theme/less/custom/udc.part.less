@@ -140,3 +140,27 @@
 		}
 	}
 }
+
+/************************************************
+ * [UDC] 리스트 상세 화면들의 Replies 컨텐츠 상단 open-closed 토글 버튼
+ ************************************************/
+.cl-radiobutton.rep-toggle {
+	border: 1px solid #e3e8ee;
+	border-radius: 999px;
+	overflow: hidden !important;
+	max-height: 32px;
+	
+	.cl-radiobutton-item {
+		padding: 6px 12px;
+		
+		&.open {
+			background-color: #fcf4d6;
+			color: #8e6a00;
+		}
+		
+		&.close {
+			background-color: #ebedef;
+			color: #313b49;
+		}
+	}
+}
