@@ -321,42 +321,44 @@ Validator.prototype.validate = function(ctrl, ctrlValue, poParentCtl, pnIdx, pnC
 				vsCompareColLable = vcCompareCtrl.fieldLabel;
 			}
 			
-			var type = ctrl.type;
-			if ( ctrl.type == "dateinput") {
-				/** @type {cpr.controls.DateInput} */
-    			var dateCtrl = ctrl;
-				value = DateUtil.formatDate(value, dateCtrl.format, "YYYYMMDD");
-				vsCompareColValue = DateUtil.formatDate(vsCompareColValue, dateCtrl.format, "YYYYMMDD");
-			}
-			
-			if(!ValueUtil.isNull(value) && !ValueUtil.isNull(vsCompareColValue)){
-				var vbReturn = false;
-				var vsCompareVal = "'"+value+"'" + compareType + "'"+vsCompareColValue+"'";
-				var vsCompareValNumber = value + compareType + vsCompareColValue;
-				if (ValueUtil.isNumber(value) && ValueUtil.isNumber(vsCompareColValue)) {
-					vbReturn = Function('"use strict";return (' + vsCompareValNumber + ')')();	
-				}else{
-					vbReturn = Function('"use strict";return (' + vsCompareVal + ')')();	
+			if (ValueUtil.fixNull(vsCompareColValue) != ""){
+				var type = ctrl.type;
+				if ( ctrl.type == "dateinput") {
+					/** @type {cpr.controls.DateInput} */
+	    			var dateCtrl = ctrl;
+					value = DateUtil.formatDate(value, dateCtrl.format, "YYYYMMDD");
+					vsCompareColValue = DateUtil.formatDate(vsCompareColValue, dateCtrl.format, "YYYYMMDD");
 				}
-		            
-	            if (!vbReturn) {
-	            	 vsFieldLabel = getGridFieldLabel(poParentCtl, vsFieldLabel);
-	            	 var vsMsg = "";
-	            	if(compareType == "<=" || compareType == "<" ){
-	            		//{0}은(는) {1}보다 클 수 없습니다.
-	            		vsMsg = this._appKit.Msg.getMsg("WRN-M009", [vsFieldLabel, vsCompareColLable]);
-	            	}else if (compareType == ">=" || compareType == ">" ){
-	            		//{0}은(는) {1}보다 작을수 없습니다.
-	            		vsMsg = this._appKit.Msg.getMsg("WRN-M010", [vsFieldLabel, vsCompareColLable]);
-	            	}else if (compareType == "==" || compareType == "="){
-	            		//{0}은(는) {1}와 같아야 합니다.
-	            		vsMsg = this._appKit.Msg.getMsg("WRN-M011", [vsFieldLabel, vsCompareColLable]);
-	            	}else{
-	            		
-	            	}
-	            	parentValidMsg(vsMsg, poParentCtl, pnIdx);
-	                return false;
-	            }
+				
+				if(!ValueUtil.isNull(value) && !ValueUtil.isNull(vsCompareColValue)){
+					var vbReturn = false;
+					var vsCompareVal = "'"+value+"'" + compareType + "'"+vsCompareColValue+"'";
+					var vsCompareValNumber = value + compareType + vsCompareColValue;
+					if (ValueUtil.isNumber(value) && ValueUtil.isNumber(vsCompareColValue)) {
+						vbReturn = Function('"use strict";return (' + vsCompareValNumber + ')')();	
+					}else{
+						vbReturn = Function('"use strict";return (' + vsCompareVal + ')')();	
+					}
+			            
+		            if (!vbReturn) {
+		            	 vsFieldLabel = getGridFieldLabel(poParentCtl, vsFieldLabel);
+		            	 var vsMsg = "";
+		            	if(compareType == "<=" || compareType == "<" ){
+		            		//{0}은(는) {1}보다 클 수 없습니다.
+		            		vsMsg = this._appKit.Msg.getMsg("WRN-M009", [vsFieldLabel, vsCompareColLable]);
+		            	}else if (compareType == ">=" || compareType == ">" ){
+		            		//{0}은(는) {1}보다 작을수 없습니다.
+		            		vsMsg = this._appKit.Msg.getMsg("WRN-M010", [vsFieldLabel, vsCompareColLable]);
+		            	}else if (compareType == "==" || compareType == "="){
+		            		//{0}은(는) {1}와 같아야 합니다.
+		            		vsMsg = this._appKit.Msg.getMsg("WRN-M011", [vsFieldLabel, vsCompareColLable]);
+		            	}else{
+		            		
+		            	}
+		            	parentValidMsg(vsMsg, poParentCtl, pnIdx);
+		                return false;
+		            }
+				}
 			}
 		}
 	}

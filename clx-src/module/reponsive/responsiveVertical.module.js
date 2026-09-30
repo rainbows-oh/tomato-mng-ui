@@ -225,8 +225,8 @@ RVertical.prototype._fillLayout = function () {
 	// 우선순위2 ) grpData
 	var vaGroupBoxIds = null;
 	vaChildren.filter(function(child){
-		return child instanceof udc.com.udcComAppHeader;
-	}).forEach(function(/* udc.com.udcComAppHeader */ appHeader){
+		return child instanceof udc.pse.com.udcComAppHeader;
+	}).forEach(function(/* udc.pse.com.udcComAppHeader */ appHeader){
 		var vsGroupBoxIds =  appHeader.getAppProperty("groupBoxIds");
 		if(!ValueUtil.isNull(vsGroupBoxIds)) {
 			vaGroupBoxIds = vsGroupBoxIds.split(",");

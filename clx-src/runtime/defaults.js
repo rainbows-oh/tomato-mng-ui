@@ -28,7 +28,7 @@ var CPR_DEFAULTS = {
 			footerVisible: false,
 			headerButtons: ["title", "prev", "next"],
 			showOtherMonths: true,
-			format: "MMDDYYYY",
+			format: "YYYYMMDD",
 			mask: "MM-DD-YYYY",
 			placeholder:"MM-DD-YYYY"
 		},
@@ -90,7 +90,7 @@ var CPR_DEFAULTS = {
 			maxNotifyCount: 1,
 		},
 		output: {
-			dateValueFormat: "MMDDYYYYHHmmssSSS",
+			dateValueFormat: "YYYYMMDDHHmmssSSS",
 			unselectable: false
 		},
 		pageindexer: {
