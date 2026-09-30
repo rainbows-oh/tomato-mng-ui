@@ -5,7 +5,7 @@
     <screen std:sid="screen-5dac1053" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
     <screen std:sid="screen-74b548ad" id="EXB-PART" name="EXB-PART" width="360px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
     <cl:model std:sid="model-e918cc57"/>
-    <cl:appspec/>
+    <cl:appspec dev-comment="상단 우측의 라디오 버튼은 화면 호출 확인용입니다. 개발시 필요 없으시면 삭제하셔도 됩니다."/>
   </head>
   <body std:sid="body-6585a0fc">
     <cl:group std:sid="group-0319b359" id="grpHeader" class="page-title-wrap">
@@ -31,9 +31,9 @@
           <cl:formdata std:sid="f-data-bbdb1180" valign="CENTER" height="36" row="0" col="1"/>
           <cl:radiobutton std:sid="r-button-0093f602">
             <cl:listener std:sid="listener-35741299" name="selection-change" handler="onRadioButtonSelectionChange"/>
-            <cl:flowlayoutdata std:sid="f-data-860a46c2" width="149px" height="26px" autosize="width"/>
+            <cl:flowlayoutdata std:sid="f-data-860a46c2" width="313px" height="26px" autosize="width"/>
             <cl:item std:sid="item-f6a4d8d2" label="단일 msg" value="value1" tooltip=""/>
-            <cl:item std:sid="item-d302fd0a" label="TAB" value="value2"/>
+            <cl:item std:sid="item-d302fd0a" label="TAB(해당 라디오 화면 확인 후 삭제 가능)" value="value2"/>
           </cl:radiobutton>
           <cl:button std:sid="button-71b62df9" id="btn5" class="btn-inline" value="Print">
             <cl:flowlayoutdata std:sid="f-data-f9d85ba4" width="100px" height="36px" autosize="width"/>

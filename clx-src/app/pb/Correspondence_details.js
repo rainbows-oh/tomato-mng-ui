@@ -60,14 +60,12 @@ function onRadioButtonSelectionChange(e) {
 		cpr.core.App.load("app/pb/Correspondence_details_message", function(loadedApp) {
 			if(loadedApp) {
 				embContent.app = loadedApp;
-				embContent.ready();
 			}
 		})
 	} else {
 		cpr.core.App.load("app/pb/Correspondence_details_TAB", function(loadedApp) {
 			if(loadedApp) {
 				embContent.app = loadedApp;
-				embContent.ready();
 			}
 		})
 	}
