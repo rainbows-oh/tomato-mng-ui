@@ -3,7 +3,7 @@
  * Screen ID : udcComFileDropzone.js
  * Screen Name :
  * Created Date :  2026. 9. 29.
- * Creator : claude
+ * Creator : chwec
  * Revision History
  *******************************************************************************
  * Date				Name				Description
@@ -76,9 +76,6 @@ function doCreateHiddenFileInput() {
 }
 
 /**
- * 드롭존 컨트롤에 Drag & Drop 이벤트를 연결한다.
- * cpr.controls.Container가 dragover/drop을 자체 이벤트로 지원하므로,
- * raw DOM 엘리먼트를 직접 찾지 않고 컨트롤에 바로 addEventListener 한다.
  * @param {cpr.controls.Container} pcDropzone
  */
 function doBindDropzoneDragEvents(pcDropzone) {
@@ -99,7 +96,7 @@ function doBindDropzoneDragEvents(pcDropzone) {
 }
 
 /**
- * PDF 또는 이미지 파일인지 확인한다. (accept 속성은 드래그 앤 드롭에는 적용되지 않아 별도 검증 필요)
+ * PDF 또는 이미지 파일인지 확인한다.
  * @param {File} poFile
  * @return {Boolean}
  */
@@ -109,7 +106,7 @@ function doIsFileAllowed(poFile) {
 
 /**
  * 파일 목록(FileList)을 행으로 만들어 grpFileList에 추가한다.
- * PDF/이미지가 아닌 파일은 조용히 건너뛴다.
+ * PDF/이미지가 아닌 파일은 경고문 표출.
  * @param {FileList} paFileList
  */
 function doAddFiles(paFileList) {
@@ -173,7 +170,6 @@ function doFormatFileSize(pnBytes) {
 }
 
 /**
- * 파일 한 줄(아이콘 + 파일명 · 용량 + 삭제버튼)을 가로로 배치한 Container를 생성한다.
  * @param {File} poFile
  * @return {cpr.controls.Container}
  */
