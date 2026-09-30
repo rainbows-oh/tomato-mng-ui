@@ -5,7 +5,7 @@
     <screen std:sid="screen-5dac1053" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
     <screen std:sid="screen-74b548ad" id="EXB-PART" name="EXB-PART" width="360px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
     <cl:model std:sid="model-e918cc57"/>
-    <cl:appspec/>
+    <cl:appspec dev-comment="상단 우측의 라디오 버튼은 화면 호출 확인용입니다. 개발시 필요 없으시면 삭제하셔도 됩니다."/>
   </head>
   <body std:sid="body-6585a0fc">
     <cl:group std:sid="group-0319b359" id="grpHeader" class="page-title-wrap">
@@ -46,145 +46,17 @@
           <cl:columns length="1" unit="FRACTION"/>
         </cl:formlayout>
       </cl:group>
+      <cl:radiobutton std:sid="r-button-0093f602">
+        <cl:listener std:sid="listener-db3f2363" name="selection-change" handler="onRadioButtonSelectionChange"/>
+        <cl:verticaldata std:sid="v-data-fa7d1e00" width="976px" height="26px" autosize="both"/>
+        <cl:item std:sid="item-f6a4d8d2" label="단일 msg" value="value1" tooltip=""/>
+        <cl:item std:sid="item-d302fd0a" label="TAB(해당 라디오버튼은 화면 호출 확인용입니다. 확인 후 삭제 가능)" value="value2"/>
+      </cl:radiobutton>
       <cl:group std:sid="group-c9d6abb5" id="grpContent">
         <cl:verticaldata std:sid="v-data-3172a4b8" width="976px" height="1038px" autosize="height"/>
-        <cl:group std:sid="group-6b56372d" id="grp34" class="form-group">
-          <cl:verticaldata std:sid="v-data-ad67b939" width="976px" height="544px" autosize="height"/>
-          <cl:group std:sid="group-fcd1ca3f" id="grp2" class="group">
-            <cl:verticaldata std:sid="v-data-98d6beb8" width="926px" height="494px" autosize="height"/>
-            <cl:output std:sid="output-e90f8b1e" id="opt4" class="group-tit" value="Question">
-              <cl:verticaldata std:sid="v-data-06e566c6" width="100px" height="20px" autosize="height"/>
-            </cl:output>
-            <cl:group std:sid="group-qas000042" id="grp4" class="row">
-              <cl:attribute name="mobile-column-count" value="1"/>
-              <cl:verticaldata std:sid="v-data-qas000043" width="926px" height="58px" autosize="height"/>
-              <cl:group std:sid="group-qas000044" id="grp5">
-                <cl:attribute name="needs-auto-height" value="true"/>
-                <cl:formdata std:sid="f-data-qas000045" width="100" height="25" row="0" col="0"/>
-                <cl:output std:sid="output-qas000046" id="opt1" class="label" value="Company Name">
-                  <cl:verticaldata std:sid="v-data-qas000047" width="100px" height="18px" autosize="height"/>
-                </cl:output>
-                <cl:inputbox std:sid="i-box-67b1da8a" id="ipb14" fieldLabel="Company Name" readonly="true" value="Pacific Horizon Securities, Inc.">
-                  <cl:verticaldata std:sid="v-data-e0805c10" width="100px" height="32px"/>
-                </cl:inputbox>
-                <cl:verticallayout std:sid="v-layout-qas000062"/>
-              </cl:group>
-              <cl:group std:sid="group-9da19e8a" id="grp37">
-                <cl:attribute name="needs-auto-height" value="true"/>
-                <cl:formdata std:sid="f-data-7f2e2172" row="0" col="1"/>
-                <cl:output std:sid="output-2ba5b9fe" id="opt33" class="label" value="Submitted By">
-                  <cl:verticaldata std:sid="v-data-8da8f2ac" width="100px" height="18px" autosize="height"/>
-                </cl:output>
-                <cl:inputbox std:sid="i-box-b29db30f" id="ipb15" fieldLabel="Submitted By" readonly="true" value="Maria Santos">
-                  <cl:verticaldata std:sid="v-data-084db242" width="100px" height="32px"/>
-                </cl:inputbox>
-                <cl:verticallayout std:sid="v-layout-b27eec6f"/>
-              </cl:group>
-              <cl:group std:sid="group-beb119a8" id="grp38">
-                <cl:attribute name="needs-auto-height" value="true"/>
-                <cl:formdata std:sid="f-data-e4881754" row="0" col="2"/>
-                <cl:output std:sid="output-ce468bb7" id="opt34" class="label" value="Question Date and Time">
-                  <cl:verticaldata std:sid="v-data-5b190db2" width="100px" height="18px" autosize="height"/>
-                </cl:output>
-                <cl:dateinput std:sid="d-input-9dcbde07" id="dti2" fieldLabel="Question Date and Time" readonly="true" value="20260825221429" mask="MM-DD-YYYY hh:mm:ss A" format="YYYYMMDDhhmmss">
-                  <cl:verticaldata std:sid="v-data-4bb399d3" width="176px" height="32px" autosize="none"/>
-                </cl:dateinput>
-                <cl:verticallayout std:sid="v-layout-b1febd33"/>
-              </cl:group>
-              <cl:formlayout std:sid="f-layout-qas000073" scrollable="false" hspace="12px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
-                <cl:rows length="1" unit="FRACTION"/>
-                <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
-                <cl:columns length="1" unit="FRACTION"/>
-                <cl:columns length="1" unit="FRACTION"/>
-              </cl:formlayout>
-            </cl:group>
-            <cl:group std:sid="group-e246079d" id="grp42">
-              <cl:attribute name="needs-auto-height" value="true"/>
-              <cl:verticaldata std:sid="v-data-fbc067d6" width="926px" height="142px" autosize="height"/>
-              <cl:output std:sid="output-10497385" id="opt37" class="label" value="Attached File">
-                <cl:verticaldata std:sid="v-data-73ff0978" width="100px" height="18px" autosize="height"/>
-              </cl:output>
-              <cl:output std:sid="output-5bd10536" id="opt10" value="No attachments.">
-                <cl:verticaldata std:sid="v-data-084cfa10" width="926px" height="20px" autosize="height"/>
-              </cl:output>
-              <cl:group std:sid="group-14e2841d" id="grp10">
-                <cl:verticaldata std:sid="v-data-5997ae4f" width="926px" height="88px" autosize="height"/>
-                <cl:output std:sid="output-582c1dcd" id="opt11" class="attachments" value="correspondence-3-notice.pdf " displayexp="text + sstr(userAttr(&quot;size&quot;) + &quot;KB&quot;, [&quot;size&quot;])">
-                  <cl:attribute name="size" value="604"/>
-                  <cl:verticaldata std:sid="v-data-97c46534" width="100px" height="40px" autosize="height"/>
-                </cl:output>
-                <cl:output std:sid="output-40985607" id="opt12" class="attachments" value="correspondence-1-notice.pdf " displayexp="text + sstr(userAttr(&quot;size&quot;) + &quot;KB&quot;, [&quot;size&quot;])">
-                  <cl:attribute name="size" value="325"/>
-                  <cl:verticaldata std:sid="v-data-954164c7" width="926px" height="40px" autosize="height"/>
-                </cl:output>
-                <cl:verticallayout std:sid="v-layout-4794726f"/>
-              </cl:group>
-              <cl:verticallayout std:sid="v-layout-e2175e61"/>
-            </cl:group>
-            <cl:group std:sid="group-b7e8dc66" id="grp43">
-              <cl:attribute name="needs-auto-height" value="true"/>
-              <cl:verticaldata std:sid="v-data-fa111f89" width="926px" height="226px" autosize="height"/>
-              <cl:output std:sid="output-b038b3cd" id="opt38" class="label" value="Question">
-                <cl:verticaldata std:sid="v-data-fa068dbb" width="100px" height="18px" autosize="height"/>
-              </cl:output>
-              <cl:textarea std:sid="t-area-16b3e25b" id="txa1" fieldLabel="Question" readonly="true" value="Dear Angela Cruz,&#xD;&#xA;&#xD;&#xA;This correspondence (Regulatory Action) concerns the following matter:&#xD;&#xA;Additional information is required for the submitted report.&#xD;&#xA;Please observe the stated deadline of 2026-08-24 where applicable.&#xD;&#xA;&#xD;&#xA;Regards,&#xD;&#xA;PSE System Admin&#xD;&#xA;Market Surveillance">
-                <cl:verticaldata std:sid="v-data-6862a708" width="100px" height="200px"/>
-              </cl:textarea>
-              <cl:verticallayout std:sid="v-layout-7ca03849"/>
-            </cl:group>
-            <cl:verticallayout std:sid="v-layout-a90e41bd" spacing="16"/>
-          </cl:group>
-          <cl:verticallayout std:sid="v-layout-1f0b571d" spacing="24" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
-        </cl:group>
-        <cl:group std:sid="group-15ae0a8c" id="grp6" class="form-group highlight">
-          <cl:verticaldata std:sid="v-data-ff25f8e3" width="976px" height="470px" autosize="height"/>
-          <cl:group std:sid="group-07100466" id="grp7" class="group">
-            <cl:verticaldata std:sid="v-data-a1590177" width="926px" height="361px" autosize="height"/>
-            <cl:output std:sid="output-1e61ecea" id="opt2" class="group-tit" value="Answer">
-              <cl:verticaldata std:sid="v-data-dedca290" width="100px" height="20px" autosize="height"/>
-            </cl:output>
-            <cl:group std:sid="group-025e2b16" id="grp8" class="row">
-              <cl:attribute name="mobile-column-count" value="1"/>
-              <cl:verticaldata std:sid="v-data-51592101" width="926px" height="58px" autosize="height"/>
-              <cl:group std:sid="group-1ae1e39b" id="grp9">
-                <cl:attribute name="needs-auto-height" value="true"/>
-                <cl:formdata std:sid="f-data-58432601" width="100" height="25" row="0" col="0"/>
-                <cl:output std:sid="output-30047d56" id="opt3" class="label" value="Department">
-                  <cl:verticaldata std:sid="v-data-afc3ecb3" width="100px" height="18px" autosize="height"/>
-                </cl:output>
-                <cl:combobox std:sid="c-box-1080ccc4">
-                  <cl:verticaldata std:sid="v-data-ba3ca005" width="100px" height="32px"/>
-                </cl:combobox>
-                <cl:verticallayout std:sid="v-layout-a04e17dc"/>
-              </cl:group>
-              <cl:formlayout std:sid="f-layout-53f8ff83" scrollable="false" hspace="12px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
-                <cl:rows length="1" unit="FRACTION"/>
-                <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
-                <cl:columns length="1" unit="FRACTION"/>
-              </cl:formlayout>
-            </cl:group>
-            <cl:group std:sid="group-13f9742d" id="grp15">
-              <cl:attribute name="needs-auto-height" value="true"/>
-              <cl:verticaldata std:sid="v-data-4fd276c9" width="926px" height="226px" autosize="height"/>
-              <cl:output std:sid="output-2fbfbc3b" id="opt14" class="label" value="Answer">
-                <cl:verticaldata std:sid="v-data-409e0fdf" width="100px" height="18px" autosize="height"/>
-              </cl:output>
-              <cl:textarea std:sid="t-area-f9aaab1f" id="txa2" class="resizable" fieldLabel="Question" value="" placeholder="Write the official answer...">
-                <cl:verticaldata std:sid="v-data-df67e958" width="100px" height="200px" autosize="height"/>
-              </cl:textarea>
-              <cl:verticallayout std:sid="v-layout-cc6c5f80"/>
-            </cl:group>
-            <cl:verticallayout std:sid="v-layout-4d7fc9c0" spacing="16"/>
-          </cl:group>
-          <cl:group std:sid="group-4b9ab27e" class="btn-wrap">
-            <cl:verticaldata std:sid="v-data-7be87e2b" width="926px" height="36px" autosize="height"/>
-            <cl:button std:sid="button-4436974c" class="btn-submit" value="Register Answer">
-              <cl:flowlayoutdata std:sid="f-data-42cfe23f" width="120px" height="36px" autosize="width"/>
-            </cl:button>
-            <cl:flowlayout std:sid="f-layout-8441a31f" halign="right"/>
-          </cl:group>
-          <cl:verticallayout std:sid="v-layout-59eddf0a" spacing="16" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
-        </cl:group>
+        <cl:embeddedapp std:sid="e-app-71c9f6ab" id="emb">
+          <cl:verticaldata std:sid="v-data-e8b71083" width="320px" height="925px" autosize="height"/>
+        </cl:embeddedapp>
         <cl:verticallayout std:sid="v-layout-edd42a47" spacing="24"/>
       </cl:group>
       <cl:verticallayout std:sid="v-layout-9dda75e2" spacing="24" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
