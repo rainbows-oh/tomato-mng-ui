@@ -14,7 +14,7 @@
   </head>
   <body std:sid="body-a9c272ed" style="top:0px; left:0px; width:140px; height:32px;">
     <cl:listener std:sid="listener-e7c82612" name="load" handler="onBodyLoad"/>
-    <cl:radiobutton std:sid="r-button-ff3ee094" id="rdb1" class="rep-toggle" hspacing="0" hideicon="true">
+    <cl:radiobutton std:sid="r-button-ff3ee094" id="rdb1" class="rep-toggle" hspacing="0" hideicon="true" clickRegion="item">
       <cl:listener std:sid="listener-bdac4f04" name="selection-change" handler="onRdb1SelectionChange"/>
       <cl:apppropbind property="value" app-property="value"/>
       <cl:formdata std:sid="f-data-8cde5bf2" row="0" col="0"/>

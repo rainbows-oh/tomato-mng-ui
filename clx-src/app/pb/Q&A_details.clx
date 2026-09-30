@@ -24,7 +24,7 @@
       </cl:formlayout>
     </cl:group>
     <cl:group std:sid="group-0b464f24" id="grpData" class="inner">
-      <cl:verticaldata std:sid="v-data-40a89747" width="1024px" height="694px" autosize="height"/>
+      <cl:verticaldata std:sid="v-data-40a89747" width="1024px" height="1188px" autosize="height"/>
       <cl:group std:sid="group-b5aa1204" class="card type03">
         <cl:verticaldata std:sid="v-data-6ec449da" width="976px" height="78px" autosize="height"/>
         <cl:group std:sid="group-9677c655" id="grp35">
@@ -46,10 +46,10 @@
           <cl:columns length="1" unit="FRACTION"/>
         </cl:formlayout>
       </cl:group>
-      <cl:group std:sid="group-c9d6abb5" id="grpContent" class="form-group">
-        <cl:verticaldata std:sid="v-data-3172a4b8" width="976px" height="544px" autosize="height"/>
-        <cl:group std:sid="group-6b56372d" id="grp34">
-          <cl:verticaldata std:sid="v-data-ad67b939" width="926px" height="494px" autosize="height"/>
+      <cl:group std:sid="group-c9d6abb5" id="grpContent">
+        <cl:verticaldata std:sid="v-data-3172a4b8" width="976px" height="1038px" autosize="height"/>
+        <cl:group std:sid="group-6b56372d" id="grp34" class="form-group">
+          <cl:verticaldata std:sid="v-data-ad67b939" width="976px" height="544px" autosize="height"/>
           <cl:group std:sid="group-fcd1ca3f" id="grp2" class="group">
             <cl:verticaldata std:sid="v-data-98d6beb8" width="926px" height="494px" autosize="height"/>
             <cl:output std:sid="output-e90f8b1e" id="opt4" class="group-tit" value="Question">
@@ -134,9 +134,58 @@
             </cl:group>
             <cl:verticallayout std:sid="v-layout-a90e41bd" spacing="16"/>
           </cl:group>
-          <cl:verticallayout std:sid="v-layout-1f0b571d" spacing="24"/>
+          <cl:verticallayout std:sid="v-layout-1f0b571d" spacing="24" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
         </cl:group>
-        <cl:verticallayout std:sid="v-layout-edd42a47" spacing="24" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+        <cl:group std:sid="group-15ae0a8c" id="grp6" class="form-group highlight">
+          <cl:verticaldata std:sid="v-data-ff25f8e3" width="976px" height="470px" autosize="height"/>
+          <cl:group std:sid="group-07100466" id="grp7" class="group">
+            <cl:verticaldata std:sid="v-data-a1590177" width="926px" height="361px" autosize="height"/>
+            <cl:output std:sid="output-1e61ecea" id="opt2" class="group-tit" value="Answer">
+              <cl:verticaldata std:sid="v-data-dedca290" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-025e2b16" id="grp8" class="row">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-51592101" width="926px" height="58px" autosize="height"/>
+              <cl:group std:sid="group-1ae1e39b" id="grp9">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-58432601" width="100" height="25" row="0" col="0"/>
+                <cl:output std:sid="output-30047d56" id="opt3" class="label" value="Department">
+                  <cl:verticaldata std:sid="v-data-afc3ecb3" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:combobox std:sid="c-box-1080ccc4">
+                  <cl:verticaldata std:sid="v-data-ba3ca005" width="100px" height="32px"/>
+                </cl:combobox>
+                <cl:verticallayout std:sid="v-layout-a04e17dc"/>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-53f8ff83" scrollable="false" hspace="12px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-13f9742d" id="grp15">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-4fd276c9" width="926px" height="226px" autosize="height"/>
+              <cl:output std:sid="output-2fbfbc3b" id="opt14" class="label" value="Answer">
+                <cl:verticaldata std:sid="v-data-409e0fdf" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:textarea std:sid="t-area-f9aaab1f" id="txa2" class="resizable" fieldLabel="Question" value="" placeholder="Write the official answer...">
+                <cl:verticaldata std:sid="v-data-df67e958" width="100px" height="200px" autosize="height"/>
+              </cl:textarea>
+              <cl:verticallayout std:sid="v-layout-cc6c5f80"/>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-4d7fc9c0" spacing="16"/>
+          </cl:group>
+          <cl:group std:sid="group-4b9ab27e" class="btn-wrap">
+            <cl:verticaldata std:sid="v-data-7be87e2b" width="926px" height="36px" autosize="height"/>
+            <cl:button std:sid="button-4436974c" class="btn-submit" value="Register Answer">
+              <cl:flowlayoutdata std:sid="f-data-42cfe23f" width="120px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-8441a31f" halign="right"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-59eddf0a" spacing="16" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-edd42a47" spacing="24"/>
       </cl:group>
       <cl:verticallayout std:sid="v-layout-9dda75e2" spacing="24" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
     </cl:group>

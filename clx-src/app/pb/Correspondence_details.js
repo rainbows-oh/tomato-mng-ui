@@ -47,3 +47,28 @@
  * (Event functions are automatically displayed below when events are created.)
  *******************************************************************************/
 
+/*
+ * 라디오 버튼에서 selection-change 이벤트 발생 시 호출.
+ * 라디오버튼 아이템을 선택하여 선택된 값이 저장된 후에 발생하는 이벤트.
+ */
+function onRadioButtonSelectionChange(e) {
+	var radioButton = e.control;
+	
+	var embContent = app.lookup("emb");
+	
+	if(radioButton.value == "value1") {
+		cpr.core.App.load("app/pb/Correspondence_details_message", function(loadedApp) {
+			if(loadedApp) {
+				embContent.app = loadedApp;
+				embContent.ready();
+			}
+		})
+	} else {
+		cpr.core.App.load("app/pb/Correspondence_details_TAB", function(loadedApp) {
+			if(loadedApp) {
+				embContent.app = loadedApp;
+				embContent.ready();
+			}
+		})
+	}
+}
