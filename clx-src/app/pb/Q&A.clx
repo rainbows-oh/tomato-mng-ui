@@ -55,7 +55,7 @@
   <body std:sid="body-59a2c206">
     <cl:group std:sid="group-e6d3a8f4" id="grpHeader" class="page-title-wrap">
       <cl:verticaldata std:sid="v-data-98340ade" width="1024px" height="56px" autosize="height" sticky="true" stickytopoffset="0"/>
-      <cl:udc std:sid="ud-control-e529ea22" id="udccomappheader1" type="udc.pse.com.UdcComAppHeader">
+      <cl:udc std:sid="ud-control-e529ea22" id="udccomappheader1" type="udc.pse.com.udcComAppHeader">
         <cl:formdata std:sid="f-data-dc2be6ec" row="0" col="0"/>
         <cl:property name="title" value="Q&amp;A" type="string"/>
       </cl:udc>
@@ -243,7 +243,7 @@
             <cl:button std:sid="button-71702e7b" class="btn-excel" value="Excel Download" icon="0">
               <cl:flowlayoutdata std:sid="f-data-fa75e88c" width="142px" height="32px" autosize="width"/>
             </cl:button>
-            <cl:udc std:sid="ud-control-cc647d9a" id="udccomviewbutton1" type="udc.pse.com.UdcComViewButton">
+            <cl:udc std:sid="ud-control-cc647d9a" id="udccomviewbutton1" type="udc.pse.com.udcComViewButton">
               <cl:flowlayoutdata std:sid="f-data-ccb841fc" width="68px" height="32px" autosize="both"/>
             </cl:udc>
             <cl:flowlayout std:sid="f-layout-3ac577df" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
@@ -305,7 +305,7 @@
             </cl:gridcell>
           </cl:griddetail>
         </cl:grid>
-        <cl:udc std:sid="ud-control-eaa7f396" id="udccompagination1" type="udc.pse.com.UdcComPagination">
+        <cl:udc std:sid="ud-control-eaa7f396" id="udccompagination1" type="udc.pse.com.udcComPagination">
           <cl:verticaldata std:sid="v-data-98b2d615" width="1024px" height="60px" autosize="height"/>
         </cl:udc>
         <cl:verticallayout std:sid="v-layout-40e46285" scrollable="false" spacing="0"/>

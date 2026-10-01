@@ -10,7 +10,7 @@
   <body std:sid="body-4abee890">
     <cl:group std:sid="group-0319b359" id="grpHeader" class="page-title-wrap">
       <cl:verticaldata std:sid="v-data-dddbbb01" width="1024px" height="57px" autosize="height" sticky="true"/>
-      <cl:udc std:sid="ud-control-1d70da47" id="udccomappheader1" type="udc.pse.com.UdcComAppHeader">
+      <cl:udc std:sid="ud-control-1d70da47" id="udccomappheader1" type="udc.pse.com.udcComAppHeader">
         <cl:formdata std:sid="f-data-dc4ac2b2" row="0" col="0"/>
         <cl:property name="title" value="Management Account" type="string"/>
       </cl:udc>

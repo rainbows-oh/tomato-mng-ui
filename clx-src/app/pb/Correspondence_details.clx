@@ -14,7 +14,7 @@
         <cl:formdata std:sid="f-data-e5a11c32" row="0" col="1"/>
         <cl:flowlayout std:sid="f-layout-ea5ceda2" halign="right"/>
       </cl:group>
-      <cl:udc std:sid="ud-control-a723c091" id="udccomappheader1" type="udc.pse.com.UdcComAppHeader">
+      <cl:udc std:sid="ud-control-a723c091" id="udccomappheader1" type="udc.pse.com.udcComAppHeader">
         <cl:formdata std:sid="f-data-22cad418" row="0" col="0"/>
       </cl:udc>
       <cl:formlayout std:sid="f-layout-631b2075" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
