@@ -11,8 +11,6 @@
 // 의존 모듈 선언
 module.depends("module/standard/util");
 
-cpr.I18N.INSTANCE.currentLanguage = "en";
-
 /**
  * 데이터인풋 캘린더에 공휴일 표시를 위해 전역 기념일 추가
  */
@@ -335,3 +333,25 @@ function fnResponsiveMdl(poApp, paCtrl) {
 		});
 	}
 })()
+
+/**
+ * 앱 init시 처리로직 담당 변수
+ */
+var AppInitTask = {
+	init : function(){
+		cpr.events.EventBus.INSTANCE.addFilter("init", function(e){
+			if(e.control instanceof cpr.core.AppInstance){
+				
+				/** @type cpr.core.AppInstance */
+				var appInstance = e.control;
+				
+				//메시지 Language 변경 처리
+				if (cpr.I18N.INSTANCE) {
+					cpr.I18N.INSTANCE.currentLanguage = "en";
+				}
+			}
+		});
+	}
+}
+
+AppInitTask.init();
