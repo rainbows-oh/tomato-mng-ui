@@ -53,16 +53,17 @@
  */
 function onRadioButtonSelectionChange(e) {
 	var radioButton = e.control;
+	
 	var embContent = app.lookup("emb");
 	
 	if(radioButton.value == "value1") {
-		cpr.core.App.load("app/pb/Q&A_details_message", function(loadedApp) {
+		cpr.core.App.load("app/pb/old/Correspondence_details_message", function(loadedApp) {
 			if(loadedApp) {
 				embContent.app = loadedApp;
 			}
 		})
 	} else {
-		cpr.core.App.load("app/pb/Q&A_details_TAB", function(loadedApp) {
+		cpr.core.App.load("app/pb/old/Correspondence_details_TAB", function(loadedApp) {
 			if(loadedApp) {
 				embContent.app = loadedApp;
 			}
