@@ -1,49 +1,53 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-c7aab440" version="1.0.6190">
   <head std:sid="head-f7f5f3e4">
-    <screen std:sid="screen-6fd26371" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
-    <screen std:sid="screen-4734ea48" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
-    <screen std:sid="screen-b7ca636a" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <screen std:sid="screen-debbb771" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-3d36fc78" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-4a8af3df" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
     <cl:model std:sid="model-703e8670"/>
     <cl:appspec title="페이지 인덱서"/>
   </head>
-  <body std:sid="body-4e9277da" style="top:0px; left:0px; width:1024px; height:60px;" class="pagination">
+  <body std:sid="body-4e9277da" style="top:0px; left:0px; width:1024px; height:40px;" class="pagination">
     <cl:group std:sid="group-b0c50d05">
       <cl:formdata std:sid="f-data-c551c5d0" row="0" col="0"/>
       <cl:group std:sid="group-146907e9" id="grp1">
-        <cl:flowlayoutdata std:sid="f-data-1de05991" width="153px" height="36px" autosize="width"/>
+        <cl:flowlayoutdata std:sid="f-data-1de05991" width="150px" height="36px" autosize="width"/>
         <cl:output std:sid="output-6876f868" id="opt2" class="page-info" value="Viewing 1-10">
-          <cl:flowlayoutdata std:sid="f-data-6203ec40" width="80px" height="100%" autosize="width"/>
+          <cl:flowlayoutdata std:sid="f-data-6203ec40" width="92px" height="100%" autosize="width"/>
         </cl:output>
         <cl:output std:sid="output-12c916ba" id="opt1" class="page-info" value="120" displayexp="&quot;of &quot; + text">
-          <cl:flowlayoutdata std:sid="f-data-88818908" width="67px" height="36px" autosize="width"/>
+          <cl:flowlayoutdata std:sid="f-data-88818908" width="48px" height="36px" autosize="width"/>
         </cl:output>
         <cl:flowlayout std:sid="f-layout-9b47ae3b" scrollable="false" hspacing="4" vspacing="0" linewrap="false"/>
       </cl:group>
-      <cl:combobox std:sid="c-box-09fa578c" class="page-size" fieldLabel="page select" value="10" preventinput="true">
-        <cl:flowlayoutdata std:sid="f-data-b5d27411" width="95px" height="32px" autosize="width"/>
-        <cl:item std:sid="t-item-ac7d607d" label="10/page" value="10"/>
-      </cl:combobox>
       <cl:flowlayout std:sid="f-layout-d438d66b" scrollable="false" hspacing="12" vspacing="0" linewrap="false"/>
     </cl:group>
     <cl:group std:sid="group-65607b43" class="page-navi">
       <cl:formdata std:sid="f-data-f6ec35e2" row="0" col="1"/>
-      <cl:button std:sid="button-b619df1a" class="page-navi prev" enabled="false" accesskey="J" value="Prev" displayexp="sstr(accessKey, [&quot;shortcut&quot;,&quot;badge fill gray sm&quot;]) + text" icon="0">
-        <cl:formdata std:sid="f-data-d4acc5fb" row="0" col="0"/>
+      <cl:button std:sid="button-5ddc4c2e" id="btn4" class="before icon" enabled="false" value="before" icon="0">
+        <cl:flowlayoutdata std:sid="f-data-bc05c63d" width="24px" height="24px" autosize="width"/>
       </cl:button>
-      <cl:button std:sid="button-e1cacdef" class="page-navi next" accesskey="K" value="Next" displayexp="text + sstr(accessKey, [&quot;shortcut&quot;, &quot;badge fill gray sm&quot;])" icon="0" iconalign="right">
-        <cl:formdata std:sid="f-data-cc0a1ea5" row="0" col="1"/>
+      <cl:button std:sid="button-b619df1a" id="btn1" class="prev" enabled="false" value="Prev" icon="0">
+        <cl:flowlayoutdata std:sid="f-data-9e43a297" width="80-" height="24px" autosize="width"/>
       </cl:button>
-      <cl:formlayout std:sid="f-layout-9cb1c42b" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
-        <cl:rows length="1" unit="FRACTION"/>
-        <cl:columns length="1" unit="FRACTION"/>
-        <cl:columns length="1" unit="FRACTION"/>
-      </cl:formlayout>
+      <cl:numbereditor std:sid="n-editor-2422de70" id="nbe1" class="text-center" fieldLabel="Go to page" value="1" showclearbutton="false">
+        <cl:flowlayoutdata std:sid="f-data-86143640" width="36px" height="36px"/>
+      </cl:numbereditor>
+      <cl:output std:sid="output-9713d3f6" id="opt3" class="page-info" value="8" displayexp="&quot;/ &quot; + text">
+        <cl:flowlayoutdata std:sid="f-data-1e62c1af" width="46px" height="36px" autosize="width"/>
+      </cl:output>
+      <cl:button std:sid="button-e1cacdef" id="btn2" class="next" value="Next" icon="0" iconalign="right">
+        <cl:flowlayoutdata std:sid="f-data-7c3f5695" width="80-" height="24px" autosize="width"/>
+      </cl:button>
+      <cl:button std:sid="button-aa2cceac" id="btn3" class="after icon" value="after" icon="0">
+        <cl:flowlayoutdata std:sid="f-data-b8e99a48" width="24px" height="24px" autosize="width"/>
+      </cl:button>
+      <cl:flowlayout std:sid="f-layout-9792d1d5" hspacing="8"/>
     </cl:group>
     <cl:formlayout std:sid="f-layout-5b56665c" scrollable="false" hspace="1fr" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
       <cl:rows length="36" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
-      <cl:columns length="400" unit="PIXEL" autoSizing="true" syncminlength="false"/>
-      <cl:columns length="182" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="150" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:columns length="450" unit="PIXEL" autoSizing="true" syncminlength="false"/>
     </cl:formlayout>
   </body>
   <std:studiosetting>

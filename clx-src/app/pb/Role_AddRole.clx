@@ -1,0 +1,89 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-a357411a" version="1.0.6164">
+  <head std:sid="head-426986f8">
+    <screen std:sid="screen-e343d201" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="false"/>
+    <screen std:sid="screen-610fabda" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-c5845dc5" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-5e231a18"/>
+    <cl:appspec title="Add Role"/>
+  </head>
+  <body std:sid="body-e78f68a4">
+    <cl:group std:sid="group-bea5df3d" id="grp1">
+      <cl:verticaldata std:sid="v-data-94e710c3" width="768px" height="62px" autosize="height"/>
+      <cl:output std:sid="output-7dd92f9d" id="opt1" class="font-label required" value="Role ID">
+        <cl:verticaldata std:sid="v-data-d4163cfa" width="100px" height="20px" autosize="height"/>
+      </cl:output>
+      <cl:inputbox std:sid="i-box-d4aed9e0" id="ipb1" fieldLabel="Role ID" placeholder="3~20 characters">
+        <cl:verticaldata std:sid="v-data-9842db78" width="100px" height="36px"/>
+      </cl:inputbox>
+      <cl:verticallayout std:sid="v-layout-9cefc467" spacing="6"/>
+    </cl:group>
+    <cl:group std:sid="group-1cd6cb1c" id="grp2">
+      <cl:verticaldata std:sid="v-data-0bb21f46" width="768px" height="62px" autosize="height"/>
+      <cl:output std:sid="output-4f9cb5f4" id="opt2" class="font-label required" value="Role Name">
+        <cl:verticaldata std:sid="v-data-41a5306b" width="100px" height="20px" autosize="height"/>
+      </cl:output>
+      <cl:inputbox std:sid="i-box-39c07eb1" id="ipb2" fieldLabel="Role Name" placeholder="Max 20 charctrers">
+        <cl:verticaldata std:sid="v-data-f7cb5289" width="100px" height="36px"/>
+      </cl:inputbox>
+      <cl:verticallayout std:sid="v-layout-da84b795" spacing="6"/>
+    </cl:group>
+    <cl:group std:sid="group-e19463fa" id="grp3">
+      <cl:verticaldata std:sid="v-data-7441e02d" width="768px" height="186px" autosize="height"/>
+      <cl:output std:sid="output-81ef4196" id="opt3" class="font-label" value="Description">
+        <cl:verticaldata std:sid="v-data-020d2cec" width="100px" height="20px" autosize="height"/>
+      </cl:output>
+      <cl:textarea std:sid="t-area-ec9a1adb" id="txa1" class="resizable" fieldLabel="Description">
+        <cl:verticaldata std:sid="v-data-a4f6bd06" width="100px" height="160px" autosize="height"/>
+      </cl:textarea>
+      <cl:verticallayout std:sid="v-layout-1501f329" spacing="6"/>
+    </cl:group>
+    <cl:group std:sid="group-474122ae" id="grp4">
+      <cl:verticaldata std:sid="v-data-1e2417e3" width="768px" height="62px" autosize="height"/>
+      <cl:output std:sid="output-24050786" id="opt4" class="font-label" value="Duplicate the Authority">
+        <cl:verticaldata std:sid="v-data-88f1c5b2" width="100px" height="20px" autosize="height"/>
+      </cl:output>
+      <cl:combobox std:sid="c-box-811081b5" id="cmb1" fieldLabel="Duplicate the Authority">
+        <cl:verticaldata std:sid="v-data-a3b3d0a6" width="100px" height="36px"/>
+      </cl:combobox>
+      <cl:verticallayout std:sid="v-layout-2b0fa438" spacing="6"/>
+    </cl:group>
+    <cl:group std:sid="group-e302bf2d" id="grp5">
+      <cl:verticaldata std:sid="v-data-04545030" width="768px" height="62px" autosize="height"/>
+      <cl:output std:sid="output-ec8e3bb8" id="opt5" class="font-label" value="Processed By">
+        <cl:verticaldata std:sid="v-data-263cb187" width="100px" height="20px" autosize="height"/>
+      </cl:output>
+      <cl:combobox std:sid="c-box-c9899b48" id="cmb2" fieldLabel="Processed By">
+        <cl:verticaldata std:sid="v-data-0de4b153" width="768px" height="36px" autosize="none"/>
+      </cl:combobox>
+      <cl:verticallayout std:sid="v-layout-f5129458" spacing="6"/>
+    </cl:group>
+    <cl:group std:sid="group-f8571738" id="grp7">
+      <cl:verticaldata std:sid="v-data-bcecbd59" width="752px" height="48px" autosize="none"/>
+      <cl:group std:sid="group-48fb1001" id="grp8" class="btn-wrap">
+        <cl:formdata std:sid="f-data-a6e4f018" row="0" col="0"/>
+        <cl:button std:sid="button-b662b9b5" id="btn4" class="btn-secondary" value="Cancel">
+          <cl:flowlayoutdata std:sid="f-data-81be75d6" width="100px" height="36px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-8ff53493" scrollable="false" hspacing="8" vspacing="8" valign="middle"/>
+      </cl:group>
+      <cl:group std:sid="group-debbdc58" id="grp6" class="btn-wrap">
+        <cl:formdata std:sid="f-data-4981bfec" row="0" col="1"/>
+        <cl:button std:sid="button-e0d20fc5" id="btn2" class="btn-primary" value="Add">
+          <cl:flowlayoutdata std:sid="f-data-6ec51ff2" width="100px" height="36px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-cb8b5294" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-54304a52" scrollable="false" hspace="0px" vspace="0px" top-margin="1fr" bottom-margin="1fr">
+        <cl:rows length="36" unit="PIXEL"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-a8a38e6e" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

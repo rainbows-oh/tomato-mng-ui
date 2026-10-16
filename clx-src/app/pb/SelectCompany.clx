@@ -1,0 +1,126 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-3f6d66c5" version="1.0.6164">
+  <head std:sid="head-8433bf40">
+    <screen std:sid="screen-f98a18fb" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="true" customHeight="700" customWidth="800" active="true"/>
+    <screen std:sid="screen-a6cce707" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-6ef3ca62" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-dfe817d4">
+      <cl:dataset std:sid="d-set-bc2de437" id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="Stock Symbol" std:sid="d-column-c97f160b" name="column1"/>
+          <cl:datacolumn comment="Company Name" std:sid="d-column-a64a8882" name="column2"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="column1"><![CDATA[PRB]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[Pasig River Bank, Inc.]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1"><![CDATA[MCH]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[Mayon Capital Holdings Corp.]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1"><![CDATA[LPW]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[Laguna Power & Water Corp.]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1"><![CDATA[BHF]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[Batangas Harvest Foods, Inc.]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1"><![CDATA[CSC]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[Cebu Span Construction Corp.]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1"><![CDATA[MVC]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[Metrovolt Components Corp.]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1"><![CDATA[PAH]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[Pearl Archipelago Holdings, Inc.]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1"><![CDATA[OVE]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[Ortigas Vista Estates, Inc.]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="Recipients"/>
+  </head>
+  <body std:sid="body-4d939ff1">
+    <cl:group std:sid="group-9558184d" id="grp1">
+      <cl:formdata std:sid="f-data-bdcf772c" width="100" height="9" row="0" col="0"/>
+      <cl:output std:sid="output-ededbed2" id="opt1" class="font-label" value="Company Name">
+        <cl:verticaldata std:sid="v-data-5ae28a3d" width="1024px" height="20px" autosize="height"/>
+      </cl:output>
+      <cl:inputbox std:sid="i-box-9174ec9e" id="ipb1" fieldLabel="Company Name" placeholder="Search company name or symbol">
+        <cl:verticaldata std:sid="v-data-2980af26" width="1024px" height="36px"/>
+      </cl:inputbox>
+      <cl:verticallayout std:sid="v-layout-711dd495"/>
+    </cl:group>
+    <cl:checkboxgroup std:sid="cb-group-8124e716" id="cbg1">
+      <cl:formdata std:sid="f-data-04275a78" row="1" col="0"/>
+      <cl:item std:sid="item-9c1d80ef" label="Listed Company" value="value1"/>
+      <cl:item std:sid="item-220977e3" label="TP" value="value2"/>
+    </cl:checkboxgroup>
+    <cl:group std:sid="group-98a9da13" id="grp3">
+      <cl:formdata std:sid="f-data-909af702" width="100" height="625" row="2" col="0" rowspan="1" colspan="1"/>
+      <cl:grid std:sid="grid-2d19f8c4" id="grd1" datasetid="ds1" autofit="2, 3">
+        <cl:formdata std:sid="f-data-f3783c4a" row="0" col="0"/>
+        <cl:gridcolumn std:sid="g-column-5e6ffc1e" width="52px"/>
+        <cl:gridcolumn std:sid="g-column-f534d841" width="56px"/>
+        <cl:gridcolumn std:sid="g-column-a56ec299"/>
+        <cl:gridcolumn std:sid="g-column-8a4fef7f" width="200px"/>
+        <cl:gridheader std:sid="gh-band-ec072a57">
+          <cl:gridrow std:sid="g-row-507abfe8" height="32px"/>
+          <cl:gridcell std:sid="gh-cell-065751d6" rowindex="0" colindex="0" sortable="false" filterable="false" columntype="checkbox"/>
+          <cl:gridcell std:sid="gh-cell-1d3624dd" rowindex="0" colindex="1" sortable="false" filterable="false" text="No"/>
+          <cl:gridcell std:sid="gh-cell-64bc76d7" rowindex="0" colindex="2" targetcolumnname="column1" sortable="false" filterable="false" text="Stock Symbol"/>
+          <cl:gridcell std:sid="gh-cell-a255d053" rowindex="0" colindex="3" targetcolumnname="column2" sortable="false" filterable="false" text="Company Name"/>
+        </cl:gridheader>
+        <cl:griddetail std:sid="gd-band-5abf8c86">
+          <cl:gridrow std:sid="g-row-bda2c6eb" height="50px"/>
+          <cl:gridcell std:sid="gd-cell-0548cb51" rowindex="0" colindex="0" columntype="checkbox"/>
+          <cl:gridcell std:sid="gd-cell-a0b531e5" rowindex="0" colindex="1" columntype="rowindex"/>
+          <cl:gridcell std:sid="gd-cell-498fc416" rowindex="0" colindex="2" columnname="column1">
+            <cl:output std:sid="output-963ae10f" id="opt2">
+              <cl:celldata std:sid="c-data-fe5344a3"/>
+            </cl:output>
+          </cl:gridcell>
+          <cl:gridcell std:sid="gd-cell-a05f49c8" rowindex="0" colindex="3" columnname="column2">
+            <cl:output std:sid="output-4c12071f" id="opt3">
+              <cl:celldata std:sid="c-data-4d52bf61"/>
+            </cl:output>
+          </cl:gridcell>
+        </cl:griddetail>
+      </cl:grid>
+      <cl:udc std:sid="ud-control-2e48340e" id="udccompagination1" type="udc.pse.com.udcComPagination">
+        <cl:formdata std:sid="f-data-2d166fa5" row="1" col="0"/>
+      </cl:udc>
+      <cl:formlayout std:sid="f-layout-3fbdba5c" scrollable="false" hspace="0px" vspace="16px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:rows length="40" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-bcfe9005" id="grp2">
+      <cl:formdata std:sid="f-data-c3ff6ffc" row="3" col="0"/>
+      <cl:button std:sid="button-5f150753" id="btn1" class="btn-primary" value="Apply">
+        <cl:flowlayoutdata std:sid="f-data-6badf64b" width="100px" height="36px" autosize="width"/>
+      </cl:button>
+      <cl:flowlayout std:sid="f-layout-09f63490" halign="right"/>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-02fc8fc4" scrollable="false" hspace="0px" vspace="16px" top-margin="24px" right-margin="24px" bottom-margin="24px" left-margin="24px">
+      <cl:rows length="64" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:rows length="20" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
