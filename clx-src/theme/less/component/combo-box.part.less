@@ -19,7 +19,7 @@
 	border: 1px solid @color-component-border;
 	border-radius: @size-component-radius;
 	color: @color-component-text;
-	padding: @size-list-padding-y @size-list-padding-x;
+	padding: 4px;
 	
 	&.cl-popup {
 		box-shadow:
@@ -46,23 +46,36 @@
 	align-items: center;
 	height: auto;
 	color: inherit;
-	min-height: @size-action-height;
-	padding: @size-action-padding-y @size-action-padding-x;
+	min-height: 36px;
+	padding: 0 12px;
+	border-radius: 4px;
 	
 	&:not(.cl-disabled):not(.cl-selected):hover,
 	&:not(.cl-disabled):not(.cl-selected).cl-hover {
-		background-color: @color-action-primary-hover;
+		background-color: @gray-10;
 		color: @color-component-text;
 	}
 	
 	&:not(.cl-disabled):active {
-		background-color: @color-action-primary-pressed !important;
+		background-color: @primary-5 !important;
 		color: @color-component-text;
 	}
 	
 	&.cl-selected {
-		background-color: @color-action-primary-selected;
+		background-color: @primary-5;
 		color: @color-component-text-active;
+		position: relative;
+		
+		&::after {
+			content: "";
+			position: absolute;
+			background-image: url("../../img/icons/ico_cmb_selected.svg");
+			top: 50%;
+			transform: translateY(-50%); 
+			right: 12px;
+			width: 16px;
+			height: 16px;
+		}
 	}
 	
 	&.cl-disabled {
@@ -262,6 +275,11 @@
 			}
 		}
 	}
+}
+
+//아이템간 간격
+.cl-combobox-list .cl-combobox-item + .cl-combobox-item {
+	margin-top: 2px;
 }
 
 /* ==========================================================================

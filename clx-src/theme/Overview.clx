@@ -216,134 +216,134 @@
   <body std:sid="body-87696cc2">
     <cl:listener std:sid="listener-630fefb1" name="load" handler="onBodyLoad"/>
     <cl:group std:sid="group-933af582" clipcontent="false">
-      <cl:verticaldata std:sid="v-data-a14b3e3c" width="100%" height="24px" autosize="both"/>
+      <cl:verticaldata std:sid="v-data-a14b3e3c" width="100%" height="36px" autosize="both"/>
       <cl:output std:sid="output-d203608d" value="인풋박스">
         <cl:flowlayoutdata std:sid="f-data-5663b36e" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
       <cl:inputbox std:sid="i-box-2b8466da" placeholder="플레이스홀더">
-        <cl:flowlayoutdata std:sid="f-data-2c12dc70" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-2c12dc70" width="160px" height="36px"/>
       </cl:inputbox>
       <cl:inputbox std:sid="i-box-88a96c94" value="텍스트">
-        <cl:flowlayoutdata std:sid="f-data-2abfff9e" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-2abfff9e" width="160px" height="36px"/>
       </cl:inputbox>
       <cl:inputbox std:sid="i-box-82129046" readonly="true" value="텍스트">
-        <cl:flowlayoutdata std:sid="f-data-25b9d52f" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-25b9d52f" width="160px" height="36px"/>
       </cl:inputbox>
       <cl:inputbox std:sid="i-box-61f2ae97" enabled="false" value="텍스트">
-        <cl:flowlayoutdata std:sid="f-data-d2463c82" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-d2463c82" width="160px" height="36px"/>
       </cl:inputbox>
       <cl:inputbox std:sid="i-box-bb1a5434" class="is-error" value="텍스트">
-        <cl:flowlayoutdata std:sid="f-data-a7b5faf1" width="160px" height="24px" autosize="none"/>
+        <cl:flowlayoutdata std:sid="f-data-a7b5faf1" width="160px" height="36px" autosize="none"/>
       </cl:inputbox>
       <cl:flowlayout std:sid="f-layout-88b8aad2" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
     <cl:group std:sid="group-8efb4571" clipcontent="false">
-      <cl:verticaldata std:sid="v-data-639540e5" width="1440px" height="24px" autosize="both"/>
+      <cl:verticaldata std:sid="v-data-639540e5" width="1440px" height="36px" autosize="both"/>
       <cl:output std:sid="output-409816b3" value="서치인풋">
         <cl:flowlayoutdata std:sid="f-data-6409c1af" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
       <cl:searchinput std:sid="s-input-86f05471" placeholder="플레이스홀더">
-        <cl:flowlayoutdata std:sid="f-data-301faef7" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-301faef7" width="160px" height="36px"/>
       </cl:searchinput>
       <cl:searchinput std:sid="s-input-34255a13" value="검색어">
-        <cl:flowlayoutdata std:sid="f-data-cb48c300" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-cb48c300" width="160px" height="36px"/>
       </cl:searchinput>
       <cl:searchinput std:sid="s-input-c917ce76" readonly="true" value="검색어">
-        <cl:flowlayoutdata std:sid="f-data-55282244" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-55282244" width="160px" height="36px"/>
       </cl:searchinput>
       <cl:searchinput std:sid="s-input-0326ef4c" enabled="false" value="검색어">
-        <cl:flowlayoutdata std:sid="f-data-69ec2836" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-69ec2836" width="160px" height="36px"/>
       </cl:searchinput>
       <cl:searchinput std:sid="s-input-c321f43a" class="is-error" value="검색어">
-        <cl:flowlayoutdata std:sid="f-data-4e620f1e" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-4e620f1e" width="160px" height="36px"/>
       </cl:searchinput>
       <cl:flowlayout std:sid="f-layout-fc410c67" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
     <cl:group std:sid="group-16de2cf0" clipcontent="false">
-      <cl:verticaldata std:sid="v-data-c6cd868a" width="1440px" height="24px" autosize="both"/>
+      <cl:verticaldata std:sid="v-data-c6cd868a" width="1440px" height="36px" autosize="both"/>
       <cl:output std:sid="output-0736708c" value="마스크에디터">
         <cl:flowlayoutdata std:sid="f-data-e85d72ed" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
       <cl:maskeditor std:sid="m-editor-b0d2857f">
-        <cl:flowlayoutdata std:sid="f-data-538028e6" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-538028e6" width="160px" height="36px"/>
       </cl:maskeditor>
       <cl:maskeditor std:sid="m-editor-e4461c9f" value="ABCDEFGHI">
-        <cl:flowlayoutdata std:sid="f-data-d1fb6cf5" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-d1fb6cf5" width="160px" height="36px"/>
       </cl:maskeditor>
       <cl:maskeditor std:sid="m-editor-30e91623" readonly="true" value="ABCDEFGHI">
-        <cl:flowlayoutdata std:sid="f-data-59b51717" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-59b51717" width="160px" height="36px"/>
       </cl:maskeditor>
       <cl:maskeditor std:sid="m-editor-a0eeb3e9" enabled="false" value="ABCDEFGHI">
-        <cl:flowlayoutdata std:sid="f-data-1e51c6b3" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-1e51c6b3" width="160px" height="36px"/>
       </cl:maskeditor>
       <cl:maskeditor std:sid="m-editor-490d21a6" class="is-error" value="ABCDEFGHI">
-        <cl:flowlayoutdata std:sid="f-data-fcb992e3" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-fcb992e3" width="160px" height="36px"/>
       </cl:maskeditor>
       <cl:flowlayout std:sid="f-layout-4f605815" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
     <cl:group std:sid="group-7b3895cf" clipcontent="false">
-      <cl:verticaldata std:sid="v-data-5315af7a" width="1440px" height="24px" autosize="both"/>
+      <cl:verticaldata std:sid="v-data-5315af7a" width="1440px" height="36px" autosize="both"/>
       <cl:output std:sid="output-dce26a66" value="넘버에디터">
         <cl:flowlayoutdata std:sid="f-data-8b071db7" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
       <cl:numbereditor std:sid="n-editor-e524497d" placeholder="플레이스홀더">
-        <cl:flowlayoutdata std:sid="f-data-88952f31" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-88952f31" width="160px" height="36px"/>
       </cl:numbereditor>
-      <cl:numbereditor std:sid="n-editor-a6b4fcd7" value="0" spinbuttonposition="both">
-        <cl:flowlayoutdata std:sid="f-data-851d5600" width="160px" height="24px"/>
+      <cl:numbereditor std:sid="n-editor-a6b4fcd7" value="0" spinbutton="true" spinbuttonposition="both">
+        <cl:flowlayoutdata std:sid="f-data-851d5600" width="160px" height="36px"/>
       </cl:numbereditor>
       <cl:numbereditor std:sid="n-editor-e17535ea" readonly="true" value="0">
-        <cl:flowlayoutdata std:sid="f-data-5e4188ec" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-5e4188ec" width="160px" height="36px"/>
       </cl:numbereditor>
       <cl:numbereditor std:sid="n-editor-082a1088" enabled="false" value="0">
-        <cl:flowlayoutdata std:sid="f-data-aedca49f" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-aedca49f" width="160px" height="36px"/>
       </cl:numbereditor>
       <cl:numbereditor std:sid="n-editor-01a31d2d" class="is-error" value="0">
-        <cl:flowlayoutdata std:sid="f-data-deb814f8" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-deb814f8" width="160px" height="36px"/>
       </cl:numbereditor>
       <cl:flowlayout std:sid="f-layout-dcb76d36" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
     <cl:group std:sid="group-2a7b1fb6" clipcontent="false">
-      <cl:verticaldata std:sid="v-data-d41463fd" width="1440px" height="24px" autosize="both"/>
+      <cl:verticaldata std:sid="v-data-d41463fd" width="1440px" height="36px" autosize="both"/>
       <cl:output std:sid="output-bf5bd926" value="데이트인풋">
         <cl:flowlayoutdata std:sid="f-data-b05da973" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
       <cl:dateinput std:sid="d-input-b12fd130" placeholder="플레이스홀더">
-        <cl:flowlayoutdata std:sid="f-data-c86e7d33" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-c86e7d33" width="160px" height="36px"/>
       </cl:dateinput>
-      <cl:dateinput std:sid="d-input-18a8664c" value="20260923">
-        <cl:flowlayoutdata std:sid="f-data-f104b315" width="160px" height="24px"/>
+      <cl:dateinput std:sid="d-input-18a8664c" value="20260923" spinbutton="true">
+        <cl:flowlayoutdata std:sid="f-data-f104b315" width="160px" height="36px"/>
       </cl:dateinput>
       <cl:dateinput std:sid="d-input-fb775894" readonly="true" value="20260923">
-        <cl:flowlayoutdata std:sid="f-data-1ac7cdbe" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-1ac7cdbe" width="160px" height="36px"/>
       </cl:dateinput>
       <cl:dateinput std:sid="d-input-55ffea50" enabled="false" value="20260923">
-        <cl:flowlayoutdata std:sid="f-data-f7ab0088" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-f7ab0088" width="160px" height="36px"/>
       </cl:dateinput>
       <cl:dateinput std:sid="d-input-1b9d1daf" class="is-error" value="20260923">
-        <cl:flowlayoutdata std:sid="f-data-45ff11a9" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-45ff11a9" width="160px" height="36px"/>
       </cl:dateinput>
       <cl:flowlayout std:sid="f-layout-baf5e57d" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
     <cl:group std:sid="group-3d6f2db0" clipcontent="false">
-      <cl:verticaldata std:sid="v-data-ad3250bb" width="1440px" height="24px" autosize="both"/>
+      <cl:verticaldata std:sid="v-data-ad3250bb" width="1440px" height="36px" autosize="both"/>
       <cl:output std:sid="output-9c6c2ff7" value="파일인풋">
         <cl:flowlayoutdata std:sid="f-data-4ec13eb4" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
       <cl:fileinput std:sid="f-input-79d009bd" placeholder="플레이스홀더">
-        <cl:flowlayoutdata std:sid="f-data-b83e1b16" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-b83e1b16" width="160px" height="36px"/>
       </cl:fileinput>
       <cl:fileinput std:sid="f-input-006e89d8" value="untitled.txt">
-        <cl:flowlayoutdata std:sid="f-data-04d286ed" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-04d286ed" width="160px" height="36px"/>
       </cl:fileinput>
       <cl:fileinput std:sid="f-input-bbdfc2c9" readonly="true" value="untitled.txt">
-        <cl:flowlayoutdata std:sid="f-data-021ca765" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-021ca765" width="160px" height="36px"/>
       </cl:fileinput>
       <cl:fileinput std:sid="f-input-71bd90e1" enabled="false" value="untitled.txt">
-        <cl:flowlayoutdata std:sid="f-data-b3199d9e" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-b3199d9e" width="160px" height="36px"/>
       </cl:fileinput>
       <cl:fileinput std:sid="f-input-a153e4c8" class="is-error" value="untitled.txt">
-        <cl:flowlayoutdata std:sid="f-data-a727e7c5" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-a727e7c5" width="160px" height="36px"/>
       </cl:fileinput>
       <cl:flowlayout std:sid="f-layout-4c70c533" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
@@ -370,45 +370,81 @@
       <cl:flowlayout std:sid="f-layout-ad821480" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
     <cl:group std:sid="group-fd28fe97" clipcontent="false">
-      <cl:verticaldata std:sid="v-data-870825c2" width="1440px" height="24px" autosize="both"/>
+      <cl:verticaldata std:sid="v-data-870825c2" width="1440px" height="36px" autosize="both"/>
       <cl:output std:sid="output-dc15201e" value="콤보박스">
         <cl:flowlayoutdata std:sid="f-data-e6be666d" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
-      <cl:combobox std:sid="c-box-60ff8123" placeholder="선택">
-        <cl:flowlayoutdata std:sid="f-data-8285c387" width="160px" height="24px"/>
+      <cl:combobox std:sid="c-box-60ff8123" id="cmb" placeholder="선택">
+        <cl:listener std:sid="listener-12e74b61" name="open" handler="onCmbOpen"/>
+        <cl:flowlayoutdata std:sid="f-data-8285c387" width="160px" height="36px"/>
         <cl:itemset datasetid="dsTreeView" label="label" value="value"/>
       </cl:combobox>
-      <cl:combobox std:sid="c-box-28382fd4" value="1" multiple="true">
-        <cl:flowlayoutdata std:sid="f-data-c0440658" width="160px" height="24px"/>
+      <cl:combobox std:sid="c-box-37511561" id="cmb6" value="value2">
+        <cl:listener std:sid="listener-2760d501" name="open" handler="onCmb6Open"/>
+        <cl:flowlayoutdata std:sid="f-data-e5c1ff48" width="100px" height="32px"/>
+        <cl:item std:sid="t-item-7ee34613" label="label1" value="value1"/>
+        <cl:item std:sid="t-item-bb3908c6" label="label2" value="value2"/>
+        <cl:item std:sid="t-item-e02593df" label="label3" value="value3"/>
+        <cl:item std:sid="t-item-a41b4023" label="label4" value="value4"/>
+      </cl:combobox>
+      <cl:combobox std:sid="c-box-28382fd4" value="1">
+        <cl:flowlayoutdata std:sid="f-data-c0440658" width="160px" height="36px"/>
         <cl:itemset datasetid="dsTreeView" label="label" value="value"/>
       </cl:combobox>
       <cl:combobox std:sid="c-box-19890c19" readonly="true" value="1">
-        <cl:flowlayoutdata std:sid="f-data-9d7e5a5f" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-9d7e5a5f" width="160px" height="36px"/>
         <cl:itemset datasetid="dsTreeView" label="label" value="value"/>
       </cl:combobox>
       <cl:combobox std:sid="c-box-d0d0a3d7" enabled="false" value="1">
-        <cl:flowlayoutdata std:sid="f-data-093da8cd" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-093da8cd" width="160px" height="36px"/>
         <cl:itemset datasetid="dsTreeView" label="label" value="value"/>
       </cl:combobox>
       <cl:combobox std:sid="c-box-745a9a91" class="is-error" dropdowntype="tree">
-        <cl:flowlayoutdata std:sid="f-data-1d2d2d02" width="160px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-1d2d2d02" width="160px" height="36px"/>
         <cl:itemset datasetid="dsTreeView" label="label" value="value" parent="parent"/>
       </cl:combobox>
       <cl:flowlayout std:sid="f-layout-ee716a25" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
+    <cl:group std:sid="group-3390997b" id="grp2" clipcontent="false">
+      <cl:verticaldata std:sid="v-data-ad8ddd74" width="1440px" height="36px" autosize="both"/>
+      <cl:output std:sid="output-5f6db8a7" id="opt2" value="콤보박스-multiple">
+        <cl:flowlayoutdata std:sid="f-data-038d9bb0" width="160px" height="24px" syncminheight="true" autosize="height"/>
+      </cl:output>
+      <cl:combobox std:sid="c-box-513eafa2" id="cmb1" placeholder="선택" multiple="true">
+        <cl:flowlayoutdata std:sid="f-data-ba389800" width="160px" height="36px"/>
+        <cl:itemset datasetid="dsTreeView" label="label" value="value"/>
+      </cl:combobox>
+      <cl:combobox std:sid="c-box-0b229230" id="cmb2" value="1" multiple="true">
+        <cl:flowlayoutdata std:sid="f-data-17827b83" width="160px" height="36px"/>
+        <cl:itemset datasetid="dsTreeView" label="label" value="value"/>
+      </cl:combobox>
+      <cl:combobox std:sid="c-box-f18517b6" id="cmb3" readonly="true" value="1" multiple="true">
+        <cl:flowlayoutdata std:sid="f-data-a4eaf47b" width="160px" height="36px"/>
+        <cl:itemset datasetid="dsTreeView" label="label" value="value"/>
+      </cl:combobox>
+      <cl:combobox std:sid="c-box-cbd6decc" id="cmb4" enabled="false" value="1" multiple="true">
+        <cl:flowlayoutdata std:sid="f-data-bda6d114" width="160px" height="36px"/>
+        <cl:itemset datasetid="dsTreeView" label="label" value="value"/>
+      </cl:combobox>
+      <cl:combobox std:sid="c-box-fde0d438" id="cmb5" class="is-error" dropdowntype="tree" multiple="true">
+        <cl:flowlayoutdata std:sid="f-data-4b7383d8" width="160px" height="36px"/>
+        <cl:itemset datasetid="dsTreeView" label="label" value="value" parent="parent"/>
+      </cl:combobox>
+      <cl:flowlayout std:sid="f-layout-237b39f8" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
+    </cl:group>
     <cl:group std:sid="group-f55164bb" clipcontent="false">
-      <cl:verticaldata std:sid="v-data-c89ddf02" width="1440px" height="24px" autosize="both"/>
+      <cl:verticaldata std:sid="v-data-c89ddf02" width="1440px" height="36px" autosize="both"/>
       <cl:output std:sid="output-288c685e" value="링크드 콤보박스">
         <cl:flowlayoutdata std:sid="f-data-efbbcb26" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
       <cl:linkedcombobox std:sid="lc-box-18052803">
-        <cl:flowlayoutdata std:sid="f-data-b28db2a1" width="204px" height="24px" autosize="width"/>
+        <cl:flowlayoutdata std:sid="f-data-b28db2a1" width="204px" height="36px" autosize="width"/>
         <cl:treeitemset datasetid="dsTreeView" label="label" value="value" parent="parent"/>
         <cl:value>1</cl:value>
         <cl:value>2</cl:value>
       </cl:linkedcombobox>
       <cl:linkedcombobox std:sid="lc-box-857059e7" enabled="false">
-        <cl:flowlayoutdata std:sid="f-data-004c7fda" width="204px" height="24px" autosize="width"/>
+        <cl:flowlayoutdata std:sid="f-data-004c7fda" width="204px" height="36px" autosize="width"/>
         <cl:treeitemset datasetid="dsTreeView" label="label" value="value" parent="parent"/>
         <cl:value>1</cl:value>
         <cl:value>2</cl:value>
@@ -423,16 +459,73 @@
       <cl:checkbox std:sid="c-box-f56f0d81" text="텍스트">
         <cl:flowlayoutdata std:sid="f-data-44e46990" width="160px" height="24px"/>
       </cl:checkbox>
-      <cl:checkbox std:sid="c-box-52bb2f16" value="true" text="텍스트">
+      <cl:checkbox std:sid="c-box-52bb2f16" class="cl-hover" value="" text="텍스트">
         <cl:flowlayoutdata std:sid="f-data-0058bbf9" width="160px" height="24px"/>
       </cl:checkbox>
-      <cl:checkbox std:sid="c-box-0ce57fbb" enabled="false" text="텍스트">
+      <cl:checkbox std:sid="c-box-0ce57fbb" class="cl-focus" text="텍스트">
         <cl:flowlayoutdata std:sid="f-data-c8cb5eb0" width="160px" height="24px"/>
       </cl:checkbox>
-      <cl:checkbox std:sid="c-box-5c7fddf5" enabled="false" value="true" text="텍스트">
+      <cl:checkbox std:sid="c-box-5c7fddf5" enabled="false" value="" text="텍스트">
         <cl:flowlayoutdata std:sid="f-data-91fc296f" width="160px" height="24px"/>
       </cl:checkbox>
       <cl:flowlayout std:sid="f-layout-d596f905" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
+    </cl:group>
+    <cl:group std:sid="group-0bb3bfe2" id="grp5" clipcontent="false">
+      <cl:verticaldata std:sid="v-data-a1458460" width="1440px" height="24px" autosize="both"/>
+      <cl:output std:sid="output-8dd7dd43" id="opt5" value="체크박스">
+        <cl:flowlayoutdata std:sid="f-data-bfe585e2" width="160px" height="24px" syncminheight="true" autosize="height"/>
+      </cl:output>
+      <cl:checkbox std:sid="c-box-e273ec39" id="cbx9" value="true" text="텍스트">
+        <cl:flowlayoutdata std:sid="f-data-32f15675" width="160px" height="24px"/>
+      </cl:checkbox>
+      <cl:checkbox std:sid="c-box-1331fdd1" id="cbx10" class="cl-hover" value="true" text="텍스트">
+        <cl:flowlayoutdata std:sid="f-data-dacc7ea9" width="160px" height="24px"/>
+      </cl:checkbox>
+      <cl:checkbox std:sid="c-box-58b5bb3b" id="cbx11" class="cl-focus" value="true" text="텍스트">
+        <cl:flowlayoutdata std:sid="f-data-4fac1ed6" width="160px" height="24px"/>
+      </cl:checkbox>
+      <cl:checkbox std:sid="c-box-00a72e29" id="cbx12" enabled="false" value="true" text="텍스트">
+        <cl:flowlayoutdata std:sid="f-data-2017cfcb" width="160px" height="24px"/>
+      </cl:checkbox>
+      <cl:flowlayout std:sid="f-layout-ffde6898" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
+    </cl:group>
+    <cl:group std:sid="group-836fa3b0" id="grp4" clipcontent="false">
+      <cl:verticaldata std:sid="v-data-687e9012" width="1440px" height="24px" autosize="both"/>
+      <cl:output std:sid="output-d36ca283" id="opt4" value="체크박스">
+        <cl:flowlayoutdata std:sid="f-data-9ec4e9dd" width="160px" height="24px" syncminheight="true" autosize="height"/>
+      </cl:output>
+      <cl:checkbox std:sid="c-box-11e25330" id="cbx5" class="cl-partialchecked" value="" text="텍스트">
+        <cl:flowlayoutdata std:sid="f-data-18c715c1" width="160px" height="24px"/>
+      </cl:checkbox>
+      <cl:checkbox std:sid="c-box-74ff39a8" id="cbx6" class="cl-partialchecked cl-hover" value="true" text="텍스트">
+        <cl:flowlayoutdata std:sid="f-data-4a8feb90" width="160px" height="24px"/>
+      </cl:checkbox>
+      <cl:checkbox std:sid="c-box-8e89b7ab" id="cbx8" class="cl-partialchecked cl-focus" value="true" text="텍스트">
+        <cl:flowlayoutdata std:sid="f-data-6e53a602" width="160px" height="24px"/>
+      </cl:checkbox>
+      <cl:checkbox std:sid="c-box-911cbbf8" id="cbx7" class="cl-partialchecked" enabled="false" text="텍스트">
+        <cl:flowlayoutdata std:sid="f-data-2d5f5184" width="160px" height="24px"/>
+      </cl:checkbox>
+      <cl:flowlayout std:sid="f-layout-92535899" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
+    </cl:group>
+    <cl:group std:sid="group-fda590d2" id="grp3" clipcontent="false">
+      <cl:verticaldata std:sid="v-data-e93494ed" width="1440px" height="24px" autosize="both"/>
+      <cl:output std:sid="output-067eb4a8" id="opt3" value="체크박스">
+        <cl:flowlayoutdata std:sid="f-data-c440b695" width="160px" height="24px" syncminheight="true" autosize="height"/>
+      </cl:output>
+      <cl:checkbox std:sid="c-box-495a00dd" id="cbx1" enabled="false" text="텍스트">
+        <cl:flowlayoutdata std:sid="f-data-e43a74b0" width="160px" height="24px" autosize="height"/>
+      </cl:checkbox>
+      <cl:checkbox std:sid="c-box-c22bc730" id="cbx2" enabled="false" value="" text="텍스트" iconalign="right">
+        <cl:flowlayoutdata std:sid="f-data-8aad6f2d" width="160px" height="24px" autosize="height"/>
+      </cl:checkbox>
+      <cl:checkbox std:sid="c-box-5139a5dc" id="cbx3" enabled="false" value="" text="텍스트" iconalign="top">
+        <cl:flowlayoutdata std:sid="f-data-780e8da4" width="160px" height="24px" autosize="height"/>
+      </cl:checkbox>
+      <cl:checkbox std:sid="c-box-7e76079b" id="cbx4" enabled="false" value="" text="텍스트" iconalign="bottom">
+        <cl:flowlayoutdata std:sid="f-data-0a8f1c1e" width="160px" height="24px" autosize="height"/>
+      </cl:checkbox>
+      <cl:flowlayout std:sid="f-layout-4393a4f1" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
     <cl:group std:sid="group-10dcdccf" clipcontent="false">
       <cl:verticaldata std:sid="v-data-60c3b2a8" width="1440px" height="24px" autosize="both"/>
@@ -460,10 +553,10 @@
       </cl:output>
       <cl:checkboxgroup std:sid="cb-group-620f0c8e" colcount="0" enableditemexp="value == &quot;value1&quot; || value == &quot;value2&quot;">
         <cl:flowlayoutdata std:sid="f-data-f50563c8" width="368px" height="24px"/>
-        <cl:item std:sid="item-510c025a" label="텍스트" value="value1"/>
-        <cl:item std:sid="item-b149b4a2" label="선택됨" value="value2"/>
-        <cl:item std:sid="item-b4fff8f5" label="비활성" value="value3"/>
-        <cl:item std:sid="item-0b29b59b" label="비활성 선택됨" value="value4"/>
+        <cl:item std:sid="item-510c025a" label="Label" value="value1"/>
+        <cl:item std:sid="item-b149b4a2" label="Label" value="value2"/>
+        <cl:item std:sid="item-b4fff8f5" label="Label" value="value3"/>
+        <cl:item std:sid="item-0b29b59b" label="Label" value="value4"/>
         <cl:value>value2</cl:value>
         <cl:value>value4</cl:value>
       </cl:checkboxgroup>
@@ -529,76 +622,96 @@
       <cl:output std:sid="output-4e998905" value="토글 스위치">
         <cl:flowlayoutdata std:sid="f-data-1da5cac0" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
-      <cl:checkbox std:sid="c-box-4c936374" class="toggle-switch" text="텍스트" clickRegion="item">
+      <cl:checkbox std:sid="c-box-4c936374" class="toggle-switch" text="Label" clickRegion="item">
         <cl:flowlayoutdata std:sid="f-data-8c2cf28d" width="160px" height="24px"/>
       </cl:checkbox>
-      <cl:checkbox std:sid="c-box-8d300329" class="toggle-switch" value="true" text="텍스트" clickRegion="item">
+      <cl:checkbox std:sid="c-box-8d300329" class="toggle-switch" value="true" text="Label" clickRegion="item">
         <cl:flowlayoutdata std:sid="f-data-4d00785d" width="160px" height="24px"/>
       </cl:checkbox>
-      <cl:checkbox std:sid="c-box-155d1df8" class="toggle-switch" enabled="false" text="텍스트" clickRegion="item">
+      <cl:checkbox std:sid="c-box-155d1df8" class="toggle-switch" enabled="false" text="Label" clickRegion="item">
         <cl:flowlayoutdata std:sid="f-data-1fdd3923" width="160px" height="24px"/>
       </cl:checkbox>
-      <cl:checkbox std:sid="c-box-ce7acb91" class="toggle-switch" enabled="false" value="true" text="텍스트" clickRegion="item">
+      <cl:checkbox std:sid="c-box-ce7acb91" class="toggle-switch" enabled="false" value="true" text="Label" clickRegion="item">
         <cl:flowlayoutdata std:sid="f-data-3f5db671" width="160px" height="24px"/>
       </cl:checkbox>
       <cl:flowlayout std:sid="f-layout-6b094c2a" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
-    <cl:group std:sid="group-c8d0b8ef" clipcontent="false">
-      <cl:verticaldata std:sid="v-data-371e48c4" width="1440px" height="24px" autosize="both"/>
-      <cl:output std:sid="output-0a969544" value="버튼 (기본)">
-        <cl:flowlayoutdata std:sid="f-data-c44ac386" width="160px" height="24px" syncminheight="true" autosize="height"/>
-      </cl:output>
-      <cl:button std:sid="button-44367910" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-3fb70925" width="68px" height="24px"/>
-      </cl:button>
-      <cl:button std:sid="button-464547ce" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-36732f6e" width="68px" height="24px"/>
-      </cl:button>
-      <cl:button std:sid="button-559defb2" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-dbb11b8b" width="68px" height="24px"/>
-      </cl:button>
-      <cl:button std:sid="button-07b64873" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-4b563538" width="68px" height="24px"/>
-      </cl:button>
-      <cl:flowlayout std:sid="f-layout-a2b239fa" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
-    </cl:group>
     <cl:group std:sid="group-8f1915c7" clipcontent="false">
       <cl:verticaldata std:sid="v-data-dee3d8a4" width="1440px" height="24px" autosize="both"/>
-      <cl:output std:sid="output-90517922" value="- btn-submit">
+      <cl:output std:sid="output-90517922" value="- 기본 or btn-primary">
         <cl:flowlayoutdata std:sid="f-data-5e4c9501" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
-      <cl:button std:sid="button-78d9d1df" class="btn-submit" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-eb5890ea" width="68px" height="24px"/>
+      <cl:button std:sid="button-78d9d1df" class="btn-primary" value="버튼">
+        <cl:listener std:sid="listener-fd79184b" name="click" handler="onButtonClick"/>
+        <cl:flowlayoutdata std:sid="f-data-eb5890ea" width="68px" height="24px" autosize="width"/>
       </cl:button>
-      <cl:button std:sid="button-fba37d6c" class="btn-submit cl-hover" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-2b9a9b7f" width="68px" height="24px"/>
+      <cl:button std:sid="button-fba37d6c" class="btn-primary cl-hover" value="버튼">
+        <cl:flowlayoutdata std:sid="f-data-2b9a9b7f" width="68px" height="24px" autosize="width"/>
       </cl:button>
-      <cl:button std:sid="button-d4f2583f" class="btn-submit cl-activated" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-9bdb4f60" width="68px" height="24px"/>
+      <cl:button std:sid="button-d4f2583f" class="btn-primary cl-activated" value="버튼">
+        <cl:flowlayoutdata std:sid="f-data-9bdb4f60" width="68px" height="24px" autosize="width"/>
       </cl:button>
-      <cl:button std:sid="button-e2fa018a" class="btn-submit" enabled="false" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-6a0454f7" width="68px" height="24px"/>
+      <cl:button std:sid="button-e2fa018a" class="btn-primary" enabled="false" value="버튼">
+        <cl:flowlayoutdata std:sid="f-data-6a0454f7" width="68px" height="24px" autosize="width"/>
       </cl:button>
       <cl:flowlayout std:sid="f-layout-c4700717" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
     <cl:group std:sid="group-8a3153af" clipcontent="false">
       <cl:verticaldata std:sid="v-data-c58213b1" width="1440px" height="24px" autosize="both"/>
-      <cl:output std:sid="output-956b0e03" value="- btn-base">
+      <cl:output std:sid="output-956b0e03" value="- btn-secondary">
         <cl:flowlayoutdata std:sid="f-data-3acb51fa" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
-      <cl:button std:sid="button-aa3a8a91" class="btn-base" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-9be23eaa" width="68px" height="24px"/>
+      <cl:button std:sid="button-aa3a8a91" class="btn-secondary" value="버튼">
+        <cl:flowlayoutdata std:sid="f-data-9be23eaa" width="68px" height="24px" autosize="width"/>
       </cl:button>
-      <cl:button std:sid="button-13bb9c95" class="btn-base cl-hover" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-94a6708a" width="68px" height="24px"/>
+      <cl:button std:sid="button-13bb9c95" class="btn-secondary cl-hover" value="버튼">
+        <cl:flowlayoutdata std:sid="f-data-94a6708a" width="68px" height="24px" autosize="width"/>
       </cl:button>
-      <cl:button std:sid="button-f007a872" class="btn-base cl-activated" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-32c339a1" width="68px" height="24px"/>
+      <cl:button std:sid="button-f007a872" class="btn-secondary cl-activated" value="버튼">
+        <cl:flowlayoutdata std:sid="f-data-32c339a1" width="68px" height="24px" autosize="width"/>
       </cl:button>
-      <cl:button std:sid="button-7e89b53b" class="btn-base" enabled="false" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-103bc472" width="68px" height="24px"/>
+      <cl:button std:sid="button-7e89b53b" class="btn-secondary" enabled="false" value="버튼">
+        <cl:flowlayoutdata std:sid="f-data-103bc472" width="68px" height="24px" autosize="width"/>
       </cl:button>
       <cl:flowlayout std:sid="f-layout-5b64ca54" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
+    </cl:group>
+    <cl:group std:sid="group-c8d0b8ef" clipcontent="false">
+      <cl:verticaldata std:sid="v-data-371e48c4" width="1440px" height="24px" autosize="both"/>
+      <cl:output std:sid="output-0a969544" class="btn-tertiary" value="- btn-tertiary">
+        <cl:flowlayoutdata std:sid="f-data-c44ac386" width="160px" height="24px" syncminheight="true" autosize="height"/>
+      </cl:output>
+      <cl:button std:sid="button-44367910" class="btn-tertiary" value="버튼">
+        <cl:flowlayoutdata std:sid="f-data-3fb70925" width="68px" height="24px" autosize="width"/>
+      </cl:button>
+      <cl:button std:sid="button-bb9e8126" id="btn5" class="btn-tertiary cl-hover" value="버튼">
+        <cl:flowlayoutdata std:sid="f-data-0bddfb8f" width="68px" height="24px" autosize="width"/>
+      </cl:button>
+      <cl:button std:sid="button-c52bcdcd" id="btn6" class="btn-tertiary cl-activated" value="버튼">
+        <cl:flowlayoutdata std:sid="f-data-9a7c2a81" width="68px" height="24px" autosize="width"/>
+      </cl:button>
+      <cl:button std:sid="button-8edaec0e" id="btn7" class="btn-tertiary" enabled="false" value="버튼">
+        <cl:flowlayoutdata std:sid="f-data-2753472c" width="68px" height="24px" autosize="width"/>
+      </cl:button>
+      <cl:flowlayout std:sid="f-layout-a2b239fa" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
+    </cl:group>
+    <cl:group std:sid="group-140b6706" id="grp1" clipcontent="false">
+      <cl:verticaldata std:sid="v-data-8bc0a6ed" width="1440px" height="24px" autosize="both"/>
+      <cl:output std:sid="output-5d4d74af" id="opt1" value="- btn-danger">
+        <cl:flowlayoutdata std:sid="f-data-794cc829" width="160px" height="24px" syncminheight="true" autosize="height"/>
+      </cl:output>
+      <cl:button std:sid="button-cedf8d64" id="btn1" class="btn-danger" value="버튼">
+        <cl:flowlayoutdata std:sid="f-data-6c04c75d" width="68px" height="24px" autosize="width"/>
+      </cl:button>
+      <cl:button std:sid="button-52eb7326" id="btn2" class="btn-danger cl-hover" value="버튼">
+        <cl:flowlayoutdata std:sid="f-data-857b6ec1" width="68px" height="24px" autosize="width"/>
+      </cl:button>
+      <cl:button std:sid="button-920ef768" id="btn3" class="btn-danger cl-activated" value="버튼">
+        <cl:flowlayoutdata std:sid="f-data-92a32657" width="68px" height="24px" autosize="width"/>
+      </cl:button>
+      <cl:button std:sid="button-4ed61167" id="btn4" class="btn-danger" enabled="false" value="버튼">
+        <cl:flowlayoutdata std:sid="f-data-c876e987" width="68px" height="24px" autosize="width"/>
+      </cl:button>
+      <cl:flowlayout std:sid="f-layout-a4e7556c" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
     <cl:group std:sid="group-ab93413c" clipcontent="false">
       <cl:verticaldata std:sid="v-data-6eb4d0a4" width="1440px" height="24px" autosize="both"/>
@@ -606,16 +719,16 @@
         <cl:flowlayoutdata std:sid="f-data-d0f2c0f2" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
       <cl:button std:sid="button-22fd6def" class="btn-inline" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-02376562" width="68px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-02376562" width="68px" height="24px" autosize="width"/>
       </cl:button>
       <cl:button std:sid="button-baccab93" class="btn-inline cl-hover" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-8de76a28" width="68px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-8de76a28" width="68px" height="24px" autosize="width"/>
       </cl:button>
       <cl:button std:sid="button-ea4f9b8e" class="btn-inline cl-activated" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-af0979f0" width="68px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-af0979f0" width="68px" height="24px" autosize="width"/>
       </cl:button>
       <cl:button std:sid="button-e8863f5b" class="btn-inline" enabled="false" value="버튼">
-        <cl:flowlayoutdata std:sid="f-data-122fbc91" width="68px" height="24px"/>
+        <cl:flowlayoutdata std:sid="f-data-122fbc91" width="68px" height="24px" autosize="width"/>
       </cl:button>
       <cl:flowlayout std:sid="f-layout-c19eb623" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
@@ -719,32 +832,17 @@
       <cl:output std:sid="output-9901a99e" value="배지">
         <cl:flowlayoutdata std:sid="f-data-4394db20" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
-      <cl:output std:sid="output-ab676c50" class="badge fill primary" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-d7b17771" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-4e2ecc01" class="badge fill secondary" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-36a57e6f" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-15c555e4" class="badge fill gray" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-ec6264d7" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-aff440c0" class="badge fill point" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-9b48ffc5" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-12886102" class="badge fill danger" value="배지">
+      <cl:output std:sid="output-12886102" class="badge fill danger" value="Rejected">
         <cl:flowlayoutdata std:sid="f-data-a1dbd6eb" width="68px" height="20px" autosize="both"/>
       </cl:output>
-      <cl:output std:sid="output-8f8252d4" class="badge fill warning" value="배지">
+      <cl:output std:sid="output-8f8252d4" class="badge fill warning" value="Changed">
         <cl:flowlayoutdata std:sid="f-data-1982d6fe" width="68px" height="20px" autosize="both"/>
       </cl:output>
-      <cl:output std:sid="output-83c870c9" class="badge fill success" value="배지">
+      <cl:output std:sid="output-83c870c9" class="badge fill success" value="Approved">
         <cl:flowlayoutdata std:sid="f-data-03243110" width="68px" height="20px" autosize="both"/>
       </cl:output>
-      <cl:output std:sid="output-95f3d8f3" class="badge fill information" value="배지">
+      <cl:output std:sid="output-95f3d8f3" class="badge fill information" value="Submitted">
         <cl:flowlayoutdata std:sid="f-data-f94d18da" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-88a64b67" class="badge fill disable" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-9d73047f" width="68px" height="20px" autosize="both"/>
       </cl:output>
       <cl:flowlayout std:sid="f-layout-9167dbc8" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
@@ -861,7 +959,7 @@
         <cl:gridcolumn std:sid="g-column-19f62a6e"/>
         <cl:gridcolumn std:sid="g-column-3514cece"/>
         <cl:gridheader std:sid="gh-band-fedf9f3f">
-          <cl:gridrow std:sid="g-row-60da454c" height="31px"/>
+          <cl:gridrow std:sid="g-row-60da454c" height="35px"/>
           <cl:gridcell std:sid="gh-cell-7eba79ac" rowindex="0" colindex="0" sortable="false" filterable="false" text="선택"/>
           <cl:gridcell std:sid="gh-cell-7affe931" rowindex="0" colindex="1" sortable="false" filterable="false" columntype="checkbox"/>
           <cl:gridcell std:sid="gh-cell-8395382c" rowindex="0" colindex="2" sortable="false" filterable="false" text="NO"/>
@@ -873,7 +971,7 @@
           <cl:gridcell std:sid="gh-cell-541a8fc5" rowindex="0" colindex="8" targetcolumnname="SALES_ST" sortable="true" filterable="true" text="상태"/>
         </cl:gridheader>
         <cl:griddetail std:sid="gd-band-2701d3b5">
-          <cl:gridrow std:sid="g-row-7fea761c" height="29px"/>
+          <cl:gridrow std:sid="g-row-7fea761c" height="54px"/>
           <cl:gridcell std:sid="gd-cell-fb598ba7" rowindex="0" colindex="0" columntype="radio"/>
           <cl:gridcell std:sid="gd-cell-8fc773d6" rowindex="0" colindex="1" columntype="checkbox"/>
           <cl:gridcell std:sid="gd-cell-dde9117a" rowindex="0" colindex="2" columntype="rowindex"/>
@@ -911,7 +1009,7 @@
           </cl:gridcell>
         </cl:griddetail>
         <cl:gridfooter std:sid="gf-band-fca9499c">
-          <cl:gridrow std:sid="g-row-156b8ba7" height="29px"/>
+          <cl:gridrow std:sid="g-row-156b8ba7" height="54px"/>
           <cl:gridcell std:sid="gf-cell-71a3f464" rowindex="0" colindex="0" rowspan="1" colspan="5" expr="&quot;합계&quot;"/>
           <cl:gridcell std:sid="gf-cell-0f39d069" rowindex="0" colindex="5" expr="getSum(&quot;PRICE&quot;)">
             <cl:output std:sid="output-afb5f04b" value="Output" datatype="number" format="s#,##0" displayexp="text + &quot;원&quot;">
@@ -1469,7 +1567,7 @@
       </cl:output>
       <cl:accordion std:sid="accordion-4a072e1b">
         <cl:flowlayoutdata std:sid="f-data-ff038ecf" width="1024px" height="200px" autosize="height"/>
-        <cl:sectionitem std:sid="s-item-683d9da1" title="아코디언 타이틀">
+        <cl:sectionitem std:sid="s-item-683d9da1" title="Correspondence">
           <cl:group std:sid="group-869df89e">
             <std:metadata>
               <std:property key="locked" value="true"/>
@@ -1480,7 +1578,7 @@
             </cl:formlayout>
           </cl:group>
         </cl:sectionitem>
-        <cl:sectionitem std:sid="s-item-8bd98414" selected="true" title="아코디언 타이틀">
+        <cl:sectionitem std:sid="s-item-8bd98414" selected="true" title="CMIC Inquiry">
           <std:metadata>
             <std:property key="is-active-item" value="true"/>
           </std:metadata>
@@ -1494,7 +1592,7 @@
             </cl:formlayout>
           </cl:group>
         </cl:sectionitem>
-        <cl:sectionitem std:sid="s-item-b2548300" title="아코디언 타이틀">
+        <cl:sectionitem std:sid="s-item-b2548300" title="Approval">
           <cl:group std:sid="group-44033ec5">
             <std:metadata>
               <std:property key="locked" value="true"/>
@@ -1733,10 +1831,13 @@
       <cl:flowlayout std:sid="f-layout-99946419" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
     <cl:group std:sid="group-d92daad7" clipcontent="false">
-      <cl:verticaldata std:sid="v-data-3b454d5b" width="1440px" height="303px" autosize="both"/>
+      <cl:verticaldata std:sid="v-data-3b454d5b" width="1440px" height="400px" autosize="both"/>
       <cl:output std:sid="output-fa680702" value="캘린더">
         <cl:flowlayoutdata std:sid="f-data-044a37b9" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
+      <cl:calendar std:sid="calendar-5808c652" id="cal1" footervisible="true">
+        <cl:flowlayoutdata std:sid="f-data-76a565a0" width="359px" height="366px" autosize="both"/>
+      </cl:calendar>
       <cl:calendar std:sid="calendar-73168057" id="date">
         <cl:flowlayoutdata std:sid="f-data-463e92f7" width="250px" height="303px" autosize="both"/>
       </cl:calendar>

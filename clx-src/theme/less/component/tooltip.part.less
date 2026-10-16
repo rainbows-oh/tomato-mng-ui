@@ -25,7 +25,7 @@
 	border-radius: @size-component-radius;
 	box-shadow: 0 2px 4px 0 fade(@black, 4%);
 	color: @color-text-inverse;
-	font-size: @font-size-label-xsmall;
+	#font-caption();
 	font-weight: @font-weight-medium;
 	max-width: 600px;
 	padding: @padding-2 @padding-4;
@@ -62,7 +62,7 @@
 	
 	.cl-control {
 		color: inherit;
-		font-size: @font-size-label-xsmall;
+		#font-caption();
 	}
 	
 	/* 화살표 방향 (박스형 제외) */

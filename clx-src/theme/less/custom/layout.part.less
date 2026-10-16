@@ -127,12 +127,6 @@
 	}
 }
 
-&.highlight {
-	background-color: #eeecff !important;
-	border: 1px solid #533afd !important;
-	border-radius: 6px;
-}
-
 .cl-container.separate {
 	&:not(.cl-last-row) {
 		border-bottom: 1px solid #e3e8ee;
@@ -184,15 +178,14 @@
 //타이틀 영역
 .cl-container.page-title-wrap {
 	background-color: #ffffff;
-	border-bottom: 1px solid #e3e8ee;
-	padding: 12px 16px 11px;
-	
+//	border-bottom: 1px solid #e3e8ee;
+	padding: 6px 24px;
+
 	.cl-container.btn-wrap {
 		.cl-button {
-			border-radius: @border-radius-full;
-			font-size: 14px;
-			font-weight: @font-weight-semibold;
-			padding: 0 12px;
+//			font-size: 14px;
+//			font-weight: @font-weight-semibold;
+//			padding: 0 12px;
 		}
 	}
 }
@@ -331,19 +324,20 @@
 //조회 영역 grpSearch
 .cl-container.search-top-box {
 	background-color: #ffffff;
-	border: 1px solid #e3e8ee;
-	border-radius: 12px;
-	box-shadow: 0 1px 3px rgba(0,55,112,0.08);
+	border: 1px solid @gray-30;
+	border-radius: 6px;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.08);
 	
 	.cl-container.search-head {
-		border-bottom: 1px solid #e3e8ee;
-		padding: 16px;
+		border-bottom: 1px solid @gray-20;
+		padding: 14px 20px;
 
 		.cl-output.truncate {
-			color: #64748d;
+			color: @gray-70;
 			font-size: 13px;
 			font-weight: @font-weight-normal;
 			letter-spacing: -0.39px;
+			text-align: center;
 		}
 	}
 	
@@ -358,7 +352,7 @@
 	}
 	
 	.cl-container.search-btn-wrap {
-		border-top: 1px solid #e3e8ee;
+		border-top: 1px solid @gray-20;
 		margin-top: 8px;
 		padding-top: 16px;
 		
@@ -372,11 +366,11 @@
 
 //조회 영역 하위 결과 컨텐츠
 .cl-container.search-list-top {
-	padding: 16px;
+	padding: 0px;
 }
 
 .cl-output.sch-info {
-	color: #64748d;
+	color: @gray-50;
 	font-size: 13px;
 	font-weight: @font-weight-normal;
 	line-height: 1.4;

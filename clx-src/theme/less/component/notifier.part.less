@@ -29,7 +29,7 @@
 	width: auto;
 	border: 1px solid @gray-10;
 	border-radius: @size-component-radius;
-	font-size: @font-size-label-small;
+	#font-body-s();
 	font-weight: @font-weight-medium;
 	padding: @padding-2;
 	
@@ -68,7 +68,7 @@
  ========================================================================== */
 /* Default */
 .cl-notifier-item.cl-notifier-default {
-	#notifier--color(@secondary-5, @secondary-10, @color-text-subtle);
+	#notifier--color(@gray-10, @gray-20, @color-text-subtle);
 	
 	.cl-notifier-icon {
 		background-image: url("@{img-path}/icons/ico_help_fill.svg");
@@ -77,7 +77,7 @@
 
 /* Success */
 .cl-notifier-item.cl-notifier-success {
-	#notifier--color(@success-5, @success-10, @success-70);
+	#notifier--color(@success-10, @success-10, @success-70);
 	
 	.cl-notifier-icon {
 		background-image: url("@{img-path}/icons/ico_system_success_fill.svg");
@@ -86,7 +86,7 @@
 
 /* Information */
 .cl-notifier-item.cl-notifier-info {
-	#notifier--color(@information-5, @information-10, @information-70);
+	#notifier--color(@primary-5, @primary-10, @primary-80);
 	
 	.cl-notifier-icon {
 		background-image: url("@{img-path}/icons/ico_system_info_fill.svg");
@@ -95,7 +95,7 @@
 
 /* Warning */
 .cl-notifier-item.cl-notifier-warning {
-	#notifier--color(@warning-5, @warning-10, @warning-70);
+	#notifier--color(@warning-10, @warning-10, @warning-70);
 	
 	.cl-notifier-icon {
 		background-image: url("@{img-path}/icons/ico_system_warning_fill.svg");

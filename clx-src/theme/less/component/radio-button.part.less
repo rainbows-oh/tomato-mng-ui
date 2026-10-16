@@ -10,6 +10,9 @@
 
 @import (reference) "../common/_include.part.less";
 
+/* 파일 지역 변수 (@radio-- 접두어) — 아이콘·텍스트 간격 */
+@radio--gap: @gap-4; /* 8px */
+
 /* ==========================================================================
  Mixins
  ========================================================================== */
@@ -31,11 +34,15 @@
 }
 
 #radio--hover() {
-	background-image: url("@{img-path}/icons/ico_radio.svg");
+	background-image: url("@{img-path}/icons/ico_radio_hover.svg");
 }
 
 #radio--selected() {
 	background-image: url("@{img-path}/icons/ico_radio_selected.svg");
+}
+
+#radio--selected-hover() {
+	background-image: url("@{img-path}/icons/ico_radio_selected_hover.svg");
 }
 
 #radio--focus() {
@@ -65,19 +72,19 @@
 	
 	/* --- Layout — 정렬 --- */
 	&.cl-iconalign-left .cl-text {
-		padding: 0 0 0 @size-component-gap;
+		padding: 0 0 0 @radio--gap;
 	}
 	
 	&.cl-iconalign-right .cl-text {
-		padding: 0 @size-component-gap 0 0;
+		padding: 0 @radio--gap 0 0;
 	}
 	
 	&.cl-iconalign-top .cl-text {
-		padding: @size-component-gap 0 0 0;
+		padding: @radio--gap 0 0 0;
 	}
 	
 	&.cl-iconalign-bottom .cl-text {
-		padding: 0 0 @size-component-gap 0;
+		padding: 0 0 @radio--gap 0;
 	}
 	
 	&.cl-iconalign-none .cl-text {
@@ -95,18 +102,18 @@
 		padding: 0;
 		
 		.cl-radiobutton-field .cl-text {
-			line-height: @line-height-base;
+			#font-label();
 		}
 		
 		.cl-icon-wrapper {
 			line-height: 0;
-			padding-top: @gap-1;
+			padding-top: 1px; /* 아이콘(16px) 중앙 = 텍스트 줄 높이(@line-height-label 18px) 중앙 */
 			vertical-align: top;
 		}
 		
 		.cl-text {
 			padding: 0;
-			padding-left: @size-component-gap;
+			padding-left: @radio--gap;
 		}
 		
 		.cl-radiobutton-icon {
@@ -119,10 +126,13 @@
 			#radio--hover();
 		}
 		
-		&.cl-selected .cl-radiobutton-icon,
+		&.cl-selected .cl-radiobutton-icon {
+			#radio--selected();
+		}
+		
 		&.cl-selected.cl-hover .cl-radiobutton-icon,
 		&.cl-selected:hover .cl-radiobutton-icon {
-			#radio--selected();
+			#radio--selected-hover();
 		}
 	}
 	
@@ -164,25 +174,7 @@
 	}
 	
 	/* --- Size — .large --- */
-	&.large {
-		.cl-radiobutton-item .cl-radiobutton-icon {
-			#radio--button(@size-8);
-		}
-		
-		&.cl-iconalign-left .cl-text {
-			padding: 0 0 0 @size-component-gap-large;
-		}
-		
-		&.cl-iconalign-right .cl-text {
-			padding: 0 @size-component-gap-large 0 0;
-		}
-		
-		&.cl-iconalign-top .cl-text {
-			padding: @size-component-gap-large 0 0 0;
-		}
-		
-		&.cl-iconalign-bottom .cl-text {
-			padding: 0 0 @size-component-gap-large 0;
-		}
+	&.large .cl-radiobutton-item .cl-radiobutton-icon {
+		#radio--button(@size-8);
 	}
 }

@@ -21,7 +21,6 @@
 @tree--color-border-disabled: @gray-10;
 @tree--color-text:            @color-component-text;
 @tree--border-radius:         @size-component-radius;
-@tree--font-size:             @font-size-label-small;
 
 /* Tree — 아이템 */
 @tree--item-height:    @size-component-height;
@@ -49,7 +48,6 @@
 /* TreeCell — 루트/아이템 */
 @tc--color-text:               @color-component-text;
 @tc--color-text-disabled:      @color-component-text-disabled;
-@tc--font-size:                @font-size-label-small;
 @tc--item-height:              @size-component-height;
 @tc--item-padding-x:           @padding-2;
 @tc--item-gap:                 @gap-2;
@@ -107,7 +105,7 @@
 	border: 1px solid @tree--color-border;
 	border-radius: @tree--border-radius;
 	color: @tree--color-text;
-	font-size: @tree--font-size;
+	#font-body-s();
 	overflow: hidden;
 	padding: 0;
 	text-align: left;
@@ -409,7 +407,7 @@
 	border: 0;
 	border-radius: 0;
 	color: inherit;
-	font-size: @tc--font-size;
+	#font-body-s();
 	text-align: left;
 
 	&.cl-disabled {

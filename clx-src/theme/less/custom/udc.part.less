@@ -1,14 +1,13 @@
 @import "../../custom-settings.part.less";
-@import (reference) "../common/_include.part.less";
 
 /************************************************
  * [UDC] 앱헤더
  ************************************************/
 .cl-container.app-header {
 	.cl-output {
+		#font-heading();
 		font-weight: 600;
-		font-size: 15px;
-		color: #0d253d;
+		color: @secondary-90;
 	}
 }
 
@@ -19,16 +18,16 @@
 	.cl-button.btn-expand {
 		text-align: left;
 		font-size: 15px;
-		font-weight: 600;
+		font-weight: 700;
 		padding: 0px;
 		background: url("../../img/icons/ico_angle_down.svg") no-repeat center right;
 		background-size: 18px;
+		color: @secondary-90;
 		
 		&:not(.cl-disabled):hover,
 		&:not(.cl-disabled).cl-hover {
 			background-color: #EFF1F5;
 		}
-		
 		
 		&.collapse {
 			background: url("../../img/icons/ico_angle_up.svg") no-repeat center right;
@@ -71,73 +70,83 @@
  * [UDC] 페이지 인덱서
  ************************************************/
 .cl-container.pagination {
-	margin-top: 16px;
-	padding: 12px 0;
+	padding: 2px 0;
 	
 	.cl-output.page-info {
-		color: #64748d;
+		color: #475569;
 		font-size: 13px;
 		font-weight: @font-weight-normal;
-		letter-spacing: -0.39px;
 	}
 	
-	.cl-combobox.page-size {
-		.cl-text {
-			padding: 0 12px;
-		}
-	}
-	
-	.cl-button.page-navi {
-		border: 1px solid #e3e8ee;
-		padding: 8px 12px;
+	.cl-button {
+		padding: 0px;
+		background-color: transparent;
+		color: @gray-90;
+		font-size: 13px;
+		font-weight: 600;
 		
-		.shortcut {
-			min-height: 16px !important;
-			min-width: 16px !important;
-			margin-bottom: 1px;
+		&.icon {
+			min-width: 24px;
 		}
 		
-		&.prev {
-			border-radius: @border-radius-full 0 0 @border-radius-full;
-			border-right-color: transparent;
-			
-			.shortcut {
-				margin-right: 4px;
-			}
-			
+		.cl-icon {
+			position: relative;
+			top: -1px;
+			width: 24px;
+			height: 24px;
+		}
+
+		&.before {
 			.cl-icon {
-	 			background-image: url("../../img/icons/ico_angle_left.svg") !important;
+	 			background-image: url("../../img/icons/ico_pagination_before.svg") !important;
 	 		}
 	 		
 	 		&.cl-disabled {
 	 			.cl-icon {
-	 				background-image: url("../../img/icons/ico_pagination_left_disable.svg") !important;
+	 				background-image: url("../../img/icons/ico_pagination_before_disabled.svg") !important;
+	 			}
+	 		}
+		}
+		
+		&.prev {
+			.cl-icon {
+	 			background-image: url("../../img/icons/ico_pagination_prev.svg") !important;
+	 		}
+	 		
+	 		&.cl-disabled {
+	 			.cl-icon {
+	 				background-image: url("../../img/icons/ico_pagination_prev_disabled.svg") !important;
 	 			}
 	 		}
 		}
 		
 		&.next {
-			border-radius: 0 @border-radius-full @border-radius-full 0;
-			
-			.shortcut {
-				margin-left: 4px;
-			}
-			
 			.cl-icon {
-	 			background-image: url("../../img/icons/ico_angle_right.svg") !important;
+	 			background-image: url("../../img/icons/ico_pagination_next.svg") !important;
 	 		}
 	 		
 	 		&.cl-disabled {
 	 			.cl-icon {
-	 				background-image: url("../../img/icons/ico_pagination_right_disable.svg") !important;
+	 				background-image: url("../../img/icons/ico_pagination_next_disabled.svg") !important;
+	 			}
+	 		}
+		}
+
+		&.after {
+			.cl-icon {
+	 			background-image: url("../../img/icons/ico_pagination_after.svg") !important;
+	 		}
+	 		
+	 		&.cl-disabled {
+	 			.cl-icon {
+	 				background-image: url("../../img/icons/ico_pagination_after_disabled.svg") !important;
 	 			}
 	 		}
 		}
 		
 		&.cl-disabled {
 			background-color: #ffffff;
-			border-color: #e3e8ee;
-			opacity: .4;
+			color: @gray-40;
 		}
 	}
 }
@@ -162,76 +171,6 @@
 		&.close {
 			background-color: #ebedef;
 			color: #313b49;
-		}
-	}
-}
-
-/************************************************
- * [UDC] 파일 드롭존 업로드
- ************************************************/
-.cl-container.udc-file-dropzone {
-	.dropzone {
-		border: 1px dashed #533afd;
-		border-radius: 8px;
-		cursor: pointer;
-		padding: 16 + 24px 16px 16px 16px;
-		background-image: url("../../img/icons/ico_upload.svg");
-		background-position: center top 20px;
-		background-repeat: no-repeat;
-		background-color: #f6f9fc;
-		
-		.cl-output.tit {
-			color: #0d253d;
-			font-weight: 600;
-			text-align: center;
-		}
-		
-		.cl-output.info {
-			color: #64748d;
-			font-size: 11px;
-			text-align: center;
-		}
-		
-		&.dragover {
-			background-color: @primary-5;
-			border-color: @primary;
-		}
-	}
-	
-	.attachments {
-		align-items: center;
-		background-color: #ffffff;
-		border: 1px solid #e3e8ee;
-		border-radius: 6px;
-		padding: 8px;
-		background-image: url("../../img/icons/ico_file.svg");
-		background-position: center left 8px;
-		background-repeat: no-repeat;
-		
-		.name {
-			#ellipsis();
-			font-weight: 600;
-			
-			.size {
-				color: #64748d;
-				font-weight: 400;
-			}
-		}
-	}
-	
-	.cl-button.remove {
-		background-color: transparent;
-		background-image: url("../../img/icons/ico_close.svg");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 14px;
-		min-width: 20px;
-		padding: 0;
-
-		&:not(.cl-disabled):hover,
-		&:not(.cl-disabled).cl-hover {
-			background-color: #ebedef;
-			border-radius: 999px;
 		}
 	}
 }

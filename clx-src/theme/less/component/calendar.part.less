@@ -12,20 +12,19 @@
 /* 파일 지역 변수 (@cal-- 접두어) — 프로젝트별 디자인 튜닝 지점 */
 
 /* 루트 */
-@cal--color-background: @color-background-base;
-@cal--color-border: @color-component-border;
+@cal--color-background: @gray-10;          /* #F1F5F9 */
+@cal--color-border: @gray-20;              /* #E2E8F0 */
 @cal--shadow: 0 4px 10px 0 fade(@black, 10%);
-@cal--border-radius: @size-component-radius;
+@cal--border-radius: @border-radius-5;     /* 8px */
+@cal--padding: @padding-7;                 /* 16px — 바깥 여백 */
+@cal--section-gap: 14px;                   /* 헤더·요일·날짜·푸터 사이 간격 */
 /* 헤더 (일반) */
-@cal--head-color-background: @gray-5;
+@cal--head-color-background: transparent;
 @cal--head-color-text: @color-component-text;
-@cal--head-padding-x: @padding-3;
-@cal--head-padding-y: @padding-3;
 @cal--head-gap: @gap-2;
-@cal--head-font-size: @font-size-heading-xsmall;
 @cal--head-font-weight: @font-weight-semibold;
-@cal--head-button-size: @size-8;
-@cal--head-button-icon-size: @size-icon-small;
+@cal--head-button-size: @size-10;
+@cal--head-button-icon-size: @size-10;
 @cal--head-button-color-hover: @color-action-secondary-hover;
 /* 헤더 (일정 캘린더) */
 @cal--anni-head-color-background: @color-background-base;
@@ -33,23 +32,26 @@
 @cal--anni-head-color-text: @color-component-text;
 @cal--anni-head-padding-x: @padding-5;
 @cal--anni-head-padding-y: @padding-3;
-@cal--anni-head-font-size: @font-size-heading-small;
 @cal--anni-head-font-weight: @font-weight-bold;
 /* 요일 헤더 */
 @cal--week-color-background: transparent;
-@cal--week-color-text: @color-text-subtle;
-@cal--week-font-size: @font-size-label-xsmall;
+@cal--week-color-text: @gray-70;           /* #334155 */
+@cal--week-font-weight: @font-weight-semibold;
 /* 날짜 셀 공통 */
 @cal--date-size: @size-10;
-@cal--date-border-radius: @border-radius-full;
 @cal--date-padding: @padding-1;
 @cal--date-gap: @gap-1;
-@cal--date-font-size: @font-size-label-xsmall;
+/* 날짜 셀 (일 선택 달력) — 셀 47×44, 숫자 박스 32×32 */
+@cal--day-cell-width: 47px;
+@cal--day-cell-height: 44px;
+@cal--day-cell-padding-top: 3px;           /* 3 + 32(박스) + 1(간격) + 5(dot) + 3 = 44 */
+@cal--day-size: @size-11;                  /* 32px */
+@cal--day-border-radius: @border-radius-4; /* 6px */
 /* 날짜 셀 색상 */
-@cal--date-color-text: @color-component-text;
-@cal--date-color-text-sun: @danger-60;
-@cal--date-color-text-sat: @color-component-text;
-@cal--date-color-text-other: @color-component-text-disabled;
+@cal--date-color-text: @gray-90;           /* #0F172A */
+@cal--date-color-text-sun: @cal--date-color-text;
+@cal--date-color-text-sat: @cal--date-color-text;
+@cal--date-color-text-other: @gray-50;     /* #64748B */
 @cal--date-color-text-hover: @color-text-subtle;
 @cal--date-color-text-selected: @color-text-inverse;
 @cal--date-color-text-disabled: @color-component-text-disabled;
@@ -58,20 +60,27 @@
 @cal--date-color-action-range: @color-action-secondary-hover;
 @cal--date-color-action-disabled: @color-action-disabled;
 /* 날짜 특수 상태 */
-@cal--date-color-text-today: @primary;
-@cal--date-color-text-off: @point-70;
+@cal--date-color-text-today: @primary-70;  /* #1D4ED8 */
+@cal--date-font-weight-today: @font-weight-bold;
+@cal--day-color-hover: @white;
+@cal--day-color-border-hover: @gray-30;     /* #CBD5E1 border/default */
+@cal--day-color-selected: @secondary-90;    /* #141B4D navy/900 */
+@cal--day-color-urgent: @danger-5;          /* #FCEAF0 red/50 */
+@cal--day-color-border-urgent: @danger-20;  /* #F6B8CE red/200 */
+@cal--urgent-icon-size: 14px;
+@cal--urgent-icon-offset: -5px;
+@cal--date-color-text-off: @primary-80;
 @cal--date-color-background-today: @warning-10;
 @cal--date-color-focus-shadow: @primary;
 @cal--focus-shadow-width: 2px;
 /* dot 인디케이터 */
 @cal--dot-size: 4px;
 @cal--dot-offset: 0;
-@cal--dot-today-color: @primary;
+@cal--dot-today-size: 5px;
+@cal--dot-today-gap: 1px;                   /* 숫자 박스와 dot 사이 */
+@cal--dot-today-color: @cal--date-color-text-today;
 @cal--dot-anniversary-color: @danger-60;
 /* 푸터 */
-@cal--foot-color-border: @gray-10;
-@cal--foot-padding-y: @padding-3;
-@cal--foot-font-size: @font-size-label-small;
 /* 월/년 셀 */
 @cal--month-year-size-width: @size-13;
 @cal--month-year-border-radius: @size-component-radius;
@@ -80,10 +89,9 @@
 @cal--item-size-height: @size-8;
 @cal--item-padding-x: @padding-2;
 @cal--item-gap: @gap-2;
-@cal--item-font-size: @font-size-label-xsmall;
-@cal--item-color-background: @information-5;
+@cal--item-color-background: @primary-5;
 @cal--item-color-text: @information;
-@cal--anniversary-color-text: @point-70;
+@cal--anniversary-color-text: @primary-80;
 
 /* ==========================================================================
  Mixins
@@ -157,7 +165,7 @@
 	&.cl-popup,
 	&.cl-focus {
 		.cl-calendar-content .cl-calendar-current {
-			box-shadow: inset 0 0 0 @cal--focus-shadow-width @cal--date-color-focus-shadow;
+			box-shadow: none;
 		}
 	}
 	
@@ -183,10 +191,10 @@
 	width: 100%;
 	background-color: @cal--head-color-background;
 	color: @cal--head-color-text;
-	font-size: @cal--head-font-size;
+	#font-heading();
 	font-weight: @cal--head-font-weight;
-	padding: @cal--head-padding-y @cal--head-padding-x;
-	text-align: center;
+	padding: @cal--padding @cal--padding @cal--section-gap @cal--padding;
+	text-align: left;
 	
 	/* 헤더 버튼 (직접 url — hover 시에도 동일 아이콘 유지, 기본 png 덮어씀) */
 	.cl-calendar-header-before {
@@ -201,21 +209,21 @@
 
 	.cl-calendar-header-prev {
 		#cal--header-button();
-		background-image: url("@{img-path}/icons/ico_angle_left.svg");
+		background-image: url("@{img-path}/icons/ico_cal_prev.svg");
 
 		&:hover,
 		&.cl-hover {
-			background-image: url("@{img-path}/icons/ico_angle_left.svg");
+			background-image: url("@{img-path}/icons/ico_cal_prev.svg");
 		}
 	}
 
 	.cl-calendar-header-next {
 		#cal--header-button();
-		background-image: url("@{img-path}/icons/ico_angle_right.svg");
+		background-image: url("@{img-path}/icons/ico_cal_next.svg");
 
 		&:hover,
 		&.cl-hover {
-			background-image: url("@{img-path}/icons/ico_angle_right.svg");
+			background-image: url("@{img-path}/icons/ico_cal_next.svg");
 		}
 	}
 
@@ -263,31 +271,35 @@
 		border: 0;
 		color: @cal--week-color-text;
 		cursor: default;
-		font-size: @cal--week-font-size;
-		font-weight: @font-weight-medium;
-		text-transform: uppercase;
+		#font-micro();                         /* 11px */
+		font-weight: @cal--week-font-weight;
+		text-transform: none;
 	}
 	
 	/* 날짜/월/년 셀 */
 	.cl-calendar-content-day,
 	.cl-calendar-content-month,
-	.cl-calendar-content-year {
-		#cal--date-cell();
-		color: @cal--date-color-text;
-	}
-	
-	/* 다른 달 날짜 */
-	.cl-other-month {
-		#cal--date-cell();
-		color: @cal--date-color-text-other;
-	}
+		.cl-calendar-content-year {
+			#cal--date-cell();
+			color: @cal--date-color-text;
+			#font-body-s();                        /* 13px */
+			font-weight: @font-weight-normal;
+		}
+
+		/* 다른 달 날짜 */
+		.cl-other-month {
+			#cal--date-cell();
+			color: @cal--date-color-text-other;
+			#font-body-s();
+			font-weight: @font-weight-normal;
+		}
 	
 	/* 일/토요일 */
-	.cl-calendar-content-sun:not(.cl-other-month) {
+	.cl-calendar-content-sun:not(.cl-other-month):not(.cl-calendar-content-header) {
 		color: @cal--date-color-text-sun;
 	}
 	
-	.cl-calendar-content-sat:not(.cl-other-month) {
+	.cl-calendar-content-sat:not(.cl-other-month):not(.cl-calendar-content-header) {
 		color: @cal--date-color-text-sat;
 	}
 	
@@ -296,6 +308,18 @@
 	.cl-calendar-content-month.cl-calendar-defaultdate,
 	.cl-calendar-content-year.cl-calendar-defaultdate {
 		color: inherit;
+	}
+
+	/* 기념일 초기화 */
+	.cl-calendar-content-day.cl-calendar-anniversary,
+	.cl-calendar-content-month.cl-calendar-anniversary,
+	.cl-calendar-content-year.cl-calendar-anniversary {
+		box-shadow: none;
+		color: @cal--date-color-text;
+		
+		&:hover {
+			color: @cal--date-color-text;
+		}
 	}
 }
 
@@ -307,7 +331,7 @@
 	.cl-text .cl-date-sub {
 		display: block;
 		color: @cal--week-color-text;
-		font-size: @font-size-label-xsmall;
+		#font-caption();
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -316,9 +340,9 @@
 
 /* 푸터 */
 .cl-calendar .cl-calendar-footer {
-	border-top: 1px solid @cal--foot-color-border;
-	font-size: @cal--foot-font-size;
-	padding: @cal--foot-padding-y @padding-5;
+	border-top: 0;
+	#font-label();
+	padding: 0 @cal--padding @cal--padding;
 	text-align: right;
 	
 	.cl-calendar-footer-text {
@@ -326,23 +350,37 @@
 		align-items: center;
 		justify-content: center;
 		height: @size-component-height;
-		background-color: @color-button-tertiary-fill-default;
-		border: 1px solid @color-button-tertiary-border;
-		border-radius: @size-component-radius;
-		color: @color-component-text;
+		background-color: transparent;
+		border: none;
+		border-radius: 6px;
+		color: @primary-70;
 		cursor: pointer;
-		font-size: @cal--foot-font-size;
-		font-weight: @font-weight-medium;
-		padding: 0 @padding-2;
+		#font-body();
+		font-weight: @font-weight-label;
+		padding: 4px 8px 4px 22px;
 		text-decoration: none !important;
 		transition: @transition-base;
+		position: relative;
+		
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			top: 50%;
+			left: 8px;
+			width: 8px;
+			height: 8px;
+			background-color: @cal--dot-today-color;
+			border-radius: @border-radius-full;
+			transform: translateY(-50%);
+		}
 		
 		&:hover {
-			background-color: @color-button-tertiary-fill-hover;
+			background-color: @primary-10;
 		}
 		
 		&:active {
-			background-color: @color-button-tertiary-fill-pressed;
+			background-color: @primary-10;
 		}
 	}
 	
@@ -361,8 +399,8 @@
 	border-radius: @cal--border-radius;
 	padding: 0;
 	
-	.cl-calendar-content-wrapper {
-		padding: @padding-5;
+		.cl-calendar-content-wrapper {
+			padding: 0 @cal--padding @cal--section-gap;
 		
 		.cl-calendar-content {
 			gap: @cal--date-gap;
@@ -378,27 +416,117 @@
 	}
 }
 
-/* 일 선택 달력 */
-.cl-calendar-day:not(.cl-anniversaries) .cl-calendar-content {
+/* 일 선택 달력 — 셀 47×44, 숫자 박스 32×32
+   상태(hover/selected/urgent) 배경·보더는 숫자 박스(.cl-text)에, 오늘 dot 은 셀 ::after 로 표시 */
+.cl-calendar-day:not(.cl-anniversaries) .cl-calendar-content-wrapper .cl-calendar-content {
+	gap: 0;
+
 	.cl-calendar-content-header {
-		width: @cal--date-size;
+		width: @cal--day-cell-width;
 		margin: 0 auto;
+		padding-bottom: @cal--section-gap;
 	}
-	
+
 	.cl-calendar-content-day,
 	.cl-other-month {
-		width: @cal--date-size;
-		height: @cal--date-size;
-		border-radius: @cal--date-border-radius;
-		
-		&:not(.cl-first-column):not(.cl-last-column) {
-			margin-left: @cal--date-gap;
-			margin-right: @cal--date-gap;
+		width: @cal--day-cell-width;
+		height: @cal--day-cell-height;
+		background: transparent;
+		border-radius: 0;
+		margin: 0 auto;
+		overflow: visible; /* 긴급 배지가 숫자 박스 밖으로 나오도록 */
+		padding: @cal--day-cell-padding-top 0 (@cal--day-cell-height - @cal--day-cell-padding-top - @cal--day-size); /* 3px 0 9px — 숫자 박스가 셀 위쪽에 오도록 (런타임 inline align-self: center 대응) */
+
+		.cl-text {
+			width: @cal--day-size;
+			height: @cal--day-size;
+			background-color: transparent;
+			border: 1px solid transparent;
+			border-radius: @cal--day-border-radius;
+			box-sizing: border-box;
+			margin: 0 auto;
 		}
+	}
+
+	/* 오늘 — 파란 Bold + 숫자 박스 아래 dot */
+	.cl-calendar-content-day.cl-calendar-defaultdate {
+		color: @cal--date-color-text-today;
+		font-weight: @cal--date-font-weight-today;
+
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			top: (@cal--day-cell-padding-top + @cal--day-size + @cal--dot-today-gap);
+			left: 50%;
+			width: @cal--dot-today-size;
+			height: @cal--dot-today-size;
+			background-color: @cal--dot-today-color;
+			border-radius: @border-radius-full;
+			transform: translateX(-50%);
+		}
+	}
+
+	/* 긴급 — 기념일에 className: "cal-urgent" 지정 시. 연한 레드 + 우상단 ! 배지 */
+	.cl-calendar-anniversary.cal-urgent .cl-text {
+		position: relative;
+		background-color: @cal--day-color-urgent;
+		border-color: @cal--day-color-border-urgent;
 		
-		&:not(.cl-first-row):not(.cl-last-row) {
-			margin-bottom: (@cal--date-gap / 2);
-			margin-top: (@cal--date-gap / 2);
+		&::before {
+			content: "";
+			position: absolute;
+			display: block;
+			top: @cal--urgent-icon-offset;
+			right: @cal--urgent-icon-offset;
+			width: @cal--urgent-icon-size;
+			height: @cal--urgent-icon-size;
+			background: url("@{img-path}/icons/ico_cal_urgent.svg") no-repeat center / contain;
+		}
+	}
+
+	/* 키보드 포커스 위치 */
+	.cl-calendar-current .cl-text {
+		box-shadow: none;
+	}
+
+	/* 비활성 */
+	.cl-calendar-content-day.cl-disabled,
+	.cl-other-month.cl-disabled {
+		color: @cal--date-color-text-disabled;
+		cursor: default;
+
+		.cl-text {
+			background-color: @cal--date-color-action-disabled;
+		}
+	}
+
+	.cl-other-month.cl-hidden {
+		cursor: default;
+	}
+}
+
+/* 일 선택 달력 — 활성 상태 (Selected · Today · Urgent 는 hover 변화 없음) */
+.cl-calendar-day:not(.cl-anniversaries):not(.cl-disabled) .cl-calendar-content-wrapper .cl-calendar-content {
+	.cl-calendar-content-day,
+	.cl-other-month:not(.cl-hidden) {
+		&:not(.cl-disabled):not(.cl-selected):not(.cl-calendar-defaultdate):not(.cal-urgent):hover .cl-text {
+			background-color: @cal--day-color-hover;
+			border-color: @cal--day-color-border-hover;
+			color: @cal--date-color-text;
+		}
+
+		&.cl-range-selected .cl-text {
+			background-color: @cal--date-color-action-range;
+		}
+
+		&.cl-selected {
+			color: @cal--date-color-text-selected;
+
+			.cl-text {
+				background-color: @cal--day-color-selected;
+				border-color: @cal--day-color-selected;
+			}
 		}
 	}
 }
@@ -424,7 +552,7 @@
 }
 
 /* 날짜 셀 상태 — 특수 */
-.cl-calendar:not(.cl-anniversaries) .cl-calendar-content {
+.cl-calendar:not(.cl-anniversaries):not(.cl-calendar-day) .cl-calendar-content {
 	/* 기념일 — ::before dot + 텍스트 색 */
 	.cl-calendar-content-day.cl-calendar-anniversary,
 	.cl-calendar-content-month.cl-calendar-anniversary,
@@ -458,8 +586,8 @@
 	}
 }
 
-/* 날짜 셀 상태 — 활성 */
-.cl-calendar:not(.cl-anniversaries):not(.cl-disabled) .cl-calendar-content {
+/* 날짜 셀 상태 — 활성 (월/년 달력. 일 선택 달력은 위 별도 블록) */
+.cl-calendar:not(.cl-anniversaries):not(.cl-calendar-day):not(.cl-disabled) .cl-calendar-content {
 	/* 범위 선택 */
 	.cl-calendar-content-day.cl-range-selected,
 	.cl-calendar-content-month.cl-range-selected,
@@ -504,8 +632,8 @@
 	}
 }
 
-/* 날짜 셀 상태 — disabled */
-.cl-calendar:not(.cl-anniversaries) .cl-calendar-content {
+/* 날짜 셀 상태 — disabled (월/년 달력) */
+.cl-calendar:not(.cl-anniversaries):not(.cl-calendar-day) .cl-calendar-content {
 	.cl-calendar-content-day.cl-disabled,
 	.cl-calendar-content-month.cl-disabled,
 	.cl-calendar-content-year.cl-disabled,
@@ -530,7 +658,7 @@
 		background-color: @cal--anni-head-color-background;
 		border-bottom: 1px solid @cal--anni-head-color-border;
 		color: @cal--anni-head-color-text;
-		font-size: @cal--anni-head-font-size;
+		#font-display();
 		font-weight: @cal--anni-head-font-weight;
 		padding: @cal--anni-head-padding-y @cal--anni-head-padding-x;
 		text-align: left;
@@ -592,7 +720,7 @@
 					top: 0;
 					right: 0;
 					color: @cal--week-color-text;
-					font-size: @cal--week-font-size;
+					#font-caption();
 					line-height: 1;
 				}
 			}
@@ -664,7 +792,7 @@
 		align-items: center;
 		height: @cal--item-size-height;
 		border-radius: 0;
-		font-size: @cal--item-font-size;
+		#font-caption();
 		font-weight: @font-weight-medium;
 		margin: 0;
 		padding: 0 @cal--item-padding-x;
@@ -689,7 +817,7 @@
 		}
 		
 		&.cl-selected {
-			box-shadow: inset 0 0 0 1px @cal--date-color-focus-shadow;
+			box-shadow: none;
 		}
 	}
 	
@@ -703,7 +831,7 @@
 		}
 		
 		&.cl-selected {
-			box-shadow: inset 0 0 0 1px @cal--date-color-focus-shadow;
+			box-shadow: none;
 		}
 	}
 	

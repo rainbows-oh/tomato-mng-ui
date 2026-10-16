@@ -8,7 +8,7 @@
 
 @import (reference) "../common/_include.part.less";
 /* 파일 지역 변수 (@switch-- 접두어로 타 파일 변수 충돌 방지) — 반복/계산 값만 */
-@switch--track-width: @size-11;
+@switch--track-width: @size-12;
 @switch--thumb-size: @size-component-button;
 @switch--thumb-offset: (@switch--track-width - @switch--thumb-size - (@switch--thumb-border-width * 2));
 @switch--thumb-border-width: 2px;
@@ -31,7 +31,7 @@
 		position: relative;
 		display: inline-flex !important;
 		#switch--track();
-		background-color: @gray-20;
+		background-color: @gray-30;
 		transition: 0.4s cubic-bezier(0.4, 0, 0.23, 1);
 		
 		/* 썸 (구조 상수 top/left 는 인라인 유지) */
@@ -46,10 +46,35 @@
 			height: @switch--thumb-size;
 			background-color: @color-background-base;
 			background-image: none !important;
-			border: @switch--thumb-border-width solid @gray-20;
+			border: @switch--thumb-border-width solid @gray-30;
 			border-radius: @border-radius-full;
 			box-sizing: content-box;
 			transition: inherit;
+		}
+	}
+	
+	&:not(.cl-disabled) {
+		&.cl-hover,
+		&:hover {
+			.cl-icon-wrapper {
+				background-color: @gray-40;
+				.cl-checkbox-icon { border-color: @gray-40; }
+			}
+		}
+	}
+	
+	&.cl-focus,
+	&:focus {
+		.cl-checkbox-icon:focus-visible {
+		}
+	}
+	
+	&.cl-disabled .cl-icon-wrapper {
+		background-color: @gray-20;
+		
+		.cl-checkbox-icon {
+			background-color: @white;
+			border-color: @gray-20;
 		}
 	}
 	
@@ -63,20 +88,25 @@
 				border-color: @primary;
 			}
 		}
-	}
-	
-	&.cl-focus,
-	&:focus {
-		.cl-checkbox-icon:focus-visible {
-		}
-	}
-	
-	&.cl-disabled .cl-icon-wrapper {
-		background-color: @color-component-surface-disabled;
 		
-		.cl-checkbox-icon {
-			background-color: @color-component-text-disabled;
-			border-color: @color-component-surface-disabled;
+		&.cl-hover,
+		&:hover {
+			.cl-icon-wrapper {
+				background-color: @primary-80;
+				
+				.cl-checkbox-icon {
+					border-color: @primary-80;
+				}
+			}
+		}
+		
+		&.cl-disabled .cl-icon-wrapper {
+			background-color: @primary-20;
+			
+			.cl-checkbox-icon {
+				background-color: @white;
+				border-color: @primary-20;
+			}
 		}
 	}
 }

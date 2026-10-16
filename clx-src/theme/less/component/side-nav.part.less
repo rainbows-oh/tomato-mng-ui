@@ -31,7 +31,6 @@
 @sidenav--indent-6: (@sidenav--indent * 5);
 
 /* 폰트 */
-@sidenav--font-size:            @font-size-heading-xsmall;
 @sidenav--font-weight:          @font-weight-medium;
 @sidenav--font-weight-selected: @font-weight-semibold;
 
@@ -112,7 +111,7 @@
 	border: 0;
 	border-radius: 0;
 	color: @sidenav--color-text;
-	font-size: @sidenav--font-size;
+	#font-heading();
 	font-weight: @sidenav--font-weight;
 
 	.cl-subtree {
@@ -206,7 +205,7 @@
 	.cl-sidenavigation-item {
 		background-color: @sidenav--lnb-color-background;
 		border-left: 3px solid transparent;
-		font-size: @font-size-navigation-depth-medium;
+		#font-body-s();
 		min-height: @size-component-height;
 
 		/* hover */

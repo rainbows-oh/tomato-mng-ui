@@ -23,11 +23,9 @@
 @listbox--width-default: 200px;
 /* 헤더 (LinkedListbox 전용) */
 @listbox--head-gap: @gap-4;
-@listbox--head-font-size: @font-size-heading-xsmall;
 @listbox--head-font-weight: @font-weight-semibold;
 @listbox--head-color-text: @color-component-text;
 /* 폰트 */
-@listbox--font-size: @font-size-label-small;
 /* 색상 — 컨테이너 */
 @listbox--color-background: @color-input-surface;
 @listbox--color-background-disabled: @color-input-surface-disabled;
@@ -112,7 +110,7 @@
 .cl-listbox {
 	#listbox--container();
 	color: @listbox--color-text;
-	font-size: @listbox--font-size;
+	#font-body-s();
 	transition: @transition-base;
 	
 	.cl-listbox-list {
@@ -169,7 +167,7 @@
  ========================================================================== */
 .cl-linkedlistbox {
 	color: @listbox--color-text;
-	font-size: @listbox--font-size;
+	#font-body-s();
 	transition: @transition-base;
 	
 	.cl-linkedlistbox-listbox {
@@ -182,7 +180,7 @@
 				border: 0;
 				border-radius: 0;
 				color: @listbox--head-color-text;
-				font-size: @listbox--head-font-size;
+				#font-heading();
 				font-weight: @listbox--head-font-weight;
 				padding: 0;
 				text-align: left;

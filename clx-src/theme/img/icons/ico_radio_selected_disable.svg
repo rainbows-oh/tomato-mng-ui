@@ -1,7 +1,5 @@
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="1">
-<rect x="0.75" y="0.75" width="18.5" height="18.5" rx="9.25" fill="#e0e3e8"/>
-<rect x="0.75" y="0.75" width="18.5" height="18.5" rx="9.25" stroke="#c5cbd4" stroke-width="1.5"/>
-<circle cx="10" cy="10" r="5" fill="#939eae"/>
-</g>
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.75" y="0.75" width="14.5" height="14.5" rx="7.25" fill="#F1F5F9"/>
+<rect x="0.75" y="0.75" width="14.5" height="14.5" rx="7.25" stroke="#E2E8F0" stroke-width="1.5"/>
+<circle cx="8" cy="8" r="4" fill="#94A3B8"/>
 </svg>

@@ -17,14 +17,12 @@
 /* 루트 */
 @fu--color-background: @color-background-base;
 @fu--color-border:     @color-component-border;
-@fu--font-size:        @font-size-label-small;
 
 /* 헤더 */
 @fu--head-height:           @size-10;
 @fu--head-color-background:  @gray-5;
 @fu--head-color-border:      @gray-10;
 @fu--head-color-text:        @color-component-text;
-@fu--head-font-size:         @font-size-label-small;
 @fu--head-font-weight:       @font-weight-medium;
 
 /* 컬럼 크기 */
@@ -47,7 +45,7 @@
 @fu--foot-color-background:  @gray-5;
 @fu--foot-color-border:      @gray-10;
 @fu--foot-color-text:        @color-component-text;
-@fu--foot-font-size:         @font-size-label-xsmall;
+@fu--foot-font-size: @font-size-caption;
 @fu--foot-font-weight:       @font-weight-semibold;
 @fu--foot-padding-x:         @padding-3;
 @fu--foot-gap:               @gap-2;
@@ -76,7 +74,7 @@
 	background-color: @fu--color-background;
 	border: 1px solid @fu--color-border;
 	color: @color-component-text;
-	font-size: @fu--font-size;
+	#font-body-s();
 
 	/* 파일명 말줄임 */
 	.cl-text {
@@ -129,7 +127,7 @@
 	background-image: none;
 	border-bottom: 1px solid @fu--head-color-border;
 	color: @fu--head-color-text;
-	font-size: @fu--head-font-size;
+	#font-label();
 	font-weight: @fu--head-font-weight;
 	overflow: hidden;
 	text-align: center;
@@ -254,7 +252,7 @@
 	background-color: @fu--foot-color-background;
 	border-top: 1px solid @fu--foot-color-border;
 	color: @fu--foot-color-text;
-	font-size: @fu--foot-font-size;
+	#font-caption();
 	font-weight: @fu--foot-font-weight;
 	padding: 0 @fu--foot-padding-x;
 

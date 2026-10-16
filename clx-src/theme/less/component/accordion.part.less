@@ -19,7 +19,7 @@
 @accordion--color-border: @color-component-border;
 @accordion--head-color-background: transparent;
 @accordion--head-color-background-hover: @color-action-secondary-hover;
-@accordion--head-color-text: @color-component-text;
+@accordion--head-color-text: @secondary-90;
 @accordion--head-color-text-activated: @color-text-bolder;
 
 /* ==========================================================================
@@ -27,22 +27,23 @@
  ========================================================================== */
 .cl-accordion {
 	background: transparent;
-	border: 1px solid @accordion--color-border;
+	border: none;
 	border-width: 1px 0;
-	padding: @padding-3 0;
+	padding: 0;
 	
 	/* 헤더 */
 	.cl-accordion-header {
 		height: auto;
 		background-color: @accordion--head-color-background;
-		border: 0;
-		border-radius: @accordion--head-radius;
+		border: 1px solid @primary-20;
+		border-radius: 8px;
 		color: @accordion--head-color-text;
-		font-size: @font-size-label-medium;
-		font-weight: @font-weight-medium;
-		min-height: @size-11;
-		padding: @padding-0 @accordion--head-padding-x;
+		#font-heading();
+		font-weight: @font-weight-heading;
+		min-height: @size-15;
+		padding: 15px 20px;
 		text-align: left;
+		background-color: @gray-10;
 		
 		/* 아이콘 (cleopatra 배경 덮어씀) */
 		.cl-accordion-expander {
@@ -71,9 +72,10 @@
 		
 		/* activated (열림) */
 		&.cl-activated {
-			background-color: @accordion--head-color-background-hover;
+			background-color: @white;
 			border-bottom-left-radius: 0;
 			border-bottom-right-radius: 0;
+			border-color: @primary-60;
 			color: @accordion--head-color-text-activated;
 			
 			.cl-accordion-expander {
@@ -100,11 +102,13 @@
 	
 	/* 섹션 (콘텐츠 영역) */
 	.cl-accordion-section:not(.cl-accordion-placeholder) {
-		background-color: @color-action-secondary-hover;
+		background-color: @white;
 		border-bottom-left-radius: @accordion--head-radius;
 		border-bottom-right-radius: @accordion--head-radius;
 		padding: @accordion--head-padding-x;
 		z-index: -1;
+		border: 1px solid @primary-60;
+		border-top: 0;
 		
 		.cl-accordion-content {
 			background: transparent;
@@ -115,7 +119,7 @@
 	
 	/* 섹션 다음 헤더 간격 */
 	.cl-accordion-section + .cl-accordion-header {
-		margin-top: @gap-4;
+		margin-top: @gap-8;
 	}
 }
 

@@ -25,7 +25,6 @@
 @menu--item-gap:           @gap-2;
 
 /* 폰트 */
-@menu--font-size:   @font-size-label-small;
 @menu--font-weight: @font-weight-medium;
 
 /* 색상 — 컨테이너 */
@@ -112,7 +111,7 @@
 .cl-menu {
 	#menu--surface();
 	color: @menu--color-text;
-	font-size: @menu--font-size;
+	#font-body-s();
 	font-weight: @menu--font-weight;
 	text-align: left;
 
@@ -311,7 +310,7 @@
 			border: 0;
 			box-shadow: none;
 			color: @menu--color-text;
-			font-size: @menu--font-size;
+			#font-body-s();
 			text-align: left;
 
 			.cl-sidenavigation-item {
@@ -371,7 +370,7 @@
 				border: 0;
 				border-radius: @menu--item-border-radius;
 				color: @menu--color-text;
-				font-size: @menu--font-size;
+				#font-body-s();
 				padding: 0 @menu--item-padding-x;
 				text-decoration: none;
 				text-shadow: none;

@@ -77,14 +77,26 @@
 	white-space: nowrap !important;
 }
 
+/* 타이포 스타일 (font-size + line-height) — custom-settings Text Style 토큰 */
+#font-display()        { font-size: @font-size-display;        line-height: @line-height-display; }
+#font-heading()        { font-size: @font-size-heading;        line-height: @line-height-heading; }
+#font-subheading()     { font-size: @font-size-subheading;     line-height: @line-height-subheading; }
+#font-title()          { font-size: @font-size-title;          line-height: @line-height-title; }
+#font-button()         { font-size: @font-size-button;         line-height: @line-height-button; }
+#font-body()           { font-size: @font-size-body;           line-height: @line-height-body; }
+#font-body-s()         { font-size: @font-size-body-s;         line-height: @line-height-body-s; }
+#font-label()          { font-size: @font-size-label;          line-height: @line-height-label; }
+#font-caption()        { font-size: @font-size-caption;        line-height: @line-height-caption; }
+#font-caption-strong() { font-size: @font-size-caption-strong; line-height: @line-height-caption-strong; }
+#font-micro()          { font-size: @font-size-micro;          line-height: @line-height-micro; }
+
 /* 텍스트 리셋 */
 #reset-text() {
-	font-size: @font-size-body-medium;
+	#font-body();
 	font-style: normal;
 	font-weight: @font-weight-normal;
 	letter-spacing: normal;
 	line-break: auto;
-	line-height: @line-height-base;
 	text-align: left;
 	text-decoration: none;
 	text-shadow: none;

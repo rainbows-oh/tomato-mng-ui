@@ -48,7 +48,7 @@
 
 /* 폼 타이틀 (Output 컨트롤로 렌더링) */
 .cl-output.form-tit {
-	font-size: @size-form-title-font;
+	#font-heading();
 	font-weight: @size-form-title-font-weight;
 }
 
@@ -76,11 +76,11 @@
 /* 기본형 (.form) */
 .cl-container.form {
 	background-color: @color-form-surface;
-	border-bottom: 1px solid @color-form-border;
-	border-top: 1px solid @color-form-border;
+	border-bottom: none;
+	border-top: none;
 	
 	.label {
-		background-color: @color-form-shade-background;
+		background-color: #f6f9fc;
 		line-height: 1.25;
 		min-width: 120px;
 		padding: 0 @size-form-label-padding-x;
@@ -97,7 +97,7 @@
 
 .cl-container.form:not(.tbl) {
 	.label {
-		max-width: 120px;
+//		max-width: 120px;
 	}
 }
 
@@ -194,16 +194,16 @@
 		/* 조회 버튼 (point) */
 		.cl-button.btn-sch {
 			min-width: 64px;
-			#btn--default(@point-50, @point-50, @color-text-inverse);
+			#btn--default(@primary-40, @primary-40, @color-text-inverse);
 			
 			&:not(.cl-disabled):hover,
 			&:not(.cl-disabled).cl-hover {
-				#btn--hover(@point-60, @point-60, @color-text-inverse);
+				#btn--hover(@primary-60, @primary-60, @color-text-inverse);
 			}
 			
 			&:not(.cl-disabled).cl-activated,
 			&:not(.cl-disabled):active {
-				#btn--pressed(@point-70, @point-70, @color-text-inverse);
+				#btn--pressed(@primary-80, @primary-80, @color-text-inverse);
 			}
 		}
 	}
@@ -211,7 +211,7 @@
 
 /* 조회 폼 토글 버튼 */
 .cl-button.sch-toggle {
-	#btn--default(@point-5, @point-10, @point-70);
+	#btn--default(@primary-5, @primary-10, @primary-80);
 	width: 60px;
 	border-radius: 0 0 @size-component-radius @size-component-radius;
 	border-top: 0;
@@ -229,12 +229,12 @@
 	
 	&:not(.cl-disabled):hover,
 	&:not(.cl-disabled).cl-hover {
-		#btn--hover(@point-5, @point-10, @point-70);
+		#btn--hover(@primary-5, @primary-10, @primary-80);
 	}
 	
 	&:not(.cl-disabled).cl-activated,
 	&:not(.cl-disabled):active {
-		#btn--pressed(@point-5, @point-10, @point-70);
+		#btn--pressed(@primary-5, @primary-10, @primary-80);
 	}
 	
 	/* 접힘 상태 — 화살표 회전 */

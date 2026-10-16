@@ -17,12 +17,12 @@
 /* ==========================================================================
    1. Font Size
    ========================================================================== */
-.fs-xs  { font-size: @font-size-body-small     !important; }
-.fs-sm  { font-size: @font-size-body-medium    !important; }
-.fs-md  { font-size: @font-size-label-medium   !important; }
-.fs-lg  { font-size: @font-size-heading-xsmall !important; }
-.fs-xl  { font-size: @font-size-heading-small  !important; }
-.fs-xxl { font-size: @font-size-heading-medium !important; }
+.fs-xs  { #font-body-s() !important; }
+.fs-sm  { #font-body() !important; }
+.fs-md  { #font-title() !important; }
+.fs-lg  { #font-heading() !important; }
+.fs-xl  { #font-display() !important; }
+.fs-xxl { #font-display() !important; }
 
 /* ==========================================================================
    2. Font Weight
@@ -68,7 +68,7 @@
 .text-info      { color: @information                   !important; }
 .text-warning   { color: @warning                       !important; }
 .text-danger    { color: @danger-60                     !important; }
-.text-point     { color: @point                         !important; }
+.text-point     { color: @primary-40                         !important; }
 .text-subtle    { color: @color-text-subtle             !important; }
 .text-subtlest  { color: @color-text-subtler            !important; }
 .text-disabled  { color: @color-component-text-disabled !important; }
@@ -86,13 +86,13 @@
 .bg-primary-soft { background-color: @primary-5  !important; }
 
 .bg-success      { background-color: @success-10 !important; }
-.bg-success-soft { background-color: @success-5  !important; }
+.bg-success-soft { background-color: @success-70  !important; }
 
-.bg-info      { background-color: @information-10 !important; }
-.bg-info-soft { background-color: @information-5  !important; }
+.bg-info      { background-color: @primary-10 !important; }
+.bg-info-soft { background-color: @primary-5  !important; }
 
 .bg-warning      { background-color: @warning-10 !important; }
-.bg-warning-soft { background-color: @warning-5  !important; }
+.bg-warning-soft { background-color: @warning-70  !important; }
 
 .bg-danger      { background-color: @danger-10 !important; }
 .bg-danger-soft { background-color: @danger-5  !important; }

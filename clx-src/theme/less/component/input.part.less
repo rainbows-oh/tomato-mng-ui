@@ -43,7 +43,7 @@
 
 #input--error() {
 	border-color: @color-input-border-error;
-	border-width: 2px;
+	border-width: 1px;
 }
 
 /* 아이콘 영역 공통 (no-repeat + 중앙 정렬 + 크기) — background-image 는 호출부에서 지정 */
@@ -311,7 +311,8 @@
 		background-image: url("@{img-path}/icons/ico_date.svg");
 	}
 	
-	&.cl-disabled .cl-dateinput-button {
+	&.cl-disabled .cl-dateinput-button,
+	&.cl-readonly .cl-dateinput-button {
 		background-image: url("@{img-path}/icons/ico_date_disable.svg");
 	}
 	
@@ -329,6 +330,7 @@
 		.cl-dateinput-decrease {
 			height: auto !important;
 			grid-column: 1 / span 1;
+			#input--icon(@size-icon-xsmall);
 		}
 		
 		.cl-dateinput-increase {
@@ -341,10 +343,13 @@
 		border: none;
 		font-size: 0;
 		
-		.cl-dateinput-increase,
+		
+		
+		.cl-dateinput-increase {
+			background-image: url("@{img-path}/icons/ico_caret_up.svg");
+		}
 		.cl-dateinput-decrease {
-			position: relative;
-			#input--icon(@size-icon-xsmall);
+			background-image: url("@{img-path}/icons/ico_caret.svg");
 		}
 	}
 	
@@ -387,13 +392,28 @@
 		}
 	}
 	
+	&:not(.cl-disabled) {
+		&.cl-hover,
+		&:hover {
+			border-color: @gray-40;
+			
+			.cl-dateinput-button {
+				background-image: url("@{img-path}/icons/ico_date_hover.svg") !important;
+			}
+		}
+	}
+	
 	&.cl-focus,
 	&:focus {
 		#input--focus();
+		
+		.cl-dateinput-button {
+			background-image: url("@{img-path}/icons/ico_date_focus.svg") !important;
+		}
 	}
 	
 	&.cl-readonly {
-		#input--readonly();
+		#input--disabled();
 	}
 	
 	&.cl-disabled {
@@ -457,7 +477,7 @@
 			resize: block !important;
 		}
 	}
-	
+
 	&.cl-focus,
 	&:focus {
 		#input--focus();
