@@ -333,7 +333,7 @@
               </cl:button>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-d43e8e61" rowindex="0" colindex="5" columnname="status">
-              <cl:output std:sid="output-1e919d3d" value="Output" displayexp="sstr(text, switch(status){&#xD;&#xA;&#x9;case &quot;For Approval&quot; : &quot;badge fill success&quot;&#xD;&#xA;&#x9;case &quot;Posted&quot; : &quot;badge fill information&quot;&#xD;&#xA;&#x9;case &quot;Rejected&quot; : &quot;badge fill warning&quot;&#xD;&#xA;&#x9;case &quot;Deleted&quot; : &quot;badge fill danger&quot;&#xD;&#xA;})">
+              <cl:output std:sid="output-1e919d3d" value="Output" displayexp="sstr(text, switch(status){&#xD;&#xA;&#x9;case &quot;For Approval&quot; : &quot;badge fill green&quot;&#xD;&#xA;&#x9;case &quot;Posted&quot; : &quot;badge fill blue&quot;&#xD;&#xA;&#x9;case &quot;Rejected&quot; : &quot;badge fill yellow&quot;&#xD;&#xA;&#x9;case &quot;Deleted&quot; : &quot;badge fill red&quot;&#xD;&#xA;})">
                 <cl:celldata std:sid="c-data-8f02d553"/>
               </cl:output>
             </cl:gridcell>

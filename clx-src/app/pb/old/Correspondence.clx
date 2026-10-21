@@ -310,7 +310,7 @@
               </cl:button>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-f64d2f84" rowindex="0" colindex="3" columnname="replyStatus">
-              <cl:output std:sid="output-27a1a6ff" displayexp="sstr(switch(replyStatus){&#xA;&#x9;case &quot;open&quot; : &quot;Open&quot;&#xA;&#x9;case &quot;closed&quot; : &quot;Closed&quot;&#xA;&#x9;default : &quot;-&quot;&#xA;},&#xA;switch(replyStatus){&#xA;&#x9;case &quot;open&quot; : &quot;badge soft warning&quot;&#xA;&#x9;case &quot;closed&quot; : &quot;badge soft success&quot;&#xA;&#x9;default : &quot;&quot;&#xA;})">
+              <cl:output std:sid="output-27a1a6ff" displayexp="sstr(switch(replyStatus){&#xA;&#x9;case &quot;open&quot; : &quot;Open&quot;&#xA;&#x9;case &quot;closed&quot; : &quot;Closed&quot;&#xA;&#x9;default : &quot;-&quot;&#xA;},&#xA;switch(replyStatus){&#xA;&#x9;case &quot;open&quot; : &quot;badge fill yellow&quot;&#xA;&#x9;case &quot;closed&quot; : &quot;badge fill green&quot;&#xA;&#x9;default : &quot;&quot;&#xA;})">
                 <cl:celldata std:sid="c-data-75af08f2"/>
               </cl:output>
             </cl:gridcell>

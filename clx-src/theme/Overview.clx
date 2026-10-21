@@ -832,13 +832,13 @@
       <cl:output std:sid="output-9901a99e" value="배지">
         <cl:flowlayoutdata std:sid="f-data-4394db20" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
-      <cl:output std:sid="output-12886102" class="badge fill danger" value="Rejected">
+      <cl:output std:sid="output-12886102" class="badge fill red" value="Rejected">
         <cl:flowlayoutdata std:sid="f-data-a1dbd6eb" width="68px" height="20px" autosize="both"/>
       </cl:output>
-      <cl:output std:sid="output-8f8252d4" class="badge fill warning" value="Changed">
+      <cl:output std:sid="output-8f8252d4" class="badge fill yellow" value="Changed">
         <cl:flowlayoutdata std:sid="f-data-1982d6fe" width="68px" height="20px" autosize="both"/>
       </cl:output>
-      <cl:output std:sid="output-83c870c9" class="badge fill success" value="Approved">
+      <cl:output std:sid="output-83c870c9" class="badge fill green" value="Approved">
         <cl:flowlayoutdata std:sid="f-data-03243110" width="68px" height="20px" autosize="both"/>
       </cl:output>
       <cl:output std:sid="output-95f3d8f3" class="badge fill information" value="Submitted">
@@ -885,7 +885,7 @@
       <cl:output std:sid="output-a1bf1163" value="배지 (소프트)">
         <cl:flowlayoutdata std:sid="f-data-43cfbb31" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
-      <cl:output std:sid="output-95215f52" class="badge soft primary" value="배지">
+      <cl:output std:sid="output-95215f52" class="badge fill blue" value="배지">
         <cl:flowlayoutdata std:sid="f-data-e7aecfc6" width="68px" height="20px" autosize="both"/>
       </cl:output>
       <cl:output std:sid="output-fa73d524" class="badge soft secondary" value="배지">
@@ -897,16 +897,16 @@
       <cl:output std:sid="output-bee7ca8b" class="badge soft point" value="배지">
         <cl:flowlayoutdata std:sid="f-data-2a4609b9" width="68px" height="20px" autosize="both"/>
       </cl:output>
-      <cl:output std:sid="output-db4aa2e0" class="badge soft danger" value="배지">
+      <cl:output std:sid="output-db4aa2e0" class="badge fill red" value="배지">
         <cl:flowlayoutdata std:sid="f-data-94105f41" width="68px" height="20px" autosize="both"/>
       </cl:output>
-      <cl:output std:sid="output-b8530e63" class="badge soft warning" value="배지">
+      <cl:output std:sid="output-b8530e63" class="badge fill yellow" value="배지">
         <cl:flowlayoutdata std:sid="f-data-26d605ae" width="68px" height="20px" autosize="both"/>
       </cl:output>
-      <cl:output std:sid="output-c4f90b31" class="badge soft success" value="배지">
+      <cl:output std:sid="output-c4f90b31" class="badge fill green" value="배지">
         <cl:flowlayoutdata std:sid="f-data-948c3d32" width="68px" height="20px" autosize="both"/>
       </cl:output>
-      <cl:output std:sid="output-1c2663d2" class="badge soft information" value="배지">
+      <cl:output std:sid="output-1c2663d2" class="badge fill blue" value="배지">
         <cl:flowlayoutdata std:sid="f-data-8a7cfb91" width="68px" height="20px" autosize="both"/>
       </cl:output>
       <cl:output std:sid="output-7b836cc3" class="badge soft disable" value="배지">

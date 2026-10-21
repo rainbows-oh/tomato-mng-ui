@@ -166,7 +166,7 @@
               </cl:button>
             </cl:gridcell>
             <cl:gridcell std:sid="gd-cell-d43e8e61" rowindex="0" colindex="2" columnname="status">
-              <cl:output std:sid="output-1e919d3d" value="Output" displayexp="sstr(text, switch(status){&#xD;&#xA;&#x9;case &quot;pending&quot; : &quot;badge soft primary&quot;&#xD;&#xA;&#x9;case &quot;approved&quot; : &quot;badge soft success&quot;&#xD;&#xA;&#x9;case &quot;rejected&quot; : &quot;badge soft danger&quot;&#xD;&#xA;&#x9;case &quot;forwarded&quot; : &quot;badge soft warning&quot;&#xD;&#xA;&#x9;default : &quot;badge soft information&quot;&#xD;&#xA;})">
+              <cl:output std:sid="output-1e919d3d" value="Output" displayexp="sstr(text, switch(status){&#xD;&#xA;&#x9;case &quot;pending&quot; : &quot;badge fill blue&quot;&#xD;&#xA;&#x9;case &quot;approved&quot; : &quot;badge fill green&quot;&#xD;&#xA;&#x9;case &quot;rejected&quot; : &quot;badge fill red&quot;&#xD;&#xA;&#x9;case &quot;forwarded&quot; : &quot;badge fill yellow&quot;&#xD;&#xA;&#x9;default : &quot;badge fill blue&quot;&#xD;&#xA;})">
                 <cl:celldata std:sid="c-data-8f02d553"/>
               </cl:output>
             </cl:gridcell>
