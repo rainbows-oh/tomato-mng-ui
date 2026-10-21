@@ -288,7 +288,7 @@
               <cl:verticaldata std:sid="v-data-15c632b2" width="926px" height="36px" autosize="height"/>
               <cl:group std:sid="group-ca849921" id="grp30">
                 <cl:formdata std:sid="f-data-5677a1b6" row="0" col="0"/>
-                <cl:button std:sid="button-f12b589d" id="btn3" class="btn-save" value="Post reply">
+                <cl:button std:sid="button-f12b589d" id="btn3" class="btn-primary" value="Post reply">
                   <cl:flowlayoutdata std:sid="f-data-ee167293" width="100px" height="36px" autosize="width"/>
                 </cl:button>
                 <cl:flowlayout std:sid="f-layout-278d2042" hspacing="8" vspacing="8" halign="right"/>

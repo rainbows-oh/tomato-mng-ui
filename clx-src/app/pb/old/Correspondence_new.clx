@@ -198,7 +198,7 @@
             <cl:button std:sid="button-0c4a93a7" id="btn2" class="btn-base" value="Cancel">
               <cl:flowlayoutdata std:sid="f-data-860ce9ba" width="100px" height="36px" autosize="width"/>
             </cl:button>
-            <cl:button std:sid="button-f12b589d" id="btn3" class="btn-save" value="Send">
+            <cl:button std:sid="button-f12b589d" id="btn3" class="btn-primary" value="Send">
               <cl:flowlayoutdata std:sid="f-data-ee167293" width="100px" height="36px" autosize="width"/>
             </cl:button>
             <cl:flowlayout std:sid="f-layout-278d2042" hspacing="8" vspacing="8" halign="right"/>

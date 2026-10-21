@@ -73,14 +73,14 @@
         <cl:gridcolumn std:sid="g-column-a56ec299"/>
         <cl:gridcolumn std:sid="g-column-8a4fef7f" width="200px"/>
         <cl:gridheader std:sid="gh-band-ec072a57">
-          <cl:gridrow std:sid="g-row-507abfe8" height="32px"/>
+          <cl:gridrow std:sid="g-row-507abfe8" height="37px"/>
           <cl:gridcell std:sid="gh-cell-065751d6" rowindex="0" colindex="0" sortable="false" filterable="false" columntype="checkbox"/>
           <cl:gridcell std:sid="gh-cell-1d3624dd" rowindex="0" colindex="1" sortable="false" filterable="false" text="No"/>
           <cl:gridcell std:sid="gh-cell-64bc76d7" rowindex="0" colindex="2" targetcolumnname="column1" sortable="false" filterable="false" text="Stock Symbol"/>
           <cl:gridcell std:sid="gh-cell-a255d053" rowindex="0" colindex="3" targetcolumnname="column2" sortable="false" filterable="false" text="Company Name"/>
         </cl:gridheader>
         <cl:griddetail std:sid="gd-band-5abf8c86">
-          <cl:gridrow std:sid="g-row-bda2c6eb" height="50px"/>
+          <cl:gridrow std:sid="g-row-bda2c6eb" height="54px"/>
           <cl:gridcell std:sid="gd-cell-0548cb51" rowindex="0" colindex="0" columntype="checkbox"/>
           <cl:gridcell std:sid="gd-cell-a0b531e5" rowindex="0" colindex="1" columntype="rowindex"/>
           <cl:gridcell std:sid="gd-cell-498fc416" rowindex="0" colindex="2" columnname="column1">

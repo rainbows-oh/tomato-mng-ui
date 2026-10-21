@@ -231,7 +231,7 @@
                   <cl:verticaldata std:sid="v-data-d71109cd" width="100px" height="18px" autosize="height"/>
                 </cl:output>
                 <cl:checkboxgroup std:sid="cb-group-b6950bae" id="cbg1" fieldLabel="Status">
-                  <cl:verticaldata std:sid="v-data-8e5cc669" width="200px" height="36px"/>
+                  <cl:verticaldata std:sid="v-data-8e5cc669" width="200px" height="36px" syncminheight="false" autosize="height"/>
                   <cl:item std:sid="item-bd0b0d35" label="Posted" value="value1"/>
                   <cl:item std:sid="item-77e8e0f8" label="Filed" value="value2"/>
                   <cl:item std:sid="item-eda175d4" label="Deleted" value="value3"/>
@@ -294,7 +294,7 @@
           <cl:gridcolumn std:sid="g-column-b1d4f103" width="200px"/>
           <cl:gridcolumn std:sid="g-column-b1d4f104" width="80px"/>
           <cl:gridheader std:sid="gh-band-46ac1d80">
-            <cl:gridrow std:sid="g-row-0657b73e" height="32px"/>
+            <cl:gridrow std:sid="g-row-0657b73e" height="37px"/>
             <cl:gridcell std:sid="gh-cell-0708f002" rowindex="0" colindex="0" targetcolumnname="no" sortable="false" filterable="false" text="No"/>
             <cl:gridcell std:sid="gh-cell-7b119313" rowindex="0" colindex="1" targetcolumnname="del" sortable="false" filterable="false" text=""/>
             <cl:gridcell std:sid="gh-cell-c2e5a101" rowindex="0" colindex="2" targetcolumnname="refNo" sortable="true" filterable="false" text="Ref. No"/>
@@ -306,7 +306,7 @@
             <cl:gridcell std:sid="gh-cell-c2e5a104" rowindex="0" colindex="8" targetcolumnname="remarks" sortable="false" filterable="false" text="Remarks"/>
           </cl:gridheader>
           <cl:griddetail std:sid="gd-band-511ea2b0">
-            <cl:gridrow std:sid="g-row-adf0964b" height="50px"/>
+            <cl:gridrow std:sid="g-row-adf0964b" height="54px"/>
             <cl:gridcell std:sid="gd-cell-4d15fee1" rowindex="0" colindex="0" columnname="no">
               <cl:output std:sid="output-4098aff0">
                 <cl:celldata std:sid="c-data-af6bd4c3"/>

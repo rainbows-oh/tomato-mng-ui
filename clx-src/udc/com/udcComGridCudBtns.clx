@@ -49,7 +49,7 @@
       <cl:apppropbind property="visible" category="PROPERTY" app-property="visibleDeleteButton"/>
       <cl:formdata std:sid="f-data-f63538f6" row="0" col="2"/>
     </cl:button>
-    <cl:button std:sid="button-7f318a32" id="btnSave" class="btn-save" icon="0">
+    <cl:button std:sid="button-7f318a32" id="btnSave" class="btn-primary" icon="0">
       <cl:listener std:sid="listener-ebb02e63" name="click" handler="onBtnSaveClick"/>
       <cl:apppropbind property="visible" category="PROPERTY" app-property="visibleSaveButton"/>
       <cl:apppropbind property="value" category="PROPERTY" app-property="buttonSaveLabel"/>

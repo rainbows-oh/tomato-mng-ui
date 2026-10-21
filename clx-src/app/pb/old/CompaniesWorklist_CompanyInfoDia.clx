@@ -513,7 +513,7 @@
           </cl:group>
           <cl:group std:sid="group-ca849921" id="grp30">
             <cl:formdata std:sid="f-data-5677a1b6" row="0" col="1"/>
-            <cl:button std:sid="button-f12b589d" id="btn3" class="btn-save" value="Apply">
+            <cl:button std:sid="button-f12b589d" id="btn3" class="btn-primary" value="Apply">
               <cl:flowlayoutdata std:sid="f-data-ee167293" width="100px" height="36px" autosize="width"/>
             </cl:button>
             <cl:flowlayout std:sid="f-layout-278d2042" hspacing="8" vspacing="8" halign="right"/>

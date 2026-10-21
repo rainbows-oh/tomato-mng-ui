@@ -216,7 +216,7 @@
           </cl:output>
           <cl:group std:sid="group-5c3d9eb9">
             <cl:formdata std:sid="f-data-15a35e88" row="0" col="1"/>
-            <cl:button std:sid="button-71702e7b" class="btn-excel" value="Excel Download" icon="0">
+            <cl:button std:sid="button-71702e7b" class="btn-file" value="Excel Download" icon="0">
               <cl:flowlayoutdata std:sid="f-data-fa75e88c" width="142px" height="32px" autosize="width"/>
             </cl:button>
             <cl:udc std:sid="ud-control-cc647d9a" id="udccomviewbutton1" type="udc.pse.com.udcComViewButton">

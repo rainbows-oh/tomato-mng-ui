@@ -45,7 +45,7 @@
         <cl:listener std:sid="listener-4be7d7c6" name="click" handler="onBtnToolsClick"/>
         <cl:flowlayoutdata std:sid="f-data-70a64448" width="26px" height="26px" autosize="width"/>
       </cl:button>
-      <cl:button std:sid="button-2288c8ca" id="btnExcelExport" class="btn-excel" fieldLabel="엑셀다운로드" tooltip="엑셀다운로드" icon="0">
+      <cl:button std:sid="button-2288c8ca" id="btnExcelExport" class="btn-file" fieldLabel="엑셀다운로드" tooltip="엑셀다운로드" icon="0">
         <cl:listener std:sid="listener-091c33bb" name="click" handler="onBtnExcelExportClick"/>
         <cl:apppropbind property="visible" category="PROPERTY" app-property="showExportExcel"/>
         <cl:flowlayoutdata std:sid="f-data-42906441" width="26px" height="26px" autosize="width"/>

@@ -116,11 +116,11 @@
         </cl:output>
         <cl:group std:sid="group-e7199619" id="grp7">
           <cl:verticaldata std:sid="v-data-b5ea0c94" width="926px" height="88px" autosize="height"/>
-          <cl:output std:sid="output-27251996" id="opt3" class="attachments" value="correspondence-3-notice.pdf " displayexp="text + sstr(userAttr(&quot;size&quot;) + &quot;KB&quot;, [&quot;size&quot;])">
+          <cl:output std:sid="output-27251996" id="opt3" class="opt-attachments" value="correspondence-3-notice.pdf " displayexp="text + sstr(userAttr(&quot;size&quot;) + &quot;KB&quot;, [&quot;size&quot;])">
             <cl:attribute name="size" value="604"/>
             <cl:verticaldata std:sid="v-data-5f3b87bc" width="100px" height="40px" autosize="height"/>
           </cl:output>
-          <cl:output std:sid="output-cd28e241" id="opt8" class="attachments" value="correspondence-1-notice.pdf " displayexp="text + sstr(userAttr(&quot;size&quot;) + &quot;KB&quot;, [&quot;size&quot;])">
+          <cl:output std:sid="output-cd28e241" id="opt8" class="opt-attachments" value="correspondence-1-notice.pdf " displayexp="text + sstr(userAttr(&quot;size&quot;) + &quot;KB&quot;, [&quot;size&quot;])">
             <cl:attribute name="size" value="325"/>
             <cl:verticaldata std:sid="v-data-373684c9" width="926px" height="40px" autosize="height"/>
           </cl:output>
