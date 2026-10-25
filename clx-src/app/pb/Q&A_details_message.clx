@@ -1,0 +1,151 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-5ff53ab4" version="1.0.6164">
+  <head std:sid="head-d5f9a669">
+    <screen std:sid="screen-163e5ed7" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-9e5e4d95" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d70f241f" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-e13a215b"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-7b9126eb">
+    <cl:group std:sid="group-cdcc6929" class="card">
+      <cl:verticaldata std:sid="v-data-830c71c2" width="1024px" height="520px" autosize="height"/>
+      <cl:group std:sid="group-fcd1ca3f" id="grp2">
+        <cl:verticaldata std:sid="v-data-98d6beb8" width="982px" height="330px" autosize="height"/>
+        <cl:output std:sid="output-e90f8b1e" id="opt4" class="font-subheading" value="Question">
+          <cl:verticaldata std:sid="v-data-06e566c6" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:group std:sid="group-73cf256d">
+          <cl:verticaldata std:sid="v-data-dda1494c" width="982px" height="300px" autosize="height"/>
+          <cl:group std:sid="group-qas000042" id="grp4" class="row">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:verticaldata std:sid="v-data-qas000043" width="982px" height="60px" autosize="height"/>
+            <cl:group std:sid="group-qas000044" id="grp5">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-qas000045" width="100" height="25" row="0" col="0"/>
+              <cl:output std:sid="output-qas000046" id="opt1" class="font-caption-strong" value="Company Name">
+                <cl:verticaldata std:sid="v-data-qas000047" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-67b1da8a" id="ipb14" fieldLabel="Company Name" readonly="true" value="Pacific Horizon Securities, Inc.">
+                <cl:verticaldata std:sid="v-data-e0805c10" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:verticallayout std:sid="v-layout-qas000062" spacing="6"/>
+            </cl:group>
+            <cl:group std:sid="group-9da19e8a" id="grp37">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-7f2e2172" row="0" col="1"/>
+              <cl:output std:sid="output-2ba5b9fe" id="opt33" class="font-caption-strong" value="Submitted By">
+                <cl:verticaldata std:sid="v-data-8da8f2ac" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-b29db30f" id="ipb15" fieldLabel="Submitted By" readonly="true" value="Maria Santos">
+                <cl:verticaldata std:sid="v-data-084db242" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:verticallayout std:sid="v-layout-b27eec6f" spacing="6"/>
+            </cl:group>
+            <cl:group std:sid="group-beb119a8" id="grp38">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-e4881754" width="100" height="27" row="0" col="2"/>
+              <cl:output std:sid="output-ce468bb7" id="opt34" class="font-caption-strong" value="Submission Date and Time">
+                <cl:verticaldata std:sid="v-data-5b190db2" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:dateinput std:sid="d-input-9dcbde07" id="dti2" fieldLabel="Submission Date and Time" readonly="true" value="20260825221429" mask="MM-DD-YYYY hh:mm:ss A" format="YYYYMMDDhhmmss">
+                <cl:verticaldata std:sid="v-data-4bb399d3" width="176px" height="36px" autosize="none"/>
+              </cl:dateinput>
+              <cl:verticallayout std:sid="v-layout-b1febd33" spacing="6"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-qas000073" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-b7e8dc66" id="grp43">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:verticaldata std:sid="v-data-fa111f89" width="1024px" height="224px" autosize="height"/>
+            <cl:output std:sid="output-b038b3cd" id="opt38" class="font-caption-strong" value="Question">
+              <cl:verticaldata std:sid="v-data-fa068dbb" width="100px" height="18px" autosize="height"/>
+            </cl:output>
+            <cl:textarea std:sid="t-area-16b3e25b" id="txa1" fieldLabel="Question" readonly="true" value="Dear Angela Cruz,&#xD;&#xA;&#xD;&#xA;This correspondence (Regulatory Action) concerns the following matter:&#xD;&#xA;Additional information is required for the submitted report.&#xD;&#xA;Please observe the stated deadline of 2026-08-24 where applicable.&#xD;&#xA;&#xD;&#xA;Regards,&#xD;&#xA;PSE System Admin&#xD;&#xA;Market Surveillance">
+              <cl:verticaldata std:sid="v-data-6862a708" width="100px" height="200px"/>
+            </cl:textarea>
+            <cl:verticallayout std:sid="v-layout-7ca03849" spacing="6"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-8f4d3e27" spacing="16"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-db5b5fab" spacing="10"/>
+      </cl:group>
+      <cl:group std:sid="group-e246079d" id="grp42">
+        <cl:verticaldata std:sid="v-data-ec99108d" width="1024px" height="132px" autosize="height"/>
+        <cl:output std:sid="output-10497385" id="opt37" class="font-subheading" value="Attached File">
+          <cl:verticaldata std:sid="v-data-73ff0978" width="100px" height="18px" autosize="height"/>
+        </cl:output>
+        <cl:group std:sid="group-14e2841d" id="grp10">
+          <cl:verticaldata std:sid="v-data-5997ae4f" width="1024px" height="104px" autosize="height"/>
+          <cl:output std:sid="output-5bd10536" id="opt10" value="No attachments.">
+            <cl:verticaldata std:sid="v-data-084cfa10" width="1024px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-c7fde805" class="attachments">
+            <cl:verticaldata std:sid="v-data-7734d7c1" width="1024px" height="36px" autosize="height"/>
+            <cl:output std:sid="output-582c1dcd" id="opt11" value="correspondence-3-notice.pdf " displayexp="text + sstr(&quot; · &quot;, [&quot;size&quot;]) + sstr(userAttr(&quot;size&quot;) + &quot;KB&quot;, [&quot;size&quot;])">
+              <cl:attribute name="size" value="604"/>
+              <cl:formdata std:sid="f-data-97c46534" row="0" col="0"/>
+            </cl:output>
+            <cl:formlayout std:sid="f-layout-73ab4876" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-8201e2bd" class="attachments">
+            <cl:verticaldata std:sid="v-data-dae44550" width="1024px" height="36px" autosize="height"/>
+            <cl:output std:sid="output-40985607" id="opt12" value="correspondence-1-notice.pdf " displayexp="text + sstr(&quot; · &quot;, [&quot;size&quot;]) + sstr(userAttr(&quot;size&quot;) + &quot;KB&quot;, [&quot;size&quot;])">
+              <cl:attribute name="size" value="325"/>
+              <cl:formdata std:sid="f-data-954164c7" row="0" col="0"/>
+            </cl:output>
+            <cl:formlayout std:sid="f-layout-965eda32" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-309d6b79" spacing="6"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-2f45e678" spacing="10"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-79cb9e86" spacing="16"/>
+    </cl:group>
+    <cl:group std:sid="group-428809dc" id="grp8" class="card">
+      <cl:verticaldata std:sid="v-data-f1a7dced" width="1024px" height="302px" autosize="height"/>
+      <cl:output std:sid="output-9b124849" id="opt6" class="font-subheading" value="Answer">
+        <cl:verticaldata std:sid="v-data-039a7e70" width="100px" height="20px" autosize="height"/>
+      </cl:output>
+      <cl:group std:sid="group-a26b7f62" id="grp1">
+        <cl:verticaldata std:sid="v-data-0ab8ab67" width="982px" height="184px" autosize="height"/>
+        <cl:group std:sid="group-a32a4b87" id="grp27">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-67844da1" width="982px" height="184px" autosize="height"/>
+          <cl:output std:sid="output-9c866157" id="opt24" class="font-caption-strong" value="Please provide your response below.">
+            <cl:verticaldata std:sid="v-data-59d3822c" width="100px" height="18px" autosize="height"/>
+          </cl:output>
+          <cl:textarea std:sid="t-area-d21a9a39" id="txa2" class="resizable">
+            <cl:verticaldata std:sid="v-data-793db2d6" width="100px" height="160px" autosize="height"/>
+          </cl:textarea>
+          <cl:verticallayout std:sid="v-layout-1116e2fa" spacing="6"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-986e86cb" spacing="16"/>
+      </cl:group>
+      <cl:group std:sid="group-a8148e57" id="grp3">
+        <cl:verticaldata std:sid="v-data-5c5c635c" width="467px" height="36px" autosize="none"/>
+        <cl:button std:sid="button-71b62df9" id="btn5" class="btn-primary" value="Submit Answer">
+          <cl:flowlayoutdata std:sid="f-data-08b614da" width="142px" height="36px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-3664a061" halign="right"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-fb710734" spacing="10"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-fcf7309f" spacing="16"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

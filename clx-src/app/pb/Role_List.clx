@@ -1,0 +1,389 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-4ed2673e" version="1.0.6164">
+  <head std:sid="head-bf3a4002">
+    <screen std:sid="screen-e5743b4c" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="true" customHeight="1471" customWidth="800"/>
+    <screen std:sid="screen-8d7ec661" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-3bf9db7d" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-808659c6">
+      <cl:dataset std:sid="d-set-f5bf3ac3" id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="Username" std:sid="d-column-41b919ec" name="column1"/>
+          <cl:datacolumn comment="Department/Company" std:sid="d-column-5a34c1aa" name="column2"/>
+          <cl:datacolumn std:sid="d-column-78924dc9" name="column3"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="column1"><![CDATA[a.torres]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[Disclosure Department]]></cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[del]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1"><![CDATA[h.reyes]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[Disclosure Department]]></cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[del]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1"><![CDATA[n.fernandez]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[PSE]]></cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[del]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-4991dc45">
+    <cl:listener std:sid="listener-81c43a8b" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:group std:sid="group-e6d3a8f4" id="grpHeader" class="page-title-wrap">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:formdata std:sid="f-data-a664fcd5" row="0" col="0"/>
+      <cl:udc std:sid="ud-control-e529ea22" id="udccomappheader1" type="udc.pse.com.udcComAppHeader">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-dc2be6ec" row="0" col="0"/>
+        <cl:property name="title" value="Roles" type="string"/>
+      </cl:udc>
+      <cl:button std:sid="button-fd2c6076" id="btn3" class="btn-primary btn-add" value="Add Role" icon="0">
+        <cl:formdata std:sid="f-data-fefc0270" row="0" col="1"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-e3d9b3e3" scrollable="false" hspace="8px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="36" unit="PIXEL" autoSizing="false" syncminlength="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="200" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-ac6a9860" id="grpBody" class="inner">
+      <cl:formdata std:sid="f-data-f8b64b05" width="100" height="728" row="1" col="0"/>
+      <cl:group std:sid="group-6a84c5cc" id="grpContent" class="section">
+        <cl:attribute name="hide-on-mobile" value=""/>
+        <cl:attribute name="mobile-column-count" value="1"/>
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:attribute name="mobile-vertical-margin" value="16"/>
+        <cl:attribute name="mobile-horizontal-margin" value="16"/>
+        <cl:attribute name="mobile-v-spacing" value="16"/>
+        <cl:formdata std:sid="f-data-9c02725a" width="100" height="728" row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:group std:sid="group-dd828308">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-72d6612a" row="0" col="0" rowspan="1" colspan="1"/>
+          <cl:group std:sid="group-150f7a35" class="card">
+            <cl:attribute name="mobile-spacing" value="12"/>
+            <cl:attribute name="needs-auto-height" value=""/>
+            <cl:verticaldata std:sid="v-data-e3c8c66d" width="340px" height="593px" autosize="height"/>
+            <cl:output std:sid="output-6665db3c" class="font-subheading" value="Roles">
+              <cl:verticaldata std:sid="v-data-c65501a5" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:radiobutton std:sid="r-button-f09496e4" class="rdb-select" fieldLabel="Roles" colcount="1" hspacing="20" displayexp="label == &quot;CGO Approver&quot;&#xD;&#xA;&#x9;? label + sstr(&quot;\nROLE-CGO-APPROVER&quot;, [&quot;caption&quot;])&#xD;&#xA;&#x9;: label == &quot;MDBD CAF&quot;&#xD;&#xA;&#x9;&#x9;? label + sstr(&quot;\nROLE-MDBD-CAF&quot;, [&quot;caption&quot;])&#xD;&#xA;&#x9;&#x9;: label == &quot;SD Specialist&quot;&#xD;&#xA;&#x9;&#x9;&#x9;? label + sstr(&quot;\nROLE-SD-SPECIALIST&quot;, [&quot;caption&quot;])&#xD;&#xA;&#x9;&#x9;&#x9;: label == &quot;DD Supervisor&quot;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;? label + sstr(&quot;\nROLE-DD-SUPERVISOR&quot;, [&quot;caption&quot;])&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;: label == &quot;LD Maker&quot;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;? label + sstr(&quot;\nROLE-LD-MAKER&quot;, [&quot;caption&quot;])&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;: label == &quot;MCD Viewer&quot;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;? label + sstr(&quot;\nROLE-MCD-VIEWER&quot;, [&quot;caption&quot;])&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;: label == &quot;RA Admin&quot;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;? label + sstr(&quot;\nROLE-RA-ADMIN&quot;, [&quot;caption&quot;])&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;: label == &quot;SEC Analyst&quot;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;? label + sstr(&quot;\nROLE-SEC-ANALYST&quot;, [&quot;caption&quot;])&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;: label&#xD;&#xA;" hideicon="true" clickRegion="item">
+              <cl:verticaldata std:sid="v-data-4d5db2e4" width="300px" height="515px" autosize="height"/>
+              <cl:item std:sid="item-47bb7f5c" label="CGO Approver" value="value1"/>
+              <cl:item std:sid="item-a43eaa9f" label="MDBD CAF" value="value2"/>
+              <cl:item std:sid="item-a81ee529" label="SD Specialist" value="value3"/>
+              <cl:item std:sid="item-6c929521" label="DD Supervisor" value="value4"/>
+              <cl:item std:sid="item-f9243472" label="LD Maker" value="value5"/>
+              <cl:item std:sid="item-b3d86d74" label="MCD Viewer" value="value6"/>
+              <cl:item std:sid="item-a5c4f7e8" label="RA Admin" value="value7"/>
+              <cl:item std:sid="item-a78c7a3d" label="SEC Analyst" value="value8"/>
+            </cl:radiobutton>
+            <cl:verticallayout std:sid="v-layout-06043f37" spacing="14"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-a6de74f3"/>
+        </cl:group>
+        <cl:group std:sid="group-4c843a7b" class="card">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-6084a27c" width="100" height="728" row="0" col="1"/>
+          <cl:group std:sid="group-edd4fee1">
+            <cl:formdata std:sid="f-data-17d7543c" width="100" height="720" row="0" col="0"/>
+            <cl:group std:sid="group-4ee08fa9">
+              <cl:verticaldata std:sid="v-data-a6c824e2" width="752px" height="20px" autosize="height"/>
+              <cl:output std:sid="output-3d267378" value="ROLE-CGO-APPROVER" displayexp="sstr(&quot;Role ID &quot;, [&quot;font-caption&quot;]) + text">
+                <cl:flowlayoutdata std:sid="f-data-c6878139" width="201px" height="20px" autosize="both"/>
+              </cl:output>
+              <cl:output std:sid="output-b946bfde" value="CGO Approver" displayexp="sstr(&quot;Role Name &quot;, [&quot;font-caption&quot;]) + text">
+                <cl:flowlayoutdata std:sid="f-data-e3e6c376" width="170px" height="20px" autosize="both"/>
+              </cl:output>
+              <cl:flowlayout std:sid="f-layout-817fe990" hspacing="24" valign="top"/>
+            </cl:group>
+            <cl:group std:sid="group-c0333d8b">
+              <cl:verticaldata std:sid="v-data-2dcd6da2" width="566px" height="184px" autosize="height"/>
+              <cl:output std:sid="output-fec9e4e8" class="font-label" value="Description">
+                <cl:verticaldata std:sid="v-data-56f71b55" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:textarea std:sid="t-area-e6af6579" class="resizable" fieldLabel="Description">
+                <cl:verticaldata std:sid="v-data-fa559e0b" width="100px" height="160px" autosize="height"/>
+              </cl:textarea>
+              <cl:verticallayout std:sid="v-layout-e2a5bfeb" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-b3713d64">
+              <cl:verticaldata std:sid="v-data-1999fa51" width="574px" height="60px" autosize="height"/>
+              <cl:output std:sid="output-71218201" class="font-label" value="Processed By">
+                <cl:verticaldata std:sid="v-data-700a21ac" width="852px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:group std:sid="group-20ca8816">
+                <cl:attribute name="mobile-column-count" value="1"/>
+                <cl:verticaldata std:sid="v-data-8117dc95" width="752px" height="36px"/>
+                <cl:combobox std:sid="c-box-cc5d37bc" fieldLabel="Processed By">
+                  <cl:formdata std:sid="f-data-b40bdaf9" row="0" col="0"/>
+                </cl:combobox>
+                <cl:formlayout std:sid="f-layout-8dc27891" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                  <cl:rows length="1" unit="FRACTION"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                </cl:formlayout>
+              </cl:group>
+              <cl:verticallayout std:sid="v-layout-198651b4" spacing="4"/>
+            </cl:group>
+            <cl:tabfolder std:sid="t-folder-5dc568be" id="fld1" class="line" childcombinatorclass="tablist" item-sizing="fill">
+              <cl:verticaldata std:sid="v-data-9df5440f" width="574px" height="933px" autosize="height"/>
+              <cl:tabitem std:sid="t-item-c8868178" selected="true" text="Premissions">
+                <std:metadata>
+                  <std:property key="is-active-item" value="true"/>
+                </std:metadata>
+                <cl:group std:sid="group-bb2a711c">
+                  <std:metadata>
+                    <std:property key="locked" value="true"/>
+                  </std:metadata>
+                  <cl:group std:sid="group-72096b11" class="separate">
+                    <cl:verticaldata std:sid="v-data-21f5e4a7" width="574px" height="87px" autosize="height"/>
+                    <cl:output std:sid="output-73739c67" class="font-title" value="Action">
+                      <cl:verticaldata std:sid="v-data-0f86315d" width="100px" height="20px" autosize="height"/>
+                    </cl:output>
+                    <cl:checkboxgroup std:sid="cb-group-d861122f" fieldLabel="Action" colcount="-1" hspacing="16" vspacing="10">
+                      <cl:verticaldata std:sid="v-data-40ba62f5" width="200px" height="40px" autosize="height"/>
+                      <cl:item std:sid="item-dd32d469" label="Under Review" value="underReview"/>
+                      <cl:item std:sid="item-85125f18" label="Forward" value="forward"/>
+                      <cl:item std:sid="item-ac69985d" label="For Approval" value="forApproval"/>
+                      <cl:item std:sid="item-8b89af04" label="Reject" value="reject"/>
+                      <cl:item std:sid="item-25072834" label="Cancel" value="cancel"/>
+                      <cl:item std:sid="item-063040b0" label="For Filing" value="forFiling"/>
+                      <cl:item std:sid="item-f31b0127" label="Approve" value="approve"/>
+                    </cl:checkboxgroup>
+                    <cl:verticallayout std:sid="v-layout-03861723" spacing="10"/>
+                  </cl:group>
+                  <cl:group std:sid="group-f7447fbd">
+                    <cl:verticaldata std:sid="v-data-6ff2ab60" width="574px" height="766px" autosize="height"/>
+                    <cl:output std:sid="output-df360d0c" class="font-title" value="Menu">
+                      <cl:verticaldata std:sid="v-data-e5c05b33" width="752px" height="20px" autosize="height"/>
+                    </cl:output>
+                    <cl:group std:sid="group-bb27ff19" class="separate">
+                      <cl:verticaldata std:sid="v-data-8c89ddb0" width="574px" height="81px" autosize="height"/>
+                      <cl:output std:sid="output-c44b2ab7" class="font-label" value="Disclosures">
+                        <cl:verticaldata std:sid="v-data-89817927" width="852px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:checkboxgroup std:sid="cb-group-b9667a2f" fieldLabel="Disclosures" colcount="-1" hspacing="16" vspacing="10">
+                        <cl:verticaldata std:sid="v-data-c3e1223b" width="852px" height="40px" autosize="height"/>
+                        <cl:item std:sid="item-5be8dcaa" label="Worklist" value="worklist"/>
+                        <cl:item std:sid="item-3f9b4d20" label="Manual Disclosure" value="manualDisclosure"/>
+                        <cl:item std:sid="item-70703980" label="Report Search" value="reportSearch"/>
+                        <cl:item std:sid="item-1dcac97d" label="Template" value="template"/>
+                        <cl:item std:sid="item-25f715f8" label="Structured Deadlines" value="structuredDeadlines"/>
+                        <cl:item std:sid="item-8518542b" label="Analytics" value="analytics"/>
+                      </cl:checkboxgroup>
+                      <cl:verticallayout std:sid="v-layout-bdee0b12" spacing="4"/>
+                    </cl:group>
+                    <cl:group std:sid="group-88a59e2a" class="separate">
+                      <cl:verticaldata std:sid="v-data-beee30a6" width="566px" height="81px" autosize="height"/>
+                      <cl:output std:sid="output-f0fd92d8" class="font-label" value="Companies">
+                        <cl:verticaldata std:sid="v-data-d3c5c68c" width="852px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:checkboxgroup std:sid="cb-group-9126784f" fieldLabel="Companies" colcount="-1" hspacing="16" vspacing="10">
+                        <cl:verticaldata std:sid="v-data-0d9e77cb" width="852px" height="40px" autosize="height"/>
+                        <cl:item std:sid="item-97c80c2a" label="Information Update" value="informationUpdate"/>
+                        <cl:item std:sid="item-4e3ffb01" label="Company Search" value="companySearch"/>
+                        <cl:item std:sid="item-777166dc" label="Foreign Ownership Monitoring" value="foreignOwnershipMonitoring"/>
+                        <cl:item std:sid="item-d5f7cf65" label="Public Ownership Monitoring" value="publicOwnershipMonitoring"/>
+                      </cl:checkboxgroup>
+                      <cl:verticallayout std:sid="v-layout-8bebaa0d" spacing="4"/>
+                    </cl:group>
+                    <cl:group std:sid="group-80fdca11" class="separate">
+                      <cl:verticaldata std:sid="v-data-fe9b7e03" width="566px" height="73px" autosize="height"/>
+                      <cl:output std:sid="output-620bb42d" class="font-label" value="Calendars">
+                        <cl:verticaldata std:sid="v-data-7dd6891f" width="852px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:checkboxgroup std:sid="cb-group-b0701225" fieldLabel="Calendars" colcount="-1" hspacing="16" vspacing="10">
+                        <cl:verticaldata std:sid="v-data-6db25f3d" width="852px" height="32px" autosize="height"/>
+                        <cl:item std:sid="item-702ebbd3" label="Internal Calendar" value="internalCalendar"/>
+                        <cl:item std:sid="item-4e626d9b" label="Non-Trading Days" value="nonTradingDays"/>
+                      </cl:checkboxgroup>
+                      <cl:verticallayout std:sid="v-layout-d8b53bbd" spacing="4"/>
+                    </cl:group>
+                    <cl:group std:sid="group-165ee310" class="separate">
+                      <cl:verticaldata std:sid="v-data-469884ff" width="566px" height="73px" autosize="height"/>
+                      <cl:output std:sid="output-8c2c1a13" class="font-label" value="Communications">
+                        <cl:verticaldata std:sid="v-data-92ed72a6" width="852px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:checkboxgroup std:sid="cb-group-8ce58895" fieldLabel="Communications" colcount="-1" hspacing="16" vspacing="10">
+                        <cl:verticaldata std:sid="v-data-ec6bfbb0" width="852px" height="32px" autosize="height"/>
+                        <cl:item std:sid="item-15144d4c" label="Correspondence" value="correspondence"/>
+                        <cl:item std:sid="item-c3ae087b" label="Q&amp;A" value="qna"/>
+                      </cl:checkboxgroup>
+                      <cl:verticallayout std:sid="v-layout-8d8f148d" spacing="4"/>
+                    </cl:group>
+                    <cl:group std:sid="group-396eebc3" class="separate">
+                      <cl:verticaldata std:sid="v-data-53a6fd60" width="566px" height="73px" autosize="height"/>
+                      <cl:output std:sid="output-52e1db21" class="font-label" value="Users">
+                        <cl:verticaldata std:sid="v-data-eb7e9f0d" width="852px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:checkboxgroup std:sid="cb-group-9f1692bb" fieldLabel="Users" colcount="-1" hspacing="16" vspacing="10">
+                        <cl:verticaldata std:sid="v-data-6eed82dd" width="852px" height="32px" autosize="height"/>
+                        <cl:item std:sid="item-42a1dd50" label="Submission Account" value="submissionAccount"/>
+                        <cl:item std:sid="item-5b628803" label="Management Account" value="managementAccount"/>
+                        <cl:item std:sid="item-ce641e16" label="Roles" value="roles"/>
+                      </cl:checkboxgroup>
+                      <cl:verticallayout std:sid="v-layout-783365a7" spacing="4"/>
+                    </cl:group>
+                    <cl:group std:sid="group-1badfed5" class="separate">
+                      <cl:verticaldata std:sid="v-data-41b5157a" width="566px" height="73px" autosize="height"/>
+                      <cl:output std:sid="output-8d0ba8b1" class="font-label" value="Audit Trail">
+                        <cl:verticaldata std:sid="v-data-ebc2c79c" width="852px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:checkboxgroup std:sid="cb-group-f948e30e" fieldLabel="Audit Trail" colcount="-1" hspacing="16" vspacing="10">
+                        <cl:verticaldata std:sid="v-data-075b4568" width="852px" height="32px" autosize="height"/>
+                        <cl:item std:sid="item-44f29eac" label="Disclosures" value="disclosures"/>
+                        <cl:item std:sid="item-c6a9785c" label="User Log" value="userLog"/>
+                        <cl:item std:sid="item-245cf46c" label="Sessions" value="sessions"/>
+                      </cl:checkboxgroup>
+                      <cl:verticallayout std:sid="v-layout-fff4e7b3" spacing="4"/>
+                    </cl:group>
+                    <cl:group std:sid="group-d0b16397" class="separate">
+                      <cl:verticaldata std:sid="v-data-dcb259f2" width="566px" height="73px" autosize="height"/>
+                      <cl:output std:sid="output-efd5d29f" class="font-label" value="Distribution">
+                        <cl:verticaldata std:sid="v-data-6cd4f56c" width="852px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:checkboxgroup std:sid="cb-group-52615ac1" fieldLabel="Distribution" colcount="-1" hspacing="16" vspacing="10">
+                        <cl:verticaldata std:sid="v-data-36826879" width="852px" height="32px" autosize="height"/>
+                        <cl:item std:sid="item-acd82d2b" label="CAF Subscriber" value="cafSubscriber"/>
+                        <cl:item std:sid="item-156f2b39" label="Data Feeds Subscriber" value="dataFeedsSubscriber"/>
+                        <cl:item std:sid="item-8f6cfabf" label="News Feed" value="newsFeed"/>
+                      </cl:checkboxgroup>
+                      <cl:verticallayout std:sid="v-layout-7d178f8a" spacing="4"/>
+                    </cl:group>
+                    <cl:group std:sid="group-dba5d1da" class="separate">
+                      <cl:verticaldata std:sid="v-data-3f356856" width="566px" height="73px" autosize="height"/>
+                      <cl:output std:sid="output-39e24350" class="font-label" value="Settings">
+                        <cl:verticaldata std:sid="v-data-d4d46717" width="852px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:checkboxgroup std:sid="cb-group-9aa28f6c" fieldLabel="Settings" colcount="-1" hspacing="16" vspacing="10">
+                        <cl:verticaldata std:sid="v-data-d839248b" width="852px" height="32px" autosize="height"/>
+                        <cl:item std:sid="item-2cd8d565" label="Common Codes" value="commonCodes"/>
+                        <cl:item std:sid="item-e24dcc34" label="Batch" value="batch"/>
+                      </cl:checkboxgroup>
+                      <cl:verticallayout std:sid="v-layout-2d8f921d" spacing="4"/>
+                    </cl:group>
+                    <cl:group std:sid="group-5d870701">
+                      <cl:verticaldata std:sid="v-data-e3eb4146" width="566px" height="56px" autosize="height"/>
+                      <cl:output std:sid="output-1425b7f6" class="font-label" value="Site Management">
+                        <cl:verticaldata std:sid="v-data-6c529dae" width="852px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:checkboxgroup std:sid="cb-group-c41b86eb" fieldLabel="Site Management" colcount="-1" hspacing="16" vspacing="10">
+                        <cl:verticaldata std:sid="v-data-e5839d83" width="852px" height="32px" autosize="height"/>
+                        <cl:item std:sid="item-6f81b435" label="Main Banners" value="mainBanners"/>
+                        <cl:item std:sid="item-51087bb0" label="News Ticker" value="newsTicker"/>
+                        <cl:item std:sid="item-59cbf5c4" label="Market Highlight" value="marketHighlight"/>
+                      </cl:checkboxgroup>
+                      <cl:verticallayout std:sid="v-layout-608ec84c" spacing="4"/>
+                    </cl:group>
+                    <cl:verticallayout std:sid="v-layout-d309d6f0" spacing="10"/>
+                  </cl:group>
+                  <cl:verticallayout std:sid="v-layout-17da616c" spacing="20" leftmargin="0" rightmargin="0" topmargin="20" bottommargin="0"/>
+                </cl:group>
+              </cl:tabitem>
+              <cl:tabitem std:sid="t-item-22ade52a" selected="true" text="User">
+                <cl:group std:sid="group-36e9e9f9">
+                  <std:metadata>
+                    <std:property key="locked" value="true"/>
+                  </std:metadata>
+                  <cl:group std:sid="group-38bbbcc5">
+                    <cl:verticaldata std:sid="v-data-ca5c12e0" width="752px" height="44px" autosize="height"/>
+                    <cl:output std:sid="output-dbc04545" class="font-label" value="User Assignment">
+                      <cl:verticaldata std:sid="v-data-a431bbe9" width="100px" height="20px" autosize="height"/>
+                    </cl:output>
+                    <cl:output std:sid="output-95bcbdae" class="font-caption" value="Mark a user for removal and choose Update to revoke this role.">
+                      <cl:verticaldata std:sid="v-data-b66e50a5" width="852px" height="20px" autosize="height"/>
+                    </cl:output>
+                    <cl:verticallayout std:sid="v-layout-bd8a6be2" spacing="4"/>
+                  </cl:group>
+                  <cl:grid std:sid="grid-e399ba7d" datasetid="ds1" autofit="0, 1">
+                    <cl:verticaldata std:sid="v-data-f1b6cc52" width="400px" height="200px" autosize="height"/>
+                    <cl:gridcolumn std:sid="g-column-581f5601"/>
+                    <cl:gridcolumn std:sid="g-column-b12d9678" width="200px"/>
+                    <cl:gridcolumn std:sid="g-column-ebaa1a65" width="60px"/>
+                    <cl:gridheader std:sid="gh-band-2a673f1f">
+                      <cl:gridrow std:sid="g-row-b4b766dc" height="32px"/>
+                      <cl:gridcell std:sid="gh-cell-58adc07e" rowindex="0" colindex="0" targetcolumnname="column1" sortable="false" filterable="false" text="Username"/>
+                      <cl:gridcell std:sid="gh-cell-2e15ebff" rowindex="0" colindex="1" targetcolumnname="column2" sortable="false" filterable="false" text="Department/Company"/>
+                      <cl:gridcell std:sid="gh-cell-bfbfd2d1" rowindex="0" colindex="2" targetcolumnname="column3" sortable="false" filterable="false" text=""/>
+                    </cl:gridheader>
+                    <cl:griddetail std:sid="gd-band-7cc8129a">
+                      <cl:gridrow std:sid="g-row-ad408e65" height="50px"/>
+                      <cl:gridcell std:sid="gd-cell-d0823c56" rowindex="0" colindex="0" columnname="column1">
+                        <cl:output std:sid="output-4f8aa66f" id="opt20">
+                          <cl:celldata std:sid="c-data-2a0b963b"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-d2d5fe5e" rowindex="0" colindex="1" columnname="column2">
+                        <cl:output std:sid="output-d44bc8de" id="opt21">
+                          <cl:celldata std:sid="c-data-7d7d97ca"/>
+                        </cl:output>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-ae739d22" rowindex="0" colindex="2" columnname="column3">
+                        <cl:button std:sid="button-f67788a9" id="btn1" class="icon btn-delete" value="Button" icon="0">
+                          <cl:celldata std:sid="c-data-dc88a011" halign="CENTER" valign="CENTER" width="28" height="28" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="3.0" rightSpacing="3.0"/>
+                        </cl:button>
+                      </cl:gridcell>
+                    </cl:griddetail>
+                  </cl:grid>
+                  <cl:verticallayout std:sid="v-layout-4c1ac983" leftmargin="0" rightmargin="0" topmargin="20" bottommargin="0"/>
+                </cl:group>
+              </cl:tabitem>
+            </cl:tabfolder>
+            <cl:verticallayout std:sid="v-layout-6ab8e716" spacing="20"/>
+          </cl:group>
+          <cl:group std:sid="group-f8571738" class="btn-footer-wrap">
+            <cl:formdata std:sid="f-data-4e0eeab7" width="100" height="33" row="1" col="0" rowspan="1" colspan="1"/>
+            <cl:group std:sid="group-48fb1001">
+              <cl:formdata std:sid="f-data-a6e4f018" row="0" col="0"/>
+              <cl:button std:sid="button-b662b9b5" class="btn-danger" value="Delete">
+                <cl:flowlayoutdata std:sid="f-data-81be75d6" width="100px" height="36px" autosize="width"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-8ff53493" scrollable="false" hspacing="8" vspacing="8" halign="left" valign="middle"/>
+            </cl:group>
+            <cl:group std:sid="group-debbdc58">
+              <cl:formdata std:sid="f-data-4981bfec" row="0" col="1"/>
+              <cl:button std:sid="button-e0d20fc5" class="btn-primary" value="Update">
+                <cl:flowlayoutdata std:sid="f-data-6ec51ff2" width="100px" height="36px" autosize="width"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-cb8b5294" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-54304a52" scrollable="false" hspace="8px" vspace="8px">
+              <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-02ba9794" scrollable="false" hspace="0px" vspace="20px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:rows length="56" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-aa28214b" scrollable="false" hspace="20px" vspace="16px" top-margin="24px" right-margin="24px" bottom-margin="24px" left-margin="24px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="false" shadetype="NONE" shadecolor="transparent" syncminlength="true"/>
+          <cl:columns length="3" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-cc6e441c" scrollable="false" hspace="0px" vspace="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-fac99f38" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="48" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

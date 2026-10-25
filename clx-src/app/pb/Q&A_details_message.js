@@ -1,8 +1,8 @@
 /*******************************************************************************
  * Business Category :
- * Screen ID : udcComUserCard.js
+ * Screen ID : Q&A_details_message.js
  * Screen Name : 
- * Created Date :  2026. 9. 18. 오전 10:13:57
+ * Created Date :  2026. 9. 30. 오전 10:59:03
  * Creator : chwec
  * Revision History
  *******************************************************************************
@@ -14,42 +14,34 @@
 /*******************************************************************************
  * Common Module Area
  *******************************************************************************/
-var util = createCommonUtil();
- 
+ var util = createCommonUtil();
+
 /*******************************************************************************
  * Business Common Module Area
  *******************************************************************************/
-exports.getText = getText;
- 
- 
+
+
 /*******************************************************************************
  * Local Variable Declarations within File
  *******************************************************************************/
 
- 
+
 /*******************************************************************************
  * Onload and Submission Call Area
  * (Contains related events and submission calls, along with callback functions invoked upon screen loading.)
  *******************************************************************************/
- 
- 
+
+
 /*******************************************************************************
  * Validation Check Area
  *******************************************************************************/
-
  
+
 /*******************************************************************************
  * User-Defined JavaScript Functions
  *******************************************************************************/
-/**
- * Returns the text to be displayed for the UDC control in the grid's view mode.
- */
-function getText() {
-	// TODO: Write code to return the text to be displayed in the grid's view mode.
-	return "";
-};
- 
- 
+
+
 /*******************************************************************************
  * Automatically Generated Event JavaScript Functions
  * (Event functions are automatically displayed below when events are created.)
