@@ -134,5 +134,24 @@ function onCmb6Open(e) {
 function onButtonClick(e) {
 	var button = e.control;
 	
-	util.Dialog.open(app, "app/pb/SelectCompany", 896, 527, null);
+	util.Dialog.open(app, "app/pb/management/NewManualDisclosure_modal", 600, 527, function(){
+		
+	}, {
+		
+	}, {
+		resizable: true
+	});
+}
+
+/*
+ * 콤보 박스에서 item-click 이벤트 발생 시 호출.
+ * 아이템 클릭시 발생하는 이벤트.
+ */
+function onCmb7ItemClick(e) {
+	var cmb7 = e.control;
+	
+	setTimeout(function(){
+		
+	}, 200);
+	debugger;
 }

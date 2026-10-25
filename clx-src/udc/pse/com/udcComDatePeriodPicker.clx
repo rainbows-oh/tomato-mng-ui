@@ -1,0 +1,98 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-04b62331" version="1.0.6190">
+  <head std:sid="head-b4016a87">
+    <screen std:sid="screen-c1933784" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-90c7d584" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-5ef29f3b" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-d292fd2c"/>
+    <cl:appspec title="시작/종료일 선택">
+      <cl:property name="dateFormat" type="enumeration" default="YYYYMMDD" std:desc="[String] 날짜 포맷 (default: YYYYMMDD)">
+        <cl:available-value>YYYYMMDD</cl:available-value>
+        <cl:available-value>YYYYMM</cl:available-value>
+      </cl:property>
+      <cl:property name="startDate" type="string" bindable="true" std:desc="[String] 시작일자(YYYYMMDD 또는 YYYYMM)"/>
+      <cl:property name="endDate" type="string" bindable="true" std:desc="[String] 종료일자(YYYYMMDD 또는 YYYYMM)"/>
+      <cl:property name="required" type="enumeration" std:desc="[String] 필수값 체크 여부">
+        <cl:available-value>Y</cl:available-value>
+      </cl:property>
+      <cl:property name="startDateReadOnly" type="boolean" default="false" std:desc="[Boolean] 시작일자 ReadOnly (default: false)"/>
+      <cl:property name="endDateReadOnly" type="boolean" default="false" std:desc="[Boolean] 종료일자 ReadOnly (default: false)"/>
+      <cl:property name="defaultPickerType" type="enumeration" std:desc="[String] 기본 날짜 선택 유형 ">
+        <cl:available-value></cl:available-value>
+        <cl:available-value>today</cl:available-value>
+        <cl:available-value>1 week</cl:available-value>
+        <cl:available-value>1 month</cl:available-value>
+        <cl:available-value>6 months</cl:available-value>
+        <cl:available-value>1 year</cl:available-value>
+        <cl:available-value>2 years</cl:available-value>
+        <cl:available-value>3 years</cl:available-value>
+      </cl:property>
+      <cl:property name="defaultPickerTypeEndDt" type="boolean" default="false" std:desc="[Boolean] 기본 날짜 선택 유형을 종료일자로 설정 (default: false)"/>
+      <cl:property name="showPickerArea" type="boolean" default="true" bindable="true" std:desc="[Boolean] 날짜 선택 버튼 영역 보여줄지 여부 (default: true)"/>
+      <cl:property name="showTodayBtn" type="boolean" default="false" bindable="true" std:desc="[Boolean] '당일' 버튼을 보여줄지 여부 (default: true)"/>
+      <cl:property name="show1WeekBtn" type="boolean" default="true" bindable="true" std:desc="[Boolean] '1주일' 버튼을 보여줄지 여부 (default: true)"/>
+      <cl:property name="show1MonthBtn" type="boolean" default="true" bindable="true" std:desc="[Boolean] '1개월' 버튼을 보여줄지 여부 (default: true)"/>
+      <cl:property name="show6MonthsBtn" type="boolean" default="true" bindable="true" std:desc="[Boolean] '6개월' 버튼을 보여줄지 여부 (default: true)"/>
+      <cl:property name="show1YearBtn" type="boolean" default="true" bindable="true" std:desc="[Boolean] '1년' 버튼을 보여줄지 여부 (default: true)"/>
+      <cl:property name="show2YearsBtn" type="boolean" default="true" bindable="true" std:desc="[Boolean] '2년' 버튼을 보여줄지 여부 (default: true)"/>
+      <cl:property name="show3YearsBtn" type="boolean" default="true" bindable="true" std:desc="[Boolean] '3년' 버튼을 보여줄지 여부 (default: false)"/>
+    </cl:appspec>
+  </head>
+  <body std:sid="body-fd6c1f75" style="top:0px; left:0px; width:300px; height:36px;">
+    <cl:listener std:sid="listener-f3cb9495" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-b4af6b28" name="property-change" handler="onBodyPropertyChange"/>
+    <cl:group std:sid="group-csm000064" id="grpDate" class="input-group">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:verticaldata std:sid="v-data-0f26e0ef" width="300px" height="36px" autosize="height"/>
+      <cl:group std:sid="group-csm000066" id="grpPeriod">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-csm000067" row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:dateinput std:sid="d-input-csm000068" id="dtiStartDate" fieldLabel="Period start" hidebutton="true" placeholder="MM-DD-YYYY" preventinput="true">
+          <cl:apppropbind property="value" app-property="startDate"/>
+          <cl:apppropbind property="readOnly" category="PROPERTY" app-property="startDateReadOnly"/>
+          <cl:formdata std:sid="f-data-csm000069" row="0" col="0"/>
+        </cl:dateinput>
+        <cl:output std:sid="output-csm000070" id="opt1" value="~">
+          <cl:formdata std:sid="f-data-csm000071" row="0" col="1"/>
+        </cl:output>
+        <cl:dateinput std:sid="d-input-csm000072" id="dtiEndDate" fieldLabel="Period end" hidebutton="true" placeholder="MM-DD-YYYY" preventinput="true">
+          <cl:apppropbind property="value" app-property="endDate"/>
+          <cl:apppropbind property="readOnly" category="PROPERTY" app-property="endDateReadOnly"/>
+          <cl:formdata std:sid="f-data-csm000073" row="0" col="2"/>
+        </cl:dateinput>
+        <cl:formlayout std:sid="f-layout-csm000074" scrollable="false" hspace="8px" vspace="8px">
+          <cl:rows length="36" unit="PIXEL"/>
+          <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+          <cl:columns length="10" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:combobox std:sid="c-box-csm000075" id="cmbPeriod" fieldLabel="Select period">
+        <cl:listener std:sid="listener-f93cc726" name="item-click" handler="onCmbPeriodItemClick"/>
+        <cl:attribute name="needs-auto-height" value=""/>
+        <cl:formdata std:sid="f-data-csm000076" row="0" col="1"/>
+        <cl:item std:sid="t-item-9dbbcb75" label="today" value="today"/>
+        <cl:item std:sid="t-item-eca82110" label="1 week" value="1week"/>
+        <cl:item std:sid="t-item-5aa98f45" label="1 month" value="1month"/>
+        <cl:item std:sid="t-item-22528a56" label="6 months" value="6months"/>
+        <cl:item std:sid="t-item-e2a87bb1" label="1 year" value="1year"/>
+        <cl:item std:sid="t-item-28ea9909" label="2 years" value="2years"/>
+        <cl:item std:sid="t-item-1db28d5e" label="3 years" value="3years"/>
+      </cl:combobox>
+      <cl:formlayout std:sid="f-layout-csm000077" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="36" unit="PIXEL"/>
+        <cl:columns length="2" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+        <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:output std:sid="output-csm000062" id="opt2" class="font-caption error" visible="false" value="From date must be on or before To date.">
+      <cl:verticaldata std:sid="v-data-csm000063" width="457px" height="18px" autosize="height"/>
+    </cl:output>
+    <cl:verticallayout std:sid="v-layout-5125b06f" spacing="6"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

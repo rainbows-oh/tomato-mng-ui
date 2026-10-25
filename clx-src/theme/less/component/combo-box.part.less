@@ -349,3 +349,28 @@
 		}
 	}
 }
+
+/* ==========================================================================
+ .cmb-fild-down — 콤보박스 리스트의 아이템 누르면 파일 다운로드 되는 특수한 콤보박스
+ ========================================================================== */
+/* 아이템 icon 속성(showIcon) — 아이콘을 선택 체크(ico_cmb_selected)와 같은 위치(맨 끝)에 표시
+   드롭다운 목록은 body 에 따로 생성되어 콤보박스 클래스로는 닿지 않으므로 아이템의 icon 속성으로 지정
+   기존 선택 체크는 콤보박스 아이템에서 숨김 (아이콘 자리와 겹치므로) */
+.cl-combobox-list.cmb-fild-down {
+	.cl-combobox-item {
+		padding: 0px 40px 0px 12px;
+		
+		&::after {
+			content: "";
+			position: absolute;
+			background-image: url("../../img/icons/ico_download.svg");
+			background-size: contain;
+			background-repeat: no-repeat;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 12px;
+			width: 20px;
+			height: 20px;
+		}
+	}
+}

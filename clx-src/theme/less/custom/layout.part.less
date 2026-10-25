@@ -1,138 +1,173 @@
 @import (reference) "../../custom-settings.part.less";
 
-.btn-wrap {
-	.cl-button {
-		padding: 0px 12px;
+//페이지 하단 버튼 영역
+.cl-container.btn-footer-wrap {
+	border-top: 1px solid @gray-20;
+	padding-top: 20px;
+	
+	@media(max-width: 767px) {
+		padding-top: 16px;
 	}
 }
 
-//페이지 하단 버튼 영역
-.cl-container.footer-btn-wrap {
-	padding-top: 16px;
-	border-top: 1px solid #e3e8ee;
-	
-	.cl-button {
-		padding: 0px 12px;
+.select-info {
+	background: url("../../img/icons/ico_select_info.svg") no-repeat center top;
+	padding-top: 52px;
+	.cl-output {
+		text-align: center;
 	}
+	
+	.font-title {
+		color: @gray-50 !important;
+	}
+	
+	.font-body-s {
+		color: @gray-40 !important;
+	}
+}
+
+//user management - total 표시 (PC: 구분선이 있는 하나의 박스 / 모바일: 칸마다 분리된 카드)
+.cl-container.total-box {
+	border: 1px solid @gray-20;
+	background-color: @white;
+	border-radius: 8px;
+	
+	&.collapsed {
+		border: 0;
+		background-color: transparent;
+		
+		.cl-formlayout-vertical-separator,
+		.cl-formlayout-horizontal-separator {
+			display: none;
+		}
+		
+		.cl-container.total-cell {
+			border: 1px solid @gray-20;
+			border-radius: 12px;
+			background-color: @white;
+			padding: 12px 16px;
+		}
+	}
+}
+
+//details 페이지 헤더 카드
+.cl-container.detail-head {
+	border: 1px solid @gray-20;
+	background-color: @white;
+	box-shadow: 0 1px 3px 0 rgba(15, 23, 41, 0.06);
 }
 
 //카드
 .cl-container.card {
-	border: 1px solid #e3e8ee;
+	border: 1px solid @gray-30;
 	background-color: @white;
-	box-shadow: 0 1px 3px rgba(0,55,112,0.08);
+	border-radius: 8px;
+	padding: 20px;
 	
-	//user management - total 표시
-	&.type01 {
-		border-radius: 12px;
+	
+	&.sm {
+		padding: 8px 12px;
+	}
+	
+	&.highlight {
+		background-color: @primary-5;
+		border: 1px solid @primary-60;
 		
-		.cl-formlayout-vertical-separator {
-			background-color: #e3e8ee;
-		}
-		
-		.cl-output.tit {
-			font-size: 20px;
-			font-weight: 600;
+		.cl-formlayout-horizontal-separator {
+			background-color: @primary-60;
 		}
 	}
 	
-	//카드 공통 스타일
-	&.type02 {
-		padding: 12px;
-		border-radius: 8px;
-		color: #273951;
+	&.gray {
+		border-color: transparent;
+		background-color: @gray-10;
+	}
+	
+	@media(max-width: 767px) {
+		padding: 16px;
 		
-		.cl-output.c-tit {
-			font-size: 15px;
-			font-weight: 600;
-			color: #0d253d;
+		&.sm {
+			padding: 8px 12px;
 		}
-		
-		.cl-button.c-tit-blue,
-		.cl-button.c-tit-black {
-			font-size: 15px;
-			font-weight: 600;
-			text-align: left;
-		}
-		
-		.cl-button.c-tit-blue {
-			color: @primary;
-		}
+	}
+}
 
-		.cl-button.c-tit-black {
-			color: #0d253d;
-		}
-		
-		.cl-output.c-tit-sub {
-			font-size: 13px;
-			font-weight: 600;
-			color: #0d253d;
-		}
+//카드
+.cl-container.toggle-card {
+	border: 1px solid @gray-30;
+	background-color: @white;
+	border-radius: 8px;
+	padding: 16px;
+	
+	@media(max-width: 767px) {
 	}
 	
-	//details 페이지 헤더 카드
-	&.type03 {
-		border-radius: 12px;
-		
-		.cl-output.c-tit {
-			font-size: 15px;
-			font-weight: 600;
-			color: #0d253d;
-		}
-		
-		.cl-output.c-tit-sub {
-			font-size: 13px;
-			font-weight: 400;
-			color: #273951;
-		}
+	&.highlight {
+		background-color: @primary-5;
+		border: 1px solid @primary-60;
 	}
-	
-	//details 페이지 카드 형태 그룹 스타일
-	&.type04 {
-		padding: 16px;
+}
+
+.cl-container.replies {
+	.cl-container.other-chat,
+	.cl-container.my-chat {
+		border: 1px solid  @gray-20;
 		border-radius: 8px;
-		
-		&.highlight {
-			background-color: #eeecff;
-			border: 1px solid #533afd;
-		}
-		
-		.cl-output.c-tit {
-			font-size: 15px;
-			font-weight: 600;
-			color: #0d253d;
-		}
+		padding: 12px 14px;
 	}
 	
-	//details 페이지 카드 형태 그룹 입력 스타일
-	&.type05 {
-		padding: 16px;
-		border-radius: 8px;
-		
-		&.highlight {
-			background-color: #eeecff;
-			border: 1px solid #533afd;
-		}
-		
-		.cl-output.c-tit {
-			font-size: 15px;
-			font-weight: 600;
-			color: #0d253d;
-		}
-		
-		.label {
-			font-size: 13px;
-			color: #273951;
-		}
+	.cl-container.other-chat {
+		margin-right: 16px;
+	}
+	
+	.cl-container.my-chat {
+		margin-left: 16px;
+		background-color: @gray-5;
+	}
+}
+
+.cl-container.qna {
+	border: 1px solid #e3e8ee;
+	border-radius: 12px;
+	padding: 24px;
+}
+
+.cl-button.btn-go-back {
+//	text-align: center;
+	font-weight: 600;
+	font-size: 15px;
+	color: #0d253d;
+	
+	.cl-icon {
+		background-image: url("../../img/icons/ico_arrow_left.svg") !important;
 	}
 }
 
 .cl-container.separate {
 	&:not(.cl-last-row) {
-		border-bottom: 1px solid #e3e8ee;
-		padding-bottom: 24px;
+		border-bottom: 1px solid @gray-20;
+		padding-bottom: 16px;
 	}
 }
+
+
+//구분자 — dot-separate 그룹 안의 아웃풋 중 첫번째를 제외하고, 앞에 16px 폭의 · (가운데 정렬) 표시
+//         아웃풋 사이 간격이 16px 이므로 그룹(플로우 레이아웃)의 hspacing 은 0 으로 지정
+.cl-container.dot-separate {
+	// 아웃풋 스타일 — font-body-s 클래스와 동일 + 색상 #64748B
+	.cl-output {
+		#font-caption();
+		color: @gray-50; // #64748B
+	}
+	
+	.cl-layout-wrap:not(.cl-first) > .cl-output .cl-text::before {
+		content: "·";
+		display: inline-block;
+		width: 16px;
+		text-align: center;
+	}
+}
+
 
 //카드 타이틀 두줄 시
 .cl-button {
@@ -148,45 +183,18 @@
 	}
 }
 
-//그리드 숫자 표시 뱃지
-.cl-button {
-	.btn-grid-badge-red,
-	.btn-grid-badge-gray {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		min-width: 16px;
-		min-height: 16px;
-		font-size: 10px;
-		font-weight: 600;
-		border-radius: @border-radius-full;
-		margin-left: 8px;
-		padding: 0px 4px;
-	}
-	
-	.btn-grid-badge-red {
-		background-color: @danger;
-		color: @white;
-	}
-
-	.btn-grid-badge-gray {
-		background-color: @gray-20;
-		color: @color-component-text-disabled;
-	}
-}
-
 //타이틀 영역
 .cl-container.page-title-wrap {
 	background-color: #ffffff;
-//	border-bottom: 1px solid #e3e8ee;
 	padding: 6px 24px;
-
-	.cl-container.btn-wrap {
-		.cl-button {
-//			font-size: 14px;
-//			font-weight: @font-weight-semibold;
-//			padding: 0 12px;
-		}
+	
+	@media(max-width: 767px) {
+		border-bottom: 1px solid @gray-20;
+		padding: 12px 16px;
+	}
+	
+	.icon {
+		min-width: 36px;
 	}
 }
 
@@ -203,125 +211,30 @@
 
 //카드 영역
 .cl-container.card-section {
-	border-top: 1px solid #e3e8ee;
-	padding: 12px;
 }
 
-//임력 폼 스타일
-.cl-container.form-group {
-	background-color: #ffffff;
-	border: 1px solid #e3e8ee;
-	border-radius: 12px;
-	box-shadow: 0 1px 3px rgba(0,55,112,0.08);
+.cl-container.attachments {
+	padding: 4px 12px;
+	border: 1px solid  @gray-20;
+	background-image: url("../../img/icons/ico_file_excel.svg");
+	background-position: center left 12px;
+	background-repeat: no-repeat;
+	min-height: 36px;
 	
-	.label {
-		font-size: 13px;
-		color: #0d253d;
+	.cl-text {
+		padding-left: 26px;
+		#font-body-s();
 	}
 	
-	.group {
-		&:not(.cl-last-row) {
-			border-bottom: 1px solid #e3e8ee;
-			padding-bottom: 24px;
-		}
-		
-		.group-tit {
-			font-size: 15px;
-			font-weight: 600;
-			color: #0d253d;
-		}
-		
-		.cl-output.attachments {
-			padding: 8px;
-			border-radius: 6px;
-			border: 1px solid  #e3e8ee;
-			font-weight: 600;
-			background-image: url("../../img/icons/ico_file.svg");
-			background-position: center left 8px;
-			background-repeat: no-repeat;
-			
-			.cl-text {
-				padding-left: 28px;
-			}
-			
-			.size {
-				color: #64748d;
-				font-weight: 400;
-			}
-		}
-		
-		.cl-container.recipients {
-			padding: 16px;
-			border: 1px solid  #e3e8ee;
-			border-radius: 8px;
-			background-color: #f6f9fc;
-			
-			.cl-output.tit {
-				font-weight: 600;
-			}
-			
-			.cl-output.name {
-				font-weight: 600;
-				font-size: 11px;
-				border: 1px solid  #e3e8ee;
-				background-color: @white;
-				padding: 4px 8px;
-				border-radius: 999px;
-			}
-		}
-		
-		.cl-container.replies {
-			.cl-container.other-chat,
-			.cl-container.my-chat {
-				border: 1px solid  #e3e8ee;
-				border-radius: 8px;
-				padding: 12px;
-				
-				.name {
-					font-weight: 600;
-				}
-				
-				.dept {
-					color: #64748d;
-				}
-				
-				.date {
-					font-size: 11px;
-					color: #64748d;
-				}
-			}
-			
-			.cl-container.other-chat {
-				margin-right: 24px;
-			}
-			
-			.cl-container.my-chat {
-				margin-left: 24px;
-				background-color: #f6f9fc;
-			}
-		}
-		
-		.cl-container.qna {
-			border: 1px solid #e3e8ee;
-			border-radius: 12px;
-			padding: 24px;
-		}
-		
+	.size {
+		#font-caption();
+		color: @gray-50;
 	}
 }
 
-.cl-button.btn-go-back {
-	text-align: left;
-	font-weight: 600;
-	font-size: 15px;
-	color: #0d253d;
-	
-	.cl-icon {
-		background-image: url("../../img/icons/ico_arrow_left.svg") !important;
-	}
-}
-
-//조회 영역 grpSearch
+/* ==========================================================================
+ 조회형 (Search Box) - grpSearch
+ ========================================================================== */
 .cl-container.search-top-box {
 	background-color: #ffffff;
 	border: 1px solid @gray-30;
@@ -329,31 +242,31 @@
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.08);
 	
 	.cl-container.search-head {
-		border-bottom: 1px solid @gray-20;
-		padding: 14px 20px;
-
 		.cl-output.truncate {
 			color: @gray-70;
-			font-size: 13px;
-			font-weight: @font-weight-normal;
-			letter-spacing: -0.39px;
+			#font-body-s();
 			text-align: center;
+			padding: 16px 24px;
 		}
 	}
 	
-	.cl-container.filter-form {
-		.cl-output.label {
-			color: #0d253d;
-			font-size: 13px;
-			font-weight: @font-weight-semibold;
-			letter-spacing: -0.39px;
-			text-align: left;
+	.cl-container.sch-filter-box {
+		.font-label {
+			color: @gray-90 !important;
+		}
+		
+		.cl-checkboxgroup,
+		.cl-radiobutton {
+			min-height: 36px;
+			
+			@media(max-width: 767px) {
+				min-height: 0px;
+			}
 		}
 	}
 	
 	.cl-container.search-btn-wrap {
 		border-top: 1px solid @gray-20;
-		margin-top: 8px;
 		padding-top: 16px;
 		
 		.cl-button {

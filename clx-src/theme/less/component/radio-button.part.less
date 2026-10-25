@@ -178,3 +178,42 @@
 		#radio--button(@size-8);
 	}
 }
+
+.cl-radiobutton.rdb-select {
+	&.use {
+		.cl-radiobutton-item {
+			background-image: url("../../img/icons/ico_badge_use.svg");
+			background-position: top 10px right 14px;
+			background-repeat: no-repeat;
+		}
+	}
+	
+	.cl-radiobutton-item {
+		border-radius: 6px;
+		border: 1px solid @gray-20;
+		background-color: @white;
+		padding: 10px 14px;
+		
+	
+		
+		.cl-text {
+		#font-title();
+			
+			.caption {
+				color: @gray-50;
+				#font-caption();
+			}
+		}
+		
+		&.cl-selected {
+			border: 1.5px solid @primary-70;
+			background-color: @primary-5;
+		}
+		
+		&.cl-disabled {
+			.caption {
+				color: @gray-40;
+			}
+		}
+	}
+}

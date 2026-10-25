@@ -18,48 +18,15 @@
 	font-weight: 600;
 }
 
-#badge--outline(@color) {
-	background-color: transparent !important;
-	border-color: @color !important;
-	color: @color !important;
-	border-radius: @border-radius-full !important;
-}
-
-#badge--soft(@bg, @text) {
-	background-color: @bg !important;
-	border-color: fade(@text, 30%) !important;
-	color: @text !important;
-	border-radius: @border-radius-full !important;
-}
-
 /* ==========================================================================
    Base
    ========================================================================== */
 .badge {
 	border: 1px solid transparent;
 	border-radius: @size-component-radius;
-	#font-caption-strong();
-	font-weight: @font-weight-medium;
-	line-height: @line-height-none;
-	min-height: @size-component-height;
-	padding: 4px 10px;
 	text-align: center;
 	white-space: nowrap;
-	
-	&.sm {
-		font-size: 10px !important;
-		min-width: 16px !important;
-	}
-	
-	&.md {
-		font-size: 11px !important;
-		min-width: 20px !important;
-	}
-	
-	&.large {
-		min-height: @size-component-height;
-		padding: 0 @padding-3;
-	}
+	font-weight: 600;
 }
 
 /* 단독 사용(UI 컨트롤 외) 시 inline-flex 정렬 */
@@ -67,22 +34,6 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-}
-
-.cl-control.text {
-//	min-height: 16px !important;
-//	
-//	&.sm {
-//		min-height: 16px !important;
-//	}
-//	
-//	&.md {
-//		min-height: 20px !important;
-//	}
-//	
-//	&.large {
-//		min-height: @size-component-height !important;
-//	}
 }
 
 .cl-output.badge {
@@ -103,102 +54,49 @@
    ========================================================================== */
 
 /* --- Fill --- */
+.badge.fill {
+	/* fill 전용 (count 와 구분되는 글꼴·크기·여백) */
+	#font-caption-strong();
+	height: @size-component-height !important;
+	padding: 4px 10px;
+}
+
 .badge.fill,
 .cl-grid .cl-grid-ctrl-inherit.badge {
-	&.danger {
+	&.red {
 		#badge--fill(@danger, @danger-90);
 	}
 	
-	&.warning {
+	&.yellow {
 		#badge--fill(@warning, @warning-70); /* 밝은 배경이라 어두운 텍스트 */
 	}
 	
-	&.success {
+	&.green {
 		#badge--fill(@success, @success-70);
 	}
 	
-	&.information {
+	&.blue {
 		#badge--fill(@information, @primary-70);
 	}
 }
 
-/* --- Outline --- */
-.badge.outline,
-.cl-grid .cl-grid-ctrl-inherit.badge {
-	&.primary {
-		#badge--outline(@primary);
-	}
-	
-	&.secondary {
-		#badge--outline(@gray-70);
-	}
-	
-	&.gray {
-		#badge--outline(@gray-50);
-	}
-	
-	&.point {
-		#badge--outline(@primary-40);
-	}
-	
-	&.danger {
-		#badge--outline(@danger);
-	}
-	
-	&.warning {
-		#badge--outline(@warning-70);
-	}
-	
-	&.success {
-		#badge--outline(@success);
-	}
-	
-	&.information {
-		#badge--outline(@information);
-	}
-	
-	&.disable {
-		#badge--outline(@gray-20);
-	}
+/* --- Count --- */
+.badge.count {
+	/* count 전용 글꼴·크기·여백은 여기에 정의 */
+	#font-micro();
+	height: 20px !important;
+	min-width: 20px;
+	padding: 2px 5px;
 }
 
-/* --- Soft --- */
-.badge.soft,
+.badge.count,
 .cl-grid .cl-grid-ctrl-inherit.badge {
-	&.primary {
-		#badge--soft(@primary-5, @primary-60);
+	&.answered {
+		#badge--fill(@danger-60, @white);
 	}
-	
-	&.secondary {
-		#badge--soft(@gray-10, @gray-70);
-	}
-	
-	&.gray {
-		#badge--soft(@gray-10, @gray-70);
-	}
-	
-	&.point {
-		#badge--soft(@primary-5, @primary-80);
-	}
-	
-	&.danger {
-		#badge--soft(@danger-5, @danger-70);
-	}
-	
-	&.warning {
-		#badge--soft(@warning-10, @warning-70);
-	}
-	
-	&.success {
-		#badge--soft(@success-10, @success-70);
-	}
-	
-	&.information {
-		#badge--soft(@primary-5, @primary-60);
-	}
-	
-	&.disable {
-		#badge--soft(@gray-5, @gray-30);
+
+	&.close {
+		#badge--fill(@gray-20, @gray-70);
 	}
 }
 

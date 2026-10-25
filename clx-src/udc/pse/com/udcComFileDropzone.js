@@ -29,8 +29,6 @@ exports.getText = getText;
 var maFiles = [];
 /** @type HTMLInputElement 클릭 시 파일 선택창을 띄우기 위한 숨김 input[type=file] */
 var moFileInput = null;
-/** @type Number 표시용 총 용량 제한(MB). 실제 업로드를 막지는 않고 안내 문구 계산에만 사용 */
-var MAX_TOTAL_SIZE_MB = 10;
 
 
 /*******************************************************************************
@@ -105,6 +103,23 @@ function doIsFileAllowed(poFile) {
 }
 
 /**
+ * 허용되지 않는 파일 경고문(optFileRejectedInfo) 표시 여부를 지정한다.
+ * UDC 에 해당 컨트롤이 없으면 아무것도 하지 않는다. (없을 때 예외가 나면 이후 파일 처리·용량 갱신이 중단됨)
+ * @param {Boolean} pbVisible
+ */
+function doSetRejectedInfoVisible(pbVisible) {
+	var vcInfo = app.lookup("optFileRejectedInfo");
+	if (vcInfo) vcInfo.visible = pbVisible;
+}
+
+/**
+ * 첨부된 파일이 있을 때만 파일 목록(grpFileList)을 표시한다.
+ */
+function doUpdateFileListVisible() {
+	app.lookup("grpFileList").visible = maFiles.length > 0;
+}
+
+/**
  * 파일 목록(FileList)을 행으로 만들어 grpFileList에 추가한다.
  * PDF/이미지가 아닌 파일은 경고문 표출.
  * @param {FileList} paFileList
@@ -116,19 +131,19 @@ function doAddFiles(paFileList) {
 	for (vnIdx = 0; vnIdx < paFileList.length; vnIdx++) {
 		var voFile = paFileList[vnIdx];
 		if (!doIsFileAllowed(voFile)) {
-			app.lookup("optFileRejectedInfo").visible = true;
+			doSetRejectedInfoVisible(true);
 			continue;
 		} 
 
 		maFiles.push(voFile);
 		vcFileList.addChild(doCreateFileRow(voFile), {
 			"width": "100%",
-			"height": "40px"
+			"height": "36px"
 		});
-		app.lookup("optFileRejectedInfo").visible = false;
+		doSetRejectedInfoVisible(false);
 	}
 
-	doUpdateSizeInfo();
+	doUpdateFileListVisible();
 }
 
 /**
@@ -141,21 +156,7 @@ function doRemoveFileRow(poFile, pcRow) {
 	if (vnIdx > -1) maFiles.splice(vnIdx, 1);
 
 	app.lookup("grpFileList").removeChild(pcRow);
-	doUpdateSizeInfo();
-}
-
-/**
- * 현재까지 추가된 파일들의 총 용량을 계산해 드롭존 안내 문구를 갱신한다.
- */
-function doUpdateSizeInfo() {
-	var vnTotalBytes = 0;
-	var vnIdx;
-	for (vnIdx = 0; vnIdx < maFiles.length; vnIdx++) {
-		vnTotalBytes += maFiles[vnIdx].size;
-	}
-
-	var vnUsedMB = vnTotalBytes / (1024 * 1024);
-	app.lookup("optDropSizeInfo").value = "Total size limit: " + MAX_TOTAL_SIZE_MB + "MB (" + vnUsedMB.toFixed(1) + "MB used).";
+	doUpdateFileListVisible();
 }
 
 /**
@@ -170,38 +171,46 @@ function doFormatFileSize(pnBytes) {
 }
 
 /**
+ * 첨부 파일 행(attachments)을 만든다. (Overview.clx 의 grp6 구조)
+ *  - 컨테이너(class: attachments) / 폼 레이아웃: 행 1fr, 열 1fr + 16px
+ *  - (0,0) 파일명 아웃풋 + 크기, (0,1) 삭제 버튼(btn-close icon)
  * @param {File} poFile
  * @return {cpr.controls.Container}
  */
 function doCreateFileRow(poFile) {
 	var vcRow = new cpr.controls.Container();
 	vcRow.style.setClasses(["attachments"]);
-	vcRow.setLayout(new cpr.controls.layouts.XYLayout());
 
+	var vcLayout = new cpr.controls.layouts.FormLayout();
+	vcLayout.setRows(["1fr"]);
+	vcLayout.setColumns(["1fr", "16px"]);
+	vcLayout.horizontalSpacing = 0;
+	vcLayout.verticalSpacing = 0;
+	vcLayout.topMargin = 0;
+	vcLayout.rightMargin = 0;
+	vcLayout.bottomMargin = 0;
+	vcLayout.leftMargin = 0;
+	vcRow.setLayout(vcLayout);
+
+	// 파일명 + " · " + 크기
+	var vcName = new cpr.controls.Output();
+	vcName.value = poFile.name;
+	vcName.displayExp = 'text + sstr(" · ' + doFormatFileSize(poFile.size) + '", ["size"])';
+	vcRow.addChild(vcName, {
+		rowIndex: 0,
+		colIndex: 0
+	});
+
+	// 삭제 버튼
 	var vcRemoveBtn = new cpr.controls.Button();
-	vcRemoveBtn.style.setClasses(["remove", "icon"]);
+	vcRemoveBtn.style.setClasses(["btn-close", "icon"]);
+	vcRemoveBtn.icon = "0";
 	vcRemoveBtn.addEventListener("click", function(e) {
 		doRemoveFileRow(poFile, vcRow);
 	});
 	vcRow.addChild(vcRemoveBtn, {
-		right: "0px",
-		width: "20px",
-		height: "20px",
-		horizontalAnchor: "RIGHT",
-		verticalAnchor: "CENTER"
-	});
-
-	var vcName = new cpr.controls.Output();
-	vcName.style.setClasses(["name"]);
-	vcName.value = poFile.name;
-	vcName.displayExp = 'text + sstr(" ' + doFormatFileSize(poFile.size) + '", ["size"])';
-	vcRow.addChild(vcName, {
-		left: "28px",
-		right: "28px",
-		top: "0px",
-		bottom: "0px",
-		horizontalAnchor: "BOTH",
-		verticalAnchor: "BOTH"
+		rowIndex: 0,
+		colIndex: 1
 	});
 
 	return vcRow;

@@ -5,9 +5,13 @@
  ************************************************/
 .cl-container.app-header {
 	.cl-output {
-		#font-heading();
-		font-weight: 600;
+		font-size: 19px;
+		font-weight: 700;
 		color: @secondary-90;
+		
+		@media(max-width: 767px) {
+			font-size: 18px;
+		}
 	}
 }
 
@@ -19,18 +23,20 @@
 		text-align: left;
 		font-size: 15px;
 		font-weight: 700;
-		padding: 0px;
-		background: url("../../img/icons/ico_angle_down.svg") no-repeat center right;
+		padding: 14px 20px;
+		background: url("../../img/icons/ico_angle_down.svg") no-repeat center right 20px;
 		background-size: 18px;
 		color: @secondary-90;
+		border-bottom: 1px solid @gray-20;
+		border-radius: 6px 6px 0px 0px;
 		
 		&:not(.cl-disabled):hover,
 		&:not(.cl-disabled).cl-hover {
-			background-color: #EFF1F5;
+//			background-color: #EFF1F5;
 		}
 		
 		&.collapse {
-			background: url("../../img/icons/ico_angle_up.svg") no-repeat center right;
+			background: url("../../img/icons/ico_angle_up.svg") no-repeat center right 20px;
 			background-size: 18px;
 		}
 	}
@@ -43,25 +49,39 @@
 	.cl-button {
 		border-radius: 6px;
 		padding: 0;
+		background-color: @secondary-10;
 		
 		.cl-icon {
 			margin: 0;
+			background-size: auto;
 		}
 		
 		&.btn-grid {
 			.cl-icon {
-				background-image: url("@{img-path}/icons/pages/ico_grid.svg") !important;
+				background-image: url("@{img-path}/icons/ico_grid.svg") !important;
+			}
+			
+			&.active {
+				.cl-icon {
+					background-image: url("@{img-path}/icons/ico_grid_on.svg") !important;
+				}
 			}
 		}
 		
 		&.btn-card {
 			.cl-icon {
-				background-image: url("@{img-path}/icons/pages/ico_card.svg") !important;
+				background-image: url("@{img-path}/icons/ico_card.svg") !important;
+			}
+			
+			&.active {
+				.cl-icon {
+					background-image: url("@{img-path}/icons/ico_card_on.svg") !important;
+				}
 			}
 		}
 		
 		&.active {
-			background-color: #eef1f5;
+			background-color: @secondary-90;
 		}
 	}
 }
@@ -172,5 +192,66 @@
 			background-color: #ebedef;
 			color: #313b49;
 		}
+	}
+}
+
+/************************************************
+ * [UDC] 리스트 카드 화면의 Status 필터 체크박스
+ ************************************************/
+.cl-container.status-selection {
+	/* 콤보박스 필드 스타일(#input--base)을 체크박스에 적용 — 컨트롤은 iconalign="right" 지정 */
+	.cl-checkbox.chk-status {
+		#input--base();
+		/* 좌측 필터 아이콘 (배경) */
+		background-image: url("@{img-path}/icons/ico_filter.svg");
+		background-position: @size-input-padding-x center;
+		background-repeat: no-repeat;
+		background-size: @size-component-icon;
+		padding-left: (@size-input-padding-x + @size-component-icon);
+		
+		.cl-text {
+			padding: 0 8px;
+		}
+		
+		.cl-icon-wrapper {
+			padding-top: 0;
+			vertical-align: middle;
+		}
+		
+		/* 우측 화살표 — 체크박스 아이콘을 콤보박스 버튼(ico_angle)으로 대체 (상태 무관 동일) */
+		.cl-checkbox-icon,
+		&:hover .cl-checkbox-icon,
+		&.cl-hover .cl-checkbox-icon,
+		&.cl-focus .cl-checkbox-icon,
+		&.cl-checked .cl-checkbox-icon,
+		&.cl-checked:hover .cl-checkbox-icon,
+		&.cl-checked.cl-hover .cl-checkbox-icon,
+		&.cl-checked.cl-focus .cl-checkbox-icon {
+			#input--button();
+			background-image: url("@{img-path}/icons/ico_angle.svg");
+		}
+		
+		&.cl-focus,
+		&:focus,
+		&.cl-checked {
+			#input--focus();
+		}
+		
+		&.cl-disabled {
+			#input--disabled();
+			background-image: url("@{img-path}/icons/ico_filter_disable.svg");
+		}
+	}
+}
+
+.cl-container.status-card {
+	background-color: @white;
+	border-radius: 12px;
+	border: 1px solid @gray-30;
+	box-shadow: 0 8px 24px 0 rgba(15, 23, 41, 0.18);
+	
+	.btn-footer-wrap {
+		padding-top: 18px;
+		border-top: 1px solid @gray-20;
 	}
 }

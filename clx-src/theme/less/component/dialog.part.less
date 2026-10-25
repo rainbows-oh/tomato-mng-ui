@@ -18,10 +18,10 @@
 @dialog--wrap-color-border:   #e3e8ee;
 
 /* 헤더 */
-@dialog--head-height:       32 + 24px;
+@dialog--head-height:       64px;
 @dialog--head-padding-x:    @padding-7;
 @dialog--head-color-background: @gray-5;
-@dialog--head-color-border: @gray-10;
+@dialog--head-color-border: @gray-20;   /* #E2E8F0 */
 @dialog--head-color-text:   @color-component-text;
 @dialog--head-font-weight:  @font-weight-semibold;
 
@@ -69,13 +69,18 @@
 	.cl-dialog-header {
 		display: flex;
 		align-items: center;
-		height: @dialog--head-height;
+		height: 64px;
 		background-color: @white;
-		border-bottom: none;
+		border-bottom: 1px solid @dialog--head-color-border;
 		color: @dialog--head-color-text;
 		#font-heading();
 		font-weight: @dialog--head-font-weight;
-		padding: 24px 24px 0px 24px;
+		padding: 0px 24px;
+		
+		@media(max-width: 767px) {
+			height: 52px;
+			padding: 0px 16px;
+		}
 
 		/* 제목 텍스트 */
 		.cl-text {
@@ -93,13 +98,21 @@
 		.cl-dialog-max     { #dialog--head-button(); background-image: url("@{img-path}/icons/ico_maximize.svg"); }
 		.cl-dialog-restore { #dialog--head-button(); background-image: url("@{img-path}/icons/ico_restore.svg"); }
 
-		/* 헤더 버튼 — hover/active: 흰 아이콘 + danger 배경 */
+		/* 닫기 버튼 — hover/active/focus 등 어떤 상태 클래스가 붙어도 기본(어두운 아이콘, 투명 배경) 유지 */
+		.cl-dialog-close,
 		.cl-dialog-close:hover,
-		.cl-dialog-close:active {
-			background-color: @dialog--head-button-color-background-hover;
-			background-image: url("@{img-path}/icons/ico_close_white.svg");
+		.cl-dialog-close:active,
+		.cl-dialog-close:focus,
+		.cl-dialog-close.cl-hover,
+		.cl-dialog-close.cl-active,
+		.cl-dialog-close.cl-activated,
+		.cl-dialog-close.cl-pressed,
+		.cl-dialog-close.cl-focus {
+			background-color: @dialog--head-button-color-background;
+			background-image: url("@{img-path}/icons/ico_close.svg");
 		}
 
+		/* 헤더 버튼 — hover/active: 흰 아이콘 + danger 배경 */
 		.cl-dialog-min:hover,
 		.cl-dialog-min:active {
 			background-color: @dialog--head-button-color-background-hover;

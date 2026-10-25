@@ -287,3 +287,107 @@
 		#checkbox--button(@size-8);
 	}
 }
+
+/* ==========================================================================
+ .cl-checkbox.chk-sortable — 정렬 토글 체크박스 (체크박스 아이콘 대신 그리드 정렬 아이콘)
+ ========================================================================== */
+.cl-checkbox.chk-sortable {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 36px;
+	background: @primary-5;                /* #EFF6FF */
+	border: 1px solid @primary-20;         /* #BFDBFE */
+	border-radius: 6px;
+	padding: 0 @padding-5;
+	#font-label();
+	color: @primary;
+	font-weight: 600;
+
+	/* 아이콘(12px) 세로 중앙 — 기본 규칙(top + padding-top 1px, 16px 아이콘 기준) 해제 */
+	.cl-icon-wrapper {
+		padding-top: 0;
+		vertical-align: middle;
+	}
+
+	/* 미체크 — 정렬 아이콘(asc) */
+	.cl-checkbox-icon,
+	&:hover .cl-checkbox-icon,
+	&.cl-hover .cl-checkbox-icon,
+	&.cl-focus .cl-checkbox-icon,
+	.cl-checkbox-icon:focus {
+		#checkbox--button(12px);
+		background-image: url("@{img-path}/icons/ico_sort_asc.svg");
+	}
+
+	/* 체크 — 정렬 아이콘(desc) */
+	&.cl-checked .cl-checkbox-icon,
+	&.cl-checked:hover .cl-checkbox-icon,
+	&.cl-checked.cl-hover .cl-checkbox-icon,
+	&.cl-checked.cl-focus .cl-checkbox-icon,
+	&.cl-checked .cl-checkbox-icon:focus {
+		background-image: url("@{img-path}/icons/ico_sort_desc.svg");
+	}
+}
+
+/* ==========================================================================
+ .cl-checkbox.chk-mail — 메일 아이콘 토글 체크박스 (28×28)
+ 미체크 — ico_mail / 체크 — ico_mail_open
+ ========================================================================== */
+.cl-checkbox.chk-mail {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	min-width: 28px;
+	min-height: 28px;
+	padding: 0 !important;
+	background-color: @white;
+	border: 1px solid @gray-30;
+	border-radius: 6px;
+	box-sizing: border-box;
+
+	/* 아이콘 표출 전용 — 텍스트는 스크린리더용으로만 */
+	.cl-text {
+		#sound-only();
+		padding: 0;
+	}
+
+	/* 아이콘을 박스 정중앙에 배치 */
+	.cl-checkbox-field {
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		vertical-align: top !important;
+	}
+
+	.cl-icon-wrapper {
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		vertical-align: middle;
+	}
+
+	/* 미체크 — 메일 아이콘 */
+	.cl-checkbox-icon,
+	&:hover .cl-checkbox-icon,
+	&.cl-hover .cl-checkbox-icon,
+	&.cl-focus .cl-checkbox-icon,
+	.cl-checkbox-icon:focus {
+		#checkbox--button(@size-icon-small);
+		background-image: url("@{img-path}/icons/ico_mail.svg");
+	}
+
+	/* 체크 — 열린 메일 아이콘 */
+	&.cl-checked .cl-checkbox-icon,
+	&.cl-checked:hover .cl-checkbox-icon,
+	&.cl-checked.cl-hover .cl-checkbox-icon,
+	&.cl-checked.cl-focus .cl-checkbox-icon,
+	&.cl-checked .cl-checkbox-icon:focus {
+		background-image: url("@{img-path}/icons/ico_mail_open.svg");
+	}
+}

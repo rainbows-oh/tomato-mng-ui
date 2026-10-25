@@ -290,6 +290,8 @@
 /* --- Inline --- */
 .btn-inline {
 	#btn--default(@color-button-secondary-fill-default, @color-component-text-active, @color-component-text-active);
+	font-weight: 600 !important;
+	font-size: 13px !important;	
 	
 	&:not(.cl-disabled):hover,
 	&:not(.cl-disabled).cl-hover {
@@ -439,10 +441,13 @@
 /* --- Link --- */
 .btn-link {
 	#btn--default(@color-button-text-fill-default, transparent, @color-component-text-active);
+	font-weight: 400 !important;
+	text-align: left;
 	
 	&:not(.cl-disabled):hover,
 	&:not(.cl-disabled).cl-hover {
 		#btn--hover(@color-button-text-fill-default, transparent, @color-component-text-active);
+		text-decoration: underline;
 	}
 	
 	&:not(.cl-disabled).cl-activated,
@@ -524,6 +529,44 @@
 	}
 }
 
+/* --- Combo (콤보박스 필드와 동일한 스타일의 버튼 — class: btn-combo) --- */
+.cl-button.btn-combo {
+	#input--base();
+	/* 우측 화살표 (콤보박스 버튼 ico_angle) — background-image 로 표시 */
+	background-image: url("@{img-path}/icons/ico_angle.svg");
+	background-position: right (@size-input-padding-x / 2) center;
+	background-repeat: no-repeat;
+	background-size: @size-component-icon;
+	justify-content: flex-start;
+	padding: 0 @size-component-icon 0 12px;
+	text-align: left;
+	
+	/* 기본 .cl-button 의 hover/activated/active/focus 규칙(투명 배경·화살표 제거·보더 투명)이
+	   우선순위가 더 높으므로, 상태별로 배경·화살표·보더를 모두 다시 지정 */
+	&:not(.cl-disabled):hover,
+	&:not(.cl-disabled).cl-hover,
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		background-color: @color-input-surface;
+		background-image: url("@{img-path}/icons/ico_angle.svg");
+		border-color: @color-input-border;
+		color: @color-input-text;
+	}
+	
+	&.cl-focus,
+	&:not(.cl-disabled).cl-focus {
+		background-color: @color-input-surface;
+		background-image: url("@{img-path}/icons/ico_angle.svg");
+		color: @color-input-text;
+		#input--focus();
+	}
+	
+	&.cl-disabled {
+		#input--disabled();
+		background-image: url("@{img-path}/icons/ico_angle_disable.svg");
+	}
+}
+
 /* ==========================================================================
    Sizes
    ========================================================================== */
@@ -547,7 +590,7 @@
    Icon Button (아이콘 전용)
    ========================================================================== */
 .cl-button.icon {
-	min-width: @size-button-height;
+//	min-width: @size-button-height;
 	padding: 0 !important;
 	
 	.cl-text {
@@ -558,6 +601,60 @@
 		margin: 0 !important;
 	}
 }
+
+/* ==========================================================================
+   Grid Icon Button (그리드 셀 배치용 아이콘 전용 28×28 — class: grd-icon, .icon 불필요)
+   @note 크기는 celldata width/height="28" 로도 지정 (속성 우선, 여기 값은 기본 보장)
+          기본 .cl-button 의 hover/active/focus 투명 배경에 덮이지 않도록 상태별 동일 값 재선언
+         .cl-grid-row 편집 상태에서도 유지
+   ========================================================================== */
+//.cl-button.grd-icon,
+//.cl-button.card-icon {
+//	text-align: center !important;
+//	width: 28px;
+//	height: 28px;
+//	min-width: 28px;
+//	min-height: 28px;
+//	padding: 0 !important;
+//	border-radius: 6px;
+//	#btn--default(@white, @gray-30, @color-component-text);
+//	
+//	/* 아이콘 표출 전용 — 텍스트는 스크린리더용으로만 */
+//	.cl-text {
+//		#sound-only();
+//	}
+//	
+//	.cl-icon {
+//		margin: 0 !important;
+//	}
+//	
+//	&:not(.cl-disabled):hover,
+//	&:not(.cl-disabled).cl-hover,
+//	&:not(.cl-disabled).cl-activated,
+//	&:not(.cl-disabled):active,
+//	&.cl-focus {
+//		#btn--hover(@white, @gray-30, @color-component-text);
+//	}
+//}
+//
+//.cl-grid-row {
+//	&.cl-inserted,
+//	&.cl-modified,
+//	&.cl-selected,
+//	&.cl-editing {
+//		.cl-button.grd-icon {
+//			#btn--default(@white, @gray-30, @color-component-text);
+//			
+//			&:not(.cl-disabled):hover,
+//			&:not(.cl-disabled).cl-hover,
+//			&:not(.cl-disabled).cl-activated,
+//			&:not(.cl-disabled):active,
+//			&.cl-focus {
+//				#btn--hover(@white, @gray-30, @color-component-text);
+//			}
+//		}
+//	}
+//}
 
 /* ==========================================================================
    Icon Classes (버튼별 아이콘 매핑)
@@ -580,10 +677,6 @@
 
 .btn-pop .cl-icon {
 	background-image: url("@{img-path}/icons/ico_pop.svg") !important;
-}
-
-.btn-excel .cl-icon {
-	background-image: url("@{img-path}/icons/ico_file_excel.svg") !important;
 }
 
 .btn-pdf .cl-icon {
@@ -614,16 +707,28 @@
 	background-image: url("@{img-path}/icons/ico_plus_white.svg") !important;
 }
 
-.btn-remove .cl-icon {
-	background-image: url("@{img-path}/icons/ico_delete_white.svg") !important;
-}
-
 .btn-upload .cl-icon {
 	background-image: url("@{img-path}/icons/ico_upload_white.svg") !important;
 }
 
 .btn-download .cl-icon {
-	background-image: url("@{img-path}/icons/ico_download_white.svg") !important;
+	background-image: url("@{img-path}/icons/ico_download.svg") !important;
+}
+
+.btn-mail .cl-icon {
+	background-image: url("@{img-path}/icons/ico_mail.svg") !important;
+}
+
+.btn-mail-open .cl-icon {
+	background-image: url("@{img-path}/icons/ico_mail_open.svg") !important;
+}
+
+.btn-close .cl-icon {
+	background-image: url("@{img-path}/icons/ico_close.svg") !important;
+}
+
+.btn-file .cl-icon {
+	background-image: url("@{img-path}/icons/ico_file.svg") !important;
 }
 
 /* ==========================================================================
@@ -631,40 +736,36 @@
    ========================================================================== */
 
 /* --- Tertiary 계열 --- */
-.btn-insert,
-.btn-revert,
-.btn-delete,
-.btn-print,
-.btn-pop,
-.btn-excel,
-.btn-pdf,
-.btn-reset,
-.btn-refresh,
-.btn-single-search {
-	#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
-	
-	&:not(.cl-disabled):hover,
-	&:not(.cl-disabled).cl-hover {
-		#btn--hover(@color-button-tertiary-fill-hover, @color-button-tertiary-border, @color-component-text);
-	}
-	
-	&:not(.cl-disabled).cl-activated,
-	&:not(.cl-disabled):active {
-		#btn--pressed(@color-button-tertiary-fill-pressed, @color-button-tertiary-border, @color-component-text);
-	}
-	
-	&.cl-focus {
-		#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
-	}
-}
+//.btn-insert,
+//.btn-revert,
+//.btn-delete,
+//.btn-print,
+//.btn-pop,
+//.btn-excel,
+//.btn-pdf,
+//.btn-reset,
+//.btn-refresh,
+//.btn-single-search {
+//	#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
+//	
+//	&:not(.cl-disabled):hover,
+//	&:not(.cl-disabled).cl-hover {
+//		#btn--hover(@color-button-tertiary-fill-hover, @color-button-tertiary-border, @color-component-text);
+//	}
+//	
+//	&:not(.cl-disabled).cl-activated,
+//	&:not(.cl-disabled):active {
+//		#btn--pressed(@color-button-tertiary-fill-pressed, @color-button-tertiary-border, @color-component-text);
+//	}
+//	
+//	&.cl-focus {
+//		#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
+//	}
+//}
 
 /* --- Submit (Primary) 계열 --- */
 .btn-search,
-.btn-save,
-.btn-add,
-.btn-remove,
-.btn-upload,
-.btn-download {
+.btn-add {
 	#btn--default(@color-button-primary-fill-default, @color-button-primary-border, @color-text-inverse);
 	
 	&:not(.cl-disabled):hover,

@@ -14,6 +14,8 @@
 
 @import (reference) "_include.part.less";
 
+
+
 /* ==========================================================================
    1. Font Size
    ========================================================================== */
@@ -23,6 +25,88 @@
 .fs-lg  { #font-heading() !important; }
 .fs-xl  { #font-display() !important; }
 .fs-xxl { #font-display() !important; }
+
+/************************************************
+ * Text Style
+ * 타이포그래피 가이드 기준 (Text/Display ~ Text/Micro)
+ * 스타일별 크기 · 행간 · 굵기
+ ************************************************/
+
+/* 타이포 스타일 (font-size + line-height) — custom-settings Text Style 토큰 */
+.font-display {
+	font-size: @font-size-display !important;
+	line-height: @line-height-display;
+}
+
+.font-heading {
+	font-size: @font-size-heading !important;
+	line-height: @line-height-heading;
+}
+
+.font-subheading {
+	font-size: @font-size-subheading !important;
+	line-height: @line-height-subheading;
+	font-weight: 700 !important;
+}
+
+.font-title {
+	font-size: @font-size-title !important;
+	line-height: @line-height-title;
+	font-weight: 600 !important;
+}
+
+.font-button {
+	font-size: @font-size-button !important;
+	line-height: @line-height-button;
+}
+
+.font-body {
+	font-size: @font-size-body !important;
+	line-height: @line-height-body;
+}
+
+.font-body-s {
+	font-size: @font-size-body-s !important;
+	line-height: @line-height-body-s;
+	
+	&.gray {
+		color: @gray-50 !important;
+	}
+}
+
+.font-label {
+	font-size: @font-size-label !important;
+	line-height: @line-height-label;
+	color: @gray-90 !important;
+	
+	&.gray {
+		color: @gray-50 !important;
+	}
+}
+
+.font-caption {
+	font-size: @font-size-caption !important;
+	line-height: @line-height-caption;
+	color: @gray-50 !important;
+}
+
+.font-caption-strong {
+	font-size: @font-size-caption-strong !important;
+	line-height: @line-height-caption-strong;
+	color: @gray-70 !important;
+	font-weight: 600 !important;
+	
+	&.gray {
+		color: @gray-50 !important;
+	}
+}
+
+.font-micro {
+	font-size: @font-size-micro !important;
+	line-height: @line-height-micro;
+	color: @gray-50 !important;
+	font-weight: 600 !important;
+}
 
 /* ==========================================================================
    2. Font Weight

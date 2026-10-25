@@ -1,0 +1,68 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-50d0786b" version="1.0.6190">
+  <head std:sid="head-6665451d">
+    <screen std:sid="screen-be858a11" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-079179c5" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-e526e25b" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-88c04fd5"/>
+    <cl:appspec title="상태 선택 필터"/>
+  </head>
+  <body std:sid="body-a40d15f7" style="top:0px; left:0px; width:440px; height:36px;" class="status-selection">
+    <cl:checkbox std:sid="c-box-6052e54c" id="chkStatus" class="chk-status" fieldLabel="Status filter" text="Status" iconalign="right">
+      <cl:listener std:sid="listener-f72a745a" name="value-change" handler="onChkStatusValueChange"/>
+      <cl:verticaldata std:sid="v-data-704a577e" width="120px" height="36px" autosize="none"/>
+    </cl:checkbox>
+    <cl:group std:sid="group-1aec6b2f" id="grpCard" class="status-card">
+      <cl:verticaldata std:sid="v-data-0b19a5e4" width="440px" height="256px" autosize="height"/>
+      <cl:group std:sid="group-7dda9030" id="grp1">
+        <cl:verticaldata std:sid="v-data-a66cbd39" width="408px" height="58px" autosize="height"/>
+        <cl:output std:sid="output-d8c37708" id="optStatusTitle" class="font-label" value="Status">
+          <cl:verticaldata std:sid="v-data-5256dd4d" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:checkboxgroup std:sid="cb-group-08ff1d62" id="cbgStatus" fieldLabel="Status">
+          <cl:verticaldata std:sid="v-data-42120aee" width="400px" height="32px" autosize="height"/>
+          <cl:item std:sid="item-080cf392" label="Submitted" value="submitted"/>
+          <cl:item std:sid="item-54f6e645" label="Approved" value="approved"/>
+          <cl:item std:sid="item-0e0b0843" label="Rejected" value="rejected"/>
+          <cl:item std:sid="item-d4f1bfdd" label="Changed" value="changed"/>
+          <cl:itemstyle>
+            <cl:expbind property="color" category="STYLER" expression="label == &quot;Rejected&quot; ? &quot;#E11D48&quot; : &quot;&quot;"/>
+          </cl:itemstyle>
+        </cl:checkboxgroup>
+        <cl:verticallayout std:sid="v-layout-0d9b66ae" spacing="6"/>
+      </cl:group>
+      <cl:group std:sid="group-0275a01d" id="grp2">
+        <cl:verticaldata std:sid="v-data-0ebe1028" width="408px" height="66px" autosize="height"/>
+        <cl:output std:sid="output-798c6d18" id="optExchangeTitle" class="font-label" value="Exchange Status">
+          <cl:verticaldata std:sid="v-data-46078628" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:checkboxgroup std:sid="cb-group-8a6b6f86" id="cbgExchange" fieldLabel="Exchange Status">
+          <cl:verticaldata std:sid="v-data-97dc722a" width="400px" height="40px" autosize="height"/>
+          <cl:item std:sid="item-831f627b" label="Under Review" value="underReview"/>
+          <cl:item std:sid="item-59d45e85" label="Rejected" value="rejected"/>
+          <cl:item std:sid="item-cad535a4" label="Cancelled" value="cancelled"/>
+          <cl:item std:sid="item-8845b391" label="Filed" value="filed"/>
+          <cl:item std:sid="item-bb5d5b6b" label="Released as Circular" value="releasedAsCircular"/>
+          <cl:item std:sid="item-7578a4c6" label="Released as Company Report" value="releasedAsCompanyReport"/>
+          <cl:itemstyle>
+            <cl:expbind property="color" category="STYLER" expression="label == &quot;Rejected&quot; || label == &quot;Cancelled&quot; ? &quot;#E11D48&quot; : &quot;&quot;"/>
+          </cl:itemstyle>
+        </cl:checkboxgroup>
+        <cl:verticallayout std:sid="v-layout-11eb4c11" spacing="6"/>
+      </cl:group>
+      <cl:group std:sid="group-04b902cc" id="grp3" class="btn-footer-wrap">
+        <cl:verticaldata std:sid="v-data-7d7261c6" width="400px" height="54px" autosize="height"/>
+        <cl:button std:sid="button-96f349c1" id="btnClear" class="btn-secondary" value="Clear Filters">
+          <cl:flowlayoutdata std:sid="f-data-3a329ac6" width="110px" height="36px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-9a9eacbc" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-0ac5d247" spacing="18" leftmargin="24" rightmargin="24" topmargin="20" bottommargin="20"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-e8b89173" scrollable="false" spacing="8"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

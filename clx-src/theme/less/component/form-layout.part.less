@@ -54,8 +54,8 @@
 
 /* 폼 힌트 */
 .form-hint {
-	color: #64748d;
-	font-size: 11px;
+	color: @gray-50;
+	#font-caption();
 	
 	&.success {
 		color: @success;
@@ -65,8 +65,8 @@
 		color: @information;
 	}
 	
-	&.invalid {
-		color: @danger;
+	&.error {
+		color: @danger-60;
 	}
 }
 
@@ -137,108 +137,106 @@
 	}
 }
 
-/* ==========================================================================
- 조회형 (Search Box)
- ========================================================================== */
-.cl-container.search-box {
-	background-color: @white;
-	border: 1px solid #e3e8ee;
-	border-radius: 12px;
-	
-	.cl-container.search-header {
-		padding: 16px;
-	}
-	
-	.cl-container.search-content {
-		padding: 24px;
-		border-top: 1px solid #e3e8ee;
-		
-		.label {
-			font-weight: 600;
-			font-size: 13px;
-			color: #0d253d;
-		}
-		
-		.btn-group {
-			border-top: 1px solid #e3e8ee;
-		}
-	}
-	
-	.cl-output.search-footer {
-		padding: 0px 16px 16px;
-		color: #64748d;
-	}
-	
-	/* 조회 버튼 영역 */
-	.cl-container.sch-btn-wrap {
-		align-self: flex-start;
-		height: @size-form-control-height;
-		margin-left: @gap-8;
-		min-height: @size-form-control-height;
-		
-		/* 초기화 버튼 */
-		.cl-button.btn-reset {
-			#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
-			
-			&:not(.cl-disabled):hover,
-			&:not(.cl-disabled).cl-hover {
-				#btn--hover(@color-button-tertiary-fill-hover, @color-button-tertiary-border, @color-component-text);
-			}
-			
-			&:not(.cl-disabled).cl-activated,
-			&:not(.cl-disabled):active {
-				#btn--pressed(@color-button-tertiary-fill-pressed, @color-button-tertiary-border, @color-component-text);
-			}
-		}
-		
-		/* 조회 버튼 (point) */
-		.cl-button.btn-sch {
-			min-width: 64px;
-			#btn--default(@primary-40, @primary-40, @color-text-inverse);
-			
-			&:not(.cl-disabled):hover,
-			&:not(.cl-disabled).cl-hover {
-				#btn--hover(@primary-60, @primary-60, @color-text-inverse);
-			}
-			
-			&:not(.cl-disabled).cl-activated,
-			&:not(.cl-disabled):active {
-				#btn--pressed(@primary-80, @primary-80, @color-text-inverse);
-			}
-		}
-	}
-}
 
-/* 조회 폼 토글 버튼 */
-.cl-button.sch-toggle {
-	#btn--default(@primary-5, @primary-10, @primary-80);
-	width: 60px;
-	border-radius: 0 0 @size-component-radius @size-component-radius;
-	border-top: 0;
-	margin: -1px auto 0 auto;
-	
-	.cl-icon {
-		width: @size-icon-xsmall;
-		height: @size-icon-xsmall;
-		background-image: url("@{img-path}/icons/ico_angle.svg");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: contain;
-		margin: 0;
-	}
-	
-	&:not(.cl-disabled):hover,
-	&:not(.cl-disabled).cl-hover {
-		#btn--hover(@primary-5, @primary-10, @primary-80);
-	}
-	
-	&:not(.cl-disabled).cl-activated,
-	&:not(.cl-disabled):active {
-		#btn--pressed(@primary-5, @primary-10, @primary-80);
-	}
-	
-	/* 접힘 상태 — 화살표 회전 */
-	&.active .cl-icon {
-		transform: rotate(180deg);
-	}
-}
+//.cl-container.search-box {
+//	background-color: @white;
+//	border: 1px solid #e3e8ee;
+//	border-radius: 12px;
+//	
+//	.cl-container.search-header {
+//		padding: 16px;
+//	}
+//	
+//	.cl-container.search-content {
+//		padding: 24px;
+//		border-top: 1px solid #e3e8ee;
+//		
+//		.label {
+//			font-weight: 600;
+//			font-size: 13px;
+//			color: #0d253d;
+//		}
+//		
+//		.btn-group {
+//			border-top: 1px solid #e3e8ee;
+//		}
+//	}
+//	
+//	.cl-output.search-footer {
+//		padding: 0px 16px 16px;
+//		color: #64748d;
+//	}
+//	
+//	/* 조회 버튼 영역 */
+//	.cl-container.sch-btn-wrap {
+//		align-self: flex-start;
+//		height: @size-form-control-height;
+//		margin-left: @gap-8;
+//		min-height: @size-form-control-height;
+//		
+//		/* 초기화 버튼 */
+//		.cl-button.btn-reset {
+//			#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
+//			
+//			&:not(.cl-disabled):hover,
+//			&:not(.cl-disabled).cl-hover {
+//				#btn--hover(@color-button-tertiary-fill-hover, @color-button-tertiary-border, @color-component-text);
+//			}
+//			
+//			&:not(.cl-disabled).cl-activated,
+//			&:not(.cl-disabled):active {
+//				#btn--pressed(@color-button-tertiary-fill-pressed, @color-button-tertiary-border, @color-component-text);
+//			}
+//		}
+//		
+//		/* 조회 버튼 (point) */
+//		.cl-button.btn-sch {
+//			min-width: 64px;
+//			#btn--default(@primary-40, @primary-40, @color-text-inverse);
+//			
+//			&:not(.cl-disabled):hover,
+//			&:not(.cl-disabled).cl-hover {
+//				#btn--hover(@primary-60, @primary-60, @color-text-inverse);
+//			}
+//			
+//			&:not(.cl-disabled).cl-activated,
+//			&:not(.cl-disabled):active {
+//				#btn--pressed(@primary-80, @primary-80, @color-text-inverse);
+//			}
+//		}
+//	}
+//}
+//
+///* 조회 폼 토글 버튼 */
+//.cl-button.sch-toggle {
+//	#btn--default(@primary-5, @primary-10, @primary-80);
+//	width: 60px;
+//	border-radius: 0 0 @size-component-radius @size-component-radius;
+//	border-top: 0;
+//	margin: -1px auto 0 auto;
+//	
+//	.cl-icon {
+//		width: @size-icon-xsmall;
+//		height: @size-icon-xsmall;
+//		background-image: url("@{img-path}/icons/ico_angle.svg");
+//		background-position: center;
+//		background-repeat: no-repeat;
+//		background-size: contain;
+//		margin: 0;
+//	}
+//	
+//	&:not(.cl-disabled):hover,
+//	&:not(.cl-disabled).cl-hover {
+//		#btn--hover(@primary-5, @primary-10, @primary-80);
+//	}
+//	
+//	&:not(.cl-disabled).cl-activated,
+//	&:not(.cl-disabled):active {
+//		#btn--pressed(@primary-5, @primary-10, @primary-80);
+//	}
+//	
+//	/* 접힘 상태 — 화살표 회전 */
+//	&.active .cl-icon {
+//		transform: rotate(180deg);
+//	}
+//}

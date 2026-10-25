@@ -315,7 +315,7 @@
 	.cl-calendar-content-month.cl-calendar-anniversary,
 	.cl-calendar-content-year.cl-calendar-anniversary {
 		box-shadow: none;
-		color: @cal--date-color-text;
+		color: @danger-60;
 		
 		&:hover {
 			color: @cal--date-color-text;
@@ -472,6 +472,7 @@
 		position: relative;
 		background-color: @cal--day-color-urgent;
 		border-color: @cal--day-color-border-urgent;
+		color: @cal--date-color-text;
 		
 		&::before {
 			content: "";
@@ -526,6 +527,7 @@
 			.cl-text {
 				background-color: @cal--day-color-selected;
 				border-color: @cal--day-color-selected;
+				color: @cal--date-color-text-selected; /* .cal-urgent 의 .cl-text 색상보다 우선 */
 			}
 		}
 	}

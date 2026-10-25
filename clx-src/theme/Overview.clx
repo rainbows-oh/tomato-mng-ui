@@ -829,90 +829,78 @@
     </cl:group>
     <cl:group std:sid="group-355146cf" clipcontent="false">
       <cl:verticaldata std:sid="v-data-3bab6640" width="1440px" height="24px" autosize="both"/>
-      <cl:output std:sid="output-9901a99e" value="배지">
+      <cl:output std:sid="output-9901a99e" value="배지- fill">
         <cl:flowlayoutdata std:sid="f-data-4394db20" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
       <cl:output std:sid="output-12886102" class="badge fill red" value="Rejected">
-        <cl:flowlayoutdata std:sid="f-data-a1dbd6eb" width="68px" height="20px" autosize="both"/>
+        <cl:flowlayoutdata std:sid="f-data-a1dbd6eb" width="68px" height="24px" autosize="both"/>
       </cl:output>
       <cl:output std:sid="output-8f8252d4" class="badge fill yellow" value="Changed">
-        <cl:flowlayoutdata std:sid="f-data-1982d6fe" width="68px" height="20px" autosize="both"/>
+        <cl:flowlayoutdata std:sid="f-data-1982d6fe" width="68px" height="24px" autosize="both"/>
       </cl:output>
       <cl:output std:sid="output-83c870c9" class="badge fill green" value="Approved">
-        <cl:flowlayoutdata std:sid="f-data-03243110" width="68px" height="20px" autosize="both"/>
+        <cl:flowlayoutdata std:sid="f-data-03243110" width="68px" height="24px" autosize="both"/>
       </cl:output>
-      <cl:output std:sid="output-95f3d8f3" class="badge fill information" value="Submitted">
-        <cl:flowlayoutdata std:sid="f-data-f94d18da" width="68px" height="20px" autosize="both"/>
+      <cl:output std:sid="output-95f3d8f3" class="badge fill blue" value="Submitted">
+        <cl:flowlayoutdata std:sid="f-data-f94d18da" width="68px" height="24px" autosize="both"/>
       </cl:output>
       <cl:flowlayout std:sid="f-layout-9167dbc8" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
-    <cl:group std:sid="group-155f786b" clipcontent="false">
-      <cl:verticaldata std:sid="v-data-12b01a4e" width="1440px" height="24px" autosize="both"/>
-      <cl:output std:sid="output-65d431f2" value="배지 (아웃라인)">
-        <cl:flowlayoutdata std:sid="f-data-0a322d8f" width="160px" height="24px" syncminheight="true" autosize="height"/>
+    <cl:group std:sid="group-2b075b14" id="grp7" clipcontent="false">
+      <cl:verticaldata std:sid="v-data-2c347e78" width="1440px" height="24px" autosize="both"/>
+      <cl:output std:sid="output-ad54f651" id="opt9" value="배지 - count">
+        <cl:flowlayoutdata std:sid="f-data-de9c3ade" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
-      <cl:output std:sid="output-be4c330d" class="badge outline primary" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-3cdc1963" width="68px" height="20px" autosize="both"/>
+      <cl:output std:sid="output-0cbe7b65" id="opt10" class="badge count answered" value="20">
+        <cl:flowlayoutdata std:sid="f-data-944edab0" width="68px" height="20px" autosize="both"/>
       </cl:output>
-      <cl:output std:sid="output-4b6fa177" class="badge outline secondary" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-269d0136" width="68px" height="20px" autosize="both"/>
+      <cl:output std:sid="output-34d456c5" id="opt14" class="badge count close" value="4">
+        <cl:flowlayoutdata std:sid="f-data-6c7b9c15" width="68px" height="20px" autosize="both"/>
       </cl:output>
-      <cl:output std:sid="output-bf0c6069" class="badge outline gray" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-37ba105d" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-c28d9153" class="badge outline point" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-05e64ecf" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-9c32863b" class="badge outline danger" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-f314171e" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-c11bc2c1" class="badge outline warning" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-8a163a1c" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-0c96c424" class="badge outline success" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-7d97f6cc" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-11cef5b4" class="badge outline information" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-335d318f" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-c79ac69c" class="badge outline disable" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-74fcd3b1" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:flowlayout std:sid="f-layout-40ff16e7" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
+      <cl:flowlayout std:sid="f-layout-6d799f56" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
-    <cl:group std:sid="group-9da984c4" clipcontent="false">
-      <cl:verticaldata std:sid="v-data-9cc57526" width="1440px" height="24px" autosize="both"/>
-      <cl:output std:sid="output-a1bf1163" value="배지 (소프트)">
-        <cl:flowlayoutdata std:sid="f-data-43cfbb31" width="160px" height="24px" syncminheight="true" autosize="height"/>
+    <cl:group std:sid="group-155f786b" clipcontent="false">
+      <cl:verticaldata std:sid="v-data-12b01a4e" width="1440px" height="400px" autosize="both"/>
+      <cl:combobox std:sid="c-box-45de4b81" id="cmb7">
+        <cl:listener std:sid="listener-a39aeaf0" name="item-click" handler="onCmb7ItemClick"/>
+        <cl:flowlayoutdata std:sid="f-data-9eb71461" width="136px" height="36px"/>
+        <cl:item std:sid="t-item-9e318d43" label="label1label1label1label1label1label1label1label1" value="value1" icon="theme/img/icons/ico_download.svg"/>
+        <cl:item std:sid="t-item-9e9e797b" label="label2" value="value2" icon="theme/img/icons/ico_download.svg"/>
+        <cl:item std:sid="t-item-a7d0321e" label="label3" value="value3" icon="theme/img/icons/ico_download.svg"/>
+        <cl:item std:sid="t-item-681bfde5" label="label4" value="value4" icon="theme/img/icons/ico_download.svg"/>
+        <cl:item std:sid="t-item-b812fe13" label="label5" value="value5" icon="theme/img/icons/ico_download.svg"/>
+        <cl:liststyle class="cmb-fild-down"/>
+      </cl:combobox>
+      <cl:output std:sid="output-cd28e241" id="opt8" class="opt-attachments" value="correspondence-1-notice.pdf " displayexp="text + sstr(userAttr(&quot;size&quot;) + &quot;KB&quot;, [&quot;size&quot;])">
+        <cl:attribute name="size" value="325"/>
+        <cl:flowlayoutdata std:sid="f-data-af80c219" width="1024px" height="36px" autosize="height"/>
       </cl:output>
-      <cl:output std:sid="output-95215f52" class="badge fill blue" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-e7aecfc6" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-fa73d524" class="badge soft secondary" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-d6147c1d" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-ebfb2bc3" class="badge soft gray" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-c5c7afb0" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-bee7ca8b" class="badge soft point" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-2a4609b9" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-db4aa2e0" class="badge fill red" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-94105f41" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-b8530e63" class="badge fill yellow" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-26d605ae" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-c4f90b31" class="badge fill green" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-948c3d32" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-1c2663d2" class="badge fill blue" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-8a7cfb91" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:output std:sid="output-7b836cc3" class="badge soft disable" value="배지">
-        <cl:flowlayoutdata std:sid="f-data-0d6fdf0a" width="68px" height="20px" autosize="both"/>
-      </cl:output>
-      <cl:flowlayout std:sid="f-layout-a09417bd" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
+      <cl:udc std:sid="ud-control-63006cc6" type="udc.pse.com.udcComFileDropzone">
+        <cl:flowlayoutdata std:sid="f-data-08847859" width="600px" height="147px" autosize="height"/>
+      </cl:udc>
+      <cl:button std:sid="button-b31d18b7" id="btn8" class="btn-download btn-inline" value="Button" icon="0">
+        <cl:flowlayoutdata std:sid="f-data-cbc65776" width="100px" height="36px"/>
+      </cl:button>
+      <cl:group std:sid="group-86320e6f" id="grp6" class="attachments">
+        <std:metadata>
+          <std:property key="template-uuid" value="6e6db236-c296-4287-a02f-d522573e7b3f"/>
+          <std:property key="template-rev" value="1"/>
+        </std:metadata>
+        <cl:flowlayoutdata std:sid="f-data-2712eabf" width="891px" height="36px" autosize="height"/>
+        <cl:button std:sid="button-f1e34ccd" id="btn9" class="btn-close icon" icon="0">
+          <cl:formdata std:sid="f-data-d6a5186c" row="0" col="1"/>
+        </cl:button>
+        <cl:output std:sid="output-9aa9bd55" id="opt7" value="correspondence-1-notice.pdf " displayexp="text + sstr(&quot; · &quot;, [&quot;size&quot;]) + sstr(userAttr(&quot;size&quot;) + &quot;KB&quot;, [&quot;size&quot;])">
+          <cl:attribute name="size" value="325"/>
+          <cl:formdata std:sid="f-data-e850e7ca" row="0" col="0"/>
+        </cl:output>
+        <cl:formlayout std:sid="f-layout-556a20f6" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="16" unit="PIXEL"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:flowlayout std:sid="f-layout-40ff16e7" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
     <cl:group std:sid="group-4e2e3067" clipcontent="false">
       <cl:verticaldata std:sid="v-data-b9cde462" width="1440px" height="24px" autosize="both"/>
@@ -1451,7 +1439,7 @@
       <cl:output std:sid="output-c0f052c6" value="탭폴더 (라인형)">
         <cl:flowlayoutdata std:sid="f-data-e844e32f" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
-      <cl:tabfolder std:sid="t-folder-791fe89d" class="line" childcombinatorclass="tablist">
+      <cl:tabfolder std:sid="t-folder-791fe89d" class="line" childcombinatorclass="tablist" item-sizing="fill">
         <cl:flowlayoutdata std:sid="f-data-cc6a9b12" width="1024px" height="200px"/>
         <cl:tabitem std:sid="t-item-44c01d1c" text="텍스트">
           <cl:group std:sid="group-ef210b15">

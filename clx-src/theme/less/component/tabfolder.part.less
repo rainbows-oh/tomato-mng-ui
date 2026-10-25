@@ -25,6 +25,7 @@
 @tab--line-color-action: @color-action-primary;
 @tab--line-color-text: @color-component-text;
 @tab--line-color-border: @color-component-border;
+@tab--line-color-divider: @gray-20;           /* #E2E8F0 — 라인형 헤더 전체 보더 */
 
 /* ==========================================================================
  Mixins
@@ -215,6 +216,12 @@
 		> .cl-tabfolder-header {
 			&.cl-top,
 			&.cl-bottom {
+				/* 헤더 전체 보더 + 높이 40px (기본 헤더 구분선 그라데이션은 보더로 대체) */
+				background: none;
+				border: 1px solid @tab--line-color-divider;
+				box-sizing: border-box;
+				height: 40px;
+				
 				.cl-tabfolder-header-viewport {
 				}
 				
@@ -223,7 +230,8 @@
 					border: 0;
 					color: @tab--line-color-text;
 					text-align: center;
-					min-height: 32px;
+					height: 100%;
+					min-height: 0;
 					
 					/* 강조선 — 기본 너비 0, 선택 시 100% 확장 */
 					&::before {
