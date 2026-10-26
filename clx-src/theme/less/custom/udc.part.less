@@ -92,10 +92,30 @@
 .cl-container.pagination {
 	padding: 2px 0;
 	
-	.cl-output.page-info {
-		color: #475569;
-		font-size: 13px;
-		font-weight: @font-weight-normal;
+	.cl-container.page-info {
+		.cl-output {
+			color: #475569;
+			font-size: 13px;
+			font-weight: @font-weight-normal;
+			white-space: nowrap;
+		}
+	}
+	
+	/* 모바일 — 건수 정보와 페이지 이동 영역을 각각 가운데 정렬위해*/
+	@media (max-width: 767px) {
+		.cl-container.page-info,
+		.cl-container.page-navi {
+			> .cl-layout > .cl-layout-content {
+				text-align: center !important;
+			}
+		}
+		
+		.cl-container.page-info {
+			.cl-layout-wrap,
+			.cl-output {
+				height: auto !important;
+			}
+		}
 	}
 	
 	.cl-button {

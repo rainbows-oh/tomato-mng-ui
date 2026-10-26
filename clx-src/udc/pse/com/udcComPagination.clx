@@ -8,44 +8,52 @@
     <cl:appspec title="페이지 인덱서"/>
   </head>
   <body std:sid="body-4e9277da" style="top:0px; left:0px; width:1024px; height:40px;" class="pagination">
-    <cl:group std:sid="group-b0c50d05">
-      <cl:formdata std:sid="f-data-c551c5d0" row="0" col="0"/>
-      <cl:group std:sid="group-146907e9" id="grp1">
-        <cl:flowlayoutdata std:sid="f-data-1de05991" width="150px" height="36px" autosize="width"/>
-        <cl:output std:sid="output-6876f868" id="opt2" class="page-info" value="Viewing 1-10">
-          <cl:flowlayoutdata std:sid="f-data-6203ec40" width="92px" height="100%" autosize="width"/>
+    <cl:group std:sid="group-99c2fdee" id="grpPagination">
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:formdata std:sid="f-data-5a08668f" row="0" col="0" rowspan="1" colspan="2"/>
+      <cl:group std:sid="group-146907e9" class="page-info">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-22efb229" row="0" col="0"/>
+        <cl:output std:sid="output-6876f868" value="Viewing 1-10">
+          <cl:flowlayoutdata std:sid="f-data-6203ec40" width="92px" height="36px" autosize="width"/>
         </cl:output>
-        <cl:output std:sid="output-12c916ba" id="opt1" class="page-info" value="120" displayexp="&quot;of &quot; + text">
+        <cl:output std:sid="output-12c916ba" value="120" displayexp="&quot;of &quot; + text">
           <cl:flowlayoutdata std:sid="f-data-88818908" width="48px" height="36px" autosize="width"/>
         </cl:output>
-        <cl:flowlayout std:sid="f-layout-9b47ae3b" scrollable="false" hspacing="4" vspacing="0" linewrap="false"/>
+        <cl:flowlayout std:sid="f-layout-9b47ae3b" scrollable="false" hspacing="4" vspacing="0" valign="middle" linewrap="false"/>
       </cl:group>
-      <cl:flowlayout std:sid="f-layout-d438d66b" scrollable="false" hspacing="12" vspacing="0" linewrap="false"/>
+      <cl:group std:sid="group-65607b43" class="page-navi">
+        <cl:formdata std:sid="f-data-f6ec35e2" row="0" col="1"/>
+        <cl:button std:sid="button-5ddc4c2e" id="btn4" class="before icon" enabled="false" value="before" icon="0">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:flowlayoutdata std:sid="f-data-bc05c63d" width="24px" height="24px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-b619df1a" id="btn1" class="prev" enabled="false" value="Prev" icon="0">
+          <cl:flowlayoutdata std:sid="f-data-9e43a297" width="80-" height="24px" autosize="width"/>
+        </cl:button>
+        <cl:numbereditor std:sid="n-editor-2422de70" id="nbe1" class="text-center" fieldLabel="Go to page" value="1" showclearbutton="false">
+          <cl:flowlayoutdata std:sid="f-data-86143640" width="36px" height="36px"/>
+        </cl:numbereditor>
+        <cl:output std:sid="output-9713d3f6" id="opt3" class="page-info" value="8" displayexp="&quot;/ &quot; + text">
+          <cl:flowlayoutdata std:sid="f-data-1e62c1af" width="46px" height="36px" autosize="width"/>
+        </cl:output>
+        <cl:button std:sid="button-e1cacdef" id="btn2" class="next" value="Next" icon="0" iconalign="right">
+          <cl:flowlayoutdata std:sid="f-data-7c3f5695" width="80-" height="24px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-aa2cceac" id="btn3" class="after icon" value="after" icon="0">
+          <cl:flowlayoutdata std:sid="f-data-b8e99a48" width="24px" height="24px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-9792d1d5" hspacing="8"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-ae1b757e" scrollable="false" hspace="1fr" vspace="12px">
+        <cl:rows length="36" unit="PIXEL" autoSizing="false" shadecolor="transparent" syncminlength="true"/>
+        <cl:columns length="150" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+        <cl:columns length="350" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
     </cl:group>
-    <cl:group std:sid="group-65607b43" class="page-navi">
-      <cl:formdata std:sid="f-data-f6ec35e2" row="0" col="1"/>
-      <cl:button std:sid="button-5ddc4c2e" id="btn4" class="before icon" enabled="false" value="before" icon="0">
-        <cl:flowlayoutdata std:sid="f-data-bc05c63d" width="24px" height="24px" autosize="width"/>
-      </cl:button>
-      <cl:button std:sid="button-b619df1a" id="btn1" class="prev" enabled="false" value="Prev" icon="0">
-        <cl:flowlayoutdata std:sid="f-data-9e43a297" width="80-" height="24px" autosize="width"/>
-      </cl:button>
-      <cl:numbereditor std:sid="n-editor-2422de70" id="nbe1" class="text-center" fieldLabel="Go to page" value="1" showclearbutton="false">
-        <cl:flowlayoutdata std:sid="f-data-86143640" width="36px" height="36px"/>
-      </cl:numbereditor>
-      <cl:output std:sid="output-9713d3f6" id="opt3" class="page-info" value="8" displayexp="&quot;/ &quot; + text">
-        <cl:flowlayoutdata std:sid="f-data-1e62c1af" width="46px" height="36px" autosize="width"/>
-      </cl:output>
-      <cl:button std:sid="button-e1cacdef" id="btn2" class="next" value="Next" icon="0" iconalign="right">
-        <cl:flowlayoutdata std:sid="f-data-7c3f5695" width="80-" height="24px" autosize="width"/>
-      </cl:button>
-      <cl:button std:sid="button-aa2cceac" id="btn3" class="after icon" value="after" icon="0">
-        <cl:flowlayoutdata std:sid="f-data-b8e99a48" width="24px" height="24px" autosize="width"/>
-      </cl:button>
-      <cl:flowlayout std:sid="f-layout-9792d1d5" hspacing="8"/>
-    </cl:group>
-    <cl:formlayout std:sid="f-layout-5b56665c" scrollable="false" hspace="1fr" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
-      <cl:rows length="36" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+    <cl:formlayout std:sid="f-layout-5b56665c" scrollable="false" hspace="1fr" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
       <cl:columns length="150" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
       <cl:columns length="450" unit="PIXEL" autoSizing="true" syncminlength="false"/>
     </cl:formlayout>
