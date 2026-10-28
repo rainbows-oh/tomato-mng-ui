@@ -1,0 +1,339 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-ab4e79cf" version="1.0.6164">
+  <head std:sid="head-fef2a59d">
+    <screen std:sid="screen-fce5e969" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-5dac1053" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-74b548ad" id="EXB-PART" name="EXB-PART" width="360px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-e918cc57">
+      <cl:dataset std:sid="d-set-0000003e" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-00000001" name="category"/>
+          <cl:datacolumn std:sid="d-column-00000002" name="totalDirect"/>
+          <cl:datacolumn std:sid="d-column-00000003" name="totalIndirect"/>
+          <cl:datacolumn std:sid="d-column-00000004" name="totalDirectIndirect"/>
+          <cl:datacolumn std:sid="d-column-00000005" name="pctOutstanding"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Directors]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[444600]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[239400]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[684000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[6.32]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Officers]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[296400]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[159600]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[456000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[4.21]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Principal/Substantial Shareholders]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[691600]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[372400]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[1064000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[9.83]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Affiliates]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[197600]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[106400]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[304000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[2.81]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Government]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[123500]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[66500]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[190000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[1.76]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Banks]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[148200]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[79800]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[228000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[2.11]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Employees]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[172900]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[93100]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[266000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[2.46]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Look-Up Shares]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[98800]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[53200]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[152000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[1.40]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Others]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[296400]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[159600]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[456000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[4.21]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="Public Ownership Monitoring_View Details"/>
+  </head>
+  <body std:sid="body-6585a0fc">
+    <cl:group std:sid="group-0b464f24" id="grpBody">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:verticaldata std:sid="v-data-40a89747" width="1024px" height="769px" autosize="height"/>
+      <cl:group std:sid="group-00000267">
+        <cl:attribute name="mobile-column-count" value="1"/>
+        <cl:verticaldata std:sid="v-data-00000268" width="976px" height="44px" autosize="height"/>
+        <cl:group std:sid="group-00000269">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-0000026a" width="100" height="13" row="0" col="0"/>
+          <cl:output std:sid="output-0000026b" class="font-caption" value="Company Report No. PO-2026-0014">
+            <cl:verticaldata std:sid="v-data-0000026c" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-0000026d" class="dot-separate">
+            <cl:verticaldata std:sid="v-data-0000026e" width="400px" height="20px" autosize="height"/>
+            <cl:output std:sid="output-0000026f" class="font-body-s" value="Mindanao Sugar Mills Corp. (MSM)">
+              <cl:flowlayoutdata std:sid="f-data-00000270" width="230px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-00000271" class="font-body-s" value="Monthly">
+              <cl:flowlayoutdata std:sid="f-data-00000272" width="80px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-00000273" class="font-body-s" value="08-31-2026">
+              <cl:flowlayoutdata std:sid="f-data-00000274" width="100px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:flowlayout std:sid="f-layout-00000275" hspacing="0" valign="middle"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-00000276" spacing="4"/>
+        </cl:group>
+        <cl:group std:sid="group-00000277" id="grp10">
+          <cl:formdata std:sid="f-data-00000278" row="0" col="1"/>
+          <cl:button std:sid="button-00000279" id="btn1" class="btn-download btn-inline" fieldLabel="PDF_Down" value="PO-2026-0014.pdf" icon="0">
+            <cl:flowlayoutdata std:sid="f-data-0000027a" width="180px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-0000027b" halign="right"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-0000027c" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION" autoSizing="true"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-c9d6abb5" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="14"/>
+        <cl:verticaldata std:sid="v-data-3172a4b8" width="976px" height="580px" autosize="height"/>
+        <cl:group std:sid="group-00000216" class="card gray">
+          <cl:verticaldata std:sid="v-data-00000217" width="976px" height="174px" autosize="height"/>
+          <cl:output std:sid="output-00000218" class="font-subheading" value="Common Shares">
+            <cl:verticaldata std:sid="v-data-00000219" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-0000021a">
+            <cl:verticaldata std:sid="v-data-0000021b" width="934px" height="42px" autosize="height"/>
+            <cl:group std:sid="group-00000201">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-00000202" width="100" height="23" row="0" col="0"/>
+              <cl:output std:sid="output-00000203" class="font-caption" value="Number of Issued Common Shares">
+                <cl:verticaldata std:sid="v-data-00000204" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-00000205" class="font-body" value="11,000,000">
+                <cl:verticaldata std:sid="v-data-00000206" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-00000207" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-00000208">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-00000209" row="0" col="1"/>
+              <cl:output std:sid="output-0000020a" class="font-caption" value="Number of Treasury Common Shares">
+                <cl:verticaldata std:sid="v-data-0000020b" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-0000020c" class="font-body" value="180,000">
+                <cl:verticaldata std:sid="v-data-0000020d" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-0000020e" spacing="4"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-0000021c" scrollable="false" hspace="12px" vspace="14px" hseparatorwidth="1">
+              <cl:rows length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-c783ba79" id="grp1">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:verticaldata std:sid="v-data-5b801cff" width="934px" height="42px" autosize="height"/>
+            <cl:group std:sid="group-79f489a0" id="grp4">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-17db86dd" width="100" height="23" row="0" col="0"/>
+              <cl:output std:sid="output-4e067992" id="opt5" class="font-caption" value="Number of Outstanding Common Shares">
+                <cl:verticaldata std:sid="v-data-7b5d876f" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-5788efa9" id="opt6" class="font-body" value="10,820,000">
+                <cl:verticaldata std:sid="v-data-97d46bd3" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-0687d6b1" spacing="4"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-abdab11f" scrollable="false" hspace="12px" vspace="14px" hseparatorwidth="1">
+              <cl:rows length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-0000021d" spacing="14"/>
+        </cl:group>
+        <cl:grid std:sid="grid-00000261" datasetid="dsList" autofit="0, 1, 2, 3, 4" resizablecolumns="all" columnMovable="true">
+          <cl:verticaldata std:sid="v-data-00000262" width="400px" height="200px" autosize="height"/>
+          <cl:gridcolumn std:sid="g-column-00000248" width="320px"/>
+          <cl:gridcolumn std:sid="g-column-00000249" width="190px"/>
+          <cl:gridcolumn std:sid="g-column-0000024a" width="190px"/>
+          <cl:gridcolumn std:sid="g-column-0000024b" width="190px"/>
+          <cl:gridcolumn std:sid="g-column-0000024c" width="160px"/>
+          <cl:gridheader std:sid="gh-band-00000263">
+            <cl:gridrow std:sid="g-row-00000264" height="37px"/>
+            <cl:gridcell std:sid="gh-cell-0000024d" rowindex="0" colindex="0" targetcolumnname="category" sortable="false" filterable="false" text="Category"/>
+            <cl:gridcell std:sid="gh-cell-0000024e" rowindex="0" colindex="1" targetcolumnname="totalDirect" sortable="false" filterable="false" text="Total Direct"/>
+            <cl:gridcell std:sid="gh-cell-0000024f" rowindex="0" colindex="2" targetcolumnname="totalIndirect" sortable="false" filterable="false" text="Total Indirect"/>
+            <cl:gridcell std:sid="gh-cell-00000250" rowindex="0" colindex="3" targetcolumnname="totalDirectIndirect" sortable="false" filterable="false" text="Total Direct &amp; Indirect Shares"/>
+            <cl:gridcell std:sid="gh-cell-00000251" rowindex="0" colindex="4" targetcolumnname="pctOutstanding" sortable="false" filterable="false" text="% to Total Outstanding Shares"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-00000265">
+            <cl:gridrow std:sid="g-row-00000266" height="46px"/>
+            <cl:gridcell std:sid="gd-cell-00000255" rowindex="0" colindex="0" columnname="category">
+              <cl:output std:sid="output-00000256" class="font-label">
+                <cl:expbind property="value" category="PROPERTY" expression="category"/>
+                <cl:celldata std:sid="c-data-00000257"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000258" rowindex="0" colindex="1" columnname="totalDirect">
+              <cl:output std:sid="output-00000259" datatype="number" format="#,##0">
+                <cl:expbind property="value" category="PROPERTY" expression="totalDirect"/>
+                <cl:celldata std:sid="c-data-0000025a"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000025b" rowindex="0" colindex="2" columnname="totalIndirect">
+              <cl:output std:sid="output-0000025c" datatype="number" format="#,##0">
+                <cl:expbind property="value" category="PROPERTY" expression="totalIndirect"/>
+                <cl:celldata std:sid="c-data-0000025d"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000025e" rowindex="0" colindex="3" columnname="totalDirectIndirect">
+              <cl:output std:sid="output-0000025f" datatype="number" format="#,##0">
+                <cl:expbind property="value" category="PROPERTY" expression="totalDirectIndirect"/>
+                <cl:celldata std:sid="c-data-00000260"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000252" rowindex="0" colindex="4" columnname="pctOutstanding">
+              <cl:output std:sid="output-00000253" datatype="number" format="#,##0.00" displayexp="text + &quot;%&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="pctOutstanding"/>
+                <cl:celldata std:sid="c-data-00000254"/>
+              </cl:output>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:group std:sid="group-886a5c4d" id="grp2" class="card">
+          <cl:verticaldata std:sid="v-data-01c1bace" width="976px" height="174px" autosize="height"/>
+          <cl:output std:sid="output-40bc10b2" id="opt1" class="font-subheading" value="Listed &amp; Public Ownership">
+            <cl:verticaldata std:sid="v-data-a9bacdad" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-30441536" id="grp3">
+            <cl:verticaldata std:sid="v-data-aa9f5330" width="934px" height="42px" autosize="height"/>
+            <cl:group std:sid="group-4c14dbe0" id="grp5">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-3cc1c032" width="100" height="23" row="0" col="0"/>
+              <cl:output std:sid="output-0b996a66" id="opt2" class="font-caption" value="Number of Listed Common Shares">
+                <cl:verticaldata std:sid="v-data-658bc56d" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-871f9d36" id="opt3" class="font-body" value="9,340,000">
+                <cl:verticaldata std:sid="v-data-3410cd2b" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-b6081b7b" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-67b888ff" id="grp6">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-92359b45" row="0" col="1"/>
+              <cl:output std:sid="output-1148438c" id="opt4" class="font-caption" value="Total Number of Non-Public Shares">
+                <cl:verticaldata std:sid="v-data-fbf54d34" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-41531d9d" id="opt7" class="font-body" value="4,100,000">
+                <cl:verticaldata std:sid="v-data-7283d95a" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-3ef2231a" spacing="4"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-04d5d333" scrollable="false" hspace="12px" vspace="14px" hseparatorwidth="1">
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-c9428bab" id="grp7">
+            <cl:verticaldata std:sid="v-data-361300df" width="934px" height="42px" autosize="height"/>
+            <cl:group std:sid="group-e3c053fa" id="grp8">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-bf0ad204" width="100" height="23" row="0" col="0"/>
+              <cl:output std:sid="output-1757f7f3" id="opt8" class="font-caption" value="Total Number of Shares Owned by the Public">
+                <cl:verticaldata std:sid="v-data-6119fd01" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-59be4384" id="opt9" class="font-body" value="5,240,000">
+                <cl:verticaldata std:sid="v-data-9e57fd5d" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-37483e95" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-7288f6a7" id="grp9">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-b9afc93c" row="0" col="1"/>
+              <cl:output std:sid="output-8e7e4e31" id="opt10" class="font-caption" value="Public Ownership Percentage">
+                <cl:verticaldata std:sid="v-data-ca4dffc3" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-a12f8fbc" id="opt11" class="font-body" value="56.10%">
+                <cl:verticaldata std:sid="v-data-bec11492" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-a28b8aa8" spacing="4"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-d46c2c93" scrollable="false" hspace="12px" vspace="14px" hseparatorwidth="1">
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-023efa5c" spacing="14"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-00000288" spacing="16"/>
+      </cl:group>
+      <cl:group std:sid="group-0000027d" id="grpFooter" class="btn-footer-wrap">
+        <cl:verticaldata std:sid="v-data-0000027e" width="976px" height="57px" autosize="height"/>
+        <cl:group std:sid="group-0000027f">
+          <cl:formdata std:sid="f-data-00000280" row="0" col="0" rowspan="1" colspan="1"/>
+          <cl:flowlayout std:sid="f-layout-00000281"/>
+        </cl:group>
+        <cl:group std:sid="group-00000282">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:attribute name="mobile-index" value="1"/>
+          <cl:formdata std:sid="f-data-00000283" row="0" col="1"/>
+          <cl:button std:sid="button-00000284" class="btn-secondary" value="Close">
+            <cl:flowlayoutdata std:sid="f-data-00000285" width="88px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-00000286" halign="right"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-00000287" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-9dda75e2" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-85c69965" spacing="18"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

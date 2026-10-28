@@ -1,0 +1,839 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-de5392e7" version="1.0.6190">
+  <head std:sid="head-f2e6f0fe">
+    <screen std:sid="screen-366f56a7" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d0a03339" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-ca13aa67" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-93e21bd9">
+      <cl:dataset std:sid="d-set-0000003e" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-00000001" name="no"/>
+          <cl:datacolumn std:sid="d-column-00000002" name="reportNo"/>
+          <cl:datacolumn std:sid="d-column-00000003" name="companyName"/>
+          <cl:datacolumn std:sid="d-column-00000004" name="companyCode"/>
+          <cl:datacolumn std:sid="d-column-00000005" name="file"/>
+          <cl:datacolumn std:sid="d-column-00000006" name="reportType"/>
+          <cl:datacolumn std:sid="d-column-00000007" name="reportDate"/>
+          <cl:datacolumn std:sid="d-column-00000008" name="vSec"/>
+          <cl:datacolumn std:sid="d-column-00000009" name="vCode"/>
+          <cl:datacolumn std:sid="d-column-0000000a" name="vSym"/>
+          <cl:datacolumn std:sid="d-column-0000000b" name="vForeign"/>
+          <cl:datacolumn std:sid="d-column-0000000c" name="vLocal"/>
+          <cl:datacolumn std:sid="d-column-0000000d" name="vOut"/>
+          <cl:datacolumn std:sid="d-column-0000000e" name="vPct"/>
+          <cl:datacolumn std:sid="d-column-0000000f" name="vChg"/>
+          <cl:datacolumn std:sid="d-column-00000010" name="nSec"/>
+          <cl:datacolumn std:sid="d-column-00000011" name="nCode"/>
+          <cl:datacolumn std:sid="d-column-00000012" name="nSym"/>
+          <cl:datacolumn std:sid="d-column-00000013" name="nForeign"/>
+          <cl:datacolumn std:sid="d-column-00000014" name="nLocal"/>
+          <cl:datacolumn std:sid="d-column-00000015" name="nOut"/>
+          <cl:datacolumn std:sid="d-column-00000016" name="nPct"/>
+          <cl:datacolumn std:sid="d-column-00000017" name="nChg"/>
+          <cl:datacolumn std:sid="d-column-00000018" name="limit"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="reportNo"><![CDATA[FO-2026-0014]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Palawan Reef Resorts Corp.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[PRR]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[FO-2026-0014.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Monthly]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260831]]></cl:datavalue>
+            <cl:datavalue columnname="vSec"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="vCode"><![CDATA[PRR]]></cl:datavalue>
+            <cl:datavalue columnname="vSym"><![CDATA[PRR]]></cl:datavalue>
+            <cl:datavalue columnname="vForeign"><![CDATA[333000]]></cl:datavalue>
+            <cl:datavalue columnname="vLocal"><![CDATA[667000]]></cl:datavalue>
+            <cl:datavalue columnname="vOut"><![CDATA[1000000]]></cl:datavalue>
+            <cl:datavalue columnname="vPct"><![CDATA[33.3]]></cl:datavalue>
+            <cl:datavalue columnname="vChg"><![CDATA[+1.05 pp]]></cl:datavalue>
+            <cl:datavalue columnname="nSec"><![CDATA[Preferred]]></cl:datavalue>
+            <cl:datavalue columnname="nCode"><![CDATA[PRR]]></cl:datavalue>
+            <cl:datavalue columnname="nSym"><![CDATA[PRR-P]]></cl:datavalue>
+            <cl:datavalue columnname="nForeign"><![CDATA[87200]]></cl:datavalue>
+            <cl:datavalue columnname="nLocal"><![CDATA[312800]]></cl:datavalue>
+            <cl:datavalue columnname="nOut"><![CDATA[400000]]></cl:datavalue>
+            <cl:datavalue columnname="nPct"><![CDATA[21.8]]></cl:datavalue>
+            <cl:datavalue columnname="nChg"><![CDATA[+0.40 pp]]></cl:datavalue>
+            <cl:datavalue columnname="limit"><![CDATA[40]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[2]]></cl:datavalue>
+            <cl:datavalue columnname="reportNo"><![CDATA[FO-2026-0016]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Cordillera Minerals, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[CMI]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[FO-2026-0016.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Daily]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260824]]></cl:datavalue>
+            <cl:datavalue columnname="vSec"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="vCode"><![CDATA[CMI]]></cl:datavalue>
+            <cl:datavalue columnname="vSym"><![CDATA[CMI]]></cl:datavalue>
+            <cl:datavalue columnname="vForeign"><![CDATA[1766400]]></cl:datavalue>
+            <cl:datavalue columnname="vLocal"><![CDATA[1433600]]></cl:datavalue>
+            <cl:datavalue columnname="vOut"><![CDATA[3200000]]></cl:datavalue>
+            <cl:datavalue columnname="vPct"><![CDATA[55.2]]></cl:datavalue>
+            <cl:datavalue columnname="vChg"><![CDATA[-0.70 pp]]></cl:datavalue>
+            <cl:datavalue columnname="nSec"><![CDATA[Preferred]]></cl:datavalue>
+            <cl:datavalue columnname="nCode"><![CDATA[CMI]]></cl:datavalue>
+            <cl:datavalue columnname="nSym"><![CDATA[CMI-P]]></cl:datavalue>
+            <cl:datavalue columnname="nForeign"><![CDATA[120000]]></cl:datavalue>
+            <cl:datavalue columnname="nLocal"><![CDATA[280000]]></cl:datavalue>
+            <cl:datavalue columnname="nOut"><![CDATA[400000]]></cl:datavalue>
+            <cl:datavalue columnname="nPct"><![CDATA[30]]></cl:datavalue>
+            <cl:datavalue columnname="nChg"><![CDATA[-0.80 pp]]></cl:datavalue>
+            <cl:datavalue columnname="limit"><![CDATA[40]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="reportNo"><![CDATA[FO-2026-0011]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Archipelago Telecom Corp.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[ATC]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[FO-2026-0011.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Daily]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260823]]></cl:datavalue>
+            <cl:datavalue columnname="vSec"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="vCode"><![CDATA[ATC]]></cl:datavalue>
+            <cl:datavalue columnname="vSym"><![CDATA[ATC]]></cl:datavalue>
+            <cl:datavalue columnname="vForeign"><![CDATA[3196000]]></cl:datavalue>
+            <cl:datavalue columnname="vLocal"><![CDATA[4804000]]></cl:datavalue>
+            <cl:datavalue columnname="vOut"><![CDATA[8000000]]></cl:datavalue>
+            <cl:datavalue columnname="vPct"><![CDATA[39.95]]></cl:datavalue>
+            <cl:datavalue columnname="vChg"><![CDATA[0.00 pp]]></cl:datavalue>
+            <cl:datavalue columnname="nSec"><![CDATA[Preferred]]></cl:datavalue>
+            <cl:datavalue columnname="nCode"><![CDATA[ATC]]></cl:datavalue>
+            <cl:datavalue columnname="nSym"><![CDATA[ATC-P]]></cl:datavalue>
+            <cl:datavalue columnname="nForeign"><![CDATA[156400]]></cl:datavalue>
+            <cl:datavalue columnname="nLocal"><![CDATA[243600]]></cl:datavalue>
+            <cl:datavalue columnname="nOut"><![CDATA[400000]]></cl:datavalue>
+            <cl:datavalue columnname="nPct"><![CDATA[39.1]]></cl:datavalue>
+            <cl:datavalue columnname="nChg"><![CDATA[-0.80 pp]]></cl:datavalue>
+            <cl:datavalue columnname="limit"><![CDATA[40]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[4]]></cl:datavalue>
+            <cl:datavalue columnname="reportNo"><![CDATA[FO-2026-0008]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Pearl Archipelago Holdings, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[PAH]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[FO-2026-0008.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Daily]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260822]]></cl:datavalue>
+            <cl:datavalue columnname="vSec"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="vCode"><![CDATA[PAH]]></cl:datavalue>
+            <cl:datavalue columnname="vSym"><![CDATA[PAH]]></cl:datavalue>
+            <cl:datavalue columnname="vForeign"><![CDATA[2445000]]></cl:datavalue>
+            <cl:datavalue columnname="vLocal"><![CDATA[2555000]]></cl:datavalue>
+            <cl:datavalue columnname="vOut"><![CDATA[5000000]]></cl:datavalue>
+            <cl:datavalue columnname="vPct"><![CDATA[48.9]]></cl:datavalue>
+            <cl:datavalue columnname="vChg"><![CDATA[-1.05 pp]]></cl:datavalue>
+            <cl:datavalue columnname="nSec"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nCode"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nSym"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nForeign"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nLocal"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nOut"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nPct"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nChg"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="limit"><![CDATA[50]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[5]]></cl:datavalue>
+            <cl:datavalue columnname="reportNo"><![CDATA[FO-2026-0003]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Laguna Power & Water Corp.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[LPW]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[FO-2026-0003.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Daily]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260821]]></cl:datavalue>
+            <cl:datavalue columnname="vSec"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="vCode"><![CDATA[LPW]]></cl:datavalue>
+            <cl:datavalue columnname="vSym"><![CDATA[LPW]]></cl:datavalue>
+            <cl:datavalue columnname="vForeign"><![CDATA[980000]]></cl:datavalue>
+            <cl:datavalue columnname="vLocal"><![CDATA[1520000]]></cl:datavalue>
+            <cl:datavalue columnname="vOut"><![CDATA[2500000]]></cl:datavalue>
+            <cl:datavalue columnname="vPct"><![CDATA[39.2]]></cl:datavalue>
+            <cl:datavalue columnname="vChg"><![CDATA[-0.35 pp]]></cl:datavalue>
+            <cl:datavalue columnname="nSec"><![CDATA[Preferred]]></cl:datavalue>
+            <cl:datavalue columnname="nCode"><![CDATA[LPW]]></cl:datavalue>
+            <cl:datavalue columnname="nSym"><![CDATA[LPW-P]]></cl:datavalue>
+            <cl:datavalue columnname="nForeign"><![CDATA[166000]]></cl:datavalue>
+            <cl:datavalue columnname="nLocal"><![CDATA[234000]]></cl:datavalue>
+            <cl:datavalue columnname="nOut"><![CDATA[400000]]></cl:datavalue>
+            <cl:datavalue columnname="nPct"><![CDATA[41.5]]></cl:datavalue>
+            <cl:datavalue columnname="nChg"><![CDATA[0.00 pp]]></cl:datavalue>
+            <cl:datavalue columnname="limit"><![CDATA[40]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[6]]></cl:datavalue>
+            <cl:datavalue columnname="reportNo"><![CDATA[FO-2026-0001]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Pasig River Bank, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[PRB]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[FO-2026-0001.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Daily]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260820]]></cl:datavalue>
+            <cl:datavalue columnname="vSec"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="vCode"><![CDATA[PRB]]></cl:datavalue>
+            <cl:datavalue columnname="vSym"><![CDATA[PRB]]></cl:datavalue>
+            <cl:datavalue columnname="vForeign"><![CDATA[324000]]></cl:datavalue>
+            <cl:datavalue columnname="vLocal"><![CDATA[676000]]></cl:datavalue>
+            <cl:datavalue columnname="vOut"><![CDATA[1000000]]></cl:datavalue>
+            <cl:datavalue columnname="vPct"><![CDATA[32.4]]></cl:datavalue>
+            <cl:datavalue columnname="vChg"><![CDATA[-1.05 pp]]></cl:datavalue>
+            <cl:datavalue columnname="nSec"><![CDATA[Preferred]]></cl:datavalue>
+            <cl:datavalue columnname="nCode"><![CDATA[PRB]]></cl:datavalue>
+            <cl:datavalue columnname="nSym"><![CDATA[PRB-P]]></cl:datavalue>
+            <cl:datavalue columnname="nForeign"><![CDATA[72400]]></cl:datavalue>
+            <cl:datavalue columnname="nLocal"><![CDATA[327600]]></cl:datavalue>
+            <cl:datavalue columnname="nOut"><![CDATA[400000]]></cl:datavalue>
+            <cl:datavalue columnname="nPct"><![CDATA[18.1]]></cl:datavalue>
+            <cl:datavalue columnname="nChg"><![CDATA[-0.80 pp]]></cl:datavalue>
+            <cl:datavalue columnname="limit"><![CDATA[40]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[7]]></cl:datavalue>
+            <cl:datavalue columnname="reportNo"><![CDATA[FO-2026-0006]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Visayas Chemical Works, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[VCW]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[FO-2026-0006.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Daily]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260819]]></cl:datavalue>
+            <cl:datavalue columnname="vSec"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="vCode"><![CDATA[VCW]]></cl:datavalue>
+            <cl:datavalue columnname="vSym"><![CDATA[VCW]]></cl:datavalue>
+            <cl:datavalue columnname="vForeign"><![CDATA[423000]]></cl:datavalue>
+            <cl:datavalue columnname="vLocal"><![CDATA[577000]]></cl:datavalue>
+            <cl:datavalue columnname="vOut"><![CDATA[1000000]]></cl:datavalue>
+            <cl:datavalue columnname="vPct"><![CDATA[42.3]]></cl:datavalue>
+            <cl:datavalue columnname="vChg"><![CDATA[+0.70 pp]]></cl:datavalue>
+            <cl:datavalue columnname="nSec"><![CDATA[Preferred]]></cl:datavalue>
+            <cl:datavalue columnname="nCode"><![CDATA[VCW]]></cl:datavalue>
+            <cl:datavalue columnname="nSym"><![CDATA[VCW-P]]></cl:datavalue>
+            <cl:datavalue columnname="nForeign"><![CDATA[114800]]></cl:datavalue>
+            <cl:datavalue columnname="nLocal"><![CDATA[285200]]></cl:datavalue>
+            <cl:datavalue columnname="nOut"><![CDATA[400000]]></cl:datavalue>
+            <cl:datavalue columnname="nPct"><![CDATA[28.7]]></cl:datavalue>
+            <cl:datavalue columnname="nChg"><![CDATA[-0.80 pp]]></cl:datavalue>
+            <cl:datavalue columnname="limit"><![CDATA[40]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[8]]></cl:datavalue>
+            <cl:datavalue columnname="reportNo"><![CDATA[FO-2026-0005]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Cebu Span Construction Corp.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[CSC]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[FO-2026-0005.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Daily]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260818]]></cl:datavalue>
+            <cl:datavalue columnname="vSec"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="vCode"><![CDATA[CSC]]></cl:datavalue>
+            <cl:datavalue columnname="vSym"><![CDATA[CSC]]></cl:datavalue>
+            <cl:datavalue columnname="vForeign"><![CDATA[360000]]></cl:datavalue>
+            <cl:datavalue columnname="vLocal"><![CDATA[640000]]></cl:datavalue>
+            <cl:datavalue columnname="vOut"><![CDATA[1000000]]></cl:datavalue>
+            <cl:datavalue columnname="vPct"><![CDATA[36]]></cl:datavalue>
+            <cl:datavalue columnname="vChg"><![CDATA[+0.35 pp]]></cl:datavalue>
+            <cl:datavalue columnname="nSec"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nCode"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nSym"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nForeign"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nLocal"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nOut"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nPct"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nChg"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="limit"><![CDATA[40]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[9]]></cl:datavalue>
+            <cl:datavalue columnname="reportNo"><![CDATA[FO-2026-0013]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Pampanga Transit Lines, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[PTL]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[FO-2026-0013.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Daily]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260817]]></cl:datavalue>
+            <cl:datavalue columnname="vSec"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="vCode"><![CDATA[PTL]]></cl:datavalue>
+            <cl:datavalue columnname="vSym"><![CDATA[PTL]]></cl:datavalue>
+            <cl:datavalue columnname="vForeign"><![CDATA[122000]]></cl:datavalue>
+            <cl:datavalue columnname="vLocal"><![CDATA[878000]]></cl:datavalue>
+            <cl:datavalue columnname="vOut"><![CDATA[1000000]]></cl:datavalue>
+            <cl:datavalue columnname="vPct"><![CDATA[12.2]]></cl:datavalue>
+            <cl:datavalue columnname="vChg"><![CDATA[+0.70 pp]]></cl:datavalue>
+            <cl:datavalue columnname="nSec"><![CDATA[Preferred]]></cl:datavalue>
+            <cl:datavalue columnname="nCode"><![CDATA[PTL]]></cl:datavalue>
+            <cl:datavalue columnname="nSym"><![CDATA[PTL-P]]></cl:datavalue>
+            <cl:datavalue columnname="nForeign"><![CDATA[176000]]></cl:datavalue>
+            <cl:datavalue columnname="nLocal"><![CDATA[224000]]></cl:datavalue>
+            <cl:datavalue columnname="nOut"><![CDATA[400000]]></cl:datavalue>
+            <cl:datavalue columnname="nPct"><![CDATA[44]]></cl:datavalue>
+            <cl:datavalue columnname="nChg"><![CDATA[0.00 pp]]></cl:datavalue>
+            <cl:datavalue columnname="limit"><![CDATA[40]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[10]]></cl:datavalue>
+            <cl:datavalue columnname="reportNo"><![CDATA[FO-2026-0015]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Iloilo Retail Commons, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[IRC]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[FO-2026-0015.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Daily]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260816]]></cl:datavalue>
+            <cl:datavalue columnname="vSec"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="vCode"><![CDATA[IRC]]></cl:datavalue>
+            <cl:datavalue columnname="vSym"><![CDATA[IRC]]></cl:datavalue>
+            <cl:datavalue columnname="vForeign"><![CDATA[199000]]></cl:datavalue>
+            <cl:datavalue columnname="vLocal"><![CDATA[801000]]></cl:datavalue>
+            <cl:datavalue columnname="vOut"><![CDATA[1000000]]></cl:datavalue>
+            <cl:datavalue columnname="vPct"><![CDATA[19.9]]></cl:datavalue>
+            <cl:datavalue columnname="vChg"><![CDATA[-1.05 pp]]></cl:datavalue>
+            <cl:datavalue columnname="nSec"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nCode"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nSym"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nForeign"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nLocal"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nOut"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nPct"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nChg"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="limit"><![CDATA[40]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[11]]></cl:datavalue>
+            <cl:datavalue columnname="reportNo"><![CDATA[FO-2026-0010]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Harborlight Media Group, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[HMG]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[FO-2026-0010.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Daily]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260815]]></cl:datavalue>
+            <cl:datavalue columnname="vSec"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="vCode"><![CDATA[HMG]]></cl:datavalue>
+            <cl:datavalue columnname="vSym"><![CDATA[HMG]]></cl:datavalue>
+            <cl:datavalue columnname="vForeign"><![CDATA[84000]]></cl:datavalue>
+            <cl:datavalue columnname="vLocal"><![CDATA[916000]]></cl:datavalue>
+            <cl:datavalue columnname="vOut"><![CDATA[1000000]]></cl:datavalue>
+            <cl:datavalue columnname="vPct"><![CDATA[8.4]]></cl:datavalue>
+            <cl:datavalue columnname="vChg"><![CDATA[-0.35 pp]]></cl:datavalue>
+            <cl:datavalue columnname="nSec"><![CDATA[Preferred]]></cl:datavalue>
+            <cl:datavalue columnname="nCode"><![CDATA[HMG]]></cl:datavalue>
+            <cl:datavalue columnname="nSym"><![CDATA[HMG-P]]></cl:datavalue>
+            <cl:datavalue columnname="nForeign"><![CDATA[16400]]></cl:datavalue>
+            <cl:datavalue columnname="nLocal"><![CDATA[383600]]></cl:datavalue>
+            <cl:datavalue columnname="nOut"><![CDATA[400000]]></cl:datavalue>
+            <cl:datavalue columnname="nPct"><![CDATA[4.1]]></cl:datavalue>
+            <cl:datavalue columnname="nChg"><![CDATA[+0.80 pp]]></cl:datavalue>
+            <cl:datavalue columnname="limit"><![CDATA[40]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[12]]></cl:datavalue>
+            <cl:datavalue columnname="reportNo"><![CDATA[FO-2026-0018]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Davao Microworks Corp.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[DMW]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[FO-2026-0018.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Daily]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260814]]></cl:datavalue>
+            <cl:datavalue columnname="vSec"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="vCode"><![CDATA[DMW]]></cl:datavalue>
+            <cl:datavalue columnname="vSym"><![CDATA[DMW]]></cl:datavalue>
+            <cl:datavalue columnname="vForeign"><![CDATA[365000]]></cl:datavalue>
+            <cl:datavalue columnname="vLocal"><![CDATA[635000]]></cl:datavalue>
+            <cl:datavalue columnname="vOut"><![CDATA[1000000]]></cl:datavalue>
+            <cl:datavalue columnname="vPct"><![CDATA[36.5]]></cl:datavalue>
+            <cl:datavalue columnname="vChg"><![CDATA[0.00 pp]]></cl:datavalue>
+            <cl:datavalue columnname="nSec"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nCode"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nSym"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nForeign"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nLocal"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nOut"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nPct"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nChg"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="limit"><![CDATA[40]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[13]]></cl:datavalue>
+            <cl:datavalue columnname="reportNo"><![CDATA[FO-2026-0002]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Mayon Capital Holdings Corp.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[MCH]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[FO-2026-0002.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Monthly]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260731]]></cl:datavalue>
+            <cl:datavalue columnname="vSec"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="vCode"><![CDATA[MCH]]></cl:datavalue>
+            <cl:datavalue columnname="vSym"><![CDATA[MCH]]></cl:datavalue>
+            <cl:datavalue columnname="vForeign"><![CDATA[378000]]></cl:datavalue>
+            <cl:datavalue columnname="vLocal"><![CDATA[622000]]></cl:datavalue>
+            <cl:datavalue columnname="vOut"><![CDATA[1000000]]></cl:datavalue>
+            <cl:datavalue columnname="vPct"><![CDATA[37.8]]></cl:datavalue>
+            <cl:datavalue columnname="vChg"><![CDATA[+0.35 pp]]></cl:datavalue>
+            <cl:datavalue columnname="nSec"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nCode"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nSym"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nForeign"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nLocal"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nOut"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nPct"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nChg"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="limit"><![CDATA[40]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[14]]></cl:datavalue>
+            <cl:datavalue columnname="reportNo"><![CDATA[FO-2026-0009]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Ortigas Vista Estates, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[OVE]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[FO-2026-0009.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Monthly]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260731]]></cl:datavalue>
+            <cl:datavalue columnname="vSec"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="vCode"><![CDATA[OVE]]></cl:datavalue>
+            <cl:datavalue columnname="vSym"><![CDATA[OVE]]></cl:datavalue>
+            <cl:datavalue columnname="vForeign"><![CDATA[297500]]></cl:datavalue>
+            <cl:datavalue columnname="vLocal"><![CDATA[702500]]></cl:datavalue>
+            <cl:datavalue columnname="vOut"><![CDATA[1000000]]></cl:datavalue>
+            <cl:datavalue columnname="vPct"><![CDATA[29.75]]></cl:datavalue>
+            <cl:datavalue columnname="vChg"><![CDATA[-0.35 pp]]></cl:datavalue>
+            <cl:datavalue columnname="nSec"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nCode"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nSym"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nForeign"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nLocal"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nOut"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nPct"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nChg"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="limit"><![CDATA[40]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[15]]></cl:datavalue>
+            <cl:datavalue columnname="reportNo"><![CDATA[FO-2026-0004]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Batangas Harvest Foods, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[BHF]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[FO-2026-0004.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Monthly]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260630]]></cl:datavalue>
+            <cl:datavalue columnname="vSec"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="vCode"><![CDATA[BHF]]></cl:datavalue>
+            <cl:datavalue columnname="vSym"><![CDATA[BHF]]></cl:datavalue>
+            <cl:datavalue columnname="vForeign"><![CDATA[220500]]></cl:datavalue>
+            <cl:datavalue columnname="vLocal"><![CDATA[779500]]></cl:datavalue>
+            <cl:datavalue columnname="vOut"><![CDATA[1000000]]></cl:datavalue>
+            <cl:datavalue columnname="vPct"><![CDATA[22.05]]></cl:datavalue>
+            <cl:datavalue columnname="vChg"><![CDATA[+0.35 pp]]></cl:datavalue>
+            <cl:datavalue columnname="nSec"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nCode"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nSym"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nForeign"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nLocal"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nOut"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nPct"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="nChg"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="limit"><![CDATA[40]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="Disclosures_List"/>
+  </head>
+  <body std:sid="body-c90bbfe3">
+    <cl:group std:sid="group-0319b359" id="grpHeader" class="page-title-wrap">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:verticaldata std:sid="v-data-dddbbb01" width="1024px" height="48px" autosize="height" sticky="true" stickytopoffset="0"/>
+      <cl:udc std:sid="ud-control-1d70da47" id="udccomappheader1" type="udc.pse.com.udcComAppHeader">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-dc4ac2b2" row="0" col="0"/>
+        <cl:property name="title" value="Foreign Ownership Monitoring" type="string"/>
+      </cl:udc>
+      <cl:formlayout std:sid="f-layout-631b2075" scrollable="false" hspace="8px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="36" unit="PIXEL" autoSizing="false" syncminlength="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-ac6a9860" id="grpBody" class="inner">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:verticaldata std:sid="v-data-0a24619d" width="1024px" height="737px" autosize="height"/>
+      <cl:group std:sid="group-37a6ee44" id="grpSearch" class="search-top-box">
+        <cl:verticaldata std:sid="v-data-b7116695" width="976px" height="353px" autosize="height"/>
+        <cl:group std:sid="group-0771f1c4" id="grpSearchHeader" class="search-head">
+          <cl:verticaldata std:sid="v-data-4ee66d3f" width="974px" height="108px" autosize="height"/>
+          <cl:udc std:sid="ud-control-0b242f72" type="udc.pse.com.udcComSearchToggle">
+            <cl:verticaldata std:sid="v-data-b4d5c369" width="1000px" height="44px" autosize="height"/>
+            <cl:property name="optMsg" value="optMessage" type="control"/>
+            <cl:property name="grpId" value="grpSearchFilter" type="control"/>
+            <cl:property name="targetOutput" value="optMessage" type="control"/>
+            <cl:property name="targetGroup" value="grpSearchFilter" type="control"/>
+          </cl:udc>
+          <cl:output std:sid="output-eddee998" id="optMessage" class="truncate" visible="false" value="No filters applied">
+            <cl:verticaldata std:sid="v-data-f0ffe926" width="100px" height="64px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-7510003c" scrollable="false" spacing="0"/>
+        </cl:group>
+        <cl:group std:sid="group-a53d2a53" id="grpSearchFilter" class="sch-filter-box">
+          <cl:attribute name="mobile-fit" value="true"/>
+          <cl:attribute name="mobile-bottom-margin" value="16"/>
+          <cl:attribute name="mobile-left-margin" value="16"/>
+          <cl:attribute name="mobile-right-margin" value="16"/>
+          <cl:attribute name="mobile-top-margin" value="16"/>
+          <cl:attribute name="mobile-spacing" value="14"/>
+          <cl:verticaldata std:sid="v-data-85fc84d5" width="974px" height="243px" autosize="height"/>
+          <cl:group std:sid="group-bc2a3258" class="filter-form">
+            <cl:verticaldata std:sid="v-data-d17e9f6b" width="926px" height="208px" autosize="height"/>
+            <cl:group std:sid="group-0000011e" class="row">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-0000011f" width="926px" height="60px" autosize="height"/>
+              <cl:group std:sid="group-0000011b">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-0000011c" row="0" col="0"/>
+                <cl:output std:sid="output-00000119" class="font-label" value="Company Name">
+                  <cl:verticaldata std:sid="v-data-0000011a" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:group std:sid="group-00000101" class="input-group">
+                  <cl:attribute name="mobile-column-count" value="1"/>
+                  <cl:verticaldata std:sid="v-data-00000102" width="457px" height="36px" autosize="height"/>
+                  <cl:combobox std:sid="c-box-00000103" fieldLabel="Select Company Name" value="value1">
+                    <cl:formdata std:sid="f-data-00000104" row="0" col="0"/>
+                    <cl:item std:sid="t-item-00000105" label="All" value="value1"/>
+                  </cl:combobox>
+                  <cl:inputbox std:sid="i-box-00000106" fieldLabel="Company Name" placeholder="Search company name or symbol">
+                    <cl:formdata std:sid="f-data-00000107" row="0" col="1"/>
+                  </cl:inputbox>
+                  <cl:formlayout std:sid="f-layout-00000108" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="36" unit="PIXEL"/>
+                    <cl:columns length="3" unit="FRACTION"/>
+                    <cl:columns length="7" unit="FRACTION"/>
+                  </cl:formlayout>
+                </cl:group>
+                <cl:verticallayout std:sid="v-layout-0000011d" spacing="6"/>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-00000120" scrollable="false" hspace="12px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-0000012b" class="row">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-0000012c" width="926px" height="60px" autosize="height"/>
+              <cl:group std:sid="group-00000123">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-00000124" row="0" col="0"/>
+                <cl:output std:sid="output-00000121" class="font-label" value="Period">
+                  <cl:verticaldata std:sid="v-data-00000122" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:udc std:sid="ud-control-00000109" id="udccomdateperiodpicker1" type="udc.pse.com.udcComDatePeriodPicker">
+                  <cl:verticaldata std:sid="v-data-0000010a" width="366px" height="36px" autosize="height"/>
+                </cl:udc>
+                <cl:verticallayout std:sid="v-layout-00000125" spacing="6"/>
+              </cl:group>
+              <cl:group std:sid="group-00000128">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-00000129" row="0" col="1"/>
+                <cl:output std:sid="output-00000126" class="font-label" value="Report Type">
+                  <cl:verticaldata std:sid="v-data-00000127" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:checkboxgroup std:sid="cb-group-0000010d" fieldLabel="Report Type">
+                  <cl:verticaldata std:sid="v-data-0000010e" width="200px" height="36px" syncminheight="false" autosize="height"/>
+                  <cl:item std:sid="item-0000010b" label="Daily" value="Daily"/>
+                  <cl:item std:sid="item-0000010c" label="Monthly" value="Monthly"/>
+                </cl:checkboxgroup>
+                <cl:verticallayout std:sid="v-layout-0000012a" spacing="6"/>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-0000012d" scrollable="false" hspace="12px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="2" unit="FRACTION"/>
+                <cl:columns length="3" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-00000133" class="row">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-00000134" width="926px" height="60px" autosize="height"/>
+              <cl:group std:sid="group-00000130">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-00000131" row="0" col="0"/>
+                <cl:output std:sid="output-0000012e" class="font-label" value="Foreign Ownership Limit (%)">
+                  <cl:verticaldata std:sid="v-data-0000012f" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:group std:sid="group-0000010f">
+                  <cl:verticaldata std:sid="v-data-00000110" width="400px" height="36px" autosize="height"/>
+                  <cl:combobox std:sid="c-box-00000111" fieldLabel="Foreign Ownership Limit" value="value1">
+                    <cl:flowlayoutdata std:sid="f-data-00000112" width="240px" height="36px" autosize="none"/>
+                    <cl:item std:sid="t-item-00000113" label="Less than or equal to" value="value1"/>
+                  </cl:combobox>
+                  <cl:inputbox std:sid="i-box-00000114" fieldLabel="Foreign Ownership Limit (%)" placeholder="0-100">
+                    <cl:flowlayoutdata std:sid="f-data-00000115" width="120px" height="36px" autosize="none"/>
+                  </cl:inputbox>
+                  <cl:output std:sid="output-00000116" value="%">
+                    <cl:flowlayoutdata std:sid="f-data-00000117" width="24px" height="36px" autosize="none"/>
+                  </cl:output>
+                  <cl:flowlayout std:sid="f-layout-00000118" scrollable="false" hspacing="8" vspacing="0" halign="left" valign="middle"/>
+                </cl:group>
+                <cl:verticallayout std:sid="v-layout-00000132" spacing="6"/>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-00000135" scrollable="false" hspace="12px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-00000136" scrollable="false" spacing="14"/>
+          </cl:group>
+          <cl:group std:sid="group-abf3f235" class="search-btn-wrap">
+            <cl:verticaldata std:sid="v-data-cbb2af53" width="400px" height="53px" autosize="height"/>
+            <cl:button std:sid="button-1a5d6b29" class="btn-secondary" value="Clear">
+              <cl:flowlayoutdata std:sid="f-data-c07e8d8d" width="69px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-748f6743" class="btn-search" value="Search" icon="0">
+              <cl:flowlayoutdata std:sid="f-data-d7f5f78d" width="104px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-3c093e4d" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-6b81345c" scrollable="false" spacing="16" leftmargin="24" rightmargin="24" topmargin="20" bottommargin="20"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-faa65e12" scrollable="false" spacing="0"/>
+      </cl:group>
+      <cl:group std:sid="group-6a84c5cc" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-spacing" value="16"/>
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:verticaldata std:sid="v-data-fc0c0fb0" width="976px" height="316px" autosize="height"/>
+        <cl:group std:sid="group-5d5796c1" class="search-list-top">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:verticaldata std:sid="v-data-71103673" width="400px" height="36px" autosize="height"/>
+          <cl:output std:sid="output-3ac2ed84" class="sch-info" value="18" datatype="number" format="#,##0" displayexp="sstr(text, [&quot;point&quot;]) + &quot; filings&quot;">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-c4b6fe60" row="0" col="0"/>
+          </cl:output>
+          <cl:group std:sid="group-5c3d9eb9">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-15a35e88" row="0" col="1"/>
+            <cl:button std:sid="button-d5b375b3" class="btn-inline btn-file" value="Excel Download" icon="0">
+              <cl:flowlayoutdata std:sid="f-data-cef36371" width="133px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:combobox std:sid="c-box-d195aaaa" fieldLabel="Rows per page" value="15">
+              <cl:flowlayoutdata std:sid="f-data-9b5dca83" width="110px" height="36px"/>
+              <cl:item std:sid="t-item-sa000201" label="15/page" value="15"/>
+            </cl:combobox>
+            <cl:flowlayout std:sid="f-layout-3ac577df" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-da312581" scrollable="false" hspace="1fr" vspace="10px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="422" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid std:sid="grid-25fbe45e" datasetid="dsList" autofit="0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24" resizablecolumns="all" columnMovable="true">
+          <cl:verticaldata std:sid="v-data-6b21a1a8" width="400px" height="200px" autosize="height"/>
+          <cl:gridcolumn std:sid="g-column-0000019b" width="52px"/>
+          <cl:gridcolumn std:sid="g-column-0000019c" width="80px"/>
+          <cl:gridcolumn std:sid="g-column-0000019d" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-0000019e" width="240px"/>
+          <cl:gridcolumn std:sid="g-column-0000019f" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-000001a0" width="170px"/>
+          <cl:gridcolumn std:sid="g-column-000001a1" width="110px"/>
+          <cl:gridcolumn std:sid="g-column-000001a2" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-000001a3" width="110px"/>
+          <cl:gridcolumn std:sid="g-column-000001a4" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-000001a5" width="110px"/>
+          <cl:gridcolumn std:sid="g-column-000001a6" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-000001a7" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-000001a8" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-000001a9" width="170px"/>
+          <cl:gridcolumn std:sid="g-column-000001aa" width="170px"/>
+          <cl:gridcolumn std:sid="g-column-000001ab" width="110px"/>
+          <cl:gridcolumn std:sid="g-column-000001ac" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-000001ad" width="110px"/>
+          <cl:gridcolumn std:sid="g-column-000001ae" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-000001af" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-000001b0" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-000001b1" width="170px"/>
+          <cl:gridcolumn std:sid="g-column-000001b2" width="170px"/>
+          <cl:gridcolumn std:sid="g-column-000001b3" width="180px"/>
+          <cl:gridheader std:sid="gh-band-d28a541f">
+            <cl:gridrow std:sid="g-row-d576d7a2" height="37px"/>
+            <cl:gridrow std:sid="g-row-000001b4" height="72px"/>
+            <cl:gridcell std:sid="gh-cell-00000137" rowindex="0" colindex="0" rowspan="2" targetcolumnname="no" sortable="false" filterable="false" text="No"/>
+            <cl:gridcell std:sid="gh-cell-00000139" rowindex="0" colindex="1" rowspan="2" sortable="false" filterable="false" text="View &#xD;&#xA;Details"/>
+            <cl:gridcell std:sid="gh-cell-0000013d" rowindex="0" colindex="2" rowspan="2" targetcolumnname="reportNo" sortable="true" filterable="false" text="Company Report No."/>
+            <cl:gridcell std:sid="gh-cell-00000141" rowindex="0" colindex="3" rowspan="2" targetcolumnname="companyName" sortable="true" filterable="false" text="Company Name"/>
+            <cl:gridcell std:sid="gh-cell-00000145" rowindex="0" colindex="4" rowspan="2" targetcolumnname="companyCode" sortable="true" filterable="false" text="Company Code"/>
+            <cl:gridcell std:sid="gh-cell-00000149" rowindex="0" colindex="5" rowspan="2" targetcolumnname="file" sortable="false" filterable="false" text="File"/>
+            <cl:gridcell std:sid="gh-cell-0000014d" rowindex="0" colindex="6" rowspan="2" targetcolumnname="reportType" sortable="true" filterable="false" text="Report Type"/>
+            <cl:gridcell std:sid="gh-cell-00000151" rowindex="0" colindex="7" rowspan="2" targetcolumnname="reportDate" sortable="true" filterable="false" text="Report Date"/>
+            <cl:gridcell std:sid="gh-cell-00000155" rowindex="0" colindex="8" colspan="8" sortable="false" filterable="false" text="Voting Shares"/>
+            <cl:gridcell std:sid="gh-cell-00000176" rowindex="0" colindex="16" colspan="8" sortable="false" filterable="false" text="Non-Voting Shares"/>
+            <cl:gridcell std:sid="gh-cell-00000197" rowindex="0" colindex="24" rowspan="2" targetcolumnname="limit" sortable="true" filterable="false" text="Foreign Ownership Limit (%)"/>
+            <cl:gridcell std:sid="gh-cell-00000156" rowindex="1" colindex="8" targetcolumnname="vSec" sortable="true" filterable="false" text="Security Type"/>
+            <cl:gridcell std:sid="gh-cell-0000015a" rowindex="1" colindex="9" targetcolumnname="vCode" sortable="true" filterable="false" text="Company Code"/>
+            <cl:gridcell std:sid="gh-cell-0000015e" rowindex="1" colindex="10" targetcolumnname="vSym" sortable="true" filterable="false" text="Stock Symbol"/>
+            <cl:gridcell std:sid="gh-cell-207e9f02" rowindex="1" colindex="11" targetcolumnname="nForeign" sortable="true" filterable="false" text="Number of Foreign-&#xD;&#xA;Owned Shares"/>
+            <cl:gridcell std:sid="gh-cell-8d301828" rowindex="1" colindex="12" targetcolumnname="nLocal" sortable="true" filterable="false" text="Number of Local-&#xD;&#xA;Owned Shares"/>
+            <cl:gridcell std:sid="gh-cell-f4936719" rowindex="1" colindex="13" targetcolumnname="nOut" sortable="true" filterable="false" text="Number of &#xD;&#xA;Outstanding &#xD;&#xA;Voting Shares"/>
+            <cl:gridcell std:sid="gh-cell-597ed166" rowindex="1" colindex="14" targetcolumnname="nPct" sortable="true" filterable="false" text="Foreign Ownership &#xD;&#xA;Level of Total &#xD;&#xA;Outstanding Shares (%)"/>
+            <cl:gridcell std:sid="gh-cell-e1237561" rowindex="1" colindex="15" targetcolumnname="nChg" sortable="true" filterable="false" text="Change in Foreign &#xD;&#xA;Ownership Level of &#xD;&#xA;Total Voting Shares (%)"/>
+            <cl:gridcell std:sid="gh-cell-00000177" rowindex="1" colindex="16" targetcolumnname="nSec" sortable="true" filterable="false" text="Security Type"/>
+            <cl:gridcell std:sid="gh-cell-0000017b" rowindex="1" colindex="17" targetcolumnname="nCode" sortable="true" filterable="false" text="Company Code"/>
+            <cl:gridcell std:sid="gh-cell-0000017f" rowindex="1" colindex="18" targetcolumnname="nSym" sortable="true" filterable="false" text="Stock Symbol"/>
+            <cl:gridcell std:sid="gh-cell-00000183" rowindex="1" colindex="19" targetcolumnname="nForeign" sortable="true" filterable="false" text="Number of Foreign-&#xD;&#xA;Owned Shares"/>
+            <cl:gridcell std:sid="gh-cell-00000187" rowindex="1" colindex="20" targetcolumnname="nLocal" sortable="true" filterable="false" text="Number of Local-&#xD;&#xA;Owned Shares"/>
+            <cl:gridcell std:sid="gh-cell-0000018b" rowindex="1" colindex="21" targetcolumnname="nOut" sortable="true" filterable="false" text="Number of &#xD;&#xA;Outstanding &#xD;&#xA;Non-Voting Shares"/>
+            <cl:gridcell std:sid="gh-cell-0000018f" rowindex="1" colindex="22" targetcolumnname="nPct" sortable="true" filterable="false" text="Foreign Ownership &#xD;&#xA;Level of Total &#xD;&#xA;Outstanding Shares (%)"/>
+            <cl:gridcell std:sid="gh-cell-00000193" rowindex="1" colindex="23" targetcolumnname="nChg" sortable="true" filterable="false" text="Change in Foreign &#xD;&#xA;Ownership Level of &#xD;&#xA;Total Non-Voting Shares (%)"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-93b884d1">
+            <cl:gridrow std:sid="g-row-8d12379b" height="54px"/>
+            <cl:gridcell std:sid="gd-cell-00000138" rowindex="0" colindex="0" columntype="rowindex"/>
+            <cl:gridcell std:sid="gd-cell-0000013a" rowindex="0" colindex="1">
+              <cl:button std:sid="button-0000013b" class="btn-file icon" value="" icon="0">
+                <cl:celldata std:sid="c-data-0000013c" halign="CENTER" valign="CENTER" width="28" height="28"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000013e" rowindex="0" colindex="2" columnname="reportNo">
+              <cl:button std:sid="button-0000013f" class="btn-link">
+                <cl:expbind property="value" category="PROPERTY" expression="reportNo"/>
+                <cl:celldata std:sid="c-data-00000140"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000142" rowindex="0" colindex="3" columnname="companyName">
+              <cl:button std:sid="button-00000143" class="btn-link">
+                <cl:expbind property="value" category="PROPERTY" expression="companyName"/>
+                <cl:celldata std:sid="c-data-00000144"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000146" rowindex="0" colindex="4" columnname="companyCode">
+              <cl:output std:sid="output-00000147">
+                <cl:expbind property="value" category="PROPERTY" expression="companyCode"/>
+                <cl:celldata std:sid="c-data-00000148"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000014a" rowindex="0" colindex="5" columnname="file">
+              <cl:button std:sid="button-0000014b" class="btn-download btn-link" icon="0">
+                <cl:expbind property="value" category="PROPERTY" expression="file"/>
+                <cl:celldata std:sid="c-data-0000014c"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000014e" rowindex="0" colindex="6" columnname="reportType">
+              <cl:output std:sid="output-0000014f">
+                <cl:expbind property="value" category="PROPERTY" expression="reportType"/>
+                <cl:celldata std:sid="c-data-00000150"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000152" rowindex="0" colindex="7" columnname="reportDate">
+              <cl:output std:sid="output-00000153" datatype="date" format="MM-DD-YYYY">
+                <cl:expbind property="value" category="PROPERTY" expression="reportDate"/>
+                <cl:celldata std:sid="c-data-00000154"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000157" rowindex="0" colindex="8" columnname="vSec">
+              <cl:output std:sid="output-00000158" displayexp="text ? text : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="vSec"/>
+                <cl:celldata std:sid="c-data-00000159"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000015b" rowindex="0" colindex="9" columnname="vCode">
+              <cl:output std:sid="output-0000015c" displayexp="text ? text : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="vCode"/>
+                <cl:celldata std:sid="c-data-0000015d"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000015f" rowindex="0" colindex="10" columnname="vSym">
+              <cl:output std:sid="output-00000160" displayexp="text ? text : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="vSym"/>
+                <cl:celldata std:sid="c-data-00000161"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000163" rowindex="0" colindex="11" columnname="vForeign">
+              <cl:output std:sid="output-00000164" datatype="number" format="#,##0" displayexp="text ? text : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="vForeign"/>
+                <cl:celldata std:sid="c-data-00000165"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000167" rowindex="0" colindex="12" columnname="vLocal">
+              <cl:output std:sid="output-00000168" datatype="number" format="#,##0" displayexp="text ? text : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="vLocal"/>
+                <cl:celldata std:sid="c-data-00000169"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000016b" rowindex="0" colindex="13" columnname="vOut">
+              <cl:output std:sid="output-0000016c" datatype="number" format="#,##0" displayexp="text ? text : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="vOut"/>
+                <cl:celldata std:sid="c-data-0000016d"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000016f" rowindex="0" colindex="14" columnname="vPct">
+              <cl:output std:sid="output-00000170" datatype="number" format="#,##0.00" displayexp="text ? text + &quot;%&quot; : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="vPct"/>
+                <cl:celldata std:sid="c-data-00000171"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000173" rowindex="0" colindex="15" columnname="vChg">
+              <cl:output std:sid="output-00000174" displayexp="text ? text : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="vChg"/>
+                <cl:celldata std:sid="c-data-00000175"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000178" rowindex="0" colindex="16" columnname="nSec">
+              <cl:output std:sid="output-00000179" displayexp="text ? text : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="nSec"/>
+                <cl:celldata std:sid="c-data-0000017a"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000017c" rowindex="0" colindex="17" columnname="nCode">
+              <cl:output std:sid="output-0000017d" displayexp="text ? text : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="nCode"/>
+                <cl:celldata std:sid="c-data-0000017e"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000180" rowindex="0" colindex="18" columnname="nSym">
+              <cl:output std:sid="output-00000181" displayexp="text ? text : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="nSym"/>
+                <cl:celldata std:sid="c-data-00000182"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000184" rowindex="0" colindex="19" columnname="nForeign">
+              <cl:output std:sid="output-00000185" datatype="number" format="#,##0" displayexp="text ? text : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="nForeign"/>
+                <cl:celldata std:sid="c-data-00000186"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000188" rowindex="0" colindex="20" columnname="nLocal">
+              <cl:output std:sid="output-00000189" datatype="number" format="#,##0" displayexp="text ? text : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="nLocal"/>
+                <cl:celldata std:sid="c-data-0000018a"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000018c" rowindex="0" colindex="21" columnname="nOut">
+              <cl:output std:sid="output-0000018d" datatype="number" format="#,##0" displayexp="text ? text : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="nOut"/>
+                <cl:celldata std:sid="c-data-0000018e"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000190" rowindex="0" colindex="22" columnname="nPct">
+              <cl:output std:sid="output-00000191" datatype="number" format="#,##0.00" displayexp="text ? text + &quot;%&quot; : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="nPct"/>
+                <cl:celldata std:sid="c-data-00000192"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000194" rowindex="0" colindex="23" columnname="nChg">
+              <cl:output std:sid="output-00000195" displayexp="text ? text : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="nChg"/>
+                <cl:celldata std:sid="c-data-00000196"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000198" rowindex="0" colindex="24" columnname="limit">
+              <cl:output std:sid="output-00000199" datatype="number" format="#,##0.00" displayexp="text ? text + &quot;%&quot; : &quot;—&quot;">
+                <cl:expbind property="value" category="PROPERTY" expression="limit"/>
+                <cl:celldata std:sid="c-data-0000019a"/>
+              </cl:output>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:udc std:sid="ud-control-eaa7f396" type="udc.pse.com.udcComPagination">
+          <cl:verticaldata std:sid="v-data-98b2d615" width="1024px" height="40px" autosize="height"/>
+        </cl:udc>
+        <cl:verticallayout std:sid="v-layout-40e46285" scrollable="false" spacing="20"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-fc7fc5a9" scrollable="false" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-3c32ff37" scrollable="true" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

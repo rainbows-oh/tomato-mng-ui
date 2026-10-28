@@ -47,8 +47,10 @@
 	height: auto;
 	color: inherit;
 	min-height: 36px;
-	padding: 0 12px;
+//	padding: 0 12px;
 	border-radius: 4px;
+	padding: 0px 40px 0px 12px;
+	
 	
 	&:not(.cl-disabled):not(.cl-selected):hover,
 	&:not(.cl-disabled):not(.cl-selected).cl-hover {
@@ -358,8 +360,6 @@
    기존 선택 체크는 콤보박스 아이템에서 숨김 (아이콘 자리와 겹치므로) */
 .cl-combobox-list.cmb-fild-down {
 	.cl-combobox-item {
-		padding: 0px 40px 0px 12px;
-		
 		&::after {
 			content: "";
 			position: absolute;

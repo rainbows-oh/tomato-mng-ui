@@ -60,6 +60,6 @@ function onBodyScreenChange(e) {
 		// grpContent : 반응형(mobile-column-count) 적용 그룹이므로 레이아웃 API 대신 공통 API 사용
 		util.FreeForm.setColumnVisible(app, "grpContent", 0, !vbMobile);
 		
-		if(vbMobile) app.lookup("btnMobileSelect").visible = true;
+		if(vbMobile) app.lookup("comMobileSelect").visible = true;
 	});
 }

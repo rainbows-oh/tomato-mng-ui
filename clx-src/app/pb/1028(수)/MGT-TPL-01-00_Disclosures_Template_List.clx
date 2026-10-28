@@ -1,0 +1,374 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-de5392e7" version="1.0.6190">
+  <head std:sid="head-f2e6f0fe">
+    <screen std:sid="screen-366f56a7" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d0a03339" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-ca13aa67" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-93e21bd9">
+      <cl:dataset std:sid="d-set-0000003e" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-00000001" name="no"/>
+          <cl:datacolumn std:sid="d-column-00000002" name="templateName"/>
+          <cl:datacolumn std:sid="d-column-00000003" name="publishedAt"/>
+          <cl:datacolumn std:sid="d-column-00000004" name="codePse"/>
+          <cl:datacolumn std:sid="d-column-00000005" name="codeSec"/>
+          <cl:datacolumn std:sid="d-column-00000006" name="templateType"/>
+          <cl:datacolumn std:sid="d-column-00000007" name="subtype"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="templateName"><![CDATA[TP Announcement — Price Adjustment]]></cl:datavalue>
+            <cl:datavalue columnname="publishedAt"><![CDATA[20260820]]></cl:datavalue>
+            <cl:datavalue columnname="codePse"><![CDATA[TP-3]]></cl:datavalue>
+            <cl:datavalue columnname="codeSec"><![CDATA[SEC-TP3]]></cl:datavalue>
+            <cl:datavalue columnname="templateType"><![CDATA[TP Announcements]]></cl:datavalue>
+            <cl:datavalue columnname="subtype"><![CDATA[TP Announcements]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[2]]></cl:datavalue>
+            <cl:datavalue columnname="templateName"><![CDATA[Listing Notice — Transfer of Listing]]></cl:datavalue>
+            <cl:datavalue columnname="publishedAt"><![CDATA[20260816]]></cl:datavalue>
+            <cl:datavalue columnname="codePse"><![CDATA[NTC-L-5]]></cl:datavalue>
+            <cl:datavalue columnname="codeSec"><![CDATA[SEC-NTCL5]]></cl:datavalue>
+            <cl:datavalue columnname="templateType"><![CDATA[Listing Notice]]></cl:datavalue>
+            <cl:datavalue columnname="subtype"><![CDATA[Listing]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="templateName"><![CDATA[Company Profile Update]]></cl:datavalue>
+            <cl:datavalue columnname="publishedAt"><![CDATA[20260812]]></cl:datavalue>
+            <cl:datavalue columnname="codePse"><![CDATA[DB-F-2]]></cl:datavalue>
+            <cl:datavalue columnname="codeSec"><![CDATA[SEC-DBF2]]></cl:datavalue>
+            <cl:datavalue columnname="templateType"><![CDATA[Database Form]]></cl:datavalue>
+            <cl:datavalue columnname="subtype"><![CDATA[Database Forms]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[4]]></cl:datavalue>
+            <cl:datavalue columnname="templateName"><![CDATA[ETF Portfolio Composition]]></cl:datavalue>
+            <cl:datavalue columnname="publishedAt"><![CDATA[20260809]]></cl:datavalue>
+            <cl:datavalue columnname="codePse"><![CDATA[ETF-6]]></cl:datavalue>
+            <cl:datavalue columnname="codeSec"><![CDATA[SEC-ETF6]]></cl:datavalue>
+            <cl:datavalue columnname="templateType"><![CDATA[Structured]]></cl:datavalue>
+            <cl:datavalue columnname="subtype"><![CDATA[Financial Reports]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[5]]></cl:datavalue>
+            <cl:datavalue columnname="templateName"><![CDATA[Corporate Governance Scorecard]]></cl:datavalue>
+            <cl:datavalue columnname="publishedAt"><![CDATA[20260804]]></cl:datavalue>
+            <cl:datavalue columnname="codePse"><![CDATA[ACGR-1]]></cl:datavalue>
+            <cl:datavalue columnname="codeSec"><![CDATA[SEC-ACGR]]></cl:datavalue>
+            <cl:datavalue columnname="templateType"><![CDATA[Structured]]></cl:datavalue>
+            <cl:datavalue columnname="subtype"><![CDATA[Other Reports]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[6]]></cl:datavalue>
+            <cl:datavalue columnname="templateName"><![CDATA[REIT Monthly Asset Report]]></cl:datavalue>
+            <cl:datavalue columnname="publishedAt"><![CDATA[20260727]]></cl:datavalue>
+            <cl:datavalue columnname="codePse"><![CDATA[REIT-4]]></cl:datavalue>
+            <cl:datavalue columnname="codeSec"><![CDATA[SEC-REIT4]]></cl:datavalue>
+            <cl:datavalue columnname="templateType"><![CDATA[Structured]]></cl:datavalue>
+            <cl:datavalue columnname="subtype"><![CDATA[Financial Reports]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[7]]></cl:datavalue>
+            <cl:datavalue columnname="templateName"><![CDATA[Notice of Cash Dividend]]></cl:datavalue>
+            <cl:datavalue columnname="publishedAt"><![CDATA[20260714]]></cl:datavalue>
+            <cl:datavalue columnname="codePse"><![CDATA[17-C]]></cl:datavalue>
+            <cl:datavalue columnname="codeSec"><![CDATA[SEC-17C]]></cl:datavalue>
+            <cl:datavalue columnname="templateType"><![CDATA[Unstructured]]></cl:datavalue>
+            <cl:datavalue columnname="subtype"><![CDATA[Company Announcements]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[8]]></cl:datavalue>
+            <cl:datavalue columnname="templateName"><![CDATA[TP Announcement — Trading Halt]]></cl:datavalue>
+            <cl:datavalue columnname="publishedAt"><![CDATA[20260701]]></cl:datavalue>
+            <cl:datavalue columnname="codePse"><![CDATA[TP-1]]></cl:datavalue>
+            <cl:datavalue columnname="codeSec"><![CDATA[SEC-TP1]]></cl:datavalue>
+            <cl:datavalue columnname="templateType"><![CDATA[TP Announcements]]></cl:datavalue>
+            <cl:datavalue columnname="subtype"><![CDATA[TP Announcements]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[9]]></cl:datavalue>
+            <cl:datavalue columnname="templateName"><![CDATA[Listing Notice — Additional Shares]]></cl:datavalue>
+            <cl:datavalue columnname="publishedAt"><![CDATA[20260618]]></cl:datavalue>
+            <cl:datavalue columnname="codePse"><![CDATA[NTC-L-2]]></cl:datavalue>
+            <cl:datavalue columnname="codeSec"><![CDATA[SEC-NTCL]]></cl:datavalue>
+            <cl:datavalue columnname="templateType"><![CDATA[Listing Notice]]></cl:datavalue>
+            <cl:datavalue columnname="subtype"><![CDATA[Listing]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[10]]></cl:datavalue>
+            <cl:datavalue columnname="templateName"><![CDATA[Disclosure Filing Guidelines]]></cl:datavalue>
+            <cl:datavalue columnname="publishedAt"><![CDATA[20260602]]></cl:datavalue>
+            <cl:datavalue columnname="codePse"><![CDATA[NTC-D-1]]></cl:datavalue>
+            <cl:datavalue columnname="codeSec"><![CDATA[SEC-NTCD]]></cl:datavalue>
+            <cl:datavalue columnname="templateType"><![CDATA[Disclosure Notice]]></cl:datavalue>
+            <cl:datavalue columnname="subtype"><![CDATA[Disclosure]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[11]]></cl:datavalue>
+            <cl:datavalue columnname="templateName"><![CDATA[Beneficial Ownership Database Form]]></cl:datavalue>
+            <cl:datavalue columnname="publishedAt"><![CDATA[20260519]]></cl:datavalue>
+            <cl:datavalue columnname="codePse"><![CDATA[DB-F-4]]></cl:datavalue>
+            <cl:datavalue columnname="codeSec"><![CDATA[SEC-DBF4]]></cl:datavalue>
+            <cl:datavalue columnname="templateType"><![CDATA[Database Form]]></cl:datavalue>
+            <cl:datavalue columnname="subtype"><![CDATA[Database Forms]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[12]]></cl:datavalue>
+            <cl:datavalue columnname="templateName"><![CDATA[Watch List Notification]]></cl:datavalue>
+            <cl:datavalue columnname="publishedAt"><![CDATA[20260506]]></cl:datavalue>
+            <cl:datavalue columnname="codePse"><![CDATA[DB-WL-1]]></cl:datavalue>
+            <cl:datavalue columnname="codeSec"><![CDATA[SEC-DBWL]]></cl:datavalue>
+            <cl:datavalue columnname="templateType"><![CDATA[Database Form]]></cl:datavalue>
+            <cl:datavalue columnname="subtype"><![CDATA[Watch List]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[13]]></cl:datavalue>
+            <cl:datavalue columnname="templateName"><![CDATA[Current Report Application]]></cl:datavalue>
+            <cl:datavalue columnname="publishedAt"><![CDATA[20260421]]></cl:datavalue>
+            <cl:datavalue columnname="codePse"><![CDATA[DB-APP-1]]></cl:datavalue>
+            <cl:datavalue columnname="codeSec"><![CDATA[SEC-DBA1]]></cl:datavalue>
+            <cl:datavalue columnname="templateType"><![CDATA[Database Form]]></cl:datavalue>
+            <cl:datavalue columnname="subtype"><![CDATA[Current Applications]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[14]]></cl:datavalue>
+            <cl:datavalue columnname="templateName"><![CDATA[Structured CMIC Inquiry Form]]></cl:datavalue>
+            <cl:datavalue columnname="publishedAt"><![CDATA[20260408]]></cl:datavalue>
+            <cl:datavalue columnname="codePse"><![CDATA[CMIC-2]]></cl:datavalue>
+            <cl:datavalue columnname="codeSec"><![CDATA[SEC-CMIC2]]></cl:datavalue>
+            <cl:datavalue columnname="templateType"><![CDATA[Structured]]></cl:datavalue>
+            <cl:datavalue columnname="subtype"><![CDATA[CMIC]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[15]]></cl:datavalue>
+            <cl:datavalue columnname="templateName"><![CDATA[Annual Shareholding Disclosure]]></cl:datavalue>
+            <cl:datavalue columnname="publishedAt"><![CDATA[20260328]]></cl:datavalue>
+            <cl:datavalue columnname="codePse"><![CDATA[23-A]]></cl:datavalue>
+            <cl:datavalue columnname="codeSec"><![CDATA[SEC-23A]]></cl:datavalue>
+            <cl:datavalue columnname="templateType"><![CDATA[Structured]]></cl:datavalue>
+            <cl:datavalue columnname="subtype"><![CDATA[Other Reports]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="Template_List"/>
+  </head>
+  <body std:sid="body-c90bbfe3">
+    <cl:group std:sid="group-0319b359" id="grpHeader" class="page-title-wrap">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:verticaldata std:sid="v-data-dddbbb01" width="1024px" height="48px" autosize="height" sticky="true" stickytopoffset="0"/>
+      <cl:udc std:sid="ud-control-1d70da47" id="udccomappheader1" type="udc.pse.com.udcComAppHeader">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-dc4ac2b2" row="0" col="0"/>
+        <cl:property name="title" value="Template" type="string"/>
+      </cl:udc>
+      <cl:formlayout std:sid="f-layout-631b2075" scrollable="false" hspace="8px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="36" unit="PIXEL" autoSizing="false" syncminlength="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-ac6a9860" id="grpBody" class="inner">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:verticaldata std:sid="v-data-0a24619d" width="1024px" height="663px" autosize="height"/>
+      <cl:group std:sid="group-37a6ee44" id="grpSearch" class="search-top-box">
+        <cl:verticaldata std:sid="v-data-b7116695" width="976px" height="279px" autosize="height"/>
+        <cl:group std:sid="group-0771f1c4" id="grpSearchHeader" class="search-head">
+          <cl:verticaldata std:sid="v-data-4ee66d3f" width="974px" height="108px" autosize="height"/>
+          <cl:udc std:sid="ud-control-0b242f72" type="udc.pse.com.udcComSearchToggle">
+            <cl:verticaldata std:sid="v-data-b4d5c369" width="1000px" height="44px" autosize="height"/>
+            <cl:property name="optMsg" value="optMessage" type="control"/>
+            <cl:property name="grpId" value="grpSearchFilter" type="control"/>
+            <cl:property name="targetOutput" value="optMessage" type="control"/>
+            <cl:property name="targetGroup" value="grpSearchFilter" type="control"/>
+          </cl:udc>
+          <cl:output std:sid="output-eddee998" id="optMessage" class="truncate" visible="false" value="No filters applied">
+            <cl:verticaldata std:sid="v-data-f0ffe926" width="100px" height="64px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-7510003c" scrollable="false" spacing="0"/>
+        </cl:group>
+        <cl:group std:sid="group-a53d2a53" id="grpSearchFilter" class="sch-filter-box">
+          <cl:attribute name="mobile-fit" value="true"/>
+          <cl:attribute name="mobile-bottom-margin" value="16"/>
+          <cl:attribute name="mobile-left-margin" value="16"/>
+          <cl:attribute name="mobile-right-margin" value="16"/>
+          <cl:attribute name="mobile-top-margin" value="16"/>
+          <cl:attribute name="mobile-spacing" value="14"/>
+          <cl:verticaldata std:sid="v-data-85fc84d5" width="974px" height="169px" autosize="height"/>
+          <cl:group std:sid="group-bc2a3258" class="filter-form">
+            <cl:verticaldata std:sid="v-data-d17e9f6b" width="926px" height="60px" autosize="height"/>
+            <cl:group std:sid="group-00000118" class="row">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-00000119" width="926px" height="60px" autosize="height"/>
+              <cl:group std:sid="group-00000108">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-00000109" row="0" col="0"/>
+                <cl:output std:sid="output-00000103" class="font-label" value="Template Type">
+                  <cl:verticaldata std:sid="v-data-00000104" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:combobox std:sid="c-box-00000105" fieldLabel="Template Type" value="value1">
+                  <cl:verticaldata std:sid="v-data-00000106" width="100px" height="36px"/>
+                  <cl:item std:sid="t-item-00000107" label="All" value="value1"/>
+                </cl:combobox>
+                <cl:verticallayout std:sid="v-layout-0000010a" spacing="6"/>
+              </cl:group>
+              <cl:group std:sid="group-00000110">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-00000111" row="0" col="1"/>
+                <cl:output std:sid="output-0000010b" class="font-label" value="Subtype">
+                  <cl:verticaldata std:sid="v-data-0000010c" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:combobox std:sid="c-box-0000010d" fieldLabel="Subtype" value="value1">
+                  <cl:verticaldata std:sid="v-data-0000010e" width="100px" height="36px"/>
+                  <cl:item std:sid="t-item-0000010f" label="All" value="value1"/>
+                </cl:combobox>
+                <cl:verticallayout std:sid="v-layout-00000112" spacing="6"/>
+              </cl:group>
+              <cl:group std:sid="group-00000115">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-00000116" row="0" col="2"/>
+                <cl:output std:sid="output-00000113" class="font-label" value="Template Name">
+                  <cl:verticaldata std:sid="v-data-00000114" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:inputbox std:sid="i-box-00000101" fieldLabel="Template Name" placeholder="Enter a template name">
+                  <cl:verticaldata std:sid="v-data-00000102" width="100px" height="36px"/>
+                </cl:inputbox>
+                <cl:verticallayout std:sid="v-layout-00000117" spacing="6"/>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-0000011a" scrollable="false" hspace="12px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="2" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-0000011b" scrollable="false" spacing="14"/>
+          </cl:group>
+          <cl:group std:sid="group-abf3f235" class="search-btn-wrap">
+            <cl:verticaldata std:sid="v-data-cbb2af53" width="400px" height="53px" autosize="height"/>
+            <cl:button std:sid="button-1a5d6b29" class="btn-secondary" fieldLabel="Clear" value="Clear">
+              <cl:flowlayoutdata std:sid="f-data-c07e8d8d" width="69px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-748f6743" class="btn-search" fieldLabel="Search" value="Search" icon="0">
+              <cl:flowlayoutdata std:sid="f-data-d7f5f78d" width="104px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-3c093e4d" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-6b81345c" scrollable="false" spacing="16" leftmargin="24" rightmargin="24" topmargin="20" bottommargin="20"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-faa65e12" scrollable="false" spacing="0"/>
+      </cl:group>
+      <cl:group std:sid="group-6a84c5cc" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-spacing" value="16"/>
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:verticaldata std:sid="v-data-fc0c0fb0" width="976px" height="316px" autosize="height"/>
+        <cl:group std:sid="group-5d5796c1" class="search-list-top">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:verticaldata std:sid="v-data-71103673" width="400px" height="36px" autosize="height"/>
+          <cl:output std:sid="output-3ac2ed84" class="sch-info" value="18" datatype="number" format="#,##0" displayexp="sstr(text, [&quot;point&quot;]) + &quot; templates&quot;">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-c4b6fe60" row="0" col="0"/>
+          </cl:output>
+          <cl:group std:sid="group-5c3d9eb9">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-15a35e88" row="0" col="1"/>
+            <cl:button std:sid="button-d5b375b3" class="btn-inline btn-file" fieldLabel="Excel Download" value="Excel Download" icon="0">
+              <cl:flowlayoutdata std:sid="f-data-cef36371" width="133px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:combobox std:sid="c-box-d195aaaa" fieldLabel="Rows per page" value="15">
+              <cl:flowlayoutdata std:sid="f-data-9b5dca83" width="110px" height="36px"/>
+              <cl:item std:sid="t-item-sa000201" label="15/page" value="15"/>
+            </cl:combobox>
+            <cl:flowlayout std:sid="f-layout-3ac577df" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-da312581" scrollable="false" hspace="1fr" vspace="10px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="422" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid std:sid="grid-25fbe45e" datasetid="dsList" autofit="1, 3, 4, 5, 6, 7" resizablecolumns="1, 2, 3, 4, 5, 6, 7" columnMovable="true">
+          <cl:verticaldata std:sid="v-data-6b21a1a8" width="400px" height="200px" autosize="height"/>
+          <cl:gridcolumn std:sid="g-column-00000125" width="52px"/>
+          <cl:gridcolumn std:sid="g-column-00000126" width="340px"/>
+          <cl:gridcolumn std:sid="g-column-00000127" width="80px"/>
+          <cl:gridcolumn std:sid="g-column-00000128" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-00000129" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-0000012a" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-0000012b" width="160px"/>
+          <cl:gridcolumn std:sid="g-column-0000012c" width="200px"/>
+          <cl:gridheader std:sid="gh-band-d28a541f">
+            <cl:gridrow std:sid="g-row-d576d7a2" height="37px"/>
+            <cl:gridcell std:sid="gh-cell-0000012d" rowindex="0" colindex="0" targetcolumnname="no" sortable="false" filterable="false" text="No"/>
+            <cl:gridcell std:sid="gh-cell-0000012e" rowindex="0" colindex="1" targetcolumnname="templateName" sortable="true" filterable="false" text="Template Name"/>
+            <cl:gridcell std:sid="gh-cell-0000012f" rowindex="0" colindex="2" sortable="false" filterable="false" text="Processing"/>
+            <cl:gridcell std:sid="gh-cell-00000130" rowindex="0" colindex="3" targetcolumnname="publishedAt" sortable="true" filterable="false" text="Publication Date"/>
+            <cl:gridcell std:sid="gh-cell-00000131" rowindex="0" colindex="4" targetcolumnname="codePse" sortable="true" filterable="false" text="Template Code (PSE)"/>
+            <cl:gridcell std:sid="gh-cell-00000132" rowindex="0" colindex="5" targetcolumnname="codeSec" sortable="true" filterable="false" text="Template Code (SEC)"/>
+            <cl:gridcell std:sid="gh-cell-00000133" rowindex="0" colindex="6" targetcolumnname="templateType" sortable="true" filterable="false" text="Template Type"/>
+            <cl:gridcell std:sid="gh-cell-00000134" rowindex="0" colindex="7" targetcolumnname="subtype" sortable="true" filterable="false" text="Subtype"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-93b884d1">
+            <cl:gridrow std:sid="g-row-8d12379b" height="54px"/>
+            <cl:gridcell std:sid="gd-cell-00000135" rowindex="0" colindex="0" columntype="rowindex"/>
+            <cl:gridcell std:sid="gd-cell-0000011c" rowindex="0" colindex="1" columnname="templateName">
+              <cl:button std:sid="button-0000011d" class="btn-link">
+                <cl:expbind property="value" category="PROPERTY" expression="templateName"/>
+                <cl:celldata std:sid="c-data-0000011e"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000011f" rowindex="0" colindex="2">
+              <cl:button std:sid="button-00000120" class="btn-file icon" fieldLabel="Processing" value="" icon="0">
+                <cl:celldata std:sid="c-data-00000121" halign="CENTER" valign="CENTER" width="28" height="28"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000122" rowindex="0" colindex="3" columnname="publishedAt">
+              <cl:output std:sid="output-00000123" datatype="date" format="MM-DD-YYYY">
+                <cl:expbind property="value" category="PROPERTY" expression="publishedAt"/>
+                <cl:celldata std:sid="c-data-00000124"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000136" rowindex="0" colindex="4" columnname="codePse">
+              <cl:output std:sid="output-00000137">
+                <cl:celldata std:sid="c-data-00000138"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000139" rowindex="0" colindex="5" columnname="codeSec">
+              <cl:output std:sid="output-0000013a">
+                <cl:celldata std:sid="c-data-0000013b"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000013c" rowindex="0" colindex="6" columnname="templateType">
+              <cl:output std:sid="output-0000013d">
+                <cl:celldata std:sid="c-data-0000013e"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000013f" rowindex="0" colindex="7" columnname="subtype">
+              <cl:output std:sid="output-00000140">
+                <cl:celldata std:sid="c-data-00000141"/>
+              </cl:output>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:udc std:sid="ud-control-eaa7f396" type="udc.pse.com.udcComPagination">
+          <cl:verticaldata std:sid="v-data-98b2d615" width="1024px" height="40px" autosize="height"/>
+        </cl:udc>
+        <cl:verticallayout std:sid="v-layout-40e46285" scrollable="false" spacing="20"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-fc7fc5a9" scrollable="false" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-3c32ff37" scrollable="true" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -58,17 +58,17 @@
       <cl:group std:sid="group-6a84c5cc" id="grpContent" class="section">
         <cl:attribute name="hide-on-mobile" value=""/>
         <cl:verticaldata std:sid="v-data-55dc2519" width="976px" height="303px" autosize="height"/>
-        <cl:group std:sid="group-dd828308" id="grp1">
+        <cl:group std:sid="group-dd828308">
           <cl:attribute name="needs-auto-height" value="true"/>
           <cl:formdata std:sid="f-data-903795f8" row="0" col="0"/>
-          <cl:group std:sid="group-150f7a35" id="grp2" class="card">
+          <cl:group std:sid="group-150f7a35" class="card">
             <cl:attribute name="mobile-spacing" value="12"/>
             <cl:attribute name="needs-auto-height" value=""/>
             <cl:verticaldata std:sid="v-data-e3c8c66d" width="340px" height="188px" autosize="height"/>
-            <cl:output std:sid="output-6665db3c" id="opt1" class="font-subheading" value="Remarks">
+            <cl:output std:sid="output-6665db3c" class="font-subheading" value="Remarks">
               <cl:verticaldata std:sid="v-data-c65501a5" width="100px" height="20px" autosize="height"/>
             </cl:output>
-            <cl:radiobutton std:sid="r-button-f09496e4" id="rdb1" class="rdb-select" fieldLabel="Roles" colcount="1" hspacing="20" displayexp="label == &quot;Maria Santos&quot;&#xD;&#xA;&#x9;? label + sstr(&quot;\n08-21-2026 09:12:44 AM&quot;, [&quot;caption&quot;])&#xD;&#xA;&#x9;: label == &quot;John Reyes&quot;&#xD;&#xA;&#x9;&#x9;? label + sstr(&quot;\n08-21-2026 03:12:44 AMF&quot;, [&quot;caption&quot;])&#xD;&#xA;&#x9;&#x9;: label" hideicon="true" clickRegion="item">
+            <cl:radiobutton std:sid="r-button-f09496e4" class="rdb-select" fieldLabel="select remarks" colcount="1" hspacing="20" displayexp="label == &quot;Maria Santos&quot;&#xD;&#xA;&#x9;? label + sstr(&quot;\n08-21-2026 09:12:44 AM&quot;, [&quot;caption&quot;])&#xD;&#xA;&#x9;: label == &quot;John Reyes&quot;&#xD;&#xA;&#x9;&#x9;? label + sstr(&quot;\n08-21-2026 03:12:44 AMF&quot;, [&quot;caption&quot;])&#xD;&#xA;&#x9;&#x9;: label" hideicon="true" clickRegion="item">
               <cl:verticaldata std:sid="v-data-4d5db2e4" width="300px" height="112px" autosize="height"/>
               <cl:item std:sid="item-47bb7f5c" label="Maria Santos" value="value1"/>
               <cl:item std:sid="item-a43eaa9f" label="John Reyes" value="value2"/>
@@ -77,18 +77,20 @@
           </cl:group>
           <cl:verticallayout std:sid="v-layout-a6de74f3"/>
         </cl:group>
-        <cl:group std:sid="group-d35387ee" id="grp7">
+        <cl:group std:sid="group-d35387ee">
           <cl:formdata std:sid="f-data-9ac3536b" width="100" height="33" row="0" col="1"/>
-          <cl:button std:sid="button-8c48617f" id="btnMobileSelect" class="btn-combo" visible="false" value="Select Option">
-            <cl:verticaldata std:sid="v-data-3a9ec880" width="717px" height="36px"/>
-          </cl:button>
-          <cl:group std:sid="group-4c843a7b" id="grp3" class="card">
+          <cl:combobox std:sid="c-box-4bdbf643" id="comMobileSelect" fieldLabel="select remarks" visible="false" placeholder="Select Option" itemdisplayexp="label == &quot;Maria Santos&quot;&#xD;&#xA;&#x9;? label + sstr(&quot;\n08-21-2026 09:12:44 AM&quot;, [&quot;font-caption&quot;])&#xD;&#xA;&#x9;: label == &quot;John Reyes&quot;&#xD;&#xA;&#x9;&#x9;? label + sstr(&quot;\n08-21-2026 03:12:44 AMF&quot;, [&quot;font-caption&quot;])&#xD;&#xA;&#x9;&#x9;: label">
+            <cl:verticaldata std:sid="v-data-b60fa476" width="100px" height="36px"/>
+            <cl:item std:sid="t-item-d79cfee2" label="Maria Santos" value="value1"/>
+            <cl:item std:sid="t-item-34cbed55" label="John Reyes" value="value2"/>
+          </cl:combobox>
+          <cl:group std:sid="group-4c843a7b" class="card">
             <cl:attribute name="needs-auto-height" value="true"/>
             <cl:verticaldata std:sid="v-data-a95cb047" width="717px" height="251px" autosize="height"/>
-            <cl:output std:sid="output-c78bb5b6" id="opt2" class="font-subheading" value="Remarks">
+            <cl:output std:sid="output-c78bb5b6" class="font-subheading" value="Remark">
               <cl:verticaldata std:sid="v-data-27b26460" width="675px" height="35px" autosize="height"/>
             </cl:output>
-            <cl:textarea std:sid="t-area-d3191784" id="txa1" class="resizable">
+            <cl:textarea std:sid="t-area-d3191784" class="resizable" fieldLabel="Remark">
               <cl:verticaldata std:sid="v-data-2425125c" width="100px" height="160px" autosize="height"/>
             </cl:textarea>
             <cl:verticallayout std:sid="v-layout-72fa27eb" spacing="14"/>

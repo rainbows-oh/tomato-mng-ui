@@ -1,0 +1,403 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-de5392e7" version="1.0.6190">
+  <head std:sid="head-f2e6f0fe">
+    <screen std:sid="screen-366f56a7" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d0a03339" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-ca13aa67" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-93e21bd9">
+      <cl:dataset std:sid="d-set-0000003e" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-00000001" name="no"/>
+          <cl:datacolumn std:sid="d-column-00000002" name="companyName"/>
+          <cl:datacolumn std:sid="d-column-00000003" name="companyCode"/>
+          <cl:datacolumn std:sid="d-column-00000004" name="file"/>
+          <cl:datacolumn std:sid="d-column-00000005" name="reportType"/>
+          <cl:datacolumn std:sid="d-column-00000006" name="reportDate"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Mindanao Sugar Mills Corp.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[MSM]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[PO-2026-0014.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Monthly]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260831]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[2]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Clark Aerospace Services, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[CAS]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[PO-2026-0016.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Quarterly]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260824]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Manila Bay Holdings Corp.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[MBH]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[PO-2026-0011.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Quarterly]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260823]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[4]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Luzon Retail Group, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[LRG]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[PO-2026-0008.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Others]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260822]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[5]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Island Telecom Holdings]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[ITH]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[PO-2026-0003.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Others]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260821]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[6]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Northern Star Mining Co.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[NSM]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[PO-2026-0001.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Quarterly]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260820]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[7]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Archipelago Hotels Group]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[AHG]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[PO-2026-0006.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Quarterly]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260819]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[8]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Metro Pacific Properties]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[MPP]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[PO-2026-0005.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Monthly]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260818]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[9]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Bicol Cement Industries]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[BCI]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[PO-2026-0013.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Others]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260817]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[10]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Zambales Nickel Resources]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[ZNR]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[PO-2026-0015.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Monthly]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260816]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[11]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Visayas Energy Partners]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[VEP]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[PO-2026-0010.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Monthly]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260815]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[12]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Subic Marine Terminals, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[SMT]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[PO-2026-0018.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Others]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260814]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[13]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Southern Bank Corporation]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[SBC]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[PO-2026-0002.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Monthly]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260731]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[14]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Cebu Port Logistics Corp.]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[CPL]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[PO-2026-0009.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Monthly]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260731]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[15]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Greenfield Agri Ventures]]></cl:datavalue>
+            <cl:datavalue columnname="companyCode"><![CDATA[GAV]]></cl:datavalue>
+            <cl:datavalue columnname="file"><![CDATA[PO-2026-0004.pdf]]></cl:datavalue>
+            <cl:datavalue columnname="reportType"><![CDATA[Monthly]]></cl:datavalue>
+            <cl:datavalue columnname="reportDate"><![CDATA[20260630]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="Public Ownership Monitoring_List"/>
+  </head>
+  <body std:sid="body-c90bbfe3">
+    <cl:group std:sid="group-0319b359" id="grpHeader" class="page-title-wrap">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:verticaldata std:sid="v-data-dddbbb01" width="1024px" height="48px" autosize="height" sticky="true" stickytopoffset="0"/>
+      <cl:udc std:sid="ud-control-1d70da47" id="udccomappheader1" type="udc.pse.com.udcComAppHeader">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-dc4ac2b2" row="0" col="0"/>
+        <cl:property name="title" value="Public Ownership Monitoring" type="string"/>
+      </cl:udc>
+      <cl:formlayout std:sid="f-layout-631b2075" scrollable="false" hspace="8px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="36" unit="PIXEL" autoSizing="false" syncminlength="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-ac6a9860" id="grpBody" class="inner">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:verticaldata std:sid="v-data-0a24619d" width="1024px" height="737px" autosize="height"/>
+      <cl:group std:sid="group-37a6ee44" id="grpSearch" class="search-top-box">
+        <cl:verticaldata std:sid="v-data-b7116695" width="976px" height="353px" autosize="height"/>
+        <cl:group std:sid="group-0771f1c4" id="grpSearchHeader" class="search-head">
+          <cl:verticaldata std:sid="v-data-4ee66d3f" width="974px" height="108px" autosize="height"/>
+          <cl:udc std:sid="ud-control-0b242f72" type="udc.pse.com.udcComSearchToggle">
+            <cl:verticaldata std:sid="v-data-b4d5c369" width="1000px" height="44px" autosize="height"/>
+            <cl:property name="optMsg" value="optMessage" type="control"/>
+            <cl:property name="grpId" value="grpSearchFilter" type="control"/>
+            <cl:property name="targetOutput" value="optMessage" type="control"/>
+            <cl:property name="targetGroup" value="grpSearchFilter" type="control"/>
+          </cl:udc>
+          <cl:output std:sid="output-eddee998" id="optMessage" class="truncate" visible="false" value="No filters applied">
+            <cl:verticaldata std:sid="v-data-f0ffe926" width="100px" height="64px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-7510003c" scrollable="false" spacing="0"/>
+        </cl:group>
+        <cl:group std:sid="group-a53d2a53" id="grpSearchFilter" class="sch-filter-box">
+          <cl:attribute name="mobile-fit" value="true"/>
+          <cl:attribute name="mobile-bottom-margin" value="16"/>
+          <cl:attribute name="mobile-left-margin" value="16"/>
+          <cl:attribute name="mobile-right-margin" value="16"/>
+          <cl:attribute name="mobile-top-margin" value="16"/>
+          <cl:attribute name="mobile-spacing" value="14"/>
+          <cl:verticaldata std:sid="v-data-85fc84d5" width="974px" height="243px" autosize="height"/>
+          <cl:group std:sid="group-bc2a3258" class="filter-form">
+            <cl:verticaldata std:sid="v-data-d17e9f6b" width="926px" height="208px" autosize="height"/>
+            <cl:group std:sid="group-0000011f" class="row">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-00000120" width="926px" height="60px" autosize="height"/>
+              <cl:group std:sid="group-0000011c">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-0000011d" row="0" col="0"/>
+                <cl:output std:sid="output-0000011a" class="font-label" value="Company Name">
+                  <cl:verticaldata std:sid="v-data-0000011b" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:group std:sid="group-00000101" class="input-group">
+                  <cl:attribute name="mobile-column-count" value="1"/>
+                  <cl:verticaldata std:sid="v-data-00000102" width="457px" height="36px" autosize="height"/>
+                  <cl:combobox std:sid="c-box-00000103" fieldLabel="Select Company Name" value="value1">
+                    <cl:formdata std:sid="f-data-00000104" row="0" col="0"/>
+                    <cl:item std:sid="t-item-00000105" label="All" value="value1"/>
+                  </cl:combobox>
+                  <cl:inputbox std:sid="i-box-00000106" fieldLabel="Company Name" placeholder="Search company name or symbol">
+                    <cl:formdata std:sid="f-data-00000107" row="0" col="1"/>
+                  </cl:inputbox>
+                  <cl:formlayout std:sid="f-layout-00000108" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="36" unit="PIXEL"/>
+                    <cl:columns length="160" unit="PIXEL"/>
+                    <cl:columns length="1" unit="FRACTION"/>
+                  </cl:formlayout>
+                </cl:group>
+                <cl:verticallayout std:sid="v-layout-0000011e" spacing="6"/>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-00000121" scrollable="false" hspace="12px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-0000012c" class="row">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-0000012d" width="926px" height="60px" autosize="height"/>
+              <cl:group std:sid="group-00000124">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-00000125" row="0" col="0"/>
+                <cl:output std:sid="output-00000122" class="font-label" value="Period">
+                  <cl:verticaldata std:sid="v-data-00000123" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:udc std:sid="ud-control-00000109" id="udccomdateperiodpicker1" type="udc.pse.com.udcComDatePeriodPicker">
+                  <cl:verticaldata std:sid="v-data-0000010a" width="366px" height="36px" autosize="height"/>
+                </cl:udc>
+                <cl:verticallayout std:sid="v-layout-00000126" spacing="6"/>
+              </cl:group>
+              <cl:group std:sid="group-00000129">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-0000012a" row="0" col="1"/>
+                <cl:output std:sid="output-00000127" class="font-label" value="Report Type">
+                  <cl:verticaldata std:sid="v-data-00000128" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:checkboxgroup std:sid="cb-group-0000010e" fieldLabel="Report Type">
+                  <cl:verticaldata std:sid="v-data-0000010f" width="200px" height="36px" syncminheight="false" autosize="height"/>
+                  <cl:item std:sid="item-0000010b" label="Monthly" value="Monthly"/>
+                  <cl:item std:sid="item-0000010c" label="Quarterly" value="Quarterly"/>
+                  <cl:item std:sid="item-0000010d" label="Others" value="Others"/>
+                </cl:checkboxgroup>
+                <cl:verticallayout std:sid="v-layout-0000012b" spacing="6"/>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-0000012e" scrollable="false" hspace="12px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="2" unit="FRACTION"/>
+                <cl:columns length="3" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-00000134" class="row">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-00000135" width="926px" height="60px" autosize="height"/>
+              <cl:group std:sid="group-00000131">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-00000132" row="0" col="0"/>
+                <cl:output std:sid="output-0000012f" class="font-label" value="Public Ownership Limit (%)">
+                  <cl:verticaldata std:sid="v-data-00000130" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:group std:sid="group-00000110">
+                  <cl:verticaldata std:sid="v-data-00000111" width="400px" height="36px" autosize="height"/>
+                  <cl:combobox std:sid="c-box-00000112" fieldLabel="Public Ownership Limit" value="value1">
+                    <cl:flowlayoutdata std:sid="f-data-00000113" width="240px" height="36px" autosize="none"/>
+                    <cl:item std:sid="t-item-00000114" label="Less than or equal to" value="value1"/>
+                  </cl:combobox>
+                  <cl:inputbox std:sid="i-box-00000115" fieldLabel="Public Ownership Limit (%)" placeholder="0-100">
+                    <cl:flowlayoutdata std:sid="f-data-00000116" width="120px" height="36px" autosize="none"/>
+                  </cl:inputbox>
+                  <cl:output std:sid="output-00000117" value="%">
+                    <cl:flowlayoutdata std:sid="f-data-00000118" width="24px" height="36px" autosize="none"/>
+                  </cl:output>
+                  <cl:flowlayout std:sid="f-layout-00000119" scrollable="false" hspacing="8" vspacing="0" halign="left" valign="middle"/>
+                </cl:group>
+                <cl:verticallayout std:sid="v-layout-00000133" spacing="6"/>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-00000136" scrollable="false" hspace="12px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-00000137" scrollable="false" spacing="14"/>
+          </cl:group>
+          <cl:group std:sid="group-abf3f235" class="search-btn-wrap">
+            <cl:verticaldata std:sid="v-data-cbb2af53" width="400px" height="53px" autosize="height"/>
+            <cl:button std:sid="button-1a5d6b29" class="btn-secondary" value="Clear">
+              <cl:flowlayoutdata std:sid="f-data-c07e8d8d" width="69px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-748f6743" class="btn-search" value="Search" icon="0">
+              <cl:flowlayoutdata std:sid="f-data-d7f5f78d" width="104px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-3c093e4d" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-6b81345c" scrollable="false" spacing="16" leftmargin="24" rightmargin="24" topmargin="20" bottommargin="20"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-faa65e12" scrollable="false" spacing="0"/>
+      </cl:group>
+      <cl:group std:sid="group-6a84c5cc" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-spacing" value="16"/>
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:verticaldata std:sid="v-data-fc0c0fb0" width="976px" height="316px" autosize="height"/>
+        <cl:group std:sid="group-5d5796c1" class="search-list-top">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:verticaldata std:sid="v-data-71103673" width="400px" height="36px" autosize="height"/>
+          <cl:output std:sid="output-3ac2ed84" class="sch-info" value="18" datatype="number" format="#,##0" displayexp="sstr(text, [&quot;point&quot;]) + &quot; filings&quot;">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-c4b6fe60" row="0" col="0"/>
+          </cl:output>
+          <cl:group std:sid="group-5c3d9eb9">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-15a35e88" row="0" col="1"/>
+            <cl:button std:sid="button-d5b375b3" class="btn-inline btn-file" fieldLabel="Excel Download" value="Excel Download" icon="0">
+              <cl:flowlayoutdata std:sid="f-data-cef36371" width="133px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:combobox std:sid="c-box-d195aaaa" fieldLabel="Rows per page" value="15">
+              <cl:flowlayoutdata std:sid="f-data-9b5dca83" width="110px" height="36px"/>
+              <cl:item std:sid="t-item-sa000201" label="15/page" value="15"/>
+            </cl:combobox>
+            <cl:flowlayout std:sid="f-layout-3ac577df" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-da312581" scrollable="false" hspace="1fr" vspace="10px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="422" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid std:sid="grid-25fbe45e" datasetid="dsList" autofit="2, 3, 4, 5, 6" resizablecolumns="2, 3, 4, 5, 6" columnMovable="true">
+          <cl:verticaldata std:sid="v-data-6b21a1a8" width="400px" height="200px" autosize="height"/>
+          <cl:gridcolumn std:sid="g-column-00000144" width="52px"/>
+          <cl:gridcolumn std:sid="g-column-00000145" width="80px"/>
+          <cl:gridcolumn std:sid="g-column-00000146" width="460px"/>
+          <cl:gridcolumn std:sid="g-column-00000147" width="120px"/>
+          <cl:gridcolumn std:sid="g-column-00000148" width="220px"/>
+          <cl:gridcolumn std:sid="g-column-00000149" width="140px"/>
+          <cl:gridcolumn std:sid="g-column-0000014a" width="140px"/>
+          <cl:gridheader std:sid="gh-band-d28a541f">
+            <cl:gridrow std:sid="g-row-d576d7a2" height="37px"/>
+            <cl:gridcell std:sid="gh-cell-0000014b" rowindex="0" colindex="0" targetcolumnname="no" sortable="false" filterable="false" text="No"/>
+            <cl:gridcell std:sid="gh-cell-0000014c" rowindex="0" colindex="1" sortable="false" filterable="false" text="View Details"/>
+            <cl:gridcell std:sid="gh-cell-0000014d" rowindex="0" colindex="2" targetcolumnname="companyName" sortable="true" filterable="false" text="Company Name"/>
+            <cl:gridcell std:sid="gh-cell-0000014e" rowindex="0" colindex="3" targetcolumnname="companyCode" sortable="true" filterable="false" text="Company Code"/>
+            <cl:gridcell std:sid="gh-cell-0000014f" rowindex="0" colindex="4" targetcolumnname="file" sortable="false" filterable="false" text="File"/>
+            <cl:gridcell std:sid="gh-cell-00000150" rowindex="0" colindex="5" targetcolumnname="reportType" sortable="true" filterable="false" text="Report Type"/>
+            <cl:gridcell std:sid="gh-cell-00000151" rowindex="0" colindex="6" targetcolumnname="reportDate" sortable="true" filterable="false" text="Report Date"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-93b884d1">
+            <cl:gridrow std:sid="g-row-8d12379b" height="54px"/>
+            <cl:gridcell std:sid="gd-cell-00000152" rowindex="0" colindex="0" columntype="rowindex"/>
+            <cl:gridcell std:sid="gd-cell-00000138" rowindex="0" colindex="1">
+              <cl:button std:sid="button-00000139" class="btn-file icon" fieldLabel="View Details" value="" icon="0">
+                <cl:celldata std:sid="c-data-0000013a" halign="CENTER" valign="CENTER" width="28" height="28"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000013b" rowindex="0" colindex="2" columnname="companyName">
+              <cl:button std:sid="button-0000013c" class="btn-link">
+                <cl:expbind property="value" category="PROPERTY" expression="companyName"/>
+                <cl:celldata std:sid="c-data-0000013d"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000153" rowindex="0" colindex="3" columnname="companyCode">
+              <cl:output std:sid="output-00000154">
+                <cl:celldata std:sid="c-data-00000155"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000013e" rowindex="0" colindex="4" columnname="file">
+              <cl:button std:sid="button-0000013f" class="btn-download btn-link" icon="0">
+                <cl:expbind property="value" category="PROPERTY" expression="file"/>
+                <cl:celldata std:sid="c-data-00000140"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000156" rowindex="0" colindex="5" columnname="reportType">
+              <cl:output std:sid="output-00000157">
+                <cl:celldata std:sid="c-data-00000158"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000141" rowindex="0" colindex="6" columnname="reportDate">
+              <cl:output std:sid="output-00000142" datatype="date" format="MM-DD-YYYY">
+                <cl:expbind property="value" category="PROPERTY" expression="reportDate"/>
+                <cl:celldata std:sid="c-data-00000143"/>
+              </cl:output>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:udc std:sid="ud-control-eaa7f396" type="udc.pse.com.udcComPagination">
+          <cl:verticaldata std:sid="v-data-98b2d615" width="1024px" height="40px" autosize="height"/>
+        </cl:udc>
+        <cl:verticallayout std:sid="v-layout-40e46285" scrollable="false" spacing="20"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-fc7fc5a9" scrollable="false" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-3c32ff37" scrollable="true" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

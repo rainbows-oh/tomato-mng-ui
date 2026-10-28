@@ -1,0 +1,298 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-de5392e7" version="1.0.6190">
+  <head std:sid="head-f2e6f0fe">
+    <screen std:sid="screen-366f56a7" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d0a03339" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-ca13aa67" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-93e21bd9">
+      <cl:dataset std:sid="d-set-0000003e" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-00000001" name="no"/>
+          <cl:datacolumn std:sid="d-column-00000002" name="subId"/>
+          <cl:datacolumn std:sid="d-column-00000003" name="subName"/>
+          <cl:datacolumn std:sid="d-column-00000004" name="status"/>
+          <cl:datacolumn std:sid="d-column-00000005" name="startDate"/>
+          <cl:datacolumn std:sid="d-column-00000006" name="endDate"/>
+          <cl:datacolumn std:sid="d-column-00000007" name="submittedAt"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="subId"><![CDATA[DFS-1004]]></cl:datavalue>
+            <cl:datavalue columnname="subName"><![CDATA[Horizon Analytics Ltd.]]></cl:datavalue>
+            <cl:datavalue columnname="status"><![CDATA[Pending]]></cl:datavalue>
+            <cl:datavalue columnname="startDate"><![CDATA[20260901]]></cl:datavalue>
+            <cl:datavalue columnname="endDate"><![CDATA[20270831]]></cl:datavalue>
+            <cl:datavalue columnname="submittedAt"><![CDATA[20260901]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[2]]></cl:datavalue>
+            <cl:datavalue columnname="subId"><![CDATA[DFS-1007]]></cl:datavalue>
+            <cl:datavalue columnname="subName"><![CDATA[Island Capital Data Desk]]></cl:datavalue>
+            <cl:datavalue columnname="status"><![CDATA[Pending]]></cl:datavalue>
+            <cl:datavalue columnname="startDate"><![CDATA[20260828]]></cl:datavalue>
+            <cl:datavalue columnname="endDate"><![CDATA[20270827]]></cl:datavalue>
+            <cl:datavalue columnname="submittedAt"><![CDATA[20260828]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="subId"><![CDATA[DFS-1001]]></cl:datavalue>
+            <cl:datavalue columnname="subName"><![CDATA[Apex Wire Markets, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="status"><![CDATA[Pending]]></cl:datavalue>
+            <cl:datavalue columnname="startDate"><![CDATA[20260812]]></cl:datavalue>
+            <cl:datavalue columnname="endDate"><![CDATA[20270811]]></cl:datavalue>
+            <cl:datavalue columnname="submittedAt"><![CDATA[20260812]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[4]]></cl:datavalue>
+            <cl:datavalue columnname="subId"><![CDATA[DFS-1002]]></cl:datavalue>
+            <cl:datavalue columnname="subName"><![CDATA[Luzon Terminal Feeds Corp.]]></cl:datavalue>
+            <cl:datavalue columnname="status"><![CDATA[Approved]]></cl:datavalue>
+            <cl:datavalue columnname="startDate"><![CDATA[20260703]]></cl:datavalue>
+            <cl:datavalue columnname="endDate"><![CDATA[20270702]]></cl:datavalue>
+            <cl:datavalue columnname="submittedAt"><![CDATA[20260703]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[5]]></cl:datavalue>
+            <cl:datavalue columnname="subId"><![CDATA[DFS-1003]]></cl:datavalue>
+            <cl:datavalue columnname="subName"><![CDATA[Visayas Digest Media]]></cl:datavalue>
+            <cl:datavalue columnname="status"><![CDATA[Rejected]]></cl:datavalue>
+            <cl:datavalue columnname="startDate"><![CDATA[20260621]]></cl:datavalue>
+            <cl:datavalue columnname="endDate"><![CDATA[20270620]]></cl:datavalue>
+            <cl:datavalue columnname="submittedAt"><![CDATA[20260621]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[6]]></cl:datavalue>
+            <cl:datavalue columnname="subId"><![CDATA[DFS-1005]]></cl:datavalue>
+            <cl:datavalue columnname="subName"><![CDATA[Pacific Rim Feed Services]]></cl:datavalue>
+            <cl:datavalue columnname="status"><![CDATA[Approved]]></cl:datavalue>
+            <cl:datavalue columnname="startDate"><![CDATA[20260518]]></cl:datavalue>
+            <cl:datavalue columnname="endDate"><![CDATA[20270517]]></cl:datavalue>
+            <cl:datavalue columnname="submittedAt"><![CDATA[20260518]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[7]]></cl:datavalue>
+            <cl:datavalue columnname="subId"><![CDATA[DFS-1006]]></cl:datavalue>
+            <cl:datavalue columnname="subName"><![CDATA[Equities Hub Philippines]]></cl:datavalue>
+            <cl:datavalue columnname="status"><![CDATA[Rejected]]></cl:datavalue>
+            <cl:datavalue columnname="startDate"><![CDATA[20260409]]></cl:datavalue>
+            <cl:datavalue columnname="endDate"><![CDATA[20270408]]></cl:datavalue>
+            <cl:datavalue columnname="submittedAt"><![CDATA[20260409]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[8]]></cl:datavalue>
+            <cl:datavalue columnname="subId"><![CDATA[DFS-1008]]></cl:datavalue>
+            <cl:datavalue columnname="subName"><![CDATA[Greenfield Wire Ops]]></cl:datavalue>
+            <cl:datavalue columnname="status"><![CDATA[Approved]]></cl:datavalue>
+            <cl:datavalue columnname="startDate"><![CDATA[20260314]]></cl:datavalue>
+            <cl:datavalue columnname="endDate"><![CDATA[20270313]]></cl:datavalue>
+            <cl:datavalue columnname="submittedAt"><![CDATA[20260314]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="Data Feeds Subscriber_List"/>
+  </head>
+  <body std:sid="body-c90bbfe3">
+    <cl:group std:sid="group-0319b359" id="grpHeader" class="page-title-wrap">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:verticaldata std:sid="v-data-dddbbb01" width="1024px" height="48px" autosize="height" sticky="true" stickytopoffset="0"/>
+      <cl:udc std:sid="ud-control-1d70da47" id="udccomappheader1" type="udc.pse.com.udcComAppHeader">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-dc4ac2b2" row="0" col="0"/>
+        <cl:property name="title" value="Data Feeds Subscriber" type="string"/>
+      </cl:udc>
+      <cl:formlayout std:sid="f-layout-631b2075" scrollable="false" hspace="8px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="36" unit="PIXEL" autoSizing="false" syncminlength="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-ac6a9860" id="grpBody" class="inner">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:verticaldata std:sid="v-data-0a24619d" width="1024px" height="697px" autosize="height"/>
+      <cl:group std:sid="group-37a6ee44" id="grpSearch" class="search-top-box">
+        <cl:verticaldata std:sid="v-data-b7116695" width="976px" height="313px" autosize="height"/>
+        <cl:group std:sid="group-0771f1c4" id="grpSearchHeader" class="search-head">
+          <cl:verticaldata std:sid="v-data-4ee66d3f" width="974px" height="108px" autosize="height"/>
+          <cl:udc std:sid="ud-control-0b242f72" type="udc.pse.com.udcComSearchToggle">
+            <cl:verticaldata std:sid="v-data-b4d5c369" width="1000px" height="44px" autosize="height"/>
+            <cl:property name="optMsg" value="optMessage" type="control"/>
+            <cl:property name="grpId" value="grpSearchFilter" type="control"/>
+            <cl:property name="targetOutput" value="optMessage" type="control"/>
+            <cl:property name="targetGroup" value="grpSearchFilter" type="control"/>
+          </cl:udc>
+          <cl:output std:sid="output-eddee998" id="optMessage" class="truncate" visible="false" value="No filters applied">
+            <cl:verticaldata std:sid="v-data-f0ffe926" width="100px" height="64px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-7510003c" scrollable="false" spacing="0"/>
+        </cl:group>
+        <cl:group std:sid="group-a53d2a53" id="grpSearchFilter" class="sch-filter-box">
+          <cl:attribute name="mobile-fit" value="true"/>
+          <cl:attribute name="mobile-bottom-margin" value="16"/>
+          <cl:attribute name="mobile-left-margin" value="16"/>
+          <cl:attribute name="mobile-right-margin" value="16"/>
+          <cl:attribute name="mobile-top-margin" value="16"/>
+          <cl:attribute name="mobile-spacing" value="14"/>
+          <cl:verticaldata std:sid="v-data-85fc84d5" width="974px" height="203px" autosize="height"/>
+          <cl:group std:sid="group-bc2a3258" class="filter-form">
+            <cl:verticaldata std:sid="v-data-d17e9f6b" width="926px" height="60px" autosize="height"/>
+            <cl:group std:sid="group-00000112" class="row">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-00000113" width="926px" height="60px" autosize="height"/>
+              <cl:group std:sid="group-00000105">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-00000106" row="0" col="0"/>
+                <cl:output std:sid="output-00000103" class="font-label" value="Name">
+                  <cl:verticaldata std:sid="v-data-00000104" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:inputbox std:sid="i-box-00000101" fieldLabel="Name" placeholder="Search by name">
+                  <cl:verticaldata std:sid="v-data-00000102" width="100px" height="36px"/>
+                </cl:inputbox>
+                <cl:verticallayout std:sid="v-layout-00000107" spacing="6"/>
+              </cl:group>
+              <cl:group std:sid="group-0000010f">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-00000110" row="0" col="1"/>
+                <cl:output std:sid="output-00000108" class="font-label" value="Status">
+                  <cl:verticaldata std:sid="v-data-00000109" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:checkboxgroup std:sid="cb-group-0000010d" fieldLabel="Status">
+                  <cl:verticaldata std:sid="v-data-0000010e" width="200px" height="36px" syncminheight="false" autosize="height"/>
+                  <cl:item std:sid="item-0000010a" label="Pending" value="Pending"/>
+                  <cl:item std:sid="item-0000010b" label="Approved" value="Approved"/>
+                  <cl:item std:sid="item-0000010c" label="Rejected" value="Rejected"/>
+                </cl:checkboxgroup>
+                <cl:verticallayout std:sid="v-layout-00000111" spacing="6"/>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-00000114" scrollable="false" hspace="12px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-00000115" scrollable="false" spacing="14"/>
+          </cl:group>
+          <cl:group std:sid="group-abf3f235" class="search-btn-wrap">
+            <cl:verticaldata std:sid="v-data-cbb2af53" width="400px" height="53px" autosize="height"/>
+            <cl:button std:sid="button-1a5d6b29" class="btn-secondary" fieldLabel="Clear" value="Clear">
+              <cl:flowlayoutdata std:sid="f-data-c07e8d8d" width="69px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-748f6743" class="btn-search" fieldLabel="Search" value="Search" icon="0">
+              <cl:flowlayoutdata std:sid="f-data-d7f5f78d" width="104px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-3c093e4d" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-6b81345c" scrollable="false" spacing="16" leftmargin="24" rightmargin="24" topmargin="20" bottommargin="20"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-faa65e12" scrollable="false" spacing="0"/>
+      </cl:group>
+      <cl:group std:sid="group-6a84c5cc" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-spacing" value="16"/>
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:verticaldata std:sid="v-data-fc0c0fb0" width="976px" height="316px" autosize="height"/>
+        <cl:group std:sid="group-5d5796c1" class="search-list-top">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:verticaldata std:sid="v-data-71103673" width="400px" height="36px" autosize="height"/>
+          <cl:output std:sid="output-3ac2ed84" class="sch-info" value="8" datatype="number" format="#,##0" displayexp="sstr(text, [&quot;point&quot;]) + &quot; data feeds subscribers&quot;">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-c4b6fe60" row="0" col="0"/>
+          </cl:output>
+          <cl:group std:sid="group-5c3d9eb9">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-15a35e88" row="0" col="1"/>
+            <cl:button std:sid="button-d5b375b3" class="btn-inline btn-file" fieldLabel="Excel Download" value="Excel Download" icon="0">
+              <cl:flowlayoutdata std:sid="f-data-cef36371" width="133px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:combobox std:sid="c-box-d195aaaa" fieldLabel="Rows per page" value="15">
+              <cl:flowlayoutdata std:sid="f-data-9b5dca83" width="110px" height="36px"/>
+              <cl:item std:sid="t-item-sa000201" label="15/page" value="15"/>
+            </cl:combobox>
+            <cl:flowlayout std:sid="f-layout-3ac577df" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-da312581" scrollable="false" hspace="1fr" vspace="10px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="422" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid std:sid="grid-25fbe45e" datasetid="dsList" autofit="1, 2, 3, 4, 5, 6" resizablecolumns="1, 2, 3, 4, 5, 6" columnMovable="true">
+          <cl:verticaldata std:sid="v-data-6b21a1a8" width="400px" height="200px" autosize="height"/>
+          <cl:gridcolumn std:sid="g-column-0000011c" width="52px"/>
+          <cl:gridcolumn std:sid="g-column-0000011d" width="150px"/>
+          <cl:gridcolumn std:sid="g-column-0000011e" width="360px"/>
+          <cl:gridcolumn std:sid="g-column-0000011f" width="160px"/>
+          <cl:gridcolumn std:sid="g-column-00000120" width="160px"/>
+          <cl:gridcolumn std:sid="g-column-00000121" width="160px"/>
+          <cl:gridcolumn std:sid="g-column-00000122" width="180px"/>
+          <cl:gridheader std:sid="gh-band-d28a541f">
+            <cl:gridrow std:sid="g-row-d576d7a2" height="37px"/>
+            <cl:gridcell std:sid="gh-cell-00000123" rowindex="0" colindex="0" targetcolumnname="no" sortable="false" filterable="false" text="No."/>
+            <cl:gridcell std:sid="gh-cell-00000124" rowindex="0" colindex="1" targetcolumnname="subId" sortable="true" filterable="false" text="Subscriber ID"/>
+            <cl:gridcell std:sid="gh-cell-00000125" rowindex="0" colindex="2" targetcolumnname="subName" sortable="true" filterable="false" text="Subscriber Name"/>
+            <cl:gridcell std:sid="gh-cell-00000126" rowindex="0" colindex="3" targetcolumnname="status" sortable="true" filterable="false" text="Status"/>
+            <cl:gridcell std:sid="gh-cell-00000127" rowindex="0" colindex="4" targetcolumnname="startDate" sortable="true" filterable="false" text="Start Date"/>
+            <cl:gridcell std:sid="gh-cell-00000128" rowindex="0" colindex="5" targetcolumnname="endDate" sortable="true" filterable="false" text="End Date"/>
+            <cl:gridcell std:sid="gh-cell-00000129" rowindex="0" colindex="6" targetcolumnname="submittedAt" sortable="true" filterable="false" text="Submitted Date"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-93b884d1">
+            <cl:gridrow std:sid="g-row-8d12379b" height="54px"/>
+            <cl:gridcell std:sid="gd-cell-0000012a" rowindex="0" colindex="0" columntype="rowindex"/>
+            <cl:gridcell std:sid="gd-cell-0000012b" rowindex="0" colindex="1" columnname="subId">
+              <cl:output std:sid="output-0000012c">
+                <cl:expbind property="value" category="PROPERTY" expression="subId"/>
+                <cl:celldata std:sid="c-data-0000012d"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000116" rowindex="0" colindex="2" columnname="subName">
+              <cl:button std:sid="button-00000117" class="btn-link">
+                <cl:expbind property="value" category="PROPERTY" expression="subName"/>
+                <cl:celldata std:sid="c-data-00000118"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000119" rowindex="0" colindex="3" columnname="status">
+              <cl:output std:sid="output-0000011a" class="badge fill" displayexp="sstr(text, switch(status){&#xD;&#xA;&#x9;case &quot;Rejected&quot; : &quot;badge fill red&quot;&#xD;&#xA;&#x9;default : &quot;badge fill blue&quot;&#xD;&#xA;})">
+                <cl:expbind property="value" category="PROPERTY" expression="status"/>
+                <cl:expbind property="class" category="CLASS" expression="(status == &quot;Rejected&quot;) ? &quot;red&quot; : &quot;blue&quot;"/>
+                <cl:celldata std:sid="c-data-0000011b"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0000012e" rowindex="0" colindex="4" columnname="startDate">
+              <cl:output std:sid="output-0000012f" datatype="date" format="MM-DD-YYYY">
+                <cl:expbind property="value" category="PROPERTY" expression="startDate"/>
+                <cl:celldata std:sid="c-data-00000130"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000131" rowindex="0" colindex="5" columnname="endDate">
+              <cl:output std:sid="output-00000132" datatype="date" format="MM-DD-YYYY">
+                <cl:expbind property="value" category="PROPERTY" expression="endDate"/>
+                <cl:celldata std:sid="c-data-00000133"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000134" rowindex="0" colindex="6" columnname="submittedAt">
+              <cl:output std:sid="output-00000135" datatype="date" format="MM-DD-YYYY">
+                <cl:expbind property="value" category="PROPERTY" expression="submittedAt"/>
+                <cl:celldata std:sid="c-data-00000136"/>
+              </cl:output>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:udc std:sid="ud-control-eaa7f396" type="udc.pse.com.udcComPagination">
+          <cl:verticaldata std:sid="v-data-98b2d615" width="1024px" height="40px" autosize="height"/>
+        </cl:udc>
+        <cl:verticallayout std:sid="v-layout-40e46285" scrollable="false" spacing="20"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-fc7fc5a9" scrollable="false" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-3c32ff37" scrollable="true" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

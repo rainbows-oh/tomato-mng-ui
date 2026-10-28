@@ -1,0 +1,512 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-4ed2673e" version="1.0.6164">
+  <head std:sid="head-bf3a4002">
+    <screen std:sid="screen-44a957af" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="true" useCustomHeight="true" customHeight="2243" customWidth="1047" active="true"/>
+    <screen std:sid="screen-3a764ef7" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-78d5f0ca" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-808659c6">
+      <cl:dataset std:sid="d-set-f5bf3ac3" id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="No" std:sid="d-column-1c3896aa" name="no"/>
+          <cl:datacolumn comment="Code ID" std:sid="d-column-848e893c" name="codeId"/>
+          <cl:datacolumn comment="Code Name" std:sid="d-column-bbd80205" name="codeName"/>
+          <cl:datacolumn comment="Code Name2" std:sid="d-column-dbdadb13" name="codeName2"/>
+          <cl:datacolumn comment="Code Order" std:sid="d-column-2b62bc7e" name="codeOrder"/>
+          <cl:datacolumn comment="Use" std:sid="d-column-25476525" name="use"/>
+          <cl:datacolumn comment="Register Date and Time" std:sid="d-column-a1465509" name="registerDate"/>
+          <cl:datacolumn comment="Registered By" std:sid="d-column-c59c2bb9" name="registeredBy"/>
+          <cl:datacolumn comment="Update Date and Time" std:sid="d-column-e55a04bc" name="updateDate"/>
+          <cl:datacolumn comment="Last Updated By" std:sid="d-column-3e7c2b1e" name="lastUpdatedBy"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="codeId"><![CDATA[00003-003]]></cl:datavalue>
+            <cl:datavalue columnname="codeName"><![CDATA[Subsidiary]]></cl:datavalue>
+            <cl:datavalue columnname="codeName2"><![CDATA[Subsidiary (ALT)]]></cl:datavalue>
+            <cl:datavalue columnname="codeOrder"><![CDATA[30]]></cl:datavalue>
+            <cl:datavalue columnname="use"><![CDATA[Y]]></cl:datavalue>
+            <cl:datavalue columnname="registerDate"><![CDATA[20240603101422]]></cl:datavalue>
+            <cl:datavalue columnname="registeredBy"><![CDATA[Anna Cruz]]></cl:datavalue>
+            <cl:datavalue columnname="updateDate"><![CDATA[20250603221422]]></cl:datavalue>
+            <cl:datavalue columnname="lastUpdatedBy"><![CDATA[Admin User]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[2]]></cl:datavalue>
+            <cl:datavalue columnname="codeId"><![CDATA[00003-007]]></cl:datavalue>
+            <cl:datavalue columnname="codeName"><![CDATA[SPV]]></cl:datavalue>
+            <cl:datavalue columnname="codeName2"><![CDATA[SPV (ALT)]]></cl:datavalue>
+            <cl:datavalue columnname="codeOrder"><![CDATA[70]]></cl:datavalue>
+            <cl:datavalue columnname="use"><![CDATA[Y]]></cl:datavalue>
+            <cl:datavalue columnname="registerDate"><![CDATA[20241007024206]]></cl:datavalue>
+            <cl:datavalue columnname="registeredBy"><![CDATA[James Reyes]]></cl:datavalue>
+            <cl:datavalue columnname="updateDate"><![CDATA[20251007144206]]></cl:datavalue>
+            <cl:datavalue columnname="lastUpdatedBy"><![CDATA[Miguel Tan]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="codeId"><![CDATA[00003-002]]></cl:datavalue>
+            <cl:datavalue columnname="codeName"><![CDATA[Public Company]]></cl:datavalue>
+            <cl:datavalue columnname="codeName2"><![CDATA[Public Company (ALT)]]></cl:datavalue>
+            <cl:datavalue columnname="codeOrder"><![CDATA[20]]></cl:datavalue>
+            <cl:datavalue columnname="use"><![CDATA[Y]]></cl:datavalue>
+            <cl:datavalue columnname="registerDate"><![CDATA[20240502210711]]></cl:datavalue>
+            <cl:datavalue columnname="registeredBy"><![CDATA[James Reyes]]></cl:datavalue>
+            <cl:datavalue columnname="updateDate"><![CDATA[20250502090711]]></cl:datavalue>
+            <cl:datavalue columnname="lastUpdatedBy"><![CDATA[Miguel Tan]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[4]]></cl:datavalue>
+            <cl:datavalue columnname="codeId"><![CDATA[00003-008]]></cl:datavalue>
+            <cl:datavalue columnname="codeName"><![CDATA[Mutual Fund]]></cl:datavalue>
+            <cl:datavalue columnname="codeName2"><![CDATA[Mutual Fund (ALT)]]></cl:datavalue>
+            <cl:datavalue columnname="codeOrder"><![CDATA[80]]></cl:datavalue>
+            <cl:datavalue columnname="use"><![CDATA[Y]]></cl:datavalue>
+            <cl:datavalue columnname="registerDate"><![CDATA[20241108154917]]></cl:datavalue>
+            <cl:datavalue columnname="registeredBy"><![CDATA[Anna Cruz]]></cl:datavalue>
+            <cl:datavalue columnname="updateDate"><![CDATA[20251108034917]]></cl:datavalue>
+            <cl:datavalue columnname="lastUpdatedBy"><![CDATA[Admin User]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[5]]></cl:datavalue>
+            <cl:datavalue columnname="codeId"><![CDATA[00003-001]]></cl:datavalue>
+            <cl:datavalue columnname="codeName"><![CDATA[Listed Company]]></cl:datavalue>
+            <cl:datavalue columnname="codeName2"><![CDATA[Listed Company (ALT)]]></cl:datavalue>
+            <cl:datavalue columnname="codeOrder"><![CDATA[10]]></cl:datavalue>
+            <cl:datavalue columnname="use"><![CDATA[Y]]></cl:datavalue>
+            <cl:datavalue columnname="registerDate"><![CDATA[20240401080000]]></cl:datavalue>
+            <cl:datavalue columnname="registeredBy"><![CDATA[Maria Santos]]></cl:datavalue>
+            <cl:datavalue columnname="updateDate"><![CDATA[20250401200000]]></cl:datavalue>
+            <cl:datavalue columnname="lastUpdatedBy"><![CDATA[Anna Cruz]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[6]]></cl:datavalue>
+            <cl:datavalue columnname="codeId"><![CDATA[00003-005]]></cl:datavalue>
+            <cl:datavalue columnname="codeName"><![CDATA[Joint Venture]]></cl:datavalue>
+            <cl:datavalue columnname="codeName2"><![CDATA[Joint Venture (ALT)]]></cl:datavalue>
+            <cl:datavalue columnname="codeOrder"><![CDATA[50]]></cl:datavalue>
+            <cl:datavalue columnname="use"><![CDATA[N]]></cl:datavalue>
+            <cl:datavalue columnname="registerDate"><![CDATA[20240805002844]]></cl:datavalue>
+            <cl:datavalue columnname="registeredBy"><![CDATA[Admin User]]></cl:datavalue>
+            <cl:datavalue columnname="updateDate"><![CDATA[20250805122844]]></cl:datavalue>
+            <cl:datavalue columnname="lastUpdatedBy"><![CDATA[James Reyes]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[7]]></cl:datavalue>
+            <cl:datavalue columnname="codeId"><![CDATA[00003-006]]></cl:datavalue>
+            <cl:datavalue columnname="codeName"><![CDATA[Holding Company]]></cl:datavalue>
+            <cl:datavalue columnname="codeName2"><![CDATA[Holding Company (ALT)]]></cl:datavalue>
+            <cl:datavalue columnname="codeOrder"><![CDATA[60]]></cl:datavalue>
+            <cl:datavalue columnname="use"><![CDATA[Y]]></cl:datavalue>
+            <cl:datavalue columnname="registerDate"><![CDATA[20240906133555]]></cl:datavalue>
+            <cl:datavalue columnname="registeredBy"><![CDATA[Maria Santos]]></cl:datavalue>
+            <cl:datavalue columnname="updateDate"><![CDATA[20250906013555]]></cl:datavalue>
+            <cl:datavalue columnname="lastUpdatedBy"><![CDATA[Anna Cruz]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[8]]></cl:datavalue>
+            <cl:datavalue columnname="codeId"><![CDATA[00003-004]]></cl:datavalue>
+            <cl:datavalue columnname="codeName"><![CDATA[Affiliate]]></cl:datavalue>
+            <cl:datavalue columnname="codeName2"><![CDATA[Affiliate (ALT)]]></cl:datavalue>
+            <cl:datavalue columnname="codeOrder"><![CDATA[40]]></cl:datavalue>
+            <cl:datavalue columnname="use"><![CDATA[Y]]></cl:datavalue>
+            <cl:datavalue columnname="registerDate"><![CDATA[20240704112133]]></cl:datavalue>
+            <cl:datavalue columnname="registeredBy"><![CDATA[Miguel Tan]]></cl:datavalue>
+            <cl:datavalue columnname="updateDate"><![CDATA[20250704112133]]></cl:datavalue>
+            <cl:datavalue columnname="lastUpdatedBy"><![CDATA[Maria Santos]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-4991dc45">
+    <cl:listener std:sid="listener-81c43a8b" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:listener std:sid="listener-780ddaeb" name="load" handler="onBodyLoad"/>
+    <cl:group std:sid="group-e6d3a8f4" id="grpHeader" class="page-title-wrap">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:formdata std:sid="f-data-a664fcd5" row="0" col="0"/>
+      <cl:udc std:sid="ud-control-e529ea22" id="udccomappheader1" type="udc.pse.com.udcComAppHeader">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-dc2be6ec" row="0" col="0"/>
+        <cl:property name="title" value="Common Codes" type="string"/>
+      </cl:udc>
+      <cl:button std:sid="button-fd2c6076" id="btn3" class="btn-primary btn-add" value="Add Code Group" icon="0">
+        <cl:formdata std:sid="f-data-40e263c7" row="0" col="1"/>
+      </cl:button>
+      <cl:formlayout std:sid="f-layout-e3d9b3e3" scrollable="false" hspace="8px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="36" unit="PIXEL" autoSizing="false" syncminlength="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="180" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-ac6a9860" id="grpBody" class="inner">
+      <cl:formdata std:sid="f-data-f8b64b05" width="123" height="3608" row="1" col="0"/>
+      <cl:group std:sid="group-6a84c5cc" id="grpContent" class="section">
+        <cl:attribute name="hide-on-mobile" value=""/>
+        <cl:attribute name="mobile-column-count" value="1"/>
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:attribute name="mobile-vertical-margin" value="16"/>
+        <cl:attribute name="mobile-horizontal-margin" value="16"/>
+        <cl:attribute name="mobile-v-spacing" value="16"/>
+        <cl:formdata std:sid="f-data-9c02725a" width="123" height="3608" row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:group std:sid="group-dd828308">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-72d6612a" width="100" height="73" row="0" col="0" rowspan="1" colspan="1"/>
+          <cl:group std:sid="group-150f7a35" class="card">
+            <cl:attribute name="mobile-spacing" value="12"/>
+            <cl:attribute name="needs-auto-height" value=""/>
+            <cl:verticaldata std:sid="v-data-e3c8c66d" width="340px" height="641px" autosize="height"/>
+            <cl:output std:sid="output-6665db3c" class="font-subheading" value="Common Codes">
+              <cl:verticaldata std:sid="v-data-c65501a5" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:inputbox std:sid="i-box-c13c92e9" fieldLabel="Group Name" placeholder="Group Name">
+              <cl:verticaldata std:sid="v-data-6b3309c8" width="100px" height="36px"/>
+            </cl:inputbox>
+            <cl:radiobutton std:sid="r-button-f09496e4" class="rdb-select use" fieldLabel="select code group" colcount="1" hspacing="20" displayexp="sstr(value, [&quot;caption&quot;]) + &quot;\n&quot; + label" enableditemexp="value != &quot;00002&quot; &amp;&amp; value != &quot;00005&quot;" hideicon="true" clickRegion="item">
+              <cl:listener std:sid="listener-cf1b43c3" name="item-click" handler="onRdb1ItemClick"/>
+              <cl:verticaldata std:sid="v-data-4d5db2e4" width="300px" height="515px" autosize="height"/>
+              <cl:item std:sid="item-20860afe" label="Disclosure Type" value="00001"/>
+              <cl:item std:sid="item-ad576c89" label="Submission Channel" value="00002"/>
+              <cl:item std:sid="item-33815511" label="Company Classification" value="00003"/>
+              <cl:item std:sid="item-f767ed9d" label="Market Segment" value="00004"/>
+              <cl:item std:sid="item-c05f837b" label="Document Language" value="00005"/>
+              <cl:item std:sid="item-cb50fa2e" label="Priority Level" value="00006"/>
+              <cl:item std:sid="item-77d9b986" label="Notification Channel" value="00007"/>
+              <cl:item std:sid="item-9d346e17" label="Holiday Region" value="00008"/>
+              <cl:item std:sid="item-1904162c" label="Report Frequency" value="00009"/>
+              <cl:item std:sid="item-2363c0ee" label="Approval Stage" value="00010"/>
+            </cl:radiobutton>
+            <cl:verticallayout std:sid="v-layout-06043f37" spacing="14"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-a6de74f3"/>
+        </cl:group>
+        <cl:group std:sid="group-f2dfc195" id="grpVisible">
+          <cl:formdata std:sid="f-data-5083d3cc" width="117" height="1463" row="0" col="1" rowspan="1" colspan="1"/>
+          <cl:combobox std:sid="c-box-80eb3a94" id="cmbSelectGroup" fieldLabel="select code group" itemdisplayexp="sstr(value, &quot;font-caption&quot;) + &quot;\n&quot; + label" enableditemexp="value != &quot;00002&quot; &amp;&amp; value != &quot;00005&quot;" preventinput="false">
+            <cl:listener std:sid="listener-5c1e7a42" name="selection-change" handler="onCmbSelectGroupSelectionChange"/>
+            <cl:formdata std:sid="f-data-a96b1f80" row="0" col="0"/>
+            <cl:item std:sid="t-item-253a83c2" label="Disclosure Type" value="00001"/>
+            <cl:item std:sid="t-item-6c6a10ba" label="Submission Channel" value="00002"/>
+            <cl:item std:sid="t-item-e8120aa0" label="Company Classification" value="00003"/>
+            <cl:item std:sid="t-item-ad11a677" label="Market Segment" value="00004"/>
+            <cl:item std:sid="t-item-065d6f17" label="Document Language" value="00005"/>
+            <cl:item std:sid="t-item-6c2a21aa" label="Priority Level" value="00006"/>
+            <cl:item std:sid="t-item-db0e59f5" label="Notification Channel" value="00007"/>
+            <cl:item std:sid="t-item-385cfaa7" label="Holiday Region" value="00008"/>
+            <cl:item std:sid="t-item-eef279e5" label="Report Frequency" value="00009"/>
+            <cl:item std:sid="t-item-fb7a9a85" label="Approval Stage" value="00010"/>
+          </cl:combobox>
+          <cl:group std:sid="group-948f65a7" id="grpSelectInfo" class="card">
+            <cl:formdata std:sid="f-data-bc844beb" width="100" height="29" row="1" col="0"/>
+            <cl:group std:sid="group-24d53b8c" id="grp1" class="select-info">
+              <cl:formdata std:sid="f-data-06ce3587" width="100" height="29" row="1" col="0"/>
+              <cl:output std:sid="output-5f4640a4" id="opt1" class="font-title" value="Select a group...">
+                <cl:verticaldata std:sid="v-data-b00cb140" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-3272b2e8" id="opt2" class="font-body-s" value="Choose a code group on the left to view its details and codes.">
+                <cl:verticaldata std:sid="v-data-ea100d8d" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-fd650e65" spacing="12"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-0290dabc" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:rows length="104" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-bca8a17f" id="grpSelectGroup">
+            <cl:formdata std:sid="f-data-6541f0f7" width="117" height="15" row="2" col="0" rowspan="1" colspan="1"/>
+            <cl:group std:sid="group-f7d3f7c3" class="card">
+              <cl:attribute name="mobile-v-spacing" value="32"/>
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:formdata std:sid="f-data-4626fcf1" row="0" col="0"/>
+              <cl:group std:sid="group-edd4fee1">
+                <cl:attribute name="mobile-fit" value="true"/>
+                <cl:attribute name="mobile-spacing" value="14"/>
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-17d7543c" width="117" height="613" row="0" col="0"/>
+                <cl:output std:sid="output-3bc33ec0" class="font-subheading" value="Code Group">
+                  <cl:verticaldata std:sid="v-data-b9977638" width="566px" height="20px" autosize="height"/>
+                </cl:output>
+                <cl:group std:sid="group-71db42ba">
+                  <cl:attribute name="mobile-column-count" value="1"/>
+                  <cl:verticaldata std:sid="v-data-5af7724e" width="692px" height="62px" autosize="height"/>
+                  <cl:group std:sid="group-c0333d8b">
+                    <cl:attribute name="needs-auto-height" value="true"/>
+                    <cl:formdata std:sid="f-data-0ab5fb87" width="100" height="23" row="0" col="0"/>
+                    <cl:output std:sid="output-fec9e4e8" class="font-label" value="Group ID">
+                      <cl:verticaldata std:sid="v-data-56f71b55" width="100px" height="20px" autosize="height"/>
+                    </cl:output>
+                    <cl:inputbox std:sid="i-box-0d08ad8f" fieldLabel="Group ID">
+                      <cl:verticaldata std:sid="v-data-a2591b20" width="100px" height="36px"/>
+                    </cl:inputbox>
+                    <cl:verticallayout std:sid="v-layout-e2a5bfeb" spacing="6"/>
+                  </cl:group>
+                  <cl:group std:sid="group-ad228f96">
+                    <cl:attribute name="needs-auto-height" value="true"/>
+                    <cl:formdata std:sid="f-data-f23dd562" row="0" col="1"/>
+                    <cl:output std:sid="output-fee1075d" class="font-label" value="Group Name">
+                      <cl:verticaldata std:sid="v-data-d090709d" width="100px" height="20px" autosize="height"/>
+                    </cl:output>
+                    <cl:inputbox std:sid="i-box-df90ac19" fieldLabel="Group Name">
+                      <cl:verticaldata std:sid="v-data-3a216ba3" width="100px" height="36px"/>
+                    </cl:inputbox>
+                    <cl:verticallayout std:sid="v-layout-ec9d9096" spacing="6"/>
+                  </cl:group>
+                  <cl:group std:sid="group-c69096b6">
+                    <cl:attribute name="needs-auto-height" value="true"/>
+                    <cl:formdata std:sid="f-data-d83faaf7" width="117" height="25" row="0" col="2"/>
+                    <cl:output std:sid="output-baf02c51" class="font-label" value="Use">
+                      <cl:formdata std:sid="f-data-25be05e1" row="0" col="0"/>
+                    </cl:output>
+                    <cl:checkbox std:sid="c-box-4c936374" class="toggle-switch" fieldLabel="Use" text="Label" clickRegion="item">
+                      <cl:formdata std:sid="f-data-e4700a47" row="1" col="0"/>
+                    </cl:checkbox>
+                    <cl:button std:sid="button-115a036b" class="btn-primary" value="Save">
+                      <cl:formdata std:sid="f-data-5c84b34a" row="1" col="1"/>
+                    </cl:button>
+                    <cl:formlayout std:sid="f-layout-2cae9fe1" scrollable="false" hspace="16px" vspace="6px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                      <cl:rows length="20" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                      <cl:rows length="36" unit="PIXEL"/>
+                      <cl:columns length="100" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                      <cl:columns length="80" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                    </cl:formlayout>
+                  </cl:group>
+                  <cl:formlayout std:sid="f-layout-ef581043" scrollable="false" hspace="12px" vspace="10px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="62" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                    <cl:columns length="1" unit="FRACTION"/>
+                    <cl:columns length="4" unit="FRACTION"/>
+                    <cl:columns length="196" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                  </cl:formlayout>
+                </cl:group>
+                <cl:group std:sid="group-185aebc7">
+                  <cl:attribute name="mobile-spacing" value="10"/>
+                  <cl:attribute name="mobile-fit" value="true"/>
+                  <cl:verticaldata std:sid="v-data-466976e7" width="574px" height="102px" autosize="height"/>
+                  <cl:group std:sid="group-c8ac8e96">
+                    <cl:attribute name="mobile-column-count" value="1"/>
+                    <cl:verticaldata std:sid="v-data-d7dbdc8b" width="566px" height="44px" autosize="height"/>
+                    <cl:group std:sid="group-b3713d64">
+                      <cl:attribute name="needs-auto-height" value="true"/>
+                      <cl:formdata std:sid="f-data-679a26c8" row="0" col="0"/>
+                      <cl:output std:sid="output-71218201" class="font-label" value="Registered By">
+                        <cl:verticaldata std:sid="v-data-700a21ac" width="852px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:output std:sid="output-70077b38" class="font-body" value="Maria Santos">
+                        <cl:verticaldata std:sid="v-data-8790dada" width="566px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:verticallayout std:sid="v-layout-198651b4" spacing="4"/>
+                    </cl:group>
+                    <cl:group std:sid="group-9eec2103">
+                      <cl:attribute name="needs-auto-height" value="true"/>
+                      <cl:formdata std:sid="f-data-af38b8c3" row="0" col="1"/>
+                      <cl:output std:sid="output-8080991c" class="font-label" value="Register Date and Time">
+                        <cl:verticaldata std:sid="v-data-254855ac" width="852px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:output std:sid="output-52938daf" class="font-body" value="01-12-2024 09:15:22 AM">
+                        <cl:verticaldata std:sid="v-data-2eb4c959" width="566px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:verticallayout std:sid="v-layout-6b5baeba" spacing="4"/>
+                    </cl:group>
+                    <cl:formlayout std:sid="f-layout-8a15353e" scrollable="false" hspace="12px" vspace="10px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                      <cl:rows length="1" unit="FRACTION"/>
+                      <cl:columns length="1" unit="FRACTION"/>
+                      <cl:columns length="1" unit="FRACTION"/>
+                    </cl:formlayout>
+                  </cl:group>
+                  <cl:group std:sid="group-f6600707">
+                    <cl:attribute name="mobile-column-count" value="1"/>
+                    <cl:verticaldata std:sid="v-data-80515710" width="566px" height="44px" autosize="height"/>
+                    <cl:group std:sid="group-1d8da1be">
+                      <cl:attribute name="needs-auto-height" value="true"/>
+                      <cl:formdata std:sid="f-data-908b9d56" row="0" col="0"/>
+                      <cl:output std:sid="output-e5472641" class="font-label" value="Last Updated By">
+                        <cl:verticaldata std:sid="v-data-a4028265" width="852px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:output std:sid="output-96045028" class="font-body" value="James Reyes">
+                        <cl:verticaldata std:sid="v-data-93cf797b" width="566px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:verticallayout std:sid="v-layout-be181023" spacing="4"/>
+                    </cl:group>
+                    <cl:group std:sid="group-89236e1b">
+                      <cl:attribute name="needs-auto-height" value="true"/>
+                      <cl:formdata std:sid="f-data-34624f69" row="0" col="1"/>
+                      <cl:output std:sid="output-a575c495" class="font-label" value="Update Date and Time">
+                        <cl:verticaldata std:sid="v-data-f6f7dce1" width="852px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:output std:sid="output-71bced84" class="font-body" value="06-03-2025 04:41:08 PM">
+                        <cl:verticaldata std:sid="v-data-52c20a95" width="566px" height="20px" autosize="height"/>
+                      </cl:output>
+                      <cl:verticallayout std:sid="v-layout-b031d1c8" spacing="4"/>
+                    </cl:group>
+                    <cl:formlayout std:sid="f-layout-b7f8c65b" scrollable="false" hspace="12px" vspace="10px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                      <cl:rows length="1" unit="FRACTION"/>
+                      <cl:columns length="1" unit="FRACTION"/>
+                      <cl:columns length="1" unit="FRACTION"/>
+                    </cl:formlayout>
+                  </cl:group>
+                  <cl:verticallayout std:sid="v-layout-752223fc" spacing="14"/>
+                </cl:group>
+                <cl:verticallayout std:sid="v-layout-6ab8e716" spacing="16"/>
+              </cl:group>
+              <cl:group std:sid="group-8119e7e4" class="section">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:attribute name="mobile-v-spacing" value="16"/>
+                <cl:attribute name="mobile-column-count" value="1"/>
+                <cl:formdata std:sid="f-data-3c96193c" row="1" col="0"/>
+                <cl:group std:sid="group-5d5796c1" class="search-list-top">
+                  <cl:attribute name="mobile-column-count" value="1"/>
+                  <cl:attribute name="needs-auto-height" value="true"/>
+                  <cl:formdata std:sid="f-data-c8b1c4cd" row="0" col="0"/>
+                  <cl:output std:sid="output-3ac2ed84" class="sch-info" value="7" datatype="number" format="#,##0" displayexp="&quot;Total &quot; + sstr(text, [&quot;point&quot;])">
+                    <cl:attribute name="needs-auto-height" value="true"/>
+                    <cl:formdata std:sid="f-data-c4b6fe60" row="0" col="0"/>
+                  </cl:output>
+                  <cl:group std:sid="group-5c3d9eb9">
+                    <cl:formdata std:sid="f-data-15a35e88" row="0" col="1"/>
+                    <cl:button std:sid="button-994681c1" class="btn-primary btn-add" value="Add Code" icon="0">
+                      <cl:flowlayoutdata std:sid="f-data-6c327740" width="125px" height="36px" autosize="width"/>
+                    </cl:button>
+                    <cl:combobox std:sid="c-box-d195aaaa" fieldLabel="Rows per page">
+                      <cl:flowlayoutdata std:sid="f-data-9b5dca83" width="110px" height="36px"/>
+                      <cl:item std:sid="t-item-5d4ffe91" label="15/page" value="value1"/>
+                    </cl:combobox>
+                    <cl:flowlayout std:sid="f-layout-3ac577df" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+                  </cl:group>
+                  <cl:formlayout std:sid="f-layout-da312581" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="1" unit="FRACTION"/>
+                    <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+                    <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+                  </cl:formlayout>
+                </cl:group>
+                <cl:grid std:sid="grid-2390dbda" datasetid="ds1" autofit="2, 3, 4, 7, 9" resizablecolumns="1, 2, 3, 4, 5, 6, 7, 8, 9" columnMovable="true">
+                  <cl:attribute name="needs-auto-height" value="true"/>
+                  <cl:formdata std:sid="f-data-d7ab7077" row="1" col="0"/>
+                  <cl:gridcolumn std:sid="g-column-4145d703" width="52px"/>
+                  <cl:gridcolumn std:sid="g-column-42412309" width="110px"/>
+                  <cl:gridcolumn std:sid="g-column-e2bf87cd" width="200px"/>
+                  <cl:gridcolumn std:sid="g-column-32c34e79" width="200px"/>
+                  <cl:gridcolumn std:sid="g-column-14831754" width="100px"/>
+                  <cl:gridcolumn std:sid="g-column-5dbcbe2d" width="60px"/>
+                  <cl:gridcolumn std:sid="g-column-0f284aaf" width="200px"/>
+                  <cl:gridcolumn std:sid="g-column-026a91ea" width="140px"/>
+                  <cl:gridcolumn std:sid="g-column-b6124e62" width="200px"/>
+                  <cl:gridcolumn std:sid="g-column-8a611439" width="140px"/>
+                  <cl:gridheader std:sid="gh-band-46ac1d80">
+                    <cl:gridrow std:sid="g-row-0657b73e" height="37px"/>
+                    <cl:gridcell std:sid="gh-cell-11735fba" rowindex="0" colindex="0" targetcolumnname="no" sortable="false" filterable="false" text="No"/>
+                    <cl:gridcell std:sid="gh-cell-5483be0d" rowindex="0" colindex="1" targetcolumnname="codeId" sortable="true" filterable="false" text="Code ID"/>
+                    <cl:gridcell std:sid="gh-cell-2200cdcd" rowindex="0" colindex="2" targetcolumnname="codeName" sortable="true" filterable="false" text="Code Name"/>
+                    <cl:gridcell std:sid="gh-cell-fbd1f1f3" rowindex="0" colindex="3" targetcolumnname="codeName2" sortable="true" filterable="false" text="Code Name2"/>
+                    <cl:gridcell std:sid="gh-cell-8b3e8f3c" rowindex="0" colindex="4" targetcolumnname="codeOrder" sortable="true" filterable="false" text="Code Order"/>
+                    <cl:gridcell std:sid="gh-cell-045af1db" rowindex="0" colindex="5" targetcolumnname="use" sortable="true" filterable="false" text="Use"/>
+                    <cl:gridcell std:sid="gh-cell-532293c1" rowindex="0" colindex="6" targetcolumnname="registerDate" sortable="true" filterable="false" text="Register Date and Time"/>
+                    <cl:gridcell std:sid="gh-cell-2f33a173" rowindex="0" colindex="7" targetcolumnname="registeredBy" sortable="true" filterable="false" text="Registered By"/>
+                    <cl:gridcell std:sid="gh-cell-178fbbce" rowindex="0" colindex="8" targetcolumnname="updateDate" sortable="true" filterable="false" text="Update Date and Time"/>
+                    <cl:gridcell std:sid="gh-cell-6ea2b1a3" rowindex="0" colindex="9" targetcolumnname="lastUpdatedBy" sortable="true" filterable="false" text="Last Updated By"/>
+                  </cl:gridheader>
+                  <cl:griddetail std:sid="gd-band-511ea2b0">
+                    <cl:gridrow std:sid="g-row-adf0964b" height="54px"/>
+                    <cl:gridcell std:sid="gd-cell-f545903c" rowindex="0" colindex="0" columntype="rowindex" columnname="no"/>
+                    <cl:gridcell std:sid="gd-cell-c622cf06" rowindex="0" colindex="1" columnname="codeId">
+                      <cl:output std:sid="output-20759e24" id="opt16">
+                        <cl:celldata std:sid="c-data-f521e741"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-7e9e7127" rowindex="0" colindex="2" columnname="codeName">
+                      <cl:button std:sid="button-6a4e326d" id="btn4" class="btn-link">
+                        <cl:expbind property="value" category="PROPERTY" expression="codeName"/>
+                        <cl:celldata std:sid="c-data-049c21be"/>
+                      </cl:button>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-8caaa06c" rowindex="0" colindex="3" columnname="codeName2">
+                      <cl:output std:sid="output-f647e707" id="opt17">
+                        <cl:celldata std:sid="c-data-a3ba5e45"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-d39fb8e2" rowindex="0" colindex="4" columnname="codeOrder">
+                      <cl:output std:sid="output-fb4c1343" id="opt18">
+                        <cl:celldata std:sid="c-data-6120f964"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-8dc41599" rowindex="0" colindex="5" columnname="use">
+                      <cl:output std:sid="output-6f1a6f3b" id="opt19">
+                        <cl:celldata std:sid="c-data-1d10756d"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-9d777372" rowindex="0" colindex="6" columnname="registerDate">
+                      <cl:output std:sid="output-3129f7e3" id="opt20" datatype="date" format="MM-DD-YYYY hh:mm:ss A">
+                        <cl:celldata std:sid="c-data-f346a25d"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-0d5ebe1b" rowindex="0" colindex="7" columnname="registeredBy">
+                      <cl:output std:sid="output-943a7a6e" id="opt21">
+                        <cl:celldata std:sid="c-data-59044e4c"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-37cced2d" rowindex="0" colindex="8" columnname="updateDate">
+                      <cl:output std:sid="output-c2026275" id="opt22" datatype="date" format="MM-DD-YYYY hh:mm:ss A">
+                        <cl:celldata std:sid="c-data-690ec937"/>
+                      </cl:output>
+                    </cl:gridcell>
+                    <cl:gridcell std:sid="gd-cell-632042bd" rowindex="0" colindex="9" columnname="lastUpdatedBy">
+                      <cl:output std:sid="output-959757aa" id="opt23">
+                        <cl:celldata std:sid="c-data-9d3a76b9"/>
+                      </cl:output>
+                    </cl:gridcell>
+                  </cl:griddetail>
+                </cl:grid>
+                <cl:udc std:sid="ud-control-eaa7f396" type="udc.pse.com.udcComPagination">
+                  <cl:attribute name="needs-auto-height" value="true"/>
+                  <cl:formdata std:sid="f-data-c3e31499" row="2" col="0"/>
+                </cl:udc>
+                <cl:formlayout std:sid="f-layout-496ccdbc" scrollable="false" hspace="12px" vspace="20px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                  <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                  <cl:rows length="1" unit="FRACTION"/>
+                  <cl:rows length="40" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                </cl:formlayout>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-415e8a0f" scrollable="false" hspace="0px" vspace="40px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+                <cl:rows length="216" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-7dd42237" scrollable="false" hspace="20px" vspace="16px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-783f6e18" scrollable="false" hspace="20px" vspace="16px">
+            <cl:rows length="36" unit="PIXEL" hidden="true"/>
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:rows length="1" unit="FRACTION" hidden="true"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-aa28214b" scrollable="false" hspace="20px" vspace="16px" top-margin="24px" right-margin="24px" bottom-margin="24px" left-margin="24px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="false" hidden="false" shadetype="NONE" shadecolor="transparent" syncminlength="true"/>
+          <cl:columns length="3" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-cc6e441c" scrollable="false" hspace="0px" vspace="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-fac99f38" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="48" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
