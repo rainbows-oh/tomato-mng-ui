@@ -78,6 +78,11 @@
 		}
 	}
 	
+	&.danger {
+		background-color: @danger-5;
+		border: 1px solid @danger-60;
+	}
+	
 	&.gray {
 		border-color: transparent;
 		background-color: @gray-10;
@@ -154,12 +159,6 @@
 //구분자 — dot-separate 그룹 안의 아웃풋 중 첫번째를 제외하고, 앞에 16px 폭의 · (가운데 정렬) 표시
 //         아웃풋 사이 간격이 16px 이므로 그룹(플로우 레이아웃)의 hspacing 은 0 으로 지정
 .cl-container.dot-separate {
-	// 아웃풋 스타일 — font-body-s 클래스와 동일 + 색상 #64748B
-	.cl-output {
-		#font-caption();
-		color: @gray-50; // #64748B
-	}
-	
 	.cl-layout-wrap:not(.cl-first) > .cl-output .cl-text::before {
 		content: "·";
 		display: inline-block;

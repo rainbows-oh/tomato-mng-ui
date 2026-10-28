@@ -391,3 +391,65 @@
 		background-image: url("@{img-path}/icons/ico_mail_open.svg");
 	}
 }
+
+/* ==========================================================================
+ .cl-checkbox.chk-pw-toggle — 비밀번호 보기 토글 체크박스 (20×20, 아이콘 전용)
+ 미체크 — ico_pw_toggel_eye / 체크 — ico_pw_toggel_eye_visibility
+ ========================================================================== */
+.cl-checkbox.chk-pw-toggle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	min-width: 20px;
+	min-height: 20px;
+	padding: 0 !important;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+
+	/* 아이콘 표출 전용 — 텍스트는 스크린리더용으로만 */
+	.cl-text {
+		#sound-only();
+		padding: 0;
+	}
+
+	/* 아이콘을 박스 정중앙에 배치
+	   field 는 런타임이 inline style(display: inline-table 등)로 지정하므로 !important 필요 */
+	.cl-checkbox-field {
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		vertical-align: top !important;
+	}
+
+	.cl-icon-wrapper {
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		vertical-align: middle;
+	}
+
+	/* 미체크 — 눈 아이콘 */
+	.cl-checkbox-icon,
+	&:hover .cl-checkbox-icon,
+	&.cl-hover .cl-checkbox-icon,
+	&.cl-focus .cl-checkbox-icon,
+	.cl-checkbox-icon:focus {
+		#checkbox--button(@size-icon-medium);
+		background-image: url("@{img-path}/icons/ico_pw_toggel_eye.svg");
+	}
+
+	/* 체크 — 눈 가림(슬래시) 아이콘 */
+	&.cl-checked .cl-checkbox-icon,
+	&.cl-checked:hover .cl-checkbox-icon,
+	&.cl-checked.cl-hover .cl-checkbox-icon,
+	&.cl-checked.cl-focus .cl-checkbox-icon,
+	&.cl-checked .cl-checkbox-icon:focus {
+		background-image: url("@{img-path}/icons/ico_pw_toggel_eye_visibility.svg");
+	}
+}

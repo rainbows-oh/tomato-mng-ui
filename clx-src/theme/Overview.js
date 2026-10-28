@@ -134,7 +134,7 @@ function onCmb6Open(e) {
 function onButtonClick(e) {
 	var button = e.control;
 	
-	util.Dialog.open(app, "app/pb/management/NewManualDisclosure_modal", 600, 527, function(){
+	util.Dialog.open(app, "app/pb/management/MGT-MAN-03-00_Disclosures_ManualDisclosure_ManualDisclosureView", 1000, 820, function(){
 		
 	}, {
 		
@@ -154,4 +154,20 @@ function onCmb7ItemClick(e) {
 		
 	}, 200);
 	debugger;
+}
+
+/*
+ * "버튼" 버튼에서 click 이벤트 발생 시 호출.
+ * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+ */
+function onButtonClick2(e) {
+	var button = e.control;
+	
+	util.Dialog.open(app, "app/pb/_old/mng/NewManualDisclosure_modal", 1000, 820, function(){
+		
+	}, {
+		
+	}, {
+		resizable: true
+	});
 }

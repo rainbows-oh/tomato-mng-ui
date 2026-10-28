@@ -646,6 +646,7 @@
         <cl:flowlayoutdata std:sid="f-data-eb5890ea" width="68px" height="24px" autosize="width"/>
       </cl:button>
       <cl:button std:sid="button-fba37d6c" class="btn-primary cl-hover" value="버튼">
+        <cl:listener std:sid="listener-558f3455" name="click" handler="onButtonClick2"/>
         <cl:flowlayoutdata std:sid="f-data-2b9a9b7f" width="68px" height="24px" autosize="width"/>
       </cl:button>
       <cl:button std:sid="button-d4f2583f" class="btn-primary cl-activated" value="버튼">
@@ -861,9 +862,9 @@
     </cl:group>
     <cl:group std:sid="group-155f786b" clipcontent="false">
       <cl:verticaldata std:sid="v-data-12b01a4e" width="1440px" height="400px" autosize="both"/>
-      <cl:combobox std:sid="c-box-45de4b81" id="cmb7">
+      <cl:combobox std:sid="c-box-45de4b81" id="cmb7" class="attachments">
         <cl:listener std:sid="listener-a39aeaf0" name="item-click" handler="onCmb7ItemClick"/>
-        <cl:flowlayoutdata std:sid="f-data-9eb71461" width="136px" height="36px"/>
+        <cl:flowlayoutdata std:sid="f-data-9eb71461" width="210px" height="36px"/>
         <cl:item std:sid="t-item-9e318d43" label="label1label1label1label1label1label1label1label1" value="value1" icon="theme/img/icons/ico_download.svg"/>
         <cl:item std:sid="t-item-9e9e797b" label="label2" value="value2" icon="theme/img/icons/ico_download.svg"/>
         <cl:item std:sid="t-item-a7d0321e" label="label3" value="value3" icon="theme/img/icons/ico_download.svg"/>
@@ -871,10 +872,6 @@
         <cl:item std:sid="t-item-b812fe13" label="label5" value="value5" icon="theme/img/icons/ico_download.svg"/>
         <cl:liststyle class="cmb-fild-down"/>
       </cl:combobox>
-      <cl:output std:sid="output-cd28e241" id="opt8" class="opt-attachments" value="correspondence-1-notice.pdf " displayexp="text + sstr(userAttr(&quot;size&quot;) + &quot;KB&quot;, [&quot;size&quot;])">
-        <cl:attribute name="size" value="325"/>
-        <cl:flowlayoutdata std:sid="f-data-af80c219" width="1024px" height="36px" autosize="height"/>
-      </cl:output>
       <cl:udc std:sid="ud-control-63006cc6" type="udc.pse.com.udcComFileDropzone">
         <cl:flowlayoutdata std:sid="f-data-08847859" width="600px" height="147px" autosize="height"/>
       </cl:udc>
