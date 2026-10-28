@@ -13,7 +13,9 @@
   </settings:CustomProperties>
   <settings:CustomProperties type="Accordion"/>
   <settings:CustomProperties type="Audio"/>
-  <settings:CustomProperties type="Button"/>
+  <settings:CustomProperties type="Button">
+    <controlProperties name="mobile-min-height"/>
+  </settings:CustomProperties>
   <settings:CustomProperties type="Calendar"/>
   <settings:CustomProperties type="CheckBox">
     <controlProperties name="required" label="유효성 검사/required" desc="필수 값 지정 여부">
