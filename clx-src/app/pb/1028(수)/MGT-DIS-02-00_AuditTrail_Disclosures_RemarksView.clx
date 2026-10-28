@@ -1,0 +1,134 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-4ed2673e" version="1.0.6164">
+  <head std:sid="head-bf3a4002">
+    <screen std:sid="screen-0d94fde4" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="true" customHeight="800" customWidth="800" active="true"/>
+    <screen std:sid="screen-bc8d8027" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-97cc490e" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-808659c6">
+      <cl:dataset std:sid="d-set-f5bf3ac3" id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="Username" std:sid="d-column-41b919ec" name="column1"/>
+          <cl:datacolumn comment="Department/Company" std:sid="d-column-5a34c1aa" name="column2"/>
+          <cl:datacolumn std:sid="d-column-78924dc9" name="column3"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="column1"><![CDATA[a.torres]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[Disclosure Department]]></cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[del]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1"><![CDATA[h.reyes]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[Disclosure Department]]></cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[del]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="column1"><![CDATA[n.fernandez]]></cl:datavalue>
+            <cl:datavalue columnname="column2"><![CDATA[PSE]]></cl:datavalue>
+            <cl:datavalue columnname="column3"><![CDATA[del]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-4991dc45">
+    <cl:listener std:sid="listener-81c43a8b" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:group std:sid="group-ac6a9860" id="grpBody">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:verticaldata std:sid="v-data-19c8e2c8" width="1024px" height="467px" autosize="height"/>
+      <cl:group std:sid="group-80bc9b0f" id="grpContentHeader">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="14"/>
+        <cl:verticaldata std:sid="v-data-f3021694" width="976px" height="20px" autosize="height"/>
+        <cl:group std:sid="group-4cbd26ca" id="grp8">
+          <cl:verticaldata std:sid="v-data-7aba902b" width="976px" height="20px" autosize="height"/>
+          <cl:output std:sid="output-ed77a709" id="opt6" class="font-body-s gray" value="Reference No. 0000039-2026">
+            <cl:flowlayoutdata std:sid="f-data-95b7279d" width="254px" height="20px" autosize="both"/>
+          </cl:output>
+          <cl:flowlayout std:sid="f-layout-93080131" hspacing="0" vspacing="0" valign="middle"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-d479a373" spacing="16"/>
+      </cl:group>
+      <cl:group std:sid="group-6a84c5cc" id="grpContent" class="section">
+        <cl:attribute name="hide-on-mobile" value=""/>
+        <cl:verticaldata std:sid="v-data-55dc2519" width="976px" height="303px" autosize="height"/>
+        <cl:group std:sid="group-dd828308" id="grp1">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-903795f8" row="0" col="0"/>
+          <cl:group std:sid="group-150f7a35" id="grp2" class="card">
+            <cl:attribute name="mobile-spacing" value="12"/>
+            <cl:attribute name="needs-auto-height" value=""/>
+            <cl:verticaldata std:sid="v-data-e3c8c66d" width="340px" height="188px" autosize="height"/>
+            <cl:output std:sid="output-6665db3c" id="opt1" class="font-subheading" value="Remarks">
+              <cl:verticaldata std:sid="v-data-c65501a5" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:radiobutton std:sid="r-button-f09496e4" id="rdb1" class="rdb-select" fieldLabel="Roles" colcount="1" hspacing="20" displayexp="label == &quot;Maria Santos&quot;&#xD;&#xA;&#x9;? label + sstr(&quot;\n08-21-2026 09:12:44 AM&quot;, [&quot;caption&quot;])&#xD;&#xA;&#x9;: label == &quot;John Reyes&quot;&#xD;&#xA;&#x9;&#x9;? label + sstr(&quot;\n08-21-2026 03:12:44 AMF&quot;, [&quot;caption&quot;])&#xD;&#xA;&#x9;&#x9;: label" hideicon="true" clickRegion="item">
+              <cl:verticaldata std:sid="v-data-4d5db2e4" width="300px" height="112px" autosize="height"/>
+              <cl:item std:sid="item-47bb7f5c" label="Maria Santos" value="value1"/>
+              <cl:item std:sid="item-a43eaa9f" label="John Reyes" value="value2"/>
+            </cl:radiobutton>
+            <cl:verticallayout std:sid="v-layout-06043f37" spacing="14"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-a6de74f3"/>
+        </cl:group>
+        <cl:group std:sid="group-d35387ee" id="grp7">
+          <cl:formdata std:sid="f-data-9ac3536b" width="100" height="33" row="0" col="1"/>
+          <cl:button std:sid="button-8c48617f" id="btnMobileSelect" class="btn-combo" visible="false" value="Select Option">
+            <cl:verticaldata std:sid="v-data-3a9ec880" width="717px" height="36px"/>
+          </cl:button>
+          <cl:group std:sid="group-4c843a7b" id="grp3" class="card">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:verticaldata std:sid="v-data-a95cb047" width="717px" height="251px" autosize="height"/>
+            <cl:output std:sid="output-c78bb5b6" id="opt2" class="font-subheading" value="Remarks">
+              <cl:verticaldata std:sid="v-data-27b26460" width="675px" height="35px" autosize="height"/>
+            </cl:output>
+            <cl:textarea std:sid="t-area-d3191784" id="txa1" class="resizable">
+              <cl:verticaldata std:sid="v-data-2425125c" width="100px" height="160px" autosize="height"/>
+            </cl:textarea>
+            <cl:verticallayout std:sid="v-layout-72fa27eb" spacing="14"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-d72d916c" spacing="16"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-aa28214b" scrollable="false" hspace="20px" vspace="16px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="false" shadetype="NONE" shadecolor="transparent" syncminlength="true"/>
+          <cl:columns length="3" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-f8571738" id="grpFooter" class="btn-footer-wrap">
+        <cl:verticaldata std:sid="v-data-7ff9091a" width="1024px" height="56px" autosize="height"/>
+        <cl:group std:sid="group-48fb1001" id="grp5">
+          <cl:formdata std:sid="f-data-a6e4f018" row="0" col="0"/>
+          <cl:button std:sid="button-b662b9b5" id="btn1" class="btn-secondary" value="Close">
+            <cl:flowlayoutdata std:sid="f-data-81be75d6" width="100px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-8ff53493" scrollable="false" hspacing="8" vspacing="8" halign="left" valign="middle"/>
+        </cl:group>
+        <cl:group std:sid="group-debbdc58" id="grp6">
+          <cl:formdata std:sid="f-data-4981bfec" row="0" col="1"/>
+          <cl:button std:sid="button-e0d20fc5" id="btn2" class="btn-primary" value="Save">
+            <cl:flowlayoutdata std:sid="f-data-6ec51ff2" width="100px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-cb8b5294" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-54304a52" scrollable="false" hspace="8px" vspace="8px">
+          <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-27de8553" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-92513bf4"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

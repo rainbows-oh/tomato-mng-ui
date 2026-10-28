@@ -1,0 +1,128 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9f767c45" version="1.0.6164">
+  <head std:sid="head-4164d839">
+    <screen std:sid="screen-bde5c099" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-5bc8fbbc" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-cb91ce37" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-b0c11fde"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-f1446bea" style="top:0px; left:0px; width:1024px; height:760px;">
+    <cl:group std:sid="group-d76d4330" id="grpBody">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:verticaldata std:sid="v-data-bd69fe29" width="1024px" height="594px" autosize="height"/>
+      <cl:group std:sid="group-53b9e161" id="grpContentHeader">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="14"/>
+        <cl:verticaldata std:sid="v-data-25d63c9f" width="976px" height="20px" autosize="height"/>
+        <cl:group std:sid="group-a6eb8c9e" id="grp3">
+          <cl:verticaldata std:sid="v-data-ec1d7da0" width="976px" height="20px" autosize="height"/>
+          <cl:output std:sid="output-87b0b125" id="opt1" class="font-body-s gray" value="Submitted by a.cruz on 08-20-2026 02:41:09 PM">
+            <cl:flowlayoutdata std:sid="f-data-076ce2ef" width="297px" height="20px" autosize="both"/>
+          </cl:output>
+          <cl:flowlayout std:sid="f-layout-c6a53877" hspacing="0" valign="middle"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-94976f51" spacing="16"/>
+      </cl:group>
+      <cl:group std:sid="group-a1987930" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="16"/>
+        <cl:verticaldata std:sid="v-data-16924e71" width="976px" height="506px" autosize="height"/>
+        <cl:group std:sid="group-43cfd753" id="grp1">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-c9dafb77" width="976px" height="60px" autosize="height"/>
+          <cl:group std:sid="group-f17fd374" id="grp2">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-fd3d56a8" row="0" col="0"/>
+            <cl:output std:sid="output-a6233255" id="opt3" class="font-caption" value="Company Name">
+              <cl:verticaldata std:sid="v-data-0d464138" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-9c2856ae" id="opt14" class="font-body" value="Manila Bay Holdings Corp.">
+              <cl:verticaldata std:sid="v-data-7fb4ab71" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-617959ce" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-95733370" id="grp4">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-d484d356" row="0" col="1"/>
+            <cl:output std:sid="output-6336eeda" id="opt4" class="font-caption" value="Endorse To">
+              <cl:verticaldata std:sid="v-data-b6aa9d49" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-335a1ea4" id="opt15" class="font-body" value="l.cruz (Disclosure Operations)">
+              <cl:verticaldata std:sid="v-data-dce881ac" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-1c9b50a1" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-f147494b" id="grp6">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-095689c5" row="0" col="2"/>
+            <cl:output std:sid="output-aadebdbe" id="opt7" class="font-caption" value="Attached File">
+              <cl:verticaldata std:sid="v-data-33073334" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:button std:sid="button-b31d18b7" id="btn8" class="btn-download btn-inline" value="qna-8-template-copy.pdf" icon="0">
+              <cl:verticaldata std:sid="v-data-183f0be4" width="994px" height="36px" autosize="none"/>
+            </cl:button>
+            <cl:verticallayout std:sid="v-layout-37b8a903" spacing="4"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-2ad5badd" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-bb2edb20" id="grp5" class="card gray">
+          <cl:attribute name="mobile-fit" value="true"/>
+          <cl:attribute name="mobile-spacing" value="6"/>
+          <cl:verticaldata std:sid="v-data-377b9aa2" width="976px" height="90px" autosize="height"/>
+          <cl:output std:sid="output-687c966c" id="opt5" class="font-caption" value="REMARKS">
+            <cl:verticaldata std:sid="v-data-478c281d" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-cffe9ba4" id="opt6" class="font-body" value="Please review the trading halt notice and post it ahead of the market open.">
+            <cl:verticaldata std:sid="v-data-c2eca8d7" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-cc11d357" spacing="8"/>
+        </cl:group>
+        <cl:embeddedpage std:sid="e-page-9e381c35" id="emp1">
+          <cl:verticaldata std:sid="v-data-00af449a" width="320px" height="240px" autosize="height"/>
+        </cl:embeddedpage>
+        <cl:group std:sid="group-836e35e9" id="grpFooter" class="btn-footer-wrap">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-863df694" width="976px" height="56px" autosize="height"/>
+          <cl:group std:sid="group-b5a9cbf6" id="grp7">
+            <cl:formdata std:sid="f-data-dc16be9b" row="0" col="0"/>
+            <cl:flowlayout std:sid="f-layout-3a18b59d" hspacing="8" vspacing="8"/>
+          </cl:group>
+          <cl:group std:sid="group-86277bb3" id="grp51">
+            <cl:formdata std:sid="f-data-31d36064" row="0" col="1"/>
+            <cl:button std:sid="button-0c4a93a7" id="btn2" class="btn-danger" value="Reject">
+              <cl:flowlayoutdata std:sid="f-data-43e85e6c" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-76278ba9" id="btn5" class="btn-primary" value="Approve">
+              <cl:flowlayoutdata std:sid="f-data-4ef87403" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-b78ddca9" hspacing="8" vspacing="8" halign="right"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-d1bb9401" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-2a52e479" spacing="20"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-fb7ff337" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-2a759159" spacing="18"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

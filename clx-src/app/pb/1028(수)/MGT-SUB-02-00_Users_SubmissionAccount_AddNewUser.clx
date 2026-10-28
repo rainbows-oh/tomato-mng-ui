@@ -1,0 +1,436 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-ab4e79cf" version="1.0.6164">
+  <head std:sid="head-fef2a59d">
+    <screen std:sid="screen-1303ea48" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="true" customHeight="1200" customWidth="800" active="true"/>
+    <screen std:sid="screen-1441bc3f" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-1ee987ec" id="EXB-PART" name="EXB-PART" width="360px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-e918cc57"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-6585a0fc">
+    <cl:group std:sid="group-csm000016" id="grpHeader" class="page-title-wrap">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:verticaldata std:sid="v-data-csm000017" width="1024px" height="48px" autosize="height" sticky="true" stickytopoffset="0"/>
+      <cl:udc std:sid="ud-control-cc03f030" id="udccomappheader2" type="udc.pse.com.udcComAppHeader">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-d41b23fe" row="0" col="0"/>
+        <cl:property name="title" value="Submission Account" type="string"/>
+      </cl:udc>
+      <cl:formlayout std:sid="f-layout-csm000023" scrollable="false" hspace="8px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="36" unit="PIXEL" autoSizing="false" syncminlength="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-0b464f24" id="grpBody" class="inner">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:verticaldata std:sid="v-data-40a89747" width="1024px" height="1455px" autosize="height"/>
+      <cl:group std:sid="group-a20acfba" id="grpContentHeader" class="detail-head">
+        <cl:verticaldata std:sid="v-data-1593de64" width="976px" height="62px" autosize="height"/>
+        <cl:group std:sid="group-2e509e97" id="grp2">
+          <cl:formdata std:sid="f-data-24e2aa22" width="100" height="22" row="0" col="0"/>
+          <cl:button std:sid="button-ee96ddaf" id="btn2" class="btn-go-back icon" fieldLabel="Go back" value="" icon="0">
+            <cl:formdata std:sid="f-data-ef0b598c" row="0" col="0" rowspan="1" colspan="1"/>
+          </cl:button>
+          <cl:output std:sid="output-cf8f466f" id="opt2" class="font-subheading" value="Add New User" ellipsis="true">
+            <cl:formdata std:sid="f-data-c4233e53" row="0" col="1"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-b77825ab" scrollable="false" hspace="8px" vspace="4px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="36" unit="PIXEL"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-3131f756" scrollable="false" hspace="8px" vspace="8px" top-margin="12px" right-margin="16px" bottom-margin="12px" left-margin="16px" hseparatorwidth="0" vseparatorwidth="0">
+          <cl:rows length="36" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="transparent" syncminlength="true"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-c9d6abb5" id="grpContent" class="card">
+        <cl:attribute name="mobile-spacing" value="12"/>
+        <cl:verticaldata std:sid="v-data-3172a4b8" width="976px" height="1296px" autosize="height"/>
+        <cl:group std:sid="group-a97974be" id="grp4" class="separate">
+          <cl:verticaldata std:sid="v-data-eb60dcee" width="934px" height="131px" autosize="height"/>
+          <cl:output std:sid="output-335fd52c" id="opt1" class="font-heading" value="Company Name">
+            <cl:verticaldata std:sid="v-data-30084eb5" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-csm000079" id="grp1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:verticaldata std:sid="v-data-97ce0f4e" width="934px" height="84px" autosize="height"/>
+            <cl:output std:sid="output-csm000081" id="opt4" class="font-label required" value="Company Name">
+              <cl:verticaldata std:sid="v-data-csm000082" width="100px" height="18px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-csm000083" id="grp3" class="input-group">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-csm000084" width="539px" height="36px" autosize="height"/>
+              <cl:combobox std:sid="c-box-csm000094" id="cmb1" fieldLabel="Select Company Name">
+                <cl:formdata std:sid="f-data-59816279" row="0" col="0"/>
+              </cl:combobox>
+              <cl:inputbox std:sid="i-box-ad094e1c" id="ipb1" fieldLabel="Company Name" placeholder="Enter a company name or stock symbol">
+                <cl:formdata std:sid="f-data-93d98ceb" row="0" col="1"/>
+              </cl:inputbox>
+              <cl:formlayout std:sid="f-layout-csm000096" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="36" unit="PIXEL"/>
+                <cl:columns length="160" unit="PIXEL"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:output std:sid="output-798bae05" id="opt3" class="font-caption" value="Select a company to unlock User Group and Company fields.">
+              <cl:verticaldata std:sid="v-data-3ad30915" width="934px" height="18px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-csm000097" spacing="6"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-15151b1a" spacing="10"/>
+        </cl:group>
+        <cl:group std:sid="group-aa1cd04c" id="grp5" class="separate">
+          <cl:verticaldata std:sid="v-data-2a64c47c" width="934px" height="107px" autosize="height"/>
+          <cl:output std:sid="output-dcb2d62c" id="opt5" class="font-heading" value="User Group">
+            <cl:verticaldata std:sid="v-data-f0183aa0" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-068c1bdd" id="grp6">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:verticaldata std:sid="v-data-1b298a3e" width="934px" height="60px" autosize="height"/>
+            <cl:output std:sid="output-19bd8928" id="opt6" class="font-label" value="User Group">
+              <cl:verticaldata std:sid="v-data-e097872a" width="456px" height="18px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-6de7b860" id="grp7" class="input-group">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-752b4e61" width="539px" height="36px" autosize="height"/>
+              <cl:combobox std:sid="c-box-d2b060a7" id="cmb2" fieldLabel="User Group">
+                <cl:formdata std:sid="f-data-690b069f" row="0" col="0"/>
+              </cl:combobox>
+              <cl:formlayout std:sid="f-layout-4ff7c197" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="36" unit="PIXEL"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-7adccae9" spacing="6"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-14603e40" spacing="10"/>
+        </cl:group>
+        <cl:group std:sid="group-c2941a12" id="grp8" class="separate">
+          <cl:verticaldata std:sid="v-data-5529521e" width="934px" height="225px" autosize="height"/>
+          <cl:output std:sid="output-19b38e84" id="opt7" class="font-heading" value="Personal Information">
+            <cl:verticaldata std:sid="v-data-2a5d48b9" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-a144ab32" id="grp11" class="row">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:verticaldata std:sid="v-data-543ef5e6" width="934px" height="84px" autosize="height"/>
+            <cl:group std:sid="group-ef318d90" id="grp12">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-50b5bd6b" width="100" height="51" row="0" col="0"/>
+              <cl:output std:sid="output-42a8bc12" id="opt10" class="font-label required" value="Last Name">
+                <cl:verticaldata std:sid="v-data-4d3e31ae" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-b88f8ccc" id="ipb2" fieldLabel="Last Name" placeholder="Enter last name">
+                <cl:verticaldata std:sid="v-data-13e1c522" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:output std:sid="output-4a666b97" id="opt9" class="font-caption" value="50" displayexp="&quot;Maximum &quot; + text + &quot; characters&quot;">
+                <cl:verticaldata std:sid="v-data-b1bdef8e" width="934px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-b6ee6393" spacing="6"/>
+            </cl:group>
+            <cl:group std:sid="group-beb95506" id="grp13">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-7275c311" row="0" col="1"/>
+              <cl:output std:sid="output-6223e3bc" id="opt11" class="font-label required" value="First Name">
+                <cl:verticaldata std:sid="v-data-d71109cd" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-6334ea74" id="ipb3" fieldLabel="First Name" placeholder="Enter first name">
+                <cl:verticaldata std:sid="v-data-e0e6eca8" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:output std:sid="output-054717be" id="opt8" class="font-caption" value="50" displayexp="&quot;Maximum &quot; + text + &quot; characters&quot;">
+                <cl:verticaldata std:sid="v-data-1127d748" width="461px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-0fb33905" spacing="6"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-48f8b419" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent" minlength="0"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-d422261f" id="grp9" class="row">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:verticaldata std:sid="v-data-d269eec0" width="934px" height="84px" autosize="height"/>
+            <cl:group std:sid="group-37973672" id="grp10">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-c7087b38" width="100" height="51" row="0" col="0"/>
+              <cl:output std:sid="output-6357d149" id="opt12" class="font-label" value="Middle Name">
+                <cl:verticaldata std:sid="v-data-797c6c70" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-495bdfdf" id="ipb5" fieldLabel="Middle Name" placeholder="Enter middle name (optional)">
+                <cl:verticaldata std:sid="v-data-b6ac79ff" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:output std:sid="output-61ad5c49" id="opt13" class="font-caption" value="50" displayexp="&quot;Maximum &quot; + text + &quot; characters&quot;">
+                <cl:verticaldata std:sid="v-data-24f7472d" width="934px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-05dd79ca" spacing="6"/>
+            </cl:group>
+            <cl:group std:sid="group-098ede09" id="grp14">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-cd221820" row="0" col="1"/>
+              <cl:output std:sid="output-6e36f12e" id="opt14" class="font-label required" value="Username ">
+                <cl:verticaldata std:sid="v-data-33521453" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-476b13da" id="ipb4" fieldLabel="Username " placeholder="3–20 characters">
+                <cl:verticaldata std:sid="v-data-3008f40b" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:output std:sid="output-eb5e6b34" id="opt15" class="font-caption" value="20" displayexp="&quot;Maximum &quot; + text + &quot; characters&quot;">
+                <cl:verticaldata std:sid="v-data-f0d33bfb" width="461px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-53f1a3e2" spacing="6"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-128f1009" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent" minlength="0"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-e6c9d5f1" spacing="10"/>
+        </cl:group>
+        <cl:group std:sid="group-7e483124" id="grp15" class="separate">
+          <cl:verticaldata std:sid="v-data-74de2cab" width="934px" height="208px" autosize="height"/>
+          <cl:output std:sid="output-edbbd47b" id="opt16" class="font-heading" value="Company Information">
+            <cl:verticaldata std:sid="v-data-6bec4618" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-e0bfa5df" id="grp16" class="row">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:verticaldata std:sid="v-data-242048e9" width="934px" height="84px" autosize="height"/>
+            <cl:group std:sid="group-557d0614" id="grp17">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-5a01bef8" width="100" height="51" row="0" col="0"/>
+              <cl:output std:sid="output-47fc66bc" id="opt17" class="font-label" value="Company">
+                <cl:verticaldata std:sid="v-data-196719ef" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-12a07715" id="ipb6" fieldLabel="Company" placeholder="Filled when a company is selected">
+                <cl:verticaldata std:sid="v-data-e07f90de" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:verticallayout std:sid="v-layout-480fa2ef" spacing="6"/>
+            </cl:group>
+            <cl:group std:sid="group-8aa532de" id="grp18">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-2564164a" row="0" col="1"/>
+              <cl:output std:sid="output-3e6b5a48" id="opt19" class="font-label required" value="Department/Division ">
+                <cl:verticaldata std:sid="v-data-badeabbb" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-eb1e219e" id="ipb7" fieldLabel="Department/Division " placeholder="Enter department or division">
+                <cl:verticaldata std:sid="v-data-0132fb34" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:output std:sid="output-9bb70d07" id="opt20" class="font-caption" value="200" displayexp="&quot;Maximum &quot; + text + &quot; characters&quot;">
+                <cl:verticaldata std:sid="v-data-daa6938e" width="461px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-eb5dc019" spacing="6"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-0f09a055" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent" minlength="0"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-2690adee" id="grp19" class="row">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:verticaldata std:sid="v-data-b1393710" width="934px" height="84px" autosize="height"/>
+            <cl:group std:sid="group-e6d2009f" id="grp20">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-9b819232" width="100" height="51" row="0" col="0"/>
+              <cl:output std:sid="output-b41954cb" id="opt21" class="font-label required" value="Position/Designation">
+                <cl:verticaldata std:sid="v-data-7501dd4f" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-2ea91a1f" id="ipb8" fieldLabel="Position/Designation" placeholder="Enter position or designation">
+                <cl:verticaldata std:sid="v-data-5340f555" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:output std:sid="output-ff9457fe" id="opt22" class="font-caption" value="200" displayexp="&quot;Maximum &quot; + text + &quot; characters&quot;">
+                <cl:verticaldata std:sid="v-data-5b3e70d0" width="934px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-ebe6cda8" spacing="6"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-ae5aa7f3" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent" minlength="0"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-8f01b9dd" spacing="10"/>
+        </cl:group>
+        <cl:group std:sid="group-d5025ee3" id="grp21" class="separate">
+          <cl:verticaldata std:sid="v-data-e649fec5" width="934px" height="307px" autosize="height"/>
+          <cl:output std:sid="output-0152265c" id="opt18" class="font-subheading" value="Contact Information">
+            <cl:verticaldata std:sid="v-data-06e8188a" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-46ddad31" id="grp22" class="row">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:verticaldata std:sid="v-data-d123a4a5" width="934px" height="58px" autosize="height"/>
+            <cl:group std:sid="group-ee24bd1b" id="grp23">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-efc77bfd" width="100" height="25" row="0" col="0"/>
+              <cl:output std:sid="output-14e4dfbd" id="opt23" class="font-label required" value="Email Address">
+                <cl:verticaldata std:sid="v-data-c4d953f5" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-ee4e1673" id="ipb9" fieldLabel="Email Address" placeholder="name@company.com">
+                <cl:verticaldata std:sid="v-data-1f0fd161" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:verticallayout std:sid="v-layout-68525e6b" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-c1b2b15c" id="grp24">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-7559bcf5" row="0" col="1"/>
+              <cl:output std:sid="output-ac9beedc" id="opt24" class="font-label" value="Alternate Email Address">
+                <cl:verticaldata std:sid="v-data-df5c3e0b" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-5dd61847" id="ipb10" fieldLabel="Alternate Email Address" placeholder="name@example.com (optional)">
+                <cl:verticaldata std:sid="v-data-b7bae4be" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:verticallayout std:sid="v-layout-ebc5ec82" spacing="4"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-fd8b1b37" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION" minlength="0"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-39e39184" id="grp25" class="row">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:verticaldata std:sid="v-data-35876e42" width="934px" height="82px" autosize="height"/>
+            <cl:group std:sid="group-7a998361" id="grp26">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-c170fdfc" width="100" height="49" row="0" col="0"/>
+              <cl:output std:sid="output-01cfab64" id="opt25" class="font-label" value="Office Address">
+                <cl:verticaldata std:sid="v-data-cb70195d" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-5495dc2b" id="ipb11" fieldLabel="Office Address" placeholder="Enter office address">
+                <cl:verticaldata std:sid="v-data-f1ce042d" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:output std:sid="output-6082598a" id="opt26" class="font-caption" value="200" displayexp="&quot;Maximum &quot; + text + &quot; characters&quot;">
+                <cl:verticaldata std:sid="v-data-4f2f0733" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-e2671fc8" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-6d90313d" id="grp27">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-f96f7ff9" width="100" height="25" row="0" col="1"/>
+              <cl:output std:sid="output-21572ddb" id="opt27" class="font-label required" value="Telephone Number">
+                <cl:verticaldata std:sid="v-data-a6119e0c" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-52025270" id="ipb12" fieldLabel="Telephone Number" placeholder="Enter telephone number">
+                <cl:verticaldata std:sid="v-data-1e1f4c31" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:output std:sid="output-abf1f540" id="opt28" class="font-caption" value="50" displayexp="&quot;Maximum &quot; + text + &quot; characters&quot;">
+                <cl:verticaldata std:sid="v-data-595405fe" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-340ec1c4" spacing="4"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-2d4d9ea7" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION" minlength="0"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-3e6ca144" id="grp28" class="row">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:verticaldata std:sid="v-data-fb9aa6cd" width="934px" height="82px" autosize="height"/>
+            <cl:group std:sid="group-23af210b" id="grp29">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-f106a3ce" width="100" height="57" row="0" col="0"/>
+              <cl:output std:sid="output-6f024ad4" id="opt29" class="font-label" value="Mobile Number">
+                <cl:verticaldata std:sid="v-data-58dcaf4a" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-f697173d" id="ipb13" fieldLabel="Mobile Number" placeholder="Enter mobile number">
+                <cl:verticaldata std:sid="v-data-918fb233" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:output std:sid="output-8daa68ee" id="opt30" class="font-caption" value="50" displayexp="&quot;Maximum &quot; + text + &quot; characters&quot;">
+                <cl:verticaldata std:sid="v-data-5ceee340" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-37c30825" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-8ba259c5" id="grp30">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-a980124b" width="100" height="17" row="0" col="1"/>
+              <cl:output std:sid="output-3d852aaf" id="opt31" class="font-label required" value="Fax Number">
+                <cl:verticaldata std:sid="v-data-29496a9d" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-5544b671" id="ipb14" fieldLabel="Fax Number" placeholder="Enter fax number">
+                <cl:verticaldata std:sid="v-data-84e37959" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:output std:sid="output-4b6c2af5" id="opt32" class="font-caption" value="50" displayexp="&quot;Maximum &quot; + text + &quot; characters&quot;">
+                <cl:verticaldata std:sid="v-data-4bb530dc" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-b13fa614" spacing="4"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-eebec21b" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION" minlength="0"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-0bad9bdf" spacing="16"/>
+        </cl:group>
+        <cl:group std:sid="group-15926e9a" id="grp31" class="group">
+          <cl:verticaldata std:sid="v-data-ee53a080" width="934px" height="100px" autosize="height"/>
+          <cl:output std:sid="output-658d73bc" id="opt33" class="font-subheading required" value="Role">
+            <cl:verticaldata std:sid="v-data-68c6b850" width="926px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-5719b5c9" id="grp32">
+            <cl:verticaldata std:sid="v-data-2dabceac" width="934px" height="70px" autosize="height"/>
+            <cl:output std:sid="output-d488fd3f" id="opt34" class="font-caption" value="Select a company to assign roles.">
+              <cl:verticaldata std:sid="v-data-8293aa22" width="457px" height="18px" autosize="height"/>
+            </cl:output>
+            <cl:checkboxgroup std:sid="cb-group-08ee850b" id="cbg1" fieldLabel="Role">
+              <cl:verticaldata std:sid="v-data-4980fac9" width="200px" height="20px" autosize="height"/>
+              <cl:item std:sid="item-f3649d8f" label="Maker" value="value1"/>
+              <cl:item std:sid="item-66cee5a4" label="Approver" value="value2"/>
+              <cl:item std:sid="item-bdab467c" label="Administrator" value="value3"/>
+            </cl:checkboxgroup>
+            <cl:checkbox std:sid="c-box-a65bf494" id="cbx1" style="padding-left:16px;" fieldLabel="Correspondence access allowed" text="Correspondence access allowed&#xD;&#xA;">
+              <cl:verticaldata std:sid="v-data-c5b36200" width="934px" height="20px" autosize="height"/>
+            </cl:checkbox>
+            <cl:verticallayout std:sid="v-layout-d17980da" spacing="6"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-4d5d4dbb" spacing="10"/>
+        </cl:group>
+        <cl:group std:sid="group-836e35e9" id="grpFooter" class="btn-footer-wrap">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-863df694" width="976px" height="56px" autosize="height"/>
+          <cl:group std:sid="group-b5a9cbf6" id="grp33">
+            <cl:formdata std:sid="f-data-dc16be9b" row="0" col="0"/>
+            <cl:button std:sid="button-7a7a1c5b" id="btn3" class="btn-inline" visible="false" value="Back to list">
+              <cl:flowlayoutdata std:sid="f-data-0ba45eea" width="101px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-3a18b59d" hspacing="8" vspacing="8"/>
+          </cl:group>
+          <cl:group std:sid="group-86277bb3" id="grp34">
+            <cl:formdata std:sid="f-data-31d36064" row="0" col="1"/>
+            <cl:button std:sid="button-7c922c8b" id="btn5" class="btn-danger" visible="false" value="Delete">
+              <cl:flowlayoutdata std:sid="f-data-56b83974" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-50e7c410" id="btn1" class="btn-secondary" value="Cancel">
+              <cl:flowlayoutdata std:sid="f-data-3867b1e2" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-76278ba9" id="btn4" class="btn-primary" value="Save">
+              <cl:flowlayoutdata std:sid="f-data-4ef87403" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-b78ddca9" hspacing="8" vspacing="8" halign="right"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-d1bb9401" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-edd42a47" spacing="20"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-9dda75e2" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-85c69965" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
