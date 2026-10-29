@@ -134,9 +134,6 @@
             <cl:tabfolder std:sid="t-folder-5dc568be" id="fld1" class="line" childcombinatorclass="tablist" item-sizing="fill">
               <cl:verticaldata std:sid="v-data-9df5440f" width="574px" height="933px" autosize="height"/>
               <cl:tabitem std:sid="t-item-c8868178" selected="true" text="Premissions">
-                <std:metadata>
-                  <std:property key="is-active-item" value="true"/>
-                </std:metadata>
                 <cl:group std:sid="group-bb2a711c">
                   <std:metadata>
                     <std:property key="locked" value="true"/>
@@ -287,6 +284,9 @@
                 </cl:group>
               </cl:tabitem>
               <cl:tabitem std:sid="t-item-22ade52a" selected="true" text="User">
+                <std:metadata>
+                  <std:property key="is-active-item" value="true"/>
+                </std:metadata>
                 <cl:group std:sid="group-36e9e9f9">
                   <std:metadata>
                     <std:property key="locked" value="true"/>
@@ -306,11 +306,15 @@
                     <cl:gridcolumn std:sid="g-column-581f5601"/>
                     <cl:gridcolumn std:sid="g-column-b12d9678" width="200px"/>
                     <cl:gridcolumn std:sid="g-column-ebaa1a65" width="60px"/>
+                    <cl:gridcolumn std:sid="g-column-44cae8d3" width="60px"/>
+                    <cl:gridcolumn std:sid="g-column-aab2a61d" width="60px"/>
                     <cl:gridheader std:sid="gh-band-2a673f1f">
                       <cl:gridrow std:sid="g-row-b4b766dc" height="32px"/>
                       <cl:gridcell std:sid="gh-cell-58adc07e" rowindex="0" colindex="0" targetcolumnname="column1" sortable="false" filterable="false" text="Username"/>
                       <cl:gridcell std:sid="gh-cell-2e15ebff" rowindex="0" colindex="1" targetcolumnname="column2" sortable="false" filterable="false" text="Department/Company"/>
                       <cl:gridcell std:sid="gh-cell-bfbfd2d1" rowindex="0" colindex="2" targetcolumnname="column3" sortable="false" filterable="false" text=""/>
+                      <cl:gridcell std:sid="gh-cell-3415c466" rowindex="0" colindex="3"/>
+                      <cl:gridcell std:sid="gh-cell-2de5c6fa" rowindex="0" colindex="4"/>
                     </cl:gridheader>
                     <cl:griddetail std:sid="gd-band-7cc8129a">
                       <cl:gridrow std:sid="g-row-ad408e65" height="50px"/>
@@ -327,6 +331,16 @@
                       <cl:gridcell std:sid="gd-cell-ae739d22" rowindex="0" colindex="2" columnname="column3">
                         <cl:button std:sid="button-f67788a9" id="btn1" class="icon btn-delete" value="Button" icon="0">
                           <cl:celldata std:sid="c-data-dc88a011" halign="CENTER" valign="CENTER" width="28" height="28" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="3.0" rightSpacing="3.0"/>
+                        </cl:button>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-fc17b050" rowindex="0" colindex="3">
+                        <cl:button std:sid="button-ebcb0ad5" id="btn2" class="icon btn-user-add-blue" value="Button" icon="0">
+                          <cl:celldata std:sid="c-data-397d7506" halign="CENTER" valign="CENTER" width="28" height="28" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="3.0" rightSpacing="3.0"/>
+                        </cl:button>
+                      </cl:gridcell>
+                      <cl:gridcell std:sid="gd-cell-d629eee1" rowindex="0" colindex="4">
+                        <cl:button std:sid="button-8e9d3fd9" id="btn4" class="icon btn-refresh-blue" value="Button" icon="0">
+                          <cl:celldata std:sid="c-data-78fd6dc2" halign="CENTER" valign="CENTER" width="28" height="28" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="3.0" rightSpacing="3.0"/>
                         </cl:button>
                       </cl:gridcell>
                     </cl:griddetail>

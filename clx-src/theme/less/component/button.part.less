@@ -290,8 +290,11 @@
 /* --- Inline --- */
 .btn-inline {
 	#btn--default(@color-button-secondary-fill-default, @color-component-text-active, @color-component-text-active);
-	font-weight: 600 !important;
-	font-size: 13px !important;	
+	
+	&.btn-download {
+		font-weight: 600 !important;
+		font-size: 13px !important;	
+	}
 	
 	&:not(.cl-disabled):hover,
 	&:not(.cl-disabled).cl-hover {
@@ -311,6 +314,9 @@
 		#btn--default(@color-button-secondary-fill-disabled, @color-button-secondary-border-disabled, @color-button-secondary-color-disabled);
 	}
 }
+
+
+
 
 .cl-grid-row {
 	&.cl-inserted,
@@ -567,6 +573,8 @@
 	}
 }
 
+
+
 /* ==========================================================================
    Sizes
    ========================================================================== */
@@ -691,9 +699,9 @@
 	background-image: url("@{img-path}/icons/ico_reset.svg") !important;
 }
 
-.btn-refresh .cl-icon {
-	background-image: url("@{img-path}/icons/ico_refresh.svg") !important;
-}
+//.btn-refresh .cl-icon {
+//	background-image: url("@{img-path}/icons/ico_refresh.svg") !important;
+//}
 
 .btn-single-search .cl-icon {
 	background-image: url("@{img-path}/icons/ico_search.svg") !important;
@@ -735,37 +743,13 @@
 	background-image: url("@{img-path}/icons/ico_file.svg") !important;
 }
 
-/* ==========================================================================
-   Icon Variant Styles (아이콘 버튼 유형별 색상)
-   ========================================================================== */
+.btn-refresh-blue .cl-icon {
+	background-image: url("@{img-path}/icons/ico_refresh_blue.svg") !important;
+}
 
-/* --- Tertiary 계열 --- */
-//.btn-insert,
-//.btn-revert,
-//.btn-delete,
-//.btn-print,
-//.btn-pop,
-//.btn-excel,
-//.btn-pdf,
-//.btn-reset,
-//.btn-refresh,
-//.btn-single-search {
-//	#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
-//	
-//	&:not(.cl-disabled):hover,
-//	&:not(.cl-disabled).cl-hover {
-//		#btn--hover(@color-button-tertiary-fill-hover, @color-button-tertiary-border, @color-component-text);
-//	}
-//	
-//	&:not(.cl-disabled).cl-activated,
-//	&:not(.cl-disabled):active {
-//		#btn--pressed(@color-button-tertiary-fill-pressed, @color-button-tertiary-border, @color-component-text);
-//	}
-//	
-//	&.cl-focus {
-//		#btn--default(@color-button-tertiary-fill-default, @color-button-tertiary-border, @color-component-text);
-//	}
-//}
+.btn-user-add-blue .cl-icon {
+	background-image: url("@{img-path}/icons/ico_user_add_blue.svg") !important;
+}
 
 /* --- Submit (Primary) 계열 --- */
 .btn-search,
