@@ -17,15 +17,15 @@
       </cl:property>
       <cl:property name="startDateReadOnly" type="boolean" default="false" std:desc="[Boolean] 시작일자 ReadOnly (default: false)"/>
       <cl:property name="endDateReadOnly" type="boolean" default="false" std:desc="[Boolean] 종료일자 ReadOnly (default: false)"/>
-      <cl:property name="defaultPickerType" type="enumeration" std:desc="[String] 기본 날짜 선택 유형 ">
+      <cl:property name="defaultPickerType" type="enumeration" default="1month" std:desc="[String] 기본 날짜 선택 유형 ">
         <cl:available-value></cl:available-value>
         <cl:available-value>today</cl:available-value>
-        <cl:available-value>1 week</cl:available-value>
-        <cl:available-value>1 month</cl:available-value>
-        <cl:available-value>6 months</cl:available-value>
-        <cl:available-value>1 year</cl:available-value>
-        <cl:available-value>2 years</cl:available-value>
-        <cl:available-value>3 years</cl:available-value>
+        <cl:available-value>1week</cl:available-value>
+        <cl:available-value>1month</cl:available-value>
+        <cl:available-value>6months</cl:available-value>
+        <cl:available-value>1year</cl:available-value>
+        <cl:available-value>2years</cl:available-value>
+        <cl:available-value>3years</cl:available-value>
       </cl:property>
       <cl:property name="defaultPickerTypeEndDt" type="boolean" default="false" std:desc="[Boolean] 기본 날짜 선택 유형을 종료일자로 설정 (default: false)"/>
       <cl:property name="showPickerArea" type="boolean" default="true" bindable="true" std:desc="[Boolean] 날짜 선택 버튼 영역 보여줄지 여부 (default: true)"/>
@@ -71,6 +71,7 @@
       <cl:combobox std:sid="c-box-csm000075" id="cmbPeriod" fieldLabel="Select period">
         <cl:listener std:sid="listener-f93cc726" name="item-click" handler="onCmbPeriodItemClick"/>
         <cl:attribute name="needs-auto-height" value=""/>
+        <cl:apppropbind property="value" app-property="defaultPickerType"/>
         <cl:formdata std:sid="f-data-csm000076" row="0" col="1"/>
         <cl:item std:sid="t-item-9dbbcb75" label="today" value="today"/>
         <cl:item std:sid="t-item-eca82110" label="1 week" value="1week"/>
