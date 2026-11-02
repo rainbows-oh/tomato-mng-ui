@@ -5,7 +5,13 @@
     <screen std:sid="screen-3d36fc78" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
     <screen std:sid="screen-4a8af3df" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
     <cl:model std:sid="model-703e8670"/>
-    <cl:appspec title="페이지 인덱서"/>
+    <cl:appspec title="페이지 인덱서">
+      <cl:property name="page" type="string" default="1" bindable="true" std:desc="현재 페이지 번호"/>
+      <cl:property name="size" type="string" default="10" bindable="true" std:desc="페이지당 데이터 개수"/>
+      <cl:property name="totalCount" type="string" default="0" bindable="true" std:desc="전체 데이터 개수"/>
+      <cl:property name="totalPages" type="string" default="0" bindable="true" std:desc="전체 페이지 수"/>
+      <cl:event name="pageChange" type="cpr.events.CAppEvent"/>
+    </cl:appspec>
   </head>
   <body std:sid="body-4e9277da" style="top:0px; left:0px; width:1024px; height:40px;" class="pagination">
     <cl:group std:sid="group-99c2fdee" id="grpPagination">
@@ -15,33 +21,48 @@
       <cl:group std:sid="group-146907e9" class="page-info">
         <cl:attribute name="needs-auto-height" value="true"/>
         <cl:formdata std:sid="f-data-22efb229" row="0" col="0"/>
-        <cl:output std:sid="output-6876f868" value="Viewing 1-10">
+        <cl:output std:sid="output-6876f868">
+          <cl:expbind property="value" category="PROPERTY" expression="&quot;Viewing &quot; + parseInt(((@page - 1)* @size) + 1) + &quot;-&quot; + @page * @size"/>
           <cl:flowlayoutdata std:sid="f-data-6203ec40" width="92px" height="36px" autosize="width"/>
         </cl:output>
-        <cl:output std:sid="output-12c916ba" value="120" displayexp="&quot;of &quot; + text">
+        <cl:output std:sid="output-12c916ba" displayexp="&quot;of &quot; + text">
+          <cl:apppropbind property="value" category="PROPERTY" app-property="totalCount"/>
           <cl:flowlayoutdata std:sid="f-data-88818908" width="48px" height="36px" autosize="width"/>
         </cl:output>
         <cl:flowlayout std:sid="f-layout-9b47ae3b" scrollable="false" hspacing="4" vspacing="0" valign="middle" linewrap="false"/>
       </cl:group>
       <cl:group std:sid="group-65607b43" class="page-navi">
         <cl:formdata std:sid="f-data-f6ec35e2" row="0" col="1"/>
-        <cl:button std:sid="button-5ddc4c2e" id="btn4" class="before icon" enabled="false" value="before" icon="0">
+        <cl:button std:sid="button-5ddc4c2e" id="btnFirst" class="before icon" value="before" icon="0">
+          <cl:listener std:sid="listener-740c2d61" name="click" handler="onBtnFirstClick"/>
           <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:expbind property="enabled" category="PROPERTY" expression="@totalPages == 0 || @page == 1 ? false : true"/>
           <cl:flowlayoutdata std:sid="f-data-bc05c63d" width="24px" height="24px" autosize="width"/>
         </cl:button>
-        <cl:button std:sid="button-b619df1a" id="btn1" class="prev" enabled="false" value="Prev" icon="0">
+        <cl:button std:sid="button-b619df1a" id="btnPrev" class="prev" value="Prev" icon="0">
+          <cl:listener std:sid="listener-10a1b7f3" name="click" handler="onBtnPrevClick"/>
+          <cl:expbind property="enabled" category="PROPERTY" expression="@totalPages == 0 || @page == 1 ? false : true"/>
           <cl:flowlayoutdata std:sid="f-data-9e43a297" width="80-" height="24px" autosize="width"/>
         </cl:button>
-        <cl:numbereditor std:sid="n-editor-2422de70" id="nbe1" class="text-center" fieldLabel="Go to page" value="1" showclearbutton="false">
+        <cl:numbereditor std:sid="n-editor-2422de70" id="nbePage" class="text-center" fieldLabel="Go to page" showclearbutton="false">
+          <cl:listener std:sid="listener-ca4013b1" name="keydown" handler="onNbePageKeydown"/>
+          <cl:expbind property="enabled" category="PROPERTY" expression="@totalPages == 0 ? false : true"/>
+          <cl:expbind property="value" category="PROPERTY" expression="@totalPages == 0 ? 0 : @page"/>
+          <cl:apppropbind property="max" category="PROPERTY" app-property="totalPages"/>
           <cl:flowlayoutdata std:sid="f-data-86143640" width="36px" height="36px"/>
         </cl:numbereditor>
-        <cl:output std:sid="output-9713d3f6" id="opt3" class="page-info" value="8" displayexp="&quot;/ &quot; + text">
+        <cl:output std:sid="output-9713d3f6" id="optTotalPages" class="page-info" displayexp="&quot;/ &quot; + text">
+          <cl:apppropbind property="value" category="PROPERTY" app-property="totalPages"/>
           <cl:flowlayoutdata std:sid="f-data-1e62c1af" width="46px" height="36px" autosize="width"/>
         </cl:output>
-        <cl:button std:sid="button-e1cacdef" id="btn2" class="next" value="Next" icon="0" iconalign="right">
+        <cl:button std:sid="button-e1cacdef" id="btnNext" class="next" value="Next" icon="0" iconalign="right">
+          <cl:listener std:sid="listener-8646b5c1" name="click" handler="onBtnNextClick"/>
+          <cl:expbind property="enabled" category="PROPERTY" expression="@totalPages == 0 || @page == @totalPages ? false : true"/>
           <cl:flowlayoutdata std:sid="f-data-7c3f5695" width="80-" height="24px" autosize="width"/>
         </cl:button>
-        <cl:button std:sid="button-aa2cceac" id="btn3" class="after icon" value="after" icon="0">
+        <cl:button std:sid="button-aa2cceac" id="btnLast" class="after icon" value="after" icon="0">
+          <cl:listener std:sid="listener-07ddd594" name="click" handler="onBtnLastClick"/>
+          <cl:expbind property="enabled" category="PROPERTY" expression="@totalPages == 0 || @page == @totalPages ? false : true"/>
           <cl:flowlayoutdata std:sid="f-data-b8e99a48" width="24px" height="24px" autosize="width"/>
         </cl:button>
         <cl:flowlayout std:sid="f-layout-9792d1d5" hspacing="8"/>
