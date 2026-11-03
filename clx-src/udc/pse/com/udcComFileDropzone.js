@@ -20,7 +20,7 @@
  * Business Common Module Area
  *******************************************************************************/
 exports.getText = getText;
-
+exports.getFileList = getFileList
 
 /*******************************************************************************
  * Local Variable Declarations within File
@@ -29,6 +29,8 @@ exports.getText = getText;
 var maFiles = [];
 /** @type HTMLInputElement 클릭 시 파일 선택창을 띄우기 위한 숨김 input[type=file] */
 var moFileInput = null;
+/** @type Number 표시용 총 용량 제한(MB). 실제 업로드를 막지는 않고 안내 문구 계산에만 사용 */
+var MAX_TOTAL_SIZE_MB = 10;
 
 
 /*******************************************************************************
@@ -53,6 +55,10 @@ function getText() {
 	return "";
 };
 
+function getFileList(){
+	return maFiles;
+}
+
 /**
  * 숨김 파일 input을 생성하고 change 이벤트를 연결한다.
  * 드롭존 클릭 시 이 input을 대신 클릭시켜 네이티브 파일 선택창을 띄운다.
@@ -60,7 +66,7 @@ function getText() {
 function doCreateHiddenFileInput() {
 	var voInput = document.createElement("input");
 	voInput.type = "file";
-	voInput.multiple = true;
+	voInput.multiple = app.getAppProperty("isMultiple");
 	voInput.accept = ".pdf,image/*";
 	voInput.style.display = "none";
 
@@ -108,7 +114,7 @@ function doIsFileAllowed(poFile) {
  * @param {Boolean} pbVisible
  */
 function doSetRejectedInfoVisible(pbVisible) {
-	var vcInfo = app.lookup("optFileRejectedInfo");
+	var vcInfo = app.lookup("optDropTypeInfo");
 	if (vcInfo) vcInfo.visible = pbVisible;
 }
 
@@ -144,6 +150,11 @@ function doAddFiles(paFileList) {
 	}
 
 	doUpdateFileListVisible();
+	doUpdateSizeInfo();
+	
+	var event = new cpr.events.CUIEvent("updateFile");
+	
+	app.dispatchEvent(event);
 }
 
 /**
@@ -156,7 +167,23 @@ function doRemoveFileRow(poFile, pcRow) {
 	if (vnIdx > -1) maFiles.splice(vnIdx, 1);
 
 	app.lookup("grpFileList").removeChild(pcRow);
+	
 	doUpdateFileListVisible();
+	doUpdateSizeInfo();
+}
+
+/**
+ * 현재까지 추가된 파일들의 총 용량을 계산해 드롭존 안내 문구를 갱신한다.
+ */
+function doUpdateSizeInfo() {
+	var vnTotalBytes = 0;
+	var vnIdx;
+	for (vnIdx = 0; vnIdx < maFiles.length; vnIdx++) {
+		vnTotalBytes += maFiles[vnIdx].size;
+	}
+
+	var vsUsedKB = doFormatFileSize(vnTotalBytes);
+	app.lookup("optDropSizeInfo").value = MAX_TOTAL_SIZE_MB + "MB (" + vsUsedKB + " used).";
 }
 
 /**
@@ -237,3 +264,5 @@ function onBodyInit(e) {
 function onGrpDropzoneClick(e) {
 	moFileInput.click();
 }
+
+exports.doRemoveFileRow = doRemoveFileRow;

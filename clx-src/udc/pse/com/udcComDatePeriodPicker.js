@@ -289,7 +289,7 @@ function onBodyPropertyChange(e) {
 			
 			if (ValueUtil.isNull(defaultPickerType)) {
 				app.lookup("cmbPeriod").clearSelection(false);
-				setDate(defaultPickerType);
+				//setDate(defaultPickerType);
 			} else {
 				// Process only when visible
 				var findPickerType = app.lookup("cmbPeriod").findItem({

@@ -48,23 +48,25 @@
       <cl:group std:sid="group-csm000066" id="grpPeriod">
         <cl:attribute name="needs-auto-height" value="true"/>
         <cl:formdata std:sid="f-data-csm000067" row="0" col="0" rowspan="1" colspan="1"/>
-        <cl:dateinput std:sid="d-input-csm000068" id="dtiStartDate" fieldLabel="Period start" hidebutton="true" placeholder="MM-DD-YYYY" preventinput="true">
+        <cl:dateinput std:sid="d-input-csm000068" id="dtiStartDate" fieldLabel="Period start" placeholder="MM-DD-YYYY" preventinput="true" showclearbutton="true">
           <cl:listener std:sid="listener-9d9962b4" name="value-change" handler="onDtiStartDateValueChange"/>
           <cl:listener std:sid="listener-217e6d75" name="before-value-change" handler="onDtiStartDateBeforeValueChange"/>
           <cl:attribute name="compare" value="dtiEndDate,&lt;="/>
           <cl:apppropbind property="value" app-property="startDate"/>
           <cl:apppropbind property="readOnly" category="PROPERTY" app-property="startDateReadOnly"/>
+          <cl:expbind property="hideButton" category="PROPERTY" expression="value != &quot;&quot; ? true : false"/>
           <cl:formdata std:sid="f-data-csm000069" row="0" col="0"/>
         </cl:dateinput>
         <cl:output std:sid="output-csm000070" id="opt1" value="~">
           <cl:formdata std:sid="f-data-csm000071" row="0" col="1"/>
         </cl:output>
-        <cl:dateinput std:sid="d-input-csm000072" id="dtiEndDate" fieldLabel="Period end" hidebutton="true" placeholder="MM-DD-YYYY" preventinput="true">
+        <cl:dateinput std:sid="d-input-csm000072" id="dtiEndDate" fieldLabel="Period end" placeholder="MM-DD-YYYY" preventinput="true" showclearbutton="true">
           <cl:listener std:sid="listener-eabd80db" name="value-change" handler="onDtiEndDateValueChange"/>
           <cl:listener std:sid="listener-5a982acc" name="before-value-change" handler="onDtiEndDateBeforeValueChange"/>
           <cl:attribute name="compare" value="dtiStartDate,>="/>
           <cl:apppropbind property="value" app-property="endDate"/>
           <cl:apppropbind property="readOnly" category="PROPERTY" app-property="endDateReadOnly"/>
+          <cl:expbind property="hideButton" category="PROPERTY" expression="value != &quot;&quot; ? true : false"/>
           <cl:formdata std:sid="f-data-csm000073" row="0" col="2"/>
         </cl:dateinput>
         <cl:formlayout std:sid="f-layout-csm000074" scrollable="false" hspace="8px" vspace="8px">
