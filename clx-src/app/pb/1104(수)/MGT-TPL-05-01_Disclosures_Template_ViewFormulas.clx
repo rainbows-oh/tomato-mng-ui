@@ -1,0 +1,149 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-10700f40" version="1.0.6164">
+  <head std:sid="head-ec4ee482">
+    <std:metadata>
+      <std:property key="template-file" value="templates/management/CompanyName_조회_팝업.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-1c425079" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-f3abc1ae" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-f0487b32" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-f5dd3c0f">
+      <cl:dataset std:sid="d-set-17208331" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-fce5e9d7" name="outputField"/>
+          <cl:datacolumn std:sid="d-column-f35cb8a9" name="classification"/>
+          <cl:datacolumn std:sid="d-column-323d3ab0" name="formulaText"/>
+          <cl:datacolumn std:sid="d-column-cc92d33d" name="editBtn"/>
+          <cl:datacolumn std:sid="d-column-40b2d002" name="deleteBtn"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="outputField"><![CDATA[Balance Sheet — Total Assets (Year Ending)]]></cl:datavalue>
+            <cl:datavalue columnname="classification"><![CDATA[Custom Formula]]></cl:datavalue>
+            <cl:datavalue columnname="formulaText"><![CDATA[( [Current Liabilities] ÷ [Total Liabilities] )]]></cl:datavalue>
+            <cl:datavalue columnname="editBtn"><![CDATA[Edit]]></cl:datavalue>
+            <cl:datavalue columnname="deleteBtn"><![CDATA[Delete]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="outputField"><![CDATA[Income Statement — Gross Expense (Year Ending)]]></cl:datavalue>
+            <cl:datavalue columnname="classification"><![CDATA[Custom Formula]]></cl:datavalue>
+            <cl:datavalue columnname="formulaText"><![CDATA[[Total Assets] × ( [Total Assets] ÷ [Current Liabilities] )]]></cl:datavalue>
+            <cl:datavalue columnname="editBtn"><![CDATA[Edit]]></cl:datavalue>
+            <cl:datavalue columnname="deleteBtn"><![CDATA[Delete]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="All Formulas"/>
+  </head>
+  <body std:sid="body-fa5f6637" style="top:0px; left:0px; width:640px; height:520px;">
+    <cl:group std:sid="group-aeb301ea" id="grpBody">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:verticaldata std:sid="v-data-f9431e1f" width="1024px" height="401px" autosize="height"/>
+      <cl:group std:sid="group-80bc9b0f" id="grpContentHeader">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="14"/>
+        <cl:verticaldata std:sid="v-data-f3021694" width="976px" height="20px" autosize="height"/>
+        <cl:group std:sid="group-4cbd26ca">
+          <cl:verticaldata std:sid="v-data-7aba902b" width="976px" height="20px" autosize="height"/>
+          <cl:output std:sid="output-53a3635d" class="font-body-s gray" value="Review, edit, or delete formulas configured on this template.">
+            <cl:flowlayoutdata std:sid="f-data-cea226cb" width="549px" height="20px" autosize="both"/>
+          </cl:output>
+          <cl:flowlayout std:sid="f-layout-93080131" hspacing="0" valign="middle"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-d479a373" spacing="16"/>
+      </cl:group>
+      <cl:group std:sid="group-9c6d43b3" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="14"/>
+        <cl:verticaldata std:sid="v-data-4109c237" width="976px" height="236px" autosize="height"/>
+        <cl:output std:sid="output-ff0f3a14" id="opt1" class="font-body text-gray-50" value="No formulas configured yet. Use an fx button on a value cell to add one.">
+          <cl:verticaldata std:sid="v-data-9dcab9d0" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:grid std:sid="grid-c0458e8c" id="grd1" fieldLabel="Formulas" datasetid="dsList" autofit="0, 1, 2">
+          <cl:verticaldata std:sid="v-data-98737d0a" width="400px" height="200px" autosize="height"/>
+          <cl:gridcolumn std:sid="g-column-266480ae" width="330px"/>
+          <cl:gridcolumn std:sid="g-column-ffb72cb3" width="160px"/>
+          <cl:gridcolumn std:sid="g-column-bd47607b" width="330px"/>
+          <cl:gridcolumn std:sid="g-column-4d7cf73e" width="90px"/>
+          <cl:gridcolumn std:sid="g-column-22bf931d" width="60px"/>
+          <cl:gridheader std:sid="gh-band-d75ba979">
+            <cl:gridrow std:sid="g-row-1464d57d" height="37px"/>
+            <cl:gridcell std:sid="gh-cell-bf445e19" rowindex="0" colindex="0" targetcolumnname="outputField" sortable="false" filterable="false" text="Output Field"/>
+            <cl:gridcell std:sid="gh-cell-2f0b8152" rowindex="0" colindex="1" targetcolumnname="classification" sortable="false" filterable="false" text="Classification"/>
+            <cl:gridcell std:sid="gh-cell-4d4bc856" rowindex="0" colindex="2" targetcolumnname="formulaText" sortable="false" filterable="false" text="Formula"/>
+            <cl:gridcell std:sid="gh-cell-16a88b77" rowindex="0" colindex="3" rowspan="1" colspan="2" sortable="false" filterable="false" text="Actions"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-5a0406b7">
+            <cl:gridrow std:sid="g-row-ea7dccdd" height="54px"/>
+            <cl:gridcell std:sid="gd-cell-b8cbfce3" rowindex="0" colindex="0" columnname="outputField">
+              <cl:output std:sid="output-ec1e080f">
+                <cl:expbind property="value" category="PROPERTY" expression="outputField"/>
+                <cl:celldata std:sid="c-data-f7349a5f"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-ddd4c048" rowindex="0" colindex="1" columnname="classification">
+              <cl:output std:sid="output-a9a1f92b">
+                <cl:expbind property="value" category="PROPERTY" expression="classification"/>
+                <cl:celldata std:sid="c-data-78d28658"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-8a6387ba" rowindex="0" colindex="2" columnname="formulaText">
+              <cl:output std:sid="output-62a59f95">
+                <cl:expbind property="value" category="PROPERTY" expression="formulaText"/>
+                <cl:celldata std:sid="c-data-634d7dc9"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-80e5920e" rowindex="0" colindex="3" columnname="editBtn">
+              <cl:button std:sid="button-98e9a65c" id="btn2" class="btn-inline" fieldLabel="open edit" value="Edit">
+                <cl:expbind property="value" category="PROPERTY" expression="editBtn"/>
+                <cl:celldata std:sid="c-data-4e9d682f" halign="FILL" valign="CENTER" width="68" height="36"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-47e082aa" rowindex="0" colindex="4" columnname="deleteBtn">
+              <cl:button std:sid="button-425b2e7c" id="btn1" class="btn-delete icon" fieldLabel="delete row" value="Button" icon="0">
+                <cl:expbind property="value" category="PROPERTY" expression="deleteBtn"/>
+                <cl:celldata std:sid="c-data-a4c09af9" halign="CENTER" valign="CENTER" width="28" height="28"/>
+              </cl:button>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:verticallayout std:sid="v-layout-f0125bef" scrollable="false" spacing="16"/>
+      </cl:group>
+      <cl:group std:sid="group-af78ab22" id="grpFooter" class="btn-footer-wrap">
+        <cl:verticaldata std:sid="v-data-10767a7c" width="976px" height="57px" autosize="height"/>
+        <cl:group std:sid="group-42420b7f" id="grp2">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:attribute name="mobile-index" value="1"/>
+          <cl:formdata std:sid="f-data-c0f43170" row="0" col="0" rowspan="1" colspan="1"/>
+          <cl:flowlayout std:sid="f-layout-0dfd9082"/>
+        </cl:group>
+        <cl:group std:sid="group-6066f480" id="grp3">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:attribute name="mobile-index" value="1"/>
+          <cl:formdata std:sid="f-data-1932c2c5" row="0" col="1"/>
+          <cl:button std:sid="button-ef7789c6" id="btnCancel2" class="btn-secondary" value="Cancel">
+            <cl:flowlayoutdata std:sid="f-data-b91d404c" width="88px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-c1b1d4cb" halign="right"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-b2eefcdd" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-75ec9db6" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-c56a26cf" spacing="18"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

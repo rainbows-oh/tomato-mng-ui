@@ -1,0 +1,69 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-10700f40" version="1.0.6164">
+  <head std:sid="head-ec4ee482">
+    <std:metadata>
+      <std:property key="template-file" value="templates/management/CompanyName_조회_팝업.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-1c425079" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-f3abc1ae" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-f0487b32" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-f5dd3c0f"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-fa5f6637" style="top:0px; left:0px; width:640px; height:520px;">
+    <cl:group std:sid="group-aeb301ea" id="grpBody">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:verticaldata std:sid="v-data-f9431e1f" width="1024px" height="333px" autosize="height"/>
+      <cl:group std:sid="group-9c6d43b3" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="14"/>
+        <cl:verticaldata std:sid="v-data-4109c237" width="976px" height="285px" autosize="height"/>
+        <cl:group std:sid="group-c9f98620" class="separate">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:verticaldata std:sid="v-data-81a93979" width="976px" height="61px" autosize="height"/>
+          <cl:group std:sid="group-552593a7">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-7c20375a" row="0" col="0"/>
+            <cl:output std:sid="output-e37d3e24" class="font-caption" value="Remark By">
+              <cl:verticaldata std:sid="v-data-2cda843b" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-cf52f3c3" class="font-body" value="Maria Santos">
+              <cl:verticaldata std:sid="v-data-71b22960" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-ba927fea" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-d48a0cec">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-328c2824" row="0" col="1"/>
+            <cl:output std:sid="output-db9c19af" class="font-caption" value="Remark Date">
+              <cl:verticaldata std:sid="v-data-2140d60c" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-d922cb29" class="font-body" value="08-25-2026 02:56:18 PM">
+              <cl:verticaldata std:sid="v-data-3526e15b" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-9bdc030b" spacing="4"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-585f9466" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="44" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:output std:sid="output-5081b8cb" id="opt1" value="Please complete the missing supporting document before resubmission.&#xD;&#xA;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&#xD;&#xA;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&#xD;&#xA;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.&#xD;&#xA;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&#xD;&#xA;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.&#xD;&#xA;Curabitur pretium tincidunt lacus. Nulla gravida orci a odio.&#xD;&#xA;Nullam varius, turpis et commodo pharetra, est eros bibendum elit.&#xD;&#xA;Integer in mauris eu nibh euismod gravida. Aliquam erat volutpat.&#xD;&#xA;Suspendisse potenti. Donec at pede. Etiam vel neque nec dui dignissim bibendum.">
+          <cl:verticaldata std:sid="v-data-97e9b8d3" width="976px" height="208px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-f0125bef" scrollable="false" spacing="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-75ec9db6" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-c56a26cf" spacing="18"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

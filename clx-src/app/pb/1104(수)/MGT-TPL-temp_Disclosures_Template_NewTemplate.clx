@@ -1,0 +1,98 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-ab4e79cf" version="1.0.6164">
+  <head std:sid="head-fef2a59d">
+    <screen std:sid="screen-1303ea48" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="true" customHeight="1200" customWidth="800" active="true"/>
+    <screen std:sid="screen-1441bc3f" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-1ee987ec" id="EXB-PART" name="EXB-PART" width="360px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-e918cc57"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-6585a0fc">
+    <cl:listener std:sid="listener-3f6b2d10" name="load" handler="onBodyLoad"/>
+    <cl:group std:sid="group-csm000016" id="grpHeader" class="page-title-wrap">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:verticaldata std:sid="v-data-csm000017" width="1024px" height="48px" autosize="height" sticky="true" stickytopoffset="0"/>
+      <cl:udc std:sid="ud-control-cc03f030" id="udccomappheader2" type="udc.pse.com.udcComAppHeader">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-d41b23fe" row="0" col="0"/>
+        <cl:property name="title" value="New Template" type="string"/>
+      </cl:udc>
+      <cl:group std:sid="group-156b1b37" id="grp35" class="arrow-separate">
+        <cl:formdata std:sid="f-data-bd209194" row="0" col="1"/>
+        <cl:output std:sid="output-d8ff17d6" id="optStep1" class="active" value="Create" displayexp="sstr(&quot;1&quot;, [&quot;bg&quot;])+ text">
+          <cl:flowlayoutdata std:sid="f-data-14fb2ce5" width="111px" height="20px" autosize="both"/>
+        </cl:output>
+        <cl:output std:sid="output-b4e11392" id="optStep2" value="Upload" displayexp="sstr(&quot;2&quot;, [&quot;bg&quot;])+ text">
+          <cl:flowlayoutdata std:sid="f-data-3b3d5423" width="111px" height="20px" autosize="both"/>
+        </cl:output>
+        <cl:output std:sid="output-c25d8e9a" id="optStep3" value="Review" displayexp="sstr(&quot;3&quot;, [&quot;bg&quot;])+ text">
+          <cl:flowlayoutdata std:sid="f-data-dc72c653" width="111px" height="20px" autosize="both"/>
+        </cl:output>
+        <cl:output std:sid="output-a5957d8a" id="optStep4" value="Publish" displayexp="sstr(&quot;4&quot;, [&quot;bg&quot;])+ text">
+          <cl:flowlayoutdata std:sid="f-data-89db017f" width="111px" height="20px" autosize="both"/>
+        </cl:output>
+        <cl:flowlayout std:sid="f-layout-0c016d1e" hspacing="0" halign="right"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-csm000023" scrollable="false" hspace="8px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION" autoSizing="false" syncminlength="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-0b464f24" id="grpBody" class="inner">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:verticaldata std:sid="v-data-40a89747" width="1024px" height="406px" autosize="height"/>
+      <cl:group std:sid="group-c9d6abb5" id="grpContent" class="card">
+        <cl:attribute name="mobile-spacing" value="12"/>
+        <cl:verticaldata std:sid="v-data-3172a4b8" width="976px" height="358px" autosize="height"/>
+        <cl:embeddedapp std:sid="e-app-16283895" id="ema1">
+          <cl:verticaldata std:sid="v-data-bc050b88" width="320px" height="240px" autosize="height"/>
+        </cl:embeddedapp>
+        <cl:group std:sid="group-836e35e9" id="grpFooter" class="btn-footer-wrap">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-863df694" width="976px" height="56px" autosize="height"/>
+          <cl:group std:sid="group-b5a9cbf6" id="grp33">
+            <cl:formdata std:sid="f-data-dc16be9b" row="0" col="0"/>
+            <cl:button std:sid="button-7a7a1c5b" id="btnCallBackTemplate" class="btn-inline" value="Back">
+              <cl:listener std:sid="listener-6d2f9b84" name="click" handler="onBtnCallBackTemplateClick"/>
+              <cl:flowlayoutdata std:sid="f-data-0ba45eea" width="101px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-50e7c410" id="btn1" class="btn-secondary" value="Cancel">
+              <cl:flowlayoutdata std:sid="f-data-35d5ad05" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-3a18b59d" hspacing="8" vspacing="8"/>
+          </cl:group>
+          <cl:group std:sid="group-86277bb3" id="grp34">
+            <cl:formdata std:sid="f-data-31d36064" row="0" col="1"/>
+            <cl:button std:sid="button-76278ba9" id="btnCallNextTemplate" class="btn-primary" value="Next">
+              <cl:listener std:sid="listener-8a4c1e57" name="click" handler="onBtnCallNextTemplateClick"/>
+              <cl:flowlayoutdata std:sid="f-data-4ef87403" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-1ebe7a84" id="btnPublish" class="btn-primary" visible="false" enabled="false" value="Publish">
+              <cl:flowlayoutdata std:sid="f-data-2eb47184" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-b78ddca9" hspacing="8" vspacing="8" halign="right"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-d1bb9401" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-edd42a47" spacing="20"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-9dda75e2" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-85c69965" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

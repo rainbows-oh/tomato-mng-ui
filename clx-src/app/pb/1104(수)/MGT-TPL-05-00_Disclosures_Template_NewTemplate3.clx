@@ -1,0 +1,59 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-e9ea68ed" version="1.0.6164">
+  <head std:sid="head-c1993e6f">
+    <screen std:sid="screen-f3689fbf" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-2306b3b2" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-eb3f5cd5" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-d9d07a99"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-100c9577">
+    <cl:group std:sid="group-e8cf0fa4">
+      <cl:verticaldata std:sid="v-data-889da34b" width="1024px" height="366px" autosize="height"/>
+      <cl:group std:sid="group-cc1e53b8" id="grp1">
+        <cl:attribute name="mobile-column-count" value="1"/>
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:verticaldata std:sid="v-data-9275bc9a" width="1024px" height="64px" autosize="height"/>
+        <cl:group std:sid="group-715c7236" id="grp2">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-3e6dbd22" row="0" col="0"/>
+          <cl:output std:sid="output-887c4a92" id="opt1" class="font-caption" value="Step 3">
+            <cl:verticaldata std:sid="v-data-fca5fe7b" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-6c12ee92" id="opt2" class="font-heading-l" value="Template Review">
+            <cl:verticaldata std:sid="v-data-b284eda5" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-09419e23" id="opt3" class="font-label text-gray-60" value="Confirm the Form 17-C field layout that this template will produce. Fields below are empty and disabled. Use fx to attach a formula.">
+            <cl:verticaldata std:sid="v-data-af9b7745" width="1024px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-a3842312" spacing="2"/>
+        </cl:group>
+        <cl:button std:sid="button-297bab30" id="btn1" class="btn-inline" value="0" displayexp="&quot;View All Formulas (&quot; + text + &quot;)&quot;">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:attribute name="mobile-min-height" value="36"/>
+          <cl:formdata std:sid="f-data-d2c53400" valign="TOP" height="36" row="0" col="1"/>
+        </cl:button>
+        <cl:formlayout std:sid="f-layout-3adee5be" scrollable="false" hspace="8px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="200" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-f092654a">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="12"/>
+        <cl:verticaldata std:sid="v-data-c3e4ac5d" width="1024px" height="282px" autosize="height"/>
+        <cl:embeddedpage std:sid="e-page-d6db25ca" fieldLabel="Template Review">
+          <cl:verticaldata std:sid="v-data-2de0cd28" width="320px" height="240px" autosize="height"/>
+        </cl:embeddedpage>
+        <cl:verticallayout std:sid="v-layout-10161c5b" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-ad84e152" spacing="20"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-45d48fc7"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

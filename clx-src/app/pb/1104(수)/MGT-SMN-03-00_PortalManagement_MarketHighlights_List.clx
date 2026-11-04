@@ -1,0 +1,147 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-de5392e7" version="1.0.6190">
+  <head std:sid="head-f2e6f0fe">
+    <screen std:sid="screen-366f56a7" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d0a03339" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-ca13aa67" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-00000409">
+      <cl:dataset std:sid="d-set-00000401" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-00000402" name="no"/>
+          <cl:datacolumn std:sid="d-column-00000403" name="imageUrl"/>
+          <cl:datacolumn std:sid="d-column-00000404" name="title"/>
+          <cl:datacolumn std:sid="d-column-00000405" name="period"/>
+          <cl:datacolumn std:sid="d-column-00000406" name="useYn"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="imageUrl"><![CDATA[theme/img/bg_sample.png]]></cl:datavalue>
+            <cl:datavalue columnname="title"><![CDATA[Market Highlight 1]]></cl:datavalue>
+            <cl:datavalue columnname="period"><![CDATA[All Period]]></cl:datavalue>
+            <cl:datavalue columnname="useYn"><![CDATA[Use]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[2]]></cl:datavalue>
+            <cl:datavalue columnname="imageUrl"><![CDATA[theme/img/bg_sample.png]]></cl:datavalue>
+            <cl:datavalue columnname="title"><![CDATA[Market Highlight 2]]></cl:datavalue>
+            <cl:datavalue columnname="period"><![CDATA[04-01-2026 ~ 06-30-2026]]></cl:datavalue>
+            <cl:datavalue columnname="useYn"><![CDATA[Use]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="imageUrl"><![CDATA[theme/img/bg_sample.png]]></cl:datavalue>
+            <cl:datavalue columnname="title"><![CDATA[Market Highlight 3]]></cl:datavalue>
+            <cl:datavalue columnname="period"><![CDATA[10-10-2026 ~ 10-12-2026]]></cl:datavalue>
+            <cl:datavalue columnname="useYn"><![CDATA[Not Use]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="Market Highlights"/>
+  </head>
+  <body std:sid="body-c90bbfe3">
+    <cl:group std:sid="group-0319b359" id="grpHeader" class="page-title-wrap">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:verticaldata std:sid="v-data-dddbbb01" width="1024px" height="48px" autosize="height" sticky="true" stickytopoffset="0"/>
+      <cl:udc std:sid="ud-control-1d70da47" id="udccomappheader1" type="udc.pse.com.udcComAppHeader">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-dc4ac2b2" row="0" col="0"/>
+        <cl:property name="title" value="Market Highlights" type="string"/>
+      </cl:udc>
+      <cl:formlayout std:sid="f-layout-631b2075" scrollable="false" hspace="8px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="36" unit="PIXEL" autoSizing="false" syncminlength="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-00000430" id="grpBody" class="inner">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:verticaldata std:sid="v-data-00000431" width="1024px" height="404px" autosize="height"/>
+      <cl:group std:sid="group-00000432" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-spacing" value="16"/>
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:verticaldata std:sid="v-data-00000433" width="976px" height="356px" autosize="height"/>
+        <cl:group std:sid="group-00000424" class="search-list-top">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:verticaldata std:sid="v-data-00000425" width="400px" height="36px" autosize="height"/>
+          <cl:output std:sid="output-00000426" class="sch-info" value="2" datatype="number" format="#,##0" displayexp="&quot;Use &quot; + text + &quot;/7&quot;">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-00000427" valign="FILL" row="0" col="0"/>
+          </cl:output>
+          <cl:group std:sid="group-00000428">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-00000429" row="0" col="1"/>
+            <cl:button std:sid="button-0000042a" class="btn-secondary" value="Add">
+              <cl:flowlayoutdata std:sid="f-data-0000042b" width="120px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-0000042c" class="btn-primary" value="Apply">
+              <cl:flowlayoutdata std:sid="f-data-0000042d" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-0000042e" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-0000042f" scrollable="false" hspace="1fr" vspace="10px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="422" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid std:sid="grid-00000420" fieldLabel="Market Highlights list" class="banner-list" datasetid="dsList" autofit="2">
+          <cl:verticaldata std:sid="v-data-00000421" width="400px" height="300px" autosize="height"/>
+          <cl:gridcolumn std:sid="g-column-0000041a" width="50px"/>
+          <cl:gridcolumn std:sid="g-column-0000041b" width="100px"/>
+          <cl:gridcolumn std:sid="g-column-0000041c" width="400px"/>
+          <cl:gridcolumn std:sid="g-column-0000041d" width="100px"/>
+          <cl:gridcolumn std:sid="g-column-0000041e" width="60px"/>
+          <cl:gridcolumn std:sid="g-column-0000041f" width="60px"/>
+          <cl:griddetail std:sid="gd-band-00000422">
+            <cl:gridrow std:sid="g-row-00000423" height="54px"/>
+            <cl:gridcell std:sid="gd-cell-0000040a" rowindex="0" colindex="0" columntype="rowindex"/>
+            <cl:gridcell std:sid="gd-cell-0000040d" rowindex="0" colindex="1" columnname="imageUrl">
+              <cl:img std:sid="image-0000040b" alt="Banner image">
+                <cl:expbind property="src" category="PROPERTY" expression="imageUrl"/>
+                <cl:celldata std:sid="c-data-0000040c" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+              </cl:img>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000410" rowindex="0" colindex="2" columnname="title">
+              <cl:output std:sid="output-0000040e" class="font-body-strong" displayexp="text + sstr(period, [&quot;banner-period&quot;])">
+                <cl:expbind property="value" category="PROPERTY" expression="title"/>
+                <cl:celldata std:sid="c-data-0000040f"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000413" rowindex="0" colindex="3" columnname="useYn">
+              <cl:output std:sid="output-00000411" displayexp="sstr(text, switch(useYn){&#xD;&#xA;&#x9;case &quot;Use&quot; : &quot;badge fill blue&quot;&#xD;&#xA;&#x9;default : &quot;badge fill red&quot;&#xD;&#xA;})">
+                <cl:expbind property="value" category="PROPERTY" expression="useYn"/>
+                <cl:celldata std:sid="c-data-00000412"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000416" rowindex="0" colindex="4">
+              <cl:button std:sid="button-00000414" class="btn-up icon btn-secondary" fieldLabel="Move up" icon="0">
+                <cl:expbind property="enabled" category="PROPERTY" expression="rowIndex == 0 ? false : true"/>
+                <cl:celldata std:sid="c-data-00000415" halign="CENTER" valign="CENTER" width="28" height="28"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000419" rowindex="0" colindex="5">
+              <cl:button std:sid="button-00000417" class="btn-down icon btn-secondary" fieldLabel="Move down" icon="0">
+                <cl:expbind property="enabled" category="PROPERTY" expression="rowIndex == getRowCount()-1 ? false : true"/>
+                <cl:celldata std:sid="c-data-00000418" halign="CENTER" valign="CENTER" width="28" height="28"/>
+              </cl:button>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:verticallayout std:sid="v-layout-00000434" scrollable="false" spacing="20"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-00000435" scrollable="false" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-3c32ff37" scrollable="true" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

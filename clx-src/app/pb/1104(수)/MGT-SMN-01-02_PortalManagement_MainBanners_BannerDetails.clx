@@ -1,0 +1,246 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-cf900bed" version="1.0.6164">
+  <head std:sid="head-21802359">
+    <screen std:sid="screen-c9c554ee" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="false"/>
+    <screen std:sid="screen-ac9a7e40" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-55daefcf" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360" active="false"/>
+    <cl:model std:sid="model-30d478ab"/>
+    <cl:appspec title="Banner Details"/>
+  </head>
+  <body std:sid="body-0000087e">
+    <cl:group std:sid="group-0000087f" id="grpBody">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:verticaldata std:sid="v-data-00000880" width="768px" height="977px" autosize="height"/>
+      <cl:group std:sid="group-0000087b" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="14"/>
+        <cl:verticaldata std:sid="v-data-0000087c" width="720px" height="929px" autosize="height"/>
+        <cl:checkbox std:sid="c-box-00000803" id="cbx1" class="toggle-switch" fieldLabel="Use" value="No" text="Use" iconalign="right" clickRegion="item">
+          <cl:verticaldata std:sid="v-data-c048bd15" width="52px" height="36px" autosize="both"/>
+        </cl:checkbox>
+        <cl:group std:sid="group-0000081c">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-0000081b" width="720px" height="98px" autosize="height"/>
+          <cl:output std:sid="output-00000817" class="font-label required" value="Background Image">
+            <cl:verticaldata std:sid="v-data-00000816" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-00000815">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:verticaldata std:sid="v-data-00000814" width="720px" height="72px" autosize="height"/>
+            <cl:img std:sid="image-0000080f" id="img1" class="img-preview" fieldLabel="Background Image" readonly="true" alt="Background Image preview">
+              <cl:formdata std:sid="f-data-2217c077" valign="TOP" height="40" row="0" col="0"/>
+            </cl:img>
+            <cl:group std:sid="group-0d230a40">
+              <cl:formdata std:sid="f-data-1ce81da9" width="-8" height="9" row="0" col="1"/>
+              <cl:button std:sid="button-7b5e479c" class="btn-secondary" value="Choose Image">
+                <cl:formdata std:sid="f-data-059644dc" halign="LEFT" width="150" row="0" col="0"/>
+              </cl:button>
+              <cl:output std:sid="output-00000819" class="font-caption" value="Recommended: 2560 × 400 px (min 1920 × 300 px), JPG, PNG or WebP, max 5MB&#xD;&#xA;Selected: listing-hero-mobile.png">
+                <cl:formdata std:sid="f-data-9d796d0e" row="1" col="0" rowspan="1" colspan="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-e0d0918e" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="36" unit="PIXEL"/>
+                <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-e2f65ffe" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="200" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-0000081a" scrollable="false" spacing="6"/>
+        </cl:group>
+        <cl:group std:sid="group-0000082a">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-00000829" width="720px" height="114px" autosize="height"/>
+          <cl:output std:sid="output-00000825" class="font-label required" value="Mobile Background Image">
+            <cl:verticaldata std:sid="v-data-00000824" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-00000823">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:verticaldata std:sid="v-data-00000822" width="720px" height="88px" autosize="height"/>
+            <cl:img std:sid="image-0000081d" class="img-preview" fieldLabel="Mobile Background Image" alt="Mobile Background Image preview">
+              <cl:formdata std:sid="f-data-acb98044" row="0" col="0"/>
+            </cl:img>
+            <cl:group std:sid="group-25505338">
+              <cl:formdata std:sid="f-data-ed3c3e17" row="0" col="1"/>
+              <cl:button std:sid="button-b4945efc" class="btn-secondary" value="Choose Image">
+                <cl:formdata std:sid="f-data-c7177c7f" halign="LEFT" width="150" row="0" col="0"/>
+              </cl:button>
+              <cl:output std:sid="output-60b8db29" class="font-caption" value="Recommended: 2560 × 400 px (min 1920 × 300 px), JPG, PNG or WebP, max 5MB&#xD;&#xA;Selected: listing-hero-mobile.png">
+                <cl:formdata std:sid="f-data-8f324e15" row="1" col="0"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-ddfb6ed5" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="36" unit="PIXEL"/>
+                <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-4ad52270" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="100" unit="PIXEL"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-00000828" scrollable="false" spacing="6"/>
+        </cl:group>
+        <cl:group std:sid="group-00000831">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-00000830" width="720px" height="62px" autosize="height"/>
+          <cl:output std:sid="output-0000082e" class="font-label required" value="Title Text">
+            <cl:verticaldata std:sid="v-data-0000082d" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-0000082b" fieldLabel="Title Text">
+            <cl:verticaldata std:sid="v-data-0000082c" width="100px" height="36px"/>
+          </cl:inputbox>
+          <cl:verticallayout std:sid="v-layout-0000082f" scrollable="false" spacing="6"/>
+        </cl:group>
+        <cl:group std:sid="group-00000838">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-00000837" width="720px" height="62px" autosize="height"/>
+          <cl:output std:sid="output-00000835" class="font-label" value="Sub Text">
+            <cl:verticaldata std:sid="v-data-00000834" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-00000832" fieldLabel="Sub Text">
+            <cl:verticaldata std:sid="v-data-00000833" width="100px" height="36px"/>
+          </cl:inputbox>
+          <cl:verticallayout std:sid="v-layout-00000836" scrollable="false" spacing="6"/>
+        </cl:group>
+        <cl:group std:sid="group-00000841">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-00000840" width="720px" height="86px" autosize="height"/>
+          <cl:output std:sid="output-0000083c" class="font-label" value="Alt Text">
+            <cl:verticaldata std:sid="v-data-0000083b" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:inputbox std:sid="i-box-00000839" fieldLabel="Alt Text">
+            <cl:verticaldata std:sid="v-data-0000083a" width="100px" height="36px"/>
+          </cl:inputbox>
+          <cl:output std:sid="output-0000083e" class="font-caption" value="If left empty, the title text is used.">
+            <cl:verticaldata std:sid="v-data-0000083d" width="100px" height="18px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-0000083f" scrollable="false" spacing="6"/>
+        </cl:group>
+        <cl:group std:sid="group-0000086d" class="separate">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-0000086c" width="720px" height="127px" autosize="height"/>
+          <cl:group std:sid="group-00000852" class="row">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:verticaldata std:sid="v-data-00000851" width="720px" height="62px" autosize="height"/>
+            <cl:group std:sid="group-0000084a">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-00000849" width="100" height="17" row="0" col="0"/>
+              <cl:output std:sid="output-00000847" class="font-label" value="Button Label">
+                <cl:verticaldata std:sid="v-data-00000846" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-00000842" fieldLabel="Button Label">
+                <cl:verticaldata std:sid="v-data-00000843" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:verticallayout std:sid="v-layout-00000848" scrollable="false" spacing="6"/>
+            </cl:group>
+            <cl:group std:sid="group-0000084f">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-0000084e" row="0" col="1"/>
+              <cl:output std:sid="output-0000084c" class="font-label" value="Button URL">
+                <cl:verticaldata std:sid="v-data-0000084b" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:inputbox std:sid="i-box-00000844" fieldLabel="Button URL" enabled="false" placeholder="Enter the button label first.">
+                <cl:verticaldata std:sid="v-data-00000845" width="100px" height="36px"/>
+              </cl:inputbox>
+              <cl:verticallayout std:sid="v-layout-0000084d" scrollable="false" spacing="6"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-00000850" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:checkbox std:sid="c-box-00000853" fieldLabel="Open in New Window" value="N" truevalue="Y" falsevalue="N" text="Open in New Window">
+            <cl:verticaldata std:sid="v-data-00000854" width="200px" height="36px" autosize="height"/>
+          </cl:checkbox>
+          <cl:verticallayout std:sid="v-layout-0000086b" scrollable="false" spacing="12"/>
+        </cl:group>
+        <cl:group std:sid="group-0000086a">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-00000869" width="720px" height="110px" autosize="height"/>
+          <cl:group std:sid="group-00000865" class="row">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:verticaldata std:sid="v-data-00000864" width="720px" height="62px" autosize="height"/>
+            <cl:group std:sid="group-0000085d">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-0000085c" width="100" height="17" row="0" col="0"/>
+              <cl:output std:sid="output-0000085a" class="font-label" value="Start Date">
+                <cl:verticaldata std:sid="v-data-00000859" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:dateinput std:sid="d-input-00000855" fieldLabel="Start Date" enabled="false" placeholder="MM-DD-YYYY">
+                <cl:verticaldata std:sid="v-data-00000856" width="100px" height="36px" autosize="none"/>
+              </cl:dateinput>
+              <cl:verticallayout std:sid="v-layout-0000085b" scrollable="false" spacing="6"/>
+            </cl:group>
+            <cl:group std:sid="group-00000862">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-00000861" row="0" col="1"/>
+              <cl:output std:sid="output-0000085f" class="font-label" value="End Date">
+                <cl:verticaldata std:sid="v-data-0000085e" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:dateinput std:sid="d-input-00000857" fieldLabel="End Date" enabled="false" placeholder="MM-DD-YYYY">
+                <cl:verticaldata std:sid="v-data-00000858" width="100px" height="36px" autosize="none"/>
+              </cl:dateinput>
+              <cl:verticallayout std:sid="v-layout-00000860" scrollable="false" spacing="6"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-00000863" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:checkbox std:sid="c-box-00000866" fieldLabel="All Period" value="Y" truevalue="Y" falsevalue="N" text="All Period">
+            <cl:verticaldata std:sid="v-data-00000867" width="200px" height="36px" autosize="height"/>
+          </cl:checkbox>
+          <cl:verticallayout std:sid="v-layout-00000868" scrollable="false" spacing="12"/>
+        </cl:group>
+        <cl:group std:sid="group-00000878" id="grpFooter" class="btn-footer-wrap">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-00000879" width="720px" height="57px" autosize="height"/>
+          <cl:group std:sid="group-00000872">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-00000871" row="0" col="0"/>
+            <cl:button std:sid="button-0000086e" class="btn-secondary" value="Close">
+              <cl:flowlayoutdata std:sid="f-data-0000086f" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-00000870" scrollable="false" hspacing="0" halign="left"/>
+          </cl:group>
+          <cl:group std:sid="group-00000877">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-00000876" row="0" col="1"/>
+            <cl:button std:sid="button-cedf8d64" id="btn1" class="btn-danger" value="Delete">
+              <cl:flowlayoutdata std:sid="f-data-6c04c75d" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-00000873" class="btn-primary" value="Add">
+              <cl:flowlayoutdata std:sid="f-data-00000874" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-00000875" scrollable="false" hspacing="8" vspacing="8" halign="right"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-0000087a" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-0000087d" scrollable="false" spacing="20"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-00000881" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-00000882"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

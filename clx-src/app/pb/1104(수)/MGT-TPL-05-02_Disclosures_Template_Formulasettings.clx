@@ -1,0 +1,232 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-cf900bed" version="1.0.6164">
+  <head std:sid="head-21802359">
+    <screen std:sid="screen-c9c554ee" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="false"/>
+    <screen std:sid="screen-ac9a7e40" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-55daefcf" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360" active="false"/>
+    <cl:model std:sid="model-30d478ab">
+      <cl:dataset std:sid="d-set-00000236" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-00000237" name="fieldName"/>
+          <cl:datacolumn std:sid="d-column-00000238" name="fieldCode"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="fieldName"><![CDATA[Current Assets]]></cl:datavalue>
+            <cl:datavalue columnname="fieldCode"><![CDATA[BS-CurrentAssets]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="fieldName"><![CDATA[Total Assets]]></cl:datavalue>
+            <cl:datavalue columnname="fieldCode"><![CDATA[BS-TotalAssets]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="fieldName"><![CDATA[Current Liabilities]]></cl:datavalue>
+            <cl:datavalue columnname="fieldCode"><![CDATA[BS-CurrentLiabilities]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="fieldName"><![CDATA[Total Liabilities]]></cl:datavalue>
+            <cl:datavalue columnname="fieldCode"><![CDATA[BS-TotalLiabilities]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="fieldName"><![CDATA[Total Equity]]></cl:datavalue>
+            <cl:datavalue columnname="fieldCode"><![CDATA[BS-TotalEquity]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="Formula Settings"/>
+  </head>
+  <body std:sid="body-0000025a" class="formula-wrap">
+    <cl:group std:sid="group-0000025a" id="grpBody">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:verticaldata std:sid="v-data-0000025b" width="768px" height="863px" autosize="height"/>
+      <cl:group std:sid="group-00000259" id="grpContent" class="content-wrap">
+        <cl:verticaldata std:sid="v-data-00000258" width="720px" height="823px" autosize="height"/>
+        <cl:group std:sid="group-4cbd26ca" class="dot-separate">
+          <cl:verticaldata std:sid="v-data-7aba902b" width="976px" height="20px" autosize="height"/>
+          <cl:output std:sid="output-f24404a8" id="opt3" class="font-body-s gray" value="Formula Settings" displayexp="text + &quot; users&quot;">
+            <cl:flowlayoutdata std:sid="f-data-11a43751" width="156px" height="20px" autosize="both"/>
+          </cl:output>
+          <cl:output std:sid="output-da6db2d9" id="opt4" class="font-body-s gray" value="ID: BS-CurrentLiabilities" displayexp="&quot;Maker &quot; + text + &quot;/&quot; + userAttr(&quot;total&quot;)">
+            <cl:attribute name="total" value="5"/>
+            <cl:flowlayoutdata std:sid="f-data-d1152860" width="300px" height="20px" autosize="both"/>
+          </cl:output>
+          <cl:flowlayout std:sid="f-layout-93080131" hspacing="0" valign="middle"/>
+        </cl:group>
+        <cl:group std:sid="group-00000235">
+          <cl:verticaldata std:sid="v-data-00000234" width="720px" height="706px" autosize="height"/>
+          <cl:group std:sid="group-00000217">
+            <cl:verticaldata std:sid="v-data-00000216" width="720px" height="66px" autosize="height"/>
+            <cl:output std:sid="output-00000214" class="font-label" value="Classification">
+              <cl:verticaldata std:sid="v-data-00000213" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:radiobutton std:sid="r-button-0000020f" fieldLabel="Classification" value="custom" hspacing="24">
+              <cl:verticaldata std:sid="v-data-00000210" width="100px" height="36px" autosize="height"/>
+              <cl:item std:sid="item-00000211" label="Summation Formula" value="sum"/>
+              <cl:item std:sid="item-00000212" label="Custom Formula" value="custom"/>
+            </cl:radiobutton>
+            <cl:verticallayout std:sid="v-layout-00000215" scrollable="false" spacing="10"/>
+          </cl:group>
+          <cl:group std:sid="group-a45fa10c">
+            <cl:verticaldata std:sid="v-data-18977613" width="720px" height="66px" autosize="height"/>
+            <cl:output std:sid="output-5fd89571" class="font-label" value="Repeatable field to sum">
+              <cl:verticaldata std:sid="v-data-dcd205fb" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:combobox std:sid="c-box-22dcbe97" id="cmb1" fieldLabel="Repeatable field to sum" value="value1">
+              <cl:verticaldata std:sid="v-data-0da0d0dc" width="720px" height="36px" autosize="none"/>
+              <cl:item std:sid="t-item-7c53eae7" label="Select a field" value="value1"/>
+            </cl:combobox>
+            <cl:verticallayout std:sid="v-layout-a46ae8d8" scrollable="false" spacing="10"/>
+          </cl:group>
+          <cl:group std:sid="group-fd1ff123">
+            <cl:verticaldata std:sid="v-data-2464a992" width="720px" height="242px" autosize="height"/>
+            <cl:group std:sid="group-0000021e">
+              <cl:verticaldata std:sid="v-data-0000021d" width="728px" height="32px" autosize="height"/>
+              <cl:output std:sid="output-0000021b" class="font-label" value="Formula Preview">
+                <cl:formdata std:sid="f-data-0000021a" valign="FILL" row="0" col="0"/>
+              </cl:output>
+              <cl:button std:sid="button-00000218" class="btn-secondary" value="Undo Last">
+                <cl:formdata std:sid="f-data-00000219" valign="FILL" row="0" col="1"/>
+              </cl:button>
+              <cl:formlayout std:sid="f-layout-0000021c" scrollable="false" hspace="8px" vspace="4px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="32" unit="PIXEL"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="100" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-00000223" class="formula-preview">
+              <cl:verticaldata std:sid="v-data-00000222" width="720px" height="150px" autosize="height"/>
+              <cl:button std:sid="button-0000021f" class="btn-formula" value="[Current Liabilities]" displayexp="text + sstr(&quot;BS-CurrentLiabilities&quot;, [&quot;btn-row-sub&quot;])">
+                <cl:flowlayoutdata std:sid="f-data-00000220" width="260px" height="28px" autosize="width"/>
+              </cl:button>
+              <cl:button std:sid="button-3d073dd7" class="btn-formula-output" value="+">
+                <cl:flowlayoutdata std:sid="f-data-442c34fa" width="9px" height="28px" autosize="width"/>
+              </cl:button>
+              <cl:button std:sid="button-7e721a80" class="btn-formula" value="[Current Liabilities]" displayexp="text + sstr(&quot;BS-CurrentLiabilities&quot;, [&quot;btn-row-sub&quot;])">
+                <cl:flowlayoutdata std:sid="f-data-c2f46f76" width="260px" height="28px" autosize="width"/>
+              </cl:button>
+              <cl:button std:sid="button-9b022590" class="btn-formula" value="[Current Liabilities]" displayexp="text + sstr(&quot;BS-CurrentLiabilities&quot;, [&quot;btn-row-sub&quot;])">
+                <cl:flowlayoutdata std:sid="f-data-45ae96f5" width="260px" height="28px" autosize="width"/>
+              </cl:button>
+              <cl:button std:sid="button-701781fa" class="btn-formula-output" value="-">
+                <cl:flowlayoutdata std:sid="f-data-f7e73772" width="9px" height="28px" autosize="width"/>
+              </cl:button>
+              <cl:button std:sid="button-97cf99db" class="btn-formula" value="[Current Liabilities]" displayexp="text + sstr(&quot;BS-CurrentLiabilities&quot;, [&quot;btn-row-sub&quot;])">
+                <cl:flowlayoutdata std:sid="f-data-8c2aecf9" width="260px" height="28px" autosize="width"/>
+              </cl:button>
+              <cl:button std:sid="button-c9183a56" class="btn-formula" value="[Current Liabilities]" displayexp="text + sstr(&quot;BS-CurrentLiabilities&quot;, [&quot;btn-row-sub&quot;])">
+                <cl:flowlayoutdata std:sid="f-data-d0519fd8" width="260px" height="28px" autosize="width"/>
+              </cl:button>
+              <cl:button std:sid="button-51cec7f3" class="btn-formula-output" value="÷">
+                <cl:flowlayoutdata std:sid="f-data-4c9a6249" width="9px" height="28px" autosize="width"/>
+              </cl:button>
+              <cl:button std:sid="button-76f3eaeb" class="btn-formula-output" value="(">
+                <cl:flowlayoutdata std:sid="f-data-688a8944" width="9px" height="28px" autosize="width"/>
+              </cl:button>
+              <cl:button std:sid="button-d391344a" class="btn-formula" value="[Current Liabilities]" displayexp="text + sstr(&quot;BS-CurrentLiabilities&quot;, [&quot;btn-row-sub&quot;])">
+                <cl:flowlayoutdata std:sid="f-data-0a32041c" width="260px" height="28px" autosize="width"/>
+              </cl:button>
+              <cl:button std:sid="button-4753dd0f" class="btn-formula-output" value=")">
+                <cl:flowlayoutdata std:sid="f-data-ee9a3e54" width="9px" height="28px" autosize="width"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-00000221" scrollable="false" hspacing="8" vspacing="8"/>
+            </cl:group>
+            <cl:group std:sid="group-00000232">
+              <cl:verticaldata std:sid="v-data-00000231" width="720px" height="40px" autosize="height"/>
+              <cl:button std:sid="button-00000224" class="btn-primary" value="+">
+                <cl:flowlayoutdata std:sid="f-data-00000225" width="42px" height="42px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-00000226" class="btn-primary" value="−">
+                <cl:flowlayoutdata std:sid="f-data-00000227" width="42px" height="42px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-00000228" class="btn-primary" value="×">
+                <cl:flowlayoutdata std:sid="f-data-00000229" width="42px" height="42px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-0000022a" class="btn-primary" value="÷">
+                <cl:flowlayoutdata std:sid="f-data-0000022b" width="42px" height="42px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-0000022c" class="btn-secondary" enabled="false" value="(">
+                <cl:flowlayoutdata std:sid="f-data-0000022d" width="42px" height="42px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-0000022e" class="btn-secondary" enabled="false" value=")">
+                <cl:flowlayoutdata std:sid="f-data-0000022f" width="42px" height="42px" autosize="none"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-00000230" scrollable="false" hspacing="10"/>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-f9814d09" spacing="10"/>
+          </cl:group>
+          <cl:group std:sid="group-00000247">
+            <cl:verticaldata std:sid="v-data-00000246" width="720px" height="272px" autosize="height"/>
+            <cl:output std:sid="output-00000242" class="font-label" value="Reference Fields">
+              <cl:verticaldata std:sid="v-data-00000241" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-00000244" class="font-caption" value="Balance Sheet">
+              <cl:verticaldata std:sid="v-data-00000243" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-484538e5">
+              <cl:verticaldata std:sid="v-data-bcad6d81" width="720px" height="212px" autosize="none"/>
+              <cl:button std:sid="button-468c7bf6" class="btn-row" value="Current Assets" displayexp="text + sstr(&quot;BS-CurrentAssets&quot;, &quot;font-caption&quot;)">
+                <cl:verticaldata std:sid="v-data-75a86832" width="460px" height="36px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-390924ac" class="btn-row" value="Current Assets" displayexp="text + sstr(&quot;BS-CurrentAssets&quot;, &quot;font-caption&quot;)">
+                <cl:verticaldata std:sid="v-data-5ac987c3" width="720px" height="36px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-529dba86" class="btn-row" value="Current Assets" displayexp="text + sstr(&quot;BS-CurrentAssets&quot;, &quot;font-caption&quot;)">
+                <cl:verticaldata std:sid="v-data-cbba3212" width="720px" height="36px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-655f1ddc" id="btn1" class="btn-row" value="Current Assets" displayexp="text + sstr(&quot;BS-CurrentAssets&quot;, &quot;font-caption&quot;)">
+                <cl:verticaldata std:sid="v-data-0fbd3dc9" width="720px" height="36px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-2d345d04" id="btn2" class="btn-row" value="Current Assets" displayexp="text + sstr(&quot;BS-CurrentAssets&quot;, &quot;font-caption&quot;)">
+                <cl:verticaldata std:sid="v-data-29d78821" width="720px" height="36px" autosize="none"/>
+              </cl:button>
+              <cl:verticallayout std:sid="v-layout-2c9fc437" spacing="8"/>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-00000245" scrollable="false" spacing="10"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-00000233" scrollable="false" spacing="20"/>
+        </cl:group>
+        <cl:group std:sid="group-00000254" id="grpFooter" class="btn-footer-wrap">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-00000255" width="720px" height="57px" autosize="height"/>
+          <cl:group std:sid="group-00000248">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-00000249" row="0" col="0"/>
+            <cl:button std:sid="button-0000024a" class="btn-danger" value="Clear Formula">
+              <cl:flowlayoutdata std:sid="f-data-0000024b" width="140px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-0000024c" halign="left"/>
+          </cl:group>
+          <cl:group std:sid="group-0000024d">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-0000024e" row="0" col="1"/>
+            <cl:button std:sid="button-0000024f" class="btn-secondary" value="Cancel">
+              <cl:flowlayoutdata std:sid="f-data-00000250" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-00000251" class="btn-primary" value="Save">
+              <cl:flowlayoutdata std:sid="f-data-00000252" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-00000253" hspacing="8" vspacing="12" halign="right"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-00000256" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-00000257" scrollable="false" spacing="20"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-0000025c" spacing="20" leftmargin="24" rightmargin="24" topmargin="20" bottommargin="20"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-0000025d"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
