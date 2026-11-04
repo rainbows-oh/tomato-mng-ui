@@ -20,7 +20,7 @@
  * Business Common Module Area
  *******************************************************************************/
 exports.getText = getText;
-
+exports.clearPicker = clearPicker;
 
 /*******************************************************************************
  * Local Variable Declarations within File
@@ -99,6 +99,12 @@ function setLayout() {
 	
 	app.getContainer().redraw();
 };
+
+function clearPicker(){
+	app.lookup("dtiStartDate").clear(false);
+	app.lookup("dtiEndDate").clear(false);
+	app.lookup("cmbPeriod").clearSelection(false);	
+}
 
 /**
  * Configure Date Selection Button Area
@@ -251,7 +257,7 @@ function setDate(rangeType) {
 
 /*******************************************************************************
  * Automatically Generated Event JavaScript Functions
- * (Event functions are automatically displayed below when events are created.)
+ * (Event functions are automatically     displayed below when events are created.)
  *******************************************************************************/
 /*
  * 루트 컨테이너에서 property-change 이벤트 발생 시 호출.
@@ -283,7 +289,7 @@ function onBodyPropertyChange(e) {
 			
 			if (ValueUtil.isNull(defaultPickerType)) {
 				app.lookup("cmbPeriod").clearSelection(false);
-				setDate(defaultPickerType);
+				//setDate(defaultPickerType);
 			} else {
 				// Process only when visible
 				var findPickerType = app.lookup("cmbPeriod").findItem({
@@ -343,8 +349,70 @@ function onCmbPeriodItemClick(e) {
 	var rangeType = util.Control.getValue(app, "cmbPeriod");
 	setDate(rangeType);
 	
+	//콤보 박스 선택 시 초기화
+	util.validate(app, "grpDate");
+	app.lookup("optError").visible = false;
+	
 	/** [click-date-picker] Fires when clicking the date picker **/
 	var clickDatePickerEvent = new cpr.events.CUIEvent("click-date-picker");
 	clickDatePickerEvent.pickerType = e.item.value;
 	app.dispatchEvent(clickDatePickerEvent);
+}
+
+/*
+ * 데이트 인풋에서 value-change 이벤트 발생 시 호출.
+ * Dateinput의 value를 변경하여 변경된 값이 저장된 후에 발생하는 이벤트.
+ */
+function onDtiStartDateValueChange(e) {
+	var dtiStartDate = e.control;
+	// 데이트인풋에서 날짜 변경 시 날짜 선택 clear
+	app.lookup("cmbPeriod").clearSelection(false);
+	
+	var bValidate  = util.validate(app, "dtiStartDate");
+	if (!bValidate) {
+		app.lookup("optError").visible = true;
+	} else {
+		app.lookup("optError").visible = false;
+	}
+	
+	app.lookup("dtiStartDate").removeUserAttr("ignoreRequired");
+}
+
+/*
+ * 데이트 인풋에서 value-change 이벤트 발생 시 호출.
+ * Dateinput의 value를 변경하여 변경된 값이 저장된 후에 발생하는 이벤트.
+ */
+function onDtiEndDateValueChange(e) {
+	var dtiEndDate = e.control;
+	// 데이트인풋에서 날짜 변경 시 날짜 선택 clear
+	app.lookup("cmbPeriod").clearSelection(false);
+	
+	var bValidate  = util.validate(app, "dtiEndDate");
+	if (!bValidate) {
+		app.lookup("optError").visible = true;
+	} else {
+		app.lookup("optError").visible = false;
+	}
+	
+	app.lookup("dtiEndDate").removeUserAttr("ignoreRequired");
+}
+
+/*
+ * 데이트 인풋에서 before-value-change 이벤트 발생 시 호출.
+ * Dateinput의 value를 변경하여 변경된 값이 저장되기 전에 발생하는 이벤트. 다음 이벤트로 value-change가 발생합니다.
+ */
+function onDtiStartDateBeforeValueChange(e) {
+	var dtiStartDate = e.control;
+	// 유효성만 체크하기 위해 필수 입력 체크 무시
+	app.lookup("dtiStartDate").userAttr("ignoreRequired", "Y");
+}
+
+/*
+ * 데이트 인풋에서 before-value-change 이벤트 발생 시 호출.
+ * Dateinput의 value를 변경하여 변경된 값이 저장되기 전에 발생하는 이벤트. 다음 이벤트로 value-change가 발생합니다.
+ */
+function onDtiEndDateBeforeValueChange(e) {
+	var dtiEndDate = e.control;
+	// 유효성만 체크하기 위해 필수 입력 체크 무시
+	app.lookup("dtiEndDate").userAttr("ignoreRequired", "Y");
 }

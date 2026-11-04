@@ -9,6 +9,8 @@
       <cl:property name="sizeInfo" type="string" default="10MB" bindable="true" std:desc="[String] 용량 안내 문구 (default: Total size limit: 10MB)&#xD;&#xA;&#xD;&#xA;입력한 문구 뒤에 현재 사용량(&quot; (N.NMB used).&quot;)이 자동으로 붙어 표시됩니다."/>
       <cl:property name="typeInfo" type="string" bindable="true" std:desc="[String] 파일 형식 안내 문구"/>
       <cl:property name="isTypeInfoVisible" type="boolean" default="false" bindable="true" std:desc="[Boolean] 파일 형식 안내 문구 표시 여부 (default: false)"/>
+      <cl:property name="isMultiple" type="boolean" default="true" std:desc="[Boolean] 파일 다이얼로그에서 여러개 파일 선택 가능여부 (default: true)"/>
+      <cl:event name="updateFile" type="cpr.events.CAppEvent" std:desc="Dispatch event when file is deleted or added"/>
     </cl:appspec>
   </head>
   <body std:sid="body-e5a6c708" style="top:0px; left:0px; width:600px; height:140px;">
