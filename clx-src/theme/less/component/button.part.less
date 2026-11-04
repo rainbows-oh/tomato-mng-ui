@@ -291,11 +291,6 @@
 .btn-inline {
 	#btn--default(@color-button-secondary-fill-default, @color-component-text-active, @color-component-text-active);
 	
-	&.btn-download {
-		font-weight: 600 !important;
-		font-size: 13px !important;	
-	}
-	
 	&:not(.cl-disabled):hover,
 	&:not(.cl-disabled).cl-hover {
 		#btn--hover(@color-button-secondary-fill-default, @color-component-text-active, @color-component-text-active);
@@ -449,7 +444,20 @@
 	#btn--default(@color-button-text-fill-default, transparent, @color-component-text-active);
 	font-weight: 400 !important;
 	text-align: left;
-	
+
+	/* 굵기 유틸리티(fw-*)와 함께 쓰면 위의 400 !important 에 밀리므로 조합 셀렉터로 우선순위를 높인다 */
+	&.fw-medium {
+		font-weight: @font-weight-medium !important;
+	}
+
+	&.fw-semibold {
+		font-weight: @font-weight-semibold !important;
+	}
+
+	&.fw-bold {
+		font-weight: @font-weight-bold !important;
+	}
+
 	&:not(.cl-disabled):hover,
 	&:not(.cl-disabled).cl-hover {
 		#btn--hover(@color-button-text-fill-default, transparent, @color-component-text-active);
@@ -739,6 +747,23 @@
 	background-image: url("@{img-path}/icons/ico_close.svg") !important;
 }
 
+/* 비활성(enabled=false)은 .cl-icon 이 아니라 버튼 자체에 .cl-disabled 가 붙으므로 버튼 기준으로 선언 */
+.btn-up .cl-icon {
+	background-image: url("@{img-path}/icons/ico_angle_up.svg") !important;
+}
+
+.btn-up.cl-disabled .cl-icon {
+	background-image: url("@{img-path}/icons/ico_angle_up_disable.svg") !important;
+}
+
+.btn-down .cl-icon {
+	background-image: url("@{img-path}/icons/ico_angle_down.svg") !important;
+}
+
+.btn-down.cl-disabled .cl-icon {
+	background-image: url("@{img-path}/icons/ico_angle_disable.svg") !important;
+}
+
 .btn-file .cl-icon {
 	background-image: url("@{img-path}/icons/ico_file.svg") !important;
 }
@@ -749,6 +774,10 @@
 
 .btn-user-add-blue .cl-icon {
 	background-image: url("@{img-path}/icons/ico_user_add_blue.svg") !important;
+}
+
+.btn-settings-black .cl-icon {
+	background-image: url("@{img-path}/icons/ico_settings_black.svg") !important;
 }
 
 /* --- Submit (Primary) 계열 --- */

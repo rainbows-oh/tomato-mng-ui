@@ -217,9 +217,28 @@
 		vertical-align: middle;
 	}
 	
-	/* 아이콘 전용 버튼 — 셀 안에서 가운데 정렬 */
+	/* 셀 안의 버튼 — 가운데 정렬 (링크 버튼은 셀 정렬 유지) */
+	.cl-button:not(.btn-link),
 	.cl-button.icon {
 		text-align: center;
+	}
+
+	/* 셀 안의 버튼 — 런타임 inline 위치/크기를 해제하고 셀 정중앙에 배치 */
+	.cl-button:not(.btn-link) {
+		position: absolute !important;
+		top: 50% !important;
+		right: auto !important;
+		bottom: auto !important;
+		left: 50% !important;
+		transform: translate(-50%, -50%);
+	}
+
+	/* 텍스트 버튼은 폭만 본인 패딩 + 글자 크기만큼 차지, 높이는 36px 고정 (아이콘 버튼은 지정 크기 유지) */
+	.cl-button:not(.btn-link):not(.icon) {
+		width: auto !important;
+		min-width: 0 !important; 
+		height: 36px !important;
+		max-width: 100%;
 	}
 	
 	/* expander (행 확장/접기) — 직접 url */
@@ -337,9 +356,6 @@
 		
 	}
 	
-	/* 정렬 — 아이콘은 헤더 텍스트 오른쪽 6px, 세로 가운데
-	   런타임 DOM: .cl-sortable-cell > .cl-sort(inline float:right, 첫 번째 자식) + 텍스트(.cl-grid-cell-inherit)
-	   → flex 로 배치하고 order 로 .cl-sort 를 텍스트 뒤로 이동 (flex item 은 float 무시) */
 	.cl-sortable-cell {
 		display: flex;
 		align-items: center;

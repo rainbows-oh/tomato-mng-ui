@@ -94,7 +94,7 @@
 	
 	.cl-container.page-info {
 		.cl-output {
-			color: #475569;
+			color: @gray-60;
 			font-size: 13px;
 			font-weight: @font-weight-normal;
 			white-space: nowrap;
@@ -273,5 +273,36 @@
 	.btn-footer-wrap {
 		padding-top: 18px;
 		border-top: 1px solid @gray-20;
+	}
+}
+
+/************************************************
+ * [UDC] 조회영역의 Company Name 항목의 선택 칩 스타일
+ ************************************************/
+.cl-button.btn-badge {
+	border-radius: 999px;
+	background: @primary-10;
+	color: @primary-70;
+	#font-caption-strong();
+	font-weight: 600;
+	height: 24px;
+	padding: 0px 10px;
+	
+	.cl-icon {
+		width: 12px;
+		height: 12px;
+	}
+
+	/* hover, 클릭(active), 포커스 상태에서도 기본 스타일 유지 (button.part.less 의 상태 스타일보다 우선) */
+	&:not(.cl-disabled).cl-hover,
+	&:not(.cl-disabled):hover,
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active,
+	&.cl-focus,
+	&:focus {
+		background: @primary-10;
+		border-color: transparent;
+		color: @primary-70;
+		box-shadow: none;
 	}
 }

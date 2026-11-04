@@ -57,11 +57,18 @@
 			transition: @transition-base;
 		}
 		
+		/* 헤더 안 배지 (.badge.fill 기본값 덮어씀) */
+		.badge {
+			#font-micro();
+			height: 20px !important;
+			margin-left: 10px;
+			padding: 2px 5px;
+		}
+
 		/* focus */
 		&.cl-title-collapse:focus {
-			outline: none;
 			text-decoration: none;
-			#focus();
+			#focus-reset();
 		}
 		
 		/* hover */

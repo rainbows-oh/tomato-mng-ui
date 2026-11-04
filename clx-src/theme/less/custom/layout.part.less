@@ -10,9 +10,40 @@
 	}
 }
 
+.cl-container.row {
+	.cl-checkbox,
+	.cl-checkboxgroup,
+	.cl-radiobutton {
+		min-height: 36px;
+		
+		@media(max-width: 767px) {
+			min-height: 0px;
+		}
+	}
+
+	/* 그룹 항목을 36px 높이의 세로 가운데로 (display 는 그대로 두어 항목 흐름/줄바꿈 유지) */
+	.cl-checkboxgroup,
+	.cl-radiobutton {
+		line-height: 36px;
+
+		@media(max-width: 767px) {
+			line-height: normal;
+		}
+
+		/* 그룹 안의 개별 항목은 36px 로 늘리지 않고 자기 크기로 줄 가운데에 둔다 */
+		.cl-checkbox,
+		.cl-radiobutton-item {
+			min-height: 0px;
+			line-height: normal;
+			vertical-align: middle;
+		}
+	}
+}
+
 .select-info {
 	background: url("../../img/icons/ico_select_info.svg") no-repeat center top;
 	padding-top: 52px;
+	
 	.cl-output {
 		text-align: center;
 	}
@@ -63,7 +94,6 @@
 	background-color: @white;
 	border-radius: 8px;
 	padding: 20px;
-	
 	
 	&.sm {
 		padding: 8px 12px;
@@ -116,7 +146,7 @@
 .cl-container.replies {
 	.cl-container.other-chat,
 	.cl-container.my-chat {
-		border: 1px solid  @gray-20;
+		border: 1px solid @gray-20;
 		border-radius: 8px;
 		padding: 12px 14px;
 	}
@@ -138,7 +168,7 @@
 }
 
 .cl-button.btn-go-back {
-//	text-align: center;
+	//	text-align: center;
 	font-weight: 600;
 	font-size: 15px;
 	color: #0d253d;
@@ -155,7 +185,6 @@
 	}
 }
 
-
 //구분자 — dot-separate 그룹 안의 아웃풋 중 첫번째를 제외하고, 앞에 16px 폭의 · (가운데 정렬) 표시
 //         아웃풋 사이 간격이 16px 이므로 그룹(플로우 레이아웃)의 hspacing 은 0 으로 지정
 .cl-container.dot-separate {
@@ -167,6 +196,44 @@
 	}
 }
 
+//구분자 — dot-separate 그룹 안의 아웃풋 중 첫번째를 제외하고, 앞에 16px 폭의 · (가운데 정렬) 표시
+//         아웃풋 사이 간격이 16px 이므로 그룹(플로우 레이아웃)의 hspacing 은 0 으로 지정
+.cl-container.arrow-separate {
+	.cl-output {
+		color: @gray-40;
+		font-size: 13px;
+		
+		span {
+			margin-right: 6px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+			line-height: 1;
+			vertical-align: middle;
+		}
+		
+		&.active {
+			color: @primary-70;
+			font-weight: 700;
+			
+			span {
+				width: 20px;
+				height: 20px;
+				background-color: @primary-70;
+				border-radius: @border-radius-full;
+				color: @white;
+			}
+		}
+	}
+	
+	.cl-layout-wrap:not(.cl-first) > .cl-output .cl-text::before {
+		content: "→";
+		display: inline-block;
+		width: 33px;
+		text-align: center;
+	}
+}
 
 //카드 타이틀 두줄 시
 .cl-button {
@@ -199,13 +266,13 @@
 
 //타이틀 하위 grpBody
 .cl-container.inner {
-//	max-width: 900px;
-//	width: 100%;
-//	margin: 0 auto;
-//	
-//	@media @size-large-less {
-//		max-width: 100%;
-//	}
+	//	max-width: 900px;
+	//	width: 100%;
+	//	margin: 0 auto;
+	//
+	//	@media @size-large-less {
+	//		max-width: 100%;
+	//	}
 }
 
 //카드 영역
@@ -214,7 +281,7 @@
 
 .cl-container.attachments {
 	padding: 4px 12px;
-	border: 1px solid  @gray-20;
+	border: 1px solid @gray-20;
 	background-image: url("../../img/icons/ico_file_excel.svg");
 	background-position: center left 12px;
 	background-repeat: no-repeat;
@@ -252,15 +319,6 @@
 	.cl-container.sch-filter-box {
 		.font-label {
 			color: @gray-90 !important;
-		}
-		
-		.cl-checkboxgroup,
-		.cl-radiobutton {
-			min-height: 36px;
-			
-			@media(max-width: 767px) {
-				min-height: 0px;
-			}
 		}
 	}
 	
@@ -308,3 +366,258 @@
 		}
 	}
 }
+
+/* ==========================================================================
+ formula grp
+ ========================================================================== */
+// 수식 미리보기 영역 (Formula Settings) — 연한 배경 + 테두리 박스
+.cl-container.formula-wrap {
+	.formula-preview {
+		background-color: @gray-5;
+		border: 1px solid @gray-20;
+		border-radius: 8px;
+		padding: 14px;
+	}
+	
+	/*---formula---*/
+	.btn-formula {
+		border-radius: 999px !important;
+		padding: 0px 10px;
+		#btn--default(@primary-5, @color-component-text-active, @gray-90);
+		font-weight: 600 !important;
+		font-size: 13px !important;
+		
+		&:not(.cl-disabled):hover,
+		&:not(.cl-disabled).cl-hover {
+			#btn--hover(@primary-5, @color-component-text-active, @gray-90);
+		}
+		
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			#btn--pressed(@primary-5, @color-component-text-active, @gray-90);
+		}
+		
+		&.cl-focus {
+			#btn--default(@primary-5, @color-component-text-active, @gray-90);
+		}
+		
+		&.cl-disabled {
+			#btn--default(@color-button-secondary-fill-disabled, @color-button-secondary-border-disabled, @color-button-secondary-color-disabled);
+		}
+		
+		/* formula 칩 안의 보조 텍스트(sstr 의 btn-row-sub span) */
+		.btn-row-sub {
+			#font-caption();
+			color: #1D4ED8;
+			margin-left: 6px;
+		}
+	}
+	
+	.btn-formula-output {
+		#btn--default(transparent, transparent, @gray-70);
+		font-weight: 400 !important;
+		text-align: left;
+		padding: 0;
+		
+		&:not(.cl-disabled):hover,
+		&:not(.cl-disabled).cl-hover {
+			#btn--hover(transparent, transparent, @gray-70);
+		}
+		
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active {
+			#btn--pressed(transparent, transparent, @gray-70);
+		}
+		
+		&.cl-focus {
+			#btn--default(transparent, transparent, @gray-70);
+		}
+	}
+	
+	/* --- Row (좌측 제목 + 우측 보조 텍스트가 양끝 정렬된 가로형 버튼 — class: btn-row)
+	 우측 텍스트는 displayexp 의 sstr(..., ["btn-row-sub"]) 가 만드는 span --- */
+	.cl-button.btn-row {
+		background-color: @color-input-surface;
+		border: 1px solid @color-input-border;
+		border-radius: 8px;
+		color: @color-component-text;
+		font-weight: 700;
+		padding: 0 16px;
+		
+		.cl-text {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex: 1 1 auto;
+			width: 100%;
+			text-align: left;
+		}
+		
+		.btn-row-sub {
+			margin-left: auto;
+			color: #6b7280;
+			font-weight: 400;
+			margin-left: 16px;
+		}
+		
+		&:not(.cl-disabled):hover,
+		&:not(.cl-disabled).cl-hover,
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active,
+		&.cl-focus {
+			color: @color-component-text;
+			background-color: @color-input-surface;
+			border-color: @color-input-border;
+		}
+	}
+}
+
+//배너 목록 - 제목 아래 기간 표시
+.cl-grid.banner-list {
+	.banner-period {
+		display: block;
+		color: @gray-50;
+		font-size: 13px;
+		font-weight: 400;
+	}
+}
+
+//배너 등록 - 이미지 미리보기 영역
+.cl-image.img-preview {
+	background-color: @white;
+	border: 1px solid @gray-20;
+	border-radius: 8px;
+}
+
+.cl-container.editor {
+	.cl-formlayout-horizontal-separator {
+		background-color: @gray-20;
+	}
+	
+	.cl-container.header {
+		.font-label {
+			font-weight: 600 !important;
+		}
+	}
+	
+	.cl-container.util-btns {
+		.cl-button .cl-icon {
+			width: 20px;
+			height: 20px;
+		}
+		
+		.btn-add-row,
+		.btn-multi-rows,
+		.btn-delete-rows,
+		.btn-error-chk,
+		.btn-cilp,
+		.btn-html,
+		.btn-remarks,
+		.btn-edit-delete,
+		.btn-edit-save {
+			border: none;
+			padding: 0px;
+			font-size: 13px !important;
+			font-weight: 600;
+		}
+		
+		.btn-add-row .cl-icon {
+			background-image: url("../../img/icons/ico_edit_row_add.svg") !important;
+		}
+		.btn-multi-rows .cl-icon {
+			background-image: url("../../img/icons/ico_edit_multi_row.svg") !important;
+		}
+		.btn-delete-rows .cl-icon {
+			background-image: url("../../img/icons/ico_edit_row_delete.svg") !important;
+		}
+		.btn-error-chk .cl-icon {
+			background-image: url("../../img/icons/ico_edit_error_chk.svg") !important;
+		}
+		.btn-cilp .cl-icon {
+			background-image: url("../../img/icons/ico_edit_cilp.svg") !important;
+		}
+		.btn-html .cl-icon {
+			background-image: url("../../img/icons/ico_edit_html_tag.svg") !important;
+		}
+		.btn-remarks .cl-icon {
+			background-image: url("../../img/icons/ico_edit_remarks.svg") !important;
+		}
+		.btn-edit-delete .cl-icon {
+			background-image: url("../../img/icons/ico_edit_delete.svg") !important;
+		}
+		.btn-edit-save .cl-icon {
+			background-image: url("../../img/icons/ico_edit_save.svg") !important;
+		}
+		.btn-edit-submit .cl-icon {
+			background-image: url("../../img/icons/ico_edit_submit.svg") !important;
+		}
+	}
+	
+	.cl-container.right {
+		border-left: 1px solid @gray-20;
+		
+		.cl-button.btn-panel-exp {
+			.cl-icon {
+				background-image: url("../../img/icons/ico_edit_panel_exp.svg") !important;
+				width: 32px;
+				height: 32px;
+			}
+		}
+	}
+	
+	.cl-container.error-log {
+		border-top: 1px solid @gray-20;
+		
+		.cl-container.log-header {
+			.cl-output {
+				background-image: url("../../img/icons/ico_edit_error_chk_log.svg");
+				
+				.cl-text {
+					padding-left: 32px;
+				}
+			}
+		}
+	}
+	
+	.cl-container.float-wrap {
+		.cl-container.separate {
+			&:not(.cl-last-row) {
+				border-bottom: 1px solid @gray-20;
+				padding-bottom: 12px;
+			}
+		}
+	}
+}
+
+.cl-container.session-out-pop {
+	.cl-container.header {
+		background-color: @secondary-90;
+		color: @secondary-10;
+		#font-heading();
+		font-weight: 700;
+		background-image: url("../../img/icons/ico_edit_logo_full.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		padding: 24px;
+		min-height: 74px;
+		
+		.cl-text {
+			
+		}
+	}
+}
+
+.cl-container.summary {
+	/* 그리드 바깥 테두리 제거 (행 구분선은 유지) */
+	.cl-grid {
+		border: none;
+		border-radius: none;
+	}
+
+	/* 아코디언 섹션 padding 제거 */
+	.cl-accordion .cl-accordion-section:not(.cl-accordion-placeholder) {
+		padding: 0;
+		z-index: auto; /* 기본 -1 이면 섹션 안 컨트롤(링크 hover 등)이 마우스를 못 받음 */
+	}
+}
+
