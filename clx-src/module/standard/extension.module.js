@@ -1671,7 +1671,7 @@ DialogKit.prototype.open = function(app, psAppId, pnWidth, pnHeight, pfHandler, 
 	
 	var voDialogProp = {
 		width: Number(pnWidth) + 10,
-		height: Number(pnHeight) + 45,
+		height: Number(pnHeight) + 70,
 		modal: (poProp && poProp.modal != undefined) ? poProp.modal : true,
 		headerTitle: (poProp && poProp.headerTitle != "") ? poProp.headerTitle : null,
 		headerVisible: (poProp && poProp.headerVisible != undefined) ? poProp.headerVisible : true,
@@ -2075,7 +2075,7 @@ DialogKit.prototype.floating = function(app, psCtrlId, psTargetCtlId, pnX, pnY, 
 			// 만약 띄우려는 container 보다 띄우려는 포지션의 길이가 길 경우 ( x축 + width )
 			if (pnX + pnWidth > vnContainerWidth) {
 				// 띄우려는 컨트롤이 오른쪽에서 10px 떨어진 만큼의 크기로 맞춘다.
-				var vnControlLeft = vnControlLeft - pnWidth - 10;
+				var vnControlLeft = pnX - pnWidth - 10;
 				// 만약 떨어진 만큼의 크기가 왼쪽으로 넘어갈경우 0px로 맞춘다.
 				if (vnControlLeft < 0) {
 					vnControlLeft = 0;
@@ -2092,7 +2092,9 @@ DialogKit.prototype.floating = function(app, psCtrlId, psTargetCtlId, pnX, pnY, 
 	// floating하기 전에 해당 컨트롤의 부모객체 정보를 저장함
 	var voFloatingMap = app.getAppProperty("__floatingMap");
 	var voMap = voFloatingMap ? voFloatingMap : new cpr.utils.ObjectMap();
+	if (!voMap.get(vcCtrl.id)) {
 	voMap.put(vcCtrl.id, vcCtrl.getParent());
+	}
 	if (voFloatingMap == null || voFloatingMap == undefined) {
 		app.setAppProperty("__floatingMap", voMap);
 	}
@@ -2130,9 +2132,11 @@ DialogKit.prototype.removefloating = function(app, psCtrlId) {
 		if (vcCtrl.visible != false) {
 			vcCtrl.visible = false;
 		}
+		if (vcParent) {
 		vcParent.addChild(vcCtrl);
-		var tempFloatginMap = voFloatingMap.remove(vcCtrl.id);
-		app.setAppProperty("__floatingMap", tempFloatginMap);
+	}
+		voFloatingMap.remove(vcCtrl.id);
+		app.setAppProperty("__floatingMap", voFloatingMap);
 	}
 };
 
@@ -3046,9 +3050,9 @@ FreeFormKit.prototype.getRowState = function(app, psFreeFormId) {
  * @param {Object} [options] - 상세 옵션
  * @param {Number} [options.columnCount=3] - 열(Column) 수 (기본값: 3)
  * @param {String} [options.rowHeight="1fr"] - 행(Row) 높이 (예: "1fr", "220px")
+ * @param {String} [options.horizontalSpacing="10px"] - 좌우 간격 (기본값: "10px")
+ * @param {String} [options.verticalSpacing="10px"] - 상하 간격 (기본값: "10px")
  * @param {Object} [options.events] - UDC 출판 이벤트 매핑 객체 { "cardClick": fn, "editClick": fn, "deleteClick": fn }
- * @param {String} [options.eventName="cardClick"] - 단일 출판 이벤트 지정 시 이벤트명
- * @param {Function} [options.onCardClick] - 단일 출판 이벤트 콜백 함수
  */
 FreeFormKit.prototype.createDynamicUdcForm = function(targetGroup, dataSet, udcPath, options) {
 	if (!targetGroup || !dataSet || !udcPath) {
@@ -3077,14 +3081,12 @@ FreeFormKit.prototype.createDynamicUdcForm = function(targetGroup, dataSet, udcP
 	var cols = options.columnCount || 3;
 	var rowHeight = options.rowHeight || "240px";
 
-	// 2. 바인딩할 이벤트 맵 구성 (단일 및 다중 이벤트 모두 지원)
+	// 좌우 및 상하 간격 옵션 처리 (기본값 "10px")
+	var hSpacing = (options.horizontalSpacing !== undefined) ? options.horizontalSpacing : "10px";
+	var vSpacing = (options.verticalSpacing !== undefined) ? options.verticalSpacing : "10px";
+
+	// 2. 바인딩할 이벤트 맵 구성
 	var eventMap = options.events || {};
-	
-	// 단일 이벤트 설정 방식(onCardClick)과의 호환성 유지
-	if (typeof options.onCardClick === "function") {
-		var defaultEventName = options.eventName || "cardClick";
-		eventMap[defaultEventName] = options.onCardClick;
-	}
 
 	// 3. 기존 자식 컨트롤 제거
 	targetGroup.removeAllChildren(true);
@@ -3094,17 +3096,18 @@ FreeFormKit.prototype.createDynamicUdcForm = function(targetGroup, dataSet, udcP
 
 	// 4. 신규 FormLayout 생성 및 설정
 	var formLayout = new cpr.controls.layouts.FormLayout();
-	
+
 	var colWidths = [];
 	for (var c = 0; c < cols; c++) colWidths.push("1fr");
 	formLayout.setColumns(colWidths);
-	
+
 	var rowHeights = [];
 	for (var r = 0; r < rowCount; r++) rowHeights.push(rowHeight);
 	formLayout.setRows(rowHeights);
 
-	formLayout.horizontalSpacing = "10px";
-	formLayout.verticalSpacing = "10px";
+	// 옵션으로 지정한 동적 Spacing 적용
+	formLayout.horizontalSpacing = hSpacing;
+	formLayout.verticalSpacing = vSpacing;
 
 	targetGroup.setLayout(formLayout);
 
@@ -3146,11 +3149,11 @@ FreeFormKit.prototype.createDynamicUdcForm = function(targetGroup, dataSet, udcP
 	if (rForm) {
 		rForm._originalLayout = formLayout;
 		rForm._backup(true);
-		
+
 		var appInstance = targetGroup.getAppInstance();
 		var targetScreenName = appInstance ? appInstance.targetScreen.name : "default";
 		var colSettings = rForm._columnSettings[targetScreenName];
-		
+
 		if (colSettings && colSettings > 0) {
 			rForm._transform(colSettings);
 		}
@@ -8264,6 +8267,136 @@ GroupKit.prototype.focusColumnForGridToForm = function(app, psGrpId, psFocusColu
 };
 
 /**
+ * 특정그룹을 인쇄한다.
+ * @param {cpr.controls.Container} poTargetGroup 인쇄할 그룹
+ * @param {Number}                 pnZoomRatio   줌 배율 숫자
+ * @param {boolean}                pbIsLandScape (Optional) 가로모드로 출력할지 여부 (default : true)
+ * @param {Function}               pfCallback    (Optional) 윈도우 프린트 창이 닫힌 후 콜백 함수
+ */
+GroupKit.prototype.printGroup = function(/* cpr.controls.Container */ poTargetGroup , pnZoomRatio, pbIsLandScape, pfCallback){
+	var _comUtil = this;
+	
+	/* UUID 사용 수정
+	 * 그룹에 적용한 htmlAttr이 dom에 적용된 후, 이후 로직 처리 
+	 */
+	if(!poTargetGroup.htmlAttr("print-uuid")) {
+		poTargetGroup.htmlAttr("print-uuid", poTargetGroup.uuid);
+	}		
+	
+	cpr.core.DeferredUpdateManager.INSTANCE.asyncExec(function(){
+		/**
+		 * 동작원리
+		 * 1. 파라미터로받은 그룹의 uuid를 dom에서 찾고 innerHtml을 복사한다.
+		 * 2. 복사된 innerHtml을 html영역에 복사시캬 복사대상이되는 div를 생성한다.
+		 * 3. 프린트를 하게되면 body의 display속성을 none으로바꾸고 복사된 div를 보이게한다.
+		 * 4. window를 print한다.
+		 */
+		var css = '';
+		
+		// 강제로 배경이미지가 프린트시 표현되도록 하는 스타일 및 텍스트 블록 스타일 추가
+		css = css + 'div { -webkit-print-color-adjust: exact; print-color-adjust: exact; } ';
+		css = css + '@page { size: auto; margin: 15mm; } ';
+		css = css + 'body, html { height: auto !important; overflow: visible !important; } ';
+		// 스크롤 박스를 대체할 인쇄 전용 텍스트 블록 (줄바꿈 유지 및 자동 확장)
+		css = css + '.print-text-replacement { white-space: pre-wrap; word-break: break-word; overflow: visible !important; height: auto !important; max-height: none !important; font-family: inherit; font-size: inherit; color: inherit; line-height: 1.5; padding: 4px; } ';
+		
+		var head = document.head
+		var style = document.createElement('style');
+		style.type = 'text/css';
+		style.media = 'print';
+		
+		if(style.styleSheet){
+			style.styleSheet.cssText = css;
+		}
+		else{
+			style.appendChild(document.createTextNode(css));
+		}
+		head.appendChild(style);
+		poTargetGroup.redraw();
+		
+		/* UUID 사용 수정
+		 * 그룹에 적용한 htmlAttr로 찾는다.
+		 */
+		var printContents = document.querySelector("[data-usr-print-uuid='" + poTargetGroup.uuid + "']");
+		var html = document.querySelector("html");
+		var printDiv = printContents.cloneNode(true);
+	
+		// active 상태로 버튼이 인쇄되는 현상 수정
+		var aActiveCtrl = printDiv.getElementsByClassName("cl-activated"); 
+		Array.from(aActiveCtrl).forEach(function(each){
+			each.classList.remove("cl-activated");
+		});
+		
+		// 그룹에 스크롤이 있을 경우에도 내용 전체가 프린트되도록 변경
+		printDiv.style.height = "auto";
+		printDiv.style.width  = "auto";
+		printDiv.style.overflow = "visible";
+		
+		// 프린트의 화면 배율을 지정할 수 있도록 파라미터 추가
+		var nZoomRatio = ValueUtil.fixNumber(pnZoomRatio);
+		// 배율값이 제대로 입력되지 않은 경우에는 기본정보로 보여지도록 처리
+		if(nZoomRatio == 0) {
+			nZoomRatio = 100;
+		}
+		// 그룹영역에만 지정한 배율이 적용되도록 수정
+		printDiv.style.zoom = nZoomRatio + "%";
+		
+		// [핵심 변경] 복사된 인쇄용 DOM 내부의 텍스트에리어 컨트롤들을 찾아 실제 텍스트 값만 추출한 뒤, 스크롤이 없는 일반 텍스트 div로 교체
+		var scrollAreas = printDiv.querySelectorAll(".cl-textareafield, textarea");
+		Array.from(scrollAreas).forEach(function(el){
+			var textareaElem = el.tagName === 'TEXTAREA' ? el : el.querySelector('textarea');
+			var textVal = "";
+			
+			if (textareaElem) {
+				textVal = textareaElem.value || textareaElem.innerText || "";
+			} else {
+				textVal = el.innerText || "";
+			}
+			
+			// 스크롤 박스를 대체할 순수 텍스트 컨테이너 생성
+			var replacementDiv = document.createElement('div');
+			replacementDiv.className = "print-text-replacement";
+			replacementDiv.innerText = textVal;
+			
+			// 기존 텍스트에리어 요소를 통째로 교체
+			var targetContainer = el.classList.contains('cl-textareafield') ? el : (el.closest('.cl-textareafield') || el);
+			if (targetContainer && targetContainer.parentNode) {
+				targetContainer.parentNode.replaceChild(replacementDiv, targetContainer);
+			}
+		});
+		
+		// 부모 컨테이너들의 고정 높이 해제
+		var allDivs = printDiv.querySelectorAll("div");
+		Array.from(allDivs).forEach(function(div){
+			div.style.height = "auto";
+			div.style.maxHeight = "none";
+			div.style.overflow = "visible";
+		});
+		
+		// DOM에 부착
+		html.appendChild(printDiv);
+		
+		document.body.style.display = "none";
+		
+		// 윈도우 프린트 창이 닫힌 후 콜백 함수
+		if(pfCallback){
+			var fCallBack = function(){
+				setTimeout(pfCallback, 50);
+			}
+		
+			window.addEventListener("afterprint", fCallBack, {once : true});
+		}
+		
+		window.print();
+	
+		document.body.style.display = "block";
+		printDiv.style.display = "none";
+		head.removeChild(style);
+		html.removeChild(printDiv);
+	});
+}
+
+/**
  * 메인 MDI 컨트롤 유틸
  * @constructor
  * @param {common.AppKit} appKit
@@ -8298,25 +8431,43 @@ function MsgKit(appKit) {
 /**
  * 메시지 ID에 해당되는 메시지를 반환한다.
  * @param {String} psMsgId  메시지 ID
- * @param {String | Array} paArgs 메시지 내용 중 @로 표시된 부분 넣어줄 데이터 배열
+ * @param {String | Array} paArgs? 메시지 내용 중 {}로 표시된 부분 넣어줄 데이터 배열
+ * @param {String} psType 타입
  * @return {String} 메시지 문자열
  */
-MsgKit.prototype.getMsg = function(psMsgId, paArgs) {
+MsgKit.prototype.getMsg = function(psMsgId, paArgs, psType) {
 	if (psMsgId == null || psMsgId == "") return "";
-	var vsMsg = cpr.I18N.INSTANCE.message("NLS-" + psMsgId);
-	if (vsMsg == null || vsMsg.indexOf("NLS-") >= 0) {
-		return psMsgId.replace(/\\n/gi, "\n");
+	if( psMsgId.indexOf("SUB-") > -1 || psMsgId.indexOf("MGMT-") > -1 || psMsgId.indexOf("PTL-") > -1 || psMsgId.indexOf("COM-") > -1 ) {
+		if ( ValueUtil.fixNull(psType) == "dialog" ){
+			return psMsgId.replace(/\\n/gi, "\n");
+		} else {
+			var vsMsg = cpr.I18N.INSTANCE.message(psMsgId);
+			if (ValueUtil.fixNull(vsMsg) == "") {
+				return psMsgId.replace(/\\n/gi, "\n");
+			}
+		}
+	} else {
+		if (psMsgId.indexOf("NLS-") > -1){
+			psMsgId = psMsgId.replace("NLS-", "");
+		}
+		var vsMsg = cpr.I18N.INSTANCE.message("NLS-" + psMsgId);
+		if (ValueUtil.fixNull(vsMsg) == "") {
+			return psMsgId.replace(/\\n/gi, "\n");
+		}		
 	}
+	
 	if (!ValueUtil.isNull(paArgs)) {
 		if (!(paArgs instanceof Array)) {
 			paArgs = [paArgs];
 		}
 		//정규 표현식 사용하여 동적 메시지 치환
 		var voRegExp = vsMsg.match(/\{[0-9]+\}/ig);
-		voRegExp.forEach(function( /* String */ exp) {
-			var vnIdx = ValueUtil.fixNumber(exp.replace("{", "").replace("}", "").trim());
-			vsMsg = vsMsg.replace(exp, new String(paArgs[vnIdx]).replace(/\r\n/ig, ""));
-		});
+		if(voRegExp){
+			voRegExp.forEach(function( /* String */ exp) {
+				var vnIdx = ValueUtil.fixNumber(exp.replace("{", "").replace("}", "").trim());
+				vsMsg = vsMsg.replace(exp, new String(paArgs[vnIdx]).replace(/\r\n/ig, ""));
+			});
+		}
 	}
 	
 	return vsMsg.replace(/\\n/ig, "\n");
@@ -8330,7 +8481,7 @@ MsgKit.prototype.getMsg = function(psMsgId, paArgs) {
  * </code></pre>
  * @param {cpr.core.AppInstance} app 앱인스턴스 객체
  * @param {String} psMsgId 메시지 ID
- * @param {String | Array} paArgs? 메시지 내용 중 @로 표시된 부분 넣어줄 데이터 배열
+ * @param {String | Array} paArgs? 메시지 내용 중 {}로 표시된 부분 넣어줄 데이터 배열
  * @param {"INFO" | "WARNING" | "DANGER"} psMsgType? =`INFO`출력타입
  * @param {Number} pnDelay? notify 사용시 알림창이 표시되는 시간 설정
  * @param {Boolean} pbKeep? 이전 메시지를 유지시킬지 여부 
@@ -8384,12 +8535,13 @@ MsgKit.prototype.confirm = function(psMsgId, paArgs) {
  * </code></pre>
  * @param {cpr.core.AppInstance} app 앱인스턴스
  * @param {String} psMsgId 메세지 ID
- * @param {Array} paArgs? 메세지 내용 중 @로 표시된 부분에 넣을 데이터 배열
+ * @param {Array} paArgs? 메세지 내용 중 {}로 표시된 부분에 넣을 데이터 배열
  * @param {{confirmCallback? : Function <!-- 확인 Callback -->,
  * cancelCallback? : Function <!-- 취소(닫기) Callback -->,
  * confirmBtnText : String <!-- 확인 버튼 텍스트 -->,
  * cancelBtnText : String<!-- 취소(닫기) 버튼 텍스트  -->,
- * msgStateType : "INFO" | "SUCCESS" | "WARNING" | "DANGER"<!-- 메세지  타입(메세지 구분시 활용) -->
+ * msgStateType : "INFO" | "SUCCESS" | "WARNING" | "DANGER"<!-- 메세지  타입(메세지 구분시 활용) -->,
+ * headerTitle? : String =`앱 타이틀` <!-- 다이얼로그 헤더 타이틀 -->
  * }} poOptions  callback 처리, 버튼명 등 옵션 구성
  */
 MsgKit.prototype.confirmDlg = function(app, psMsgId, paArgs, poOptions) {
@@ -8422,10 +8574,11 @@ MsgKit.prototype.alert = function(psMsgId, paArgs) {
  * </code></pre>
  * @param {cpr.core.AppInstance} app 앱인스턴스
  * @param {String} psMsgId 메세지 ID
- * @param {Array} paArgs? 메세지 내용 중 @로 표시된 부분에 넣을 데이터 배열
+ * @param {Array} paArgs? 메세지 내용 중 {}로 표시된 부분에 넣을 데이터 배열
  * @param {{confirmCallback? : Function <!-- 확인(닫기) Callback -->, 
  * confirmBtnText : String<!-- 확인(닫기) 버튼 텍스트  -->,
- * msgStateType : "INFO" | "SUCCESS" | "WARNING" | "DANGER"<!-- 메세지  타입(메세지 구분시 활용) -->
+ * msgStateType : "INFO" | "SUCCESS" | "WARNING" | "DANGER"<!-- 메세지  타입(메세지 구분시 활용) -->,
+ * headerTitle? : String =`앱 타이틀` <!-- 다이얼로그 헤더 타이틀 -->
  * }} poOptions callback 처리, 버튼명 등 옵션 구성
  */
 MsgKit.prototype.alertDlg = function(app, psMsgId, paArgs, poOptions) {
@@ -8435,19 +8588,21 @@ MsgKit.prototype.alertDlg = function(app, psMsgId, paArgs, poOptions) {
 /**
  * 공통 메세지 다이얼로그를 호출하는 함수입니다.
  * @param {cpr.core.AppInstance} app
- * @param {"confirm"|"alert"} psMsgType
- * @param {String} psMsgId
- * @param {Array} paArgs
+ * @param {"confirm"|"alert"} psMsgType 다이얼로그 메세지 타입
+ * @param {String} psMsgId 메세지 ID
+ * @param {Array} paArgs? 메세지 내용 중 {}로 표시된 부분에 넣을 데이터 배열
  * @param {{confirmCallback? : Function <!-- 확인 Callback -->,
  * cancelCallback? : Function <!-- 취소(닫기) Callback -->,
  * confirmBtnText : String <!-- 확인 버튼 텍스트 -->,
  * cancelBtnText : String <!-- 취소(닫기) 버튼 텍스트  -->,
- * msgStateType : "INFO" | "SUCCESS" | "WARNING" | "DANGER" <!-- 메세지  타입(메세지 구분시 활용) -->
+ * msgStateType : "INFO" | "SUCCESS" | "WARNING" | "DANGER" <!-- 메세지  타입(메세지 구분시 활용) -->,
+ * headerTitle? : String =`앱 타이틀` <!-- 다이얼로그 헤더 타이틀 -->
  *   }} poOptions callback 처리, 버튼명 등 옵션 구성
  * @private
  */
 MsgKit.prototype._openMsgDialog = function(app, psMsgType, psMsgId, paArgs, poOptions) {
 	var voCloneOption = {};
+	var voDialogProp = {}; //팝업 설정 속성
 	
 	var vbHasOption = function(psParamName) {
 		if (ValueUtil.fixNull(poOptions) != "" && poOptions[psParamName]) {
@@ -8461,11 +8616,24 @@ MsgKit.prototype._openMsgDialog = function(app, psMsgType, psMsgId, paArgs, poOp
 	}
 	delete voCloneOption["confirmCallback"];
 	delete voCloneOption["cancelCallback"];
-	voCloneOption["msg"] = this.getMsg(psMsgId, paArgs);
-	voCloneOption["msgType"] = psMsgType;
+	delete voCloneOption["headerTitle"];
+	
+	var msg = this.getMsg(psMsgId, paArgs, "dialog");
+	voCloneOption["msg"]     = msg;        // 메시지내용
+	voCloneOption["msgType"] = psMsgType;  // 메시지타입(alert, confirm)
+	voCloneOption["args"]    = paArgs;     // 메세지 내용 중 @로 표시된 부분에 넣을 데이터 배열
+	
+	if (vbHasOption("headerTitle")){
+		voDialogProp = {
+			headerTitle : poOptions["headerTitle"]
+		}
+	} else {
+		voDialogProp["headerVisible"] = false;
+	}
+	
 	/* TODO: (커스텀 옵션) 메세지 다이얼로그를 컨텐츠 크기를 고정크기로 사용할 경우 활용, 자동크기(-1)를 사용할 경우 메세지 다이얼로그의 루트 레이아웃을 버티컬 레이아웃으로 구성해야 합니다.*/
 	// return this._appKit.Dialog.open(app, "app/com/comPMsgDialog", 400, 200, function(evt) {
-	return this._appKit.Dialog.open(app, "app/com/comPMsgDialog", 400, -1, function(evt) {
+	return this._appKit.Dialog.open(app, "app/com/comConfirmDialog", 400, -1, function(evt) {
 		/** @type cpr.controls.Dialog */
 		var vcDialog = evt.control;
 		var voReturnValue = vcDialog.returnValue;
@@ -8479,7 +8647,7 @@ MsgKit.prototype._openMsgDialog = function(app, psMsgType, psMsgId, paArgs, poOp
 				poOptions["cancelCallback"].call(null);
 			}
 		}
-	}, voCloneOption);
+	}, voCloneOption, voDialogProp);
 }
 
 /**

@@ -356,6 +356,8 @@ Validator.prototype.validate = function(ctrl, ctrlValue, poParentCtl, pnIdx, pnC
 		            		
 		            	}
 		            	parentValidMsg(vsMsg, poParentCtl, pnIdx);
+		            	
+		            	vcCompareCtrl.userAttr("compareError", "Y");
 		                return false;
 		            }
 				}

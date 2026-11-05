@@ -13,7 +13,7 @@
 
 /************************************************
  * AppStack 변수
- ************************************************/ 
+ ************************************************/
 /**
  * StackInfo 객체의 ID 정보
  */
@@ -46,13 +46,13 @@ var mbQueryString = false;
 
 /************************************************
  * AppStack Util
- ************************************************/ 
+ ************************************************/
 /**
  * AppStack(앱스택) 유틸
  * @constructor
  * @param {common.module} appKit
  */
-function AppStackKit(appKit){
+function AppStackKit(appKit) {
 	this._appKit = appKit;
 };
 
@@ -66,15 +66,15 @@ AppStackKit.prototype.start = function(pfCallback, pbType) {
 	if (appStackInfo && appStackInfo.getFnCallBack()) {
 		return;
 	}
-
+	
 	pbType = (pbType != null && pbType != undefined) ? pbType : false;
 	mbQueryString = pbType;
 	
 	// 최초 앱스택 콜백 저장
-	appStackInfo = (function(fnCallBack){
+	appStackInfo = (function(fnCallBack) {
 		var voFnCallBack = fnCallBack;
 		return {
-			getFnCallBack : function(){
+			getFnCallBack: function() {
 				return voFnCallBack;
 			}
 		}
@@ -84,7 +84,7 @@ AppStackKit.prototype.start = function(pfCallback, pbType) {
 	 * mbQueryString=true 인 경우, 이전 History 존재 시 콜백 호출
 	 */
 	var historyState = history.state;
-	if(mbQueryString && historyState && historyState.appId) {
+	if (mbQueryString && historyState && historyState.appId) {
 		var vsAppId = historyState.appId.replace(/\$\d+$/, "");
 		var newInfo = new StackInfo(vsAppId);
 		_stack.push(newInfo);
@@ -99,7 +99,7 @@ AppStackKit.prototype.start = function(pfCallback, pbType) {
 /**
  * AppStack 중지
  */
-AppStackKit.prototype.stop = function(){
+AppStackKit.prototype.stop = function() {
 	appStackInfo = null;
 	window.removeEventListener("popstate", handlePoppedState);
 };
@@ -108,12 +108,12 @@ AppStackKit.prototype.stop = function(){
  * AppStack 정보 추가 (EmbeddedApp & FullApp 공용)
  * @param {string} psAppId 스택을 쌓을 앱ID
  */
-AppStackKit.prototype.push = function(psAppId){
+AppStackKit.prototype.push = function(psAppId) {
 	if (!psAppId) return;
-
+	
 	// eXBuilder6 런타임 접미사($1, $2 등) 자동 제거
 	var cleanAppId = psAppId.replace(/\$\d+$/, "");
-
+	
 	// 동일 화면 연속 push 방지
 	if (_stack.length > 0) {
 		var activeInfo = getActiveStackInfo();
@@ -121,12 +121,12 @@ AppStackKit.prototype.push = function(psAppId){
 			return;
 		}
 	}
-
+	
 	var newInfo = new StackInfo(cleanAppId);
 	
 	_stack.push(newInfo);
 	
-	if(mbQueryString) {
+	if (mbQueryString) {
 		/* 쿼리스트링 적용하는 경우 */
 		var vsUrl = location.origin + location.pathname + "?p=" + cleanAppId;
 		if (_stack.length === 1) {
@@ -154,16 +154,52 @@ AppStackKit.prototype.push = function(psAppId){
  * @param {cpr.core.AppInstance} app 앱인스턴스
  * @param {string} psAppId 이동할 App ID
  * @param {any} [poInitValue] 전달할 파라미터
- * @param {Object} poOptions? { params: {key: value}, readyCallback: fn(ea) }
+ * @param {Object} poOptions? { params: {key: value}, readyCallback: fn(ea), callAppMethod : {methodName:string , args : any[]} }
  */
 AppStackKit.prototype.openLoadPage = function(app, psAppId, poInitValue, poOptions) {
-    var voMainApp = this._appKit ? this._appKit.getMainApp(app) : app.getRootAppInstance();
-    
-    if (voMainApp && typeof voMainApp.callAppMethod === "function") {
-        voMainApp.callAppMethod("openLoadPage", psAppId, poInitValue, poOptions);
-    } else {
-        console.error("openLoadPage 메소드를 찾을 수 없습니다.");
-    }
+	var voMainApp = this._appKit ? this._appKit.getMainApp(app) : app.getRootAppInstance();
+	
+	if (voMainApp && typeof voMainApp.callAppMethod === "function") {
+		voMainApp.callAppMethod("openLoadPage", psAppId, poInitValue, poOptions);
+	} else {
+		console.error("openLoadPage 메소드를 찾을 수 없습니다.");
+	}
+};
+
+/**
+ * 화면 전환 공통 함수 (임베디드/전체화면 메인 이전화면 호출용)
+ * @param {cpr.core.AppInstance} app 앱인스턴스
+ * @param {any} [poInitValue] 전달할 파라미터
+ * @param {Object} poOptions? { params: {key: value}, readyCallback: fn(ea), callAppMethod : {methodName:string , args : any[]} }
+ */
+AppStackKit.prototype.openLoadPrevPage = function(app, poInitValue, poOptions) {
+	var voMainApp = this._appKit ? this._appKit.getMainApp(app) : app.getRootAppInstance();
+	voMainApp.lookup("eaContent").visible = true;
+	voMainApp.lookup("eaSubContent").visible = false;
+	poOptions = poOptions || {};
+	var vcEa = voMainApp.lookup("eaContent").getEmbeddedAppInstance();
+	if (poOptions.callAppMethod) {
+		if (vcEa.hasAppMethod(poOptions.callAppMethod.methodName)) {
+			vcEa.callAppMethod(poOptions.callAppMethod.methodName, poOptions.callAppMethod.args);
+		}
+	}
+};
+
+/**
+ * 화면 전환 공통 함수 (임베디드/전체화면 서브 호출용)
+ * @param {cpr.core.AppInstance} app 앱인스턴스
+ * @param {string} psAppId 이동할 App ID
+ * @param {any} [poInitValue] 전달할 파라미터
+ * @param {Object} poOptions? { params: {key: value}, readyCallback: fn(ea), callAppMethod : {methodName:string , args : any[]} }
+ */
+AppStackKit.prototype.openLoadSubPage = function(app, psAppId, poInitValue, poOptions) {
+	var voMainApp = this._appKit ? this._appKit.getMainApp(app) : app.getRootAppInstance();
+	
+	if (voMainApp && typeof voMainApp.callAppMethod === "function") {
+		voMainApp.callAppMethod("openLoadSubPage", psAppId, poInitValue, poOptions);
+	} else {
+		console.error("openLoadPage 메소드를 찾을 수 없습니다.");
+	}
 };
 
 /**
@@ -176,7 +212,7 @@ function handlePoppedState(e) {
 	
 	var vsAppId = "";
 	
-	if(!mbQueryString) {
+	if (!mbQueryString) {
 		// 1. 메모리 스택에서 검색 (EmbeddedApp 방식)
 		var prevAppInfo = _stack.filter(function(each) {
 			return each.state && each.state.id == state["id"];
@@ -245,13 +281,13 @@ function StackInfo(psAppId) {
 	var cleanAppId = psAppId ? psAppId.replace(/\$\d+$/, "") : "";
 	this.state = {
 		"appId": cleanAppId,
-		"id": _LAST_KNOWN_STATE_ID++, 
+		"id": _LAST_KNOWN_STATE_ID++,
 	};
 }
 
 /************************************************
  * AppStack Global 출판
- ************************************************/ 
+ ************************************************/
 globals.getAppStack = function(app) {
 	return new AppStackKit(app);
 };

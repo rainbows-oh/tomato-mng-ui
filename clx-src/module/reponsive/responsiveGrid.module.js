@@ -25,8 +25,6 @@
  * 3. 모바일 환경에서 표시할 셀 인덱스는 사용자 속성 "view-column-indicies"에 정의합니다.
  *    해당 인덱스 셀만 화면에 표시되며, 나머지 셀은 다음 네 방식 중 하나로 표현할 수 있습니다:
  *    - accordionType: 폼 레이아웃 형태로 구성하여, 행(row) 클릭 시 상세 데이터를 접고 펼치는 방식
- *    - dialogType: 상세 버튼 클릭 시 팝업 다이얼로그로 상세 데이터 표시
- *      (팝업 경로: app/com/comPGridCellView)
  *	  - list: 삭제된 행을 제외한 모든 행에 대해서 리스트 형태로 데이터를  표현 (폼 레이아웃으로 구성)
  * 	  - massiveList: 삭제된 행을 제외한 모든 행에 대해서 리스트 형태로 데이터를 표현 (그리드로 구성)
  * 
@@ -384,9 +382,7 @@ RGrid.prototype.start = function() {
 	this._gridInitInfo = this._getGridInitInfo();
 	this._gridShowDeleteRow = this._grid.showDeletedRow;
 	
-	if (this._gridType == "dialogType") {
-		this._setViewBtnColumn();
-	} else if(this._gridType == "accordionType"){
+	if(this._gridType == "accordionType"){
 		this._setColumnSettings();
 		this._collapse();
 	} else if(this._gridType == "list") {
@@ -1596,125 +1592,6 @@ RGrid.prototype._onClick = function(e) {
 	}
 	vcControl.redraw();
 }
-
-
-/************************************************
- * DialogType
- ************************************************/
-/**
- * dialogType 사용 시 상세 버튼 컬럼 삽입 및 팝업 연결 처리
- * @private
- * @returns {void}
- */
-RGrid.prototype._setViewBtnColumn = function() {
-	var vcGrid = this._grid;
-	var vaColLot = vcGrid.getColumnLayout().header;
-	var vnHdrRowCnt = vcGrid.header.getRowHeights().length;
-	var vaHedaerCol = vcGrid.header.getColumnByColIndex(0, 1);
-	
-	if (vaHedaerCol.length > 0 && vaHedaerCol[0].text == maDialogTypeOption.detailHeaderText) return;
-	
-	var vsAttrBindFormId = this.ATTR_NM.ATTR_BIND_FORM_ID;
-	var vsDialogCud = this.ATTR_NM.ATTR_DIALOG_CUD;
-	vcGrid.addEventListener("cell-click", function (e) {
-		if(e.columnName == "상세") {
-			/** @type cpr.controls.Grid */
-			var vcGrid = e.control;
-			var vnRowIndex = e.rowIndex;
-			var _app = vcGrid.getAppInstance();
-			var vcGrpBindForm = _app.lookup(vcGrid.userAttr(vsAttrBindFormId));
-			
-			_app.getRootAppInstance().openDialog("app/com/comPGridCellView", {
-				top: 0,
-				bottom: 0,
-				left: 0,
-				right: 0,
-				headerMovable: false
-			}, function(poDialog) {
-				poDialog.userAttr({
-					"_originWidth": 500,
-					"_originHeight": 600
-				});
-				poDialog.headerTitle = vcGrid.fieldLabel;
-				poDialog.initValue = {
-					"grid": vcGrid,
-					"grpBindForm": vcGrpBindForm,
-					"rowIdx": vnRowIndex,
-					"editable" : vcGrid.userAttr(vsDialogCud)
-				};
-				
-				poDialog.addEventListenerOnce("close", function(evt) {
-					var voRowData = evt.control.returnValue;
-					
-					if (voRowData) {
-						if(voRowData == "delete") {
-							vcGrid.deleteRow(vnRowIndex);
-						} else {
-							vcGrid.getRow(vnRowIndex).setRowData(voRowData);
-						}
-						if (vcGrpBindForm) vcGrpBindForm.redraw();
-					
-						// 콜백함수 호출
-						if(vcGrid.getAppInstance().hasAppMethod(msCallbackFunctionName)) {
-							var vsType = (voRowData == "delete") ? "DELETE" : "SAVE";
-							var voRtnValRow = vcGrid.getRow(vnRowIndex).getRowData();
-							vcGrid.getAppInstance().callAppMethod(msCallbackFunctionName, vsType, voRtnValRow);
-						}
-					}
-				});
-			});
-		}
-	});
-	
-	vcGrid.insertColumn({
-		columnLayout: [{
-			width: "40px"
-		}],
-		header: [{
-			constraint: {
-				rowIndex: 0,
-				colIndex: 0,
-				colSpan: 1,
-				rowSpan: vnHdrRowCnt
-			},
-			configurator: function(configurator) {
-				configurator.text = maDialogTypeOption.detailHeaderText;
-			}
-		}],
-		detail: [{
-			constraint: {
-				rowIndex: 0,
-				colIndex: 0,
-				colSpan: 1,
-				rowSpan: vcGrid.detail.getRowHeights().length
-			},
-			configurator: function(cell) {
-				cell.control = (function() {
-					var vcBtnDetail = new cpr.controls.Button("btnDetail");
-					vcBtnDetail.tooltip = "상세 데이터 팝업 버튼";
-					vcBtnDetail.fieldLabel = "상세 데이터 팝업 버튼";
-					vcBtnDetail.icon = "theme/images/controls/button/ic_btn_pop.svg";
-					vcBtnDetail.style.setClasses(maDialogTypeOption.style.detailBtnClass);
-					vcBtnDetail.userAttr("__responseButton__", "true");
-					return vcBtnDetail;
-				})();
-				cell.columnName = "상세"
-				cell.controlConstraint = {};
-			}
-		}]
-	}, 0, false);
-	
-	var vsAutoFit = vcGrid.autoFit.replace(/\s/g, "");
-	if(vsAutoFit == "all"){
-		var vaAutoFit = [];
-		for(var i=1; i < vcGrid.columnCount; i++){
-			vaAutoFit.push(i);
-		}
-		vsAutoFit = vaAutoFit.join(",");	
-		vcGrid.autoFit = vsAutoFit;
-	}	
-}
-
 
 /************************************************
  * List

@@ -13,7 +13,7 @@
 function AppProperties(){};
 
 /* 프로젝트 */
-AppProperties.prototype.PROJECT_NM = "pse-sbm-front" // 프로젝트명
+AppProperties.prototype.PROJECT_NM = "pse-mng-front" // 프로젝트명
 
 /* 스크린 */
 AppProperties.prototype.SCREEN_DEFAULT_NM  = ["default", "EXB-FULL", "EXB-POP[1024]"];	// 기본(pc) 스크린 명
