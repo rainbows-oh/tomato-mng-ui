@@ -1,0 +1,586 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-fad58d6d" version="1.0.6209">
+  <head std:sid="head-31eb649c">
+    <screen std:sid="screen-58374b32" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-65db35bf" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-4d0b7dfe" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-87b80ea4"/>
+    <cl:appspec title="Deadline Details Monthly"/>
+  </head>
+  <body std:sid="body-ddfa7208" style="top:0px; left:0px; width:1022px; height:926px;">
+    <cl:group std:sid="group-941ad70b" id="grpBody">
+      <cl:verticaldata std:sid="v-data-4091725b" width="1024px" height="931px" autosize="height"/>
+      <cl:group std:sid="group-738e1f27" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="16"/>
+        <cl:attribute name="mobile-left-margin" value="16"/>
+        <cl:attribute name="mobile-bottom-margin" value="16"/>
+        <cl:attribute name="mobile-top-margin" value="16"/>
+        <cl:attribute name="mobile-right-margin" value="16"/>
+        <cl:verticaldata std:sid="v-data-e34ab46a" width="1024px" height="849px" autosize="height"/>
+        <cl:output std:sid="output-cddecdfa" class="font-caption" value="Read-only view of all months for this company and template.">
+          <cl:verticaldata std:sid="v-data-96d84791" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:group std:sid="group-744c442f" class="separate">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:verticaldata std:sid="v-data-2f2f1fa8" width="976px" height="117px" autosize="height"/>
+          <cl:group std:sid="group-ce149762">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-9246c295" row="0" col="0"/>
+            <cl:output std:sid="output-a5795d02" class="font-caption" value="Company Name">
+              <cl:verticaldata std:sid="v-data-771d1e44" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-42ed3ed6" class="font-body" value="Archipelago Hotels Group">
+              <cl:verticaldata std:sid="v-data-42f7308b" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-abe09b90" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-07675ed4">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-87e0309a" row="0" col="1"/>
+            <cl:output std:sid="output-82deb620" class="font-caption" value="Fiscal Year">
+              <cl:verticaldata std:sid="v-data-6da3909a" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-1df81006" class="font-body" value="1231">
+              <cl:verticaldata std:sid="v-data-43ce8972" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-9d2c764b" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-af586a00">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-c597d3dc" row="1" col="0"/>
+            <cl:output std:sid="output-cc7b98b5" class="font-caption" value="Template Name">
+              <cl:verticaldata std:sid="v-data-2abadf73" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-84c1c11a" class="font-body" value="Watch List Notification">
+              <cl:verticaldata std:sid="v-data-90576f89" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-d8a2e847" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-73d612ee">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-0223e392" row="1" col="1"/>
+            <cl:output std:sid="output-25526c1b" class="font-caption" value="Type">
+              <cl:verticaldata std:sid="v-data-25f1ea5c" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-fca137be" class="font-body" value="Monthly">
+              <cl:verticaldata std:sid="v-data-76f2110f" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-dcbdd623" spacing="4"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-8579a704" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="44" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:rows length="44" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-55623479">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:verticaldata std:sid="v-data-e494352c" width="976px" height="624px" autosize="height"/>
+          <cl:group std:sid="group-65c8cb82" class="card gray sm">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-94808e58" width="100" height="31" row="0" col="0"/>
+            <cl:output std:sid="output-1be87e56" class="font-body-s fw-bold" value="Jan 2026">
+              <cl:verticaldata std:sid="v-data-656e4528" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-77750bee">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-eccd07bc" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-fa4f7cd1" class="font-caption" value="Deadline">
+                <cl:formdata std:sid="f-data-c680f190" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-05603396" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-2d78ec13" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-fe38ce62" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-8a1111bd">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-2d68064c" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-4ad55e0e" class="font-caption" value="New Deadline">
+                <cl:formdata std:sid="f-data-684d0d7a" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-8a17ec0d" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-fd86f4a6" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-2f7ae715" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-995943e3" scrollable="false" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-7396977f" class="card gray sm">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-5732c045" row="0" col="1"/>
+            <cl:output std:sid="output-fa38afa0" class="font-body-s fw-bold" value="Feb 2026">
+              <cl:verticaldata std:sid="v-data-de9c19a2" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-35cd50a4">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-d9b774f9" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-ededf285" class="font-caption" value="Deadline">
+                <cl:formdata std:sid="f-data-87770ba3" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-8911e325" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-69d3e24a" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-88960b0e" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-944949ad">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-71d7be89" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-9bb9ec19" class="font-caption" value="New Deadline">
+                <cl:formdata std:sid="f-data-f85bddb5" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-062492c4" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-d447374e" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-1a5bafbf" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-f1244749" scrollable="false" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-c5b55d29" class="card gray sm">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-d590df5a" width="100" height="31" row="1" col="0"/>
+            <cl:output std:sid="output-9b04858e" class="font-body-s fw-bold" value="Mar 2026">
+              <cl:verticaldata std:sid="v-data-bf6b3e94" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-35b73ceb">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-2c2cf132" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-1c400c2a" class="font-caption" value="Deadline">
+                <cl:formdata std:sid="f-data-61134a5e" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-01e1ff1b" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-c972bd94" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-11e27cc5" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-75a186b4">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-20618cd9" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-e29dc0b2" class="font-caption" value="New Deadline">
+                <cl:formdata std:sid="f-data-e2701346" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-e5310d96" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-d1e2c1d1" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-3b5f02ca" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-c33cb5fe" scrollable="false" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-2659b3bb" class="card gray sm">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-2b985693" row="1" col="1"/>
+            <cl:output std:sid="output-2d0cae20" class="font-body-s fw-bold" value="Apr 2026">
+              <cl:verticaldata std:sid="v-data-134dbccd" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-65e1ceae">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-72b24749" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-50ba698d" class="font-caption" value="Deadline">
+                <cl:formdata std:sid="f-data-7db89461" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-33d02cf3" class="font-body-s" value="04-30-2026" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-e97dcbca" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-2bd11eb8" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-9cf43b11">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-52ec3287" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-630e0751" class="font-caption" value="New Deadline">
+                <cl:formdata std:sid="f-data-c1d1579a" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-18549ebb" class="font-body-s" value="05-07-2026" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-a651ad11" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-0ab1fbfc" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-c5a3b2b4" scrollable="false" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-6ac1d901" class="card gray sm">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-1d567a45" width="100" height="31" row="2" col="0"/>
+            <cl:output std:sid="output-5268850d" class="font-body-s fw-bold" value="May 2026">
+              <cl:verticaldata std:sid="v-data-41b73dc4" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-f378545b">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-6469e4ad" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-0f1c92b6" class="font-caption" value="Deadline">
+                <cl:formdata std:sid="f-data-11994362" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-740372f2" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-46b6e178" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-5d165df3" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-1b000d1f">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-6c2dffcc" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-5ac709ec" class="font-caption" value="New Deadline">
+                <cl:formdata std:sid="f-data-7165e458" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-7852a725" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-d0d1e37b" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-00ba35b6" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-b7090e18" scrollable="false" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-00d7b8b2" class="card gray sm">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-af16917f" row="2" col="1"/>
+            <cl:output std:sid="output-43704240" class="font-body-s fw-bold" value="Jun 2026">
+              <cl:verticaldata std:sid="v-data-feee87a3" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-900cb7a2">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-c3230571" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-f795f36c" class="font-caption" value="Deadline">
+                <cl:formdata std:sid="f-data-a68a930e" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-e8fe335c" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-f94ac53a" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-2b97029b" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-5f9862ae">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-d450b87c" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-dc380c87" class="font-caption" value="New Deadline">
+                <cl:formdata std:sid="f-data-485842a7" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-450c4955" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-11d17b10" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-242df8f5" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-d2f6ee58" scrollable="false" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-1c274c56" class="card gray sm">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-e1727ed9" width="100" height="1" row="3" col="0"/>
+            <cl:output std:sid="output-9d012208" class="font-body-s fw-bold" value="Jul 2026">
+              <cl:verticaldata std:sid="v-data-e165dd39" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-e48ea753">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-1e9001b9" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-c65f7c13" class="font-caption" value="Deadline">
+                <cl:formdata std:sid="f-data-21c1ac96" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-1e534a1e" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-1660f446" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-733b630f" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-224a23a9">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-8ea8219e" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-a6dede57" class="font-caption" value="New Deadline">
+                <cl:formdata std:sid="f-data-b5db8f31" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-007e0602" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-85c8724d" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-7e4adec0" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-6a72323a" scrollable="false" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-7224dcac" class="card gray sm">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-f152142b" width="100" height="55" row="3" col="1"/>
+            <cl:output std:sid="output-5d556b83" class="font-body-s fw-bold" value="Aug 2026">
+              <cl:verticaldata std:sid="v-data-bab51ff0" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-ab068f47">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-982132f3" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-0a1ddd0b" class="font-caption" value="Deadline">
+                <cl:formdata std:sid="f-data-6fc4be70" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-d018b0cc" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-995eadda" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-07bc5d1d" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-cc60352f">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-da555407" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-764072e5" class="font-caption" value="New Deadline">
+                <cl:formdata std:sid="f-data-d35309c8" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-14196357" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-9e003574" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-918bb554" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-77ae3093" scrollable="false" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-acb24280" class="card gray sm">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-879f7965" width="100" height="31" row="4" col="0"/>
+            <cl:output std:sid="output-43aeb256" class="font-body-s fw-bold" value="Sep 2026">
+              <cl:verticaldata std:sid="v-data-9348fd4d" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-d202cb37">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-92182c7e" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-b566def1" class="font-caption" value="Deadline">
+                <cl:formdata std:sid="f-data-c98045cb" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-f7abbc6e" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-75184198" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-72c6cb6c" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-a1255176">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-045d743e" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-85434993" class="font-caption" value="New Deadline">
+                <cl:formdata std:sid="f-data-cbe8bfd1" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-bafaa00d" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-6ef5ae16" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-e2419bf9" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-14523ea6" scrollable="false" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-fd1c6c8e" class="card gray sm">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-13a229ee" row="4" col="1"/>
+            <cl:output std:sid="output-661d119d" class="font-body-s fw-bold" value="Oct 2026">
+              <cl:verticaldata std:sid="v-data-9c67b547" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-d73df517">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-7a1e23fb" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-2c33f129" class="font-caption" value="Deadline">
+                <cl:formdata std:sid="f-data-639d5f7b" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-483314f0" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-e3ef432d" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-3f0eb929" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-6252a376">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-68d08487" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-849f7a08" class="font-caption" value="New Deadline">
+                <cl:formdata std:sid="f-data-77f221f3" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-c26e4a4a" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-83c29ea0" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-816867c3" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-246d6b49" scrollable="false" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-05168192" class="card gray sm">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-2dfd9538" width="100" height="31" row="5" col="0"/>
+            <cl:output std:sid="output-33925e97" class="font-body-s fw-bold" value="Nov 2026">
+              <cl:verticaldata std:sid="v-data-d9a4f5a6" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-7ec9a94e">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-29ae6644" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-b7fb0958" class="font-caption" value="Deadline">
+                <cl:formdata std:sid="f-data-7708aabd" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-cb268cbf" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-e9d7b798" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-ff3c5320" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-bbf90a53">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-5470d06a" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-d65a9307" class="font-caption" value="New Deadline">
+                <cl:formdata std:sid="f-data-48d83f2b" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-797504ac" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-bfcb0b01" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-f41520e2" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-c1dbeb88" scrollable="false" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-9517f5f3" class="card gray sm">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-640e0201" row="5" col="1"/>
+            <cl:output std:sid="output-38ee8225" class="font-body-s fw-bold" value="Dec 2026">
+              <cl:verticaldata std:sid="v-data-2601d165" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-2d08b324">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-0304309e" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-ea5e481e" class="font-caption" value="Deadline">
+                <cl:formdata std:sid="f-data-933a628f" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-eaaca034" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-9ec0c7ef" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-1c7827f3" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-6bf6168d">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:verticaldata std:sid="v-data-e8b11cb6" width="100px" height="24px" autosize="height"/>
+              <cl:output std:sid="output-81293e0b" class="font-caption" value="New Deadline">
+                <cl:formdata std:sid="f-data-1dc5a6b5" row="0" col="0"/>
+              </cl:output>
+              <cl:output std:sid="output-aece9013" class="font-body-s" value="" displayexp="text ? text : &quot;-&quot;">
+                <cl:formdata std:sid="f-data-a6247ba0" row="0" col="1"/>
+              </cl:output>
+              <cl:formlayout std:sid="f-layout-48b8841a" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="224" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-a7f663f3" scrollable="false" spacing="4"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-f880a930" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="94" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:rows length="94" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:rows length="94" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:rows length="94" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:rows length="94" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:rows length="94" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-e44b4ac4" scrollable="false" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+      </cl:group>
+      <cl:group std:sid="group-d521d3ea" id="grpFooter" class="btn-full-footer-wrap">
+        <cl:verticaldata std:sid="v-data-2f16652e" width="976px" height="82px" autosize="height"/>
+        <cl:group std:sid="group-39dff2aa">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-88889418" row="0" col="0"/>
+          <cl:button std:sid="button-2ccb3356" class="btn-secondary" value="Close">
+            <cl:flowlayoutdata std:sid="f-data-f9d24283" width="100px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-d72f543c" scrollable="false" hspacing="0" halign="left"/>
+        </cl:group>
+        <cl:group std:sid="group-5245c7fa">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-09db4b59" row="0" col="1"/>
+          <cl:button std:sid="button-5401e89f" id="btn1" class="btn-inline-danger" value="Delete">
+            <cl:flowlayoutdata std:sid="f-data-a0c24544" width="100px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:button std:sid="button-1e0de0b5" class="btn-primary" value="Edit">
+            <cl:flowlayoutdata std:sid="f-data-5126c851" width="100px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-5bd9f922" scrollable="false" hspacing="8" vspacing="8" halign="right"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-f1fd01d3" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-2a4e4d3d" spacing="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-42d9bfc6"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

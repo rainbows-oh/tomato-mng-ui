@@ -1,12 +1,22 @@
 @import (reference) "../../custom-settings.part.less";
 
-//페이지 하단 버튼 영역
+//페이지 버튼 영역 grpContentFooter
 .cl-container.btn-footer-wrap {
 	border-top: 1px solid @gray-20;
 	padding-top: 20px;
 	
 	@media(max-width: 767px) {
 		padding-top: 16px;
+	}
+}
+
+//페이지 최하단 버튼 영역 grpBodyFooter
+.cl-container.btn-full-footer-wrap {
+	border-top: 1px solid @gray-20;
+	padding: 20px 24px 24px 24px;
+	
+	@media(max-width: 767px) {
+		padding: 16px;
 	}
 }
 
@@ -609,9 +619,10 @@
 
 .cl-container.summary {
 	/* 그리드 바깥 테두리 제거 (행 구분선은 유지) */
-	.cl-grid {
+	/* 아코디언 안의 그리드만 대상 (팝업 등 외부 그리드는 기존 보더 유지) */
+	.cl-accordion .cl-grid {
 		border: none;
-		border-radius: none;
+		border-radius: 0;
 	}
 
 	/* 아코디언 섹션 padding 제거 */
@@ -621,3 +632,84 @@
 	}
 }
 
+.cl-container.non-trading-days {
+	.cl-calendar.simple-cal {
+		border: 1px solid @gray-30;
+		background-color: @white;
+		min-height: 220px;
+		
+		.cl-calendar-header {
+			padding: 12px 10px 8px 10px;
+			font-size: 13px;
+			font-weight: 700;
+			line-height: 16px;
+		}
+		
+		.cl-calendar-content-wrapper {
+			padding: 0 10px 12px 10px;
+			
+			/* 날짜 셀 너비/높이 고정 해제 - 런타임이 7열 x 6주를 grid 1fr 로 배치하므로 셀끼리 균등 분배 */
+			.cl-calendar-content {
+				/* 요일 행 ~ 날짜 행 간격 */
+				.cl-calendar-content-header {
+					width: auto;
+					margin: 0;
+					padding-bottom: 8px;
+					font-size: 10px;
+				}
+				
+				.cl-calendar-content-day,
+				.cl-other-month {
+					width: auto;
+					height: auto;
+					margin: 0;
+					padding: 0;
+					font-size: 11px;
+					
+					/* 숫자 박스도 셀 크기를 따라감 (기본 32x32 고정 해제) */
+					.cl-text {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				
+				/* 오늘 dot - 셀 높이가 가변이므로 상단 기준(top) 대신 하단 기준 */
+				.cl-calendar-content-day.cl-calendar-defaultdate::after {
+					top: auto;
+					bottom: 1px;
+				}
+			}
+		}
+	}
+	
+	/* 모바일 */
+	@media (max-width: 767px) {
+		.card {
+			padding: 12px;
+		}
+		
+		.cl-calendar.simple-cal {
+			min-height: 182px;
+			
+			.cl-calendar-header {
+				padding: 10px 6px 10px 6px;
+			}
+			
+			.cl-calendar-content-wrapper {
+				padding: 0 6px 10px 6px;
+				
+				.cl-calendar-content {
+					.cl-calendar-content-header {
+						font-size: 9px;
+						padding-bottom: 6px;
+					}
+					
+					.cl-calendar-content-day,
+					.cl-other-month {
+						font-size: 10px;
+					}
+				}
+			}
+		}
+	}
+}

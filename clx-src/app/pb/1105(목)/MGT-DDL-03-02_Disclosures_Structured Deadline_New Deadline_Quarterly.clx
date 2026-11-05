@@ -1,0 +1,552 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-0e2b0e33" version="1.0.6209">
+  <head std:sid="head-e431f0cd">
+    <screen std:sid="screen-b445d469" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-88028079" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-52c038cf" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-1798f980">
+      <cl:dataset std:sid="d-set-ba944df1" id="dsTarget">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-4bb5ab09" name="company"/>
+          <cl:datacolumn std:sid="d-column-0a03811b" name="fiscalYear"/>
+          <cl:datacolumn std:sid="d-column-beab24ac" name="q1dl"/>
+          <cl:datacolumn std:sid="d-column-b10e4634" name="q1ss"/>
+          <cl:datacolumn std:sid="d-column-72358970" name="q1es"/>
+          <cl:datacolumn std:sid="d-column-16c34762" name="q1nd"/>
+          <cl:datacolumn std:sid="d-column-d65a50c5" name="q2dl"/>
+          <cl:datacolumn std:sid="d-column-1532ad50" name="q2ss"/>
+          <cl:datacolumn std:sid="d-column-1b5190ca" name="q2es"/>
+          <cl:datacolumn std:sid="d-column-4d0d012e" name="q2nd"/>
+          <cl:datacolumn std:sid="d-column-0059bde9" name="q3dl"/>
+          <cl:datacolumn std:sid="d-column-10ea6b04" name="q3ss"/>
+          <cl:datacolumn std:sid="d-column-8b90daef" name="q3es"/>
+          <cl:datacolumn std:sid="d-column-b1f1e1d0" name="q3nd"/>
+          <cl:datacolumn std:sid="d-column-4a238397" name="q4dl"/>
+          <cl:datacolumn std:sid="d-column-67f10aad" name="q4ss"/>
+          <cl:datacolumn std:sid="d-column-8c29dda6" name="q4es"/>
+          <cl:datacolumn std:sid="d-column-94bdc84f" name="q4nd"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="company"><![CDATA[Pacific Horizon Securities, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="fiscalYear"><![CDATA[1231]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="company"><![CDATA[Pacific Horizon Securities, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="fiscalYear"><![CDATA[1231]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="company"><![CDATA[Manila Bay Holdings Corp.]]></cl:datavalue>
+            <cl:datavalue columnname="fiscalYear"><![CDATA[1231]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="company"><![CDATA[Manila Bay Holdings Corp.]]></cl:datavalue>
+            <cl:datavalue columnname="fiscalYear"><![CDATA[1231]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="company"><![CDATA[Visayas Energy Partners]]></cl:datavalue>
+            <cl:datavalue columnname="fiscalYear"><![CDATA[1231]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="company"><![CDATA[Luzon Retail Group, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="fiscalYear"><![CDATA[1231]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="company"><![CDATA[Luzon Retail Group, Inc.]]></cl:datavalue>
+            <cl:datavalue columnname="fiscalYear"><![CDATA[1231]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="company"><![CDATA[Cebu Port Logistics Corp.]]></cl:datavalue>
+            <cl:datavalue columnname="fiscalYear"><![CDATA[1231]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="company"><![CDATA[Northern Star Mining Co.]]></cl:datavalue>
+            <cl:datavalue columnname="fiscalYear"><![CDATA[1231]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="company"><![CDATA[Island Telecom Holdings]]></cl:datavalue>
+            <cl:datavalue columnname="fiscalYear"><![CDATA[1231]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="company"><![CDATA[Greenfield Agri Ventures]]></cl:datavalue>
+            <cl:datavalue columnname="fiscalYear"><![CDATA[0630]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="company"><![CDATA[Metro Pacific Properties]]></cl:datavalue>
+            <cl:datavalue columnname="fiscalYear"><![CDATA[1231]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="New_Deadline_Quarterly"/>
+  </head>
+  <body std:sid="body-076afc0d">
+    <cl:group std:sid="group-519c09a4" id="grpBody">
+      <cl:verticaldata std:sid="v-data-0bf2c439" width="1024px" height="1324px" autosize="height"/>
+      <cl:group std:sid="group-d415fa88" id="grpSearch" class="search-top-box">
+        <cl:verticaldata std:sid="v-data-06300f65" width="976px" height="353px" autosize="height"/>
+        <cl:group std:sid="group-0efc68ac" id="grpSearchHeader" class="search-head">
+          <cl:verticaldata std:sid="v-data-64621540" width="974px" height="108px" autosize="height"/>
+          <cl:udc std:sid="ud-control-bc4fdfff" type="udc.pse.com.udcComSearchToggle">
+            <cl:verticaldata std:sid="v-data-865c2858" width="1000px" height="44px" autosize="height"/>
+            <cl:property name="optMsg" value="optMessage" type="control"/>
+            <cl:property name="grpId" value="grpSearchFilter" type="control"/>
+            <cl:property name="targetOutput" value="optMessage" type="control"/>
+            <cl:property name="targetGroup" value="grpSearchFilter" type="control"/>
+          </cl:udc>
+          <cl:output std:sid="output-1e86e369" id="optMessage" class="truncate" visible="false" value="No filters applied">
+            <cl:verticaldata std:sid="v-data-2f0a8f7f" width="100px" height="64px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-78cb87b9" scrollable="false" spacing="0"/>
+        </cl:group>
+        <cl:group std:sid="group-a039eec7" id="grpSearchFilter" class="sch-filter-box">
+          <cl:attribute name="mobile-fit" value="true"/>
+          <cl:attribute name="mobile-bottom-margin" value="16"/>
+          <cl:attribute name="mobile-left-margin" value="16"/>
+          <cl:attribute name="mobile-right-margin" value="16"/>
+          <cl:attribute name="mobile-top-margin" value="16"/>
+          <cl:attribute name="mobile-spacing" value="14"/>
+          <cl:verticaldata std:sid="v-data-1c2043db" width="974px" height="243px" autosize="height"/>
+          <cl:group std:sid="group-574d1d71" class="filter-form">
+            <cl:verticaldata std:sid="v-data-1bdb1fb2" width="926px" height="134px" autosize="height"/>
+            <cl:group std:sid="group-114d9eea" class="row">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-07b99418" width="926px" height="60px" autosize="height"/>
+              <cl:group std:sid="group-7c35836a">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-96956764" row="0" col="0"/>
+                <cl:output std:sid="output-4eb30551" class="font-label" value="Deadline Year">
+                  <cl:verticaldata std:sid="v-data-1292f0f1" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:combobox std:sid="c-box-c2d5b48e" fieldLabel="Deadline Year" value="">
+                  <cl:verticaldata std:sid="v-data-ee8dc498" width="100px" height="36px"/>
+                  <cl:item std:sid="item-7a603d65" label="Select year" value=""/>
+                  <cl:item std:sid="item-a1c1e75a" label="2026" value="2026"/>
+                  <cl:item std:sid="item-ab8af89d" label="2025" value="2025"/>
+                  <cl:item std:sid="item-e28499e4" label="2024" value="2024"/>
+                </cl:combobox>
+                <cl:verticallayout std:sid="v-layout-ea444d9b" spacing="6"/>
+              </cl:group>
+              <cl:group std:sid="group-3cc5476e">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-d6ed6194" row="0" col="1" colspan="2"/>
+                <cl:output std:sid="output-e428ba07" class="font-label" value="Company Name">
+                  <cl:verticaldata std:sid="v-data-67248f7e" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:group std:sid="group-443d5d95">
+                  <cl:verticaldata std:sid="v-data-ea55098a" width="100px" height="36px"/>
+                  <cl:combobox std:sid="c-box-1f2f5f5c" fieldLabel="Company Name type" value="">
+                    <cl:formdata std:sid="f-data-3f8d1f1f" row="0" col="0"/>
+                    <cl:item std:sid="item-edb47370" label="All" value=""/>
+                  </cl:combobox>
+                  <cl:inputbox std:sid="i-box-162c9c14" fieldLabel="Company Name" placeholder="Search company name or symbol">
+                    <cl:formdata std:sid="f-data-e88a8c82" row="0" col="1"/>
+                  </cl:inputbox>
+                  <cl:formlayout std:sid="f-layout-622d1742" scrollable="false" hspace="12px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="1" unit="FRACTION"/>
+                    <cl:columns length="1" unit="FRACTION"/>
+                    <cl:columns length="2" unit="FRACTION"/>
+                  </cl:formlayout>
+                </cl:group>
+                <cl:verticallayout std:sid="v-layout-07ca66f7" spacing="6"/>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-1a1c7a03" scrollable="false" hspace="12px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="2" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:group std:sid="group-6c6cf8f4" class="row">
+              <cl:attribute name="mobile-column-count" value="1"/>
+              <cl:verticaldata std:sid="v-data-de4243b3" width="926px" height="60px" autosize="height"/>
+              <cl:group std:sid="group-1eae7064">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-e426f766" row="0" col="0"/>
+                <cl:output std:sid="output-9751cd46" class="font-label" value="Classification">
+                  <cl:verticaldata std:sid="v-data-c4f44301" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:checkboxgroup std:sid="cb-group-8ea4d912" fieldLabel="Classification">
+                  <cl:verticaldata std:sid="v-data-4a01c0bf" width="200px" height="36px" syncminheight="false" autosize="height"/>
+                  <cl:item std:sid="item-db37fc20" label="PSE" value="PSE"/>
+                  <cl:item std:sid="item-485e98d8" label="TP" value="TP"/>
+                  <cl:item std:sid="item-bedc6ab2" label="PDEx" value="PDEx"/>
+                </cl:checkboxgroup>
+                <cl:verticallayout std:sid="v-layout-f5724297" spacing="6"/>
+              </cl:group>
+              <cl:group std:sid="group-ef8b557c">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-f675d7ad" row="0" col="1"/>
+                <cl:output std:sid="output-b0311eaf" class="font-label" value="Fiscal Year">
+                  <cl:verticaldata std:sid="v-data-6beb1a1b" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:combobox std:sid="c-box-8ff2eea7" fieldLabel="Fiscal Year" value="">
+                  <cl:verticaldata std:sid="v-data-2f094874" width="100px" height="36px"/>
+                  <cl:item std:sid="item-3fcfd40b" label="Select fiscal year" value=""/>
+                  <cl:item std:sid="item-e16f23be" label="FY 2026" value="2026"/>
+                  <cl:item std:sid="item-f01ec54c" label="FY 2025" value="2025"/>
+                  <cl:item std:sid="item-731ec924" label="FY 2024" value="2024"/>
+                </cl:combobox>
+                <cl:verticallayout std:sid="v-layout-a06f33fa" spacing="6"/>
+              </cl:group>
+              <cl:group std:sid="group-3162ac8b">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-07bacc89" row="0" col="2"/>
+                <cl:output std:sid="output-4d68fe55" class="font-label" value="Template Name">
+                  <cl:verticaldata std:sid="v-data-8dfc702a" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:combobox std:sid="c-box-742505d9" fieldLabel="Template Name" value="">
+                  <cl:verticaldata std:sid="v-data-7e094aa5" width="100px" height="36px"/>
+                  <cl:item std:sid="item-8e45e2ec" label="All" value=""/>
+                </cl:combobox>
+                <cl:verticallayout std:sid="v-layout-ae54c465" spacing="6"/>
+              </cl:group>
+              <cl:formlayout std:sid="f-layout-5763dae8" scrollable="false" hspace="12px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="2" unit="FRACTION"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-a83c771f" scrollable="false" spacing="14"/>
+          </cl:group>
+          <cl:group std:sid="group-56056ba6" class="search-btn-wrap">
+            <cl:verticaldata std:sid="v-data-a7af8727" width="400px" height="53px" autosize="height"/>
+            <cl:button std:sid="button-6b37942e" class="btn-secondary" value="Clear">
+              <cl:flowlayoutdata std:sid="f-data-d771fcb8" width="69px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-f8b0c7a4" class="btn-search" value="Search" icon="0">
+              <cl:flowlayoutdata std:sid="f-data-2d277525" width="104px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-13afc721" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-8b714e2c" scrollable="false" spacing="16" leftmargin="24" rightmargin="24" topmargin="20" bottommargin="20"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-f3b83485" scrollable="false" spacing="0"/>
+      </cl:group>
+      <cl:group std:sid="group-445dc6e5" id="grpContent">
+        <cl:verticaldata std:sid="v-data-12e18bca" width="976px" height="903px" autosize="height"/>
+        <cl:group std:sid="group-54b64ea5" class="content-wrap">
+          <cl:attribute name="mobile-spacing" value="16"/>
+          <cl:attribute name="mobile-fit" value="true"/>
+          <cl:verticaldata std:sid="v-data-7ba49864" width="976px" height="560px" autosize="height"/>
+          <cl:group std:sid="group-bb0182f2" class="search-list-top">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:verticaldata std:sid="v-data-6b72b6ca" width="400px" height="36px" autosize="height"/>
+            <cl:output std:sid="output-4f4209bf" class="font-heading" value="12" datatype="number" format="#,##0" displayexp="&quot;Targets (&quot; + text + &quot;)&quot;">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-aa8e2f55" row="0" col="0"/>
+            </cl:output>
+            <cl:group std:sid="group-f7453c26">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-a151f13d" row="0" col="1"/>
+              <cl:combobox std:sid="c-box-0cd493b6" fieldLabel="Rows per page" value="15">
+                <cl:flowlayoutdata std:sid="f-data-a4458523" width="110px" height="36px"/>
+                <cl:item std:sid="item-18a50730" label="15/page" value="15"/>
+              </cl:combobox>
+              <cl:flowlayout std:sid="f-layout-3a1d40a5" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-d8f1795c" scrollable="false" hspace="1fr" vspace="10px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="422" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:output std:sid="output-9ba11794" class="sch-info" value="Select the quarter to set the deadline for.">
+            <cl:verticaldata std:sid="v-data-90e6b62b" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-b5ae0511">
+            <cl:verticaldata std:sid="v-data-6e4d7f5b" width="400px" height="36px" autosize="height"/>
+            <cl:output std:sid="output-725b034b" class="font-label" value="Quarter">
+              <cl:flowlayoutdata std:sid="f-data-fa56aded" width="60px" height="36px"/>
+            </cl:output>
+            <cl:checkbox std:sid="c-box-7ba094d6" fieldLabel="Q1" value="Y" truevalue="Y" falsevalue="N" text="Q1">
+              <cl:flowlayoutdata std:sid="f-data-7a5a8ecb" width="64px" height="36px"/>
+            </cl:checkbox>
+            <cl:checkbox std:sid="c-box-260c6646" fieldLabel="Q2" value="Y" truevalue="Y" falsevalue="N" text="Q2">
+              <cl:flowlayoutdata std:sid="f-data-09cefd0f" width="64px" height="36px"/>
+            </cl:checkbox>
+            <cl:checkbox std:sid="c-box-561edbf8" fieldLabel="Q3" value="Y" truevalue="Y" falsevalue="N" text="Q3">
+              <cl:flowlayoutdata std:sid="f-data-a2a69528" width="64px" height="36px"/>
+            </cl:checkbox>
+            <cl:checkbox std:sid="c-box-79ae1de5" fieldLabel="Q4" value="Y" truevalue="Y" falsevalue="N" text="Q4">
+              <cl:flowlayoutdata std:sid="f-data-1cb229fc" width="64px" height="36px"/>
+            </cl:checkbox>
+            <cl:flowlayout std:sid="f-layout-9740af58" scrollable="false" hspacing="8" vspacing="8" valign="middle"/>
+          </cl:group>
+          <cl:grid std:sid="grid-0cd9d114" datasetid="dsTarget" columnMovable="false">
+            <cl:verticaldata std:sid="v-data-d05c108e" width="400px" height="420px"/>
+            <cl:gridcolumn std:sid="g-column-d15cb0c9" width="40px"/>
+            <cl:gridcolumn std:sid="g-column-9d6cb1e7" width="220px"/>
+            <cl:gridcolumn std:sid="g-column-c6e5b847" width="100px"/>
+            <cl:gridcolumn std:sid="g-column-3cb179f5" width="150px"/>
+            <cl:gridcolumn std:sid="g-column-00c2f2c4" width="150px"/>
+            <cl:gridcolumn std:sid="g-column-8fc56d61" width="150px"/>
+            <cl:gridcolumn std:sid="g-column-47be9bfe" width="150px"/>
+            <cl:gridcolumn std:sid="g-column-8642c733" width="150px"/>
+            <cl:gridcolumn std:sid="g-column-99b6b992" width="150px"/>
+            <cl:gridcolumn std:sid="g-column-c456a5f7" width="150px"/>
+            <cl:gridcolumn std:sid="g-column-fecad72e" width="150px"/>
+            <cl:gridcolumn std:sid="g-column-c1c5c015" width="150px"/>
+            <cl:gridcolumn std:sid="g-column-7cd926e8" width="150px"/>
+            <cl:gridcolumn std:sid="g-column-2c125e7b" width="150px"/>
+            <cl:gridcolumn std:sid="g-column-ab91e158" width="150px"/>
+            <cl:gridcolumn std:sid="g-column-1e6d23a4" width="150px"/>
+            <cl:gridcolumn std:sid="g-column-640343d1" width="150px"/>
+            <cl:gridcolumn std:sid="g-column-0f520e27" width="150px"/>
+            <cl:gridcolumn std:sid="g-column-6282fa02" width="150px"/>
+            <cl:gridheader std:sid="gh-band-eebc48d3">
+              <cl:gridrow std:sid="g-row-2a216f04" height="37px"/>
+              <cl:gridrow std:sid="g-row-25f11e05" height="37px"/>
+              <cl:gridcell std:sid="gh-cell-b92756ed" rowindex="0" colindex="0" rowspan="2" colspan="1" sortable="false" filterable="false" columntype="checkbox"/>
+              <cl:gridcell std:sid="gh-cell-999d6d8b" rowindex="0" colindex="1" rowspan="2" colspan="1" targetcolumnname="company" sortable="false" filterable="false" text="Company Name"/>
+              <cl:gridcell std:sid="gh-cell-d2e2e78f" rowindex="0" colindex="2" rowspan="2" colspan="1" targetcolumnname="fiscalYear" sortable="false" filterable="false" text="Fiscal Year"/>
+              <cl:gridcell std:sid="gh-cell-7babbc2d" rowindex="0" colindex="3" rowspan="1" colspan="4" sortable="false" filterable="false" text="Q1"/>
+              <cl:gridcell std:sid="gh-cell-32823ade" rowindex="0" colindex="7" rowspan="1" colspan="4" sortable="false" filterable="false" text="Q2"/>
+              <cl:gridcell std:sid="gh-cell-c3c01457" rowindex="0" colindex="11" rowspan="1" colspan="4" sortable="false" filterable="false" text="Q3"/>
+              <cl:gridcell std:sid="gh-cell-d5f7d546" rowindex="0" colindex="15" rowspan="1" colspan="4" sortable="false" filterable="false" text="Q4"/>
+              <cl:gridcell std:sid="gh-cell-be32419e" rowindex="1" colindex="3" targetcolumnname="q1dl" sortable="false" filterable="false" text="Deadline"/>
+              <cl:gridcell std:sid="gh-cell-fce8269b" rowindex="1" colindex="4" targetcolumnname="q1ss" sortable="false" filterable="false" text="Start of Submission"/>
+              <cl:gridcell std:sid="gh-cell-e834b527" rowindex="1" colindex="5" targetcolumnname="q1es" sortable="false" filterable="false" text="End of Submission"/>
+              <cl:gridcell std:sid="gh-cell-12a7d3c9" rowindex="1" colindex="6" targetcolumnname="q1nd" sortable="false" filterable="false" text="New Deadline"/>
+              <cl:gridcell std:sid="gh-cell-de4bef45" rowindex="1" colindex="7" targetcolumnname="q2dl" sortable="false" filterable="false" text="Deadline"/>
+              <cl:gridcell std:sid="gh-cell-1fc093ec" rowindex="1" colindex="8" targetcolumnname="q2ss" sortable="false" filterable="false" text="Start of Submission"/>
+              <cl:gridcell std:sid="gh-cell-f43c4aa9" rowindex="1" colindex="9" targetcolumnname="q2es" sortable="false" filterable="false" text="End of Submission"/>
+              <cl:gridcell std:sid="gh-cell-188949aa" rowindex="1" colindex="10" targetcolumnname="q2nd" sortable="false" filterable="false" text="New Deadline"/>
+              <cl:gridcell std:sid="gh-cell-541ef839" rowindex="1" colindex="11" targetcolumnname="q3dl" sortable="false" filterable="false" text="Deadline"/>
+              <cl:gridcell std:sid="gh-cell-06069b5c" rowindex="1" colindex="12" targetcolumnname="q3ss" sortable="false" filterable="false" text="Start of Submission"/>
+              <cl:gridcell std:sid="gh-cell-eda28ffd" rowindex="1" colindex="13" targetcolumnname="q3es" sortable="false" filterable="false" text="End of Submission"/>
+              <cl:gridcell std:sid="gh-cell-b4158116" rowindex="1" colindex="14" targetcolumnname="q3nd" sortable="false" filterable="false" text="New Deadline"/>
+              <cl:gridcell std:sid="gh-cell-c810d8a4" rowindex="1" colindex="15" targetcolumnname="q4dl" sortable="false" filterable="false" text="Deadline"/>
+              <cl:gridcell std:sid="gh-cell-1062c1d0" rowindex="1" colindex="16" targetcolumnname="q4ss" sortable="false" filterable="false" text="Start of Submission"/>
+              <cl:gridcell std:sid="gh-cell-eb0c60b6" rowindex="1" colindex="17" targetcolumnname="q4es" sortable="false" filterable="false" text="End of Submission"/>
+              <cl:gridcell std:sid="gh-cell-944a5e69" rowindex="1" colindex="18" targetcolumnname="q4nd" sortable="false" filterable="false" text="New Deadline"/>
+            </cl:gridheader>
+            <cl:griddetail std:sid="gd-band-b203e018">
+              <cl:gridrow std:sid="g-row-3896e397" height="54px"/>
+              <cl:gridcell std:sid="gd-cell-e554a474" rowindex="0" colindex="0" columntype="checkbox"/>
+              <cl:gridcell std:sid="gd-cell-24291c79" rowindex="0" colindex="1" columnname="company">
+                <cl:output std:sid="output-98637bc3" class="fw-semibold">
+                  <cl:expbind property="value" category="PROPERTY" expression="company"/>
+                  <cl:celldata std:sid="c-data-94c391f1"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-4487c771" rowindex="0" colindex="2" columnname="fiscalYear">
+                <cl:output std:sid="output-87f7901d">
+                  <cl:expbind property="value" category="PROPERTY" expression="fiscalYear"/>
+                  <cl:celldata std:sid="c-data-af2a72ea"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-19bac6d6" rowindex="0" colindex="3" columnname="q1dl">
+                <cl:dateinput std:sid="d-input-999882d5" fieldLabel="Q1 Deadline" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-ec3b90c7" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-5930c809" rowindex="0" colindex="4" columnname="q1ss">
+                <cl:dateinput std:sid="d-input-3670e6e0" fieldLabel="Q1 Start of Submission" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-2d95236b" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-bea90b13" rowindex="0" colindex="5" columnname="q1es">
+                <cl:dateinput std:sid="d-input-50724e16" fieldLabel="Q1 End of Submission" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-4c66f8aa" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-1deac33a" rowindex="0" colindex="6" columnname="q1nd">
+                <cl:dateinput std:sid="d-input-7b8a7085" fieldLabel="Q1 New Deadline" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-d700886d" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-eb90a9d7" rowindex="0" colindex="7" columnname="q2dl">
+                <cl:dateinput std:sid="d-input-da46bfed" fieldLabel="Q2 Deadline" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-3aa7e4cf" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-2edb0090" rowindex="0" colindex="8" columnname="q2ss">
+                <cl:dateinput std:sid="d-input-491afbb1" fieldLabel="Q2 Start of Submission" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-508cde21" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-13e17bae" rowindex="0" colindex="9" columnname="q2es">
+                <cl:dateinput std:sid="d-input-fd6792c3" fieldLabel="Q2 End of Submission" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-59000710" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-43432ed7" rowindex="0" colindex="10" columnname="q2nd">
+                <cl:dateinput std:sid="d-input-0c742c65" fieldLabel="Q2 New Deadline" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-c4e84969" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-6e61148d" rowindex="0" colindex="11" columnname="q3dl">
+                <cl:dateinput std:sid="d-input-cd108515" fieldLabel="Q3 Deadline" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-e216f77c" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-011d5aee" rowindex="0" colindex="12" columnname="q3ss">
+                <cl:dateinput std:sid="d-input-ff5403c7" fieldLabel="Q3 Start of Submission" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-a7d93ca5" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-233ca4a5" rowindex="0" colindex="13" columnname="q3es">
+                <cl:dateinput std:sid="d-input-563f6853" fieldLabel="Q3 End of Submission" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-cc60563d" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-0ba2b307" rowindex="0" colindex="14" columnname="q3nd">
+                <cl:dateinput std:sid="d-input-ec7a7707" fieldLabel="Q3 New Deadline" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-f9659ff7" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-aadbe107" rowindex="0" colindex="15" columnname="q4dl">
+                <cl:dateinput std:sid="d-input-6f082563" fieldLabel="Q4 Deadline" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-ba7f7031" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-402513bd" rowindex="0" colindex="16" columnname="q4ss">
+                <cl:dateinput std:sid="d-input-97d0e80f" fieldLabel="Q4 Start of Submission" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-deb5ce89" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-bbcf7095" rowindex="0" colindex="17" columnname="q4es">
+                <cl:dateinput std:sid="d-input-34619b7a" fieldLabel="Q4 End of Submission" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-eeb40532" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-51fcbfa0" rowindex="0" colindex="18" columnname="q4nd">
+                <cl:dateinput std:sid="d-input-8f217958" fieldLabel="Q4 New Deadline" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                  <cl:celldata std:sid="c-data-b91f0864" halign="FILL" valign="CENTER" width="36" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+                </cl:dateinput>
+              </cl:gridcell>
+            </cl:griddetail>
+          </cl:grid>
+          <cl:verticallayout std:sid="v-layout-e3d1990e" scrollable="false" spacing="12"/>
+        </cl:group>
+        <cl:group std:sid="group-47aff7b6" class="card">
+          <cl:attribute name="mobile-spacing" value="16"/>
+          <cl:verticaldata std:sid="v-data-a9ca301d" width="976px" height="246px" autosize="height"/>
+          <cl:output std:sid="output-b3aa6d5a" class="font-heading" value="Date Settings">
+            <cl:verticaldata std:sid="v-data-b8b2e059" width="100px" height="24px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-fcff0296" class="row">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:verticaldata std:sid="v-data-17ac86be" width="926px" height="60px" autosize="height"/>
+            <cl:group std:sid="group-bb62c7cd">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-8260dad9" row="0" col="0"/>
+              <cl:output std:sid="output-473be000" class="font-label" value="Deadline">
+                <cl:verticaldata std:sid="v-data-37db836d" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:dateinput std:sid="d-input-5eca27a6" fieldLabel="Deadline" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                <cl:verticaldata std:sid="v-data-42231658" width="100px" height="36px"/>
+              </cl:dateinput>
+              <cl:verticallayout std:sid="v-layout-54e2e80f" spacing="6"/>
+            </cl:group>
+            <cl:group std:sid="group-e42582c1">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-d154a74b" row="0" col="1"/>
+              <cl:output std:sid="output-f2443fa1" class="font-label" value="Start of Submission">
+                <cl:verticaldata std:sid="v-data-d94c3808" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:dateinput std:sid="d-input-4885a0ef" fieldLabel="Start of Submission" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                <cl:verticaldata std:sid="v-data-67371467" width="100px" height="36px"/>
+              </cl:dateinput>
+              <cl:verticallayout std:sid="v-layout-7f7178a0" spacing="6"/>
+            </cl:group>
+            <cl:group std:sid="group-4598cd62">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-5a72606f" row="0" col="2"/>
+              <cl:output std:sid="output-8b392835" class="font-label" value="End of Submission">
+                <cl:verticaldata std:sid="v-data-ed80c035" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:dateinput std:sid="d-input-8b993764" fieldLabel="End of Submission" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                <cl:verticaldata std:sid="v-data-426e4608" width="100px" height="36px"/>
+              </cl:dateinput>
+              <cl:verticallayout std:sid="v-layout-c2e534ca" spacing="6"/>
+            </cl:group>
+            <cl:group std:sid="group-5e7a3c1c">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-c0ed2bbe" row="0" col="3"/>
+              <cl:output std:sid="output-3382f247" class="font-label" value="New Deadline">
+                <cl:verticaldata std:sid="v-data-e2348768" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:dateinput std:sid="d-input-6679b85e" fieldLabel="New Deadline" placeholder="MM-DD-YYYY" mask="MM-DD-YYYY" format="YYYYMMDD">
+                <cl:verticaldata std:sid="v-data-a755286c" width="100px" height="36px"/>
+              </cl:dateinput>
+              <cl:verticallayout std:sid="v-layout-fbd117e1" spacing="6"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-c40992c5" scrollable="false" hspace="12px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-585129bd">
+            <cl:verticaldata std:sid="v-data-f6925c5f" width="400px" height="36px" autosize="height"/>
+            <cl:output std:sid="output-1932f29d" class="font-label" value="Quarter">
+              <cl:flowlayoutdata std:sid="f-data-af749a44" width="60px" height="36px"/>
+            </cl:output>
+            <cl:checkbox std:sid="c-box-663ea097" fieldLabel="Q1" value="Y" truevalue="Y" falsevalue="N" text="Q1">
+              <cl:flowlayoutdata std:sid="f-data-19921007" width="64px" height="36px"/>
+            </cl:checkbox>
+            <cl:checkbox std:sid="c-box-fc72103c" fieldLabel="Q2" value="Y" truevalue="Y" falsevalue="N" text="Q2">
+              <cl:flowlayoutdata std:sid="f-data-5a70f990" width="64px" height="36px"/>
+            </cl:checkbox>
+            <cl:checkbox std:sid="c-box-14011744" fieldLabel="Q3" value="Y" truevalue="Y" falsevalue="N" text="Q3">
+              <cl:flowlayoutdata std:sid="f-data-a95ae523" width="64px" height="36px"/>
+            </cl:checkbox>
+            <cl:checkbox std:sid="c-box-b8c8d866" fieldLabel="Q4" value="Y" truevalue="Y" falsevalue="N" text="Q4">
+              <cl:flowlayoutdata std:sid="f-data-9433c72b" width="64px" height="36px"/>
+            </cl:checkbox>
+            <cl:flowlayout std:sid="f-layout-052c7c9c" scrollable="false" hspacing="8" vspacing="8" valign="middle"/>
+          </cl:group>
+          <cl:group std:sid="group-73401cd2">
+            <cl:verticaldata std:sid="v-data-bc61f821" width="400px" height="36px" autosize="height"/>
+            <cl:output std:sid="output-f0cb30f1" class="sch-info" value="Applies to selected companies only.">
+              <cl:flowlayoutdata std:sid="f-data-b80db701" width="240px" height="36px" autosize="width"/>
+            </cl:output>
+            <cl:button std:sid="button-3d9e0eb2" class="btn-secondary" value="Apply">
+              <cl:flowlayoutdata std:sid="f-data-057c3b91" width="78px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-9b593449" scrollable="false" hspacing="16" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-58c5c0e4" scrollable="false" spacing="16"/>
+        </cl:group>
+        <cl:group std:sid="group-af78ab22" id="grpFooter" class="btn-footer-wrap">
+          <cl:verticaldata std:sid="v-data-10767a7c" width="976px" height="57px" autosize="height"/>
+          <cl:group std:sid="group-42420b7f" id="grp2">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-index" value="1"/>
+            <cl:formdata std:sid="f-data-c0f43170" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:button std:sid="button-9d93fd7a" id="btnCancel" class="btn-secondary" value="Cancel">
+              <cl:flowlayoutdata std:sid="f-data-71ba1a76" width="88px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-0dfd9082"/>
+          </cl:group>
+          <cl:group std:sid="group-bb722a37" id="grp3">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-index" value="1"/>
+            <cl:formdata std:sid="f-data-3c288df9" row="0" col="1"/>
+            <cl:button std:sid="button-97a4170b" class="btn-primary" enabled="false" value="Save">
+              <cl:flowlayoutdata std:sid="f-data-0d1efbdf" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-db589266" halign="right"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-b2eefcdd" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="36" unit="PIXEL" autoSizing="false"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-67242ed6" spacing="20"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-de3abeea" spacing="20"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-9274c8d0" scrollable="true" spacing="20"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
