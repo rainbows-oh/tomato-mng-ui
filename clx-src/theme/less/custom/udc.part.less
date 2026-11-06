@@ -219,6 +219,31 @@
  * [UDC] 리스트 카드 화면의 Status 필터 체크박스
  ************************************************/
 .cl-container.status-selection {
+	/* 콤보박스 필드 스타일(#input--base)을 버튼에 적용 — 컨트롤은 icon="0" iconalign="right" 지정
+	   좌측 필터 아이콘은 배경, 우측 화살표는 버튼 아이콘(.cl-icon) */
+	.cl-button.btn-custom-selected-status {
+		#input--base();
+		justify-content: flex-start;
+		font-weight: @font-weight-normal;
+		font-size: @font-size-default;
+		/* 좌측 필터 아이콘 (배경) */
+		background-image: url("@{img-path}/icons/ico_filter.svg");
+		background-position: @size-input-padding-x center;
+		background-repeat: no-repeat;
+		background-size: @size-component-icon;
+		padding: 0px 12px 0px 34px;
+
+		.cl-text {
+			padding: 0 8px;
+		}
+
+		/* 우측 화살표 — 버튼 아이콘을 콤보박스 버튼(ico_angle)으로 */
+		.cl-icon {
+			margin-left: 8px;
+			background-image: url("@{img-path}/icons/ico_angle.svg");
+		}
+	}
+	
 	/* 콤보박스 필드 스타일(#input--base)을 체크박스에 적용 — 컨트롤은 iconalign="right" 지정 */
 	.cl-checkbox.chk-status {
 		#input--base();
@@ -304,5 +329,57 @@
 		border-color: transparent;
 		color: @primary-70;
 		box-shadow: none;
+	}
+}
+
+/************************************************
+ * [UDC] 조회영역의 Company Name 선택 리스트 스타일
+ ************************************************/
+.cl-container.company-selection {
+	.cl-button.btn-custom-selected {
+		border-radius: 6px;
+		border: 1px solid @gray-30;
+		background-color: @white;
+		color: @color-input-text;
+		font-weight: @font-weight-normal;
+		font-size: @font-size-default;
+		text-align: left;
+		padding: 0px 12px;
+
+		.cl-text-wrapper {
+			width: 100% !important;
+			justify-content: space-between !important;
+		}
+
+		.cl-icon {
+			margin-left: 8px;
+			flex-shrink: 0;
+		}
+	}
+}
+
+.cl-container.company-card {
+	padding: 6px 0px;
+	border: 1px solid @gray-30;
+	background-color: @white;
+	border-radius: 8px;
+	cursor: pointer;
+
+	.cl-container.company-item {
+		&.active {
+			background-color: @gray-10;
+		}
+
+		padding: 10px 16px;
+
+		.cl-output.badge {
+			padding: 2px 6px;
+			border-radius: 4px;
+			border: 1px solid @gray-30;
+			background-color: @gray-10;
+			#font-micro();
+			font-weight: 600;
+			color: @gray-70;
+		}
 	}
 }
