@@ -121,14 +121,34 @@
     </cl:group>
     <cl:group std:sid="group-1f3c42b2" id="grpSelectChips">
       <cl:formdata std:sid="f-data-d07890e5" row="2" col="0"/>
-      <cl:button std:sid="button-ed02883b" id="btnSelectNameChip1" class="btn-name-chip btn-close" value="Batangas Harvest Foods, Inc." icon="0" iconalign="right">
-        <cl:expbind property="fieldLabel" category="PROPERTY" expression="&quot;Remove &quot; + text"/>
-        <cl:flowlayoutdata std:sid="f-data-4332c107" width="200px" height="24px" autosize="width"/>
-      </cl:button>
-      <cl:button std:sid="button-07c0dbda" id="btnSelectNameChip2" class="btn-name-chip btn-close" value="Batangas Harvest Foods, Inc." icon="0" iconalign="right">
-        <cl:expbind property="fieldLabel" category="PROPERTY" expression="&quot;Remove &quot; + text"/>
-        <cl:flowlayoutdata std:sid="f-data-b63d8796" width="200px" height="24px" autosize="width"/>
-      </cl:button>
+      <cl:group std:sid="group-e99eaef8" id="grpNameChip01" class="name-chip">
+        <cl:flowlayoutdata std:sid="f-data-00955fec" width="191px" height="24px" autosize="both"/>
+        <cl:output std:sid="output-9b5c1984" id="opt7" value="Laguna Power &amp; Water Corp.Laguna Power &amp; Water Corp.">
+          <cl:formdata std:sid="f-data-8d0815bc" row="0" col="0"/>
+        </cl:output>
+        <cl:button std:sid="button-87e65b8b" id="btn1" class="icon btn-close" value="Button" icon="0">
+          <cl:formdata std:sid="f-data-3e26b5f4" valign="FILL" height="12" row="0" col="1"/>
+        </cl:button>
+        <cl:formlayout std:sid="f-layout-cd6d9563" scrollable="false" hspace="6px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="16" unit="PIXEL"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="12" unit="PIXEL"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-1b40f12d" id="grpNameChip02" class="name-chip">
+        <cl:flowlayoutdata std:sid="f-data-d840d607" width="191px" height="24px" autosize="both"/>
+        <cl:output std:sid="output-7ccdddf6" id="opt9" value="Batangas Harvest Foods, Inc.">
+          <cl:formdata std:sid="f-data-989cce36" row="0" col="0"/>
+        </cl:output>
+        <cl:button std:sid="button-7f0d087f" id="btn3" class="icon btn-close" value="Button" icon="0">
+          <cl:formdata std:sid="f-data-a698fd1b" valign="FILL" height="12" row="0" col="1"/>
+        </cl:button>
+        <cl:formlayout std:sid="f-layout-62f2ac7a" scrollable="false" hspace="6px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="16" unit="PIXEL"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="12" unit="PIXEL"/>
+        </cl:formlayout>
+      </cl:group>
       <cl:flowlayout std:sid="f-layout-b6eafff5" hspacing="8"/>
     </cl:group>
     <cl:formlayout std:sid="f-layout-bb6849b2" scrollable="false" hspace="8px" vspace="4px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
