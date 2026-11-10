@@ -1,0 +1,87 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-a357411a" version="1.0.6164">
+  <head std:sid="head-426986f8">
+    <screen std:sid="screen-e343d201" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="false"/>
+    <screen std:sid="screen-610fabda" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-c5845dc5" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360" active="false"/>
+    <cl:model std:sid="model-5e231a18"/>
+    <cl:appspec title="Insert"/>
+  </head>
+  <body std:sid="body-e78f68a4">
+    <cl:group std:sid="group-a27cca2a" id="grp9">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:verticaldata std:sid="v-data-7f8d0b96" width="768px" height="268px" autosize="height"/>
+      <cl:group std:sid="group-bea5df3d" id="grp1">
+        <cl:verticaldata std:sid="v-data-94e710c3" width="768px" height="62px" autosize="height"/>
+        <cl:output std:sid="output-7dd92f9d" id="opt1" class="font-label required" value="Non-Trading Date/s">
+          <cl:verticaldata std:sid="v-data-d4163cfa" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:group std:sid="group-04ae5c9c" id="grp3">
+          <cl:verticaldata std:sid="v-data-3aa732a1" width="720px" height="36px"/>
+          <cl:dateinput std:sid="d-input-205be6ca" id="dti1" fieldLabel="Start Non-Trading Date/s">
+            <cl:formdata std:sid="f-data-37f3ffba" row="0" col="0"/>
+          </cl:dateinput>
+          <cl:output std:sid="output-4065d12d" id="opt3" value="~">
+            <cl:formdata std:sid="f-data-3d0a5eda" row="0" col="1"/>
+          </cl:output>
+          <cl:dateinput std:sid="d-input-96594e9f" id="dti2" fieldLabel="End Non-Trading Date/s">
+            <cl:formdata std:sid="f-data-28b75011" row="0" col="2"/>
+          </cl:dateinput>
+          <cl:formlayout std:sid="f-layout-0438b44a" scrollable="false" hspace="8px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="150" unit="PIXEL"/>
+            <cl:columns length="15" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="150" unit="PIXEL"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-9cefc467" spacing="6"/>
+      </cl:group>
+      <cl:group std:sid="group-1cd6cb1c" id="grp2">
+        <cl:verticaldata std:sid="v-data-0bb21f46" width="768px" height="62px" autosize="height"/>
+        <cl:output std:sid="output-4f9cb5f4" id="opt2" class="font-label required" value="Event ">
+          <cl:verticaldata std:sid="v-data-41a5306b" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:inputbox std:sid="i-box-39c07eb1" id="ipb2" fieldLabel="Event " placeholder="Enter event">
+          <cl:verticaldata std:sid="v-data-f7cb5289" width="100px" height="36px"/>
+        </cl:inputbox>
+        <cl:verticallayout std:sid="v-layout-da84b795" spacing="6"/>
+      </cl:group>
+      <cl:group std:sid="group-f8571738" id="grp7" class="btn-footer-wrap">
+        <cl:verticaldata std:sid="v-data-bcecbd59" width="752px" height="56px" autosize="height"/>
+        <cl:group std:sid="group-48fb1001" id="grp8" class="btn-wrap">
+          <cl:formdata std:sid="f-data-a6e4f018" row="0" col="0"/>
+          <cl:button std:sid="button-b662b9b5" id="btn4" class="btn-secondary" value="Cancel">
+            <cl:flowlayoutdata std:sid="f-data-81be75d6" width="100px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-8ff53493" scrollable="false" hspacing="8" vspacing="8" valign="middle"/>
+        </cl:group>
+        <cl:group std:sid="group-debbdc58" id="grp6" class="btn-wrap">
+          <cl:formdata std:sid="f-data-4981bfec" row="0" col="1"/>
+          <cl:button std:sid="button-e0d20fc5" id="btn2" class="btn-danger" value="Delete">
+            <cl:flowlayoutdata std:sid="f-data-6ec51ff2" width="100px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:button std:sid="button-b054af19" id="btn3" class="btn-primary" value="Insert">
+            <cl:flowlayoutdata std:sid="f-data-d848017e" width="100px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-cb8b5294" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-54304a52" scrollable="false" hspace="8px" vspace="8px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-950541ac" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-a8a38e6e"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

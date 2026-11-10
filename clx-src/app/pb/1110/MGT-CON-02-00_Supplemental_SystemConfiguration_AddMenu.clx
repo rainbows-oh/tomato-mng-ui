@@ -1,0 +1,111 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-5c1e7a02" version="1.0.6164">
+  <head std:sid="head-3d9a41b7">
+    <screen std:sid="screen-8a2f6c10" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="false"/>
+    <screen std:sid="screen-b47d92e3" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-0e5c18fa" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-61b8d4c9"/>
+    <cl:appspec title="Add Menu"/>
+  </head>
+  <body std:sid="body-92f3a7d5">
+    <cl:group std:sid="group-4e0b7c21" id="grpBody">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:verticaldata std:sid="v-data-a15c3e70" width="720px" height="645px" autosize="height"/>
+      <cl:group std:sid="group-7b2d9e44">
+        <cl:verticaldata std:sid="v-data-c8e41a05" width="768px" height="62px" autosize="height"/>
+        <cl:output std:sid="output-1f6a8b32" class="font-label required" value="menu_id">
+          <cl:verticaldata std:sid="v-data-5d70e2b9" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:inputbox std:sid="i-box-e93b0c6a" fieldLabel="menu_id">
+          <cl:verticaldata std:sid="v-data-2a84f7d1" width="100px" height="36px"/>
+        </cl:inputbox>
+        <cl:verticallayout std:sid="v-layout-70c5e2a8" spacing="6"/>
+      </cl:group>
+      <cl:group std:sid="group-d3a96f18">
+        <cl:verticaldata std:sid="v-data-6e1b4c93" width="768px" height="62px" autosize="height"/>
+        <cl:output std:sid="output-b02e7d54" class="font-label required" value="menu_nm">
+          <cl:verticaldata std:sid="v-data-93f8a1e6" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:inputbox std:sid="i-box-4c71d0e2" fieldLabel="menu_nm">
+          <cl:verticaldata std:sid="v-data-f0b92c37" width="100px" height="36px"/>
+        </cl:inputbox>
+        <cl:verticallayout std:sid="v-layout-1a9e63bf" spacing="6"/>
+      </cl:group>
+      <cl:group std:sid="group-85c04b7e">
+        <cl:verticaldata std:sid="v-data-3b6d58a0" width="768px" height="106px" autosize="height"/>
+        <cl:output std:sid="output-c7418e09" class="font-label" value="menu_desc">
+          <cl:verticaldata std:sid="v-data-e84a1f62" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:textarea std:sid="t-area-29d5b0c4" class="resizable" fieldLabel="menu_desc">
+          <cl:verticaldata std:sid="v-data-0c73e9d8" width="100px" height="80px" autosize="height"/>
+        </cl:textarea>
+        <cl:verticallayout std:sid="v-layout-b6f2084d" spacing="6"/>
+      </cl:group>
+      <cl:group std:sid="group-f2e8a6c3">
+        <cl:verticaldata std:sid="v-data-47d1c5b8" width="768px" height="62px" autosize="height"/>
+        <cl:output std:sid="output-6a39d2f1" class="font-label" value="menu_url">
+          <cl:verticaldata std:sid="v-data-d5e60a94" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:inputbox std:sid="i-box-83b7f4e0" fieldLabel="menu_url" placeholder="Screen code (optional)">
+          <cl:verticaldata std:sid="v-data-1c2a97be" width="100px" height="36px"/>
+        </cl:inputbox>
+        <cl:verticallayout std:sid="v-layout-e47a0d15" spacing="6"/>
+      </cl:group>
+      <cl:group std:sid="group-0a5b73d9">
+        <cl:verticaldata std:sid="v-data-9f08c2e4" width="720px" height="88px" autosize="height"/>
+        <cl:output std:sid="output-d81c4a67" class="font-label" value="parent_id">
+          <cl:verticaldata std:sid="v-data-72e5b1a3" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:combobox std:sid="c-box-5e0f93a2" fieldLabel="parent_id" value="">
+          <cl:verticaldata std:sid="v-data-b43d86c0" width="100px" height="36px"/>
+          <cl:item std:sid="item-a96e1d57" label="Top-level group (no parent)" value=""/>
+        </cl:combobox>
+        <cl:output std:sid="output-3c82f7b5" class="font-caption" value="Leave as top-level to create a root group. Order prefills to the next value in that group.">
+          <cl:verticaldata std:sid="v-data-08a6e4f9" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-6d1b9a30" spacing="6"/>
+      </cl:group>
+      <cl:group std:sid="group-c61e82a7">
+        <cl:verticaldata std:sid="v-data-e2c9704b" width="720px" height="88px" autosize="height"/>
+        <cl:output std:sid="output-97a05d3e" class="font-label required" value="Order">
+          <cl:verticaldata std:sid="v-data-4f7b1c86" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:inputbox std:sid="i-box-1d4e6f92" fieldLabel="Order" value="10">
+          <cl:verticaldata std:sid="v-data-a83c05e7" width="100px" height="36px"/>
+        </cl:inputbox>
+        <cl:output std:sid="output-f5b21c08" class="font-caption" value="Non-negative integer. Same-order siblings sort by menu_id.">
+          <cl:verticaldata std:sid="v-data-6b90d3a1" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-2e87c4d6" spacing="6"/>
+      </cl:group>
+      <cl:group std:sid="group-3a7f10e5" id="grpFooter" class="btn-footer-wrap">
+        <cl:verticaldata std:sid="v-data-d70e5b29" width="752px" height="57px" autosize="height"/>
+        <cl:group std:sid="group-8e4c2b96" class="btn-wrap">
+          <cl:formdata std:sid="f-data-5a13e8c7" row="0" col="0"/>
+          <cl:button std:sid="button-b19d607f" class="btn-secondary" value="Cancel">
+            <cl:flowlayoutdata std:sid="f-data-c4a02e51" width="100px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:button std:sid="button-27e8f4a3" class="btn-primary" value="Save">
+            <cl:flowlayoutdata std:sid="f-data-90d6b3e8" width="100px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-e5c71a0d" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-4b92d8f6" scrollable="false" hspace="8px" vspace="8px" top-margin="1fr" bottom-margin="1fr">
+          <cl:rows length="36" unit="PIXEL"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-a0f35c18" spacing="20"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-7c4e19b2" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

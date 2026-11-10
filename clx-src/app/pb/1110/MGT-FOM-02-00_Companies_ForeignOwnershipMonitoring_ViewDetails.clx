@@ -1,0 +1,420 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-ab4e79cf" version="1.0.6164">
+  <head std:sid="head-fef2a59d">
+    <screen std:sid="screen-fce5e969" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-5dac1053" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-74b548ad" id="EXB-PART" name="EXB-PART" width="360px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-e918cc57">
+      <cl:dataset std:sid="d-set-0000003e" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-00000001" name="category"/>
+          <cl:datacolumn std:sid="d-column-00000002" name="totalDirect"/>
+          <cl:datacolumn std:sid="d-column-00000003" name="totalIndirect"/>
+          <cl:datacolumn std:sid="d-column-00000004" name="totalDirectIndirect"/>
+          <cl:datacolumn std:sid="d-column-00000005" name="pctOutstanding"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Directors]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[444600]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[239400]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[684000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[6.32]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Officers]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[296400]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[159600]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[456000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[4.21]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Principal/Substantial Shareholders]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[691600]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[372400]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[1064000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[9.83]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Affiliates]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[197600]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[106400]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[304000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[2.81]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Government]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[123500]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[66500]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[190000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[1.76]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Banks]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[148200]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[79800]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[228000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[2.11]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Employees]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[172900]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[93100]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[266000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[2.46]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Look-Up Shares]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[98800]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[53200]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[152000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[1.40]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="category"><![CDATA[Others]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirect"><![CDATA[296400]]></cl:datavalue>
+            <cl:datavalue columnname="totalIndirect"><![CDATA[159600]]></cl:datavalue>
+            <cl:datavalue columnname="totalDirectIndirect"><![CDATA[456000]]></cl:datavalue>
+            <cl:datavalue columnname="pctOutstanding"><![CDATA[4.21]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="Foreign Ownership Detail"/>
+  </head>
+  <body std:sid="body-6585a0fc">
+    <cl:group std:sid="group-0b464f24" id="grpBody">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:verticaldata std:sid="v-data-40a89747" width="1024px" height="989px" autosize="height"/>
+      <cl:group std:sid="group-00000267">
+        <cl:attribute name="mobile-column-count" value="1"/>
+        <cl:verticaldata std:sid="v-data-00000268" width="976px" height="44px" autosize="height"/>
+        <cl:group std:sid="group-00000269">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-0000026a" width="100" height="13" row="0" col="0"/>
+          <cl:output std:sid="output-0000026b" class="font-caption" value="Company Report No. FO-2026-0014">
+            <cl:verticaldata std:sid="v-data-0000026c" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-0000026d" class="dot-separate">
+            <cl:verticaldata std:sid="v-data-0000026e" width="450px" height="20px" autosize="height"/>
+            <cl:output std:sid="output-0000026f" class="font-body-s" value="Palawan Reef Resorts Corp.">
+              <cl:flowlayoutdata std:sid="f-data-00000270" width="170px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-b1c03673" class="font-body-s" value="PRR">
+              <cl:flowlayoutdata std:sid="f-data-c5cd6934" width="40px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-00000271" class="font-body-s" value="Monthly">
+              <cl:flowlayoutdata std:sid="f-data-00000272" width="80px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-00000273" class="font-body-s" value="08-31-2026">
+              <cl:flowlayoutdata std:sid="f-data-00000274" width="100px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:flowlayout std:sid="f-layout-00000275" hspacing="0" valign="middle"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-00000276" spacing="4"/>
+        </cl:group>
+        <cl:group std:sid="group-00000277" id="grp10">
+          <cl:formdata std:sid="f-data-00000278" row="0" col="1"/>
+          <cl:button std:sid="button-00000279" id="btn1" class="btn-download btn-inline" fieldLabel="PDF_Down" value="FO-2026-0014.pdf" icon="0">
+            <cl:flowlayoutdata std:sid="f-data-0000027a" width="180px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-0000027b" halign="right"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-0000027c" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION" autoSizing="true"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-c9d6abb5" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="14"/>
+        <cl:verticaldata std:sid="v-data-3172a4b8" width="976px" height="800px" autosize="height"/>
+        <cl:group std:sid="group-eb420e13" class="card gray">
+          <cl:verticaldata std:sid="v-data-921f3281" width="976px" height="342px" autosize="height"/>
+          <cl:output std:sid="output-1e326069" class="font-subheading" value="Voting">
+            <cl:verticaldata std:sid="v-data-d700a55a" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-cb9a069e">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:verticaldata std:sid="v-data-13ad0954" width="934px" height="266px" autosize="height"/>
+            <cl:group std:sid="group-b9902e8a">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-db9d2a87" row="0" col="0"/>
+              <cl:output std:sid="output-a4557602" class="font-caption" value="Security Type">
+                <cl:verticaldata std:sid="v-data-c4af9f4f" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-e3c31666" class="font-body" value="Common">
+                <cl:verticaldata std:sid="v-data-d7173c02" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-0af24db2" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-39cf15ee">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-50433487" width="100" height="23" row="0" col="1"/>
+              <cl:output std:sid="output-1cc16b76" class="font-caption" value="Company Code">
+                <cl:verticaldata std:sid="v-data-27551f42" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-b1f512cb" class="font-body" value="PRR">
+                <cl:verticaldata std:sid="v-data-d6c9aeed" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-72335e2c" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-28d9970d">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-e31c2b36" width="100" height="23" row="1" col="0"/>
+              <cl:output std:sid="output-543c6388" class="font-caption" value="Stock Symbol">
+                <cl:verticaldata std:sid="v-data-f70421fa" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-86357ff1" class="font-body" value="PRR">
+                <cl:verticaldata std:sid="v-data-f6c70343" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-3ff68f56" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-94e73907">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-7c7491eb" row="1" col="1"/>
+              <cl:output std:sid="output-c5001d32" class="font-caption" value="Number of Foreign-Owned Shares">
+                <cl:verticaldata std:sid="v-data-c2c7d0b6" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-f49e3e46" class="font-body" value="333,000">
+                <cl:verticaldata std:sid="v-data-0844f423" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-9c88348a" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-10a0941a">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-f7343dda" width="100" height="23" row="2" col="0"/>
+              <cl:output std:sid="output-d1d27cf2" class="font-caption" value="Number of Local-Owned Shares">
+                <cl:verticaldata std:sid="v-data-daebfe86" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-d75f9929" class="font-body" value="667,000">
+                <cl:verticaldata std:sid="v-data-bf3dee72" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-1394ed1c" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-7a273c3c">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-02298f9e" row="2" col="1"/>
+              <cl:output std:sid="output-27defac5" class="font-caption" value="Number of Outstanding Voting Shares">
+                <cl:verticaldata std:sid="v-data-1b1375c1" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-b63491e2" class="font-body" value="1,000,000">
+                <cl:verticaldata std:sid="v-data-de6a3534" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-85e51f73" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-4f4ed69e">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-6bd0c8c2" width="100" height="23" row="3" col="0"/>
+              <cl:output std:sid="output-1bee59a4" class="font-caption" value="Foreign Ownership Level (%)">
+                <cl:verticaldata std:sid="v-data-cbf755e6" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-a975947c" class="font-body" value="33.30%">
+                <cl:verticaldata std:sid="v-data-93c1dea1" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-bb57d460" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-11bdb361">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-c1b6caf3" width="100" height="23" row="4" col="0"/>
+              <cl:output std:sid="output-7de5deca" class="font-caption" value="Change in Foreign Ownership Level of Total Voting Shares (%)">
+                <cl:verticaldata std:sid="v-data-8fb68624" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-f5283a04" class="font-body" value="+1.05 pp">
+                <cl:verticaldata std:sid="v-data-dc88a01e" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-868ac1d0" spacing="4"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-65653fb3" scrollable="false" hspace="12px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-0a293e79" spacing="14"/>
+        </cl:group>
+        <cl:group std:sid="group-64b86f8a" class="card gray">
+          <cl:verticaldata std:sid="v-data-8a041272" width="976px" height="342px" autosize="height"/>
+          <cl:output std:sid="output-948a59bb" class="font-subheading" value="Non-Voting">
+            <cl:verticaldata std:sid="v-data-8c64e9e2" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-74977e5a">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:verticaldata std:sid="v-data-6ca44a7f" width="934px" height="266px" autosize="height"/>
+            <cl:group std:sid="group-7e61e2eb">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-385e32fb" width="100" height="23" row="0" col="0"/>
+              <cl:output std:sid="output-654cf8f0" class="font-caption" value="Security Type">
+                <cl:verticaldata std:sid="v-data-64201f9c" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-062bc60f" class="font-body" value="Preferred">
+                <cl:verticaldata std:sid="v-data-dc09beb1" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-89a3adfb" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-9ee150af">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-19a9968e" row="0" col="1"/>
+              <cl:output std:sid="output-4fb9a817" class="font-caption" value="Company Code">
+                <cl:verticaldata std:sid="v-data-f1fb6fdc" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-ffc0063c" class="font-body" value="PRR">
+                <cl:verticaldata std:sid="v-data-6551221e" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-9277ac42" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-94a0e83c">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-9b3d6221" width="100" height="23" row="1" col="0"/>
+              <cl:output std:sid="output-76950005" class="font-caption" value="Stock Symbol">
+                <cl:verticaldata std:sid="v-data-788a5d98" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-068fe2e4" class="font-body" value="PRR-P">
+                <cl:verticaldata std:sid="v-data-c3b5700f" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-94b48c03" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-785da5c4">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-159484b6" row="1" col="1"/>
+              <cl:output std:sid="output-69b3ebad" class="font-caption" value="Number of Foreign-Owned Shares">
+                <cl:verticaldata std:sid="v-data-67b1bd8e" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-fd686931" class="font-body" value="87,200">
+                <cl:verticaldata std:sid="v-data-7fb22d46" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-041dcfda" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-f8825bee">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-33ee0dca" row="2" col="0"/>
+              <cl:output std:sid="output-b831b1d6" class="font-caption" value="Number of Local-Owned Shares">
+                <cl:verticaldata std:sid="v-data-81522760" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-8839da7e" class="font-body" value="312,800">
+                <cl:verticaldata std:sid="v-data-081218f0" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-54c4ca1f" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-6215d774">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-380dc8e1" width="100" height="23" row="2" col="1"/>
+              <cl:output std:sid="output-caecdfee" class="font-caption" value="Number of Outstanding Non-Voting Shares">
+                <cl:verticaldata std:sid="v-data-5e9b2bd9" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-2dd1a1fb" class="font-body" value="400,000">
+                <cl:verticaldata std:sid="v-data-6e6d5b5f" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-49728a0f" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-65617388">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-55dacd6a" width="100" height="23" row="3" col="0"/>
+              <cl:output std:sid="output-dad170d2" class="font-caption" value="Foreign Ownership Level (%)">
+                <cl:verticaldata std:sid="v-data-d0ec10d6" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-24fe9acb" class="font-body" value="21.80%">
+                <cl:verticaldata std:sid="v-data-65da4ce5" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-a8e5c001" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-c5774136">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-c7356e4c" width="100" height="23" row="4" col="0"/>
+              <cl:output std:sid="output-969de54e" class="font-caption" value="Change in Foreign Ownership Level of Total Non-Voting Shares (%)">
+                <cl:verticaldata std:sid="v-data-b51e9eff" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-7ab62852" class="font-body" value="+0.40 pp">
+                <cl:verticaldata std:sid="v-data-4f8a524b" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-d3a91051" spacing="4"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-255467fe" scrollable="false" hspace="12px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-834358d3" spacing="14"/>
+        </cl:group>
+        <cl:group std:sid="group-0a25ff65" class="card">
+          <cl:verticaldata std:sid="v-data-1ffced3e" width="976px" height="84px" autosize="height"/>
+          <cl:group std:sid="group-bca17010">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:verticaldata std:sid="v-data-bf92dc05" width="934px" height="42px" autosize="height"/>
+            <cl:group std:sid="group-28d9881b">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-125c9bd3" width="100" height="23" row="0" col="0"/>
+              <cl:output std:sid="output-0ebfcece" class="font-caption" value="Foreign Ownership Level of Total Outstanding Shares (%)">
+                <cl:verticaldata std:sid="v-data-90436ae3" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-74c26f91" class="font-subheading" value="Voting 33.30% | Non-Voting 21.80%">
+                <cl:verticaldata std:sid="v-data-d7531689" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-89d48f89" spacing="4"/>
+            </cl:group>
+            <cl:group std:sid="group-d5c2aca7">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-f6618189" row="0" col="1"/>
+              <cl:output std:sid="output-bb01ea52" class="font-caption" value="Foreign Ownership Limit (%)">
+                <cl:verticaldata std:sid="v-data-f60137ec" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-6d7ee83b" class="font-subheading" value="40.00%">
+                <cl:verticaldata std:sid="v-data-54fc9beb" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-5afc55ba" spacing="4"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-7191f3a7" scrollable="false" hspace="12px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-972f18ab" spacing="14"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-00000288" spacing="16"/>
+      </cl:group>
+      <cl:group std:sid="group-0000027d" id="grpFooter" class="btn-footer-wrap">
+        <cl:verticaldata std:sid="v-data-0000027e" width="976px" height="57px" autosize="height"/>
+        <cl:group std:sid="group-0000027f">
+          <cl:formdata std:sid="f-data-00000280" row="0" col="0" rowspan="1" colspan="1"/>
+          <cl:flowlayout std:sid="f-layout-00000281"/>
+        </cl:group>
+        <cl:group std:sid="group-00000282">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:attribute name="mobile-index" value="1"/>
+          <cl:formdata std:sid="f-data-00000283" row="0" col="1"/>
+          <cl:button std:sid="button-00000284" class="btn-secondary" value="Close">
+            <cl:flowlayoutdata std:sid="f-data-00000285" width="88px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-00000286" halign="right"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-00000287" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-9dda75e2" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-85c69965" spacing="18"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

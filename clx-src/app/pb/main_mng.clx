@@ -1,0 +1,371 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-81db7daa" version="1.0.6164">
+  <head std:sid="head-b13164da">
+    <screen std:sid="screen-1255dc07" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="true" useCustomHeight="true" customHeight="850" customWidth="1920" active="true"/>
+    <screen std:sid="screen-8a7d5fba" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-df883482" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-50c2302c">
+      <cl:dataset std:sid="d-set-8f6d0558" id="dsMenu">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="메뉴명" std:sid="d-column-d0eda82f" name="menu_nm"/>
+          <cl:datacolumn comment="메뉴ID" std:sid="d-column-ae97ba94" name="menu_id"/>
+          <cl:datacolumn comment="상위메뉴ID" std:sid="d-column-2e44158b" name="upper_menu_id"/>
+          <cl:datacolumn comment="페이지 경로" std:sid="d-column-8bad40f9" name="page_path"/>
+          <cl:datacolumn comment="새 소식 여부(Y/N)" std:sid="d-column-3e5b7a19" name="new_yn"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Disclosures]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M1]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Worklist]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M1-1]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M1]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new/MGT-DWK-01-00_Disclosures_Worklist_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Manual Disclosure]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M1-2]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M1]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Report Search]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M1-3]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M1]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new/MGT-RPT-01-00_Disclosures_ReportSearch_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Template]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M1-4]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M1]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new/MGT-TPL-01-00_Disclosures_Template_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Structured Deadlines]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M1-5]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M1]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new/MGT-DDL-01-00_Disclosures_StructuredDeadline_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Analytics]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M1-6]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M1]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Companies]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M2]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Company Search]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M2-1]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M2]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new/MGT-CSL-01-00_Companies_CompanySearch_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Information Update]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M2-2]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M2]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new/MGT-CWK-01-00_Companies_InfomationUpdate_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Foreign Ownership Monitoring]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M2-3]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M2]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new/MGT-FOM-01-00_Companies_ForeignOwnershipMonitoring_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Public Ownership Monitoring]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M2-4]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M2]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new/MGT-POM-01-00_Companies_PublicOwnershipMonitoring_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Calendars]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M3]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Internal Calendar]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M3-1]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M3]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new3/MGT-CAL-01-Temp_Calendars_InternalCalendar_DisclosureViewer.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Non-Trading Days]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M3-2]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M3]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new3/MGT-NTD-01-00_Calendars_Non-TradingDays_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Communications]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M4]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Correspondence]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M4-1]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M4]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new/MGT-COR-01-00_Communications_Correspondence_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[Y]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Q&A]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M4-2]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M4]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[Y]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Users]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M5]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Management Account]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M5-1]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M5]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new/MGT-MNG-01-00_Users_ManagementAccount_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Submission Account]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M5-2]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M5]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new/MGT-SUB-01-00_Users_SubmissionAccount_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Audit Trail]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M6]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Disclosures]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M6-1]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M6]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new/MGT-DIS-01-00_AuditTrail_Disclosures_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[User Log]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M6-2]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M6]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new2/MGT-LOG-01-00_AuditTrail_UserLog_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Sessions]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M6-3]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M6]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new2/MGT-SES-01-00_AuditTrail_Sessions_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Distribution]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M7]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[CAF Subscriber]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M7-1]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M7]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new2/MGT-CAF-01-00_Distribution_CAFSubscriber_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Data Feeds Subscriber]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M7-2]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M7]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new/MGT-DAT-01-00_Distribution_DataFeedsSubscriber_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[News Feed]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M7-3]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M7]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new2/MGT-NEF-01-00_Distribution_NewsFeed_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Settings]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M8]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Common Codes]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M8-1]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M8]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new/MGT-COD-01-00_Settings_CommonCodes_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Batch]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M8-2]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M8]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new2/MGT-BAT-01-00_Settings_Batch_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Site Management]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M9]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Main Banners]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M9-1]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M9]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new2/MGT-SMN-01-00_PortalManagement_MainBanners_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[News Ticker]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M9-2]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M9]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new3/MGT-SMN-02-00_PortalManagement_NewsTicker.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="menu_nm"><![CDATA[Market Highlights]]></cl:datavalue>
+            <cl:datavalue columnname="menu_id"><![CDATA[M9-3]]></cl:datavalue>
+            <cl:datavalue columnname="upper_menu_id"><![CDATA[M9]]></cl:datavalue>
+            <cl:datavalue columnname="page_path"><![CDATA[app/pb/management/new2/MGT-SMN-03-00_PortalManagement_MarketHighlights_List.clx]]></cl:datavalue>
+            <cl:datavalue columnname="new_yn"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-e3f3013d" class="main">
+    <cl:listener std:sid="listener-6b2f9d41" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:listener std:sid="listener-c18e47a5" name="load" handler="onBodyLoad"/>
+    <cl:group std:sid="group-52e6b438" class="header">
+      <cl:attribute name="mobile-column-count" value="2"/>
+      <cl:attribute name="mobile-horizontal-margin" value="12"/>
+      <cl:formdata std:sid="f-data-f2a74de4" width="100" height="25" row="0" col="0"/>
+      <cl:group std:sid="group-cda89235" id="grpLogoWrap" class="logo-wrap">
+        <cl:formdata std:sid="f-data-60729070" row="0" col="0" rowspan="1" colspan="1"/>
+        <cl:button std:sid="button-a293b726" id="btnMobileMenuOpen" class="btn-exp" fieldLabel="Collapse menu panel" value="Collapse menu panel" icon="0">
+          <cl:listener std:sid="listener-2d94b7e3" name="click" handler="onBtnMobileMenuOpenClick"/>
+          <cl:formdata std:sid="f-data-389fb42c" row="0" col="0"/>
+        </cl:button>
+        <cl:button std:sid="button-78f938a2" id="btnLogo" class="logo" value="Management" icon="0">
+          <cl:formdata std:sid="f-data-5e56d440" row="0" col="1"/>
+        </cl:button>
+        <cl:formlayout std:sid="f-layout-a639ada8" scrollable="false" hspace="8px" vspace="0px">
+          <cl:rows length="27" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+          <cl:columns length="24" unit="PIXEL" autoSizing="false" hidden="true" shadetype="NONE" shadecolor="transparent" syncminlength="true"/>
+          <cl:columns length="200" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-a6a3a450" id="grpHeaderUtils" class="header-utils">
+        <cl:formdata std:sid="f-data-e7c6aadf" row="0" col="1"/>
+        <cl:output std:sid="output-128b2f33" id="optUserName" class="user" value="Hi, Jordan Reyes">
+          <cl:flowlayoutdata std:sid="f-data-d23f0824" width="140px" height="56px" autosize="width"/>
+        </cl:output>
+        <cl:button std:sid="button-391af254" id="btnSettings" class="icon settings" fieldLabel="Settings" value="Settings" icon="0">
+          <cl:flowlayoutdata std:sid="f-data-3faaa5e7" width="24px" height="56px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-892f902b" id="btnNotification" class="notify" value="3" displayexp="sstr(formatNumber(&quot;#,##0&quot;, text), [&quot;count&quot;]) + sstr(&quot; notifications&quot;, [&quot;cl-sound-only&quot;])" icon="0">
+          <cl:flowlayoutdata std:sid="f-data-68d76158" width="36px" height="56px" autosize="width"/>
+        </cl:button>
+        <cl:button std:sid="button-5d9dc9f8" id="btnLogout" class="icon logout" fieldLabel="Logout" value="Logout" icon="0">
+          <cl:flowlayoutdata std:sid="f-data-9531985d" width="24px" height="56px" autosize="width"/>
+        </cl:button>
+        <cl:flowlayout std:sid="f-layout-0ed90475" hspacing="20" halign="right" valign="middle"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-e8e25d94" scrollable="false" hspace="1fr" vspace="0px" top-margin="0px" right-margin="24px" bottom-margin="0px" left-margin="24px">
+        <cl:rows length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+        <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        <cl:columns length="400" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-1e27a1c0">
+      <cl:formdata std:sid="f-data-92276658" row="1" col="0"/>
+      <cl:group std:sid="group-81e74ef5" id="grpSidenav" class="side-menu">
+        <cl:formdata std:sid="f-data-36f675cc" row="0" col="0"/>
+        <cl:sidenavigation std:sid="s-navigation-1738f7d9" fieldLabel="Main menu" indent="0" selectionHighlightType="independent" badgeexp="new_yn == &quot;Y&quot; ? &quot;New&quot; : &quot;&quot;">
+          <cl:listener std:sid="listener-8b63837d" name="item-click" handler="onSnavMenuItemClick"/>
+          <cl:formdata std:sid="f-data-8d116ece" row="1" col="0"/>
+          <cl:treeitemset datasetid="dsMenu" label="menu_nm" value="menu_id" parent="upper_menu_id"/>
+        </cl:sidenavigation>
+        <cl:group std:sid="group-570a23cc" id="grpSidenavHeader" class="side-header">
+          <cl:formdata std:sid="f-data-d21c3047" row="0" col="0" rowspan="1" colspan="1"/>
+          <cl:button std:sid="button-6b0d549b" id="btnSidenavFold" class="btn-exp" fieldLabel="Collapse menu panel" value="Collapse menu panel" icon="0">
+            <cl:listener std:sid="listener-4d7e2b91" name="click" handler="onBtnSidenavFoldClick"/>
+            <cl:flowlayoutdata std:sid="f-data-bf6cd626" width="24px" height="24px"/>
+          </cl:button>
+          <cl:button std:sid="button-1f7423ad" id="btnMobileMenuClose" class="btn-close icon" fieldLabel="Close menu" visible="false" value="Button" icon="0">
+            <cl:listener std:sid="listener-9e03c5b8" name="click" handler="onBtnMobileMenuCloseClick"/>
+            <cl:flowlayoutdata std:sid="f-data-7a5f48f4" width="24px" height="24px" autosize="none"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-90ee1cc6" halign="right"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-6cad4a26" scrollable="false" hspace="0px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="40" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-0f21ddb6">
+        <cl:formdata std:sid="f-data-d3ac94af" row="0" col="1"/>
+        <cl:embeddedapp std:sid="e-app-90c192cf" fieldLabel="Content" class="main-content" src="management/new/MGT-DWK-01-00_Disclosures_Worklist_List.clx">
+          <cl:formdata std:sid="f-data-1fb17c23" row="0" col="0"/>
+        </cl:embeddedapp>
+        <cl:formlayout std:sid="f-layout-f28c105d" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-4ef8aa38" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="250" unit="PIXEL"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-f2a93762" scrollable="true" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="56" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -1,0 +1,148 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9f767c45" version="1.0.6164">
+  <head std:sid="head-4164d839">
+    <screen std:sid="screen-bde5c099" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-5bc8fbbc" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-cb91ce37" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-b0c11fde"/>
+    <cl:appspec title="Disclosure Viewer"/>
+  </head>
+  <body std:sid="body-f1446bea" style="top:0px; left:0px; width:1024px; height:760px;">
+    <cl:group std:sid="group-d76d4330" id="grpBody">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:verticaldata std:sid="v-data-bd69fe29" width="1024px" height="838px" autosize="height"/>
+      <cl:group std:sid="group-53b9e161" id="grpContentHeader">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="14"/>
+        <cl:verticaldata std:sid="v-data-25d63c9f" width="976px" height="72px" autosize="height"/>
+        <cl:group std:sid="group-08bccc9a" id="grp1">
+          <cl:verticaldata std:sid="v-data-e93b6b77" width="400px" height="36px" autosize="height"/>
+          <cl:button std:sid="button-0e2ac02c" id="btn1" class="btn-inline btn-print" value="Print" icon="0">
+            <cl:flowlayoutdata std:sid="f-data-921ba7ca" width="100px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:button std:sid="button-4a56e42b" id="btn2" class="btn-inline btn-file" value="PDF" icon="0">
+            <cl:flowlayoutdata std:sid="f-data-ed1bbe32" width="100px" height="36px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-46a01a57" hspacing="8" vspacing="8" halign="right"/>
+        </cl:group>
+        <cl:group std:sid="group-a6eb8c9e" id="grp3">
+          <cl:verticaldata std:sid="v-data-ec1d7da0" width="976px" height="20px" autosize="height"/>
+          <cl:output std:sid="output-87b0b125" id="opt1" class="font-body-s gray" value="Aug 5, 2026" displayexp="&quot;Disclosure Date : &quot; + text">
+            <cl:flowlayoutdata std:sid="f-data-076ce2ef" width="250px" height="20px" autosize="both"/>
+          </cl:output>
+          <cl:flowlayout std:sid="f-layout-c6a53877" hspacing="0" valign="middle"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-94976f51" spacing="16"/>
+      </cl:group>
+      <cl:group std:sid="group-a1987930" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="14"/>
+        <cl:verticaldata std:sid="v-data-16924e71" width="976px" height="698px" autosize="height"/>
+        <cl:group std:sid="group-7da9a2bd" id="grp2">
+          <cl:verticaldata std:sid="v-data-48380d38" width="976px" height="60px" autosize="height"/>
+          <cl:output std:sid="output-a67b2b4f" id="opt14" class="font-caption" value="3" displayexp="&quot;MAIN DOCUMENT (&quot; + text + &quot;)&quot;">
+            <cl:verticaldata std:sid="v-data-e9756eb9" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:combobox std:sid="c-box-f9737f94" id="cmb2" fieldLabel="MAIN DOCUMENT">
+            <cl:verticaldata std:sid="v-data-8b32724c" width="100px" height="36px" autosize="none"/>
+            <cl:item std:sid="t-item-980cfcb0" label="label1" value="value1"/>
+            <cl:item std:sid="t-item-e26be1f2" label="label2" value="value2"/>
+            <cl:item std:sid="t-item-5424d510" label="label3" value="value3"/>
+            <cl:item std:sid="t-item-671d1bd5" label="label4" value="value4"/>
+          </cl:combobox>
+          <cl:verticallayout std:sid="v-layout-d57d188a" spacing="4"/>
+        </cl:group>
+        <cl:group std:sid="group-f17fd374">
+          <cl:verticaldata std:sid="v-data-3fc1ea36" width="976px" height="60px" autosize="height"/>
+          <cl:output std:sid="output-a6233255" id="opt3" class="font-caption" value="5" displayexp="&quot;ATTACHMENT (&quot; + text + &quot;)&quot;">
+            <cl:verticaldata std:sid="v-data-0d464138" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:combobox std:sid="c-box-e6a16a3b" id="cmb1" fieldLabel="ATTACHMENT" placeholder="Attachment (5)">
+            <cl:verticaldata std:sid="v-data-2827688d" width="100px" height="36px" autosize="none"/>
+            <cl:item std:sid="t-item-1cfb10f6" label="Board_Resolution_Excerpt.pdf" value="value1" icon=""/>
+            <cl:item std:sid="t-item-5f2dd97f" label="Supporting_Schedule_Annual_Stockholders_Meeting_2026_Final.xlsx" value="value2" icon=""/>
+            <cl:item std:sid="t-item-7814e8a2" label="Cover_Letter.pdf" value="value3" icon=""/>
+            <cl:item std:sid="t-item-de527100" label="Audited_Financial_Statements_Supplementary_Disclosure_Package_Q2.pdf" value="value4" icon=""/>
+            <cl:item std:sid="t-item-3f1f65a8" label="Certification_of_Compliance_with_Revised_Disclosure_Rules_Signed.pdf" value="value5" icon=""/>
+            <cl:liststyle class="cmb-fild-down"/>
+          </cl:combobox>
+          <cl:verticallayout std:sid="v-layout-617959ce" spacing="4"/>
+        </cl:group>
+        <cl:group std:sid="group-8b33e968" id="grp4" class="card gray">
+          <cl:verticaldata std:sid="v-data-1a1afe87" width="976px" height="62px" autosize="height"/>
+          <cl:output std:sid="output-92edcf45" id="opt4" class="font-title" value="Ex-Date: 09-30, 2026">
+            <cl:verticaldata std:sid="v-data-3fd42359" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-035b7399" spacing="0"/>
+        </cl:group>
+        <cl:group std:sid="group-bb2edb20" id="grp5" class="card gray">
+          <cl:attribute name="mobile-fit" value="true"/>
+          <cl:attribute name="mobile-spacing" value="6"/>
+          <cl:verticaldata std:sid="v-data-377b9aa2" width="976px" height="250px" autosize="height"/>
+          <cl:output std:sid="output-687c966c" id="opt5" class="font-caption" value="REMARKS">
+            <cl:verticaldata std:sid="v-data-478c281d" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-2e9c82b1" id="grp6" class="card">
+            <cl:attribute name="mobile-spacing" value="12"/>
+            <cl:verticaldata std:sid="v-data-ea959c21" width="934px" height="86px" autosize="height"/>
+            <cl:output std:sid="output-de11cc9d" id="opt6" class="font-body" value="Public note for Ayala Land, Inc.: filing reviewed for completeness under the Revised Disclosure Rules.">
+              <cl:verticaldata std:sid="v-data-c4069545" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-63b229f1" id="opt7" class="font-caption" value="Aug 25, 2026 10:15 AM">
+              <cl:verticaldata std:sid="v-data-28dbd25e" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-c30d8b76" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-ce4abd61" id="grp8" class="card">
+            <cl:attribute name="mobile-spacing" value="12"/>
+            <cl:verticaldata std:sid="v-data-707bf017" width="934px" height="86px" autosize="height"/>
+            <cl:output std:sid="output-805ab1cd" id="opt15" class="font-body" value="Additional context shared for the investing public. No material omission identified in the narrative section.">
+              <cl:verticaldata std:sid="v-data-90f23411" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-08bdb59c" id="opt16" class="font-caption" value="Aug 6, 2026 02:40 PM">
+              <cl:verticaldata std:sid="v-data-5b07f940" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-71dd5e59" spacing="4"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-cc11d357" spacing="8"/>
+        </cl:group>
+        <cl:group std:sid="group-126a1e48" id="grp7" class="card">
+          <cl:attribute name="mobile-fit" value="true"/>
+          <cl:attribute name="mobile-spacing" value="6"/>
+          <cl:verticaldata std:sid="v-data-238642ea" width="976px" height="202px" autosize="height"/>
+          <cl:output std:sid="output-9e30691c" id="opt8" class="font-caption" value="ORIGINAL · AUG 25, 2026">
+            <cl:verticaldata std:sid="v-data-9e115e4b" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-71e0c07e" id="opt9" class="font-title" value="Property Ex-Date">
+            <cl:verticaldata std:sid="v-data-206f5c66" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-21da8978" id="opt10" class="font-body" value="Jollibee Foods Corporation (“the Company”) hereby discloses the following information in accordance with the Revised Disclosure Rules of the Philippine Stock Exchange.">
+            <cl:verticaldata std:sid="v-data-00745130" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-f8eb18b9" id="opt11" class="font-body" value="This filing relates to “Property Ex-Date” and is submitted for the information of the investing public. The Company confirms that the statements herein are true and correct based on records available as of Aug 5, 2026.">
+            <cl:verticaldata std:sid="v-data-df1461aa" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-015c33b2" id="opt12" class="font-body" value="Unless otherwise indicated, figures are expressed in Philippine pesos. Interested parties may refer to the attachments for supporting schedules and board approvals.">
+            <cl:verticaldata std:sid="v-data-359eeefb" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-c60a3cab" id="opt13" class="font-body" value="The Company undertakes to update this disclosure should any material change arise subsequent to this filing.">
+            <cl:verticaldata std:sid="v-data-3729c619" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-f5cae3bf" spacing="8"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-2a52e479" spacing="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-fb7ff337" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-2a759159" spacing="18"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

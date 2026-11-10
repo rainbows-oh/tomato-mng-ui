@@ -1,0 +1,156 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-de5392e7" version="1.0.6190">
+  <head std:sid="head-f2e6f0fe">
+    <screen std:sid="screen-366f56a7" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-d0a03339" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-ca13aa67" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-00000a05">
+      <cl:dataset std:sid="d-set-00000a01" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-00000a02" name="no"/>
+          <cl:datacolumn std:sid="d-column-00000a03" name="title"/>
+          <cl:datacolumn std:sid="d-column-00000a04" name="linkUrl"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="title"><![CDATA[Market notice: Special board lot rules for new listing ACCT]]></cl:datavalue>
+            <cl:datavalue columnname="linkUrl"><![CDATA[/disclosures]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[2]]></cl:datavalue>
+            <cl:datavalue columnname="title"><![CDATA[System advisory: Filing cutoff extended to 17:30 for today only]]></cl:datavalue>
+            <cl:datavalue columnname="linkUrl"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="title"><![CDATA[Investor alert: Beware of unofficial EDGE Portal look-alike sites]]></cl:datavalue>
+            <cl:datavalue columnname="linkUrl"><![CDATA[https://www.pse.com.ph/security-advisory]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[4]]></cl:datavalue>
+            <cl:datavalue columnname="title"><![CDATA[PSE Circular: Updated listing disclosure guidelines effective Monday]]></cl:datavalue>
+            <cl:datavalue columnname="linkUrl"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="no"><![CDATA[5]]></cl:datavalue>
+            <cl:datavalue columnname="title"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="linkUrl"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="News Ticker"/>
+  </head>
+  <body std:sid="body-c90bbfe3">
+    <cl:group std:sid="group-0319b359" id="grpHeader" class="page-title-wrap">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:verticaldata std:sid="v-data-dddbbb01" width="1024px" height="48px" autosize="height" sticky="true" stickytopoffset="0"/>
+      <cl:udc std:sid="ud-control-1d70da47" id="udcAppHeader" type="udc.pse.com.udcComAppHeader">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-dc4ac2b2" row="0" col="0"/>
+        <cl:property name="title" value="News Ticker" type="string"/>
+      </cl:udc>
+      <cl:formlayout std:sid="f-layout-631b2075" scrollable="false" hspace="8px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="36" unit="PIXEL" autoSizing="false" syncminlength="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-00000430" id="grpBody" class="inner">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:verticaldata std:sid="v-data-00000431" width="1024px" height="564px" autosize="height"/>
+      <cl:group std:sid="group-00000432" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-spacing" value="16"/>
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:verticaldata std:sid="v-data-00000433" width="976px" height="516px" autosize="height"/>
+        <cl:group std:sid="group-00000424" class="search-list-top">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:verticaldata std:sid="v-data-00000425" width="400px" height="36px" autosize="height"/>
+          <cl:output std:sid="output-00000426" class="sch-info" value="5" datatype="number" format="#,##0" displayexp="&quot;Use &quot; + text + &quot;/10&quot;">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-00000427" valign="FILL" row="0" col="0"/>
+          </cl:output>
+          <cl:group std:sid="group-00000428">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-00000429" row="0" col="1"/>
+            <cl:button std:sid="button-0000042a" class="btn-secondary" value="Add">
+              <cl:flowlayoutdata std:sid="f-data-0000042b" width="80px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:button std:sid="button-0000042c" class="btn-primary" enabled="false" value="Apply">
+              <cl:flowlayoutdata std:sid="f-data-0000042d" width="100px" height="36px" autosize="width"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-0000042e" scrollable="false" hspacing="8" vspacing="8" halign="right" valign="middle"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-0000042f" scrollable="false" hspace="1fr" vspace="10px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="422" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid std:sid="grid-00000a1c" fieldLabel="News ticker list" class="banner-list" datasetid="dsList" autofit="1, 2">
+          <cl:verticaldata std:sid="v-data-00000a1d" width="400px" height="460px" autosize="height"/>
+          <cl:gridcolumn std:sid="g-column-00000a06" width="52px"/>
+          <cl:gridcolumn std:sid="g-column-00000a07" width="400px"/>
+          <cl:gridcolumn std:sid="g-column-00000a08" width="200px"/>
+          <cl:gridcolumn std:sid="g-column-00000a09" width="60px"/>
+          <cl:gridcolumn std:sid="g-column-00000a0a" width="60px"/>
+          <cl:gridcolumn std:sid="g-column-00000a0b" width="60px"/>
+          <cl:griddetail std:sid="gd-band-00000a1e">
+            <cl:gridrow std:sid="g-row-00000a1f" height="54px"/>
+            <cl:gridrow std:sid="g-row-f92dc32a" height="25px"/>
+            <cl:gridcell std:sid="gd-cell-00000a0c" rowindex="0" colindex="0" rowspan="1" colspan="1" class="border-b-none" columntype="rowindex"/>
+            <cl:gridcell std:sid="gd-cell-00000a0d" rowindex="0" colindex="1" class="border-b-none" columnname="title">
+              <cl:inputbox std:sid="i-box-55444ab4" id="ipbTxt" fieldLabel="Title" maxlength="120">
+                <cl:listener std:sid="listener-7c41e9d2" name="input" handler="onIpbTxtInput"/>
+                <cl:celldata std:sid="c-data-da6ef3fb" valign="CENTER" height="36" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000a10" rowindex="0" colindex="2" rowspan="1" colspan="1" class="border-b-none" columnname="linkUrl">
+              <cl:inputbox std:sid="i-box-00000a11" fieldLabel="Link URL" placeholder="Link URL (optional)">
+                <cl:celldata std:sid="c-data-00000a12" valign="CENTER" height="36"/>
+              </cl:inputbox>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000a13" rowindex="0" colindex="3" rowspan="1" colspan="1" class="border-b-none">
+              <cl:button std:sid="button-00000a14" class="btn-up icon btn-secondary" fieldLabel="Move up" icon="0">
+                <cl:expbind property="enabled" category="PROPERTY" expression="rowIndex == 0 ? false : true"/>
+                <cl:celldata std:sid="c-data-00000a15" halign="CENTER" valign="CENTER" width="28" height="28"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000a16" rowindex="0" colindex="4" rowspan="1" colspan="1" class="border-b-none">
+              <cl:button std:sid="button-00000a17" class="btn-down icon btn-secondary" fieldLabel="Move down" icon="0">
+                <cl:expbind property="enabled" category="PROPERTY" expression="rowIndex == getRowCount()-1 ? false : true"/>
+                <cl:celldata std:sid="c-data-00000a18" halign="CENTER" valign="CENTER" width="28" height="28"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-00000a19" rowindex="0" colindex="5" rowspan="1" colspan="1" class="border-b-none">
+              <cl:button std:sid="button-00000a1a" class="btn-delete icon" fieldLabel="Delete" icon="0">
+                <cl:celldata std:sid="c-data-00000a1b" halign="CENTER" valign="CENTER" width="28" height="28"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-9dfd7921" rowindex="1" colindex="1" rowspan="1" colspan="1" columnname="title">
+              <cl:output std:sid="output-8f4f3d43" id="optLength" class="text-right p-0 text-gray-50" value="" displayexp="text.length + &quot;/120&quot;">
+                <cl:relativebind property="value" category="PROPERTY" columnname="title"/>
+                <cl:celldata std:sid="c-data-c5064381" topSpacing="3.0" bottomSpacing="3.0" leftSpacing="6.0" rightSpacing="6.0"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-4255c530" rowindex="1" colindex="2" rowspan="1" colspan="4"/>
+            <cl:gridcell std:sid="gd-cell-5142b5d6" rowindex="1" colindex="0"/>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:verticallayout std:sid="v-layout-00000434" scrollable="false" spacing="20"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-00000435" scrollable="false" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-3c32ff37" scrollable="true" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

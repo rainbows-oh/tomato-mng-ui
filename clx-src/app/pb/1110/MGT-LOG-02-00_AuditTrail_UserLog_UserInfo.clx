@@ -1,0 +1,111 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-10700f40" version="1.0.6164">
+  <head std:sid="head-ec4ee482">
+    <std:metadata>
+      <std:property key="template-file" value="templates/management/CompanyName_조회_팝업.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-1c425079" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-f3abc1ae" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-f0487b32" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-f5dd3c0f"/>
+    <cl:appspec title="User Info"/>
+  </head>
+  <body std:sid="body-fa5f6637" style="top:0px; left:0px; width:640px; height:520px;">
+    <cl:group std:sid="group-aeb301ea" id="grpBody">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:verticaldata std:sid="v-data-f9431e1f" width="1024px" height="192px" autosize="height"/>
+      <cl:group std:sid="group-80bc9b0f" id="grpContentHeader">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="14"/>
+        <cl:verticaldata std:sid="v-data-f3021694" width="976px" height="20px" autosize="height"/>
+        <cl:group std:sid="group-4cbd26ca">
+          <cl:verticaldata std:sid="v-data-7aba902b" width="976px" height="20px" autosize="height"/>
+          <cl:output std:sid="output-ac9ddfa2" class="font-body-s gray" value="Submission" displayexp="&quot;System : &quot; + text">
+            <cl:flowlayoutdata std:sid="f-data-cd29daf8" width="150px" height="20px" autosize="both"/>
+          </cl:output>
+          <cl:flowlayout std:sid="f-layout-93080131" hspacing="0" valign="middle"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-d479a373" spacing="16"/>
+      </cl:group>
+      <cl:group std:sid="group-9c6d43b3" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="14"/>
+        <cl:verticaldata std:sid="v-data-4109c237" width="976px" height="104px" autosize="height"/>
+        <cl:group std:sid="group-c9f98620">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:verticaldata std:sid="v-data-81a93979" width="592px" height="44px" autosize="height"/>
+          <cl:group std:sid="group-552593a7">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-7c20375a" row="0" col="0"/>
+            <cl:output std:sid="output-e37d3e24" class="font-caption" value="Name">
+              <cl:verticaldata std:sid="v-data-2cda843b" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-cf52f3c3" class="font-body" value="Daniel Lim">
+              <cl:verticaldata std:sid="v-data-71b22960" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-ba927fea" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-d48a0cec">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-328c2824" row="0" col="1"/>
+            <cl:output std:sid="output-db9c19af" class="font-caption" value="Company Name">
+              <cl:verticaldata std:sid="v-data-2140d60c" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-d922cb29" class="font-body" value="Manila Bay Holdings Corp.">
+              <cl:verticaldata std:sid="v-data-3526e15b" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-9bdc030b" spacing="4"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-585f9466" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="44" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-239c4d10">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:verticaldata std:sid="v-data-70270987" width="592px" height="44px" autosize="height"/>
+          <cl:group std:sid="group-93ffc2ed">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-8bdc27da" row="0" col="0"/>
+            <cl:output std:sid="output-01697cd2" class="font-caption" value="Contact">
+              <cl:verticaldata std:sid="v-data-e8741742" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-140fdf64" class="font-body" value="d.lim@islandcapital.ph">
+              <cl:verticaldata std:sid="v-data-ae152e5b" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-71e113fc" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-e973d7be">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-544ac9a6" row="0" col="1"/>
+            <cl:output std:sid="output-2871d6c9" class="font-caption" value="Role">
+              <cl:verticaldata std:sid="v-data-b0d791d0" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-c009365b" class="font-body" value="Compliance Officer">
+              <cl:verticaldata std:sid="v-data-86132008" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-7835ce3c" spacing="4"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-41d13962" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="44" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-f0125bef" scrollable="false" spacing="16"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-75ec9db6" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-c56a26cf" spacing="18"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
