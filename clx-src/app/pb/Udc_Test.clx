@@ -97,13 +97,24 @@
               <cl:group std:sid="group-e97bc01b" id="grp3">
                 <cl:attribute name="needs-auto-height" value="true"/>
                 <cl:formdata std:sid="f-data-72d2ca9e" width="100" height="67" row="0" col="0"/>
-                <cl:output std:sid="output-f81b0ee8" id="opt1" class="font-label" value="Template Name">
+                <cl:output std:sid="output-f81b0ee8" id="opt1" class="font-label" value="Template Name - list">
                   <cl:verticaldata std:sid="v-data-0f16b349" width="100px" height="18px" autosize="height"/>
                 </cl:output>
-                <cl:udc std:sid="ud-control-079ba7ec" type="udc.pse.com.udcComTemplateNameSelect">
+                <cl:udc std:sid="ud-control-079ba7ec" type="udc.pse.com.udcComTemplateNameSelect_check">
                   <cl:verticaldata std:sid="v-data-b84e89ca" width="440px" height="77px" autosize="height"/>
                 </cl:udc>
                 <cl:verticallayout std:sid="v-layout-c2028075" spacing="6"/>
+              </cl:group>
+              <cl:group std:sid="group-ec6694aa" id="grp4">
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:formdata std:sid="f-data-153be39b" row="0" col="1"/>
+                <cl:output std:sid="output-b8ad0ee8" id="opt2" class="font-label" value="Template Name - check">
+                  <cl:verticaldata std:sid="v-data-b3243f99" width="100px" height="18px" autosize="height"/>
+                </cl:output>
+                <cl:udc std:sid="ud-control-76f523f8" id="udccomtemplatenameselect_list1" type="udc.pse.com.udcComTemplateNameSelect_list">
+                  <cl:verticaldata std:sid="v-data-dfa5230e" width="440px" height="77px" autosize="height"/>
+                </cl:udc>
+                <cl:verticallayout std:sid="v-layout-d6d6aa58" spacing="6"/>
               </cl:group>
               <cl:formlayout std:sid="f-layout-70384abe" scrollable="false" hspace="12px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
                 <cl:rows length="1" unit="FRACTION"/>

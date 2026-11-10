@@ -216,7 +216,7 @@
               <cl:inputbox std:sid="i-box-40d07729" id="ipb5" fieldLabel="Email" enabled="false" placeholder="name@example.com">
                 <cl:formdata std:sid="f-data-543c86af" row="0" col="1"/>
               </cl:inputbox>
-              <cl:button std:sid="button-ee56d554" id="btn18" fieldLabel="Delete Email 1" class="btn-secondary btn-delete-red icon" value="Button" icon="0">
+              <cl:button std:sid="button-ee56d554" id="btn18" class="btn-secondary btn-delete-red icon" fieldLabel="Delete Email 1" value="Button" icon="0">
                 <cl:formdata std:sid="f-data-86e48347" row="0" col="2"/>
               </cl:button>
               <cl:checkbox std:sid="c-box-9c3ddd2c" id="cbx1" text="Email 1">
@@ -234,7 +234,7 @@
               <cl:inputbox std:sid="i-box-ad200344" id="ipb7" fieldLabel="Email" enabled="false" placeholder="name@example.com">
                 <cl:formdata std:sid="f-data-fb64a78f" row="0" col="1"/>
               </cl:inputbox>
-              <cl:button std:sid="button-7a0d69ad" id="btn7" fieldLabel="Delete Email 2" class="btn-secondary btn-delete-red icon" value="Button" icon="0">
+              <cl:button std:sid="button-7a0d69ad" id="btn7" class="btn-secondary btn-delete-red icon" fieldLabel="Delete Email 2" value="Button" icon="0">
                 <cl:formdata std:sid="f-data-e9e0e563" row="0" col="2"/>
               </cl:button>
               <cl:checkbox std:sid="c-box-a2b86f5c" id="cbx2" text="Email 2">
@@ -252,7 +252,7 @@
               <cl:inputbox std:sid="i-box-0d2d3604" id="ipb8" fieldLabel="Email" enabled="false" placeholder="name@example.com">
                 <cl:formdata std:sid="f-data-ec39409f" row="0" col="1"/>
               </cl:inputbox>
-              <cl:button std:sid="button-a6d40f54" id="btn19" fieldLabel="Delete Email 3" class="btn-secondary btn-delete-red icon" value="Button" icon="0">
+              <cl:button std:sid="button-a6d40f54" id="btn19" class="btn-secondary btn-delete-red icon" fieldLabel="Delete Email 3" value="Button" icon="0">
                 <cl:formdata std:sid="f-data-98a0c873" row="0" col="2"/>
               </cl:button>
               <cl:checkbox std:sid="c-box-ef0e8192" id="cbx3" text="Email 3">
@@ -270,7 +270,7 @@
               <cl:inputbox std:sid="i-box-0085d543" id="ipb9" fieldLabel="Email" enabled="false" placeholder="name@example.com">
                 <cl:formdata std:sid="f-data-f2bcd5bb" row="0" col="1"/>
               </cl:inputbox>
-              <cl:button std:sid="button-83ffb8b2" id="btn20" fieldLabel="Delete Email 4" class="btn-secondary btn-delete-red icon" value="Button" icon="0">
+              <cl:button std:sid="button-83ffb8b2" id="btn20" class="btn-secondary btn-delete-red icon" fieldLabel="Delete Email 4" value="Button" icon="0">
                 <cl:formdata std:sid="f-data-91cd36cb" row="0" col="2"/>
               </cl:button>
               <cl:checkbox std:sid="c-box-1772ce92" id="cbx4" text="Email 4">
@@ -346,14 +346,34 @@
               </cl:combobox>
               <cl:group std:sid="group-76f8941b" id="grpSelectChips2">
                 <cl:verticaldata std:sid="v-data-aa94c4f2" width="934px" height="24px" autosize="height"/>
-                <cl:button std:sid="button-8ec29cd2" id="btn11" class="btn-badge gray btn-close" value="17-1 | Material Information Disclosure" icon="0" iconalign="right">
-                  <cl:expbind property="fieldLabel" category="PROPERTY" expression="&quot;Remove &quot; + text"/>
-                  <cl:flowlayoutdata std:sid="f-data-a1ad9f91" width="230px" height="24px" autosize="width"/>
-                </cl:button>
-                <cl:button std:sid="button-cb949521" id="btn12" class="btn-badge gray btn-close" value="17-A | Annual Shareholding Disclosure" icon="0" iconalign="right">
-                  <cl:expbind property="fieldLabel" category="PROPERTY" expression="&quot;Remove &quot; + text"/>
-                  <cl:flowlayoutdata std:sid="f-data-7a7101ca" width="230px" height="24px" autosize="width"/>
-                </cl:button>
+                <cl:group std:sid="group-0d704fe2" id="grpNameChip2" class="name-chip-gray">
+                  <cl:flowlayoutdata std:sid="f-data-2ddf40ed" width="310px" height="24px" autosize="both"/>
+                  <cl:output std:sid="output-4b855f9b" id="opt13" value="17-1 | Material Information Disclosure" ellipsis="true">
+                    <cl:formdata std:sid="f-data-466887f1" row="0" col="0"/>
+                  </cl:output>
+                  <cl:button std:sid="button-25bed1e9" id="btn5" class="icon btn-close" value="Button" icon="0">
+                    <cl:formdata std:sid="f-data-bc138558" valign="FILL" height="12" row="0" col="1"/>
+                  </cl:button>
+                  <cl:formlayout std:sid="f-layout-3b88562f" scrollable="false" hspace="6px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="16" unit="PIXEL"/>
+                    <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+                    <cl:columns length="16" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                  </cl:formlayout>
+                </cl:group>
+                <cl:group std:sid="group-1de64890" id="grpNameChip3" class="name-chip-gray">
+                  <cl:flowlayoutdata std:sid="f-data-3941b726" width="310px" height="24px" autosize="both"/>
+                  <cl:output std:sid="output-f04faf68" id="opt12" value="17-A | Annual Shareholding Disclosure" ellipsis="true">
+                    <cl:formdata std:sid="f-data-76ccbd25" row="0" col="0"/>
+                  </cl:output>
+                  <cl:button std:sid="button-3d7e6522" id="btn9" class="icon btn-close" value="Button" icon="0">
+                    <cl:formdata std:sid="f-data-2ab1de90" valign="FILL" height="12" row="0" col="1"/>
+                  </cl:button>
+                  <cl:formlayout std:sid="f-layout-82f27f07" scrollable="false" hspace="6px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="16" unit="PIXEL"/>
+                    <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+                    <cl:columns length="16" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                  </cl:formlayout>
+                </cl:group>
                 <cl:flowlayout std:sid="f-layout-847803f3" hspacing="8"/>
               </cl:group>
               <cl:verticallayout std:sid="v-layout-9be4bcfc" spacing="6"/>
@@ -428,14 +448,34 @@
               </cl:combobox>
               <cl:group std:sid="group-afc7d076" id="grpSelectChips3">
                 <cl:verticaldata std:sid="v-data-9c3c9ef2" width="934px" height="24px" autosize="height"/>
-                <cl:button std:sid="button-d4a3622a" id="btn13" class="btn-badge gray btn-close" value="Pasig River Bank, Inc." icon="0" iconalign="right">
-                  <cl:expbind property="fieldLabel" category="PROPERTY" expression="&quot;Remove &quot; + text"/>
-                  <cl:flowlayoutdata std:sid="f-data-96e14df7" width="201px" height="24px" autosize="width"/>
-                </cl:button>
-                <cl:button std:sid="button-c9d46522" id="btn14" class="btn-badge gray btn-close" value="Laguna Power &amp; Water Corp." icon="0" iconalign="right">
-                  <cl:expbind property="fieldLabel" category="PROPERTY" expression="&quot;Remove &quot; + text"/>
-                  <cl:flowlayoutdata std:sid="f-data-9a27eff5" width="201px" height="24px" autosize="width"/>
-                </cl:button>
+                <cl:group std:sid="group-968d1923" id="grpNameChip4" class="name-chip-gray">
+                  <cl:flowlayoutdata std:sid="f-data-76203ff2" width="262px" height="24px" autosize="both"/>
+                  <cl:output std:sid="output-860bb2e7" id="opt14" value="Pasig River Bank, Inc." ellipsis="true">
+                    <cl:formdata std:sid="f-data-2d81bb99" row="0" col="0"/>
+                  </cl:output>
+                  <cl:button std:sid="button-4dc64016" id="btn11" class="icon btn-close" value="Button" icon="0">
+                    <cl:formdata std:sid="f-data-3dbff3b5" valign="FILL" height="12" row="0" col="1"/>
+                  </cl:button>
+                  <cl:formlayout std:sid="f-layout-de83b33d" scrollable="false" hspace="6px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="16" unit="PIXEL"/>
+                    <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+                    <cl:columns length="16" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                  </cl:formlayout>
+                </cl:group>
+                <cl:group std:sid="group-b01eec2a" id="grpNameChip5" class="name-chip-gray">
+                  <cl:flowlayoutdata std:sid="f-data-81587f56" width="262px" height="24px" autosize="both"/>
+                  <cl:output std:sid="output-1ee7e8dd" id="opt15" value="Laguna Power &amp; Water Corp." ellipsis="true">
+                    <cl:formdata std:sid="f-data-9d1c7fb7" row="0" col="0"/>
+                  </cl:output>
+                  <cl:button std:sid="button-5392dee6" id="btn12" class="icon btn-close" value="Button" icon="0">
+                    <cl:formdata std:sid="f-data-79928007" valign="FILL" height="12" row="0" col="1"/>
+                  </cl:button>
+                  <cl:formlayout std:sid="f-layout-de3dec2f" scrollable="false" hspace="6px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="16" unit="PIXEL"/>
+                    <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+                    <cl:columns length="16" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                  </cl:formlayout>
+                </cl:group>
                 <cl:flowlayout std:sid="f-layout-026b2ee5" hspacing="8"/>
               </cl:group>
               <cl:verticallayout std:sid="v-layout-ae658f33" spacing="6"/>
@@ -463,10 +503,34 @@
               </cl:group>
               <cl:group std:sid="group-62c33a4f" id="grpSelectChips">
                 <cl:verticaldata std:sid="v-data-e3151288" width="100px" height="24px" autosize="height"/>
-                <cl:button std:sid="button-ab2cd31e" id="btn8" class="btn-badge gray btn-close" value="Banks and Brokers" displayexp="text + sstr(&quot; 4 companies&quot;, [&quot;font-caption&quot;])" icon="0" iconalign="right">
-                  <cl:expbind property="fieldLabel" category="PROPERTY" expression="&quot;Remove &quot; + text"/>
-                  <cl:flowlayoutdata std:sid="f-data-58d5563d" width="231px" height="24px" autosize="width"/>
-                </cl:button>
+                <cl:group std:sid="group-b50a6e94" id="grpNameChip6" class="name-chip-gray">
+                  <cl:flowlayoutdata std:sid="f-data-0745b3cd" width="310px" height="24px" autosize="both"/>
+                  <cl:output std:sid="output-745b8dc2" id="opt16" value="Banks and Brokers" displayexp="text + sstr(&quot; 4 companies&quot;, [&quot;font-caption&quot;])" ellipsis="true">
+                    <cl:formdata std:sid="f-data-092a9a92" row="0" col="0"/>
+                  </cl:output>
+                  <cl:button std:sid="button-0b4ced6e" id="btn15" class="icon btn-close" value="Button" icon="0">
+                    <cl:formdata std:sid="f-data-eda05ea6" valign="FILL" height="12" row="0" col="1"/>
+                  </cl:button>
+                  <cl:formlayout std:sid="f-layout-6a692375" scrollable="false" hspace="6px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="16" unit="PIXEL"/>
+                    <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+                    <cl:columns length="16" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                  </cl:formlayout>
+                </cl:group>
+                <cl:group std:sid="group-4fae583f" id="grpNameChip7" class="name-chip-gray">
+                  <cl:flowlayoutdata std:sid="f-data-058436d4" width="310px" height="24px" autosize="both"/>
+                  <cl:output std:sid="output-a7c491ed" id="opt19" value="Banks and Brokers" displayexp="text + sstr(&quot; 4 companies&quot;, [&quot;font-caption&quot;])" ellipsis="true">
+                    <cl:formdata std:sid="f-data-f0b29555" row="0" col="0"/>
+                  </cl:output>
+                  <cl:button std:sid="button-972a3566" id="btn8" class="icon btn-close" value="Button" icon="0">
+                    <cl:formdata std:sid="f-data-16f7e97d" valign="FILL" height="12" row="0" col="1"/>
+                  </cl:button>
+                  <cl:formlayout std:sid="f-layout-e336b642" scrollable="false" hspace="6px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="16" unit="PIXEL"/>
+                    <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+                    <cl:columns length="16" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                  </cl:formlayout>
+                </cl:group>
                 <cl:flowlayout std:sid="f-layout-7631a992" hspacing="8"/>
               </cl:group>
               <cl:verticallayout std:sid="v-layout-0f17a300" spacing="8"/>

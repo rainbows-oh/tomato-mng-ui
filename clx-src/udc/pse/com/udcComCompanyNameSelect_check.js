@@ -29,6 +29,8 @@ exports.getText = getText;
 var vcCard = null;
 /** 카드 높이(px). 고정 — 내용이 더 길면 Done 버튼 위 목록(company-list 그룹)에서만 스크롤 */
 var VC_CARD_HEIGHT = 357;
+/**no data 메시지 나올 때의 높이**/
+//var VC_CARD_HEIGHT = 56;
 /** 카드 너비(px) — PC/태블릿, 모바일(EXB-PART = 767px 이하) */
 var VC_CARD_WIDTH = 440;
 var VC_CARD_WIDTH_MOBILE = 280;

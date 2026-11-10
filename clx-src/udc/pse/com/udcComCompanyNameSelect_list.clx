@@ -35,6 +35,9 @@
     </cl:group>
     <cl:group std:sid="group-1aec6b2f" id="grpCard" class="company-card cursor" visible="false">
       <cl:formdata std:sid="f-data-5c2d8e04" row="1" col="0" rowspan="1" colspan="1"/>
+      <cl:output std:sid="output-57490016" id="optNodata" class="no-data" visible="false" value="No companies match this search">
+        <cl:verticaldata std:sid="v-data-a2e79824" width="100px" height="40px" autosize="height"/>
+      </cl:output>
       <cl:group std:sid="group-4ad79950" id="grpItem01" class="company-item">
         <cl:listener std:sid="listener-c1a1743" name="click" handler="onCompanyItemClick"/>
         <cl:verticaldata std:sid="v-data-a718deed" width="438px" height="66px" autosize="height"/>
@@ -164,31 +167,6 @@
         </cl:output>
         <cl:verticallayout std:sid="v-layout-7aded518" spacing="6"/>
       </cl:group>
-      <cl:group std:sid="group-414234d3" id="grpItem3" class="company-item">
-        <cl:verticaldata std:sid="v-data-032f57e5" width="438px" height="66px" autosize="height"/>
-        <cl:group std:sid="group-07810316" id="grp10">
-          <cl:verticaldata std:sid="v-data-5443fb5a" width="390px" height="20px" autosize="height"/>
-          <cl:group std:sid="group-7c5c342e" id="grp13">
-            <cl:formdata std:sid="f-data-3f72b84c" row="0" col="0" rowspan="1" colspan="1"/>
-            <cl:output std:sid="output-c32673d6" id="opt12" class="badge" value="CSC">
-              <cl:flowlayoutdata std:sid="f-data-fa125a2c" width="38px" height="20px" autosize="both"/>
-            </cl:output>
-            <cl:flowlayout std:sid="f-layout-da0c25d9"/>
-          </cl:group>
-          <cl:output std:sid="output-458fba18" id="opt13" class="font-caption" value="Industrials">
-            <cl:formdata std:sid="f-data-408e6237" row="0" col="1"/>
-          </cl:output>
-          <cl:formlayout std:sid="f-layout-b9ad7544" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
-            <cl:rows length="1" unit="FRACTION"/>
-            <cl:columns length="1" unit="FRACTION"/>
-            <cl:columns length="191" unit="PIXEL" autoSizing="true" syncminlength="false"/>
-          </cl:formlayout>
-        </cl:group>
-        <cl:output std:sid="output-30599f8c" id="optCompanyName3" class="font-body fw-bold" value="Cebu Span Construction Corp.">
-          <cl:verticaldata std:sid="v-data-33620834" width="100px" height="20px" autosize="height"/>
-        </cl:output>
-        <cl:verticallayout std:sid="v-layout-f365dd18" spacing="6"/>
-      </cl:group>
       <cl:verticallayout std:sid="v-layout-0ac5d247" scrollable="true" spacing="0"/>
     </cl:group>
     <cl:group std:sid="group-1f3c42b2" id="grpSelectChips">
@@ -202,9 +180,9 @@
           <cl:formdata std:sid="f-data-3e26b5f4" valign="FILL" height="12" row="0" col="1"/>
         </cl:button>
         <cl:formlayout std:sid="f-layout-cd6d9563" scrollable="false" hspace="6px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
-          <cl:rows length="16" unit="PIXEL"/>
+          <cl:rows length="1" unit="FRACTION"/>
           <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
-          <cl:columns length="12" unit="PIXEL"/>
+          <cl:columns length="16" unit="PIXEL" autoSizing="true" syncminlength="false"/>
         </cl:formlayout>
       </cl:group>
       <cl:group std:sid="group-1b40f12d" id="grpNameChip02" class="name-chip">
@@ -216,9 +194,9 @@
           <cl:formdata std:sid="f-data-a698fd1b" valign="FILL" height="12" row="0" col="1"/>
         </cl:button>
         <cl:formlayout std:sid="f-layout-62f2ac7a" scrollable="false" hspace="6px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
-          <cl:rows length="16" unit="PIXEL"/>
+          <cl:rows length="1" unit="FRACTION"/>
           <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
-          <cl:columns length="12" unit="PIXEL"/>
+          <cl:columns length="16" unit="PIXEL" autoSizing="true" syncminlength="false"/>
         </cl:formlayout>
       </cl:group>
       <cl:flowlayout std:sid="f-layout-b6eafff5" hspacing="8"/>

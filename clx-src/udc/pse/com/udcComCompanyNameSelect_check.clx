@@ -37,6 +37,9 @@
       <cl:formdata std:sid="f-data-54c6e528" width="100" height="26" row="1" col="0"/>
       <cl:group std:sid="group-c1e7a4b2" class="company-list">
         <cl:formdata std:sid="f-data-d4b9e610" row="0" col="0"/>
+        <cl:output std:sid="output-57490016" id="optNodata" class="no-data" visible="false" value="No companies match this search">
+          <cl:verticaldata std:sid="v-data-a2e79824" width="438px" height="40px" autosize="height"/>
+        </cl:output>
         <cl:group std:sid="group-4ad79950" id="grpItem1" class="company-item" clipcontent="false">
           <cl:listener std:sid="listener-c5d0011" name="click" handler="onCompanyItemClick"/>
           <cl:verticaldata std:sid="v-data-a718deed" width="438px" height="64px" autosize="height"/>
@@ -92,17 +95,6 @@
           </cl:output>
           <cl:verticallayout std:sid="v-layout-b30a2b5e" spacing="4"/>
         </cl:group>
-        <cl:group std:sid="group-9a33f44b" id="grpItem6" class="company-item" clipcontent="false">
-          <cl:listener std:sid="listener-c5d0061" name="click" handler="onCompanyItemClick"/>
-          <cl:verticaldata std:sid="v-data-5f722f9a" width="438px" height="64px" autosize="height"/>
-          <cl:checkbox std:sid="c-box-7087ecde" id="cbx6" text="Cebu Span Construction Corp.">
-            <cl:verticaldata std:sid="v-data-883ddcb2" width="100px" height="20px" autosize="height"/>
-          </cl:checkbox>
-          <cl:output std:sid="output-0dccda9b" id="opt6" style="padding-left:24px;" class="font-caption" value="CSC · Industrials">
-            <cl:verticaldata std:sid="v-data-6d18ba4a" width="100px" height="20px" autosize="height"/>
-          </cl:output>
-          <cl:verticallayout std:sid="v-layout-9817c451" spacing="4"/>
-        </cl:group>
         <cl:verticallayout std:sid="v-layout-0ac5d247" scrollable="true" spacing="0"/>
       </cl:group>
       <cl:group std:sid="group-8f2a5d73" id="grp1" class="card-footer">
@@ -132,7 +124,7 @@
         <cl:formlayout std:sid="f-layout-cd6d9563" scrollable="false" hspace="6px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
           <cl:rows length="16" unit="PIXEL"/>
           <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
-          <cl:columns length="12" unit="PIXEL"/>
+          <cl:columns length="16" unit="PIXEL" autoSizing="true" syncminlength="false"/>
         </cl:formlayout>
       </cl:group>
       <cl:group std:sid="group-1b40f12d" id="grpNameChip02" class="name-chip">
@@ -146,7 +138,7 @@
         <cl:formlayout std:sid="f-layout-62f2ac7a" scrollable="false" hspace="6px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
           <cl:rows length="16" unit="PIXEL"/>
           <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
-          <cl:columns length="12" unit="PIXEL"/>
+          <cl:columns length="16" unit="PIXEL" autoSizing="true" syncminlength="false"/>
         </cl:formlayout>
       </cl:group>
       <cl:flowlayout std:sid="f-layout-b6eafff5" hspacing="8"/>

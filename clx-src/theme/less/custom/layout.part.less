@@ -811,3 +811,27 @@
 	border: 1px solid @gray-20;
 	border-radius: 8px;
 }
+
+ .cl-container.name-chip-gray {
+ 	border-radius: 999px;
+ 	border: 1px solid #E2E8F0;
+	background-color: #EEF2F7;
+ 	height: 24px !important;
+ 	padding: 4px 10px;
+ 	border: none;
+ 	
+ 	.cl-output {
+ 		color: #1E293B;
+ 		#font-caption-strong();
+ 		font-weight: 700;
+ 		/* 칩 안쪽 높이(24px - 위아래 패딩 8px = 16px)에 맞춰 한 줄 높이 고정 */
+ 		line-height: 16px;
+ 	}
+
+ 	.cl-button {
+ 		.cl-icon {
+ 			width: 16px;
+ 			height: 16px;
+ 		}
+ 	}
+ }

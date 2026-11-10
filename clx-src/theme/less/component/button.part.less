@@ -491,22 +491,8 @@
 /* --- Link --- */
 .btn-link {
 	#btn--default(@color-button-text-fill-default, transparent, @color-component-text-active);
-	font-weight: 400 !important;
 	text-align: left;
-
-	/* 굵기 유틸리티(fw-*)와 함께 쓰면 위의 400 !important 에 밀리므로 조합 셀렉터로 우선순위를 높인다 */
-	&.fw-medium {
-		font-weight: @font-weight-medium !important;
-	}
-
-	&.fw-semibold {
-		font-weight: @font-weight-semibold !important;
-	}
-
-	&.fw-bold {
-		font-weight: @font-weight-bold !important;
-	}
-
+	
 	&:not(.cl-disabled):hover,
 	&:not(.cl-disabled).cl-hover {
 		#btn--hover(@color-button-text-fill-default, transparent, @color-component-text-active);
@@ -535,16 +521,15 @@
 		text-decoration: none;
 	}
 	
-    &:not(.cl-disabled):hover,
-    &:not(.cl-disabled).cl-hover,
-    &:not(.cl-disabled).cl-activated,
-    &:not(.cl-disabled):active {
-	    	.underline.hidden-underline {
-	    		text-decoration: underline;
-	    	}
-    }
+	&:not(.cl-disabled):hover,
+	&:not(.cl-disabled).cl-hover,
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		.underline.hidden-underline {
+			text-decoration: underline;
+		}
+	}
 }
-
 .cl-grid-row {
 	&.cl-inserted,
 	&.cl-modified,
@@ -588,88 +573,6 @@
 			    		text-decoration: underline;
 			    	}
 		    }
-		}
-	}
-}
-
-/* --- Combo (콤보박스 필드와 동일한 스타일의 버튼 — class: btn-combo) --- */
-.cl-button.btn-combo {
-	#input--base();
-	/* 우측 화살표 (콤보박스 버튼 ico_angle) — background-image 로 표시 */
-	background-image: url("@{img-path}/icons/ico_angle.svg");
-	background-position: right (@size-input-padding-x / 2) center;
-	background-repeat: no-repeat;
-	background-size: @size-component-icon;
-	justify-content: flex-start;
-	padding: 0 @size-component-icon 0 12px;
-	text-align: left;
-	
-	/* 기본 .cl-button 의 hover/activated/active/focus 규칙(투명 배경·화살표 제거·보더 투명)이
-	   우선순위가 더 높으므로, 상태별로 배경·화살표·보더를 모두 다시 지정 */
-	&:not(.cl-disabled):hover,
-	&:not(.cl-disabled).cl-hover,
-	&:not(.cl-disabled).cl-activated,
-	&:not(.cl-disabled):active {
-		background-color: @color-input-surface;
-		background-image: url("@{img-path}/icons/ico_angle.svg");
-		border-color: @color-input-border;
-		color: @color-input-text;
-	}
-	
-	&.cl-focus,
-	&:not(.cl-disabled).cl-focus {
-		background-color: @color-input-surface;
-		background-image: url("@{img-path}/icons/ico_angle.svg");
-		color: @color-input-text;
-		#input--focus();
-	}
-	
-	&.cl-disabled {
-		#input--disabled();
-		background-image: url("@{img-path}/icons/ico_angle_disable.svg");
-	}
-}
-
-/************************************************
- * [UDC] 조회영역의 Company Name 항목의 선택 칩 스타일
- ************************************************/
-.cl-button.btn-badge {
-	border-radius: 999px;
-	#font-caption-strong();
-	height: 24px;
-	padding: 0px 10px;
-	font-weight: 700;
-	
-	.cl-icon {
-		width: 12px;
-		height: 12px;
-	}
-	
-	/* hover, 클릭(active), 포커스 상태에서도 기본 스타일 유지 (button.part.less 의 상태 스타일보다 우선) */
-	&:not(.cl-disabled).cl-hover,
-	&:not(.cl-disabled):hover,
-	&:not(.cl-disabled).cl-activated,
-	&:not(.cl-disabled):active,
-	&.cl-focus,
-	&:focus {
-		box-shadow: none;
-	}
-	
-	&.gray {
-		background: #EEF2F7;
-		color: #1E293B;
-		border: 1px solid #E2E8F0;
-		
-		/* hover, 클릭(active), 포커스 상태에서도 기본 스타일 유지 (button.part.less 의 상태 스타일보다 우선) */
-		&:not(.cl-disabled).cl-hover,
-		&:not(.cl-disabled):hover,
-		&:not(.cl-disabled).cl-activated,
-		&:not(.cl-disabled):active,
-		&.cl-focus,
-		&:focus {
-			background: #EEF2F7;
-			color: #1E293B;
-			border: 1px solid #E2E8F0;
 		}
 	}
 }

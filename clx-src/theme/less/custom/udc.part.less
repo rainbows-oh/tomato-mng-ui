@@ -309,6 +309,7 @@
  	background: @primary-10;
  	height: 24px !important;
  	padding: 4px 10px;
+ 	border: none;
  	
  	.cl-output {
  		color: @primary-70;
@@ -320,8 +321,8 @@
 
  	.cl-button {
  		.cl-icon {
- 			width: 12px;
- 			height: 12px;
+ 			width: 16px;
+ 			height: 16px;
  		}
  	}
  }
@@ -361,7 +362,12 @@
 	&.cursor {
 		cursor: pointer;
 	}
-
+	
+	.cl-output.no-data {
+		padding: 10px 16px;
+		color: @gray-50;
+	}
+	
 	/* 체크형 카드 — 목록(company-list) 아래 Done 버튼 영역 구분선 */
 	.cl-container.card-footer {
 		border-top: 1px solid @gray-20;
