@@ -1,21 +1,429 @@
 @import (reference) "../../custom-settings.part.less";
 
+/* 개수 배지(.count) 공통 모양 — 버튼의 displayexp 에서 sstr(개수, ["count"]) 로 생성되는 스타일드 스트링
+   14px 높이 원형(글자 수가 늘면 너비가 늘어나는 알약), 글자 7px / 700 / 흰색, 배경 #E11D48 (@danger-60)
+   호출부 버튼: position: relative; overflow: visible 필요 (배지가 버튼 바깥으로 나갈 수 있음)
+   위치: 벨/아이콘(24px, 버튼 중앙)의 우상단 — 버튼 크기와 무관하게 중앙 기준 */
+#main--count() {
+	box-sizing: border-box;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 14px;
+	height: 14px;
+	top: calc(50% - 16px);
+	left: 50%;
+	padding: 2px 4px;
+	border-radius: @border-radius-full;
+	background-color: @danger-60;
+	color: @white;
+	font-size: 7px;
+	font-weight: 700;
+	line-height: 1;
+	white-space: nowrap;
+}
+
 /* 메인: 최소 창 폭 1280px (이하는 가로 스크롤), 콘텐츠는 최대 1280px 가운데 정렬 */
 .cl-container.main {
 	min-width: 1280px;
+	
+	.cl-container.header {
+		background-color: @secondary-90;
+		
+		.cl-container.logo-wrap {
+			padding: 15px 0px;
+			
+			.cl-button.btn-exp {
+				padding: 0px;
+				font-size: 16px;
+				border: none;
+				
+				.cl-icon {
+					background-image: url("../../img/icons/ico_menu_exp.svg") !important;
+					width: 24px;
+					height: 24px;
+					margin-right: 0px;
+				}
+			}
+			
+			.cl-button.logo {
+				color: @white;
+				font-size: 16px;
+				font-weight: 700;
+				border: none;
+				padding: 0px;
+				
+				/* 인라인 요소인 래퍼가 baseline 에 걸려 줄 박스가 늘어나는 것(+7px)을 방지 */
+				.cl-text-wrapper {
+					vertical-align: middle;
+				}
+				
+				.cl-icon {
+					background-image: url("../../img/icons/logo_white.svg") !important;
+					margin-right: 8px;
+					width: 56px;
+					height: 26px;
+				}
+			}
+		}
+		
+		.cl-container.header-utils {
+			.user {
+				color: @white;
+			}
+			
+			.cl-button.settings,
+			.cl-button.notify,
+			.cl-button.logout {
+				border: none;
+				
+				.cl-icon {
+					width: 24px;
+					height: 24px;
+				}
+			}
+			
+			.cl-button.settings {
+				.cl-icon {
+					background-image: url("../../img/icons/ico_settings.svg") !important;
+				}
+			}
+			.cl-button.notify {
+				/* .count 의 위치 기준 (버튼 안쪽에 absolute 로 배치) */
+				position: relative;
+				padding: 0;
+				/* 버튼 폭(24px)보다 배지가 바깥으로 나가므로 기본 overflow: hidden 해제 (안 하면 배지 오른쪽이 잘림) */
+				overflow: visible;
 
-	.main-content {
-		width: 100%;
-		max-width: (1280px + 24px * 2); /* 각 화면이 속성으로 주는 좌우 여백 24px 은 제외하고 콘텐츠를 1280px 로 */
-		margin: 0 auto;
-	}
+				.cl-icon {
+					background-image: url("../../img/icons/ico_notify.svg") !important;
+					margin: 0;
+				}
 
-	/* 사이드 내비게이션: 어두운 배경에서 구분되도록 글자색 지정 */
-	.cl-sidenavigation .cl-sidenavigation-item {
-		color: @secondary-30;
+				.count {
+					#main--count();
+				}
 
-		&.cl-selected {
-			color: @secondary-10;
+				/* 스크린 리더 전용 문구 (displayexp 의 sstr(..., ["cl-sound-only"])) */
+				.cl-sound-only {
+					#sound-only();
+				}
+			}
+			.cl-button.logout {
+				.cl-icon {
+					background-image: url("../../img/icons/ico_logout.svg") !important;
+				}
+			}
+			
+			.cl-button.btn-exp-mo {
+				padding: 0px;
+				font-size: 16px;
+				border: none;
+				/* .count 의 위치 기준, 배지가 버튼 폭(24px)보다 바깥으로 나가므로 overflow: hidden 해제 */
+				position: relative;
+				overflow: visible;
+				
+				.cl-icon {
+					background-image: url("../../img/icons/ico_deadline_exp_mo.svg") !important;
+					width: 24px;
+					height: 24px;
+					margin-right: 0px;
+				}
+				
+				/* 개수 배지 — 알림(notify)과 같은 모양/위치로 항상 표시 (모바일 헤더에서 deadline 패널은 항상 닫혀 있음) */
+				.count {
+					#main--count();
+				}
+				
+				/* 스크린 리더 전용 문구 (displayexp 의 sstr(..., ["cl-sound-only"])) */
+				.cl-sound-only {
+					#sound-only();
+				}
+			}
 		}
 	}
+	
+	.cl-container.side-menu {
+		background-color: @secondary-90;
+		padding: 12px 16px;
+		
+		.cl-container.side-header {
+			.cl-button.btn-exp {
+				padding: 0px;
+				font-size: 16px;
+				border: none;
+				
+				.cl-icon {
+					background-image: url("../../img/icons/ico_menu_exp.svg") !important;
+					width: 24px;
+					height: 24px;
+					margin-right: 0px;
+				}
+			}
+			
+			.cl-button.btn-close {
+				.cl-icon {
+					background-image: url("../../img/icons/ico_menu_close.svg") !important;
+					width: 24px;
+					height: 24px;
+					margin-right: 0px;
+				}
+			}
+		}
+		
+		/* 사이드 내비게이션 (어두운 배경)
+		   공통: 폰트 14px, 아이템 간격 4px, 안쪽 여백 위아래 9px / 좌 32px(선택 보더 3px 포함) / 우 12px */
+		.cl-sidenavigation .cl-sidenavigation-item {
+			#font-body();
+			min-height: 0;
+			margin-bottom: 4px;
+			padding: 9px 12px 9px (32px - 3px);
+			border-left: 3px solid transparent;
+
+			/* 1depth */
+			&.cl-level-1 {
+				padding-left: (32px - 3px);
+				color: @secondary-10;
+				font-weight: @font-weight-semibold;
+			}
+
+			/* 2depth (들여쓰기 없이 1depth 와 같은 좌측 위치) */
+			&.cl-level-2 {
+				padding-left: (32px - 3px);
+				color: @secondary-30;
+				font-weight: @font-weight-normal;
+			}
+
+			/* 아이콘 영역(.cl-icon)은 메뉴에서 사용하지 않지만 빈 상태로 가로 폭(20px + 여백)을 차지하므로 숨김
+			   → 텍스트 시작 위치가 좌측 32px(보더 포함)로 맞음 */
+			.cl-icon {
+				display: none;
+			}
+
+			/* 폴더 펼침 아이콘 — 어두운 배경용 밝은 아이콘 (회전 방향은 side-nav.part.less 기본 동작 유지: 접힘 -90°, 펼침 0°) */
+			&.cl-folder.cl-collapsed .cl-expand-icon,
+			&.cl-folder.cl-expanded .cl-expand-icon {
+				background-image: url("../../img/icons/ico_menu_arrow.svg");
+			}
+
+			/* 폴더 아이템 — 펼침 아이콘을 메뉴명 왼쪽에 배치 (피그마: 좌측 12px · 아이콘 16px · 간격 4px · 메뉴명)
+			   아이템은 인라인 스타일(grid-template-columns, grid-column)로 [아이콘 | 텍스트 | 배지 | 펼침 아이콘] 배치되므로 !important 로 덮어씀
+			   → [펼침 아이콘(16px + 간격 4px) | 텍스트 | 배지] */
+			&.cl-folder {
+				grid-template-columns: 20px minmax(0, max-content) min-content !important;
+
+				.cl-expand-icon {
+					grid-column: 1 !important;
+				}
+
+				.cl-text {
+					grid-column: 2 !important;
+				}
+
+				.cl-badge {
+					grid-column: 3 !important;
+				}
+			}
+
+			/* 일반(leaf) 아이템 — 도트(.cl-badge)가 메뉴명 바로 뒤에 오도록 텍스트 칸을 내용 너비로
+			   (기본은 텍스트가 1fr 이라 배지가 항목 오른쪽 끝에 붙음) → [아이콘(숨김) | 텍스트 | 배지] */
+			justify-content: start;
+			
+			&.cl-leaf {
+				grid-template-columns: auto minmax(0, max-content) min-content !important;
+			}
+			
+			/* 새 소식 도트 — sidenavigation 의 badgeexp 가 "New" 를 반환하면 .cl-badge 에 텍스트가 생김
+			   글자는 숨기고(스크린 리더는 "New" 를 읽음) 5 x 5 원으로 표시, 메뉴명과 8px 간격
+			   색상은 지정이 없어 알림/deadline 배지와 같은 @danger-60 사용 */
+			.cl-badge {
+				width: 5px;
+				height: 5px;
+				margin-left: 8px;
+				border-radius: @border-radius-full;
+				background-color: @danger-60;
+				font-size: 0;
+				line-height: 0;
+				color: transparent;
+				overflow: hidden;
+				
+				/* 새 소식이 없으면 badgeexp 가 빈 문자열 → 빈 요소는 도트 숨김 */
+				&:empty {
+					display: none;
+				}
+			}
+			
+			/* 폴더 아이템 좌측 여백 12px (보더 3px 포함) — 레벨별 여백 규칙(.cl-level-N)보다 우선하도록 레벨까지 지정 */
+			&.cl-folder.cl-level-1,
+			&.cl-folder.cl-level-2 {
+				padding-left: (12px - 3px);
+			}
+
+			/* 선택 — 레벨과 무관하게 동일 */
+			&.cl-selected {
+				color: @primary-40;
+				font-weight: @font-weight-bold;
+				border-left-color: @primary-40;
+			}
+		}
+	}
+	
+	.main-content {
+		width: 100%;
+		max-width: (1280px + 24px * 2);
+		/* 각 화면이 속성으로 주는 좌우 여백 24px 은 제외하고 콘텐츠를 1280px 로 */
+		margin: 0 auto;
+	}
+}
+
+
+
+.cl-container.deadline {
+	background-color: @gray-10;
+
+	/* 캘린더 일요일 색상 (#E11D48 = @danger-60)
+	   날짜: 다른 달 날짜·오늘·선택된 날짜는 각각의 기본 스타일 유지
+	   요일 헤더(Sun): 항상 적용
+	   (calendar.part.less 의 일요일 규칙보다 우선하도록 .cl-container.deadline 하위로 지정) */
+	.cl-calendar .cl-calendar-content-day.cl-calendar-content-sun:not(.cl-other-month):not(.cl-calendar-defaultdate):not(.cl-selected),
+	.cl-calendar .cl-calendar-content-header.cl-calendar-content-sun {
+		color: @danger-60;
+	}
+
+	.cl-container.d-header {
+		padding: 12px 16px;
+		
+		/* 패널이 닫혔을 때(JS: onBtnDeadlineExpClick 이 close 클래스 추가) — 좌우 패딩 없이 버튼을 가운데 배치
+		   좌우 패딩이 있으면 안쪽 컨테이너(grp12)가 24px 로 좁아져 overflow: hidden 에 개수 배지(.count)가 잘림
+		   헤더와 grp12 의 그리드 열이 인라인 스타일이므로 !important 로 덮어씀
+		   헤더: [여백0 | 내용(1fr) | 여백0]  /  grp12: [.. | 버튼 칸(1fr) | .. 나머지 0] → 버튼을 칸 가운데(justify-self) */
+		&.close {
+			padding: 12px 0;
+			
+			> .cl-layout > .cl-layout-content {
+				grid-template-columns: 0px 1fr 0px !important;
+			}
+			
+			.cl-container > .cl-layout > .cl-layout-content {
+				grid-template-columns: 0px 1fr 0px 0px 0px 0px 0px !important;
+			}
+			
+			.cl-button.btn-exp {
+				justify-self: center;
+			}
+		}
+		
+		.cl-button.btn-exp {
+			padding: 0px;
+			font-size: 16px;
+			border: none;
+			/* .count 의 위치 기준, 배지가 버튼 폭(24px)보다 바깥으로 나가므로 overflow: hidden 해제 */
+			position: relative;
+			overflow: visible;
+			
+			.cl-icon {
+				background-image: url("../../img/icons/ico_deadline_exp.svg") !important;
+				width: 24px;
+				height: 24px;
+				margin-right: 0px;
+			}
+			
+			/* 개수 배지 — 패널이 닫혀 있을 때(close 클래스)만 표시 (JS: onBtnDeadlineExpClick) */
+			.count {
+				#main--count();
+				/* 버튼 높이가 24px 뿐이고 부모 컨테이너(grp12, d-header)가 overflow: hidden 이라
+				   알림처럼 아이콘 위로 4px 올리면 잘림 → 아이콘 상단(버튼 상단)에 맞춤 */
+				top: calc(50% - 12px);
+				display: none;
+			}
+			
+			&.close .count {
+				display: flex;
+			}
+			
+			/* 스크린 리더 전용 문구 (displayexp 의 sstr(..., ["cl-sound-only"])) */
+			.cl-sound-only {
+				#sound-only();
+			}
+		}
+		
+		.cl-button.btn-close {
+			.cl-icon {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+	
+	.cl-container.d-body {
+		padding: 16px;
+		
+		.cl-calendar {
+			background-color: @gray-10;
+			border: none;
+			border-radius: 0px;
+		}
+		
+		.cl-calendar .cl-calendar-header {
+			padding: 0px 0px 14px 0px;
+		}
+		
+		.cl-calendar:not(.cl-anniversaries) {
+			.cl-calendar-content-wrapper {
+				padding: 0px 0px 14px 0px;
+			}
+		}
+		
+		.cl-calendar .cl-calendar-footer {
+			padding: 0px;
+		}
+		
+		.cl-container.schedule {
+			.cl-container.list {
+				padding: 12px 16px;
+				border-radius: 8px;
+				background-color: @white;
+				box-shadow: 0 1px 4px 0 rgba(15, 23, 41, 0.12);
+				
+				&.urgent {
+					border: 1px solid @danger-20;
+					background-color: @danger-5;
+				}
+				
+				.show-txt {
+					color: @danger-60;
+					font-weight: 600;
+					font-size: @font-size-caption;
+				}
+				
+				.cl-button {
+					padding: 0px;
+					text-align: left;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+
+/* 모바일(767px 이하 = EXB-PART): 최소 폭(1280px)을 풀어 가로 스크롤 없이 모바일 반응형이 적용되게 함
+   (768px ~ 1279px 는 기존처럼 최소 폭 유지 → 가로 스크롤) */
+@media only screen and (max-width: 767px) {
+	.cl-container.main {
+		min-width: 0;
+		
+		/* 헤더 우측 영역의 마지막 버튼(deadline)의 개수 배지(.count)가 버튼 폭 바깥으로 2px 나가는데,
+		   그룹(grp2)과 그 안쪽 레이아웃이 inline 으로 overflow: hidden 이라 잘림 → !important 로 해제
+		   (바깥에 헤더 우측 여백 24px 이 있어 화면 밖으로 나가지는 않음) */
+		.cl-container.header-utils,
+		.cl-container.header-utils > .cl-layout {
+			overflow: visible !important;
+		}
+	}
+}
+
+/* 모바일 메뉴 뒤의 어두운 배경 (main.js: doOpenMobileMenu — 누르면 메뉴 닫힘) */
+.cl-container.mobile-dim {
+	background-color: fade(@black, 50%);
 }

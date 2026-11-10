@@ -1,0 +1,217 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-50d0786b" version="1.0.6190">
+  <head std:sid="head-6665451d">
+    <screen std:sid="screen-97fd1a62" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="true" customHeight="1132" customWidth="800" active="true"/>
+    <screen std:sid="screen-b817f2da" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-8fc41240" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-88c04fd5"/>
+    <cl:appspec title="회사 선택 필터 리스트형"/>
+  </head>
+  <body std:sid="body-a40d15f7" style="top:0px; left:0px; width:440px; height:440px;" class="company-selection">
+    <cl:listener std:sid="listener-7a3e51c8" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-2d9b64f0" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:group std:sid="group-b7d5966d" id="grpInputArea">
+      <cl:formdata std:sid="f-data-c5cd8a73" row="0" col="0" rowspan="1" colspan="1"/>
+      <cl:combobox std:sid="c-box-4a7d1e52" id="cmbSector" fieldLabel="Sector" value="all">
+        <cl:formdata std:sid="f-data-3b9c6e17" row="0" col="0"/>
+        <cl:item std:sid="item-1f6a2c84" label="All" value="all"/>
+        <cl:item std:sid="item-5d3e8b09" label="Financials" value="financials"/>
+        <cl:item std:sid="item-8c1b4f73" label="Industrials" value="industrials"/>
+        <cl:item std:sid="item-2e7a9d61" label="Holding Firms" value="holdingFirms"/>
+        <cl:item std:sid="item-6b4c0e95" label="Property" value="property"/>
+        <cl:item std:sid="item-9a2f5d38" label="Services" value="services"/>
+        <cl:item std:sid="item-7e8d1a46" label="Small, Medium &amp; Emerging Board" value="smeBoard"/>
+      </cl:combobox>
+      <cl:inputbox std:sid="i-box-6c0e3a95" id="ipbCompanyName" fieldLabel="Company Name" placeholder="Enter a company name or stock symbol">
+        <cl:listener std:sid="listener-0d5b7c42" name="input" handler="onIpbCompanyNameInput"/>
+        <cl:listener std:sid="listener-4c1f9a63" name="mousedown" handler="onIpbCompanyNameMousedown"/>
+        <cl:formdata std:sid="f-data-a4e91b60" row="0" col="1"/>
+      </cl:inputbox>
+      <cl:formlayout std:sid="f-layout-d6573de1" scrollable="false" hspace="8px" vspace="4px">
+        <cl:rows length="36" unit="PIXEL"/>
+        <cl:columns length="160" unit="PIXEL"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-1aec6b2f" id="grpCard" class="company-card cursor" visible="false">
+      <cl:formdata std:sid="f-data-5c2d8e04" row="1" col="0" rowspan="1" colspan="1"/>
+      <cl:group std:sid="group-4ad79950" id="grpItem01" class="company-item">
+        <cl:listener std:sid="listener-c1a1743" name="click" handler="onCompanyItemClick"/>
+        <cl:verticaldata std:sid="v-data-a718deed" width="438px" height="66px" autosize="height"/>
+        <cl:group std:sid="group-a55c3c99" id="grp2">
+          <cl:verticaldata std:sid="v-data-2fc0d8fc" width="400px" height="20px" autosize="height"/>
+          <cl:group std:sid="group-dc0accdc" id="grp5">
+            <cl:formdata std:sid="f-data-42021ac1" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:output std:sid="output-c9b091b8" id="opt3" class="badge" value="MCH">
+              <cl:flowlayoutdata std:sid="f-data-9a539b36" width="46px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:flowlayout std:sid="f-layout-f7ddee7c"/>
+          </cl:group>
+          <cl:output std:sid="output-981df649" id="opt2" class="font-caption" value="Financials">
+            <cl:formdata std:sid="f-data-22fc68df" row="0" col="1"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-eb8f412a" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="191" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:output std:sid="output-6e39062d" id="optCompanyName01" class="font-body fw-bold" value="Mayon Capital Holdings Corp.">
+          <cl:verticaldata std:sid="v-data-ff8ef22b" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-75962220" spacing="6"/>
+      </cl:group>
+      <cl:group std:sid="group-ff90083c" id="grpItem02" class="company-item">
+        <cl:listener std:sid="listener-c1a2746" name="click" handler="onCompanyItemClick"/>
+        <cl:verticaldata std:sid="v-data-deb206c4" width="438px" height="66px" autosize="height"/>
+        <cl:group std:sid="group-d3c1b3cd" id="grp4">
+          <cl:verticaldata std:sid="v-data-15e7f82e" width="390px" height="20px" autosize="height"/>
+          <cl:group std:sid="group-fa5299a6" id="grp6">
+            <cl:formdata std:sid="f-data-b8d12514" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:output std:sid="output-37edfc71" id="opt5" class="badge" value="LPW">
+              <cl:flowlayoutdata std:sid="f-data-0c7e840c" width="47px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:flowlayout std:sid="f-layout-1cc4885a"/>
+          </cl:group>
+          <cl:output std:sid="output-ae0aa93b" id="opt4" class="font-caption" value="Industrials">
+            <cl:formdata std:sid="f-data-4731252e" row="0" col="1"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-a350973a" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="191" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:output std:sid="output-fd18db00" id="optCompanyName02" class="font-body fw-bold" value="Laguna Power &amp; Water Corp.">
+          <cl:verticaldata std:sid="v-data-7844205f" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-3ac56221" spacing="6"/>
+      </cl:group>
+      <cl:group std:sid="group-d11e0e38" id="grpItem03" class="company-item">
+        <cl:listener std:sid="listener-c1a3749" name="click" handler="onCompanyItemClick"/>
+        <cl:verticaldata std:sid="v-data-580e7d40" width="438px" height="66px" autosize="height"/>
+        <cl:group std:sid="group-d2cf9904" id="grp8">
+          <cl:verticaldata std:sid="v-data-290734c9" width="390px" height="20px" autosize="height"/>
+          <cl:group std:sid="group-b66e1a99" id="grp9">
+            <cl:formdata std:sid="f-data-ff4e80c9" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:output std:sid="output-7eba9d10" id="opt8" class="badge" value="BHF">
+              <cl:flowlayoutdata std:sid="f-data-11855a79" width="42px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:flowlayout std:sid="f-layout-c434b2e0"/>
+          </cl:group>
+          <cl:output std:sid="output-90f9d2d1" id="opt7" class="font-caption" value="Industrials">
+            <cl:formdata std:sid="f-data-87e093ba" row="0" col="1"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-581841d6" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="191" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:output std:sid="output-b863d0f6" id="optCompanyName03" class="font-body fw-bold" value="Batangas Harvest Foods, Inc.">
+          <cl:verticaldata std:sid="v-data-57dcdc62" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-fe1d0bc2" spacing="6"/>
+      </cl:group>
+      <cl:group std:sid="group-fc956013" id="grpItem04" class="company-item">
+        <cl:listener std:sid="listener-c1a4752" name="click" handler="onCompanyItemClick"/>
+        <cl:verticaldata std:sid="v-data-ec289c9f" width="438px" height="66px" autosize="height"/>
+        <cl:group std:sid="group-e9b32d52" id="grp11">
+          <cl:verticaldata std:sid="v-data-d4f790c3" width="390px" height="20px" autosize="height"/>
+          <cl:group std:sid="group-ff6c7876" id="grp12">
+            <cl:formdata std:sid="f-data-4cfd00d0" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:output std:sid="output-463592c3" id="opt11" class="badge" value="CSC">
+              <cl:flowlayoutdata std:sid="f-data-d16c8726" width="38px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:flowlayout std:sid="f-layout-2f331fd9"/>
+          </cl:group>
+          <cl:output std:sid="output-90982e5d" id="opt10" class="font-caption" value="Industrials">
+            <cl:formdata std:sid="f-data-eaf9db5e" row="0" col="1"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-9a40d83a" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="191" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:output std:sid="output-796bc236" id="optCompanyName04" class="font-body fw-bold" value="Cebu Span Construction Corp.">
+          <cl:verticaldata std:sid="v-data-3c4b5c2b" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-bb2fc13e" spacing="6"/>
+      </cl:group>
+      <cl:group std:sid="group-92fa4a9b" id="grpItem2" class="company-item">
+        <cl:verticaldata std:sid="v-data-bcb49735" width="438px" height="66px" autosize="height"/>
+        <cl:group std:sid="group-ecdb47eb" id="grp3">
+          <cl:verticaldata std:sid="v-data-e5d78c50" width="390px" height="20px" autosize="height"/>
+          <cl:group std:sid="group-bc768417" id="grp7">
+            <cl:formdata std:sid="f-data-03c51fd4" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:output std:sid="output-fe762f00" id="opt6" class="badge" value="CSC">
+              <cl:flowlayoutdata std:sid="f-data-0c6722cc" width="38px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:flowlayout std:sid="f-layout-bc4ba2c6"/>
+          </cl:group>
+          <cl:output std:sid="output-af48f0c0" id="opt9" class="font-caption" value="Industrials">
+            <cl:formdata std:sid="f-data-6e209d94" row="0" col="1"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-8624169b" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="191" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:output std:sid="output-31a5abe8" id="optCompanyName2" class="font-body fw-bold" value="Cebu Span Construction Corp.">
+          <cl:verticaldata std:sid="v-data-2d81b9e3" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-7aded518" spacing="6"/>
+      </cl:group>
+      <cl:group std:sid="group-414234d3" id="grpItem3" class="company-item">
+        <cl:verticaldata std:sid="v-data-032f57e5" width="438px" height="66px" autosize="height"/>
+        <cl:group std:sid="group-07810316" id="grp10">
+          <cl:verticaldata std:sid="v-data-5443fb5a" width="390px" height="20px" autosize="height"/>
+          <cl:group std:sid="group-7c5c342e" id="grp13">
+            <cl:formdata std:sid="f-data-3f72b84c" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:output std:sid="output-c32673d6" id="opt12" class="badge" value="CSC">
+              <cl:flowlayoutdata std:sid="f-data-fa125a2c" width="38px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:flowlayout std:sid="f-layout-da0c25d9"/>
+          </cl:group>
+          <cl:output std:sid="output-458fba18" id="opt13" class="font-caption" value="Industrials">
+            <cl:formdata std:sid="f-data-408e6237" row="0" col="1"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-b9ad7544" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="191" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:output std:sid="output-30599f8c" id="optCompanyName3" class="font-body fw-bold" value="Cebu Span Construction Corp.">
+          <cl:verticaldata std:sid="v-data-33620834" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-f365dd18" spacing="6"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-0ac5d247" scrollable="true" spacing="0"/>
+    </cl:group>
+    <cl:group std:sid="group-1f3c42b2" id="grpSelectChips">
+      <cl:formdata std:sid="f-data-b108a41d" row="2" col="0"/>
+      <cl:button std:sid="button-ed02883b" id="btnSelectNameChip1" class="btn-name-chip btn-close" value="Batangas Harvest Foods, Inc." icon="0" iconalign="right">
+        <cl:expbind property="fieldLabel" category="PROPERTY" expression="&quot;Remove &quot; + text"/>
+        <cl:flowlayoutdata std:sid="f-data-4332c107" width="200px" height="24px" autosize="width"/>
+      </cl:button>
+      <cl:button std:sid="button-07c0dbda" id="btnSelectNameChip2" class="btn-name-chip btn-close" value="Batangas Harvest Foods, Inc." icon="0" iconalign="right">
+        <cl:expbind property="fieldLabel" category="PROPERTY" expression="&quot;Remove &quot; + text"/>
+        <cl:flowlayoutdata std:sid="f-data-b63d8796" width="200px" height="24px" autosize="width"/>
+      </cl:button>
+      <cl:flowlayout std:sid="f-layout-b6eafff5" hspacing="8"/>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-b2f40c97" scrollable="false" hspace="8px" vspace="4px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="36" unit="PIXEL"/>
+      <cl:rows length="1" unit="FRACTION" hidden="true" shadetype="NONE" shadecolor="transparent"/>
+      <cl:rows length="24" unit="PIXEL" autoSizing="true" hidden="true" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

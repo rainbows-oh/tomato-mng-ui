@@ -310,9 +310,6 @@
 	}
 }
 
-
-
-
 .cl-grid-row {
 	&.cl-inserted,
 	&.cl-modified,
@@ -335,6 +332,58 @@
 				#btn--default(@color-button-secondary-fill-default, @color-component-text-active, @color-component-text-active);
 			}
 			
+			&.cl-disabled {
+				#btn--default(@color-button-secondary-fill-disabled, @color-button-secondary-border-disabled, @color-button-secondary-color-disabled);
+			}
+		}
+	}
+}
+
+/* --- Inline Danger --- */
+.btn-inline-danger {
+	#btn--default(@color-button-secondary-fill-default, @color-button-inline-danger, @color-button-inline-danger);
+
+	&:not(.cl-disabled):hover,
+	&:not(.cl-disabled).cl-hover {
+		#btn--hover(@color-button-secondary-fill-default, @color-button-inline-danger, @color-button-inline-danger);
+	}
+
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active {
+		#btn--pressed(@color-button-secondary-fill-default, @color-button-inline-danger, @color-button-inline-danger);
+	}
+
+	&.cl-focus {
+		#btn--default(@color-button-secondary-fill-default, @color-button-inline-danger, @color-button-inline-danger);
+	}
+
+	&.cl-disabled {
+		#btn--default(@color-button-secondary-fill-disabled, @color-button-secondary-border-disabled, @color-button-secondary-color-disabled);
+	}
+}
+
+.cl-grid-row {
+	&.cl-inserted,
+	&.cl-modified,
+	&.cl-selected,
+	&.cl-editing {
+		.btn-inline-danger {
+			#btn--default(@color-button-secondary-fill-default, @color-button-inline-danger, @color-button-inline-danger);
+
+			&:not(.cl-disabled):hover,
+			&:not(.cl-disabled).cl-hover {
+				#btn--hover(@color-button-secondary-fill-default, @color-button-inline-danger, @color-button-inline-danger);
+			}
+
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active {
+				#btn--pressed(@color-button-secondary-fill-default, @color-button-inline-danger, @color-button-inline-danger);
+			}
+
+			&.cl-focus {
+				#btn--default(@color-button-secondary-fill-default, @color-button-inline-danger, @color-button-inline-danger);
+			}
+
 			&.cl-disabled {
 				#btn--default(@color-button-secondary-fill-disabled, @color-button-secondary-border-disabled, @color-button-secondary-color-disabled);
 			}
@@ -581,25 +630,48 @@
 	}
 }
 
-
-
-/* ==========================================================================
-   Sizes
-   ========================================================================== */
-.cl-button.small {
-	#btn--size(@size-component-height-small, @padding-2, @size-component-gap-small, @font-size-caption, @size-icon-small);
-}
-
-.cl-button.medium {
-	#btn--size(@size-component-height, @padding-3, @size-component-gap, @size-button-font, @size-component-icon);
-}
-
-.cl-button.large {
-	#btn--size(@size-component-height-large, @padding-3, @size-component-gap, @font-size-label, @size-icon-medium);
-}
-
-.cl-button.xlarge {
-	#btn--size(@size-component-height-xlarge, @padding-5, @size-component-gap-large, @font-size-button, @size-icon-medium);
+/************************************************
+ * [UDC] 조회영역의 Company Name 항목의 선택 칩 스타일
+ ************************************************/
+.cl-button.btn-badge {
+	border-radius: 999px;
+	#font-caption-strong();
+	height: 24px;
+	padding: 0px 10px;
+	font-weight: 700;
+	
+	.cl-icon {
+		width: 12px;
+		height: 12px;
+	}
+	
+	/* hover, 클릭(active), 포커스 상태에서도 기본 스타일 유지 (button.part.less 의 상태 스타일보다 우선) */
+	&:not(.cl-disabled).cl-hover,
+	&:not(.cl-disabled):hover,
+	&:not(.cl-disabled).cl-activated,
+	&:not(.cl-disabled):active,
+	&.cl-focus,
+	&:focus {
+		box-shadow: none;
+	}
+	
+	&.gray {
+		background: #EEF2F7;
+		color: #1E293B;
+		border: 1px solid #E2E8F0;
+		
+		/* hover, 클릭(active), 포커스 상태에서도 기본 스타일 유지 (button.part.less 의 상태 스타일보다 우선) */
+		&:not(.cl-disabled).cl-hover,
+		&:not(.cl-disabled):hover,
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active,
+		&.cl-focus,
+		&:focus {
+			background: #EEF2F7;
+			color: #1E293B;
+			border: 1px solid #E2E8F0;
+		}
+	}
 }
 
 /* ==========================================================================
@@ -687,6 +759,14 @@
 	background-image: url("@{img-path}/icons/ico_delete.svg") !important;
 }
 
+.btn-delete-red .cl-icon {
+	background-image: url("@{img-path}/icons/ico_delete_red.svg") !important;
+}
+
+.btn-copy .cl-icon {
+	background-image: url("@{img-path}/icons/ico_copy.svg") !important;
+}
+
 .btn-plus .cl-icon {
 	background-image: url("@{img-path}/icons/ico_plus.svg") !important;
 }
@@ -745,6 +825,10 @@
 
 .btn-close .cl-icon {
 	background-image: url("@{img-path}/icons/ico_close.svg") !important;
+}
+
+.btn-close-red .cl-icon {
+	background-image: url("@{img-path}/icons/ico_close_red.svg") !important;
 }
 
 /* 비활성(enabled=false)은 .cl-icon 이 아니라 버튼 자체에 .cl-disabled 가 붙으므로 버튼 기준으로 선언 */

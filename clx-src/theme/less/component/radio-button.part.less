@@ -155,9 +155,11 @@
 		}
 	}
 	
-	/* --- Disabled — ① 그룹 자체 비활성  ② 항목 비활성 --- */
+	/* --- Disabled / ReadOnly — ① 그룹 자체 비활성·읽기전용  ② 항목 비활성·읽기전용 (읽기전용은 비활성과 동일한 스타일) --- */
 	&.cl-disabled .cl-radiobutton-item,
-	.cl-radiobutton-item.cl-disabled {
+	&.cl-readonly .cl-radiobutton-item,
+	.cl-radiobutton-item.cl-disabled,
+	.cl-radiobutton-item.cl-readonly {
 		color: @color-component-text-disabled;
 		
 		.cl-radiobutton-icon,

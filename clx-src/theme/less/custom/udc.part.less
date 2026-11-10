@@ -304,7 +304,7 @@
 /************************************************
  * [UDC] 조회영역의 Company Name 항목의 선택 칩 스타일
  ************************************************/
-.cl-button.btn-badge {
+.cl-button.btn-name-chip {
 	border-radius: 999px;
 	background: @primary-10;
 	color: @primary-70;
@@ -312,6 +312,7 @@
 	font-weight: 600;
 	height: 24px;
 	padding: 0px 10px;
+	border: none;
 	
 	.cl-icon {
 		width: 12px;
@@ -363,14 +364,39 @@
 	border: 1px solid @gray-30;
 	background-color: @white;
 	border-radius: 8px;
-	cursor: pointer;
+	
+	&.cursor {
+		cursor: pointer;
+	}
+
+	/* 체크형 카드 — 목록(company-list) 아래 Done 버튼 영역 구분선 */
+	.cl-container.card-footer {
+		border-top: 1px solid @gray-20;
+	}
+
+	/* 체크박스 그룹형 목록 — 그룹의 각 아이템이 한 줄 항목, 마우스를 올렸을 때(hover)·active 는 같은 배경색 */
+	.cl-container.company-list {
+		.cl-checkboxgroup {
+			.cl-checkbox {
+				display: block;
+				padding: 10px 14px;
+
+				&.active,
+				&:hover {
+					background-color: @gray-10;
+				}
+			}
+		}
+	}
 
 	.cl-container.company-item {
-		&.active {
+		/* 선택(active)과 마우스를 올렸을 때(hover)는 같은 배경색 */
+		padding: 10px 16px;
+
+		&.active,
+		&:hover {
 			background-color: @gray-10;
 		}
-
-		padding: 10px 16px;
 
 		.cl-output.badge {
 			padding: 2px 6px;

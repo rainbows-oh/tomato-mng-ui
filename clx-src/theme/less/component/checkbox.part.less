@@ -219,8 +219,9 @@
 		}
 	}
 
-	/* --- Disabled --- */
-	&.cl-disabled {
+	/* --- Disabled / ReadOnly (읽기전용은 비활성과 동일한 스타일) --- */
+	&.cl-disabled,
+	&.cl-readonly {
 		#checkbox--item-disabled();
 	}
 
@@ -276,9 +277,11 @@
 		}
 	}
 
-	/* --- Disabled — ① 그룹 자체 비활성  ② 내부 체크박스 비활성 --- */
+	/* --- Disabled / ReadOnly — ① 그룹 자체 비활성·읽기전용  ② 내부 체크박스 비활성·읽기전용 (읽기전용은 비활성과 동일한 스타일) --- */
 	&.cl-disabled .cl-checkbox,
-	.cl-checkbox.cl-disabled {
+	&.cl-readonly .cl-checkbox,
+	.cl-checkbox.cl-disabled,
+	.cl-checkbox.cl-readonly {
 		#checkbox--item-disabled();
 	}
 

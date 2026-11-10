@@ -575,6 +575,13 @@
 /* ==========================================================================
  Variants
  ========================================================================== */
+/* 셀 하단 보더 제거 — 그리드 셀(또는 헤더 셀)의 class 속성에 border-b-none 지정
+   (헤더 셀은 .cl-grid-header .cl-grid-cell 규칙이 우선순위가 더 높아 별도로 지정) */
+.cl-grid .cl-grid-cell.border-b-none,
+.cl-grid .cl-grid-header .cl-grid-cell.border-b-none {
+	border-bottom: none;
+}
+
 /* 헤더 필수입력 셀 — 좌상단 삼각형 마커 */
 .cl-grid .cl-grid-header .cl-grid-cell.required,
 .cl-grid .cl-grid-header .cl-grid-cell .cl-grid-cell-inherit.required {

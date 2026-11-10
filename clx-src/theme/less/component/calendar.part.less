@@ -43,6 +43,7 @@
 @cal--date-gap: @gap-1;
 /* 날짜 셀 (일 선택 달력) — 셀 47×44, 숫자 박스 32×32 */
 @cal--day-cell-width: 47px;
+@cal--day-cell-width-mobile: 44px;      /* 모바일(767px 이하): 340px 폭 패널 안에 7칸(44 × 7 = 308px)이 들어가도록 */
 @cal--day-cell-height: 44px;
 @cal--day-cell-padding-top: 3px;           /* 3 + 32(박스) + 1(간격) + 5(dot) + 3 = 44 */
 @cal--day-size: @size-11;                  /* 32px */
@@ -321,6 +322,14 @@
 			color: @cal--date-color-text;
 		}
 	}
+
+	/* 공휴일 — event.module.js 가 전역 등록하는 기념일(className: "holiday")은 강조색 없이 일반 날짜 색상
+	   (오늘·선택 날짜는 각각의 기본 스타일 유지, 일요일/토요일 색상은 위 요일 규칙·화면별 규칙이 우선하도록 낮은 우선순위) */
+	.cl-calendar-content-day.cl-calendar-anniversary.holiday:not(.cl-calendar-defaultdate):not(.cl-selected),
+	.cl-calendar-content-month.cl-calendar-anniversary.holiday:not(.cl-calendar-defaultdate):not(.cl-selected),
+	.cl-calendar-content-year.cl-calendar-anniversary.holiday:not(.cl-calendar-defaultdate):not(.cl-selected) {
+		color: @cal--date-color-text;
+	}
 }
 
 /* 부가 날짜 텍스트 (음력/절기 등) */
@@ -504,6 +513,18 @@
 
 	.cl-other-month.cl-hidden {
 		cursor: default;
+	}
+}
+
+/* 모바일(767px 이하): 날짜 칸 폭 47px → 44px (숫자 박스 32px 은 유지)
+   메인의 deadline 패널이 모바일에서 340px 로 뜨므로 안쪽 폭 308px 에 7칸이 들어가야 함 */
+@media only screen and (max-width: 767px) {
+	.cl-calendar-day:not(.cl-anniversaries) .cl-calendar-content-wrapper .cl-calendar-content {
+		.cl-calendar-content-header,
+		.cl-calendar-content-day,
+		.cl-other-month {
+			width: @cal--day-cell-width-mobile;
+		}
 	}
 }
 
