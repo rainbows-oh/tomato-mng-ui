@@ -195,7 +195,7 @@
       <cl:formdata std:sid="f-data-b108a41d" row="2" col="0"/>
       <cl:group std:sid="group-e99eaef8" id="grpNameChip01" class="name-chip">
         <cl:flowlayoutdata std:sid="f-data-00955fec" width="191px" height="24px" autosize="both"/>
-        <cl:output std:sid="output-9b5c1984" id="opt14" value="Laguna Power &amp; Water Corp.Laguna Power &amp; Water Corp.">
+        <cl:output std:sid="output-9b5c1984" id="opt14" value="Laguna Power &amp; Water Corp.Laguna Power &amp; Water Corp." ellipsis="true">
           <cl:formdata std:sid="f-data-8d0815bc" row="0" col="0"/>
         </cl:output>
         <cl:button std:sid="button-87e65b8b" id="btn1" class="icon btn-close" value="Button" icon="0">
@@ -209,7 +209,7 @@
       </cl:group>
       <cl:group std:sid="group-1b40f12d" id="grpNameChip02" class="name-chip">
         <cl:flowlayoutdata std:sid="f-data-d840d607" width="191px" height="24px" autosize="both"/>
-        <cl:output std:sid="output-7ccdddf6" id="opt15" value="Batangas Harvest Foods, Inc.">
+        <cl:output std:sid="output-7ccdddf6" id="opt15" value="Batangas Harvest Foods, Inc." ellipsis="true">
           <cl:formdata std:sid="f-data-989cce36" row="0" col="0"/>
         </cl:output>
         <cl:button std:sid="button-7f0d087f" id="btn3" class="icon btn-close" value="Button" icon="0">
