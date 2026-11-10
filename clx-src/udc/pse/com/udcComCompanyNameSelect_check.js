@@ -31,7 +31,7 @@ var vcCard = null;
 var VC_CARD_HEIGHT = 357;
 /** 카드 너비(px) — PC/태블릿, 모바일(EXB-PART = 767px 이하) */
 var VC_CARD_WIDTH = 440;
-var VC_CARD_WIDTH_MOBILE = 300;
+var VC_CARD_WIDTH_MOBILE = 280;
 /** 모바일 스크린 이름 */
 var VC_SCREEN_MOBILE = "EXB-PART";
 /** 입력 영역(grpInputArea) 첫 번째 열(콤보박스) 너비 — PC/태블릿, 모바일 */
