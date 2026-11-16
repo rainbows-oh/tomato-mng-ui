@@ -1,0 +1,215 @@
+@import (reference) "../common/_include.part.less";
+
+.cl-container.login {
+	.cl-container.img-wrap {
+		background-position: center, 0 0;
+		background-repeat: no-repeat;
+		
+		&.mng {
+			background-image:
+				url("../../img/login/bg_login_mng.svg"),
+				linear-gradient(90deg, rgba(20, 27, 77, 0.55) 0%, rgba(20, 27, 77, 0.20) 100%),
+				linear-gradient(134deg, #141B4D 0%, #293569 70.92%);
+			background-position: center, 0 0, 0 0;
+			/* 영역 폭이 달라져도 이미지가 영역을 채우도록 */
+			background-size: cover, 100% 100%, 100% 100%;
+
+			@media(max-width: 1024px) {
+				background-image:
+					url("../../img/login/bg_login_mng_mo.svg"),
+					linear-gradient(180deg, rgba(20, 27, 77, 0.30) 0%, rgba(20, 27, 77, 0.80) 100%),
+					linear-gradient(134deg, #141B4D 0%, #293569 70.92%);
+				background-position: center, 0 0, 0 0;
+				background-size: cover, 100% 100%, 100% 100%;
+			}
+
+			/* 이미지 위 로고 + 서비스명 */
+			.cl-container.login-brand {
+				.cl-output.login-logo {
+					background: url("../../img/icons/logo_white.svg") no-repeat left center;
+				}
+
+				.cl-output.login-brand-name {
+					color: @white;
+					font-size: 16px;
+					font-weight: @font-weight-normal;
+				}
+			}
+
+			.cl-output.login-title {
+				color: @white;
+				font-size: 40px;
+				font-weight: @font-weight-bold;
+
+				@media(max-width: 1024px) {
+					font-size: 20px;
+				}
+			}
+		}
+
+		&.sub {
+			/* 사진(불투명 이미지)은 맨 뒤, 그 위에 scrim, 가장 위가 첫 번째 */
+			background-image:
+				linear-gradient(90deg, rgba(20, 27, 77, 0.55) 0%, rgba(20, 27, 77, 0.20) 100%),
+				url("../../img/login/bg_login_sub.svg"),
+				linear-gradient(134deg, #141B4D 0%, #293569 70.92%);
+			background-position: 0 0, center, 0 0;
+			/* 영역 폭이 달라져도 이미지가 영역을 채우도록 */
+			background-size: 100% 100%, cover, 100% 100%;
+
+			@media(max-width: 1024px) {
+				background-image:
+					linear-gradient(180deg, rgba(20, 27, 77, 0.30) 0%, rgba(20, 27, 77, 0.80) 100%),
+					url("../../img/login/bg_login_sub_mo.svg"),
+					linear-gradient(134deg, #141B4D 0%, #293569 70.92%);
+				background-position: 0 0, center, 0 0;
+				background-size: 100% 100%, cover, 100% 100%;
+			}
+
+			/* 이미지 위 로고 + 서비스명 */
+			.cl-container.login-brand {
+				.cl-output.login-logo {
+					background: url("../../img/icons/logo_white.svg") no-repeat left center;
+				}
+
+				.cl-output.login-brand-name {
+					color: @white;
+					font-size: 16px;
+					font-weight: @font-weight-normal;
+				}
+			}
+
+			.cl-output.login-title {
+				color: @white;
+				font-size: 40px;
+				font-weight: @font-weight-bold;
+
+				@media(max-width: 1024px) {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	
+	.cl-container.login-wrap {
+		.cl-container.login-input {
+			border-radius: 12px;
+			border: 1px solid @gray-20;
+			background: @white;
+			box-shadow: 0 8px 24px 0 rgba(15, 23, 41, 0.08);
+			padding: 36px;
+			
+			.cl-container.header {
+				.cl-output {
+					text-align: center;
+				}
+				
+				.cl-output.tit {
+					font-size: 22px;
+					font-weight: 700;
+				}
+			}
+			
+			.cl-button.btn-link {
+				padding: 0px;
+				font-weight: 400;
+				font-size: 13px;
+			}
+			
+			@media(max-width: 767px) {
+				padding: 24px 20px;
+			}
+		}
+	}
+}
+
+.cl-container.auth {
+	.cl-output.tit,
+	.cl-output.sub-tit {
+		text-align: center;
+	}
+	
+	.cl-output.tit {
+		color: @gray-90;
+		font-size: 22px;
+		font-weight: 700;
+	}
+	
+	.cl-output.sub-tit {
+		color: @gray-60;
+		font-size: 13px;
+	}
+	
+	.cl-output.label {
+		color: @gray-90;
+		font-size: 13px;
+		font-weight: 600;
+	}
+	
+	.cl-button.btn-back {
+		#btn--default(transparent, transparent, @gray-60);
+		#font-body-s() !important;
+		font-weight: @font-weight-normal !important;
+	}
+	
+	.cl-inputbox.input-error {
+		border: 1px solid @color-button-inline-danger;
+	}
+	
+	.cl-container.req-box {
+		background-color: @gray-5;
+		border: 1px solid @gray-20;
+		border-radius: @border-radius-5;
+		padding: 14px;
+	}
+	
+	.cl-container.pw-reset-complete {
+		background-color: @primary-5;
+		border: 1px solid #BFD4FE;
+		border-radius: @border-radius-5;
+		padding: 18px @padding-7;
+		
+		.cl-output.tit {
+			font-weight: 600;
+			font-size: 14px;
+		}
+	}
+}
+
+/* error page */
+.errorpage {
+	background-image: url("../../img/icons/bg_404.svg");
+	background-position: center bottom 0;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	
+	@media(max-width: 767px) {
+		padding: 0 @padding-11;
+		background-image: url("../../img/icons/bg_404_m.svg");
+		background-size: auto 240px;
+	}
+	
+	.cl-output.font-error-code {
+		font-size: 160px;
+		line-height: 168px;
+		
+		@media(max-width: 767px) {
+			font-size: 96px;
+			line-height: 104px;
+		}
+	}
+	
+	.cl-output.font-error-con {
+		font-size: 26px;
+		
+		@media(max-width: 767px) {
+			font-size: 18px;
+		}
+	}
+	
+	.cl-output.error-sub-con {
+		@media(max-width: 767px) {
+			font-size: 13px !important;
+		}
+	}
+}

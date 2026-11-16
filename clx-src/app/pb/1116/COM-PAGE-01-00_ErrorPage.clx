@@ -1,0 +1,70 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-de5392e7" version="1.0.6190">
+  <head std:sid="head-f2e6f0fe">
+    <std:metadata>
+      <std:property key="template-file" value="templates/management/조회+그리드.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-366f56a7" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="true" customHeight="685" customWidth="800" active="true"/>
+    <screen std:sid="screen-d0a03339" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="false"/>
+    <screen std:sid="screen-ca13aa67" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360" active="false"/>
+    <cl:model std:sid="model-93e21bd9"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-c90bbfe3" class="errorpage">
+    <cl:attribute name="mobile-h-spacing" value=""/>
+    <cl:attribute name="mobile-horizontal-margin" value=""/>
+    <cl:group std:sid="group-17b58f03" id="grp2">
+      <cl:attribute name="mobile-fit" value=""/>
+      <cl:formdata std:sid="f-data-02b0b00f" width="100" height="-61" row="0" col="0" rowspan="1" colspan="1"/>
+      <cl:group std:sid="group-312db5d7" id="grp3">
+        <cl:attribute name="mobile-left-margin" value=""/>
+        <cl:attribute name="mobile-right-margin" value=""/>
+        <cl:attribute name="mobile-top-margin" value=""/>
+        <cl:attribute name="mobile-spacing" value="14"/>
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:formdata std:sid="f-data-7b520651" width="100" height="-9" row="0" col="0"/>
+        <cl:output std:sid="output-e1ac1873" id="opt1" class="font-error-code secondary-90 fw-bold text-center" value="400">
+          <cl:verticaldata std:sid="v-data-4a197462" width="720px" height="184px" autosize="both"/>
+        </cl:output>
+        <cl:output std:sid="output-1a5c7fc7" id="opt2" class="font-error-con text-gray-90 fw-bold text-center" value="We couldn't complete your request.">
+          <cl:verticaldata std:sid="v-data-fe17838b" width="720px" height="34px" autosize="both"/>
+        </cl:output>
+        <cl:output std:sid="output-7c213d2c" id="opt3" class="font-subheading text-gray-60 fw-normal text-center error-sub-con" value="The requested page or service is currently unavailable.&#xA;Please use one of the available actions below to continue.">
+          <cl:verticaldata std:sid="v-data-a6c4147d" width="720px" height="48px" autosize="both"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-46cfe73c" spacing="18"/>
+      </cl:group>
+      <cl:group std:sid="group-92acf776" id="grp1">
+        <cl:attribute name="mobile-column-count" value="1"/>
+        <cl:attribute name="mobile-horizontal-margin" value="0"/>
+        <cl:attribute name="mobile-vertical-margin" value="0"/>
+        <cl:attribute name="mobile-v-spacing" value="12"/>
+        <cl:formdata std:sid="f-data-981fdbb5" row="1" col="0"/>
+        <cl:button std:sid="button-21d762cb" id="btn1" class="btn-primary" value="Home">
+          <cl:formdata std:sid="f-data-6a4c3065" row="0" col="0"/>
+        </cl:button>
+        <cl:button std:sid="button-0880385a" id="btn2" class="btn-secondary" value="Back">
+          <cl:formdata std:sid="f-data-0e337357" row="0" col="1"/>
+        </cl:button>
+        <cl:formlayout std:sid="f-layout-5044426e" scrollable="false" hspace="12px" vspace="12px" top-margin="0px" right-margin="1fr" bottom-margin="0px" left-margin="1fr">
+          <cl:rows length="44" unit="PIXEL"/>
+          <cl:columns length="140" unit="PIXEL"/>
+          <cl:columns length="140" unit="PIXEL"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-02511516" scrollable="false" hspace="0px" vspace="34px" top-margin="1fr" bottom-margin="1fr">
+        <cl:rows length="302" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+        <cl:rows length="44" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+        <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-57d16927" scrollable="false" hspace="0px" vspace="0px">
+      <cl:rows length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
