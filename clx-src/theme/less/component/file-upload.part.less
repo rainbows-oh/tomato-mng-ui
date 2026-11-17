@@ -1,7 +1,7 @@
 /**
  * file-upload.part.less — 파일 업로드 컨트롤 스타일
  *
- * @desc  파일 업로드(.cl-fileupload). 헤더/상세(파일목록)/푸터 + 드롭존(.dropzone)
+ * @desc  파일 업로드(.cl-fileupload). 헤더/상세(파일목록)/푸터
  * @note  프로젝트마다 디자인 기준이 달라 스타일을 이 파일에서 관리 (custom-settings 미사용)
  *        체크박스는 checkbox.part.less, 푸터 버튼은 button.part.less 의 믹스인 참조
  *        파일/다운로드 아이콘은 #icon-image 대신 직접 url() (확장자별 통일: ico_file)
@@ -50,10 +50,8 @@
 @fu--foot-padding-x:         @padding-3;
 @fu--foot-gap:               @gap-2;
 
-/* 강조 텍스트 / 드롭존 */
+/* 강조 텍스트 */
 @fu--point-color-text:       @danger-60;
-@fu--dropzone-color-border:  @color-component-border;
-@fu--dropzone-border-radius: @size-component-radius;
 
 /* ==========================================================================
    Mixins
@@ -310,23 +308,5 @@
 				}
 			}
 		}
-	}
-}
-
-/* ==========================================================================
-   Variants — Dropzone
-   ========================================================================== */
-
-.cl-container.dropzone {
-	border: 2px dashed @primary;
-	background-color: @gray-10;
-	border-radius: 8px;
-	background-image: url("../../img/icons/ico_attach_file.svg");
-	background-repeat: no-repeat;
-	background-position: center top 24px;
-	padding-top: 54px;
-	
-	.font-label {
-		text-align: center;
 	}
 }

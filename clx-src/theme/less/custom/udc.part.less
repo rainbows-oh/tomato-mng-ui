@@ -408,3 +408,25 @@
 		}
 	}
 }
+
+/************************************************
+ * [UDC] 파일 드롭존 (udcComFileDropzone)
+ ************************************************/
+.cl-container.dropzone {
+	border: 1px dashed @gray-30;
+	background-color: @gray-5;
+	border-radius: 8px;
+	background-image: url("../../img/icons/ico_attach_file.svg");
+	background-repeat: no-repeat;
+	background-position: center top 24px;
+	padding-top: 54px;
+	
+	.font-label {
+		text-align: center;
+	}
+	
+	&.dragover {
+		border: 2px dashed @primary-70;
+		background-color: #E9EEF4;
+	}
+}
