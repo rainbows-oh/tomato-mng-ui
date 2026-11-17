@@ -21,7 +21,6 @@
   <body std:sid="body-264c4ad9" style="top:0px; left:0px; width:900px; height:36px;" class="app-header">
     <cl:listener std:sid="listener-e2975343" name="load" handler="onBodyLoad"/>
     <cl:listener std:sid="listener-f0c29aac" name="screen-change" handler="onBodyScreenChange"/>
-    <cl:attribute name="mobile-column-count" value="1"/>
     <cl:output std:sid="output-202fc71c" id="optTit">
       <cl:listener std:sid="listener-b5fbb49d" name="dblclick" handler="onOutputDblclick"/>
       <cl:attribute name="needs-auto-height" value="true"/>
