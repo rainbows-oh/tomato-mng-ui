@@ -61,10 +61,10 @@
         </cl:group>
         <cl:group std:sid="group-f206a68a">
           <cl:verticaldata std:sid="v-data-f0e34e3d" width="934px" height="1004px" autosize="height"/>
-          <cl:udc std:sid="ud-control-6cebd1b5" id="udcsystemconfigurationtree1" type="udc.com.udcSystemConfigurationTree">
+          <cl:udc std:sid="ud-control-6cebd1b5" id="udcsystemconfigurationtree1" fieldLabel="Menu tree" type="udc.com.udcSystemConfigurationTree">
             <cl:verticaldata std:sid="v-data-fda903e7" width="1200px" height="300px" autosize="height"/>
           </cl:udc>
-          <cl:udc std:sid="ud-control-96d27f19" id="udcsystemconfigurationtree2" type="udc.com.udcSystemConfigurationTree">
+          <cl:udc std:sid="ud-control-96d27f19" id="udcsystemconfigurationtree2" fieldLabel="Menu tree" type="udc.com.udcSystemConfigurationTree">
             <cl:verticaldata std:sid="v-data-fedbd180" width="934px" height="300px" autosize="height"/>
           </cl:udc>
           <cl:verticallayout std:sid="v-layout-f3ba3ebc" scrollable="false" spacing="0"/>

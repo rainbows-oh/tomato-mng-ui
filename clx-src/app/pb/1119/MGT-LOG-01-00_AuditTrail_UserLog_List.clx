@@ -258,7 +258,7 @@
                 <cl:output std:sid="output-0000011a" class="font-label" value="Period">
                   <cl:verticaldata std:sid="v-data-0000011b" width="100px" height="18px" autosize="height"/>
                 </cl:output>
-                <cl:udc std:sid="ud-control-0000010b" id="udccomdateperiodpicker1" type="udc.pse.com.udcComDatePeriodPicker">
+                <cl:udc std:sid="ud-control-0000010b" id="udccomdateperiodpicker1" fieldLabel="Period" type="udc.pse.com.udcComDatePeriodPicker">
                   <cl:verticaldata std:sid="v-data-0000010c" width="366px" height="36px" autosize="height"/>
                 </cl:udc>
                 <cl:verticallayout std:sid="v-layout-0000011e" spacing="6"/>

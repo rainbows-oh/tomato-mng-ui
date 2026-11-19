@@ -646,7 +646,7 @@
           <cl:output std:sid="output-985a8c1d" class="cal-label-divider">
             <cl:formdata std:sid="f-data-26a349ac" topSpacing="12.0" row="3" col="0"/>
           </cl:output>
-          <cl:checkboxgroup std:sid="cb-group-451d266d" id="cbgLabels" class="cal-label-list" colcount="2" hspacing="20" vspacing="14" displayexp="sstr(value, &quot;cal-code cal-code-&quot; + value) + label">
+          <cl:checkboxgroup std:sid="cb-group-451d266d" id="cbgLabels" fieldLabel="Event labels" class="cal-label-list" colcount="2" hspacing="20" vspacing="14" displayexp="sstr(value, &quot;cal-code cal-code-&quot; + value) + label">
             <cl:listener std:sid="listener-372bb7c8" name="selection-change" handler="onCbgLabelsSelectionChange"/>
             <cl:formdata std:sid="f-data-5c5174b3" topSpacing="12.0" row="4" col="0"/>
             <cl:item std:sid="item-1fe1d131" label="Analysts' Briefing" value="ABD"/>

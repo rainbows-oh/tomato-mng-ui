@@ -111,7 +111,7 @@
         <cl:attribute name="mobile-spacing" value="12"/>
         <cl:attribute name="mobile-fit" value="true"/>
         <cl:verticaldata std:sid="v-data-2b4eb2d7" width="1024px" height="112px" autosize="height"/>
-        <cl:radiobutton std:sid="r-button-43603be9" id="rdb1">
+        <cl:radiobutton std:sid="r-button-43603be9" id="rdb1" fieldLabel="Period type">
           <cl:verticaldata std:sid="v-data-d4ebe594" width="200px" height="20px" autosize="height"/>
           <cl:item std:sid="item-daaad280" label="Monthly" value="value1"/>
           <cl:item std:sid="item-f6508eda" label="Daily" value="value2"/>
