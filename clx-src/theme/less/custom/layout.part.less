@@ -812,26 +812,82 @@
 	border-radius: 8px;
 }
 
- .cl-container.name-chip-gray {
- 	border-radius: 999px;
- 	border: 1px solid #E2E8F0;
+.cl-container.name-chip-gray {
+	border-radius: 999px;
+	border: 1px solid #E2E8F0;
 	background-color: #EEF2F7;
- 	height: 24px !important;
- 	padding: 4px 10px;
- 	border: none;
- 	
- 	.cl-output {
- 		color: #1E293B;
- 		#font-caption-strong();
- 		font-weight: 700;
- 		/* 칩 안쪽 높이(24px - 위아래 패딩 8px = 16px)에 맞춰 한 줄 높이 고정 */
- 		line-height: 16px;
- 	}
+	height: 24px !important;
+	padding: 4px 10px;
+	border: none;
+	
+	.cl-output {
+		color: #1E293B;
+		#font-caption-strong();
+		font-weight: 700;
+		/* 칩 안쪽 높이(24px - 위아래 패딩 8px = 16px)에 맞춰 한 줄 높이 고정 */
+		line-height: 16px;
+	}
 
- 	.cl-button {
- 		.cl-icon {
- 			width: 16px;
- 			height: 16px;
- 		}
- 	}
- }
+	.cl-button {
+		.cl-icon {
+			width: 16px;
+			height: 16px;
+		}
+	}
+}
+
+.cl-container.analytics {
+	.cl-container.user-analytics {
+		.cl-container.card.apt {
+			.cl-container.left {
+				padding: 20px;
+				border-radius: 8px;
+				border: 1px solid @gray-20;
+				background: @gray-5;
+				
+				.cl-output.tit {
+					font-size: 26px;
+					font-weight: 700;
+				}
+			}
+			
+			.cl-container.right {
+				.cl-container.list {
+					padding: 14px 0px;
+					
+					&:not(.cl-last-row) {
+						border-bottom: 1px solid @gray-20;
+					}
+					
+					.cl-output.tit {
+						font-size: 13px;
+						font-weight: 600;
+					}
+					
+					.cl-container.stat {
+						.cl-output {
+							text-align: right;
+						}
+						
+						.cl-output.time {
+							font-size: 13px;
+							font-weight: 700;
+						}
+					}
+				}
+			}
+			
+			@media(max-width: 767px) {
+				.cl-container.left {
+					padding: 16px;
+				}
+				
+				.cl-container.right {
+					.cl-container.list {
+						padding: 12px 0px;
+					}
+				}
+			}
+		}
+	}
+}

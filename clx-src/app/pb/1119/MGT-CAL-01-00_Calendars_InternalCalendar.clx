@@ -1,0 +1,717 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-0ea5a7b0" version="1.0.6164">
+  <head std:sid="head-adb510a0">
+    <link std:sid="link-1ca4c407" href="../../../thirdparty/fullcalendar/skeleton.css" rel="stylesheet" type="text/css"/>
+    <link std:sid="link-0f4a2032" href="../../../thirdparty/fullcalendar/themes/monarch/theme.css" rel="stylesheet" type="text/css"/>
+    <link std:sid="link-0a6cfc57" href="../../../thirdparty/fullcalendar/themes/monarch/palettes/purple.css" rel="stylesheet" type="text/css"/>
+    <screen std:sid="screen-2b1a731b" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="true" customHeight="1464" customWidth="800" active="true"/>
+    <screen std:sid="screen-c0b48217" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="2000" customWidth="800" active="false"/>
+    <screen std:sid="screen-8d92b878" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360" active="false"/>
+    <cl:model std:sid="model-b07756e2">
+      <cl:dataset std:sid="d-set-d013082e" id="dsEvent">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-9585fd47" name="eventId"/>
+          <cl:datacolumn std:sid="d-column-cfc45d36" name="eventDate"/>
+          <cl:datacolumn std:sid="d-column-db4a20b6" name="eventCode"/>
+          <cl:datacolumn std:sid="d-column-972ace07" name="companyName"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-01]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRS]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Metro Pacific Inv.]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[2]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-01]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SMD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[International C...]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-03]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRO]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Universal Robina]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[4]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-03]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[WED]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[PLDT Inc.]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[5]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-03]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRL]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Globe Telecom]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[6]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-05]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRL]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Globe Telecom]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[7]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-05]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[PD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Jollibee Foods]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[8]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-05]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[PD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Puregold Price]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[9]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-05]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[OFE]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[BDO Unibank]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[10]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-05]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[OFS]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[SM Investments]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[11]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-05]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[EDD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Ayala Land]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[12]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-05]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[STD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Security Bank]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[13]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-05]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[EOE]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Manila Electric]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[14]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-05]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRS]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Globe Telecom]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[15]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-05]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SMD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Jollibee Foods]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[16]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-05]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRO]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[BDO Unibank]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[17]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-07]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[OFE]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[BDO Unibank]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[18]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-07]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[OFS]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[SM Investments]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[19]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-09]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[EDD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Ayala Land]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[20]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-09]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[STD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Security Bank]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[21]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-09]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[EOE]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Manila Electric]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[22]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-12]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[CDL]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Reyes Holdings]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[23]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-12]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRS]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Universal Robina]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[24]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-12]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SMD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[PLDT Inc.]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[25]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-12]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[WED]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Globe Telecom]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[26]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-12]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRL]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Jollibee Foods]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[27]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-12]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[PD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[BDO Unibank]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[28]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-12]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[OFE]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[SM Investments]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[29]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-12]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[OFS]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Ayala Land]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[30]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-12]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[EDD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Security Bank]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[31]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-12]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[STD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Manila Electric]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[32]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-12]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[EOE]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Puregold Price]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[33]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-12]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRO]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Globe Telecom]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[34]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-14]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRO]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Globe Telecom]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[35]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-14]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[WED]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Jollibee Foods]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[36]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-14]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRL]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[BDO Unibank]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[37]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-16]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRL]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[BDO Unibank]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[38]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-16]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[PD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[SM Investments]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[39]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-18]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[CDL]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Santos Group]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[40]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-18]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[OFE]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Ayala Land]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[41]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-18]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[OFS]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Security Bank]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[42]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-18]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRS]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Metro Pacific Inv.]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[43]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-18]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SMD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[PLDT Inc.]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[44]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-18]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRO]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Globe Telecom]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[45]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-18]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[WED]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Jollibee Foods]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[46]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-18]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRL]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[BDO Unibank]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[47]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-18]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[PD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[SM Investments]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[48]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-18]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[EDD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Manila Electric]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[49]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-18]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[STD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Universal Robina]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[50]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-18]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[EOE]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Puregold Price]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[51]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-21]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[CD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Universal Robina]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[52]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-23]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRS]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Globe Telecom]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[53]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-23]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SMD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Jollibee Foods]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[54]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-23]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRO]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[BDO Unibank]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[55]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-26]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[WED]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[SM Investments]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[56]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-26]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[SRL]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Ayala Land]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[57]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-26]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[PD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Security Bank]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[58]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-28]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[CDL]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Garcia Holdings]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[59]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-28]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[PD]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Security Bank]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="eventId"><![CDATA[60]]></cl:datavalue>
+            <cl:datavalue columnname="eventDate"><![CDATA[2026-08-28]]></cl:datavalue>
+            <cl:datavalue columnname="eventCode"><![CDATA[OFE]]></cl:datavalue>
+            <cl:datavalue columnname="companyName"><![CDATA[Manila Electric]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="Internal Calendar"/>
+  </head>
+  <body std:sid="body-22887ba4" class="internal-cal">
+    <cl:listener std:sid="listener-d7166874" name="init" handler="onBodyInit"/>
+    <cl:listener std:sid="listener-40cb663e" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:group std:sid="group-0319b359" id="grpHeader" class="page-title-wrap">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:formdata std:sid="f-data-fbef76b1" row="0" col="0"/>
+      <cl:udc std:sid="ud-control-1d70da47" id="udccomappheader1" type="udc.pse.com.udcComAppHeader">
+        <cl:formdata std:sid="f-data-dc4ac2b2" row="0" col="0"/>
+        <cl:property name="title" value="Internal Calendar" type="string"/>
+      </cl:udc>
+      <cl:formlayout std:sid="f-layout-631b2075" scrollable="false" hspace="8px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="36" unit="PIXEL" autoSizing="false" syncminlength="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-f779df20" id="grpBody" class="inner">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="mobile-horizontal-margin" value="0"/>
+      <cl:attribute name="mobile-vertical-margin" value="0"/>
+      <cl:formdata std:sid="f-data-157e1011" width="100" height="2689" row="1" col="0"/>
+      <cl:group std:sid="group-c12ec3e8" id="grpContent" class="content-wrap">
+        <cl:formdata std:sid="f-data-68fb68cf" width="100" height="2025" row="0" col="0"/>
+        <cl:group std:sid="group-9ede6bfa" id="grpLayout">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:formdata std:sid="f-data-b296ba35" width="100" height="-219" row="0" col="0"/>
+          <cl:group std:sid="group-09c3238c" id="grpActions">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-v-spacing" value="16"/>
+            <cl:attribute name="mobile-index" value="1"/>
+            <cl:formdata std:sid="f-data-01042f6d" halign="FILL" valign="FILL" width="400" height="36" row="0" col="0" rowspan="1" colspan="2"/>
+            <cl:group std:sid="group-b5dcd1f8" id="btnGrp">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:attribute name="mobile-min-height" value="28"/>
+              <cl:formdata std:sid="f-data-0e9f8b2c" row="0" col="0"/>
+              <cl:button std:sid="button-7d21c4a0" id="btnPrevMonth" class="cal-nav-btn cal-nav-prev" fieldLabel="Previous month" value="">
+                <cl:listener std:sid="listener-3c9a51e2" name="click" handler="onBtnPrevMonthClick"/>
+                <cl:formdata std:sid="f-data-5be0a713" halign="FILL" valign="CENTER" width="28" height="28" row="0" col="0"/>
+              </cl:button>
+              <cl:output std:sid="output-91f3d8c6" id="optMonthTitle" class="cal-month-title" value="August">
+                <cl:formdata std:sid="f-data-a4c27e08" halign="FILL" valign="CENTER" width="50" height="28" row="0" col="1"/>
+              </cl:output>
+              <cl:button std:sid="button-e86b02d9" id="btnNextMonth" class="cal-nav-btn cal-nav-next" fieldLabel="Next month" value="">
+                <cl:listener std:sid="listener-0f7d6b84" name="click" handler="onBtnNextMonthClick"/>
+                <cl:formdata std:sid="f-data-c1d94f35" halign="FILL" valign="CENTER" width="28" height="28" row="0" col="2"/>
+              </cl:button>
+              <cl:formlayout std:sid="f-layout-45644a09" scrollable="false" hspace="10px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                <cl:rows length="1" unit="FRACTION"/>
+                <cl:columns length="28" unit="PIXEL"/>
+                <cl:columns length="1" unit="FRACTION"/>
+                <cl:columns length="28" unit="PIXEL"/>
+              </cl:formlayout>
+            </cl:group>
+            <cl:button std:sid="button-58bf0f96" id="btnEventLabels" class="btn-secondary btn-file cal-btn-labels" value="Event Labels" icon="0">
+              <cl:listener std:sid="listener-7b3e66d8" name="click" handler="onBtnEventLabelsClick"/>
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:attribute name="mobile-min-height" value="36"/>
+              <cl:formdata std:sid="f-data-da32e6db" row="0" col="2"/>
+            </cl:button>
+            <cl:inputbox std:sid="i-box-c01efd23" id="ipbCompanyName" fieldLabel="Company name" placeholder="Company name">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:attribute name="mobile-min-height" value="36"/>
+              <cl:formdata std:sid="f-data-67b310ff" row="0" col="3"/>
+            </cl:inputbox>
+            <cl:formlayout std:sid="f-layout-7ecd099f" scrollable="false" hspace="10px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="36" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="153" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="130" unit="PIXEL"/>
+              <cl:columns length="260" unit="PIXEL"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:uicontrolshell std:sid="uic-shell-334afafa" id="shlCalendar" class="cal-shell" fieldLabel="Calendar">
+            <cl:listener std:sid="listener-169b6aff" name="init" handler="onShlCalendarInit"/>
+            <cl:listener std:sid="listener-5d7d44fb" name="load" handler="onShlCalendarLoad"/>
+            <cl:attribute name="mobile-index" value="2"/>
+            <cl:formdata std:sid="f-data-480f3e32" row="1" col="0" rowspan="1" colspan="1"/>
+          </cl:uicontrolshell>
+          <cl:uicontrolshell std:sid="uic-shell-dab5e303" id="shlCalendarMo" class="cal-shell" fieldLabel="Calendar" visible="false">
+            <cl:listener std:sid="listener-db4d4f71" name="init" handler="onShlCalendarInit"/>
+            <cl:listener std:sid="listener-27ab1be4" name="load" handler="onShlCalendarLoad"/>
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-index" value="3"/>
+            <cl:formdata std:sid="f-data-1a3c8663" row="1" col="0"/>
+          </cl:uicontrolshell>
+          <cl:group std:sid="group-c443b43d" id="grpSide" class="cal-side">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:attribute name="mobile-index" value="4"/>
+            <cl:formdata std:sid="f-data-74ae33b2" halign="FILL" valign="FILL" width="100" height="27" row="1" col="1" rowspan="1" colspan="1"/>
+            <cl:output std:sid="output-d3b98e73" class="cal-side-title" value="August 2026 · 60 items">
+              <cl:formdata std:sid="f-data-9f998113" valign="FILL" row="0" col="0"/>
+            </cl:output>
+            <cl:group std:sid="group-e464b215" id="grpSideList" class="cal-side-list">
+              <cl:formdata std:sid="f-data-c4ec87fd" valign="FILL" width="100" height="700" row="1" col="0"/>
+              <cl:group std:sid="group-5019704b" class="cal-date-card">
+                <cl:attribute name="date" value="2026-08-01"/>
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:verticaldata std:sid="v-data-c316f345" width="100px" height="128px" autosize="height"/>
+                <cl:group std:sid="group-c01184d7">
+                  <cl:verticaldata std:sid="v-data-1e8d41eb" width="100px" height="20px" autosize="none"/>
+                  <cl:output std:sid="output-2bfa282d" class="cal-date-text" value="Sat, 1 August, 2026">
+                    <cl:formdata std:sid="f-data-e92eaf1c" valign="FILL" row="0" col="0"/>
+                  </cl:output>
+                  <cl:output std:sid="output-2e7025e5" class="cal-date-count" value="2">
+                    <cl:formdata std:sid="f-data-6d318b4c" valign="FILL" row="0" col="1"/>
+                  </cl:output>
+                  <cl:formlayout std:sid="f-layout-79d7d5bd" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="20" unit="PIXEL"/>
+                    <cl:columns length="1" unit="FRACTION"/>
+                    <cl:columns length="40" unit="PIXEL"/>
+                  </cl:formlayout>
+                </cl:group>
+                <cl:button std:sid="button-8a67639f" class="cal-item-btn" value="Metro Pacific Investments Corporation" displayexp="sstr(userAttr(&quot;code&quot;), &quot;cal-code cal-code-&quot; + userAttr(&quot;code&quot;)) + text">
+                  <cl:attribute name="code" value="SRS"/>
+                  <cl:verticaldata std:sid="v-data-74080f56" width="100px" height="34px" autosize="none"/>
+                </cl:button>
+                <cl:button std:sid="button-c5aa328f" class="cal-item-btn" value="International Container Terminal Ser..." displayexp="sstr(userAttr(&quot;code&quot;), &quot;cal-code cal-code-&quot; + userAttr(&quot;code&quot;)) + text">
+                  <cl:attribute name="code" value="SMD"/>
+                  <cl:verticaldata std:sid="v-data-676226e2" width="100px" height="34px" autosize="none"/>
+                </cl:button>
+                <cl:verticallayout std:sid="v-layout-9e2d830c" scrollable="false" spacing="8" leftmargin="12" rightmargin="12" topmargin="12" bottommargin="12"/>
+              </cl:group>
+              <cl:group std:sid="group-af2ab547" class="cal-date-card">
+                <cl:attribute name="date" value="2026-08-03"/>
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:verticaldata std:sid="v-data-ff517f65" width="100px" height="170px" autosize="height"/>
+                <cl:group std:sid="group-d824797f">
+                  <cl:verticaldata std:sid="v-data-e2d9e55e" width="100px" height="20px" autosize="none"/>
+                  <cl:output std:sid="output-4c687db7" class="cal-date-text" value="Mon, 3 August, 2026">
+                    <cl:formdata std:sid="f-data-3635e6ae" valign="FILL" row="0" col="0"/>
+                  </cl:output>
+                  <cl:output std:sid="output-7fcaefbd" class="cal-date-count" value="3">
+                    <cl:formdata std:sid="f-data-66a8311b" valign="FILL" row="0" col="1"/>
+                  </cl:output>
+                  <cl:formlayout std:sid="f-layout-01822644" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="20" unit="PIXEL"/>
+                    <cl:columns length="1" unit="FRACTION"/>
+                    <cl:columns length="40" unit="PIXEL"/>
+                  </cl:formlayout>
+                </cl:group>
+                <cl:button std:sid="button-36a23e23" class="cal-item-btn" value="Universal Robina Corporation" displayexp="sstr(userAttr(&quot;code&quot;), &quot;cal-code cal-code-&quot; + userAttr(&quot;code&quot;)) + text">
+                  <cl:attribute name="code" value="SRO"/>
+                  <cl:verticaldata std:sid="v-data-8e3b1c77" width="100px" height="34px" autosize="none"/>
+                </cl:button>
+                <cl:button std:sid="button-fc4c011f" class="cal-item-btn" value="PLDT Inc." displayexp="sstr(userAttr(&quot;code&quot;), &quot;cal-code cal-code-&quot; + userAttr(&quot;code&quot;)) + text">
+                  <cl:attribute name="code" value="WED"/>
+                  <cl:verticaldata std:sid="v-data-1bd38f1f" width="100px" height="34px" autosize="none"/>
+                </cl:button>
+                <cl:button std:sid="button-34920fbd" class="cal-item-btn" value="Globe Telecom, Inc." displayexp="sstr(userAttr(&quot;code&quot;), &quot;cal-code cal-code-&quot; + userAttr(&quot;code&quot;)) + text">
+                  <cl:attribute name="code" value="SRL"/>
+                  <cl:verticaldata std:sid="v-data-01f40072" width="100px" height="34px" autosize="none"/>
+                </cl:button>
+                <cl:verticallayout std:sid="v-layout-d462f5b5" scrollable="false" spacing="8" leftmargin="12" rightmargin="12" topmargin="12" bottommargin="12"/>
+              </cl:group>
+              <cl:group std:sid="group-61f89aea" class="cal-date-card">
+                <cl:attribute name="date" value="2026-08-05"/>
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:verticaldata std:sid="v-data-63a6f8ad" width="292px" height="382px" autosize="height"/>
+                <cl:group std:sid="group-d390afd2">
+                  <cl:verticaldata std:sid="v-data-41ff8887" width="100px" height="20px" autosize="none"/>
+                  <cl:output std:sid="output-6e4a0880" class="cal-date-text" value="Wed, 5 August, 2026">
+                    <cl:formdata std:sid="f-data-ea7ba67c" valign="FILL" row="0" col="0"/>
+                  </cl:output>
+                  <cl:output std:sid="output-456da36c" class="cal-date-count" value="11">
+                    <cl:formdata std:sid="f-data-20e8b9ae" valign="FILL" row="0" col="1"/>
+                  </cl:output>
+                  <cl:formlayout std:sid="f-layout-c7f694a8" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="20" unit="PIXEL"/>
+                    <cl:columns length="1" unit="FRACTION"/>
+                    <cl:columns length="40" unit="PIXEL"/>
+                  </cl:formlayout>
+                </cl:group>
+                <cl:button std:sid="button-e3cf3478" class="cal-item-btn" value="Globe Telecom, Inc." displayexp="sstr(userAttr(&quot;code&quot;), &quot;cal-code cal-code-&quot; + userAttr(&quot;code&quot;)) + text">
+                  <cl:attribute name="code" value="SRL"/>
+                  <cl:verticaldata std:sid="v-data-62554017" width="100px" height="34px" autosize="none"/>
+                </cl:button>
+                <cl:button std:sid="button-cdf83fd9" class="cal-item-btn" value="Jollibee Foods Corporation" displayexp="sstr(userAttr(&quot;code&quot;), &quot;cal-code cal-code-&quot; + userAttr(&quot;code&quot;)) + text">
+                  <cl:attribute name="code" value="PD"/>
+                  <cl:verticaldata std:sid="v-data-89e60f21" width="100px" height="34px" autosize="none"/>
+                </cl:button>
+                <cl:button std:sid="button-0402362d" class="cal-item-btn" value="Puregold Price Club, Inc." displayexp="sstr(userAttr(&quot;code&quot;), &quot;cal-code cal-code-&quot; + userAttr(&quot;code&quot;)) + text">
+                  <cl:attribute name="code" value="PD"/>
+                  <cl:verticaldata std:sid="v-data-53c9efc6" width="100px" height="34px" autosize="none"/>
+                </cl:button>
+                <cl:button std:sid="button-d892aa68" class="cal-item-btn" value="BDO Unibank, Inc." displayexp="sstr(userAttr(&quot;code&quot;), &quot;cal-code cal-code-&quot; + userAttr(&quot;code&quot;)) + text">
+                  <cl:attribute name="code" value="OFE"/>
+                  <cl:verticaldata std:sid="v-data-bfcc8c92" width="100px" height="34px" autosize="none"/>
+                </cl:button>
+                <cl:button std:sid="button-8344b161" class="cal-item-btn" value="SM Investments Corporation" displayexp="sstr(userAttr(&quot;code&quot;), &quot;cal-code cal-code-&quot; + userAttr(&quot;code&quot;)) + text">
+                  <cl:attribute name="code" value="OFS"/>
+                  <cl:verticaldata std:sid="v-data-03485a1c" width="100px" height="34px" autosize="none"/>
+                </cl:button>
+                <cl:button std:sid="button-292be01e" class="cal-item-btn" value="Ayala Land, Inc." displayexp="sstr(userAttr(&quot;code&quot;), &quot;cal-code cal-code-&quot; + userAttr(&quot;code&quot;)) + text">
+                  <cl:attribute name="code" value="EDD"/>
+                  <cl:verticaldata std:sid="v-data-4fc2d031" width="100px" height="34px" autosize="none"/>
+                </cl:button>
+                <cl:button std:sid="button-c4188522" class="cal-item-btn" value="Security Bank Corporation" displayexp="sstr(userAttr(&quot;code&quot;), &quot;cal-code cal-code-&quot; + userAttr(&quot;code&quot;)) + text">
+                  <cl:attribute name="code" value="STD"/>
+                  <cl:verticaldata std:sid="v-data-1c25f6aa" width="100px" height="34px" autosize="none"/>
+                </cl:button>
+                <cl:button std:sid="button-f76fdc6c" class="cal-item-btn" value="Manila Electric Company" displayexp="sstr(userAttr(&quot;code&quot;), &quot;cal-code cal-code-&quot; + userAttr(&quot;code&quot;)) + text">
+                  <cl:attribute name="code" value="EOE"/>
+                  <cl:verticaldata std:sid="v-data-369aad6b" width="100px" height="34px" autosize="none"/>
+                </cl:button>
+                <cl:verticallayout std:sid="v-layout-d5bd514d" scrollable="false" spacing="8" leftmargin="12" rightmargin="12" topmargin="12" bottommargin="12"/>
+              </cl:group>
+              <cl:group std:sid="group-d49bb89d" class="cal-date-card">
+                <cl:attribute name="date" value="2026-08-07"/>
+                <cl:attribute name="needs-auto-height" value="true"/>
+                <cl:verticaldata std:sid="v-data-4bb91b38" width="264px" height="128px" autosize="height"/>
+                <cl:group std:sid="group-4443b821">
+                  <cl:verticaldata std:sid="v-data-f4d9619a" width="100px" height="20px" autosize="none"/>
+                  <cl:output std:sid="output-287bc52c" class="cal-date-text" value="Fri, 7 August, 2026">
+                    <cl:formdata std:sid="f-data-264ddb93" valign="FILL" row="0" col="0"/>
+                  </cl:output>
+                  <cl:output std:sid="output-b972199d" class="cal-date-count" value="2">
+                    <cl:formdata std:sid="f-data-d2c6098c" valign="FILL" row="0" col="1"/>
+                  </cl:output>
+                  <cl:formlayout std:sid="f-layout-34e65cd1" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                    <cl:rows length="20" unit="PIXEL"/>
+                    <cl:columns length="1" unit="FRACTION"/>
+                    <cl:columns length="40" unit="PIXEL"/>
+                  </cl:formlayout>
+                </cl:group>
+                <cl:button std:sid="button-c6f8d204" class="cal-item-btn" value="BDO Unibank, Inc." displayexp="sstr(userAttr(&quot;code&quot;), &quot;cal-code cal-code-&quot; + userAttr(&quot;code&quot;)) + text">
+                  <cl:attribute name="code" value="OFE"/>
+                  <cl:verticaldata std:sid="v-data-61f773fe" width="100px" height="34px" autosize="none"/>
+                </cl:button>
+                <cl:button std:sid="button-9a4a3940" class="cal-item-btn" value="SM Investments Corporation" displayexp="sstr(userAttr(&quot;code&quot;), &quot;cal-code cal-code-&quot; + userAttr(&quot;code&quot;)) + text">
+                  <cl:attribute name="code" value="OFS"/>
+                  <cl:verticaldata std:sid="v-data-e1df1aa5" width="100px" height="34px" autosize="none"/>
+                </cl:button>
+                <cl:verticallayout std:sid="v-layout-c458f484" scrollable="false" spacing="8" leftmargin="12" rightmargin="12" topmargin="12" bottommargin="12"/>
+              </cl:group>
+              <cl:verticallayout std:sid="v-layout-80b7c750" scrollable="true" spacing="12" leftmargin="12" rightmargin="12" topmargin="12" bottommargin="12"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-0fdeae9c" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="46" unit="PIXEL"/>
+              <cl:rows length="1" unit="FRACTION" autoSizing="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-a06e4220" scrollable="false" hspace="20px" vspace="20px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:rows length="1" unit="FRACTION" autoSizing="false" shadetype="NONE" shadecolor="transparent" minlength="744" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION" minlength="938"/>
+            <cl:columns length="320" unit="PIXEL"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-8ad7b991" id="grpEvent" class="cal-label-pop" visible="false">
+          <cl:formdata std:sid="f-data-e9ac57b6" row="1" col="0"/>
+          <cl:output std:sid="output-953ac8ab" class="cal-label-title" value="Event Labels">
+            <cl:formdata std:sid="f-data-a6b76af4" row="0" col="0"/>
+          </cl:output>
+          <cl:output std:sid="output-16a8ba2d" class="cal-label-desc" value="Deselect a label to hide items from the calendar and list.">
+            <cl:formdata std:sid="f-data-1f73f2f2" topSpacing="4.0" row="1" col="0"/>
+          </cl:output>
+          <cl:checkbox std:sid="c-box-be6017b4" id="cbxAllLabels" class="cal-label-all" value="true" falsevalue="false" text="Select All">
+            <cl:listener std:sid="listener-e99ffa4b" name="value-change" handler="onCbxAllLabelsValueChange"/>
+            <cl:formdata std:sid="f-data-165ee99a" topSpacing="12.0" row="2" col="0"/>
+          </cl:checkbox>
+          <cl:output std:sid="output-985a8c1d" class="cal-label-divider">
+            <cl:formdata std:sid="f-data-26a349ac" topSpacing="12.0" row="3" col="0"/>
+          </cl:output>
+          <cl:checkboxgroup std:sid="cb-group-451d266d" id="cbgLabels" class="cal-label-list" colcount="2" hspacing="20" vspacing="14" displayexp="sstr(value, &quot;cal-code cal-code-&quot; + value) + label">
+            <cl:listener std:sid="listener-372bb7c8" name="selection-change" handler="onCbgLabelsSelectionChange"/>
+            <cl:formdata std:sid="f-data-5c5174b3" topSpacing="12.0" row="4" col="0"/>
+            <cl:item std:sid="item-1fe1d131" label="Analysts' Briefing" value="ABD"/>
+            <cl:item std:sid="item-6bc1e096" label="Cash Ex-Date" value="CD"/>
+            <cl:item std:sid="item-3d57de80" label="Correspondence Deadline" value="CDL"/>
+            <cl:item std:sid="item-4823fff8" label="ETF Dividend Ex-Date" value="EDD"/>
+            <cl:item std:sid="item-ef9ee51a" label="ETF Offer End" value="EOE"/>
+            <cl:item std:sid="item-66b360e8" label="ETF Offer Start" value="EOS"/>
+            <cl:item std:sid="item-028ff41f" label="Listing Date" value="LD"/>
+            <cl:item std:sid="item-db4ec1e8" label="Offer End" value="OFE"/>
+            <cl:item std:sid="item-91c073e7" label="Offer Start" value="OFS"/>
+            <cl:item std:sid="item-7cb66b38" label="Property Ex-Date" value="PD"/>
+            <cl:item std:sid="item-14163eb9" label="SRO End" value="SRE"/>
+            <cl:item std:sid="item-7e16037a" label="SRO Ex-Date" value="SRO"/>
+            <cl:item std:sid="item-d26b9b44" label="SRO Listing" value="SRL"/>
+            <cl:item std:sid="item-77b3d1d2" label="SRO Start" value="SRS"/>
+            <cl:item std:sid="item-8695d6c9" label="Stock Ex-Date" value="STD"/>
+            <cl:item std:sid="item-7dd07969" label="Stockholders' Meeting" value="SMD"/>
+            <cl:item std:sid="item-f9843bb9" label="Warrant Exp Date" value="WED"/>
+            <cl:value>ABD</cl:value>
+            <cl:value>CD</cl:value>
+            <cl:value>CDL</cl:value>
+            <cl:value>EDD</cl:value>
+            <cl:value>EOE</cl:value>
+            <cl:value>EOS</cl:value>
+            <cl:value>LD</cl:value>
+            <cl:value>OFE</cl:value>
+            <cl:value>OFS</cl:value>
+            <cl:value>PD</cl:value>
+            <cl:value>SRE</cl:value>
+            <cl:value>SRO</cl:value>
+            <cl:value>SRL</cl:value>
+            <cl:value>SRS</cl:value>
+            <cl:value>STD</cl:value>
+            <cl:value>SMD</cl:value>
+            <cl:value>WED</cl:value>
+          </cl:checkboxgroup>
+          <cl:formlayout std:sid="f-layout-1b4730d4" scrollable="false" hspace="0px" vspace="0px" top-margin="16px" right-margin="16px" bottom-margin="16px" left-margin="16px">
+            <cl:rows length="16" unit="PIXEL"/>
+            <cl:rows length="18" unit="PIXEL"/>
+            <cl:rows length="28" unit="PIXEL"/>
+            <cl:rows length="13" unit="PIXEL"/>
+            <cl:rows length="1" unit="FRACTION"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-715306ac" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:rows length="300" unit="PIXEL" hidden="true"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-de80b983" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="1" unit="FRACTION"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-2249942f" scrollable="true" hspace="0px" vspace="0px">
+      <cl:rows length="48" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      <cl:rows length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent" minlength="848"/>
+      <cl:columns length="1" unit="FRACTION" minlength="1326"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

@@ -44,10 +44,26 @@ var HEADER_UTILS_SPACING_MOBILE = 12;
 /** 본문 그룹 (좌측 메뉴 / 중앙 영역이 놓인 그룹). 모바일 메뉴가 떠 있어도 참조할 수 있도록 load 시 보관 */
 var mcBody = null;
 
+/** 헤더의 설정 버튼(btnSettings)을 누르면 중앙 영역에 여는 화면 (System Configuration) */
+var SETTINGS_APP_ID = "app/pb/management/new4/MGT-CON-01-00_Supplemental_SystemConfiguration_List";
+
+/** 헤더 팝업(알림 grpNotification / 사용자 프로필 grpProfile) 크기 / 위치 — 헤더(56px) 바로 아래, 누른 버튼의 오른쪽 끝에 맞춰 띄움 */
+var NOTI_WIDTH = 380;
+var NOTI_HEIGHT = 510;
+var PROFILE_WIDTH = 320;
+/** 프로필 팝업은 높이를 고정하지 않고 안쪽 내용 높이만큼 (doOpenPopover 의 높이를 비우면 자동) */
+var POPOVER_TOP = 56;
+/** 헤더 팝업 좌우 최소 여백 (화면이 좁을 때 팝업 폭을 줄이는 기준) */
+var POPOVER_EDGE_GAP = 8;
+/** 높이 자동일 때 안쪽 내용 아래에 더하는 값 — 팝업 아래쪽 안쪽 여백(grpProfile 레이아웃 bottommargin 20) + 테두리 위아래 2px */
+var POPOVER_AUTO_HEIGHT_EXTRA = 22;
+
 /** 모바일 스크린 여부 */
 var mbMobile = false;
 /** 모바일에서 최상단에 떠 있는 패널 정보 {panel, parent, index, constraint, dim} (닫을 때 원래 위치로 복원). 없으면 null — 한 번에 하나만 열림 */
 var moMobilePanel = null;
+/** 떠 있는 헤더 팝업 정보 {pop, parent, index, constraint, dim} (닫을 때 원래 위치로 복원). 닫혀 있으면 null — 한 번에 하나만 열림 */
+var moPopover = null;
 
 
 /*******************************************************************************
@@ -96,6 +112,25 @@ function doGetAppId(psPagePath) {
 }
 
 /**
+ * 화면(앱 ID)을 중앙 영역의 임베디드 앱에 로드한다.
+ * 모바일 메뉴가 떠 있으면 부모가 달라지므로 본문 그룹은 doGetBody() 로 가져온다.
+ * @param {String} psAppId 로드할 화면의 앱 ID (.clx 제외)
+ * @return {Boolean} 로드를 시작했으면 true, 앱 ID 가 없거나 임베디드 앱을 못 찾으면 false
+ */
+function doLoadContent(psAppId) {
+	if (!psAppId) return false;
+	
+	var vcEmbeddedApp = doFindContentApp(doGetBody());
+	if (!vcEmbeddedApp) return false;
+	
+	cpr.core.App.load(psAppId, function(/* cpr.core.App */ loadedApp) {
+		vcEmbeddedApp.app = loadedApp;
+		vcEmbeddedApp.redraw();
+	});
+	return true;
+}
+
+/**
  * 좌측 메뉴 패널의 현재 접힘 상태에 맞춰 본문 영역의 컬럼 폭을 갱신한다.
  * @param {cpr.controls.Container} pcBody 좌측 패널, 중앙 영역이 놓인 본문 그룹
  */
@@ -124,7 +159,7 @@ function doGetBody() {
 
 /**
  * 스크린(PC/태블릿 ↔ 모바일)에 맞춰 헤더와 좌/우 패널의 구성을 바꾼다.
- * - 모바일: 헤더의 햄버거(btnMobileMenuOpen) 표시, 인사말(optUserName) 숨김, 우측 아이콘 간격(grpHeaderUtils) 12px,
+ * - 모바일: 헤더의 햄버거(btnMobileMenuOpen) 표시, 인사말(btnUserName) 숨김, 우측 아이콘 간격(grpHeaderUtils) 12px,
  *           본문의 좌측 메뉴(grpSidenav) 칸 숨김 (패널은 햄버거 버튼을 누르면 최상단에 뜸),
  *           메뉴 패널 상단은 접기 버튼(btnSidenavFold) 대신 닫기 버튼(btnMobileMenuClose) 표시
  * - PC/태블릿: 위의 반대. 모바일 패널이 떠 있으면 먼저 닫는다.
@@ -133,10 +168,11 @@ function doGetBody() {
 function doApplyMobileLayout(pbMobile) {
 	mbMobile = pbMobile;
 	
+	doClosePopover();
 	if (!pbMobile) doCloseMobilePanel();
 	
 	app.lookup("grpLogoWrap").getLayout().setColumnVisible(0, pbMobile);
-	app.lookup("optUserName").visible = !pbMobile;
+	app.lookup("btnUserName").visible = !pbMobile;
 	app.lookup("grpHeaderUtils").getLayout().horizontalSpacing = pbMobile ? HEADER_UTILS_SPACING_MOBILE : HEADER_UTILS_SPACING;
 	app.lookup("btnSidenavFold").visible = !pbMobile;
 	app.lookup("btnMobileMenuClose").visible = pbMobile;
@@ -191,6 +227,112 @@ function doCloseMobilePanel() {
 	app.getContainer().removeChild(voInfo.dim, true);
 }
 
+/**
+ * 헤더 팝업(알림 / 사용자 프로필)을 헤더 바로 아래(top 56px)에 띄운다. (누른 버튼의 오른쪽 끝에 맞춤)
+ * 뒤에 투명한 바탕을 깔아 팝업 바깥을 누르면 닫히게 하고, 닫을 때 원래 위치로 되돌린다.
+ * 다른 팝업이 이미 떠 있으면 먼저 닫는다.
+ * 높이(pnHeight)를 주지 않으면 안쪽 내용 높이만큼 자동으로 맞춘다. (floatControl 은 높이를 직접 지정해야 하므로,
+ * 우선 띄운 뒤 안쪽 내용의 실제 높이를 재서 다시 지정한다)
+ * @param {cpr.controls.Container} pcPop 띄울 팝업 (grpNotification / grpProfile)
+ * @param {cpr.controls.Button} pcButton 누른 헤더 버튼 (btnNotification / btnUserName)
+ * @param {Number} pnWidth 팝업 폭. null 이면 폭을 고정하지 않고 화면 좌우(POPOVER_EDGE_GAP 여백)에 맞춤(1fr)
+ * @param {Number} [pnHeight] 팝업 높이. 없으면 내용 높이에 맞춤
+ */
+function doOpenPopover(pcPop, pcButton, pnWidth, pnHeight) {
+	if (moPopover) doClosePopover();
+	if (pcPop.isFloated()) return;
+	
+	var vcParent = pcPop.getParent();
+	var vcDim = new cpr.controls.Container();
+	vcDim.setLayout(new cpr.controls.layouts.XYLayout());
+	vcDim.addEventListener("click", doClosePopover);
+	
+	moPopover = {
+		pop: pcPop,
+		parent: vcParent,
+		index: vcParent.getChildren().indexOf(pcPop),
+		constraint: vcParent.getConstraint(pcPop),
+		dim: vcDim
+	};
+	
+	var voBtn = pcButton.getActualRect();
+	var voApp = app.getContainer().getActualRect();
+	var vbFluidWidth = (pnWidth === undefined || pnWidth === null);
+	var vnWidth = vbFluidWidth ? 0 : Math.min(pnWidth, voApp.width - POPOVER_EDGE_GAP * 2);
+	var vnMaxHeight = voApp.height - POPOVER_TOP - POPOVER_EDGE_GAP;
+	var vbAutoHeight = (pnHeight === undefined || pnHeight === null);
+	
+	var voConstraint = {
+		top: POPOVER_TOP + "px",
+		/* 자동 높이일 때는 우선 화면에 들어가는 최대 높이로 띄운 뒤 내용 높이로 줄인다 */
+		height: (vbAutoHeight ? vnMaxHeight : pnHeight) + "px"
+	};
+	if (vbFluidWidth) {
+		/* 폭 자동(1fr) — 좌우를 화면 가장자리 여백에 붙임 */
+		voConstraint.left = POPOVER_EDGE_GAP + "px";
+		voConstraint.right = POPOVER_EDGE_GAP + "px";
+	} else {
+		voConstraint.left = Math.max(POPOVER_EDGE_GAP, voBtn.left - voApp.left + voBtn.width - vnWidth) + "px";
+		voConstraint.width = vnWidth + "px";
+	}
+	
+	pcPop.visible = true;
+	app.floatControl(vcDim, {
+		top: "0px",
+		right: "0px",
+		bottom: "0px",
+		left: "0px"
+	});
+	app.floatControl(pcPop, voConstraint);
+	
+	if (vbAutoHeight) {
+		/* 줄이는 동안 팝업이 크게 보였다 줄어드는 깜빡임이 없도록 잠시 투명하게 */
+		pcPop.style.css("opacity", "0");
+		cpr.core.DeferredUpdateManager.INSTANCE.asyncExec(function() {
+			doFitPopoverHeight(pcPop, voConstraint, vnMaxHeight);
+		});
+	}
+}
+
+/**
+ * 떠 있는 팝업의 높이를 안쪽 내용의 실제 높이에 맞춘다. (내용이 화면보다 길면 화면에 들어가는 최대 높이까지만)
+ * @param {cpr.controls.Container} pcPop 떠 있는 팝업
+ * @param {Object} poConstraint 띄울 때 사용한 위치/크기
+ * @param {Number} pnMaxHeight 화면에 들어가는 최대 높이
+ */
+function doFitPopoverHeight(pcPop, poConstraint, pnMaxHeight) {
+	/* 그 사이에 팝업이 닫혔다면 아무것도 하지 않음 */
+	if (!moPopover || moPopover.pop !== pcPop) return;
+	
+	var vnTop = pcPop.getActualRect().top;
+	var vnBottom = 0;
+	pcPop.getChildren().forEach(function(pcChild) {
+		if (!pcChild.visible) return;
+		var voRect = pcChild.getActualRect();
+		vnBottom = Math.max(vnBottom, voRect.top + voRect.height - vnTop);
+	});
+	
+	/* 내용을 못 잰 경우(0)에는 최대 높이를 그대로 둠 */
+	var vnHeight = vnBottom > 0 ? Math.min(vnBottom + POPOVER_AUTO_HEIGHT_EXTRA, pnMaxHeight) : pnMaxHeight;
+	poConstraint.height = vnHeight + "px";
+	app.floatControl(pcPop, poConstraint);
+	pcPop.style.css("opacity", "1");
+}
+
+/**
+ * 떠 있는 헤더 팝업을 닫는다: 팝업은 원래 칸으로 되돌려 숨기고, 바탕은 없앤다. (떠 있지 않으면 아무것도 하지 않음)
+ */
+function doClosePopover() {
+	if (!moPopover) return;
+	
+	var voInfo = moPopover;
+	moPopover = null;
+	
+	voInfo.pop.visible = false;
+	voInfo.parent.insertChild(voInfo.index, voInfo.pop, voInfo.constraint);
+	app.getContainer().removeChild(voInfo.dim, true);
+}
+
 /** 모바일에서 좌측 메뉴 패널을 최상단에 띄운다. */
 function doOpenMobileMenu() {
 	doOpenMobilePanel(app.lookup("grpSidenav"), {
@@ -234,6 +376,45 @@ function onBtnMobileMenuOpenClick(e) {
 }
 
 /*
+ * 헤더의 알림 버튼(btnNotification)에서 click 이벤트 발생 시 호출.
+ * 알림 팝업이 닫혀 있으면 열고, 떠 있으면 닫는다.
+ */
+function onBtnNotificationClick(e) {
+	if (moPopover) {
+		doClosePopover();
+		return;
+	}
+	/* 모바일에서는 폭을 고정(380)하지 않고 화면 좌우에 맞춤(1fr) */
+	doOpenPopover(app.lookup("grpNotification"), e.control, mbMobile ? null : NOTI_WIDTH, NOTI_HEIGHT);
+}
+
+/*
+ * 알림 팝업 상단의 닫기 버튼(btnNotiClose)에서 click 이벤트 발생 시 호출.
+ */
+function onBtnNotiCloseClick(e) {
+	doClosePopover();
+}
+
+/*
+ * 헤더의 사용자 이름 버튼(btnUserName)에서 click 이벤트 발생 시 호출.
+ * 사용자 프로필 팝업이 닫혀 있으면 열고, 떠 있으면 닫는다.
+ */
+function onBtnUserNameClick(e) {
+	if (moPopover) {
+		doClosePopover();
+		return;
+	}
+	doOpenPopover(app.lookup("grpProfile"), e.control, PROFILE_WIDTH);
+}
+
+/*
+ * 사용자 프로필 팝업 상단의 닫기 버튼(btnProfileClose)에서 click 이벤트 발생 시 호출.
+ */
+function onBtnProfileCloseClick(e) {
+	doClosePopover();
+}
+
+/*
  * 메뉴 패널 상단의 닫기 버튼(btnMobileMenuClose)에서 click 이벤트 발생 시 호출. (모바일에서만 보임)
  */
 function onBtnMobileMenuCloseClick(e) {
@@ -262,19 +443,35 @@ function onBodyLoad(e) {
  * 선택한 메뉴의 화면(page_path)을 중앙 영역의 임베디드 앱에 로드한다.
  */
 function onSnavMenuItemClick(e) {
-	var vsAppId = doGetAppId(e.item.row.getValue("page_path"));
-	if (!vsAppId) return;
-	
-	/* 모바일 메뉴가 떠 있으면 부모가 달라지므로 본문 그룹은 doGetBody() 로 가져온다 */
-	var vcBody = doGetBody();
-	var vcEmbeddedApp = doFindContentApp(vcBody);
-	if (!vcEmbeddedApp) return;
-	
-	cpr.core.App.load(vsAppId, function(/* cpr.core.App */ loadedApp) {
-		vcEmbeddedApp.app = loadedApp;
-		vcEmbeddedApp.redraw();
-	});
+	if (!doLoadContent(doGetAppId(e.item.row.getValue("page_path")))) return;
 	
 	/* 모바일에서는 화면을 열면 메뉴를 닫는다 */
 	if (mbMobile) doCloseMobilePanel();
+}
+
+/*
+ * "Settings" 버튼(btnSettings)에서 click 이벤트 발생 시 호출.
+ * System Configuration 화면(SETTINGS_APP_ID)을 중앙 영역의 임베디드 앱에 연다.
+ */
+function onBtnSettingsClick(e) {
+	doLoadContent(SETTINGS_APP_ID);
+	
+	/* 모바일에서 메뉴가 떠 있었다면 화면을 열면서 닫는다 */
+	if (mbMobile) doCloseMobilePanel();
+}
+
+/*
+ * "Change Password" 버튼(btnChangePw)에서 click 이벤트 발생 시 호출.
+ * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+ */
+function onBtnChangePwClick(e) {
+	var btnChangePw = e.control;
+	
+	util.Dialog.open(app, "app/pb/MGT-MYP-02-00_ChangePassword", 600, -1, function() {
+		
+	}, {
+		
+	}, {
+		
+	});
 }

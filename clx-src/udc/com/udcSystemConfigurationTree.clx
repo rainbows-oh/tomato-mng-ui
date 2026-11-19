@@ -1,0 +1,400 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-820d18c2" version="1.0.6209">
+  <head std:sid="head-9e259654">
+    <std:metadata>
+      <std:property key="template-file" value="templates/management/CompanyName_조회_팝업.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-1b3a4f6a" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-fedfb313" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-81fdab5e" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-8d15f502"/>
+    <cl:appspec title="System Configuration 트리 아이템"/>
+  </head>
+  <body std:sid="body-dcabdc13" style="top:0px; left:0px; width:1200px; height:300px;" class="menu-tree">
+    <cl:group std:sid="group-7184d454" id="grpTree" class="menu-group">
+      <cl:verticaldata std:sid="v-data-95bd447e" width="934px" height="394px" autosize="height"/>
+      <cl:group std:sid="group-84e61ceb" id="grpParentMenu" class="menu-parent" clipcontent="false">
+        <cl:attribute name="tablet-h-spacing" value=""/>
+        <cl:attribute name="mobile-column-count" value="3"/>
+        <cl:attribute name="mobile-h-spacing" value="6"/>
+        <cl:verticaldata std:sid="v-data-62f746b4" width="934px" height="58px" autosize="height"/>
+        <cl:button std:sid="button-4b2d451c" id="btnExp" class="btn-tree-toggle" fieldLabel="Collapse Disclosures" value="" icon="0">
+          <cl:listener std:sid="listener-6f2c8d14" name="click" handler="onBtnExpClick"/>
+          <cl:formdata std:sid="f-data-b80469b8" valign="FILL" width="20" height="20" topSpacing="2.0" row="0" col="0"/>
+        </cl:button>
+        <cl:group std:sid="group-36824dd6" class="menu-title">
+          <cl:formdata std:sid="f-data-b61e6ba5" width="100" height="38" row="0" col="1"/>
+          <cl:output std:sid="output-2399d29d" class="menu-name" value="Disclosures">
+            <cl:verticaldata std:sid="v-data-6ae12c97" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-1b2ba06b" class="menu-desc" value="Disclosure worklist and related tools">
+            <cl:verticaldata std:sid="v-data-ec7ac8ad" width="100px" height="16px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-f5b19f71" scrollable="false" spacing="2"/>
+        </cl:group>
+        <cl:group std:sid="group-6b255122" class="btn-utils" clipcontent="false">
+          <cl:formdata std:sid="f-data-6d13e1e7" row="0" col="2"/>
+          <cl:button std:sid="button-bac1c861" class="icon btn-edit" fieldLabel="Edit Disclosures" value="Button" icon="0">
+            <cl:flowlayoutdata std:sid="f-data-6acdcc85" width="16px" height="16px" autosize="none"/>
+          </cl:button>
+          <cl:button std:sid="button-745571ff" class="icon btn-add" fieldLabel="Add child to Disclosures" value="Button" icon="0">
+            <cl:flowlayoutdata std:sid="f-data-d2adf4b5" width="16px" height="16px" autosize="none"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-f252aad6" hspacing="10" halign="right"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-6ca4a1a9" scrollable="false" hspace="8px" vspace="0px">
+          <cl:rows length="38" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="20" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="80" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-2248cd70" id="grpChildMenu" class="menu-children">
+        <cl:verticaldata std:sid="v-data-dc36fc90" width="934px" height="336px" autosize="height"/>
+        <cl:group std:sid="group-2052e52b" class="menu-item">
+          <cl:attribute name="mobile-column-count" value="2"/>
+          <cl:attribute name="mobile-h-spacing" value="6"/>
+          <cl:verticaldata std:sid="v-data-4f0f4c3c" width="914px" height="56px" autosize="height"/>
+          <cl:group std:sid="group-933747ce">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-90d53f87" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:group std:sid="group-37b00307" class="menu-info">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-e500bddf" width="100" height="36" row="0" col="0"/>
+              <cl:output std:sid="output-778e6176" class="menu-tit" value="Worklist">
+                <cl:verticaldata std:sid="v-data-5e0e14ca" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-da2ec003" class="menu-desc" value="Disclosure worklist">
+                <cl:verticaldata std:sid="v-data-54a5054c" width="100px" height="16px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-281fa6f5" scrollable="false" spacing="2"/>
+            </cl:group>
+            <cl:output std:sid="output-953a5154" class="menu-code" value="DISCLOSURES-WORKLIST">
+              <cl:formdata std:sid="f-data-a84567f9" valign="CENTER" row="0" col="1"/>
+            </cl:output>
+            <cl:formlayout std:sid="f-layout-78238890" scrollable="false" hspace="8px" vspace="2px">
+              <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="200" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-90ae6ab9" class="btn-utils">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="mobile-vertical-margin" value="0"/>
+            <cl:formdata std:sid="f-data-f7ee97b2" row="0" col="1" rowspan="1" colspan="1"/>
+            <cl:group std:sid="group-df64ae2b" clipcontent="false">
+              <cl:formdata std:sid="f-data-23266baf" row="0" col="0"/>
+              <cl:button std:sid="button-ef07f201" class="icon btn-edit" fieldLabel="Edit Worklist" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-38a6e4cb" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-b7704ea4" class="icon btn-add" fieldLabel="Add child to Worklist" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-69ca33f7" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-cdf186dd" class="icon btn-delete-red" fieldLabel="Delete Worklist" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-70c70cd7" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-463d0aed" hspacing="10" vspacing="0" halign="right"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-ae06e16d" scrollable="false" hspace="16px" vspace="2px" top-margin="1fr" bottom-margin="1fr">
+              <cl:rows length="16" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+              <cl:columns length="80" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-8c0a70a7" scrollable="false" hspace="8px" vspace="2px">
+            <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="80" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-4c83cf3b" class="menu-item">
+          <cl:attribute name="mobile-column-count" value="2"/>
+          <cl:attribute name="mobile-h-spacing" value="6"/>
+          <cl:verticaldata std:sid="v-data-169a73bf" width="914px" height="56px" autosize="height"/>
+          <cl:group std:sid="group-45ac16b9">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-0ce8fcc9" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:group std:sid="group-4c8edfa3" class="menu-info">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-0db317d9" width="100" height="36" row="0" col="0"/>
+              <cl:output std:sid="output-1dc02e27" class="menu-tit" value="Manual Disclosure">
+                <cl:verticaldata std:sid="v-data-b71ed78a" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-588efbce" class="menu-desc" value="Manual disclosure submissions">
+                <cl:verticaldata std:sid="v-data-939ae232" width="100px" height="16px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-e844c762" scrollable="false" spacing="2"/>
+            </cl:group>
+            <cl:output std:sid="output-c85990d2" class="menu-code" value="DISCLOSURES-EMERGENCY-SUB">
+              <cl:formdata std:sid="f-data-66c164e7" valign="CENTER" row="0" col="1"/>
+            </cl:output>
+            <cl:formlayout std:sid="f-layout-789c1af4" scrollable="false" hspace="8px" vspace="2px">
+              <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="200" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-ac8efe12" class="btn-utils">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="mobile-vertical-margin" value="0"/>
+            <cl:formdata std:sid="f-data-cdc83011" row="0" col="1" rowspan="1" colspan="1"/>
+            <cl:group std:sid="group-0d9782bf" clipcontent="false">
+              <cl:formdata std:sid="f-data-482c590e" row="0" col="0"/>
+              <cl:button std:sid="button-5796a670" class="icon btn-edit" fieldLabel="Edit Manual Disclosure" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-7777682c" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-a93258ef" class="icon btn-add" fieldLabel="Add child to Manual Disclosure" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-53a12945" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-0b80a255" class="icon btn-delete-red" fieldLabel="Delete Manual Disclosure" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-f2e91ac7" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-0f8a7abf" hspacing="10" vspacing="0" halign="right"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-c20dbc21" scrollable="false" hspace="16px" vspace="2px" top-margin="1fr" bottom-margin="1fr">
+              <cl:rows length="16" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+              <cl:columns length="80" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-d2840277" scrollable="false" hspace="8px" vspace="2px">
+            <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="80" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-5097c040" class="menu-item">
+          <cl:attribute name="mobile-column-count" value="2"/>
+          <cl:attribute name="mobile-h-spacing" value="6"/>
+          <cl:verticaldata std:sid="v-data-60ec6db2" width="914px" height="56px" autosize="height"/>
+          <cl:group std:sid="group-bbeeb636">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-a30f4300" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:group std:sid="group-b0992bcf" class="menu-info">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-5df6f817" width="100" height="36" row="0" col="0"/>
+              <cl:output std:sid="output-5e5c4176" class="menu-tit" value="Report Search">
+                <cl:verticaldata std:sid="v-data-03f84c48" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-c6a942d3" class="menu-desc" value="Search disclosure reports">
+                <cl:verticaldata std:sid="v-data-8c3f846c" width="100px" height="16px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-96d38ff5" scrollable="false" spacing="2"/>
+            </cl:group>
+            <cl:output std:sid="output-3da9d8c0" class="menu-code" value="DISCLOSURES-REPORT-SEARCH">
+              <cl:formdata std:sid="f-data-5a661477" valign="CENTER" row="0" col="1"/>
+            </cl:output>
+            <cl:formlayout std:sid="f-layout-525a56c9" scrollable="false" hspace="8px" vspace="2px">
+              <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="200" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-dd2ee150" class="btn-utils">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="mobile-vertical-margin" value="0"/>
+            <cl:formdata std:sid="f-data-c1cc0aff" row="0" col="1" rowspan="1" colspan="1"/>
+            <cl:group std:sid="group-90b401a6" clipcontent="false">
+              <cl:formdata std:sid="f-data-fb14628e" row="0" col="0"/>
+              <cl:button std:sid="button-3c3ae353" class="icon btn-edit" fieldLabel="Edit Report Search" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-3226db94" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-d419c772" class="icon btn-add" fieldLabel="Add child to Report Search" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-e46ed627" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-b9c8b9ff" class="icon btn-delete-red" fieldLabel="Delete Report Search" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-7a2a3b87" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-96f0da84" hspacing="10" vspacing="0" halign="right"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-1d33bc6d" scrollable="false" hspace="16px" vspace="2px" top-margin="1fr" bottom-margin="1fr">
+              <cl:rows length="16" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+              <cl:columns length="80" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-ccb2b416" scrollable="false" hspace="8px" vspace="2px">
+            <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="80" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-6ed91f2e" class="menu-item">
+          <cl:attribute name="mobile-column-count" value="2"/>
+          <cl:attribute name="mobile-h-spacing" value="6"/>
+          <cl:verticaldata std:sid="v-data-7ec0c922" width="914px" height="56px" autosize="height"/>
+          <cl:group std:sid="group-0c28cec1">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-89933837" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:group std:sid="group-0ded97bb" class="menu-info">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-baa2919c" width="100" height="36" row="0" col="0"/>
+              <cl:output std:sid="output-6be994f2" class="menu-tit" value="Template">
+                <cl:verticaldata std:sid="v-data-5e05c990" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-0b4702d2" class="menu-desc" value="Disclosure templates">
+                <cl:verticaldata std:sid="v-data-9ce4aa5f" width="100px" height="16px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-de27387c" scrollable="false" spacing="2"/>
+            </cl:group>
+            <cl:output std:sid="output-851bec1e" class="menu-code" value="DISCLOSURES-TEMPLATES">
+              <cl:formdata std:sid="f-data-862a73db" valign="CENTER" row="0" col="1"/>
+            </cl:output>
+            <cl:formlayout std:sid="f-layout-83229050" scrollable="false" hspace="8px" vspace="2px">
+              <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="200" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-68e58909" class="btn-utils">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="mobile-vertical-margin" value="0"/>
+            <cl:formdata std:sid="f-data-678537a3" row="0" col="1" rowspan="1" colspan="1"/>
+            <cl:group std:sid="group-84c4b877" clipcontent="false">
+              <cl:formdata std:sid="f-data-5ead703a" row="0" col="0"/>
+              <cl:button std:sid="button-ff53a46f" class="icon btn-edit" fieldLabel="Edit Template" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-e2ad0478" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-9514b7dd" class="icon btn-add" fieldLabel="Add child to Template" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-a6e0f3c0" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-e179f773" class="icon btn-delete-red" fieldLabel="Delete Template" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-6b4b76b0" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-64b93697" hspacing="10" vspacing="0" halign="right"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-b94722af" scrollable="false" hspace="16px" vspace="2px" top-margin="1fr" bottom-margin="1fr">
+              <cl:rows length="16" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+              <cl:columns length="80" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-d4351df4" scrollable="false" hspace="8px" vspace="2px">
+            <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="80" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-d4381551" class="menu-item">
+          <cl:attribute name="mobile-column-count" value="2"/>
+          <cl:attribute name="mobile-h-spacing" value="6"/>
+          <cl:verticaldata std:sid="v-data-7ac526d3" width="914px" height="56px" autosize="height"/>
+          <cl:group std:sid="group-ca3ab343">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-b47a5c1d" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:group std:sid="group-7582329f" class="menu-info">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-7a8d9ccd" width="100" height="36" row="0" col="0"/>
+              <cl:output std:sid="output-fc80fa6f" class="menu-tit" value="Structured Deadlines">
+                <cl:verticaldata std:sid="v-data-620602e0" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-45d28c06" class="menu-desc" value="Disclosure deadlines">
+                <cl:verticaldata std:sid="v-data-670c5891" width="100px" height="16px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-a386c4a7" scrollable="false" spacing="2"/>
+            </cl:group>
+            <cl:output std:sid="output-5eda7e46" class="menu-code" value="DISCLOSURES-DEADLINE">
+              <cl:formdata std:sid="f-data-00e287d7" valign="CENTER" row="0" col="1"/>
+            </cl:output>
+            <cl:formlayout std:sid="f-layout-38d889d2" scrollable="false" hspace="8px" vspace="2px">
+              <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="200" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-a398d022" class="btn-utils">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="mobile-vertical-margin" value="0"/>
+            <cl:formdata std:sid="f-data-84a67245" row="0" col="1" rowspan="1" colspan="1"/>
+            <cl:group std:sid="group-4372a2a7" clipcontent="false">
+              <cl:formdata std:sid="f-data-4f1eaccf" row="0" col="0"/>
+              <cl:button std:sid="button-4c8b1eb4" class="icon btn-edit" fieldLabel="Edit Structured Deadlines" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-20731ab2" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-0e3a655f" class="icon btn-add" fieldLabel="Add child to Structured Deadlines" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-547c17d3" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-ac9130f4" class="icon btn-delete-red" fieldLabel="Delete Structured Deadlines" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-6519a9d5" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-7e9bf77c" hspacing="10" vspacing="0" halign="right"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-ac333b68" scrollable="false" hspace="16px" vspace="2px" top-margin="1fr" bottom-margin="1fr">
+              <cl:rows length="16" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+              <cl:columns length="80" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-4495f8b4" scrollable="false" hspace="8px" vspace="2px">
+            <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="80" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-936b7ac2" class="menu-item">
+          <cl:attribute name="mobile-column-count" value="2"/>
+          <cl:attribute name="mobile-h-spacing" value="6"/>
+          <cl:verticaldata std:sid="v-data-baeebb48" width="914px" height="56px" autosize="height"/>
+          <cl:group std:sid="group-bb262a93">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-2fd7b23a" row="0" col="0" rowspan="1" colspan="1"/>
+            <cl:group std:sid="group-f910d68a" class="menu-info">
+              <cl:attribute name="needs-auto-height" value="true"/>
+              <cl:formdata std:sid="f-data-7592b89f" width="100" height="36" row="0" col="0"/>
+              <cl:output std:sid="output-09ff7f0c" class="menu-tit" value="Analytics">
+                <cl:verticaldata std:sid="v-data-8434d99c" width="100px" height="18px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-4eaf6d61" class="menu-desc" value="Disclosure analytics">
+                <cl:verticaldata std:sid="v-data-a9cc2ff7" width="100px" height="16px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-f0ae1284" scrollable="false" spacing="2"/>
+            </cl:group>
+            <cl:output std:sid="output-1b2410a6" class="menu-code" value="DISCLOSURES-ANALYTICS">
+              <cl:formdata std:sid="f-data-3418a2c5" valign="CENTER" row="0" col="1"/>
+            </cl:output>
+            <cl:formlayout std:sid="f-layout-307a6fc4" scrollable="false" hspace="8px" vspace="2px">
+              <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION"/>
+              <cl:columns length="200" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-03c472ca" class="btn-utils">
+            <cl:attribute name="mobile-column-count" value="1"/>
+            <cl:attribute name="mobile-vertical-margin" value="0"/>
+            <cl:formdata std:sid="f-data-cc86ba64" row="0" col="1" rowspan="1" colspan="1"/>
+            <cl:group std:sid="group-6c2386e5" clipcontent="false">
+              <cl:formdata std:sid="f-data-df88ae4d" row="0" col="0"/>
+              <cl:button std:sid="button-77dde229" class="icon btn-edit" fieldLabel="Edit Analytics" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-a227f039" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-ec925f09" class="icon btn-add" fieldLabel="Add child to Analytics" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-808578e6" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:button std:sid="button-c3dd75f6" class="icon btn-delete-red" fieldLabel="Delete Analytics" value="Button" icon="0">
+                <cl:flowlayoutdata std:sid="f-data-8b8c82f1" width="16px" height="16px" autosize="none"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-aa0336d9" hspacing="10" vspacing="0" halign="right"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-4ce15c61" scrollable="false" hspace="16px" vspace="2px" top-margin="1fr" bottom-margin="1fr">
+              <cl:rows length="16" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+              <cl:columns length="80" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-a16ec121" scrollable="false" hspace="8px" vspace="2px">
+            <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="80" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-2ba33d67" scrollable="false" spacing="0"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-c074a644" scrollable="false" spacing="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-6289bdee"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

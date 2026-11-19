@@ -1,0 +1,392 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-929bc1f5" version="1.0.6209">
+  <head std:sid="head-c0e22f2a">
+    <screen std:sid="screen-eaa7ba36" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-a0c8bebb" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-87e6c9cb" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-47f42e08">
+      <cl:dataset std:sid="d-set-a1c40001" id="dsList">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-a1c40100" name="username"/>
+          <cl:datacolumn std:sid="d-column-a1c40101" name="department"/>
+          <cl:datacolumn std:sid="d-column-a1c40102" name="avgTime"/>
+          <cl:datacolumn std:sid="d-column-a1c40103" name="cases"/>
+          <cl:datacolumn std:sid="d-column-a1c40104" name="newSubmission"/>
+          <cl:datacolumn std:sid="d-column-a1c40105" name="underReview"/>
+          <cl:datacolumn std:sid="d-column-a1c40106" name="forwarded"/>
+          <cl:datacolumn std:sid="d-column-a1c40107" name="forApproval"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="username"><![CDATA[Ana Reyes]]></cl:datavalue>
+            <cl:datavalue columnname="department"><![CDATA[Disclosure Department]]></cl:datavalue>
+            <cl:datavalue columnname="avgTime"><![CDATA[1d 4h 30m]]></cl:datavalue>
+            <cl:datavalue columnname="cases"><![CDATA[12 cases]]></cl:datavalue>
+            <cl:datavalue columnname="newSubmission"><![CDATA[4]]></cl:datavalue>
+            <cl:datavalue columnname="underReview"><![CDATA[6]]></cl:datavalue>
+            <cl:datavalue columnname="forwarded"><![CDATA[2]]></cl:datavalue>
+            <cl:datavalue columnname="forApproval"><![CDATA[3]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="username"><![CDATA[Marco Santos]]></cl:datavalue>
+            <cl:datavalue columnname="department"><![CDATA[Listings Department]]></cl:datavalue>
+            <cl:datavalue columnname="avgTime"><![CDATA[4h 30m]]></cl:datavalue>
+            <cl:datavalue columnname="cases"><![CDATA[8 cases]]></cl:datavalue>
+            <cl:datavalue columnname="newSubmission"><![CDATA[2]]></cl:datavalue>
+            <cl:datavalue columnname="underReview"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="forwarded"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="forApproval"><![CDATA[1]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="username"><![CDATA[Liza Cruz]]></cl:datavalue>
+            <cl:datavalue columnname="department"><![CDATA[Disclosure Department]]></cl:datavalue>
+            <cl:datavalue columnname="avgTime"><![CDATA[6h 30m]]></cl:datavalue>
+            <cl:datavalue columnname="cases"><![CDATA[15 cases]]></cl:datavalue>
+            <cl:datavalue columnname="newSubmission"><![CDATA[5]]></cl:datavalue>
+            <cl:datavalue columnname="underReview"><![CDATA[4]]></cl:datavalue>
+            <cl:datavalue columnname="forwarded"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="forApproval"><![CDATA[2]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="username"><![CDATA[Benito Garcia]]></cl:datavalue>
+            <cl:datavalue columnname="department"><![CDATA[CMIC]]></cl:datavalue>
+            <cl:datavalue columnname="avgTime"><![CDATA[45m]]></cl:datavalue>
+            <cl:datavalue columnname="cases"><![CDATA[4 cases]]></cl:datavalue>
+            <cl:datavalue columnname="newSubmission"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="underReview"><![CDATA[2]]></cl:datavalue>
+            <cl:datavalue columnname="forwarded"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="forApproval"><![CDATA[1]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="username"><![CDATA[Patricia Lim]]></cl:datavalue>
+            <cl:datavalue columnname="department"><![CDATA[Marketing Services Department]]></cl:datavalue>
+            <cl:datavalue columnname="avgTime"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="cases"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="newSubmission"><![CDATA[3]]></cl:datavalue>
+            <cl:datavalue columnname="underReview"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="forwarded"><![CDATA[2]]></cl:datavalue>
+            <cl:datavalue columnname="forApproval"><![CDATA[0]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="username"><![CDATA[Sofia Garcia]]></cl:datavalue>
+            <cl:datavalue columnname="department"><![CDATA[Trading Participant Department]]></cl:datavalue>
+            <cl:datavalue columnname="avgTime"><![CDATA[16h]]></cl:datavalue>
+            <cl:datavalue columnname="cases"><![CDATA[10 cases]]></cl:datavalue>
+            <cl:datavalue columnname="newSubmission"><![CDATA[2]]></cl:datavalue>
+            <cl:datavalue columnname="underReview"><![CDATA[5]]></cl:datavalue>
+            <cl:datavalue columnname="forwarded"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="forApproval"><![CDATA[2]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="username"><![CDATA[Diego Ramos]]></cl:datavalue>
+            <cl:datavalue columnname="department"><![CDATA[Disclosure Department]]></cl:datavalue>
+            <cl:datavalue columnname="avgTime"><![CDATA[-]]></cl:datavalue>
+            <cl:datavalue columnname="cases"><![CDATA[]]></cl:datavalue>
+            <cl:datavalue columnname="newSubmission"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="underReview"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="forwarded"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="forApproval"><![CDATA[1]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="username"><![CDATA[Hannah Ong]]></cl:datavalue>
+            <cl:datavalue columnname="department"><![CDATA[Listings Department]]></cl:datavalue>
+            <cl:datavalue columnname="avgTime"><![CDATA[2h 15m]]></cl:datavalue>
+            <cl:datavalue columnname="cases"><![CDATA[3 cases]]></cl:datavalue>
+            <cl:datavalue columnname="newSubmission"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="underReview"><![CDATA[0]]></cl:datavalue>
+            <cl:datavalue columnname="forwarded"><![CDATA[1]]></cl:datavalue>
+            <cl:datavalue columnname="forApproval"><![CDATA[0]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-959f0e43" class="analytics">
+    <cl:group std:sid="group-fa70224c" id="grp1" class="user-analytics">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:verticaldata std:sid="v-data-4b690f73" width="1024px" height="881px" autosize="height"/>
+      <cl:group std:sid="group-eac7e824" id="grp3" class="card">
+        <cl:attribute name="mobile-spacing" value="12"/>
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:verticaldata std:sid="v-data-2b4eb2d7" width="1024px" height="112px" autosize="height"/>
+        <cl:radiobutton std:sid="r-button-43603be9" id="rdb1">
+          <cl:verticaldata std:sid="v-data-d4ebe594" width="200px" height="20px" autosize="height"/>
+          <cl:item std:sid="item-daaad280" label="Monthly" value="value1"/>
+          <cl:item std:sid="item-f6508eda" label="Daily" value="value2"/>
+        </cl:radiobutton>
+        <cl:group std:sid="group-90a0118a" id="grp6">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-2e492a59" width="400px" height="36px" autosize="height"/>
+          <cl:combobox std:sid="c-box-66fb6583" id="cmb1">
+            <cl:formdata std:sid="f-data-21b53ab5" row="0" col="0"/>
+          </cl:combobox>
+          <cl:combobox std:sid="c-box-7ce969a6" id="cmb2">
+            <cl:formdata std:sid="f-data-5a39ddf3" row="0" col="1"/>
+          </cl:combobox>
+          <cl:combobox std:sid="c-box-b7d70d75" id="cmb4">
+            <cl:formdata std:sid="f-data-b1b956c7" row="0" col="2"/>
+          </cl:combobox>
+          <cl:combobox std:sid="c-box-3f264449" id="cmb3">
+            <cl:formdata std:sid="f-data-193c1f49" row="0" col="3"/>
+          </cl:combobox>
+          <cl:formlayout std:sid="f-layout-4892055e" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="36" unit="PIXEL" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="120" unit="PIXEL"/>
+            <cl:columns length="120" unit="PIXEL"/>
+            <cl:columns length="160" unit="PIXEL"/>
+            <cl:columns length="120" unit="PIXEL"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-ae84f01a" spacing="14"/>
+      </cl:group>
+      <cl:group std:sid="group-cc9f6002" id="grp4" class="card apt">
+        <cl:attribute name="mobile-column-count" value="1"/>
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:attribute name="mobile-v-spacing" value="12"/>
+        <cl:verticaldata std:sid="v-data-434f4743" width="1024px" height="437px" autosize="height"/>
+        <cl:output std:sid="output-b6e3e77e" id="opt20" class="font-heading fw-bold" value="Average Processing Time">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-b24ae2ac" row="0" col="0" rowspan="1" colspan="2"/>
+        </cl:output>
+        <cl:group std:sid="group-725a4aed" id="grp16">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-3df98a41" width="100" height="41" row="1" col="0" rowspan="1" colspan="1"/>
+          <cl:group std:sid="group-adbd11cd" id="grp2" class="left">
+            <cl:verticaldata std:sid="v-data-07181311" width="317px" height="134px" autosize="height"/>
+            <cl:output std:sid="output-dccb6a75" id="opt1" class="font-caption" value="Overall">
+              <cl:verticaldata std:sid="v-data-e63e86ef" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-b80e431c" id="opt2" class="tit" value="6h 8m">
+              <cl:verticaldata std:sid="v-data-032d96b8" width="100px" height="40px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-b6334566" id="opt3" class="font-caption" value="62 cases">
+              <cl:verticaldata std:sid="v-data-f85d8fa7" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-ba9b3240" spacing="6"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-a5e968b6"/>
+        </cl:group>
+        <cl:group std:sid="group-dbe4e109" id="grp7" class="right">
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-a28e0aff" width="100" height="-99" row="1" col="1"/>
+          <cl:group std:sid="group-a2e77842" id="grp8" class="list">
+            <cl:verticaldata std:sid="v-data-162d9fa3" width="633px" height="71px" autosize="height"/>
+            <cl:output std:sid="output-9bbe7f7c" id="opt4" class="tit" value="CMIC">
+              <cl:formdata std:sid="f-data-9f723ac3" row="0" col="0"/>
+            </cl:output>
+            <cl:group std:sid="group-e16e3807" id="grp9" class="stat">
+              <cl:formdata std:sid="f-data-7c806c88" width="100" height="31" row="0" col="1" rowspan="1" colspan="1"/>
+              <cl:output std:sid="output-6084db3e" id="opt5" class="time" value="3h">
+                <cl:verticaldata std:sid="v-data-aebc6bd5" width="120px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-1e0c5813" id="opt6" class="font-caption" value="6 cases">
+                <cl:verticaldata std:sid="v-data-06f06e71" width="120px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-85512ab2" spacing="2"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-6fcf63a1" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="120" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-09419df5" id="grp10" class="list">
+            <cl:verticaldata std:sid="v-data-b9d3ee50" width="633px" height="71px" autosize="height"/>
+            <cl:output std:sid="output-ed35faad" id="opt7" class="tit" value="Disclosure Department">
+              <cl:formdata std:sid="f-data-e44792de" row="0" col="0"/>
+            </cl:output>
+            <cl:group std:sid="group-ec003a47" id="grp11" class="stat">
+              <cl:formdata std:sid="f-data-a86db681" width="100" height="31" row="0" col="1" rowspan="1" colspan="1"/>
+              <cl:output std:sid="output-d3b94336" id="opt8" class="time" value="3h">
+                <cl:verticaldata std:sid="v-data-ca9e4a31" width="120px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-d7f637bf" id="opt9" class="font-caption" value="6 cases">
+                <cl:verticaldata std:sid="v-data-138f4efa" width="120px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-caba8e38" spacing="2"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-0b4992c0" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="120" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-fe22655c" id="grp12" class="list">
+            <cl:verticaldata std:sid="v-data-a9e5dff6" width="633px" height="71px" autosize="height"/>
+            <cl:output std:sid="output-d7d64f39" id="opt10" class="tit" value="Listings Department">
+              <cl:formdata std:sid="f-data-3a5ebc33" row="0" col="0"/>
+            </cl:output>
+            <cl:group std:sid="group-0da2e481" id="grp13" class="stat">
+              <cl:formdata std:sid="f-data-bac537be" width="100" height="31" row="0" col="1" rowspan="1" colspan="1"/>
+              <cl:output std:sid="output-d1717b50" id="opt11" class="time" value="3h">
+                <cl:verticaldata std:sid="v-data-9d21c08c" width="120px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-e45aa79f" id="opt12" class="font-caption" value="6 cases">
+                <cl:verticaldata std:sid="v-data-0264754d" width="120px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-5d0d88fa" spacing="2"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-9b11a96c" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="120" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-26e3a833" id="grp14" class="list">
+            <cl:verticaldata std:sid="v-data-4d683936" width="550px" height="70px" autosize="height"/>
+            <cl:output std:sid="output-833c192d" id="opt13" class="tit" value="Marketing Services Department">
+              <cl:formdata std:sid="f-data-dcff858e" row="0" col="0"/>
+            </cl:output>
+            <cl:group std:sid="group-eb9a07f3" id="grp15" class="stat">
+              <cl:formdata std:sid="f-data-006480c5" width="100" height="31" row="0" col="1" rowspan="1" colspan="1"/>
+              <cl:output std:sid="output-49fb9dad" id="opt14" class="time" value="3h">
+                <cl:verticaldata std:sid="v-data-7160b298" width="120px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-189b9143" id="opt15" class="font-caption" value="6 cases">
+                <cl:verticaldata std:sid="v-data-adfe8f65" width="120px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-f907909f" spacing="2"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-88d57f12" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="120" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:group std:sid="group-d675e997" id="grp18" class="list">
+            <cl:verticaldata std:sid="v-data-62b82269" width="633px" height="70px" autosize="height"/>
+            <cl:output std:sid="output-8c1b95f6" id="opt17" class="tit" value="Trading Participant Department">
+              <cl:formdata std:sid="f-data-6ffb1b29" row="0" col="0"/>
+            </cl:output>
+            <cl:group std:sid="group-0f72809a" id="grp19" class="stat">
+              <cl:formdata std:sid="f-data-4375f038" width="100" height="31" row="0" col="1" rowspan="1" colspan="1"/>
+              <cl:output std:sid="output-3c4757ac" id="opt18" class="time" value="3h">
+                <cl:verticaldata std:sid="v-data-720bea11" width="120px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-d47a8791" id="opt19" class="font-caption" value="6 cases">
+                <cl:verticaldata std:sid="v-data-e5cd35f2" width="120px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-6499648e" spacing="2"/>
+            </cl:group>
+            <cl:formlayout std:sid="f-layout-151b08b8" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="42" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+              <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+              <cl:columns length="120" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-6ebeef2b" spacing="0"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-f431f163" scrollable="false" hspace="32px" vspace="14px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="30" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="1" unit="FRACTION"/>
+          <cl:columns length="2" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:group std:sid="group-55ce2c0b" id="grp5" class="card">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="12"/>
+        <cl:verticaldata std:sid="v-data-6d34bc0f" width="1024px" height="292px" autosize="height"/>
+        <cl:group std:sid="group-b3869d78" id="grp17" class="list">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-1a506530" width="982px" height="36px" autosize="height"/>
+          <cl:output std:sid="output-4c78c582" id="opt16" class="font-heading fw-bold" value="User Processing Counts">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-dcc3f1e2" row="0" col="0"/>
+          </cl:output>
+          <cl:button std:sid="button-d5b375b3" id="btn1" class="btn-inline btn-file" value="Excel Download" icon="0">
+            <cl:formdata std:sid="f-data-c3071c70" row="0" col="1"/>
+          </cl:button>
+          <cl:formlayout std:sid="f-layout-5c0db549" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="36" unit="PIXEL" autoSizing="false" shadetype="NONE" shadecolor="transparent" syncminlength="true"/>
+            <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="120" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid std:sid="grid-2efeaa2c" id="grd1" fieldLabel="User Processing Counts list" datasetid="dsList">
+          <cl:verticaldata std:sid="v-data-000e10b5" width="400px" height="200px" autosize="height"/>
+          <cl:gridcolumn std:sid="g-column-a1c50000"/>
+          <cl:gridcolumn std:sid="g-column-a1c50001"/>
+          <cl:gridcolumn std:sid="g-column-a1c50002"/>
+          <cl:gridcolumn std:sid="g-column-a1c50003"/>
+          <cl:gridcolumn std:sid="g-column-a1c50004"/>
+          <cl:gridcolumn std:sid="g-column-a1c50005"/>
+          <cl:gridcolumn std:sid="g-column-a1c50006"/>
+          <cl:gridheader std:sid="gh-band-7bc99189">
+            <cl:gridrow std:sid="g-row-6b553072" height="37px"/>
+            <cl:gridcell std:sid="gh-cell-a1c60000" rowindex="0" colindex="0" sortable="false" filterable="false" text="Username"/>
+            <cl:gridcell std:sid="gh-cell-a1c60001" rowindex="0" colindex="1" sortable="false" filterable="false" text="Department"/>
+            <cl:gridcell std:sid="gh-cell-a1c60002" rowindex="0" colindex="2" sortable="false" filterable="false" text="Avg. Processing Time"/>
+            <cl:gridcell std:sid="gh-cell-a1c60003" rowindex="0" colindex="3" sortable="false" filterable="false" text="New Submission"/>
+            <cl:gridcell std:sid="gh-cell-a1c60004" rowindex="0" colindex="4" sortable="false" filterable="false" text="Under Review"/>
+            <cl:gridcell std:sid="gh-cell-a1c60005" rowindex="0" colindex="5" sortable="false" filterable="false" text="Forwarded"/>
+            <cl:gridcell std:sid="gh-cell-a1c60006" rowindex="0" colindex="6" sortable="false" filterable="false" text="For Approval"/>
+          </cl:gridheader>
+          <cl:griddetail std:sid="gd-band-da41cee7">
+            <cl:gridrow std:sid="g-row-ddbf7c19" height="30px"/>
+            <cl:gridrow std:sid="g-row-a1c70001" height="30px"/>
+            <cl:gridcell std:sid="gd-cell-a1c80001" rowindex="0" colindex="0" rowspan="2" columnname="username">
+              <cl:output std:sid="output-a1c80001" class="fw-semibold">
+                <cl:expbind property="value" category="PROPERTY" expression="username"/>
+                <cl:celldata std:sid="c-data-a1c80001"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-a1c80002" rowindex="0" colindex="1" rowspan="2" columnname="department">
+              <cl:output std:sid="output-a1c80002">
+                <cl:expbind property="value" category="PROPERTY" expression="department"/>
+                <cl:celldata std:sid="c-data-a1c80002"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-a1c80003" rowindex="0" colindex="2" class="border-b-none" columnname="avgTime">
+              <cl:output std:sid="output-a1c80003" style="padding-bottom:0px; padding-right:0px;" class="fw-semibold">
+                <cl:expbind property="value" category="PROPERTY" expression="avgTime"/>
+                <cl:celldata std:sid="c-data-a1c80003" valign="FILL"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-a1c80004" rowindex="1" colindex="2" columnname="cases">
+              <cl:output std:sid="output-a1c80004" style="padding-top:0px; padding-right:0px;" class="font-caption">
+                <cl:expbind property="value" category="PROPERTY" expression="cases"/>
+                <cl:celldata std:sid="c-data-a1c80004" valign="FILL"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-a1c80005" rowindex="0" colindex="3" rowspan="2" columnname="newSubmission">
+              <cl:output std:sid="output-a1c80005" class="text-primary">
+                <cl:expbind property="value" category="PROPERTY" expression="newSubmission"/>
+                <cl:celldata std:sid="c-data-a1c80005"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-a1c80006" rowindex="0" colindex="4" rowspan="2" columnname="underReview">
+              <cl:output std:sid="output-a1c80006" class="text-primary">
+                <cl:expbind property="value" category="PROPERTY" expression="underReview"/>
+                <cl:celldata std:sid="c-data-a1c80006"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-a1c80007" rowindex="0" colindex="5" rowspan="2" columnname="forwarded">
+              <cl:output std:sid="output-a1c80007" class="text-primary">
+                <cl:expbind property="value" category="PROPERTY" expression="forwarded"/>
+                <cl:celldata std:sid="c-data-a1c80007"/>
+              </cl:output>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-a1c80008" rowindex="0" colindex="6" rowspan="2" columnname="forApproval">
+              <cl:output std:sid="output-a1c80008" class="text-primary">
+                <cl:expbind property="value" category="PROPERTY" expression="forApproval"/>
+                <cl:celldata std:sid="c-data-a1c80008"/>
+              </cl:output>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:verticallayout std:sid="v-layout-670fe1a2" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-008e4a2c" spacing="20"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-393121a8"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

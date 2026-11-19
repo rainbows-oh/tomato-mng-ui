@@ -1,0 +1,20 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" version="1.0.6209">
+  <head>
+    <screen name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model/>
+    <cl:appspec title="Bar Chart 02">
+      <cl:property name="dataSet" type="control"/>
+      <cl:property name="chartId" type="string"/>
+    </cl:appspec>
+  </head>
+  <body style="top:0px; left:0px; width:300px; height:300px;">
+    <cl:uicontrolshell id="shl1">
+      <cl:listener name="load" handler="onShl1Load"/>
+      <cl:xylayoutdata top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+    </cl:uicontrolshell>
+    <cl:xylayout scrollable="false"/>
+  </body>
+</html>

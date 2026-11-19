@@ -6,514 +6,570 @@
    Internal Calendar (MGT-CAL-01-00_Calendars_Internal Calendar)
    월 달력(FullCalendar 7.1.3, 쉘 컨트롤 안) + 툴바 + 오른쪽 날짜별 목록 패널
    ========================================================================== */
-
-/* 색은 custom-settings.part.less 변수만 사용한다.
-   확인 필요: 요일 행 배경은 Figma bg/subtle(#E9EEF4)과 가장 가까운 @gray-20(#E2E8F0)을 썼다. */
-
-/* --- 툴바 오른쪽 컨트롤 --- */
-.cl-button.cal-btn-labels {
-	background-color: @white;
-	border: 1px solid @primary-70;
-	color: @primary-70;
-}
-
-/* --- 월 이동: 이전 / 월 제목 / 다음 (btnGrp 그룹의 컨트롤, 버튼 28 = 아이콘 24 + 여백 2 x 2) --- */
-.cl-button.cal-nav-btn {
-	background-color: transparent;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 24px 24px;
-	border: 0;
-	box-shadow: none;
-
-	&.cal-nav-prev {
-		background-image: url("@{img-path}/icons/ico_angle_left.svg");
+.cl-container.internal-cal {
+	.cl-container.inner {
+		padding: 24px;
+		
+		@media(max-width: 375px) {
+			padding: 16px;
+		}
 	}
-
-	&.cal-nav-next {
-		background-image: url("@{img-path}/icons/ico_angle_right.svg");
-	}
-
-	&:not(.cl-disabled):hover,
-	&:not(.cl-disabled).cl-hover,
-	&:not(.cl-disabled).cl-activated,
-	&:not(.cl-disabled):active,
-	&.cl-focus {
-		background-color: transparent;
-		border: 0;
-	}
-}
-
-.cl-output.cal-month-title {
-	color: @gray-90;
-	font-size: 19px;
-	font-weight: 700;
-	line-height: 28px;
-	text-align: center;
-}
-
-/* --- 코드 배지 (달력 칩 / 오른쪽 패널 공용) --- */
-.cl-button .cal-code,
-.cl-checkboxgroup .cal-code,
-.cal-fc .cal-code {
-	background-color: @white;
-	border: 1px solid @gray-50;
-	border-radius: 3px;
-	color: @gray-50;
-	font-size: 11px;
-	font-weight: 600;
-	line-height: 16px;
-	text-align: center;
-}
-
-/* 코드별 색 (Figma event-labels-panel). 칩·목록·팝업 배지와 모바일 점(currentColor)이 모두 이 규칙을 쓴다 */
-.cal-code,
-.cal-dot {
-	&.cal-code-ABD, &.cal-code-CD, &.cal-code-CDL, &.cal-code-EDD, &.cal-code-EOE, &.cal-code-EOS, &.cal-code-LD, &.cal-code-WED {
-		border-color: @primary-70;
+	
+	/* --- 툴바 오른쪽 컨트롤 --- */
+	.cl-button.cal-btn-labels {
+		background-color: @white;
+		border: 1px solid @primary-70;
 		color: @primary-70;
 	}
-
-	&.cal-code-SRE, &.cal-code-SRO, &.cal-code-SRL, &.cal-code-SRS, &.cal-code-STD, &.cal-code-SMD {
-		border-color: @success-70;
-		color: @success-70;
-	}
-
-	&.cal-code-OFE, &.cal-code-OFS {
-		border-color: @danger-90;
-		color: @danger-90;
-	}
-
-	&.cal-code-PD {
-		border-color: @warning-70;
-		color: @warning-70;
-	}
-}
-
-/* --- 달력: 쉘 안에 FullCalendar가 만든 마크업(사용자 마크업이라 DOM 대상 스타일 허용) --- */
-.cl-uicontrolshell.cal-shell {
-	.cal-fc {
-		/* monarch 테마 색 변수를 프로젝트 색으로 덮는다 */
-		--fc-monarch-background: @white;
-		--fc-monarch-foreground: @gray-90;
-		--fc-monarch-muted-foreground: @gray-50;
-		--fc-monarch-border: @gray-30;
-		--fc-monarch-strong-border: @gray-30;
-		--fc-monarch-now: @primary-70;
-		--fc-monarch-event: @primary-70;
-		--fc-monarch-highlight: @primary-5;
+	
+	/* --- 월 이동: 이전 / 월 제목 / 다음 (btnGrp 그룹의 컨트롤, 버튼 28 = 아이콘 24 + 여백 2 x 2) --- */
+	.cl-button.cal-nav-btn {
 		background-color: transparent;
-		color: @gray-90;
-		font-family: @font-family-base;
-		height: 100%; /* 쉘 안쪽 영역을 가득 채운다 (쉘 내부 사용자 마크업이라 레이아웃 시스템과 무관) */
-		overflow: hidden; /* 내용이 영역을 밀어 키우지 않게 한다 */
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 24px 24px;
+		border: 0;
+		box-shadow: none;
+		
+		&.cal-nav-prev {
+			background-image: url("@{img-path}/icons/ico_angle_left.svg");
+		}
+		
+		&.cal-nav-next {
+			background-image: url("@{img-path}/icons/ico_angle_right.svg");
+		}
+		
+		&:not(.cl-disabled):hover,
+		&:not(.cl-disabled).cl-hover,
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active,
+		&.cl-focus {
+			background-color: transparent;
+			border: 0;
+		}
 	}
-
-	/* 달력 본체(카드): 1px 간격이 격자선이 된다 */
-	.cal-fc .cal-fc-view {
-		background-color: @gray-30;
+	
+	.cl-output.cal-month-title {
+		color: @gray-90;
+		font-size: 19px;
+		font-weight: 700;
+		line-height: 28px;
+		text-align: center;
+	}
+	
+	/* --- 코드 배지 (달력 칩 / 오른쪽 패널 공용) --- */
+	.cl-button .cal-code,
+	.cl-checkboxgroup .cal-code,
+	.cal-fc .cal-code {
+		background-color: @white;
+		border: 1px solid @gray-50;
+		border-radius: 3px;
+		color: @gray-50;
+		font-size: 11px;
+		font-weight: 600;
+		line-height: 16px;
+		text-align: center;
+	}
+	
+	/* 코드별 색 (Figma event-labels-panel). 칩·목록·팝업 배지와 모바일 점(currentColor)이 모두 이 규칙을 쓴다 */
+	.cal-code,
+	.cal-dot {
+		&.cal-code-ABD,
+		&.cal-code-CD,
+		&.cal-code-CDL,
+		&.cal-code-EDD,
+		&.cal-code-EOE,
+		&.cal-code-EOS,
+		&.cal-code-LD,
+		&.cal-code-WED {
+			border-color: @primary-70;
+			color: @primary-70;
+		}
+		
+		&.cal-code-SRE,
+		&.cal-code-SRO,
+		&.cal-code-SRL,
+		&.cal-code-SRS,
+		&.cal-code-STD,
+		&.cal-code-SMD {
+			border-color: @success-70;
+			color: @success-70;
+		}
+		
+		&.cal-code-OFE,
+		&.cal-code-OFS {
+			border-color: @danger-90;
+			color: @danger-90;
+		}
+		
+		&.cal-code-PD {
+			border-color: @warning-70;
+			color: @warning-70;
+		}
+	}
+	
+	/* --- 달력: 쉘 안에 FullCalendar가 만든 마크업(사용자 마크업이라 DOM 대상 스타일 허용) --- */
+	.cl-uicontrolshell.cal-shell {
+		.cal-fc {
+			/* monarch 테마 색 변수를 프로젝트 색으로 덮는다 */
+			--fc-monarch-background: @white;
+			--fc-monarch-foreground: @gray-90;
+			--fc-monarch-muted-foreground: @gray-50;
+			--fc-monarch-border: @gray-30;
+			--fc-monarch-strong-border: @gray-30;
+			--fc-monarch-now: @primary-70;
+			--fc-monarch-event: @primary-70;
+			--fc-monarch-highlight: @primary-5;
+			background-color: transparent;
+			color: @gray-90;
+			font-family: @font-family-base;
+			height: 100%;
+			/* 쉘 안쪽 영역을 가득 채운다 (쉘 내부 사용자 마크업이라 레이아웃 시스템과 무관) */
+			overflow: hidden;
+			/* 내용이 영역을 밀어 키우지 않게 한다 */
+		}
+		
+		/* 달력 본체(카드): 1px 간격이 격자선이 된다 */
+		.cal-fc .cal-fc-view {
+			background-color: @gray-30;
+			border: 1px solid @gray-30;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+		
+		/* 요일 헤더 */
+		.cal-fc .cal-fc-head {
+			background-color: @gray-20;
+			align-items: center;
+			color: @gray-50;
+			display: flex;
+			font-size: 11px;
+			font-weight: 600;
+			height: 34px;
+			justify-content: center;
+			padding: 0;
+			text-align: center;
+			text-transform: none;
+			/* 설계는 Sun/Mon... 형태 */
+		}
+		
+		/* 요일 헤더와 날짜 칸 사이 가로선 (FullCalendar 유틸 클래스가 border 를 !important 로 0 지정하므로 !important 필요) */
+		.cal-fc .cal-fc-head {
+			border-bottom: 1px solid @gray-30 !important;
+		}
+		
+		/* 요일 칸 사이 세로선 (첫 칸 제외) */
+		.cal-fc .cal-fc-head + .cal-fc-head {
+			border-left: 1px solid @gray-30 !important;
+		}
+		
+		.cal-fc .cal-fc-head-inner {
+			align-items: center;
+			color: @gray-50;
+			font-size: 11px;
+			justify-content: center;
+			line-height: 1;
+			margin: 0;
+			/* monarch 테마가 위 여백 8px 을 줘서 글자가 아래로 내려가 보임 → 헤더 칸 가운데 */
+			padding: 0;
+			text-align: center;
+		}
+		
+		/* 요일 글자를 담은 안쪽 요소는 테마 기본이 12px 이라 11px 로 덮는다 */
+		.cal-fc .cal-fc-head-inner > * {
+			font-size: 11px;
+		}
+		
+		/* 주(행): 최소 118px = Figma day-cell (패딩 6/6/6/8 + 내용 119 x 106). 영역이 크면 FullCalendar가 줄을 같은 몫으로 늘린다 */
+		.cal-fc .cal-fc-row {
+			min-height: 118px;
+			overflow: hidden;
+		}
+		
+		/* PC 달력: Figma calendar-card 938 x 750을 최소 크기로 (칸 133 x 118 x 7열 6줄 + 요일 34 + 선). 쉘이 크면 같이 늘어난다 */
+		.cal-fc.cal-fc-pc {
+			min-height: 744px;
+			/* 요일 34 + 테두리 2 + 칸 118 x 6. 750이면 메인(1920x1080)에서 1px 넘쳐 스크롤이 생긴다 */
+			min-width: 938px;
+		}
+		
+		/* 날짜 칸 */
+		.cal-fc .cal-fc-day {
+			background-color: @white;
+			min-height: 118px;
+			/* Figma day-cell 높이 118이 최소. 줄이 늘어나면 칸도 같이 늘어난다 */
+			overflow: hidden;
+			/* 칸 안(숫자 영역 + 이벤트/더보기 래퍼)을 한 묶음으로: 패딩 6/6/6/8, 간격 3 (Figma day-cell) */
+			display: flex;
+			flex-direction: column;
+			gap: 3px;
+			padding: 6px 6px 6px 8px !important;
+			
+			&.cal-fc-selected {
+				background-color: @primary-5;
+			}
+		}
+		
+		/* PC 숫자 줄 높이: Figma num-slot 20, 오늘 칸은 22 (monarch 테마 기본 24를 덮는다) */
+		.cal-fc.cal-fc-pc .cal-fc-top-inner {
+			height: 20px;
+		}
+		
+		.cal-fc.cal-fc-pc .cal-fc-today .cal-fc-top-inner {
+			height: 22px;
+		}
+		
+		.cal-fc .cal-fc-day-inner {
+			margin: 0;
+			padding: 0;
+		}
+		
+		/* 아래 빈 영역은 내용이 없고 칸 gap만 늘리므로 숨긴다 */
+		.cal-fc .cal-fc-bottom {
+			display: none;
+		}
+		
+		/* Figma num-slot: 높이 20, 세로 가운데, 숫자는 왼쪽 시작, Lato 11px 600 text/primary. 여백은 칸 패딩이 담당.
+		 REVIEW-ON-UPDATE: 오늘 칸의 테마 기본 배경(--fc-monarch-now 채움)을 !important로 없애고 동그라미만 남긴다 (FullCalendar 업데이트 시 확인) */
+		.cal-fc .cal-fc-top,
+		.cal-fc .cal-fc-top-inner {
+			align-items: center;
+			background: transparent !important;
+			box-shadow: none !important;
+			color: @gray-90;
+			font-size: 11px;
+			font-weight: 600;
+			justify-content: flex-start;
+			line-height: 20px;
+			margin: 0;
+			min-height: 20px;
+			padding: 0;
+			text-align: left;
+		}
+		
+		/* Figma num-slot: 높이 20, 숫자 Lato 11px 600 text/primary */
+		.cal-fc .cal-num {
+			color: @gray-90;
+			font-size: 11px;
+			font-weight: 600;
+			line-height: 20px;
+			
+			/* 오늘: Figma day-today 20x20, 속이 찬 동그라미 action/primary #1D4ED8, 숫자 text/inverse 700 (선택은 칸 배경 cal-fc-selected) */
+			&.cal-today {
+				background-color: @primary-70;
+				border: 1px solid @primary-70;
+				border-radius: 50%;
+				color: @white;
+				display: inline-block;
+				font-weight: 700;
+				height: 20px;
+				line-height: 18px;
+				text-align: center;
+				width: 20px;
+			}
+		}
+		
+		/* 이벤트 칩 */
+		.cal-fc .cal-fc-event {
+			background-color: transparent;
+			border: 0;
+			box-shadow: none;
+			color: @primary-70;
+			/* 칩 전체(빈 영역 포함)가 아니라 회사명 글자 영역만 클릭되도록 칩 자체는 마우스를 받지 않음
+			   (회사명(.cal-chip-name)에서 pointer-events 를 다시 켜면 클릭이 칩까지 전달되어 FullCalendar 의 eventClick 은 그대로 동작) */
+			pointer-events: none;
+			margin: 0 0 3px;
+			min-height: 17px;
+			/* Figma event-chip 높이 17 */
+			padding: 0;
+		}
+		
+		.cal-fc .cal-fc-event-inner {
+			align-items: center;
+			display: flex;
+			gap: 4px;
+			overflow: hidden;
+			padding: 0;
+		}
+		
+		/* Figma code 배지: 패딩 1px 4px, 둥글기 3, 테두리 1px, 흰 배경, Lato 11px 600 (글자색 = 테두리색) */
+		.cal-fc .cal-code {
+			flex-shrink: 0;
+			line-height: normal;
+			padding: 1px 4px;
+		}
+		
+		/* Figma 회사명: Lato 11px 400 text/link, 한 줄 + 말줄임 */
+		.cal-fc .cal-chip-name {
+			color: @primary-70;
+			/* 클릭하면 Disclosure Viewer 팝업이 열린다 — 클릭 가능한 영역은 이 글자 영역뿐 */
+			cursor: pointer;
+			pointer-events: auto;
+			font-size: 11px;
+			font-weight: 400;
+			line-height: normal;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			
+			/* 마우스를 올리면 회사명에만 밑줄 (배지는 제외, 프로젝트 공통 밑줄 mixin) */
+			&:hover {
+				#text-underline();
+				/* overflow:hidden 영역(높이 13px) 안에 밑줄이 들어오도록 간격을 줄임 (3px 이면 잘려서 안 보임) */
+				text-underline-offset: 1px;
+			}
+		}
+		
+		/* +N more: Figma Lato 11px 600, text/link #1D4ED8, 한 줄 */
+		.cal-fc .cal-more,
+		.cal-fc .cal-more-inner {
+			background-color: transparent;
+			border: 0;
+			color: @primary-70;
+			cursor: default;
+			/* 클릭 동작 없음 */
+			font-size: 11px;
+			font-weight: 600;
+			line-height: normal;
+			margin: 0;
+			padding: 0;
+			text-align: left;
+		}
+		
+		/* 더보기 줄이 칩과 같은 왼쪽 선에서 시작하도록 */
+		.cal-fc .cal-more {
+			display: block;
+		}
+		
+		/* --- 모바일(달력 폭이 좁을 때, 화면 JS가 달력 본체(view)에 .cal-fc-mobile을 붙임): 칩 대신 점 --- */
+		/* Figma 모바일 day-cell: 높이 52, 패딩 8 2 6 2, 세로 가운데, 간격 4 (JS의 MOBILE_ROW_HEIGHT와 같이 수정) */
+		.cal-fc .cal-fc-mobile .cal-fc-day {
+			align-items: center;
+			gap: 4px;
+			justify-content: flex-start;
+			/* 점이 있어도 없어도 숫자 위치 동일 */
+			max-height: 52px;
+			min-height: 52px;
+			padding: 8px 2px 6px 2px !important;
+		}
+		
+		/* 숫자 칸(22) + 간격(4) + 점 칸(8)을 위에서부터 쌓아, 점이 있든 없든 숫자 위치가 같게 한다 */
+		.cal-fc .cal-fc-mobile .cal-fc-top,
+		.cal-fc .cal-fc-mobile .cal-fc-top-inner {
+			align-items: center;
+			flex-direction: column;
+			gap: 4px;
+			justify-content: flex-start;
+			line-height: 22px;
+			min-height: 0;
+			text-align: center;
+		}
+		
+		/* num-slot 높이 22: 숫자를 칸 가운데에 (오늘/선택 동그라미는 20px이라 위아래 1px 여백) */
+		.cal-fc .cal-fc-mobile .cal-num {
+			align-items: center;
+			display: flex;
+			height: 22px;
+			justify-content: center;
+			line-height: 22px;
+			
+			&.cal-today {
+				height: 20px;
+				line-height: 18px;
+				margin: 1px 0;
+			}
+		}
+		
+		/* 모바일 요일 행 높이 28 */
+		.cal-fc .cal-fc-mobile .cal-fc-head {
+			height: 28px;
+		}
+		
+		/* 칩과 +N more는 숨기고, 날짜 숫자 아래 점으로 표시 */
+		.cal-fc .cal-fc-mobile .cal-fc-event,
+		.cal-fc .cal-fc-mobile .cal-more {
+			display: none;
+		}
+		
+		/* dots-slot 높이 8 (점 사이 간격은 Figma에서 못 읽어 2px 임시값) */
+		.cal-fc .cal-dots {
+			align-items: center;
+			display: flex;
+			gap: 2px;
+			height: 8px;
+			justify-content: center;
+		}
+		
+		/* Figma dot 5x5 */
+		.cal-fc .cal-dot {
+			background-color: currentColor;
+			/* 색은 코드별 규칙(cal-code-코드) */
+			border-radius: 50%;
+			display: inline-block;
+			height: 5px;
+			width: 5px;
+		}
+	}
+	
+	/* --- 오른쪽 목록 패널 --- */
+	.cl-container.cal-side {
+		background-color: @white;
 		border: 1px solid @gray-30;
 		border-radius: 8px;
 		overflow: hidden;
 	}
-
-	/* 요일 헤더 */
-	.cal-fc .cal-fc-head {
-		background-color: @gray-20;
-		align-items: center;
-		color: @gray-50;
-		display: flex;
-		font-size: 11px;
-		font-weight: 600;
-		height: 34px;
-		justify-content: center;
-		padding: 0;
-		text-align: center;
-		text-transform: none; /* 설계는 Sun/Mon... 형태 */
+	
+	/* 날짜 목록(grpSideList): Figma rail-body처럼 스크롤바 자리 없이 묶음 폭 294(320 - 테두리 2 - 여백 12x2)를 쓰도록 스크롤바를 숨긴다. 휠·터치 스크롤은 그대로 */
+	.cl-container.cal-side-list .cl-layout {
+		scrollbar-width: none;
+		
+		&::-webkit-scrollbar {
+			display: none;
+		}
 	}
-
-	.cal-fc .cal-fc-head-inner {
-		align-items: center;
-		color: @gray-50;
-		justify-content: center;
-		line-height: 1;
-		padding: 0;
-		text-align: center;
+	
+	.cl-output.cal-side-title {
+		border-bottom: 1px solid @gray-20;
+		color: @gray-90;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 45px;
+		padding: 0 16px;
 	}
-
-	/* 주(행): 최소 118px = Figma day-cell (패딩 6/6/6/8 + 내용 119 x 106). 영역이 크면 FullCalendar가 줄을 같은 몫으로 늘린다 */
-	.cal-fc .cal-fc-row {
-		min-height: 118px;
-		overflow: hidden;
-	}
-
-	/* PC 달력: Figma calendar-card 938 x 750을 최소 크기로 (칸 133 x 118 x 7열 6줄 + 요일 34 + 선). 쉘이 크면 같이 늘어난다 */
-	.cal-fc.cal-fc-pc {
-		min-height: 744px; /* 요일 34 + 테두리 2 + 칸 118 x 6. 750이면 메인(1920x1080)에서 1px 넘쳐 스크롤이 생긴다 */
-		min-width: 938px;
-	}
-
-	/* 날짜 칸 */
-	.cal-fc .cal-fc-day {
+	
+	.cl-container.cal-date-card {
 		background-color: @white;
-		min-height: 118px; /* Figma day-cell 높이 118이 최소. 줄이 늘어나면 칸도 같이 늘어난다 */
-		overflow: hidden;
-
-		/* 칸 안(숫자 영역 + 이벤트/더보기 래퍼)을 한 묶음으로: 패딩 6/6/6/8, 간격 3 (Figma day-cell) */
-		display: flex;
-		flex-direction: column;
-		gap: 3px;
-		padding: 6px 6px 6px 8px !important;
-
-		&.cal-fc-selected {
+		border: 1px solid @gray-20;
+		border-radius: 8px;
+		
+		&.cal-active {
 			background-color: @primary-5;
+			/* Figma bg/selected */
+			border-color: @primary-40;
 		}
 	}
-
-	/* PC 숫자 줄 높이: Figma num-slot 20, 오늘 칸은 22 (monarch 테마 기본 24를 덮는다) */
-	.cal-fc.cal-fc-pc .cal-fc-top-inner {
-		height: 20px;
-	}
-
-	.cal-fc.cal-fc-pc .cal-fc-today .cal-fc-top-inner {
-		height: 22px;
-	}
-
-	.cal-fc .cal-fc-day-inner {
-		margin: 0;
-		padding: 0;
-	}
-
-	/* 아래 빈 영역은 내용이 없고 칸 gap만 늘리므로 숨긴다 */
-	.cal-fc .cal-fc-bottom {
-		display: none;
-	}
-
-	/* Figma num-slot: 높이 20, 세로 가운데, 숫자는 왼쪽 시작, Lato 11px 600 text/primary. 여백은 칸 패딩이 담당.
-	   REVIEW-ON-UPDATE: 오늘 칸의 테마 기본 배경(--fc-monarch-now 채움)을 !important로 없애고 동그라미만 남긴다 (FullCalendar 업데이트 시 확인) */
-	.cal-fc .cal-fc-top,
-	.cal-fc .cal-fc-top-inner {
-		align-items: center;
-		background: transparent !important;
-		box-shadow: none !important;
+	
+	.cl-output.cal-date-text {
 		color: @gray-90;
-		font-size: 11px;
-		font-weight: 600;
-		justify-content: flex-start;
-		line-height: 20px;
-		margin: 0;
-		min-height: 20px;
-		padding: 0;
-		text-align: left;
-	}
-
-	/* Figma num-slot: 높이 20, 숫자 Lato 11px 600 text/primary */
-	.cal-fc .cal-num {
-		color: @gray-90;
-		font-size: 11px;
+		font-size: 13px;
 		font-weight: 600;
 		line-height: 20px;
-
-		/* 오늘: Figma day-today 20x20, 속이 찬 동그라미 action/primary #1D4ED8, 숫자 text/inverse 700 (선택은 칸 배경 cal-fc-selected) */
-		&.cal-today {
-			background-color: @primary-70;
-			border: 1px solid @primary-70;
-			border-radius: 50%;
-			color: @white;
-			display: inline-block;
-			font-weight: 700;
-			height: 20px;
-			line-height: 18px;
-			text-align: center;
-			width: 20px;
-		}
 	}
-
-	/* 이벤트 칩 */
-	.cal-fc .cal-fc-event {
-		background-color: transparent;
-		border: 0;
-		box-shadow: none;
-		color: @primary-70;
-		cursor: default; /* 글자 위에서도 일반 화살표 (글자 입력 커서 X) */
-		margin: 0 0 3px;
-		min-height: 17px; /* Figma event-chip 높이 17 */
-		padding: 0;
-	}
-
-	.cal-fc .cal-fc-event-inner {
-		align-items: center;
-		display: flex;
-		gap: 4px;
-		overflow: hidden;
-		padding: 0;
-	}
-
-	/* Figma code 배지: 패딩 1px 4px, 둥글기 3, 테두리 1px, 흰 배경, Lato 11px 600 (글자색 = 테두리색) */
-	.cal-fc .cal-code {
-		flex-shrink: 0;
-		line-height: normal;
-		padding: 1px 4px;
-	}
-
-	/* Figma 회사명: Lato 11px 400 text/link, 한 줄 + 말줄임 */
-	.cal-fc .cal-chip-name {
-		color: @primary-70;
+	
+	.cl-output.cal-date-count {
+		color: @gray-40;
 		font-size: 11px;
-		font-weight: 400;
-		line-height: normal;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-
-		/* 마우스를 올리면 회사명에만 밑줄 (배지는 제외, 프로젝트 공통 밑줄 mixin) */
-		&:hover {
-			#text-underline();
-		}
+		line-height: 20px;
+		text-align: right;
 	}
-
-	/* +N more: Figma Lato 11px 600, text/link #1D4ED8, 한 줄 */
-	.cal-fc .cal-more,
-	.cal-fc .cal-more-inner {
-		background-color: transparent;
-		border: 0;
-		color: @primary-70;
-		cursor: default; /* 클릭 동작 없음 */
-		font-size: 11px;
-		font-weight: 600;
-		line-height: normal;
-		margin: 0;
-		padding: 0;
-		text-align: left;
-	}
-
-	/* 더보기 줄이 칩과 같은 왼쪽 선에서 시작하도록 */
-	.cal-fc .cal-more {
-		display: block;
-	}
-
-	/* --- 모바일(달력 폭이 좁을 때, 화면 JS가 달력 본체(view)에 .cal-fc-mobile을 붙임): 칩 대신 점 --- */
-	/* Figma 모바일 day-cell: 높이 52, 패딩 8 2 6 2, 세로 가운데, 간격 4 (JS의 MOBILE_ROW_HEIGHT와 같이 수정) */
-	.cal-fc .cal-fc-mobile .cal-fc-day {
-		align-items: center;
-		gap: 4px;
-		justify-content: flex-start; /* 점이 있어도 없어도 숫자 위치 동일 */
-		max-height: 52px;
-		min-height: 52px;
-		padding: 8px 2px 6px 2px !important;
-	}
-
-	/* 숫자 칸(22) + 간격(4) + 점 칸(8)을 위에서부터 쌓아, 점이 있든 없든 숫자 위치가 같게 한다 */
-	.cal-fc .cal-fc-mobile .cal-fc-top,
-	.cal-fc .cal-fc-mobile .cal-fc-top-inner {
-		align-items: center;
-		flex-direction: column;
-		gap: 4px;
-		justify-content: flex-start;
-		line-height: 22px;
-		min-height: 0;
-		text-align: center;
-	}
-
-	/* num-slot 높이 22: 숫자를 칸 가운데에 (오늘/선택 동그라미는 20px이라 위아래 1px 여백) */
-	.cal-fc .cal-fc-mobile .cal-num {
-		align-items: center;
-		display: flex;
-		height: 22px;
-		justify-content: center;
-		line-height: 22px;
-
-		&.cal-today {
-			height: 20px;
-			line-height: 18px;
-			margin: 1px 0;
-		}
-	}
-
-	/* 모바일 요일 행 높이 28 */
-	.cal-fc .cal-fc-mobile .cal-fc-head {
-		height: 28px;
-	}
-
-	/* 칩과 +N more는 숨기고, 날짜 숫자 아래 점으로 표시 */
-	.cal-fc .cal-fc-mobile .cal-fc-event,
-	.cal-fc .cal-fc-mobile .cal-more {
-		display: none;
-	}
-
-	/* dots-slot 높이 8 (점 사이 간격은 Figma에서 못 읽어 2px 임시값) */
-	.cal-fc .cal-dots {
-		align-items: center;
-		display: flex;
-		gap: 2px;
-		height: 8px;
-		justify-content: center;
-	}
-
-	/* Figma dot 5x5 */
-	.cal-fc .cal-dot {
-		background-color: currentColor; /* 색은 코드별 규칙(cal-code-코드) */
-		border-radius: 50%;
-		display: inline-block;
-		height: 5px;
-		width: 5px;
-	}
-}
-
-/* --- 오른쪽 목록 패널 --- */
-.cl-container.cal-side {
-	background-color: @white;
-	border: 1px solid @gray-30;
-	border-radius: 8px;
-	overflow: hidden;
-}
-
-/* 날짜 목록(grpSideList): Figma rail-body처럼 스크롤바 자리 없이 묶음 폭 294(320 - 테두리 2 - 여백 12x2)를 쓰도록 스크롤바를 숨긴다. 휠·터치 스크롤은 그대로 */
-.cl-container.cal-side-list .cl-layout {
-	scrollbar-width: none;
-
-	&::-webkit-scrollbar {
-		display: none;
-	}
-}
-
-.cl-output.cal-side-title {
-	border-bottom: 1px solid @gray-20;
-	color: @gray-90;
-	font-size: 14px;
-	font-weight: 700;
-	line-height: 45px;
-	padding: 0 16px;
-}
-
-.cl-container.cal-date-card {
-	background-color: @white;
-	border: 1px solid @gray-20;
-	border-radius: 8px;
-
-	&.cal-active {
-		background-color: @primary-5; /* Figma bg/selected */
-		border-color: @primary-40;
-	}
-}
-
-.cl-output.cal-date-text {
-	color: @gray-90;
-	font-size: 13px;
-	font-weight: 600;
-	line-height: 20px;
-}
-
-.cl-output.cal-date-count {
-	color: @gray-40;
-	font-size: 11px;
-	line-height: 20px;
-	text-align: right;
-}
-
-/* 항목 버튼: 배지(sstr 스타일 span) + 회사명(value) */
-.cl-button.cal-item-btn {
-	background-color: @white;
-	border: 1px solid @gray-20;
-	border-radius: 4px;
-	color: @primary-70;
-	font-size: 13px;
-	padding: 0 8px;
-	text-align: left;
-
-	.cal-code {
-		display: inline-block; /* 부모의 밑줄이 배지에 적용되지 않도록 */
-		margin-right: 6px;
-		padding: 0 5px;
-	}
-
-	/* hover/눌림/포커스에서도 배경과 테두리는 그대로 (btn-link 방식) */
-	&:not(.cl-disabled):hover,
-	&:not(.cl-disabled).cl-hover,
-	&:not(.cl-disabled).cl-activated,
-	&:not(.cl-disabled):active,
-	&.cl-focus {
+	
+	/* 항목 버튼: 배지(sstr 스타일 span) + 회사명(value) */
+	.cl-button.cal-item-btn {
 		background-color: @white;
-		border-color: @gray-20;
+		border: 1px solid @gray-20;
+		border-radius: 4px;
 		color: @primary-70;
-	}
-
-	/* hover 시 글자만 밑줄 */
-	&:not(.cl-disabled):hover,
-	&:not(.cl-disabled).cl-hover {
-		text-decoration: underline;
-
+		font-size: 13px;
+		padding: 0 8px;
+		text-align: left;
+		
 		.cal-code {
-			text-decoration: none;
+			display: inline-block;
+			/* 부모의 밑줄이 배지에 적용되지 않도록 */
+			margin-right: 6px;
+			padding: 0 5px;
+		}
+		
+		/* hover/눌림/포커스에서도 배경과 테두리는 그대로 (btn-link 방식) */
+		&:not(.cl-disabled):hover,
+		&:not(.cl-disabled).cl-hover,
+		&:not(.cl-disabled).cl-activated,
+		&:not(.cl-disabled):active,
+		&.cl-focus {
+			background-color: @white;
+			border-color: @gray-20;
+			color: @primary-70;
+		}
+		
+		/* hover 시 글자만 밑줄 */
+		&:not(.cl-disabled):hover,
+		&:not(.cl-disabled).cl-hover {
+			text-decoration: underline;
+			
+			.cal-code {
+				text-decoration: none;
+			}
 		}
 	}
-}
-
-/* --- Event Labels 팝업 (grpEvent, 버튼 아래에 floatControl로 띄움. Figma event-labels-panel 1064-11421) --- */
-.cl-container.cal-label-pop {
-	background-color: @white;
-	border: 1px solid @gray-30;
-	border-radius: 10px;
-	box-shadow: 0 8px 12px rgba(15, 23, 41, 0.18);
-}
-
-.cl-output.cal-label-title {
-	color: @gray-90;
-	font-size: 13px;
-	font-weight: 700;
-	line-height: 16px;
-}
-
-.cl-output.cal-label-desc {
-	color: @gray-50;
-	font-size: 12px;
-	line-height: 14px;
-}
-
-/* 체크박스: 아이콘-글자 간격 8 (Figma Checkbox) */
-.cl-checkbox.cal-label-all,
-.cl-checkboxgroup.cal-label-list .cl-checkbox {
-	padding: 0;
-
-	.cl-text {
-		padding-left: 8px;
+	
+	/* --- Event Labels 팝업 (grpEvent, 버튼 아래에 floatControl로 띄움. Figma event-labels-panel 1064-11421) --- */
+	.cl-container.cal-label-pop {
+		background-color: @white;
+		border: 1px solid @gray-30;
+		border-radius: 10px;
+		box-shadow: 0 8px 12px rgba(15, 23, 41, 0.18);
 	}
-}
-
-.cl-checkbox.cal-label-all {
-	color: @gray-90;
-	font-size: 13px;
-	font-weight: 600;
-}
-
-.cl-output.cal-label-divider {
-	background-color: @gray-20;
-}
-
-/* 라벨: 2열, 칸마다 체크박스 + (배지 위 / 이름 아래). 배지 색은 위 공용 코드별 규칙(cal-code-코드, 표시식 sstr) */
-.cl-checkboxgroup.cal-label-list {
-	color: @gray-70;
-	font-size: 12px;
-	line-height: normal;
-
-	.cl-checkbox,
-	.cl-checkbox .cl-icon-wrapper {
-		vertical-align: top;
+	
+	.cl-output.cal-label-title {
+		color: @gray-90;
+		font-size: 13px;
+		font-weight: 700;
+		line-height: 16px;
 	}
-
-	/* 이름 줄 14 (Figma). 테마 기본 18이면 칸이 33 → 37로 커져 9줄째가 팝업 아래로 잘린다 */
-	.cl-checkbox .cl-text {
+	
+	.cl-output.cal-label-desc {
+		color: @gray-50;
+		font-size: 12px;
 		line-height: 14px;
-		word-break: keep-all; /* 모바일에서 두 줄이 될 때 단어 중간이 아니라 단어 단위로 */
 	}
-
-	.cal-code {
-		border-radius: 4px;
-		display: block; /* 이름 위 한 줄. table로 하면 체크박스 표 구조의 border-collapse를 물려받아 padding이 무시된다 */
-		width: fit-content;
-		font-size: 10px;
+	
+	/* 체크박스: 아이콘-글자 간격 8 (Figma Checkbox) */
+	.cl-checkbox.cal-label-all,
+	.cl-checkboxgroup.cal-label-list .cl-checkbox {
+		padding: 0;
+		
+		.cl-text {
+			padding-left: 8px;
+		}
+	}
+	
+	.cl-checkbox.cal-label-all {
+		color: @gray-90;
+		font-size: 13px;
+		font-weight: 600;
+	}
+	
+	.cl-output.cal-label-divider {
+		background-color: @gray-20;
+	}
+	
+	/* 라벨: 2열, 칸마다 체크박스 + (배지 위 / 이름 아래). 배지 색은 위 공용 코드별 규칙(cal-code-코드, 표시식 sstr) */
+	.cl-checkboxgroup.cal-label-list {
+		color: @gray-70;
+		font-size: 12px;
 		line-height: normal;
-		margin-bottom: 3px;
-		padding: 1px 6px;
+		
+		.cl-checkbox,
+		.cl-checkbox .cl-icon-wrapper {
+			vertical-align: top;
+		}
+		
+		/* 이름 줄 14 (Figma). 테마 기본 18이면 칸이 33 → 37로 커져 9줄째가 팝업 아래로 잘린다 */
+		.cl-checkbox .cl-text {
+			line-height: 14px;
+			word-break: keep-all;
+			/* 모바일에서 두 줄이 될 때 단어 중간이 아니라 단어 단위로 */
+		}
+		
+		.cal-code {
+			border-radius: 4px;
+			display: block;
+			/* 이름 위 한 줄. table로 하면 체크박스 표 구조의 border-collapse를 물려받아 padding이 무시된다 */
+			width: fit-content;
+			font-size: 10px;
+			line-height: normal;
+			margin-bottom: 3px;
+			padding: 1px 6px;
+		}
 	}
 }

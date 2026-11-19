@@ -430,3 +430,194 @@
 		background-color: #E9EEF4;
 	}
 }
+
+/************************************************
+ * [UDC] System Configuration 메뉴 트리 (udcSystemConfigurationTree)
+ ************************************************/
+.cl-container.menu-tree {
+	.cl-container.btn-utils {
+		overflow: visible !important;
+		margin-right: 4px;
+		
+		.cl-container,
+		.cl-layout,
+		.cl-layout-content {
+			overflow: visible !important;
+		}
+		
+		.cl-button {
+			background-color: transparent;
+			border-radius: 0;
+			opacity: 0;
+			transition: opacity 0.15s;
+			
+			/* 버튼 자체에 포커스가 오면 반드시 보이고 포커스 링 표시 (:focus-within 이 안 먹는 경우 대비) */
+			&:focus,
+			&.cl-focus {
+				opacity: 1;
+				outline: 2px solid @primary;
+				outline-offset: 2px;
+			}
+		}
+		
+		/* 터치 기기는 호버가 없으므로 항상 표시
+		   (hover: none) 은 실제 터치 기기에서만 맞고, 데스크톱 브라우저를 모바일 폭으로 줄인 경우에는 hover 가 가능한 것으로 판단되므로
+		   모바일 폭(767px 이하 = EXB-PART)에서도 항상 표시 */
+		@media (hover: none), (max-width: 767px) {
+			.cl-button {
+				opacity: 1;
+			}
+		}
+		
+		.cl-button.btn-edit {
+			.cl-icon {
+				background-image: url("../../img/icons/ico_sys_edit.svg") !important;
+			}
+		}
+		
+		.cl-button.btn-add {
+			.cl-icon {
+				background-image: url("../../img/icons/ico_sys_plus.svg") !important;
+			}
+		}
+	}
+	
+	/* 메뉴 행(상위 메뉴 menu-parent / 하위 메뉴 menu-item) — 호버 또는 행 안 포커스 시 동작 버튼 표시, 포커스 시 행 테두리 표시 */
+	.cl-container.menu-parent,
+	.cl-container.menu-item {
+		&:hover .cl-container.btn-utils .cl-button,
+		&:focus-within .cl-container.btn-utils .cl-button {
+			opacity: 1;
+		}
+		
+		&:focus-within {
+			outline: 2px solid @primary;
+			outline-offset: -2px;
+			border-radius: 6px;
+		}
+	}
+	
+	.cl-container.menu-group {
+		.cl-container.menu-parent {
+			padding: 10px 0px;
+			
+			.cl-button.btn-tree-toggle {
+				padding: 0px;
+				border: none;
+				background-color: transparent;
+				
+				.cl-icon {
+					width: 20px;
+					height: 20px;
+					margin-right: 0px;
+					background-image: url("@{img-path}/icons/ico_angle_down.svg") !important;
+					background-size: 16px;
+				}
+				
+				&.collapse .cl-icon {
+					background-image: url("@{img-path}/icons/ico_angle_right.svg") !important;
+				}
+				
+				/* 모바일(767px 이하): 토글 버튼 16 x 16 (버튼 크기는 레이아웃의 인라인 스타일이라 !important) */
+				@media (max-width: 767px) {
+					width: 16px !important;
+					height: 16px !important;
+					min-width: 16px;
+					min-height: 16px;
+					
+					.cl-icon {
+						width: 16px;
+						height: 16px;
+					}
+				}
+			}
+			
+			.cl-output.menu-name {
+				font-size: 14px;
+				font-weight: 700;
+			}
+			
+			.cl-output.menu-desc {
+				color: @gray-50;
+				#font-caption();
+			}
+		}
+		
+		.cl-container.menu-children {
+			padding-left: 28px;
+			
+			/* 모바일(767px 이하): 하위 메뉴 왼쪽 여백 18px */
+			@media (max-width: 767px) {
+				padding-left: 18px;
+			}
+			
+			.cl-container.menu-item {
+				padding: 10px 0px;
+				
+				.cl-output.menu-tit {
+					color: @primary-70;
+					font-size: 14px;
+					font-weight: 600;
+				}
+				
+				.cl-output.menu-desc {
+					color: @gray-50;
+					#font-caption();
+				}
+				
+				.cl-output.menu-code {
+					color: @gray-60;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ * [UDC] SBChart 차트 폰트
+ * sbchart.css 가 svg.sbchart 에 font: 10px sans-serif 를 지정하고,
+ * 축 등 일부 g 요소에는 font-family="sans-serif" 속성이 직접 붙어 있어
+ * svg 에만 지정하면 덮어쓰지 못하므로 속성이 붙은 요소까지 함께 지정한다.
+ * (크기는 라이브러리 값 유지)
+ * ========================================================================== */
+.cl-uicontrolshell {
+	svg.sbchart,
+	svg.sbchart [font-family],
+	.sbchart-title {
+		font-family: @font-family-base;
+	}
+}
+
+/* ==========================================================================
+ * [UDC] SBChart 막대 차트 텍스트 / 눈금
+ * 값 레이블은 라이브러리가 fill, font-size 를 인라인 style 로 지정하므로 !important 필요
+ * ========================================================================== */
+.udc-bar-chart {
+	/* 항목명, 값 레이블 */
+	svg.sbchart text,
+	svg.sbchart tspan {
+		font-size: 12px !important;
+		fill: #334155 !important;
+	}
+
+	/* 막대 끝 값 레이블 (색상은 위 규칙 유지) */
+	svg.sbchart .sbchart-label-count text,
+	svg.sbchart .sbchart-label-count tspan {
+		font-size: 11px !important;
+	}
+
+	/* 하단 값 축 눈금 숫자 */
+	svg.sbchart .sbchart-axis-y text,
+	svg.sbchart .sbchart-axis-y tspan {
+		font-size: 11px !important;
+		fill: #7B8AA0 !important;
+	}
+
+	/* 세로 눈금선 (기본값은 점선, 투명도 0.5) */
+	svg.sbchart .sbchart-grid-y-line {
+		stroke: #E2E8F0 !important;
+		stroke-dasharray: none !important;
+		stroke-opacity: 1 !important;
+	}
+}
