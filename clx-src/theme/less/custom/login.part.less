@@ -140,7 +140,8 @@
 		font-size: 13px;
 	}
 	
-	.cl-output.label {
+	.cl-output.label,
+	.label {
 		color: @gray-90;
 		font-size: 13px;
 		font-weight: 600;
@@ -150,6 +151,17 @@
 		#btn--default(transparent, transparent, @gray-60);
 		#font-body-s() !important;
 		font-weight: @font-weight-normal !important;
+		padding: 0px;
+		border: none;
+	}
+	
+	.cl-button.btn-link {
+		#btn--default(transparent, transparent, @primary-70);
+		#font-body-s() !important;
+		font-weight: @font-weight-normal !important;
+		text-align: center;
+		padding: 0px;
+		border: none;
 	}
 	
 	.cl-inputbox.input-error {
@@ -172,6 +184,58 @@
 		.cl-output.tit {
 			font-weight: 600;
 			font-size: 14px;
+		}
+	}
+	
+	.cl-container.qr-wrap {
+		border-radius: 8px;
+		border: 1px solid @gray-20;
+		background-color: @gray-5;
+		padding: 16px;
+	}
+	
+	.cl-output.info-txt {
+		color: @success-70;
+		border-radius: 8px;
+		border: 1px solid #BBF7D0;
+		background: @success-10;
+		padding: 12px 14px;
+		font-size: 13px;
+	}
+	
+	.cl-container.otp-wrap {
+		border-radius: 8px;
+		border: 1px solid @gray-20;
+		background-color: @gray-5;
+		padding: 16px;
+		
+		.cl-output.copy-code {
+			padding: 0px 16px;
+			border-radius: 6px;
+			border: 1px solid @gray-30;
+			background: #FFF;
+			text-align: center;
+			font-weight: 700;
+		}
+		
+		.btn-copy .cl-icon {
+			background-image: url("@{img-path}/icons/ico_copy_gray.svg") !important;
+		}
+	}
+	
+	.cl-container.separate {
+		&:not(.cl-last-row) {
+			border-bottom: 1px solid @gray-20;
+			padding-bottom: 20px;
+		}
+	}
+	
+	.cl-container.dot-separate {
+		.cl-layout-wrap:not(.cl-first) > .cl-button .cl-text::before {
+			content: "·";
+			display: inline-block;
+			width: 16px;
+			text-align: center;
 		}
 	}
 }

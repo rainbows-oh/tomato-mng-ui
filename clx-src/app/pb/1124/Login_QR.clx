@@ -1,0 +1,96 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-10700f40" version="1.0.6164">
+  <head std:sid="head-ec4ee482">
+    <std:metadata>
+      <std:property key="template-file" value="templates/management/CompanyName_조회_팝업.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-1c425079" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-f3abc1ae" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-f0487b32" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-f5dd3c0f"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-fa5f6637" style="top:0px; left:0px; width:640px; height:520px;" class="auth">
+    <cl:group std:sid="group-aeb301ea" id="grpBody">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:verticaldata std:sid="v-data-f9431e1f" width="1024px" height="709px" autosize="height"/>
+      <cl:group std:sid="group-9c6d43b3" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="14"/>
+        <cl:verticaldata std:sid="v-data-4109c237" width="960px" height="645px" autosize="height"/>
+        <cl:group std:sid="group-4006bfd4" id="grp2" class="separate">
+          <cl:verticaldata std:sid="v-data-75111c52" width="960px" height="197px" autosize="height"/>
+          <cl:group std:sid="group-61a6e92c" id="grp3">
+            <cl:verticaldata std:sid="v-data-8d47903c" width="976px" height="56px" autosize="both"/>
+            <cl:output std:sid="output-5b5691f9" id="opt1" class="tit" value="PSE Management System">
+              <cl:verticaldata std:sid="v-data-af7dbc36" width="100px" height="30px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-0ce96798" id="opt2" class="sub-tit" value="Enter the code from Google Authenticator">
+              <cl:verticaldata std:sid="v-data-77334901" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-4775946b" spacing="6"/>
+          </cl:group>
+          <cl:output std:sid="output-29dd373d" id="opt3" class="font-body-s text-gray-70" value="S27592" displayexp="&quot;Open Google Authenticator and enter the 6-digit code for &quot; + sstr(text, [&quot;label&quot;])">
+            <cl:verticaldata std:sid="v-data-fb773708" width="100px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:group std:sid="group-b5f4f056" id="grp1">
+            <cl:verticaldata std:sid="v-data-110316be" width="976px" height="60px" autosize="height"/>
+            <cl:output std:sid="output-373e0e8f" id="opt4" class="label" value="Authentication Code">
+              <cl:verticaldata std:sid="v-data-49c25b03" width="100px" height="18px" autosize="height"/>
+            </cl:output>
+            <cl:inputbox std:sid="i-box-c811b69e" id="ipb1" fieldLabel="Authentication Code">
+              <cl:verticaldata std:sid="v-data-bd8d8c4b" width="100px" height="36px"/>
+            </cl:inputbox>
+            <cl:verticallayout std:sid="v-layout-6b6413ac" spacing="6"/>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-e8916d98" spacing="20"/>
+        </cl:group>
+        <cl:button std:sid="button-68fbe448" id="btn1" class="btn-primary" value="Verify">
+          <cl:verticaldata std:sid="v-data-5329bbe6" width="100px" height="40px"/>
+        </cl:button>
+        <cl:button std:sid="button-59871aba" id="btn3" class="btn-link" value="Need to register OTP? (View QR Code)">
+          <cl:verticaldata std:sid="v-data-ac3f629e" width="100px" height="20px" autosize="height"/>
+        </cl:button>
+        <cl:group std:sid="group-6f5ccbb4" id="grp4" class="qr-wrap">
+          <cl:verticaldata std:sid="v-data-fb1cfff2" width="960px" height="250px" autosize="height"/>
+          <cl:output std:sid="output-40e6c363" id="opt5" class="font-body-s text-gray-70" value="Scan QR with Google Authenticator:">
+            <cl:verticaldata std:sid="v-data-e187a997" width="215px" height="20px" autosize="both"/>
+          </cl:output>
+          <cl:img std:sid="image-9f94e822" id="img1">
+            <cl:verticaldata std:sid="v-data-7cf4642a" width="140px" height="140px"/>
+          </cl:img>
+          <cl:output std:sid="output-164c3060" id="opt6" class="font-body-s text-gray-70 text-center" value="6UHLCCW6IFI3KEAYMNOUI2AFR4OS7FAF" displayexp="&quot;Secret Key: \n&quot; + sstr(text, [&quot;label&quot;])">
+            <cl:verticaldata std:sid="v-data-513e7698" width="400px" height="40px" autosize="both"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-e0f654ff" distribution="center"/>
+        </cl:group>
+        <cl:group std:sid="group-3bdf312e" id="grp5" class="dot-separate">
+          <cl:verticaldata std:sid="v-data-93d560cc" width="336px" height="20px" autosize="height"/>
+          <cl:button std:sid="button-551dfd89" id="btn4" class="btn-link" value="비상 백업 코드로 인증 (Backup Code)">
+            <cl:flowlayoutdata std:sid="f-data-c99a919f" width="217px" height="20px" autosize="both"/>
+          </cl:button>
+          <cl:button std:sid="button-24bdc7a8" id="btn5" class="btn-link" value="OTP 활성화 / 재등록">
+            <cl:flowlayoutdata std:sid="f-data-58af10a1" width="124px" height="20px" autosize="both"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-6fcf1bc8" hspacing="0" vspacing="0" halign="center"/>
+        </cl:group>
+        <cl:button std:sid="button-a522b411" id="btn2" class="btn-back" value="Back to Log In">
+          <cl:listener std:sid="listener-f6e97aa9" name="click" handler="onBtn2Click"/>
+          <cl:verticaldata std:sid="v-data-2ca94808" width="100px" height="18px" autosize="height"/>
+        </cl:button>
+        <cl:verticallayout std:sid="v-layout-f0125bef" scrollable="false" spacing="20"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-75ec9db6" spacing="0" leftmargin="32" rightmargin="32" topmargin="32" bottommargin="32"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-c56a26cf" spacing="18"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

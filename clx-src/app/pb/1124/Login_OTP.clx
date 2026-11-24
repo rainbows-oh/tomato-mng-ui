@@ -1,0 +1,101 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-10700f40" version="1.0.6164">
+  <head std:sid="head-ec4ee482">
+    <std:metadata>
+      <std:property key="template-file" value="templates/management/CompanyName_조회_팝업.clx"/>
+    </std:metadata>
+    <screen std:sid="screen-59ebbc18" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="false"/>
+    <screen std:sid="screen-3f1c07a5" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-523837a3" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="375" active="false"/>
+    <cl:model std:sid="model-f5dd3c0f"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-fa5f6637" style="top:0px; left:0px; width:640px; height:520px;" class="auth">
+    <cl:group std:sid="group-aeb301ea" id="grpBody">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:verticaldata std:sid="v-data-f9431e1f" width="768px" height="540px" autosize="height"/>
+      <cl:group std:sid="group-9c6d43b3" id="grpContent" class="content-wrap">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="14"/>
+        <cl:verticaldata std:sid="v-data-4109c237" width="704px" height="476px" autosize="height"/>
+        <cl:output std:sid="output-5b5691f9" id="opt1" class="tit" value="OTP Backup Codes">
+          <cl:verticaldata std:sid="v-data-af7dbc36" width="960px" height="30px" autosize="both"/>
+        </cl:output>
+        <cl:output std:sid="output-090bdbbf" id="opt2" class="info-txt" value="OTP has been successfully enabled. Each backup code can be used only once for emergency access. Please save them in a safe place.">
+          <cl:verticaldata std:sid="v-data-a0407eaf" width="100px" height="40px" autosize="height"/>
+        </cl:output>
+        <cl:group std:sid="group-6f5ccbb4" id="grp4" class="otp-wrap">
+          <cl:verticaldata std:sid="v-data-fb1cfff2" width="960px" height="306px" autosize="height"/>
+          <cl:group std:sid="group-013b0a17" id="grp2">
+            <cl:verticaldata std:sid="v-data-1658f8cb" width="926px" height="44px" autosize="height"/>
+            <cl:output std:sid="output-62ecadf3" id="opt3" class="font-body fw-bold" value="OTP Backup Codes (for one-time use)">
+              <cl:verticaldata std:sid="v-data-df7dbdda" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-2b3763b0" id="opt4" class="font-caption" value="Use these one-time codes to log in if you lose your phone. Store them in a safe place or print them.">
+              <cl:verticaldata std:sid="v-data-ab30aa03" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-6486fd70" spacing="4"/>
+          </cl:group>
+          <cl:group std:sid="group-e2f6be1a" id="grp1">
+            <cl:verticaldata std:sid="v-data-c6ef51f1" width="926px" height="216px" autosize="height"/>
+            <cl:output std:sid="output-a5d0ca6e" id="opt12" class="copy-code" value="34SU-AKMH">
+              <cl:formdata std:sid="f-data-fb7142ec" row="0" col="0"/>
+            </cl:output>
+            <cl:output std:sid="output-86d471a4" id="opt11" class="copy-code" value="QBLT-NBCZ">
+              <cl:formdata std:sid="f-data-6519567b" row="0" col="1"/>
+            </cl:output>
+            <cl:output std:sid="output-5743137b" id="opt9" class="copy-code" value="WZSY-768K">
+              <cl:formdata std:sid="f-data-1ee1c074" row="1" col="0"/>
+            </cl:output>
+            <cl:output std:sid="output-aadf897c" id="opt10" class="copy-code" value="XWJ6-7MPP">
+              <cl:formdata std:sid="f-data-1a544cfd" row="1" col="1"/>
+            </cl:output>
+            <cl:output std:sid="output-b173d0c1" id="opt7" class="copy-code" value="BSPH-FCDG">
+              <cl:formdata std:sid="f-data-61ab52a3" row="2" col="0"/>
+            </cl:output>
+            <cl:output std:sid="output-1c57637c" id="opt8" class="copy-code" value="G9T9-UH8B">
+              <cl:formdata std:sid="f-data-17b81b74" row="2" col="1"/>
+            </cl:output>
+            <cl:output std:sid="output-ff70aa86" id="opt5" class="copy-code" value="MPK6-XF96">
+              <cl:formdata std:sid="f-data-38f4a6d3" row="3" col="0"/>
+            </cl:output>
+            <cl:output std:sid="output-c7bd1d55" id="opt6" class="copy-code" value="EFHK-3YBM">
+              <cl:formdata std:sid="f-data-68235d71" row="3" col="1"/>
+            </cl:output>
+            <cl:button std:sid="button-e1af671a" id="btn2" class="btn-secondary btn-copy" value="Copy All Codes" icon="0">
+              <cl:formdata std:sid="f-data-c786ee46" valign="BOTTOM" height="36" row="4" col="0"/>
+            </cl:button>
+            <cl:button std:sid="button-107aabba" id="btn3" class="btn-secondary btn-download" value="Save as TXT" icon="0">
+              <cl:formdata std:sid="f-data-736a5990" valign="BOTTOM" height="36" row="4" col="1"/>
+            </cl:button>
+            <cl:formlayout std:sid="f-layout-a4b420a9" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+              <cl:rows length="36"/>
+              <cl:rows length="36"/>
+              <cl:rows length="36"/>
+              <cl:rows length="36"/>
+              <cl:rows length="40" autoSizing="false" syncminlength="true"/>
+              <cl:columns length="1" unit="FRACTION" autoSizing="true"/>
+              <cl:columns length="1" unit="FRACTION"/>
+            </cl:formlayout>
+          </cl:group>
+          <cl:verticallayout std:sid="v-layout-e0f654ff" spacing="12"/>
+        </cl:group>
+        <cl:button std:sid="button-68fbe448" id="btn1" class="btn-primary" value="Go to Login Page">
+          <cl:verticaldata std:sid="v-data-5329bbe6" width="100px" height="40px"/>
+        </cl:button>
+        <cl:verticallayout std:sid="v-layout-f0125bef" scrollable="false" spacing="20"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-75ec9db6" spacing="0" leftmargin="32" rightmargin="32" topmargin="32" bottommargin="32"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-c56a26cf" spacing="18"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
