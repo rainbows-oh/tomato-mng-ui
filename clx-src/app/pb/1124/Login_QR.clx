@@ -53,7 +53,7 @@
         <cl:button std:sid="button-68fbe448" id="btn1" class="btn-primary" value="Verify">
           <cl:verticaldata std:sid="v-data-5329bbe6" width="100px" height="40px"/>
         </cl:button>
-        <cl:button std:sid="button-59871aba" id="btn3" class="btn-link" value="Need to register OTP? (View QR Code)">
+        <cl:button std:sid="button-59871aba" id="btn3" class="btn-link" value="Need to register OTP? (View QR Code)" ariabuttontype="link">
           <cl:verticaldata std:sid="v-data-ac3f629e" width="100px" height="20px" autosize="height"/>
         </cl:button>
         <cl:group std:sid="group-6f5ccbb4" id="grp4" class="qr-wrap">
@@ -61,7 +61,7 @@
           <cl:output std:sid="output-40e6c363" id="opt5" class="font-body-s text-gray-70" value="Scan QR with Google Authenticator:">
             <cl:verticaldata std:sid="v-data-e187a997" width="215px" height="20px" autosize="both"/>
           </cl:output>
-          <cl:img std:sid="image-9f94e822" id="img1">
+          <cl:img std:sid="image-9f94e822" id="img1" fieldLabel="QR image">
             <cl:verticaldata std:sid="v-data-7cf4642a" width="140px" height="140px"/>
           </cl:img>
           <cl:output std:sid="output-164c3060" id="opt6" class="font-body-s text-gray-70 text-center" value="6UHLCCW6IFI3KEAYMNOUI2AFR4OS7FAF" displayexp="&quot;Secret Key: \n&quot; + sstr(text, [&quot;label&quot;])">
@@ -71,15 +71,15 @@
         </cl:group>
         <cl:group std:sid="group-3bdf312e" id="grp5" class="dot-separate">
           <cl:verticaldata std:sid="v-data-93d560cc" width="336px" height="20px" autosize="height"/>
-          <cl:button std:sid="button-551dfd89" id="btn4" class="btn-link" value="비상 백업 코드로 인증 (Backup Code)">
+          <cl:button std:sid="button-551dfd89" id="btn4" class="btn-link" value="비상 백업 코드로 인증 (Backup Code)" ariabuttontype="link">
             <cl:flowlayoutdata std:sid="f-data-c99a919f" width="217px" height="20px" autosize="both"/>
           </cl:button>
-          <cl:button std:sid="button-24bdc7a8" id="btn5" class="btn-link" value="OTP 활성화 / 재등록">
+          <cl:button std:sid="button-24bdc7a8" id="btn5" class="btn-link" value="OTP 활성화 / 재등록" ariabuttontype="link">
             <cl:flowlayoutdata std:sid="f-data-58af10a1" width="124px" height="20px" autosize="both"/>
           </cl:button>
           <cl:flowlayout std:sid="f-layout-6fcf1bc8" hspacing="0" vspacing="0" halign="center"/>
         </cl:group>
-        <cl:button std:sid="button-a522b411" id="btn2" class="btn-back" value="Back to Log In">
+        <cl:button std:sid="button-a522b411" id="btn2" class="btn-back" value="Back to Log In" ariabuttontype="link">
           <cl:listener std:sid="listener-f6e97aa9" name="click" handler="onBtn2Click"/>
           <cl:verticaldata std:sid="v-data-2ca94808" width="100px" height="18px" autosize="height"/>
         </cl:button>
