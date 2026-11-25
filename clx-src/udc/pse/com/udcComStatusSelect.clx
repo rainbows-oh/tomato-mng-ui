@@ -12,13 +12,6 @@
       <cl:listener std:sid="listener-3b7c91d4" name="mousedown" handler="onCmbSectorMousedown"/>
       <cl:listener std:sid="listener-8e12a6f0" name="open" handler="onCmbSectorOpen"/>
       <cl:formdata std:sid="f-data-815e9216" row="0" col="0"/>
-      <cl:item std:sid="item-1f6a2c84" label="All" value="all"/>
-      <cl:item std:sid="item-5d3e8b09" label="Financials" value="financials"/>
-      <cl:item std:sid="item-8c1b4f73" label="Industrials" value="industrials"/>
-      <cl:item std:sid="item-2e7a9d61" label="Holding Firms" value="holdingFirms"/>
-      <cl:item std:sid="item-6b4c0e95" label="Property" value="property"/>
-      <cl:item std:sid="item-9a2f5d38" label="Services" value="services"/>
-      <cl:item std:sid="item-7e8d1a46" label="Small, Medium &amp; Emerging Board" value="smeBoard"/>
     </cl:combobox>
     <cl:group std:sid="group-1aec6b2f" id="grpCard" class="card" visible="false">
       <cl:formdata std:sid="f-data-54c6e528" width="100" height="-646" row="1" col="0"/>
