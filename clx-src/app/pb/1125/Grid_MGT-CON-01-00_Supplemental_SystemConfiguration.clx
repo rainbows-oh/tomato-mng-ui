@@ -1,0 +1,347 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-ab4e79cf" version="1.0.6164">
+  <head std:sid="head-fef2a59d">
+    <screen std:sid="screen-fce5e969" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-5dac1053" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-74b548ad" id="EXB-PART" name="EXB-PART" width="360px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-e918cc57">
+      <cl:dataset std:sid="d-set-m5a1c001" id="dsMenu">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-m5a1c002" name="label"/>
+          <cl:datacolumn std:sid="d-column-m5a1c003" name="description"/>
+          <cl:datacolumn std:sid="d-column-m5a1c004" name="menuId"/>
+          <cl:datacolumn std:sid="d-column-m5a1c005" name="level"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Disclosures</cl:datavalue>
+            <cl:datavalue columnname="description">Disclosure worklist and related tools</cl:datavalue>
+            <cl:datavalue columnname="menuId"/>
+            <cl:datavalue columnname="level">1</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Worklist</cl:datavalue>
+            <cl:datavalue columnname="description">Disclosure worklist</cl:datavalue>
+            <cl:datavalue columnname="menuId">DISCLOSURES-WORKLIST</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Manual Disclosure</cl:datavalue>
+            <cl:datavalue columnname="description">Manual disclosure submissions</cl:datavalue>
+            <cl:datavalue columnname="menuId">DISCLOSURES-EMERGENCY-SUBMISSION</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Report Search</cl:datavalue>
+            <cl:datavalue columnname="description">Search disclosure reports</cl:datavalue>
+            <cl:datavalue columnname="menuId">DISCLOSURES-REPORT-SEARCH</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Template</cl:datavalue>
+            <cl:datavalue columnname="description">Disclosure templates</cl:datavalue>
+            <cl:datavalue columnname="menuId">DISCLOSURES-TEMPLATES</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Structured Deadlines</cl:datavalue>
+            <cl:datavalue columnname="description">Disclosure deadlines</cl:datavalue>
+            <cl:datavalue columnname="menuId">DISCLOSURES-DEADLINE</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Analytics</cl:datavalue>
+            <cl:datavalue columnname="description">Disclosure analytics</cl:datavalue>
+            <cl:datavalue columnname="menuId">DISCLOSURES-ANALYTICS</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Companies</cl:datavalue>
+            <cl:datavalue columnname="description">Company management</cl:datavalue>
+            <cl:datavalue columnname="menuId"/>
+            <cl:datavalue columnname="level">1</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Information Update</cl:datavalue>
+            <cl:datavalue columnname="description">Company worklist</cl:datavalue>
+            <cl:datavalue columnname="menuId">COMPANIES-WORKLIST</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Company Search</cl:datavalue>
+            <cl:datavalue columnname="description">Search companies</cl:datavalue>
+            <cl:datavalue columnname="menuId">COMPANIES-COMPANY-SEARCH</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Foreign Ownership Monitoring</cl:datavalue>
+            <cl:datavalue columnname="description">Foreign ownership monitoring</cl:datavalue>
+            <cl:datavalue columnname="menuId">COMPANIES-FOREIGN-OWNERSHIP</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Public Ownership Monitoring</cl:datavalue>
+            <cl:datavalue columnname="description">Public ownership monitoring</cl:datavalue>
+            <cl:datavalue columnname="menuId">COMPANIES-PUBLIC-OWNERSHIP</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Calendars</cl:datavalue>
+            <cl:datavalue columnname="description">Internal calendar and non-trading days</cl:datavalue>
+            <cl:datavalue columnname="menuId"/>
+            <cl:datavalue columnname="level">1</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Internal Calendar</cl:datavalue>
+            <cl:datavalue columnname="description">Internal calendar</cl:datavalue>
+            <cl:datavalue columnname="menuId">INTERNAL-CALENDAR</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Non-Trading Days</cl:datavalue>
+            <cl:datavalue columnname="description">Non-trading day calendar</cl:datavalue>
+            <cl:datavalue columnname="menuId">SETTINGS-NON-TRADING-DAYS</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Communications</cl:datavalue>
+            <cl:datavalue columnname="description">Correspondence and Q&amp;A</cl:datavalue>
+            <cl:datavalue columnname="menuId"/>
+            <cl:datavalue columnname="level">1</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Correspondence</cl:datavalue>
+            <cl:datavalue columnname="description">Correspondence inbox</cl:datavalue>
+            <cl:datavalue columnname="menuId">COMMUNICATIONS-CORRESPONDENCE</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Q&amp;A</cl:datavalue>
+            <cl:datavalue columnname="description">Q&amp;A inbox</cl:datavalue>
+            <cl:datavalue columnname="menuId">COMMUNICATIONS-QNA</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Users</cl:datavalue>
+            <cl:datavalue columnname="description">User and account management</cl:datavalue>
+            <cl:datavalue columnname="menuId"/>
+            <cl:datavalue columnname="level">1</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Directory</cl:datavalue>
+            <cl:datavalue columnname="description">User directory</cl:datavalue>
+            <cl:datavalue columnname="menuId">USERS-DIRECTORY</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Submission Account</cl:datavalue>
+            <cl:datavalue columnname="description">Submission accounts</cl:datavalue>
+            <cl:datavalue columnname="menuId">USERS-SUBMISSION-ACCOUNT</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Management Account</cl:datavalue>
+            <cl:datavalue columnname="description">Management accounts</cl:datavalue>
+            <cl:datavalue columnname="menuId">USERS-MANAGEMENT-ACCOUNT</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Roles</cl:datavalue>
+            <cl:datavalue columnname="description">User roles</cl:datavalue>
+            <cl:datavalue columnname="menuId">USERS-ROLES</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Audit Trail</cl:datavalue>
+            <cl:datavalue columnname="description">Audit and session history</cl:datavalue>
+            <cl:datavalue columnname="menuId"/>
+            <cl:datavalue columnname="level">1</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Disclosures</cl:datavalue>
+            <cl:datavalue columnname="description">Disclosure audit trail</cl:datavalue>
+            <cl:datavalue columnname="menuId">AUDIT-TRAIL-DISCLOSURES</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">User Log</cl:datavalue>
+            <cl:datavalue columnname="description">User login activity</cl:datavalue>
+            <cl:datavalue columnname="menuId">AUDIT-TRAIL-USER-LOG</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Sessions</cl:datavalue>
+            <cl:datavalue columnname="description">Active sessions</cl:datavalue>
+            <cl:datavalue columnname="menuId">AUDIT-TRAIL-SESSIONS</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Distribution</cl:datavalue>
+            <cl:datavalue columnname="description">Distribution channels</cl:datavalue>
+            <cl:datavalue columnname="menuId"/>
+            <cl:datavalue columnname="level">1</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">CAF Subscriber</cl:datavalue>
+            <cl:datavalue columnname="description">CAF subscribers</cl:datavalue>
+            <cl:datavalue columnname="menuId">DISTRIBUTION-CAF-SUBSCRIBER</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Data Feeds Subscriber</cl:datavalue>
+            <cl:datavalue columnname="description">Data feeds subscribers</cl:datavalue>
+            <cl:datavalue columnname="menuId">DISTRIBUTION-DATA-FEEDS-SUBSCRIBER</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">News Feed</cl:datavalue>
+            <cl:datavalue columnname="description">News feed distribution</cl:datavalue>
+            <cl:datavalue columnname="menuId">DISTRIBUTION-NEWS-FEED</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Settings</cl:datavalue>
+            <cl:datavalue columnname="description">System settings</cl:datavalue>
+            <cl:datavalue columnname="menuId"/>
+            <cl:datavalue columnname="level">1</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Common Codes</cl:datavalue>
+            <cl:datavalue columnname="description">Common code tables</cl:datavalue>
+            <cl:datavalue columnname="menuId">SETTINGS-COMMON-CODES</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Batch</cl:datavalue>
+            <cl:datavalue columnname="description">Batch jobs</cl:datavalue>
+            <cl:datavalue columnname="menuId">SETTINGS-BATCH</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Portal Management</cl:datavalue>
+            <cl:datavalue columnname="description">Site content management</cl:datavalue>
+            <cl:datavalue columnname="menuId"/>
+            <cl:datavalue columnname="level">1</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Main Banners</cl:datavalue>
+            <cl:datavalue columnname="description">Main page carousel</cl:datavalue>
+            <cl:datavalue columnname="menuId">SITE-MANAGEMENT-MAIN-CAROUSEL</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">News Ticker</cl:datavalue>
+            <cl:datavalue columnname="description">News ticker</cl:datavalue>
+            <cl:datavalue columnname="menuId">SITE-MANAGEMENT-NEWS-TICKER</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="label">Market Highlights</cl:datavalue>
+            <cl:datavalue columnname="description">Site banners</cl:datavalue>
+            <cl:datavalue columnname="menuId">SITE-MANAGEMENT-BANNERS</cl:datavalue>
+            <cl:datavalue columnname="level">2</cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec title="System Configuration"/>
+  </head>
+  <body std:sid="body-6585a0fc">
+    <cl:group std:sid="group-csm000016" id="grpHeader" class="page-title-wrap">
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:verticaldata std:sid="v-data-csm000017" width="1024px" height="48px" autosize="height" sticky="true" stickytopoffset="0"/>
+      <cl:udc std:sid="ud-control-cc03f030" id="udccomappheader2" type="udc.pse.com.udcComAppHeader">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-d41b23fe" row="0" col="0"/>
+        <cl:property name="title" value="System Configuration" type="string"/>
+      </cl:udc>
+      <cl:formlayout std:sid="f-layout-csm000023" scrollable="false" hspace="8px" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+        <cl:rows length="36" unit="PIXEL" autoSizing="false" syncminlength="true"/>
+        <cl:columns length="1" unit="FRACTION"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:group std:sid="group-0b464f24" id="grpBody" class="inner">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-bottom-margin" value="16"/>
+      <cl:attribute name="mobile-left-margin" value="16"/>
+      <cl:attribute name="mobile-right-margin" value="16"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:attribute name="mobile-top-margin" value="16"/>
+      <cl:verticaldata std:sid="v-data-40a89747" width="1024px" height="1152px" autosize="height"/>
+      <cl:group std:sid="group-c9d6abb5" id="grpContent" class="card">
+        <cl:attribute name="mobile-spacing" value="12"/>
+        <cl:verticaldata std:sid="v-data-3172a4b8" width="976px" height="1104px" autosize="height"/>
+        <cl:group std:sid="group-a20acfba" id="grpContentHeader" class="cont-header">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:verticaldata std:sid="v-data-1593de64" width="934px" height="44px" autosize="height"/>
+          <cl:group std:sid="group-1082dee9" id="grp1">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-aa0a16b5" width="100" height="45" row="0" col="0"/>
+            <cl:output std:sid="output-6e16da9e" id="opt1" class="font-heading fw-semibold" value="Menu Management">
+              <cl:verticaldata std:sid="v-data-bba4729f" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-2e88eb7a" id="opt2" class="font-label gray" value="Create, edit, delete, and reorder Management navigation menus via Order. Changes apply to this mock tree only.">
+              <cl:verticaldata std:sid="v-data-e7886fe7" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-0a062e24" spacing="4"/>
+          </cl:group>
+          <cl:button std:sid="button-1696341d" id="btn1" class="btn-add" value="Add Menu" icon="0">
+            <cl:listener std:sid="listener-16a6912a" name="click" handler="onBtn1Click"/>
+            <cl:attribute name="mobile-min-height" value="36"/>
+            <cl:formdata std:sid="f-data-7d99651a" valign="CENTER" height="36" row="0" col="1"/>
+          </cl:button>
+          <cl:formlayout std:sid="f-layout-3131f756" scrollable="false" hspace="8px" vspace="8px" hseparatorwidth="0" vseparatorwidth="0">
+            <cl:rows length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="true"/>
+            <cl:columns length="1" unit="FRACTION"/>
+            <cl:columns length="130" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:grid std:sid="grid-92b78a1e" id="grd1" readonly="true" datasetid="dsMenu" autofit="0, 1, 2">
+          <cl:verticaldata std:sid="v-data-cf55ec99" width="400px" height="200px" autosize="height"/>
+          <cl:gridcolumn std:sid="g-column-2dfdeb2f" width="100px"/>
+          <cl:gridcolumn std:sid="g-column-1b50af16" width="100px"/>
+          <cl:gridcolumn std:sid="g-column-5026755d" width="100px"/>
+          <cl:gridcolumn std:sid="g-column-e193f554" width="40px"/>
+          <cl:gridcolumn std:sid="g-column-243ae6fd" width="40px"/>
+          <cl:gridcolumn std:sid="g-column-257d977e" width="40px"/>
+          <cl:griddetail std:sid="gd-band-e0e0ad7b">
+            <cl:gridrow std:sid="g-row-3a80ac3c" height="40px"/>
+            <cl:gridcell std:sid="gd-cell-acfd2166" rowindex="0" colindex="0" columnname="label">
+              <cl:treecell std:sid="t-cell-m5a1c010" useicon="false">
+                <cl:relativebind property="level" columnname="level"/>
+                <cl:expbind property="class" category="CLASS" expression="level == &quot;1&quot; ? &quot;fw-bold&quot; : &quot;text-primary fw-semibold&quot;"/>
+                <cl:celldata std:sid="c-data-m5a1c011"/>
+              </cl:treecell>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-068ca76f" rowindex="0" colindex="1" class="font-caption" columnname="description"/>
+            <cl:gridcell std:sid="gd-cell-d77223a4" rowindex="0" colindex="2" class="font-body-s" columnname="menuId"/>
+            <cl:gridcell std:sid="gd-cell-971426e0" rowindex="0" colindex="3">
+              <cl:button std:sid="button-0f446d8f" id="btn2" class="icon btn-edit" value="Button" icon="0">
+                <cl:celldata std:sid="c-data-b4339ae5" halign="CENTER" valign="CENTER" width="28" height="28"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-0c25a26b" rowindex="0" colindex="4">
+              <cl:button std:sid="button-462864ba" id="btn3" class="icon btn-add-gray" value="Button" icon="0">
+                <cl:celldata std:sid="c-data-2e87ea8d" halign="CENTER" valign="CENTER" width="28" height="28"/>
+              </cl:button>
+            </cl:gridcell>
+            <cl:gridcell std:sid="gd-cell-577a6634" rowindex="0" colindex="5">
+              <cl:button std:sid="button-1d17f178" id="btn4" class="icon btn-delete-red" value="Button" icon="0">
+                <cl:celldata std:sid="c-data-b7d73d19" halign="CENTER" valign="CENTER" width="28" height="28"/>
+              </cl:button>
+            </cl:gridcell>
+          </cl:griddetail>
+        </cl:grid>
+        <cl:verticallayout std:sid="v-layout-edd42a47" spacing="14"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-9dda75e2" spacing="20" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-85c69965" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
